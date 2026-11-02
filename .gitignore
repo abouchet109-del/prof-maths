@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+# Documents de cours : jamais versionnés
+bibliotheque/
+anki/paquets/
+anki/export/
+inventaire/pdf.json
+# Contenu personnel ou d'un tiers, régénérable par tools/
+inventaire/anki/
+inventaire/trackers/

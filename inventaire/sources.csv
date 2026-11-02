@@ -1,0 +1,78 @@
+matiere;type;nom;origine;pages;caracteres;lecture
+topologie;cours;chap1-espaces-metriques;Chap1Topo.pdf;18;28458;texte
+topologie;cours;chap2-espaces-complets;Chap2Topo.pdf;9;15610;texte
+topologie;cours;chap3-espaces-compacts;Chap3Topo.pdf;11;17073;texte
+topologie;slides;chap2-slides;SlidesChap2.pdf;60;43981;verif
+topologie;slides;chap3-slides;SlidesChap3.pdf;102;63736;verif
+topologie;td;td1;TD1.pdf;2;3354;texte
+topologie;td;td2;TD2.pdf;2;3228;texte
+topologie;td;td3;TD3.pdf;2;3233;texte
+topologie;td;td4;TD4.pdf;2;2860;texte
+topologie;annales;exam-2020-21;ExamTopo20.pdf;1;1154;texte
+topologie;annales;exam-2021-22;ExamTopo21.pdf;2;1924;texte
+topologie;annales;exam-2022-23;ExamTopo22-23.pdf;2;1795;texte
+topologie;annales;exam-2023-24;ExamTopo23-24.pdf;1;1673;texte
+topologie;annales;partiel-2020-21-corrige;CorCC-Topo20.pdf;1;2793;texte
+topologie;annales;partiel-2021-22;CC-Topo21.pdf;1;1869;texte
+topologie;annales;partiel-2022-23;CC-Topo22.pdf;1;1692;texte
+topologie;annales;partiel-2023-24;CC-Topo23.pdf;1;1798;texte
+topologie;dm;dm-2020-21;DM_2021.pdf;2;3945;texte
+topologie;dm;dm-2021-22;DM_2122.pdf;2;5096;texte
+topologie;dm;dm-2022-23;DM_2223.pdf;3;6379;texte
+topologie;dm;dm-2023-24;DM_2324.pdf;4;9089;texte
+mesure;cours;poly-mesure-integration;Mesure_Integration.pdf;8;8994;texte
+mesure;notes;cm-2026-10-13;13-10-26.pdf;3;81;image
+mesure;notes;cm-2026-10-20;CM_20-10-26.pdf;3;0;image
+mesure;notes;td3-2026-10-20;TD3_20-10-26.pdf;2;0;image
+mesure;td;td1-corrige;TD1 TMI Correction.pdf;10;24907;texte
+mesure;td;td2-corrige;TD2 TMI Correction.pdf;7;18805;texte
+mesure;td;td3;TD3 TMI.pdf;1;1618;texte
+mesure;td;td4;TD4 TMI.pdf;2;4261;texte
+mesure;td;td5;TD5 TMI.pdf;2;2546;texte
+mesure;td;td6;TD6 TMI.pdf;2;2095;texte
+mesure;td;td7;TD7 TMI.pdf;2;2606;texte
+mesure;dm;dm-facultatif-lebesgue;DM_facultatif_construction_mesure_Lebesgue.pdf;4;5632;texte
+modelisation;cours;chap1-galton-watson;Chapitre 1.pdf;14;24652;texte
+modelisation;cours;chap2-markov;Chapitre 2.pdf;22;37649;texte
+modelisation;cours;chap3-poisson;Chapitre 3.pdf;10;15757;texte
+modelisation;slides;chap2-markov-slides-57p;Chapitre2-Chaines-de-Markov-slides-annotées (3).pdf;57;24257;verif
+modelisation;slides;chap2-markov-slides-40p;Chapitre2-Chaines-de-Markov-slides-annotées.pdf;40;21055;verif
+modelisation;notes;note-2026-10-21;2026-10-21-Note-17-43_annoté.pdf;5;0;image
+modelisation;td;td1-galton-watson;TD1 (1).pdf;2;3767;texte
+modelisation;td;td2-markov;TD2 (2).pdf;4;8028;texte
+modelisation;annales;partiel-2023-24;Partiel-2324.pdf;2;2721;texte
+modelisation;annales;partiel-2023-24-corrige;Partiel-2324-Cor.pdf;5;6288;texte
+modelisation;annales;partiel-2025-26;Partiel-2025-2026.pdf;2;2910;texte
+modelisation;annales;partiel-2025-26-corrige;Partiel-2025-2026-Cor.pdf;5;7036;texte
+modelisation;annales;exam-2023-24;Examen-2324.pdf;2;2800;texte
+modelisation;annales;exam-2023-24-corrige;Examen-2324-Cor.pdf;5;7793;texte
+modelisation;annales;exam-2025-26;CT-2025-2026.pdf;1;2199;texte
+modelisation;annales;exam-2025-26-corrige;CT-2025-2026_Cor.pdf;4;7020;texte
+proba;cours;poly-probabilites-5;poly-L3.pdf;82;153693;texte
+proba;slides;chap1-slides;Proba 5 - Chapitre 1 - slides.pdf;32;19127;verif
+proba;slides;chap2-slides;Proba 5 - Chapitre 2 - slides.pdf;43;23930;verif
+proba;slides;chap3-slides-38p;Proba 5 - Chapitre 3 - slides.pdf;38;18595;verif
+proba;slides;chap3-slides-2026-54p;Proba 5 - Chapitre 3 - 2026.pdf;54;23140;verif
+proba;slides;chap4-slides;Proba 5 - Chapitre 4 - slides.pdf;41;22736;verif
+proba;slides;chap5-slides;Proba 5 - Chapitre 5 - slides.pdf;30;18643;verif
+proba;td;td1;TD 1.pdf;3;4626;texte
+proba;td;td1-corrige;TD 1 - Correction.pdf;7;16770;texte
+proba;td;td2;TD2 (1).pdf;2;2767;texte
+proba;td;td2-corrige;TD2 - Correction.pdf;6;13789;texte
+proba;td;td3;TD3 (1).pdf;2;2831;texte
+proba;td;td3-corrige;TD 3 - Correction.pdf;8;12821;texte
+proba;td;td4;TD4 (1).pdf;2;3173;texte
+proba;tp;tp1;TP1.pdf;7;13886;verif
+proba;tp;tp1-corrige;TP1_corr.pdf;15;12051;verif
+proba;tp;tp2;TP2.pdf;4;5875;verif
+proba;tp;tp2-corrige;TP2_corr.pdf;7;5810;verif
+proba;tp;tp3;TP3.pdf;3;4927;verif
+proba;tp;manuel-r-rstudio;Manuel R et RStudio (L2).pdf;24;22128;verif
+proba;annales;partiel-2024-25;CC_2425.pdf;2;2801;texte
+proba;annales;partiel-2024-25-corrige;CC_2425-Cor.pdf;4;5409;texte
+proba;annales;partiel-2025-26;CC_2526.pdf;2;2153;texte
+proba;annales;partiel-2025-26-corrige;CC_2526-Cor.pdf;4;5119;texte
+proba;annales;exam-2024-25;Examen-2024-2025.pdf;3;2577;texte
+proba;annales;exam-2024-25-corrige;Examen-2024-2025-Cor.pdf;5;7200;texte
+proba;annales;exam-2025-26;Examen-2025-2026.pdf;3;2876;texte
+proba;annales;exam-2025-26-corrige;Examen-2025-2026-Cor.pdf;5;7445;texte
