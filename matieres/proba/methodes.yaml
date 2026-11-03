@@ -1,0 +1,126 @@
+# Méthodes types de Probabilités 5 (Paris Cité).
+# annales : nombre d'exercices d'annales de Paris Cité (15 au total : par2425, par2526, exa2425, exa2526) qui l'utilisent.
+- id: proba-m-01
+  titre: 'Écrire la loi d''une variable discrète classique et calculer espérance, variance, moments par des séries'
+  notions: [proba-n-0018, proba-n-0019, proba-n-0020, proba-n-0022, proba-n-0023, proba-n-0058]
+  annales: 5   # par2425-ex01, par2425-ex03, par2526-ex04, exa2526-ex01, exa2526-ex04
+- id: proba-m-02
+  titre: 'Calculer la fonction caractéristique d''une loi classique (série géométrique ou intégrale)'
+  notions: [proba-n-0064, proba-n-0066, proba-n-0068, proba-n-0069, proba-n-0070]
+  annales: 4   # par2425-ex01, par2425-ex03, par2526-ex01, exa2526-ex01
+- id: proba-m-03
+  titre: 'Déterminer la loi de g(X) par la fonction de répartition, puis la reconnaître'
+  notions: [proba-n-0048, proba-n-0052, proba-n-0054]
+  annales: 3   # par2425-ex02, par2425-ex03, par2526-ex02
+- id: proba-m-04
+  titre: 'Loi du maximum ou du minimum de variables indépendantes par la fonction de répartition ou la queue'
+  notions: [proba-n-0048, proba-n-0085, proba-n-0140]
+  annales: 2   # par2425-ex03, exa2425-ex02
+- id: proba-m-05
+  titre: 'Densité de g(X) par la méthode de la fonction muette (dimension 1)'
+  notions: [proba-n-0030, proba-n-0029]
+  annales: 0
+- id: proba-m-06
+  titre: 'Vérifier qu''une fonction est une densité, calculer probabilités et E[g(X)] par transfert (intégrales, fonction Gamma)'
+  notions: [proba-n-0024, proba-n-0027, proba-n-0029, proba-n-0045]
+  annales: 6   # par2425-ex02, par2425-ex03, par2526-ex02, exa2425-ex02, exa2425-ex04, exa2526-ex02
+- id: proba-m-07
+  titre: 'Densité d''un couple par fonction muette en dimension 2 et changement de variables (difféomorphisme, jacobien)'
+  notions: [proba-n-0077, proba-n-0081, proba-n-0082, proba-n-0083]
+  annales: 2   # exa2425-ex02, exa2526-ex02
+- id: proba-m-08
+  titre: 'Densités marginales et indépendance par factorisation de la densité jointe'
+  notions: [proba-n-0084, proba-n-0087, proba-n-0088]
+  annales: 2   # exa2425-ex02, exa2526-ex02
+- id: proba-m-09
+  titre: 'Indépendance et moments : espérance d''un produit, covariance et variance d''une somme'
+  notions: [proba-n-0086, proba-n-0096, proba-n-0097, proba-n-0099]
+  annales: 5   # par2425-ex03, exa2425-ex02, exa2425-ex04, exa2526-ex03, exa2526-ex04
+- id: proba-m-10
+  titre: 'Identifier une loi par sa fonction caractéristique (FC d''une somme indépendante, injectivité)'
+  notions: [proba-n-0065, proba-n-0072, proba-n-0095]
+  annales: 1   # par2425-ex03
+- id: proba-m-11
+  titre: 'Vecteur gaussien : loi d''une image affine, indépendance si et seulement si covariance nulle, variance nulle donc constante'
+  notions: [proba-n-0101, proba-n-0110, proba-n-0111, proba-n-0113, proba-n-0116]
+  annales: 2   # exa2425-ex03, exa2526-ex03
+- id: proba-m-12
+  titre: 'Vecteur gaussien : écrire fonction caractéristique et densité à partir de la moyenne et de la matrice de covariance'
+  notions: [proba-n-0100, proba-n-0112, proba-n-0115]
+  annales: 2   # exa2425-ex03, exa2526-ex03
+- id: proba-m-13
+  titre: 'Majorer une probabilité par Markov, Bienaymé-Tchebychev ou Chernov (encadrement d''indicatrices)'
+  notions: [proba-n-0039, proba-n-0040, proba-n-0060]
+  annales: 3   # par2526-ex03, exa2425-ex04, exa2526-ex04
+- id: proba-m-14
+  titre: 'Majorer ou minorer une espérance par Cauchy-Schwarz ou Jensen'
+  notions: [proba-n-0042, proba-n-0043, proba-n-0089]
+  annales: 3   # par2526-ex03, par2526-ex04, exa2526-ex04
+- id: proba-m-15
+  titre: 'Borel-Cantelli : convergence p.s. par sommabilité, infinité d''occurrences par le second lemme'
+  notions: [proba-n-0117, proba-n-0124]
+  annales: 2   # exa2425-ex04, exa2526-ex04
+- id: proba-m-16
+  titre: 'Étudier les modes de convergence d''une suite (probabilité, p.s., moyenne, loi) : preuves et contre-exemples'
+  notions: [proba-n-0119, proba-n-0121, proba-n-0123, proba-n-0125, proba-n-0128, proba-n-0135]
+  annales: 2   # exa2425-ex04, exa2526-ex04
+- id: proba-m-17
+  titre: 'Appliquer la loi des grands nombres (faible ou forte), au besoin après passage au logarithme'
+  notions: [proba-n-0130, proba-n-0131, proba-n-0132]
+  annales: 2   # par2526-ex04, exa2425-ex04
+- id: proba-m-18
+  titre: 'Énoncer et appliquer le théorème central limite'
+  notions: [proba-n-0142]
+  annales: 1   # exa2425-ex01
+- id: proba-m-19
+  titre: 'Modéliser par une loi classique (Bernoulli répétées, géométrique, Poisson) et simuler en R'
+  notions: [proba-n-0017, proba-n-0018, proba-n-0019, proba-n-0020]
+  annales: 2   # exa2425-ex01, exa2526-ex01
+- id: proba-m-20
+  titre: 'Établir ou réfuter une convergence en loi (fonction de répartition, Scheffé, Lévy)'
+  notions: [proba-n-0133, proba-n-0136, proba-n-0137, proba-n-0139, proba-n-0141]
+  annales: 1   # exa2526-ex04
+- id: proba-m-21
+  titre: 'Manipuler les axiomes : bornes sur P(A∩B), formule du crible, limsup et liminf d''événements'
+  notions: [proba-n-0002, proba-n-0004, proba-n-0005]
+  annales: 0
+- id: proba-m-22
+  titre: 'Dénombrement, probabilités conditionnelles (probabilités totales, Bayes), indépendance d''événements'
+  notions: [proba-n-0001, proba-n-0003]
+  annales: 0
+- id: proba-m-23
+  titre: 'Fonction de répartition : vérifier qu''une fonction en est une, lois mixtes, probabilités d''intervalles'
+  notions: [proba-n-0049, proba-n-0050, proba-n-0051, proba-n-0053]
+  annales: 0
+- id: proba-m-24
+  titre: 'Espérance par la queue de la loi : somme des P(X≥n), intégrale de P(X>t)'
+  notions: [proba-n-0033, proba-n-0037, proba-n-0078]
+  annales: 0
+- id: proba-m-25
+  titre: 'Moments : existence, support borné, caractérisation de la loi par les moments'
+  notions: [proba-n-0055, proba-n-0057, proba-n-0062, proba-n-0063, proba-n-0075]
+  annales: 0
+- id: proba-m-26
+  titre: 'Support d''une loi, égalité en loi contre égalité presque sûre'
+  notions: [proba-n-0010, proba-n-0015, proba-n-0026]
+  annales: 0
+- id: proba-m-27
+  titre: 'Intervertir limite et espérance (convergence monotone ou dominée, série et espérance)'
+  notions: [proba-n-0036, proba-n-0037]
+  annales: 0
+- id: proba-m-28
+  titre: 'Fonctions génératrices et sommes d''un nombre aléatoire de variables'
+  notions: [proba-n-0065]
+  annales: 0
+- id: proba-m-29
+  titre: 'Tribus : tribu engendrée, borélienne, mesurabilité'
+  notions: [proba-n-0011, proba-n-0012, proba-n-0013]
+  annales: 0
+- id: proba-m-30
+  titre: 'Statistique (hors cours actuel) : estimateurs des moments et du maximum de vraisemblance, biais, risque'
+  notions: [proba-n-0130, proba-n-0132]
+  annales: 0
+- id: proba-m-31
+  titre: 'Statistique (hors cours actuel) : intervalles de confiance exacts ou asymptotiques'
+  notions: [proba-n-0060, proba-n-0142]
+  annales: 0

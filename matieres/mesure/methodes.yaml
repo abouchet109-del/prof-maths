@@ -1,0 +1,107 @@
+# Méthodes types de mesure et intégration.
+# Champ annales : nombre d'exercices d'annales UVSQ (CC1, CC2, examens 2023-2026, doublons comptés une fois)
+# qui utilisent la méthode. Paris Cité n'a fourni aucune annale de mesure.
+- id: mes-m-01
+  titre: 'Manipuler images réciproques, indicatrices et opérations ensemblistes'
+  notions: [mesure-n-0002, mesure-n-0003, mesure-n-0007]
+  annales: 0
+- id: mes-m-02
+  titre: 'Calculer limsup et liminf de suites réelles et de suites d''ensembles'
+  notions: [mesure-n-0004, mesure-n-0005, mesure-n-0006]
+  annales: 1
+- id: mes-m-03
+  titre: 'Prouver qu''un ensemble est (au plus) dénombrable ou ne l''est pas'
+  notions: [mesure-n-0001, mesure-n-0047]
+  annales: 1
+- id: mes-m-04
+  titre: 'Vérifier qu''une famille est une tribu, ou exhiber l''axiome en défaut'
+  notions: [mesure-n-0008, mesure-n-0010]
+  annales: 5
+- id: mes-m-05
+  titre: 'Déterminer une tribu engendrée, comparer deux tribus par double inclusion (plus petite tribu contenant)'
+  notions: [mesure-n-0011, mesure-n-0012, mesure-n-0013, mesure-n-0019]
+  annales: 0
+- id: mes-m-06
+  titre: 'Montrer qu''une fonction est mesurable (famille génératrice, opérations, recollement sur A et son complémentaire)'
+  notions: [mesure-n-0014, mesure-n-0015, mesure-n-0016, mesure-n-0020, mesure-n-0021, mesure-n-0022]
+  annales: 3
+- id: mes-m-07
+  titre: 'Écrire un ensemble défini par des fonctions mesurables avec des unions et intersections dénombrables (union sur Q, quantificateurs)'
+  notions: [mesure-n-0010, mesure-n-0022]
+  annales: 1
+- id: mes-m-08
+  titre: 'Montrer qu''une application est une mesure (σ-additivité, interversion de sommes positives)'
+  notions: [mesure-n-0026, mesure-n-0028, mesure-n-0029]
+  annales: 5
+- id: mes-m-09
+  titre: 'Exploiter les propriétés des mesures : croissance, continuité monotone, σ-sous-additivité, Borel-Cantelli'
+  notions: [mesure-n-0032, mesure-n-0034, mesure-n-0036, mesure-n-0038]
+  annales: 6
+- id: mes-m-10
+  titre: 'Utiliser la mesure de Lebesgue : longueur, invariance par translation, négligeables, fonction de répartition'
+  notions: [mesure-n-0031, mesure-n-0039, mesure-n-0042, mesure-n-0045]
+  annales: 1
+- id: mes-m-11
+  titre: 'Comparer une intégrale et les mesures des ensembles de niveau (Markov, encadrement par la somme des mesures de {f>=n})'
+  notions: [mesure-n-0049, mesure-n-0051, mesure-n-0052]
+  annales: 5
+- id: mes-m-12
+  titre: 'Établir une formule intégrale par la méthode standard : indicatrices, étagées, positives (Beppo-Levi), intégrables'
+  notions: [mesure-n-0023, mesure-n-0025, mesure-n-0049, mesure-n-0050]
+  annales: 2
+- id: mes-m-13
+  titre: 'Passer à la limite dans une intégrale par Beppo-Levi (suite croissante positive)'
+  notions: [mesure-n-0050]
+  annales: 3
+- id: mes-m-14
+  titre: 'Intégrer terme à terme une série de fonctions (positives, ou somme des intégrales des valeurs absolues finie)'
+  notions: [mesure-n-0050, mesure-n-0056]
+  annales: 4
+- id: mes-m-15
+  titre: 'Calculer une limite d''intégrales par convergence dominée (limite simple p.p., domination indépendante de n)'
+  notions: [mesure-n-0056, mesure-n-0044]
+  annales: 16
+- id: mes-m-16
+  titre: 'Calculer une limite de séries par convergence dominée pour la mesure de comptage'
+  notions: [mesure-n-0056, mesure-n-0028]
+  annales: 3
+- id: mes-m-17
+  titre: 'Appliquer le lemme de Fatou (minorer une liminf d''intégrales, montrer une limite infinie)'
+  notions: [mesure-n-0055]
+  annales: 2
+- id: mes-m-18
+  titre: 'Expliquer pourquoi lim ∫ diffère de ∫ lim (masse qui s''échappe, hypothèse manquante)'
+  notions: [mesure-n-0050, mesure-n-0055, mesure-n-0056]
+  annales: 1
+- id: mes-m-19
+  titre: 'Montrer la continuité d''une intégrale à paramètre (domination locale)'
+  notions: [mesure-n-0057]
+  annales: 4
+- id: mes-m-20
+  titre: 'Dériver sous l''intégrale et trouver l''équation différentielle vérifiée par F'
+  notions: [mesure-n-0058]
+  annales: 3
+- id: mes-m-21
+  titre: 'Fubini-Tonelli : intégrale double, inversion de l''ordre, intégrale simple écrite comme intégrale double'
+  notions: [mesure-n-0059, mesure-n-0060, mesure-n-0061]
+  annales: 6
+- id: mes-m-22
+  titre: 'Changement de variables (polaires, linéaire, en dimension 1)'
+  notions: [mesure-n-0062, mesure-n-0063, mesure-n-0064]
+  annales: 2
+- id: mes-m-23
+  titre: 'Étudier l''intégrabilité ou l''appartenance à L^p par comparaison à des puissances'
+  notions: [mesure-n-0051, mesure-n-0065, mesure-n-0069]
+  annales: 3
+- id: mes-m-24
+  titre: 'Utiliser les inégalités de Hölder et Minkowski, les inclusions entre L^p'
+  notions: [mesure-n-0066, mesure-n-0067, mesure-n-0069]
+  annales: 0
+- id: mes-m-25
+  titre: 'Lemme de classe monotone et unicité d''une mesure'
+  notions: [mesure-n-0011, mesure-n-0026, mesure-n-0031]
+  annales: 0
+- id: mes-m-26
+  titre: 'Mesure extérieure et théorème de Carathéodory'
+  notions: [mesure-n-0048]
+  annales: 1

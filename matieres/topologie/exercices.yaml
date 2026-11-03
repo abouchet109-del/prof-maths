@@ -13,13 +13,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.1 Rappels sur la théorie des ensembles
+  methodes:
+  - topo-m-23
+  notions:
+  - topo-n-0001
+  - topo-n-0002
+  importance: secondaire
+  justification: manipulation ensembliste, absente des annales
+  difficulte: 1
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: absent
@@ -38,13 +41,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.2 Espace topologique
+  methodes:
+  - topo-m-23
+  notions:
+  - topo-n-0003
+  importance: secondaire
+  justification: topologies sur un ensemble fini, jamais en annale
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -64,13 +69,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-03
+  notions:
+  - topo-n-0010
+  - topo-n-0011
+  importance: secondaire
+  justification: visualiser les distances d_p, hors annales
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -100,13 +108,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-01
+  - topo-m-03
+  - topo-m-02
+  notions:
+  - topo-n-0012
+  - topo-n-0004
+  - topo-n-0043
+  importance: vital
+  justification: 'ouvert/fermé de parties concrètes : m01 (4 annales), m03 (partiels)'
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: absent
@@ -125,13 +139,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-01
+  notions:
+  - topo-n-0014
+  - topo-n-0004
+  importance: vital
+  justification: singletons fermés, argument réutilisé partout ; très court
+  difficulte: 1
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: absent
@@ -154,13 +171,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  - topo-m-04
+  notions:
+  - topo-n-0018
+  - topo-n-0019
+  importance: vital
+  justification: calcul d'intérieurs, type partiels 2020-21 ex01 et 2021-22 ex01
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -179,13 +200,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  - topo-m-02
+  notions:
+  - topo-n-0022
+  - topo-n-0043
+  importance: vital
+  justification: adhérences par suites, m02 dans 7 annales
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -208,13 +233,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-06
+  - topo-m-01
+  notions:
+  - topo-n-0008
+  - topo-n-0011
+  - topo-n-0007
+  importance: important
+  justification: distance discrète, contre-exemple boule fermée / adhérence de boule
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -235,13 +265,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-20
+  - topo-m-14
+  notions:
+  - topo-n-0015
+  importance: important
+  justification: contre-exemple de fermés disjoints à distance nulle, m20 dans 5 annales
+  difficulte: 2
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -262,13 +295,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-14
+  - topo-m-04
+  notions:
+  - topo-n-0015
+  - topo-n-0024
+  importance: secondaire
+  justification: distances entre parties, rarement demandé
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -287,13 +324,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-20
+  - topo-m-03
+  notions:
+  - topo-n-0021
+  - topo-n-0024
+  importance: secondaire
+  justification: cinq ensembles distincts, plus astucieux qu'utile
+  difficulte: 2
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -321,13 +362,19 @@
     nature: partiel
     annee: 2022-23
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  - topo-m-02
+  - topo-m-20
+  notions:
+  - topo-n-0024
+  - topo-n-0019
+  - topo-n-0043
+  importance: vital
+  justification: annale prioritaire ; m04 (6 annales) et m02 (7 annales)
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -346,13 +393,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  notions:
+  - topo-n-0028
+  - topo-n-0023
+  importance: vital
+  justification: densité par dualité intérieur/adhérence, m04 dans 6 annales
+  difficulte: 2
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -373,13 +423,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  - topo-m-20
+  notions:
+  - topo-n-0028
+  - topo-n-0020
+  importance: vital
+  justification: densité d'une intersection et contre-exemple, m04 dans 6 annales
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -408,13 +462,18 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-15
+  - topo-m-02
+  - topo-m-01
+  notions:
+  - topo-n-0033
+  - topo-n-0043
+  importance: vital
+  justification: annale prioritaire ; produits (3 annales) et caractérisation séquentielle
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -440,13 +499,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-06
+  - topo-m-07
+  - topo-m-11
+  notions:
+  - topo-n-0034
+  - topo-n-0044
+  - topo-n-0036
+  importance: vital
+  justification: comparaison de distances avec la suite t^n, même schéma qu'examen 2022-23 ex04
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: absent
@@ -467,13 +532,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.7 Suite dans un espace métrique
+  methodes:
+  - topo-m-05
+  notions:
+  - topo-n-0040
+  - topo-n-0006
+  importance: secondaire
+  justification: unicité de la limite, résultat de cours
+  difficulte: 1
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: absent
@@ -492,13 +560,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.7 Suite dans un espace métrique
+  methodes:
+  - topo-m-11
+  notions:
+  - topo-n-0046
+  - topo-n-0044
+  importance: secondaire
+  justification: valeurs d'adhérence d'une suite réelle, jamais en annale
+  difficulte: 3
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -521,13 +592,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.7 Suite dans un espace métrique
+  methodes:
+  - topo-m-02
+  notions:
+  - topo-n-0043
+  - topo-n-0040
+  importance: vital
+  justification: fermé dans un espace de suites par m02, comme partiel 2023-24 ex05 q1
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -549,13 +623,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-05
+  - topo-m-15
+  notions:
+  - topo-n-0009
+  - topo-n-0033
+  - topo-n-0049
+  importance: vital
+  justification: continuité de la distance, outil de m05 et m14, reprise en contrôle UVSQ
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -578,13 +657,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-14
+  - topo-m-05
+  - topo-m-01
+  notions:
+  - topo-n-0015
+  - topo-n-0022
+  importance: vital
+  justification: distance à une partie, m14 dans 3 annales
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -603,13 +687,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-05
+  notions:
+  - topo-n-0049
+  - topo-n-0010
+  importance: secondaire
+  justification: continuité sur un espace discret, immédiat
+  difficulte: 1
+  temps_min: 5
   indice_tableur: null
   corrige:
     statut: absent
@@ -634,13 +721,17 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-04
+  - topo-m-05
+  notions:
+  - topo-n-0028
+  - topo-n-0049
+  importance: vital
+  justification: annale prioritaire ; densité et continuité (m04, m05)
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -662,13 +753,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-05
+  - topo-m-20
+  notions:
+  - topo-n-0049
+  - topo-n-0030
+  importance: important
+  justification: recollement de continuité et contre-exemple, utile mais hors annales
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -691,13 +786,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-01
+  - topo-m-05
+  notions:
+  - topo-n-0049
+  - topo-n-0012
+  importance: vital
+  justification: ouvert par image réciproque dans C([0,1]), m01 dans 4 annales
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -716,13 +815,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.2 Espace métrique complet
+  methodes:
+  - topo-m-08
+  notions:
+  - topo-n-0060
+  - topo-n-0056
+  importance: secondaire
+  justification: complétude d'une union et d'une intersection, court et peu demandé
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -746,13 +848,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.2 Espace métrique complet
+  methodes:
+  - topo-m-06
+  - topo-m-07
+  - topo-m-08
+  notions:
+  - topo-n-0034
+  - topo-n-0053
+  - topo-n-0056
+  importance: vital
+  justification: 'distances topologiquement équivalentes mais complétudes différentes : m06, m07, m08 ; repris en contrôle UVSQ'
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -773,13 +881,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.2 Espace métrique complet
+  methodes:
+  - topo-m-08
+  - topo-m-05
+  notions:
+  - topo-n-0056
+  - topo-n-0050
+  importance: important
+  justification: transport de la complétude par homéomorphisme uniformément continu
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -799,13 +911,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.3 Application à valeurs dans un espace métrique complet
+  methodes:
+  - topo-m-08
+  - topo-m-05
+  notions:
+  - topo-n-0059
+  - topo-n-0049
+  importance: secondaire
+  justification: fermés emboîtés de diamètre tendant vers 0, peu repris
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -832,13 +948,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-20
+  - topo-m-09
+  notions:
+  - topo-n-0069
+  - topo-n-0067
+  importance: secondaire
+  justification: contre-exemples au point fixe quand d(f(x),f(y))<d(x,y), long
+  difficulte: 3
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -863,13 +983,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-09
+  notions:
+  - topo-n-0067
+  - topo-n-0065
+  importance: vital
+  justification: Picard par une itérée contractante, m09 dans 6 annales
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: absent
@@ -889,13 +1012,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-09
+  notions:
+  - topo-n-0067
+  - topo-n-0068
+  importance: vital
+  justification: Picard dans R^2, application directe de m09 (6 annales)
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -925,13 +1051,19 @@
     nature: partiel
     annee: 2022-23
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-09
+  - topo-m-05
+  - topo-m-15
+  notions:
+  - topo-n-0067
+  - topo-n-0033
+  - topo-n-0048
+  importance: vital
+  justification: annale prioritaire ; Picard à paramètre et continuité
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: absent
@@ -953,13 +1085,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.5 Théorème de Baire
+  methodes:
+  - topo-m-10
+  notions:
+  - topo-n-0070
+  - topo-n-0072
+  - topo-n-0027
+  importance: important
+  justification: applications directes de Baire, méthode présente dans 2 annales
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -981,13 +1117,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.5 Théorème de Baire
+  methodes:
+  - topo-m-10
+  notions:
+  - topo-n-0073
+  - topo-n-0070
+  importance: secondaire
+  justification: Baire sur un exemple classique mais long et difficile
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: absent
@@ -1008,13 +1147,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.1 Définitions et propriétés
+  methodes:
+  - topo-m-12
+  - topo-m-11
+  notions:
+  - topo-n-0080
+  - topo-n-0077
+  importance: vital
+  justification: stabilité des compacts, réflexes de m11 et m12 (5 et 3 annales)
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -1036,13 +1179,20 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 3 - Espace compact > 3.3 Compacts de $\mathbb R^d$
+  methodes:
+  - topo-m-11
+  - topo-m-12
+  - topo-m-20
+  notions:
+  - topo-n-0082
+  - topo-n-0089
+  - topo-n-0091
+  importance: vital
+  justification: somme compact + fermé par suites et contre-exemple, repris au TD UVSQ
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -1061,13 +1211,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.2 Suites dans un espace métrique compact
+  methodes:
+  - topo-m-11
+  - topo-m-08
+  notions:
+  - topo-n-0086
+  - topo-n-0055
+  importance: important
+  justification: 'boules fermées compactes implique complet : Cauchy + valeur d''adhérence'
+  difficulte: 2
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -1090,13 +1244,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.1 Définitions et propriétés
+  methodes:
+  - topo-m-12
+  - topo-m-11
+  - topo-m-20
+  notions:
+  - topo-n-0079
+  - topo-n-0091
+  importance: vital
+  justification: compacts emboîtés et image continue, prolonge l'annale td4-ex05
+  difficulte: 3
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -1127,13 +1286,17 @@
     nature: exam
     annee: 2022-23
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.1 Définitions et propriétés
+  methodes:
+  - topo-m-11
+  - topo-m-12
+  notions:
+  - topo-n-0082
+  - topo-n-0079
+  importance: vital
+  justification: annale prioritaire ; compacts emboîtés par suites
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -1155,13 +1318,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.4 Applications continues sur un compact
+  methodes:
+  - topo-m-11
+  - topo-m-13
+  notions:
+  - topo-n-0050
+  - topo-n-0082
+  importance: secondaire
+  justification: isométrie d'un compact surjective, astucieux
+  difficulte: 3
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -1188,13 +1355,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.4 Applications continues sur un compact
+  methodes:
+  - topo-m-13
+  - topo-m-05
+  notions:
+  - topo-n-0092
+  - topo-n-0050
+  importance: vital
+  justification: point fixe par minimisation sur un compact, exercice type du 3.4 (m13, m05)
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -1218,13 +1389,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.2 Suites dans un espace métrique compact
+  methodes:
+  - topo-m-11
+  - topo-m-15
+  notions:
+  - topo-n-0038
+  - topo-n-0082
+  importance: exotique
+  justification: compacité de X^N par extraction diagonale, difficile et jamais en annale
+  difficulte: 3
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: absent
@@ -1244,13 +1419,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.4 Applications continues sur un compact
+  methodes:
+  - topo-m-14
+  - topo-m-13
+  - topo-m-11
+  notions:
+  - topo-n-0015
+  - topo-n-0092
+  importance: vital
+  justification: 'distance d''un compact au complémentaire d''un ouvert : m14 (3 annales) et compacité'
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -1270,13 +1450,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.4 Applications continues sur un compact
+  methodes:
+  - topo-m-11
+  - topo-m-13
+  notions:
+  - topo-n-0093
+  - topo-n-0082
+  importance: vital
+  justification: variante de Heine par l'absurde et suites, seul entraînement Paris Cité à Heine
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -1301,13 +1485,17 @@
     nature: exam
     annee: 2020-21
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  - topo-m-09
+  notions:
+  - topo-n-0050
+  - topo-n-0067
+  importance: vital
+  justification: annale prioritaire ; norme d'opérateur (4 examens) et point fixe
+  difficulte: 3
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: absent
@@ -1334,13 +1522,14 @@
     nature: exam
     annee: 2020-21
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  methodes:
+  - topo-m-17
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: vital
+  justification: annale prioritaire ; projections hilbertiennes présentes dans 4 examens
+  difficulte: 3
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: absent
@@ -1361,13 +1550,14 @@
     nature: exam
     annee: 2020-21
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  methodes:
+  - topo-m-18
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: important
+  justification: annale prioritaire ; base hilbertienne, calcul court
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -1392,13 +1582,15 @@
     nature: exam
     annee: 2021-22
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: vital
+  justification: annale prioritaire ; norme de formes linéaires (m16, 4 examens)
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: absent
@@ -1419,13 +1611,14 @@
     nature: exam
     annee: 2021-22
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: important
+  justification: annale prioritaire ; connexité, 3 annales
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -1451,13 +1644,19 @@
     nature: exam
     annee: 2021-22
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-10
+  - topo-m-04
+  - topo-m-01
+  - topo-m-08
+  notions:
+  - topo-n-0072
+  - topo-n-0060
+  importance: important
+  justification: annale prioritaire ; Baire (2 annales) en dimension infinie
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: absent
@@ -1487,13 +1686,17 @@
     nature: exam
     annee: 2021-22
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  methodes:
+  - topo-m-17
+  - topo-m-18
+  - topo-m-14
+  notions:
+  - topo-n-0015
+  importance: vital
+  justification: annale prioritaire ; projection sur un sous-espace, Bessel
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: absent
@@ -1520,13 +1723,16 @@
     nature: exam
     annee: 2022-23
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
+  - topo-m-02
+  notions:
+  - topo-n-0091
+  importance: important
+  justification: annale prioritaire ; connexité et adhérence (Darboux)
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -1549,13 +1755,15 @@
     nature: exam
     annee: 2022-23
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: vital
+  justification: annale prioritaire ; norme triple, m16 dans 4 examens
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -1583,13 +1791,18 @@
     nature: exam
     annee: 2022-23
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  methodes:
+  - topo-m-06
+  - topo-m-07
+  - topo-m-18
+  - topo-m-20
+  notions:
+  - topo-n-0034
+  importance: vital
+  justification: annale prioritaire ; norme hilbertienne et non-équivalence de normes
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: absent
@@ -1614,13 +1827,16 @@
     nature: exam
     annee: 2022-23
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  methodes:
+  - topo-m-17
+  - topo-m-04
+  notions:
+  - topo-n-0028
+  importance: vital
+  justification: annale prioritaire ; projection sur des convexes et densité
+  difficulte: 3
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -1657,13 +1873,20 @@
     nature: exam
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-09
+  - topo-m-16
+  - topo-m-08
+  - topo-m-06
+  - topo-m-07
+  notions:
+  - topo-n-0067
+  - topo-n-0063
+  importance: vital
+  justification: annale prioritaire ; problème complet Banach + Picard
+  difficulte: 3
+  temps_min: 75
   indice_tableur: null
   corrige:
     statut: absent
@@ -1687,13 +1910,15 @@
     nature: exam
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  methodes:
+  - topo-m-17
+  - topo-m-20
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: vital
+  justification: annale prioritaire ; projections et contre-exemple dans R^2
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: absent
@@ -1714,13 +1939,20 @@
     nature: partiel
     annee: 2020-21
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.5 Sous-espace topologique, sous-espace métrique
+  methodes:
+  - topo-m-03
+  - topo-m-01
+  - topo-m-08
+  - topo-m-11
+  notions:
+  - topo-n-0030
+  - topo-n-0056
+  - topo-n-0077
+  importance: vital
+  justification: annale prioritaire ; ouvert/fermé/complet/compact relatifs
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1743,13 +1975,19 @@
     nature: partiel
     annee: 2020-21
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
+  - topo-m-01
+  - topo-m-12
+  - topo-m-11
+  - topo-m-20
+  notions:
+  - topo-n-0075
+  importance: important
+  justification: annale prioritaire ; epsilon-chaînes et connexité, notion isolée
+  difficulte: 3
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1776,13 +2014,18 @@
     nature: partiel
     annee: 2021-22
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  - topo-m-02
+  notions:
+  - topo-n-0018
+  - topo-n-0022
+  - topo-n-0043
+  importance: vital
+  justification: annale prioritaire ; intérieur, adhérence, union fermée
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -1803,13 +2046,17 @@
     nature: partiel
     annee: 2021-22
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-04
+  - topo-m-05
+  notions:
+  - topo-n-0028
+  - topo-n-0048
+  importance: vital
+  justification: annale prioritaire ; égalité sur une partie dense
+  difficulte: 1
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: absent
@@ -1836,13 +2083,18 @@
     nature: partiel
     annee: 2021-22
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-06
+  - topo-m-14
+  - topo-m-05
+  notions:
+  - topo-n-0015
+  - topo-n-0050
+  importance: important
+  justification: annale prioritaire ; distance sur les fermés, technique mais isolée
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: absent
@@ -1864,13 +2116,16 @@
     nature: partiel
     annee: 2021-22
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-09
+  notions:
+  - topo-n-0067
+  - topo-n-0063
+  importance: vital
+  justification: annale prioritaire ; Picard sur C([0,1])
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -1894,13 +2149,20 @@
     nature: partiel
     annee: 2021-22
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.1 Définitions et propriétés
+  methodes:
+  - topo-m-11
+  - topo-m-02
+  - topo-m-15
+  - topo-m-20
+  notions:
+  - topo-n-0082
+  - topo-n-0033
+  - topo-n-0043
+  importance: vital
+  justification: annale prioritaire ; projection d'un fermé le long d'un compact
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -1929,13 +2191,18 @@
     nature: partiel
     annee: 2022-23
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.1 Suite de Cauchy
+  methodes:
+  - topo-m-08
+  - topo-m-05
+  - topo-m-14
+  notions:
+  - topo-n-0053
+  - topo-n-0050
+  importance: vital
+  justification: annale prioritaire ; suites de Cauchy et fonction lipschitzienne
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: absent
@@ -1957,13 +2224,17 @@
     nature: partiel
     annee: 2022-23
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.5 Théorème de Baire
+  methodes:
+  - topo-m-10
+  - topo-m-04
+  notions:
+  - topo-n-0072
+  - topo-n-0023
+  importance: important
+  justification: annale prioritaire ; Baire, 2 annales
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -1984,13 +2255,15 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-09
+  notions:
+  - topo-n-0067
+  importance: vital
+  justification: annale prioritaire ; point fixe commun, m09
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -2014,13 +2287,19 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.1 Définitions et propriétés
+  methodes:
+  - topo-m-11
+  - topo-m-12
+  - topo-m-02
+  notions:
+  - topo-n-0082
+  - topo-n-0075
+  - topo-n-0080
+  importance: vital
+  justification: annale prioritaire ; trois preuves de compacité
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: absent
@@ -2052,13 +2331,18 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-09
+  - topo-m-08
+  - topo-m-02
+  notions:
+  - topo-n-0067
+  - topo-n-0060
+  importance: vital
+  justification: annale prioritaire ; Picard dans un espace de suites
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: absent
@@ -2079,13 +2363,20 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  - topo-m-01
+  - topo-m-08
+  - topo-m-12
+  notions:
+  - topo-n-0018
+  - topo-n-0022
+  - topo-n-0090
+  importance: vital
+  justification: bilan ouvert/fermé/compact/complet comme le partiel 2020-21 ex01
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2119,13 +2410,17 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.4 Applications continues sur un compact
+  methodes:
+  - topo-m-11
+  - topo-m-13
+  notions:
+  - topo-n-0082
+  - topo-n-0050
+  importance: exotique
+  justification: devoir long et astucieux (application expansive sur un compact), jamais en annale
+  difficulte: 3
+  temps_min: 60
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2155,13 +2450,19 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 3 - Espace compact > 3.3 Compacts de $\mathbb R^d$
+  methodes:
+  - topo-m-13
+  - topo-m-12
+  - topo-m-20
+  notions:
+  - topo-n-0090
+  - topo-n-0092
+  importance: important
+  justification: image réciproque de compact et minimum d'une fonction coercive, classique
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2189,13 +2490,15 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
+  - topo-m-13
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: secondaire
+  justification: connexité du cercle, Borsuk-Ulam en dimension 1, plus long que les annales
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2222,13 +2525,15 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
+  - topo-m-02
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: important
+  justification: même ensemble Delta et même fonction g qu'à l'examen 2022-23 ex02
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2256,13 +2561,18 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 3 - Espace compact > 3.3 Compacts de $\mathbb R^d$
+  methodes:
+  - topo-m-11
+  - topo-m-13
+  notions:
+  - topo-n-0082
+  - topo-n-0090
+  importance: secondaire
+  justification: plus petite boule contenant un borné, long
+  difficulte: 3
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2289,13 +2599,14 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: secondaire
+  justification: points de coupure, connexité, jamais en annale
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2323,13 +2634,18 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  - topo-m-09
+  - topo-m-13
+  notions:
+  - topo-n-0092
+  - topo-n-0050
+  importance: vital
+  justification: 'norme d''un opérateur intégral : seul entraînement Paris Cité hors annales à m16 (4 examens)'
+  difficulte: 2
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2350,13 +2666,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-06
+  notions:
+  - topo-n-0008
+  - topo-n-0011
+  importance: secondaire
+  justification: vérifier une norme et dessiner sa boule, échauffement
+  difficulte: 1
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -2379,13 +2698,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-07
+  notions:
+  - topo-n-0034
+  - topo-n-0011
+  importance: important
+  justification: boules unité et comparaison de normes, sert à m07
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -2409,13 +2731,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-22
+  notions:
+  - topo-n-0010
+  importance: secondaire
+  justification: inégalité de convexité, jamais dans les annales de Paris Cité
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -2439,13 +2763,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-22
+  notions:
+  - topo-n-0010
+  importance: secondaire
+  justification: Hölder, jamais dans les annales de Paris Cité
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -2469,13 +2795,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-22
+  notions:
+  - topo-n-0010
+  importance: secondaire
+  justification: Minkowski, jamais dans les annales de Paris Cité
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -2498,13 +2826,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-22
+  - topo-m-06
+  notions:
+  - topo-n-0010
+  - topo-n-0008
+  importance: secondaire
+  justification: conséquence directe de Minkowski
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -2528,13 +2860,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-22
+  notions:
+  - topo-n-0010
+  importance: secondaire
+  justification: limite des normes p, calcul isolé
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -2558,13 +2892,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-22
+  - topo-m-07
+  notions:
+  - topo-n-0010
+  - topo-n-0034
+  importance: secondaire
+  justification: comparaison des normes p, technique
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -2587,13 +2925,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-22
+  notions:
+  - topo-n-0010
+  importance: exotique
+  justification: cas d'égalité, sans intérêt pour l'examen
+  difficulte: 3
+  temps_min: 25
   indice_tableur:
     importance: Exotique
     difficulte: ★★★
@@ -2616,13 +2956,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-06
+  notions:
+  - topo-n-0008
+  importance: important
+  justification: condition pour obtenir une norme, m06 dans 3 annales
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -2645,13 +2987,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-07
+  notions:
+  - topo-n-0034
+  importance: important
+  justification: équivalence de normes par encadrement, m07
+  difficulte: 1
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -2674,13 +3018,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-07
+  - topo-m-20
+  notions:
+  - topo-n-0034
+  importance: secondaire
+  justification: réciproque par fonctions pics, plus technique
+  difficulte: 3
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -2703,13 +3050,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-07
+  - topo-m-06
+  notions:
+  - topo-n-0034
+  - topo-n-0036
+  importance: vital
+  justification: équivalence de normes sur un espace de fonctions C^1, schéma de l'examen 2022-23 ex04 et 2023-24 ex01
+  difficulte: 3
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -2732,13 +3083,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-07
+  - topo-m-20
+  notions:
+  - topo-n-0034
+  - topo-n-0036
+  importance: secondaire
+  justification: quatre normes non équivalentes, long
+  difficulte: 3
+  temps_min: 40
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -2759,13 +3114,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  notions:
+  - topo-n-0012
+  - topo-n-0029
+  importance: secondaire
+  justification: séparabilité de R^2, jamais demandé à Paris Cité
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -2786,13 +3144,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-02
+  - topo-m-04
+  notions:
+  - topo-n-0005
+  - topo-n-0043
+  importance: secondaire
+  justification: famille localement finie de fermés, hors annales
+  difficulte: 3
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -2819,13 +3181,17 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-14
+  - topo-m-01
+  notions:
+  - topo-n-0015
+  - topo-n-0005
+  importance: important
+  justification: fermé = intersection dénombrable d'ouverts via d(x,F), m14
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -2848,13 +3214,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-01
+  - topo-m-15
+  notions:
+  - topo-n-0033
+  - topo-n-0004
+  importance: secondaire
+  justification: fermé produit immédiat
+  difficulte: 1
+  temps_min: 5
   indice_tableur:
     importance: Vital
     difficulte: ★
@@ -2877,13 +3247,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-02
+  notions:
+  - topo-n-0043
+  importance: important
+  justification: fermé par caractérisation séquentielle dans R^2, m02 (7 annales)
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -2906,13 +3278,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-02
+  - topo-m-03
+  notions:
+  - topo-n-0022
+  importance: secondaire
+  justification: adhérence d'une union infinie, reprend q2
+  difficulte: 2
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -2935,13 +3310,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-01
+  notions:
+  - topo-n-0005
+  importance: secondaire
+  justification: Cantor fermé, stabilité des fermés
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -2964,13 +3341,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  notions:
+  - topo-n-0018
+  importance: secondaire
+  justification: Cantor d'intérieur vide, culture
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -2993,13 +3372,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  notions:
+  - topo-n-0025
+  importance: secondaire
+  justification: conséquence des deux questions précédentes
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -3022,13 +3403,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  notions:
+  - topo-n-0024
+  importance: secondaire
+  justification: caractérisation abstraite des ouverts, peu demandée
+  difficulte: 3
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3051,13 +3434,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  notions:
+  - topo-n-0025
+  - topo-n-0026
+  importance: secondaire
+  justification: ouvert et frontière, court
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -3090,13 +3476,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  - topo-m-20
+  notions:
+  - topo-n-0020
+  - topo-n-0024
+  - topo-n-0021
+  importance: vital
+  justification: 'vrai/faux sur intérieur et adhérence d''unions et d''intersections : réflexes de m04 (6 annales) et m20'
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -3117,13 +3508,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-20
+  - topo-m-03
+  notions:
+  - topo-n-0021
+  importance: exotique
+  justification: sept ensembles de Kuratowski, astucieux, jamais en examen
+  difficulte: 3
+  temps_min: 30
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -3144,13 +3538,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-04
+  - topo-m-15
+  notions:
+  - topo-n-0025
+  - topo-n-0033
+  importance: secondaire
+  justification: frontière d'un produit, calcul lourd
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3173,13 +3571,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  - topo-m-04
+  notions:
+  - topo-n-0018
+  - topo-n-0022
+  importance: vital
+  justification: intérieur et adhérence dans (C([0,1]), sup), repris en contrôle UVSQ 2025
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -3202,13 +3604,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  - topo-m-04
+  notions:
+  - topo-n-0018
+  - topo-n-0022
+  importance: important
+  justification: même technique que q1 sur un autre ensemble
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -3231,13 +3637,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  - topo-m-04
+  notions:
+  - topo-n-0018
+  - topo-n-0022
+  importance: secondaire
+  justification: fonctions strictement croissantes, plus délicat
+  difficulte: 3
+  temps_min: 25
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3258,13 +3668,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-05
+  - topo-m-04
+  notions:
+  - topo-n-0049
+  - topo-n-0020
+  importance: secondaire
+  justification: caractérisation de la continuité par l'intérieur, peu utilisée
+  difficulte: 3
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3285,13 +3699,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-05
+  - topo-m-02
+  notions:
+  - topo-n-0049
+  - topo-n-0024
+  importance: important
+  justification: continuité et adhérence, réflexe séquentiel
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3312,13 +3730,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-05
+  - topo-m-04
+  notions:
+  - topo-n-0028
+  - topo-n-0049
+  importance: secondaire
+  justification: sup sur A et sur son adhérence, court
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -3340,13 +3762,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-01
+  notions:
+  - topo-n-0012
+  importance: important
+  justification: X+Y ouvert comme union de translatés
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -3368,13 +3792,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 3 - Espace compact > 3.3 Compacts de $\mathbb R^d$
+  methodes:
+  - topo-m-12
+  notions:
+  - topo-n-0089
+  - topo-n-0091
+  importance: vital
+  justification: quasi identique à td4-ex02 q3 (somme de compacts)
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -3382,6 +3810,7 @@
     statut: absent
     ref: null
   qualite_extraction: ok
+  doublon_de: topo-td4-ex02
 - id: topo-uvsq-td2-ex01q3
   titre: X+Y fermé si X compact et Y fermé
   enonce: |
@@ -3396,13 +3825,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 3 - Espace compact > 3.3 Compacts de $\mathbb R^d$
+  methodes:
+  - topo-m-11
+  notions:
+  - topo-n-0082
+  importance: vital
+  justification: quasi identique à td4-ex02 q1 (compact + fermé)
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -3410,6 +3842,7 @@
     statut: absent
     ref: null
   qualite_extraction: ok
+  doublon_de: topo-td4-ex02
 - id: topo-uvsq-td2-ex02
   titre: 'Fonction coercive : minimum global'
   enonce: |
@@ -3425,13 +3858,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 3 - Espace compact > 3.3 Compacts de $\mathbb R^d$
+  methodes:
+  - topo-m-13
+  notions:
+  - topo-n-0092
+  - topo-n-0090
+  importance: important
+  justification: quasi identique à dm2021-22-ex01 q2 (fonction coercive)
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -3439,6 +3876,7 @@
     statut: absent
     ref: null
   qualite_extraction: ok
+  doublon_de: topo-dm2021-22-ex01
 - id: topo-uvsq-td2-ex03
   titre: O(n) est compact
   enonce: |
@@ -3452,13 +3890,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 3 - Espace compact > 3.3 Compacts de $\mathbb R^d$
+  methodes:
+  - topo-m-12
+  notions:
+  - topo-n-0090
+  importance: secondaire
+  justification: O(n) fermé borné, application directe du cours
+  difficulte: 1
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -3480,13 +3921,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.1 Définitions et propriétés
+  methodes:
+  - topo-m-11
+  - topo-m-12
+  notions:
+  - topo-n-0079
+  importance: vital
+  justification: intersection de compacts emboîtés non vide, base de l'annale td4-ex05
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -3509,13 +3953,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.2 Suites dans un espace métrique compact
+  methodes:
+  - topo-m-11
+  notions:
+  - topo-n-0082
+  importance: secondaire
+  justification: calcul d'intégrale préparatoire
+  difficulte: 1
+  temps_min: 5
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -3538,13 +3984,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.2 Suites dans un espace métrique compact
+  methodes:
+  - topo-m-11
+  notions:
+  - topo-n-0082
+  importance: secondaire
+  justification: calcul de distances préparatoire
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -3567,13 +4015,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.2 Suites dans un espace métrique compact
+  methodes:
+  - topo-m-11
+  - topo-m-20
+  notions:
+  - topo-n-0082
+  - topo-n-0088
+  importance: important
+  justification: 'boule fermée non compacte : suite sans valeur d''adhérence, m11'
+  difficulte: 2
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -3597,13 +4049,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-12
+  notions:
+  - topo-n-0075
+  importance: secondaire
+  justification: théorème de Riesz, hors cours et jamais en annale
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3626,13 +4080,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-12
+  notions:
+  - topo-n-0080
+  importance: secondaire
+  justification: théorème de Riesz, hors cours et jamais en annale
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3655,13 +4111,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-12
+  notions:
+  - topo-n-0075
+  importance: secondaire
+  justification: théorème de Riesz, hors cours et jamais en annale
+  difficulte: 3
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3684,13 +4142,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-12
+  notions:
+  - topo-n-0075
+  importance: secondaire
+  justification: théorème de Riesz, hors cours et jamais en annale
+  difficulte: 3
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3713,13 +4173,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-12
+  notions:
+  - topo-n-0075
+  importance: secondaire
+  justification: théorème de Riesz, hors cours et jamais en annale
+  difficulte: 3
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3740,13 +4202,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.4 Applications continues sur un compact
+  methodes:
+  - topo-m-13
+  - topo-m-05
+  notions:
+  - topo-n-0093
+  - topo-n-0050
+  importance: important
+  justification: uniforme continuité via Heine sur un compact
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -3769,13 +4235,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.1 Définitions et propriétés
+  methodes:
+  - topo-m-12
+  - topo-m-15
+  notions:
+  - topo-n-0033
+  importance: secondaire
+  justification: lemme du tube, jamais en annale
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3798,13 +4267,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.1 Définitions et propriétés
+  methodes:
+  - topo-m-12
+  - topo-m-15
+  notions:
+  - topo-n-0075
+  importance: secondaire
+  justification: lemme du tube, jamais en annale
+  difficulte: 3
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3827,13 +4299,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.1 Définitions et propriétés
+  methodes:
+  - topo-m-12
+  - topo-m-15
+  notions:
+  - topo-n-0075
+  importance: secondaire
+  justification: lemme du tube, jamais en annale
+  difficulte: 3
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -3856,13 +4331,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.1 Définitions et propriétés
+  methodes:
+  - topo-m-11
+  - topo-m-02
+  - topo-m-15
+  notions:
+  - topo-n-0082
+  - topo-n-0033
+  importance: vital
+  justification: identique au partiel 2021-22 ex05 (projection d'un fermé le long d'un compact)
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -3870,6 +4350,7 @@
     statut: absent
     ref: null
   qualite_extraction: ok
+  doublon_de: topo-partiel2021-22-ex05
 - id: topo-uvsq-td2-ex10q1
   titre: f(adh A) inclus dans adh f(A)
   enonce: |
@@ -3884,13 +4365,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-05
+  - topo-m-02
+  notions:
+  - topo-n-0049
+  - topo-n-0024
+  importance: vital
+  justification: f(adh A) inclus dans adh f(A), réflexe séquentiel m02/m05
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -3912,13 +4397,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.4 Applications continues sur un compact
+  methodes:
+  - topo-m-11
+  - topo-m-12
+  notions:
+  - topo-n-0091
+  - topo-n-0080
+  importance: important
+  justification: image continue d'un compact est fermée
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -3940,13 +4429,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.4 Applications continues sur un compact
+  methodes:
+  - topo-m-20
+  notions:
+  - topo-n-0091
+  importance: secondaire
+  justification: contre-exemple simple
+  difficulte: 2
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -3967,13 +4458,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
+  notions:
+  - topo-n-0025
+  importance: important
+  justification: connexe et frontière, connexité dans 3 annales
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -3995,13 +4488,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
+  notions:
+  - topo-n-0018
+  importance: secondaire
+  justification: injection continue dans R, argument de connexité astucieux
+  difficulte: 3
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -4025,13 +4520,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
+  - topo-m-12
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: très difficile, jamais en examen
+  difficulte: 3
+  temps_min: 40
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -4052,13 +4549,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: important
+  justification: connexe inclus dans une union non connexe, outil des annales de connexité
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4083,13 +4581,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.1 Suite de Cauchy
+  methodes:
+  - topo-m-08
+  notions:
+  - topo-n-0053
+  importance: vital
+  justification: suite de Cauchy dans un espace de fonctions, m08 (5 annales)
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -4110,13 +4610,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.2 Espace métrique complet
+  methodes:
+  - topo-m-08
+  - topo-m-20
+  notions:
+  - topo-n-0057
+  - topo-n-0056
+  importance: vital
+  justification: 'espace non complet : Cauchy sans limite continue, m08'
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4137,13 +4641,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-08
+  notions:
+  - topo-n-0056
+  importance: secondaire
+  justification: convergence normale dans un Banach, hors cours
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4175,13 +4681,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-09
+  - topo-m-12
+  notions:
+  - topo-n-0067
+  importance: secondaire
+  justification: Picard sur un convexe compact, plus difficile que les annales
+  difficulte: 3
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4211,13 +4720,17 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-09
+  - topo-m-11
+  notions:
+  - topo-n-0067
+  - topo-n-0082
+  importance: secondaire
+  justification: point fixe par compacité, difficile
+  difficulte: 3
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4244,13 +4757,16 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  - topo-m-20
+  notions:
+  - topo-n-0050
+  importance: vital
+  justification: continuité d'une forme linéaire selon la norme, m16 (4 examens)
+  difficulte: 1
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -4272,13 +4788,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: vital
+  justification: majoration d'une norme d'opérateur, m16 (4 examens)
+  difficulte: 1
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -4300,13 +4818,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: vital
+  justification: norme approchée par une suite, schéma des examens
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -4328,13 +4848,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: secondaire
+  justification: norme non atteinte, complément
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -4358,13 +4880,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: secondaire
+  justification: normes matricielles, les examens portent sur des espaces de fonctions
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -4386,13 +4910,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  - topo-m-20
+  notions:
+  - topo-n-0050
+  importance: important
+  justification: application linéaire non continue, m16
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -4414,13 +4941,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: secondaire
+  justification: variante courte de q1
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -4442,13 +4971,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: secondaire
+  justification: variante courte de q1
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -4470,13 +5001,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  - topo-m-20
+  notions:
+  - topo-n-0050
+  importance: exotique
+  justification: cas technique sans intérêt pour l'examen
+  difficulte: 3
+  temps_min: 20
   indice_tableur:
     importance: Exotique
     difficulte: ★★★
@@ -4505,13 +5039,15 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: vital
+  justification: quasi identique à l'examen 2020-21 ex01 q1 (même opérateur intégral)
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4519,6 +5055,7 @@
     statut: absent
     ref: null
   qualite_extraction: ok
+  doublon_de: topo-exam2020-21-ex01
 - id: topo-uvsq-td3-ex08q2
   titre: L'équation Af=f a-t-elle des solutions non nulles ?
   enonce: |
@@ -4534,13 +5071,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  - topo-m-09
+  notions:
+  - topo-n-0067
+  importance: vital
+  justification: quasi identique à l'examen 2020-21 ex01 q2 (équation Af=f)
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -4548,6 +5088,7 @@
     statut: absent
     ref: null
   qualite_extraction: ok
+  doublon_de: topo-exam2020-21-ex01
 - id: topo-uvsq-td3-ex09q1
   titre: f -> f(1) continue de (C^1,||.||) dans R
   enonce: |
@@ -4563,13 +5104,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: secondaire
+  justification: forme linéaire continue, immédiat
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -4592,13 +5135,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-01
+  notions:
+  - topo-n-0049
+  importance: secondaire
+  justification: fermé comme image réciproque, immédiat après q1
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -4624,13 +5169,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-07
+  - topo-m-06
+  notions:
+  - topo-n-0034
+  importance: important
+  justification: norme équivalente sur C^1 par Cauchy-Schwarz, proche de l'examen 2022-23 ex04
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -4653,13 +5201,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
+  - topo-m-05
+  notions:
+  - topo-n-0048
+  importance: exotique
+  justification: différentiabilité, jamais dans les annales de topologie Paris Cité
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4680,13 +5231,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: calcul différentiel, hors programme de topologie Paris Cité
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4708,13 +5260,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: calcul différentiel, hors programme de topologie Paris Cité
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -4736,13 +5289,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: calcul différentiel, hors programme de topologie Paris Cité
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4771,13 +5325,14 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: calcul différentiel, hors programme de topologie Paris Cité
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4801,13 +5356,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
+  notions:
+  - topo-n-0050
+  importance: exotique
+  justification: calcul différentiel, hors programme de topologie Paris Cité
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -4830,13 +5387,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
+  - topo-m-13
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: calcul différentiel difficile, hors programme
+  difficulte: 3
+  temps_min: 30
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -4859,13 +5418,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
+  - topo-m-13
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: calcul différentiel, hors programme de topologie Paris Cité
+  difficulte: 3
+  temps_min: 25
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -4891,13 +5452,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: analyse convexe, hors programme de topologie Paris Cité
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4923,13 +5485,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: analyse convexe, hors programme de topologie Paris Cité
+  difficulte: 3
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -4955,13 +5518,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: analyse convexe difficile, hors programme
+  difficulte: 3
+  temps_min: 25
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -4984,13 +5548,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: calcul différentiel, hors programme de topologie Paris Cité
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -5016,13 +5581,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: calcul différentiel, hors programme de topologie Paris Cité
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5045,13 +5611,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: inversion globale, hors programme
+  difficulte: 3
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5078,13 +5645,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
+  - topo-m-09
+  notions:
+  - topo-n-0065
+  importance: exotique
+  justification: contraction par accroissements finis, outil hors programme
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5109,13 +5679,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
+  - topo-m-09
+  notions:
+  - topo-n-0067
+  importance: exotique
+  justification: surjectivité par Picard dans un contexte de calcul différentiel
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5138,13 +5711,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: différentielle de l'inverse, hors programme
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -5165,13 +5739,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: différentielle en dimension infinie, hors programme
+  difficulte: 3
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5194,13 +5769,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: difficile et hors programme
+  difficulte: 3
+  temps_min: 30
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -5223,13 +5799,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: difficile et hors programme
+  difficulte: 3
+  temps_min: 30
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -5252,13 +5829,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: difficile et hors programme
+  difficulte: 3
+  temps_min: 25
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -5281,13 +5859,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: fonctions implicites, hors programme
+  difficulte: 3
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5309,13 +5888,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: calcul différentiel matriciel, hors programme
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5337,13 +5917,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: inversion locale, hors programme
+  difficulte: 3
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5364,13 +5945,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: différentielle en dimension infinie, hors programme
+  difficulte: 3
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5393,13 +5975,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: composition de différentielles, hors programme
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -5425,13 +6008,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: composition de différentielles, hors programme
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -5454,13 +6038,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-05
+  - topo-m-01
+  notions:
+  - topo-n-0049
+  importance: important
+  justification: preuve de cours continuité / ouverts, m01 et m05
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -5485,13 +6072,15 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-06
+  notions:
+  - topo-n-0008
+  importance: secondaire
+  justification: vérifications de normes répétitives
+  difficulte: 1
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -5516,13 +6105,17 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  methodes:
+  - topo-m-07
+  - topo-m-20
+  notions:
+  - topo-n-0034
+  - topo-n-0036
+  importance: important
+  justification: ordonner des normes et prouver la non-équivalence, m07
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5548,13 +6141,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  notions:
+  - topo-n-0018
+  - topo-n-0022
+  importance: secondaire
+  justification: demi-plan, immédiat
+  difficulte: 1
+  temps_min: 5
   indice_tableur:
     importance: Vital
     difficulte: ★
@@ -5580,13 +6176,17 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  - topo-m-02
+  notions:
+  - topo-n-0018
+  - topo-n-0043
+  importance: secondaire
+  justification: déjà couvert par td1-ex04
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -5612,13 +6212,17 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  - topo-m-01
+  notions:
+  - topo-n-0018
+  - topo-n-0022
+  importance: secondaire
+  justification: déjà couvert par td1-ex04
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -5645,13 +6249,15 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  notions:
+  - topo-n-0026
+  importance: secondaire
+  justification: partition par la frontière, résultat de cours
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -5677,13 +6283,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  notions:
+  - topo-n-0025
+  - topo-n-0024
+  importance: important
+  justification: manipulation abstraite de la frontière, m04
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5709,13 +6318,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  notions:
+  - topo-n-0025
+  - topo-n-0023
+  importance: important
+  justification: manipulation abstraite de la frontière, m04
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5741,13 +6353,15 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-20
+  notions:
+  - topo-n-0025
+  importance: secondaire
+  justification: exemple sans démonstration
+  difficulte: 2
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -5772,13 +6386,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.4 Applications continues sur un compact
+  methodes:
+  - topo-m-13
+  - topo-m-11
+  notions:
+  - topo-n-0093
+  importance: vital
+  justification: preuve du théorème de Heine, résultat central du 3.4
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5805,13 +6422,17 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
+  - topo-m-12
+  notions:
+  - topo-n-0090
+  - topo-n-0091
+  importance: important
+  justification: compact et connexe dans R^2, connexité dans 3 annales
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5838,13 +6459,15 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.2 Espace métrique complet
+  methodes:
+  - topo-m-06
+  notions:
+  - topo-n-0008
+  importance: vital
+  justification: même distance |1/x-1/y| que td3-ex02
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -5854,6 +6477,7 @@
       fichier: uvsq/topologie/Topologie/Correction_CC2_29_novembre_2024.pdf
       page: 2
   qualite_extraction: ok
+  doublon_de: topo-td3-ex02
 - id: topo-uvsq-cc2-2024-ex02q2
   titre: (]0,+inf[, delta) n'est pas complet
   enonce: |
@@ -5869,13 +6493,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.2 Espace métrique complet
+  methodes:
+  - topo-m-08
+  notions:
+  - topo-n-0053
+  - topo-n-0056
+  importance: vital
+  justification: non-complétude par la suite n, comme td3-ex02
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -5885,6 +6512,7 @@
       fichier: uvsq/topologie/Topologie/Correction_CC2_29_novembre_2024.pdf
       page: 2
   qualite_extraction: ok
+  doublon_de: topo-td3-ex02
 - id: topo-uvsq-cc2-2024-ex03q1
   titre: |-
     X\frontière(S) non connexe si int S non vide et S différent de X
@@ -5901,13 +6529,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
+  - topo-m-04
+  notions:
+  - topo-n-0025
+  importance: secondaire
+  justification: connexité et frontière, abstrait
+  difficulte: 3
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -5932,13 +6563,14 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: secondaire
+  justification: connexité par arcs immédiate
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -5963,13 +6595,14 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: secondaire
+  justification: non-connexité immédiate
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -5994,13 +6627,17 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.2 Suites dans un espace métrique compact
+  methodes:
+  - topo-m-11
+  - topo-m-08
+  notions:
+  - topo-n-0086
+  - topo-n-0055
+  importance: important
+  justification: compact implique complet, preuve de cours courte
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -6025,13 +6662,18 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.4 Applications continues sur un compact
+  methodes:
+  - topo-m-11
+  - topo-m-02
+  - topo-m-15
+  notions:
+  - topo-n-0091
+  - topo-n-0089
+  importance: important
+  justification: graphe compact équivaut à continuité, combine m11 et m02
+  difficulte: 3
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -6057,13 +6699,15 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-09
+  notions:
+  - topo-n-0067
+  importance: vital
+  justification: énoncé de Picard, indispensable pour m09 (6 annales)
+  difficulte: 1
+  temps_min: 5
   indice_tableur:
     importance: Vital
     difficulte: ★
@@ -6087,13 +6731,16 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-09
+  notions:
+  - topo-n-0067
+  - topo-n-0065
+  importance: vital
+  justification: bijectivité par Picard (x = y - Phi(x)), m09
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -6119,13 +6766,16 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.4 Théorème de point fixe
+  methodes:
+  - topo-m-09
+  - topo-m-05
+  notions:
+  - topo-n-0050
+  importance: vital
+  justification: estimation lipschitzienne de l'inverse, même calcul que td3-ex08 q2
+  difficulte: 2
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -6151,13 +6801,15 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-05
+  notions:
+  - topo-n-0050
+  importance: secondaire
+  justification: conclusion immédiate
+  difficulte: 1
+  temps_min: 5
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -6184,13 +6836,14 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: secondaire
+  justification: points de coupure, comme dm2023-24-ex01
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -6216,13 +6869,15 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Connexité
+  methodes:
+  - topo-m-19
+  notions:
+  - topo-n-0050
+  importance: secondaire
+  justification: non-homéomorphie par points de coupure, comme dm2023-24-ex01
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -6247,13 +6902,15 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.7 Suite dans un espace métrique
+  methodes:
+  - topo-m-02
+  notions:
+  - topo-n-0043
+  importance: vital
+  justification: preuve de la caractérisation séquentielle des fermés, base de m02 (7 annales)
+  difficulte: 2
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -6274,18 +6931,23 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  - topo-m-04
+  notions:
+  - topo-n-0018
+  - topo-n-0022
+  importance: vital
+  justification: reprend uvsq-td1-ex15 q1 et q2
+  difficulte: 2
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
     ref: null
   qualite_extraction: ok
+  doublon_de: topo-uvsq-td1-ex15q1
 - id: topo-uvsq-cc1-2025-ex01
   titre: La distance est continue sur X×X
   enonce: |
@@ -6303,13 +6965,17 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-05
+  - topo-m-15
+  notions:
+  - topo-n-0009
+  - topo-n-0049
+  importance: vital
+  justification: identique à td2-ex06 q2 (continuité de la distance)
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -6317,6 +6983,7 @@
       fichier: uvsq/topologie/Topologie/Corrige_CC1_2025.pdf
       page: 2
   qualite_extraction: ok
+  doublon_de: topo-td2-ex06
 - id: topo-uvsq-cc1-2025-ex02q1
   titre: Intérieur, adhérence, frontière de ]0,1[ dans ]0,1[∪]2,3[
   enonce: |
@@ -6332,13 +6999,16 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.5 Sous-espace topologique, sous-espace métrique
+  methodes:
+  - topo-m-03
+  notions:
+  - topo-n-0030
+  - topo-n-0031
+  importance: important
+  justification: topologie relative, comme au partiel 2020-21 ex01
+  difficulte: 1
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: officiel
@@ -6362,13 +7032,16 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-03
+  notions:
+  - topo-n-0018
+  - topo-n-0025
+  importance: secondaire
+  justification: calcul concret déjà couvert par td1-ex04
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -6392,13 +7065,16 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  notions:
+  - topo-n-0025
+  - topo-n-0024
+  importance: important
+  justification: manipulation abstraite de la frontière, m04
+  difficulte: 2
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -6422,13 +7098,15 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  notions:
+  - topo-n-0025
+  importance: secondaire
+  justification: suite directe de q1
+  difficulte: 2
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: officiel
@@ -6452,13 +7130,15 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-04
+  notions:
+  - topo-n-0025
+  importance: secondaire
+  justification: suite directe de q2
+  difficulte: 2
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: officiel
@@ -6482,13 +7162,15 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière
+  methodes:
+  - topo-m-20
+  notions:
+  - topo-n-0025
+  importance: secondaire
+  justification: exemple dans R, rapide
+  difficulte: 1
+  temps_min: 5
   indice_tableur: null
   corrige:
     statut: officiel
@@ -6511,13 +7193,17 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-07
+  - topo-m-12
+  notions:
+  - topo-n-0034
+  - topo-n-0090
+  importance: secondaire
+  justification: équivalence des normes en dimension finie, preuve de cours hors cours actuel
+  difficulte: 3
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -6542,13 +7228,14 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: fonctions implicites, hors programme de topologie Paris Cité
+  difficulte: 3
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -6575,13 +7262,15 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
+  - topo-m-01
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: fonctions implicites, hors programme de topologie Paris Cité
+  difficulte: 3
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -6607,13 +7296,14 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: différentielle dans un Banach, hors programme
+  difficulte: 3
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -6639,13 +7329,14 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Calcul différentiel
+  methodes:
+  - topo-m-21
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: exotique
+  justification: inversion locale, hors programme
+  difficulte: 3
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -6671,13 +7362,15 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Espace complet > 2.2 Espace métrique complet
+  methodes:
+  - topo-m-06
+  notions:
+  - topo-n-0058
+  importance: secondaire
+  justification: existence du diamètre, immédiat
+  difficulte: 1
+  temps_min: 5
   indice_tableur:
     importance: Important
     difficulte: ★
@@ -6703,13 +7396,16 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.8 Application entre deux espaces métriques
+  methodes:
+  - topo-m-05
+  - topo-m-15
+  notions:
+  - topo-n-0050
+  importance: secondaire
+  justification: définition à rappeler
+  difficulte: 1
+  temps_min: 5
   indice_tableur:
     importance: Important
     difficulte: ★
@@ -6735,13 +7431,17 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Espace compact > 3.4 Applications continues sur un compact
+  methodes:
+  - topo-m-13
+  - topo-m-15
+  notions:
+  - topo-n-0092
+  - topo-n-0089
+  importance: important
+  justification: diamètre atteint sur un compact, m13
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -6767,13 +7467,16 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  methodes:
+  - topo-m-20
+  notions:
+  - topo-n-0011
+  - topo-n-0058
+  importance: secondaire
+  justification: diamètre d'une boule ouverte, calcul isolé
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -6799,13 +7502,14 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: secondaire
+  justification: vérification immédiate
+  difficulte: 1
+  temps_min: 5
   indice_tableur:
     importance: Vital
     difficulte: ★
@@ -6831,13 +7535,15 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: vital
+  justification: continuité d'un opérateur intégral pour la norme 1, m16 (4 examens)
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -6863,13 +7569,15 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: vital
+  justification: suite test pour approcher la norme, schéma des examens
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -6895,13 +7603,15 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
+  notions:
+  - topo-n-0050
+  importance: vital
+  justification: calcul exact d'une norme d'opérateur, m16 (4 examens)
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -6927,13 +7637,14 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: secondaire
+  justification: injectivité et surjectivité, algèbre linéaire
+  difficulte: 2
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -6959,13 +7670,14 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
+  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  methodes:
+  - topo-m-16
   notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  importance: secondaire
+  justification: valeurs propres, hors du cœur des sujets
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★

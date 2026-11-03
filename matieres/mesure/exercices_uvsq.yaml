@@ -10,13 +10,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu
+  methodes:
+  - mes-m-04
+  notions:
+  - mesure-n-0008
+  - mesure-n-0010
+  importance: secondaire
+  justification: 'pas d''énoncé ; méthode déjà vitale via cc1-2425-ex03 et td2-ex01 (tableur : vital)'
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -37,13 +40,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu
+  methodes:
+  - mes-m-04
+  notions:
+  - mesure-n-0008
+  - mesure-n-0010
+  importance: important
+  justification: quasi identique à l'annale cc1-2526-ex01 (parties finies ou cofinies)
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -52,6 +58,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2526-ex01
 - id: mes-uvsq-chap-1-ex-7
   titre: Tribu des dénombrables + mesure associée
   enonce: null
@@ -64,13 +71,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-04
+  - mes-m-08
+  - mes-m-03
+  notions:
+  - mesure-n-0011
+  - mesure-n-0008
+  - mesure-n-0001
+  importance: important
+  justification: tribu des dénombrables/codénombrables = td2-ex03 ; sa mesure associée = td4-ex01
+  difficulte: 2
+  temps_min: 35
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -79,6 +92,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-td2-ex03
 - id: mes-uvsq-chap-1-ex-8
   titre: Tribu trace TY = {A∩Y | A∈T}
   enonce: null
@@ -91,13 +105,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition
+  methodes:
+  - mes-m-04
+  notions:
+  - mesure-n-0017
+  importance: secondaire
+  justification: tribu trace, vérification d'axiomes sans difficulté ; pas d'énoncé
+  difficulte: 1
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -118,13 +134,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)
+  methodes:
+  - mes-m-04
+  notions:
+  - mesure-n-0042
+  - mesure-n-0043
+  importance: important
+  justification: doublon de l'annale cc1-2324-ex04
+  difficulte: 2
+  temps_min: 45
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -133,6 +152,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2324-ex04
 - id: mes-uvsq-chap-1-ex-cc1-23-ex1
   titre: T₀ = {E | µ(E)=0 ou µ(Eᶜ)=0} est une tribu
   enonce: null
@@ -145,13 +165,18 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu
+  methodes:
+  - mes-m-04
+  - mes-m-08
+  notions:
+  - mesure-n-0008
+  - mesure-n-0026
+  - mesure-n-0042
+  importance: vital
+  justification: doublon de l'annale cc1-2324-ex01
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -160,6 +185,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2324-ex01
 - id: mes-uvsq-chap-1-ex-5
   titre: Image réciproque f⁻¹(T) est une tribu sur X
   enonce: null
@@ -172,13 +198,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition
+  methodes:
+  - mes-m-04
+  notions:
+  - mesure-n-0017
+  - mesure-n-0002
+  importance: secondaire
+  justification: tribu image réciproque, vérification d'axiomes courte ; pas d'énoncé
+  difficulte: 1
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -199,13 +228,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.2 Démonstration de la proposition - lemmes préparatoires
+  methodes:
+  - mes-m-05
+  notions:
+  - mesure-n-0019
+  importance: secondaire
+  justification: lemme de transport de tribu, preuve de cours ; pas d'énoncé, aucune annale
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -226,13 +257,15 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu
+  methodes:
+  - mes-m-04
+  notions:
+  - mesure-n-0008
+  importance: vital
+  justification: doublon de l'annale cc1-2425-ex03
+  difficulte: 1
+  temps_min: 10
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -241,6 +274,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2425-ex03
 - id: mes-uvsq-chap-1-ex-cc1-25-ex4
   titre: Invariance par translation de lambda, B avec lambda(B)>1
   enonce: null
@@ -253,13 +287,18 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)
+  methodes:
+  - mes-m-10
+  - mes-m-09
+  notions:
+  - mesure-n-0039
+  - mesure-n-0038
+  importance: important
+  justification: doublon de l'annale cc1-2425-ex04
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -268,6 +307,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2425-ex04
 - id: mes-uvsq-chap-1-ex-9
   titre: 'Ensemble de Cantor K = ∩ Pₙ : compact, lambda(K)=0, non dénombrable'
   enonce: null
@@ -280,13 +320,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)
+  methodes:
+  - mes-m-10
+  - mes-m-03
+  notions:
+  - mesure-n-0039
+  - mesure-n-0042
+  - mesure-n-0001
+  importance: exotique
+  justification: ensemble de Cantor, culture ; aucune annale, pas d'énoncé
+  difficulte: 3
+  temps_min: 50
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -307,13 +353,15 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu
+  methodes:
+  - mes-m-08
+  notions:
+  - mesure-n-0026
+  importance: vital
+  justification: seconde partie de l'annale cc1-2324-ex01 (mesure 0-1 sur T0)
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Exotique
     difficulte: ★★★
@@ -322,6 +370,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2324-ex01
 - id: mes-uvsq-chap-1-cc1-2025-ex1
   titre: A={parties finies ou cofinies} n'est pas une tribu
   enonce: null
@@ -334,13 +383,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu
+  methodes:
+  - mes-m-04
+  notions:
+  - mesure-n-0008
+  - mesure-n-0010
+  importance: important
+  justification: doublon de l'annale cc1-2526-ex01
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -349,6 +401,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2526-ex01
 - id: mes-uvsq-chap-1-cc1-2025-ex2
   titre: 'f≥0 intégrable : encadrement ∫f et Σµ(An)'
   enonce: null
@@ -361,13 +414,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-11
+  - mes-m-12
+  notions:
+  - mesure-n-0049
+  - mesure-n-0051
+  importance: vital
+  justification: doublon de l'annale cc1-2526-ex02
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -376,6 +433,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2526-ex02
 - id: mes-uvsq-chap-1-cc1-2023-24-ex1
   titre: T₀ tribu + ν mesure
   enonce: null
@@ -388,13 +446,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu
+  methodes:
+  - mes-m-04
+  - mes-m-08
+  notions:
+  - mesure-n-0008
+  - mesure-n-0026
+  importance: vital
+  justification: doublon de l'annale cc1-2324-ex01
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -403,6 +465,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2324-ex01
 - id: mes-uvsq-chap-1-cc1-2023-24-ex4
   titre: Mesure complétée M₀
   enonce: null
@@ -415,13 +478,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)
+  methodes:
+  - mes-m-04
+  notions:
+  - mesure-n-0042
+  - mesure-n-0043
+  importance: important
+  justification: doublon de l'annale cc1-2324-ex04
+  difficulte: 2
+  temps_min: 45
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -430,6 +496,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2324-ex04
 - id: mes-uvsq-chap-1-exam-24-25-ex4
   titre: Limite de mesures µₙ est une mesure via BL
   enonce: null
@@ -442,13 +509,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.4 Définition et exemples
+  methodes:
+  - mes-m-08
+  - mes-m-12
+  notions:
+  - mesure-n-0026
+  - mesure-n-0034
+  importance: important
+  justification: doublon de l'annale ex-2425-ex04
+  difficulte: 2
+  temps_min: 35
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -457,6 +528,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2425-ex04
 - id: mes-uvsq-chap-2-cc23-24-ex2
   titre: 'Collage : h=f sur A, g sur Aᶜ est mesurable'
   enonce: null
@@ -469,13 +541,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables
+  methodes:
+  - mes-m-06
+  notions:
+  - mesure-n-0014
+  - mesure-n-0022
+  importance: vital
+  justification: doublon de l'annale cc1-2324-ex02
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -484,6 +559,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2324-ex02
 - id: mes-uvsq-chap-2-cc23-24-ex3
   titre: µ({f≥n}) ≤ (1/n)∫f dµ et µ({f=+∞})=0
   enonce: null
@@ -496,13 +572,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-11
+  - mes-m-09
+  notions:
+  - mesure-n-0051
+  - mesure-n-0036
+  importance: vital
+  justification: doublon de l'annale cc1-2324-ex03
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -511,6 +591,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2324-ex03
 - id: mes-uvsq-chap-2-td2-ex5
   titre: lim sup et lim inf de fonctions mesurables
   enonce: null
@@ -523,13 +604,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables
+  methodes:
+  - mes-m-07
+  - mes-m-06
+  notions:
+  - mesure-n-0022
+  - mesure-n-0004
+  importance: secondaire
+  justification: mesurabilité de limsup/liminf, résultat de cours couvert par td3-ex04 ; pas d'énoncé
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -550,13 +635,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue
+  methodes:
+  - mes-m-11
+  - mes-m-21
+  notions:
+  - mesure-n-0049
+  - mesure-n-0060
+  importance: important
+  justification: entrée du tableur rattachée au CC1 2024-25 ex2 (formule du gâteau), voir cas limite
+  difficulte: 3
+  temps_min: 40
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -565,6 +654,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2425-ex02
 - id: mes-uvsq-chap-2-exam24-25-ex1
   titre: '{g<f} ∈ T, union sur Q, µ({g<f})=0 par σ-additivité'
   enonce: null
@@ -577,13 +667,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables
+  methodes:
+  - mes-m-07
+  - mes-m-09
+  notions:
+  - mesure-n-0022
+  - mesure-n-0038
+  importance: vital
+  justification: doublon de l'annale ex-2425-ex01
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -592,6 +686,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2425-ex01
 - id: mes-uvsq-chap-2-td2-ex6
   titre: ∫₀¹ f(x) dx avec f=(-1)^{E(1/x)}
   enonce: null
@@ -604,13 +699,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue
+  methodes:
+  - mes-m-14
+  - mes-m-12
+  notions:
+  - mesure-n-0053
+  - mesure-n-0051
+  importance: secondaire
+  justification: intégrale d'une fonction en escalier infinie, découpage en série ; pas d'énoncé
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -631,13 +730,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-11
+  notions:
+  - mesure-n-0051
+  importance: secondaire
+  justification: intégrable n'implique pas limite nulle, contre-exemple classique ; pas d'énoncé
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -658,13 +759,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-09
+  - mes-m-11
+  notions:
+  - mesure-n-0044
+  - mesure-n-0052
+  - mesure-n-0034
+  importance: secondaire
+  justification: inégalité p.p. via les ensembles {f>1+1/n}, technique déjà dans ex-2425-ex01
+  difficulte: 2
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -685,13 +791,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-11
+  notions:
+  - mesure-n-0051
+  importance: secondaire
+  justification: Markov généralisée, variante de l'annale vitale cc1-2324-ex03
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -712,13 +820,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Convergence en mesure
+  methodes:
+  - mes-m-11
+  - mes-m-09
+  notions:
+  - mesure-n-0044
+  importance: secondaire
+  justification: doublon de l'annale cc1-2324-ex05
+  difficulte: 3
+  temps_min: 40
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -727,6 +838,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2324-ex05
 - id: mes-uvsq-chap-2-exam24-25-ex2
   titre: 'TCD : ∫fₙe^{-fₙ}, série alternée Σ(-1)ⁿ/n'
   enonce: null
@@ -739,13 +851,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  - mes-m-14
+  notions:
+  - mesure-n-0056
+  importance: vital
+  justification: regroupe ex-2425-ex02 q1 et q2 ; rattaché à q1
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -754,6 +869,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2425-ex02q1
 - id: mes-uvsq-chap-2-cc1-2023-24-ex2
   titre: Collage h=f sur A, g sur Aᶜ mesurable
   enonce: null
@@ -766,13 +882,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables
+  methodes:
+  - mes-m-06
+  notions:
+  - mesure-n-0014
+  - mesure-n-0022
+  importance: vital
+  justification: doublon de l'annale cc1-2324-ex02
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -781,6 +900,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2324-ex02
 - id: mes-uvsq-chap-2-cc1-2023-24-ex3
   titre: 'Markov : µ({f≥n}) ≤ (1/n)∫f, µ({f=+∞})=0'
   enonce: null
@@ -793,13 +913,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-11
+  - mes-m-09
+  notions:
+  - mesure-n-0051
+  - mesure-n-0036
+  importance: vital
+  justification: doublon de l'annale cc1-2324-ex03
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -808,6 +932,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2324-ex03
 - id: mes-uvsq-chap-2-exam-2024-25-ex1
   titre: '{g<f} = Union_Q {g≤a<f} → µ=0'
   enonce: null
@@ -820,13 +945,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables
+  methodes:
+  - mes-m-07
+  - mes-m-09
+  notions:
+  - mesure-n-0022
+  - mesure-n-0038
+  importance: vital
+  justification: doublon de l'annale ex-2425-ex01
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -835,6 +964,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2425-ex01
 - id: mes-uvsq-chap-2-exam-2024-25-ex2
   titre: Différentes limites de ∫fₙ (TCD, BL, série)
   enonce: null
@@ -847,13 +977,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  - mes-m-14
+  notions:
+  - mesure-n-0056
+  importance: vital
+  justification: regroupe ex-2425-ex02 q1 à q3 ; rattaché à q1
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -862,6 +995,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2425-ex02q1
 - id: mes-uvsq-chap-2-cc1-2024-25-ex2
   titre: 'Lien ∫f et Σµ(An) : double encadrement'
   enonce: null
@@ -874,13 +1008,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue
+  methodes:
+  - mes-m-11
+  - mes-m-21
+  notions:
+  - mesure-n-0049
+  - mesure-n-0060
+  importance: important
+  justification: doublon de l'annale cc1-2425-ex02
+  difficulte: 3
+  temps_min: 40
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -889,6 +1027,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc1-2425-ex02
 - id: mes-uvsq-chap-3-td3-ex1
   titre: Contre-exemples BL (décrois.) et Fatou (fₙ<0)
   enonce: null
@@ -901,13 +1040,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-18
+  notions:
+  - mesure-n-0050
+  - mesure-n-0055
+  importance: secondaire
+  justification: contre-exemples BL et Fatou, même rôle que td5-ex03 (vital) ; pas d'énoncé
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -928,13 +1070,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  - mesure-n-0044
+  importance: secondaire
+  justification: TCD avec limite p.p., même schéma que td5-ex09 ; pas d'énoncé
+  difficulte: 1
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -955,13 +1100,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-17
+  - mes-m-15
+  notions:
+  - mesure-n-0055
+  - mesure-n-0056
+  importance: important
+  justification: doublon de l'annale cc2l3-2425-ex03q1
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -970,6 +1119,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2l3-2425-ex03q1
 - id: mes-uvsq-chap-3-cc2-24-ex2
   titre: ∫₀^∞ te^{-at}/(1-e^{-bt}) = Σ 1/(a+nb)² via BL
   enonce: null
@@ -982,13 +1132,15 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-14
+  notions:
+  - mesure-n-0050
+  importance: vital
+  justification: même énoncé que td5-ex07q1 de Paris Cité (énoncé complet)
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -997,6 +1149,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-td5-ex07q1
 - id: mes-uvsq-chap-3-cc2-24-ex5
   titre: Sₙ = Σ_{k≥1} nsin(k/n)/2^k → 2 (TCD sur N)
   enonce: null
@@ -1009,13 +1162,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-16
+  notions:
+  - mesure-n-0056
+  - mesure-n-0028
+  importance: vital
+  justification: doublon de l'annale cc2l3-2425-ex05
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1024,6 +1180,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2l3-2425-ex05
 - id: mes-uvsq-chap-3-cc2-24-ex4
   titre: 'Eₙ={|f|≥n} : ∫_{Eₙ}|f|→0, µ(Eₙ)=o(n⁻ᵃ), lim sup/inf'
   enonce: null
@@ -1036,13 +1193,19 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-11
+  - mes-m-15
+  - mes-m-09
+  - mes-m-02
+  notions:
+  - mesure-n-0056
+  - mesure-n-0005
+  importance: vital
+  justification: doublon de l'annale cc2l3-2425-ex04
+  difficulte: 3
+  temps_min: 35
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1051,6 +1214,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2l3-2425-ex04
 - id: mes-uvsq-chap-3-td3-ex2
   titre: 'fₙ = triangle sur [0,2/n] : lim ∫ ≠ ∫ lim'
   enonce: null
@@ -1063,13 +1227,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-18
+  notions:
+  - mesure-n-0056
+  importance: secondaire
+  justification: masse qui s'échappe, variante de td5-ex03 ; pas d'énoncé
+  difficulte: 1
+  temps_min: 15
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -1090,13 +1256,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-14
+  notions:
+  - mesure-n-0050
+  importance: secondaire
+  justification: séries de fonctions par Beppo-Levi, même schéma que td5-ex07q1 ; pas d'énoncé
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -1117,13 +1285,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  - mes-m-13
+  notions:
+  - mesure-n-0056
+  - mesure-n-0050
+  importance: vital
+  justification: doublon de l'annale cc2l3-2425-ex03q2
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -1132,6 +1304,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2l3-2425-ex03q2
 - id: mes-uvsq-chap-3-exam23-24-f-t
   titre: 'F(t)=∫e^{-|t|x}/(1+x²) : continuité et dérivabilité'
   enonce: null
@@ -1144,13 +1317,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: vital
+  justification: doublon de l'annale cc2-2324-ex04
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -1159,6 +1336,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2-2324-ex04
 - id: mes-uvsq-chap-3-cc2-25-ex4
   titre: 'f∈L¹ : Σ f(nx)/n converge → f(nx)/n → 0 p.p.'
   enonce: null
@@ -1171,13 +1349,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-14
+  - mes-m-21
+  notions:
+  - mesure-n-0060
+  - mesure-n-0044
+  importance: secondaire
+  justification: doublon de l'annale cc2-2425-ex04
+  difficulte: 3
+  temps_min: 35
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -1186,6 +1368,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2-2425-ex04
 - id: mes-uvsq-chap-3-cc2-24-ex1
   titre: 'Lemme de Fatou : énoncer, strict/large selon a, avantages/inconvénients'
   enonce: null
@@ -1198,13 +1381,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-17
+  - mes-m-18
+  notions:
+  - mesure-n-0055
+  importance: important
+  justification: doublon de l'annale cc2l3-2425-ex01
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Exotique
     difficulte: ★★★
@@ -1213,6 +1399,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2l3-2425-ex01
 - id: mes-uvsq-chap-3-cc2-2024-ex3
   titre: lim Iₙ pour 2 intégrales (Fatou + TCD)
   enonce: null
@@ -1225,13 +1412,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-17
+  - mes-m-15
+  notions:
+  - mesure-n-0055
+  - mesure-n-0056
+  importance: important
+  justification: regroupe cc2l3-2425-ex03 q1 et q2 ; rattaché à q1
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1240,6 +1431,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2l3-2425-ex03q1
 - id: mes-uvsq-chap-3-cc2-2024-ex5
   titre: Sₙ = Σ nsin(k/n)/2^k → 2
   enonce: null
@@ -1252,13 +1444,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-16
+  notions:
+  - mesure-n-0056
+  - mesure-n-0028
+  importance: vital
+  justification: doublon de l'annale cc2l3-2425-ex05
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1267,6 +1462,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2l3-2425-ex05
 - id: mes-uvsq-chap-3-cc2-2024-ex4
   titre: 'Eₙ={|f|≥n} : intégrale, Markov, lim sup/inf'
   enonce: null
@@ -1279,13 +1475,19 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-11
+  - mes-m-15
+  - mes-m-09
+  - mes-m-02
+  notions:
+  - mesure-n-0056
+  - mesure-n-0005
+  importance: vital
+  justification: doublon de l'annale cc2l3-2425-ex04
+  difficulte: 3
+  temps_min: 35
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1294,6 +1496,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2l3-2425-ex04
 - id: mes-uvsq-chap-3-cc2-2025-ex3
   titre: '∫₀ⁿ (1-x/n)ⁿ sin x dx : deux méthodes'
   enonce: null
@@ -1306,13 +1509,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  - mes-m-13
+  notions:
+  - mesure-n-0056
+  - mesure-n-0050
+  importance: vital
+  justification: doublon de l'annale cc2l3-2425-ex03q2
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -1321,6 +1528,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2l3-2425-ex03q2
 - id: mes-uvsq-chap-3-exam-24-25-ex2-q3
   titre: ∫₀¹ xᵅ lnx/(1-x) = -Σ 1/(α+n)²
   enonce: null
@@ -1333,13 +1541,15 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-14
+  notions:
+  - mesure-n-0050
+  importance: important
+  justification: doublon de l'annale ex-2425-ex02q3
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -1348,6 +1558,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2425-ex02q3
 - id: mes-uvsq-chap-4-td4-ex5-1
   titre: '∬_D dxdy/((1+x²)(1+y²)), D: 0≤y≤x≤1'
   enonce: null
@@ -1360,13 +1571,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  notions:
+  - mesure-n-0060
+  - mesure-n-0061
+  importance: secondaire
+  justification: Fubini sur un triangle, entraînement ; td7-ex04 de Paris Cité est vital
+  difficulte: 1
+  temps_min: 15
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -1387,13 +1601,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  notions:
+  - mesure-n-0061
+  importance: secondaire
+  justification: Fubini sur un triangle, entraînement
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1414,13 +1630,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-22
+  notions:
+  - mesure-n-0063
+  importance: secondaire
+  justification: polaires sur le disque, entraînement ; pas d'énoncé
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1441,13 +1659,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  notions:
+  - mesure-n-0060
+  - mesure-n-0059
+  importance: secondaire
+  justification: sous-graphe par Tonelli, proche de td7-ex01 et de cc1-2425-ex02
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1468,13 +1689,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-23
+  - mes-m-22
+  notions:
+  - mesure-n-0063
+  - mesure-n-0065
+  importance: vital
+  justification: doublon de l'annale ex-2324-ex01
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1483,6 +1708,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2324-ex01
 - id: mes-uvsq-chap-4-exam23-24-ex5
   titre: ∬ ye^{-y²(1+x²)} dxdy → intégrale gaussienne √π/2
   enonce: null
@@ -1495,13 +1721,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  notions:
+  - mesure-n-0060
+  - mesure-n-0064
+  importance: vital
+  justification: doublon de l'annale mes-gauss-y-exp
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1510,6 +1739,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-gauss-y-exp
 - id: mes-uvsq-chap-4-td4-ex7
   titre: g intégrable sur tétraèdre D via chgt (u,v,w)
   enonce: null
@@ -1522,13 +1752,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-22
+  notions:
+  - mesure-n-0062
+  importance: secondaire
+  justification: changement de variables en dimension 3 sur un tétraèdre, long ; pas d'énoncé
+  difficulte: 3
+  temps_min: 45
   indice_tableur:
     importance: Important
     difficulte: ★★★★
@@ -1549,13 +1781,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-23
+  notions:
+  - mesure-n-0057
+  importance: important
+  justification: doublon de l'annale ex-2425-ex05
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -1564,6 +1799,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2425-ex05
 - id: mes-uvsq-chap-4-cc2-23-ex4
   titre: 'F(t)=∫e^{-|t|x}/(1+x²) : continuité et dérivabilité'
   enonce: null
@@ -1576,13 +1812,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: vital
+  justification: doublon de l'annale cc2-2324-ex04
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -1591,6 +1831,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2-2324-ex04
 - id: mes-uvsq-chap-4-cc2-25-ex2
   titre: 'F(t)=∫(sinx)²e^{-tx}/x : dérivabilité et F'''''
   enonce: null
@@ -1603,13 +1844,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: important
+  justification: doublon de l'annale cc2-2425-ex02
+  difficulte: 3
+  temps_min: 50
   indice_tableur:
     importance: Important
     difficulte: ★★★★
@@ -1618,6 +1863,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2-2425-ex02
 - id: mes-uvsq-chap-4-exam23-24-ex3
   titre: Fubini sur [0,n]×R+ pour ∫₀ⁿ sin(x)/x dx
   enonce: null
@@ -1630,13 +1876,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  - mes-m-15
+  notions:
+  - mesure-n-0061
+  importance: secondaire
+  justification: doublon de l'annale ex-2324-ex03
+  difficulte: 3
+  temps_min: 40
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -1645,6 +1894,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2324-ex03
 - id: mes-uvsq-chap-4-exam-2023-24-ex1
   titre: ∬_D f polaire, Fubini-Tonelli sur disque
   enonce: null
@@ -1657,13 +1907,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-23
+  - mes-m-22
+  notions:
+  - mesure-n-0063
+  - mesure-n-0065
+  importance: vital
+  justification: doublon de l'annale ex-2324-ex01
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1672,6 +1926,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2324-ex01
 - id: mes-uvsq-chap-4-exam-2023-24-ex5
   titre: ∬ ye^{-y²(1+x²)} → √π/2 via Fubini
   enonce: null
@@ -1684,13 +1939,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  notions:
+  - mesure-n-0060
+  - mesure-n-0064
+  importance: vital
+  justification: doublon de l'annale mes-gauss-y-exp
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1699,6 +1957,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-gauss-y-exp
 - id: mes-uvsq-chap-4-cc2-2023-24-ex4
   titre: 'F(t)=∫e^{-|t|x}/(1+x²) : étude complète'
   enonce: null
@@ -1711,13 +1970,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: vital
+  justification: doublon de l'annale cc2-2324-ex04
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1726,6 +1989,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2-2324-ex04
 - id: mes-uvsq-chap-4-exam-2024-25-ex5
   titre: 'F(t)=∫₀¹ 1/(t+x^r)dx : cont. + F(0+)'
   enonce: null
@@ -1738,13 +2002,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-23
+  notions:
+  - mesure-n-0057
+  importance: important
+  justification: doublon de l'annale ex-2425-ex05
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -1753,6 +2020,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2425-ex05
 - id: mes-uvsq-chap-4-cc2-2025-ex2
   titre: 'F(t)=∫(sinx)²e^{-tx}/x : double dérivation'
   enonce: null
@@ -1765,13 +2033,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: important
+  justification: doublon de l'annale cc2-2425-ex02
+  difficulte: 3
+  temps_min: 50
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -1780,6 +2052,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2-2425-ex02
 - id: mes-uvsq-chap-5-exam23-24-ex1
   titre: f(x,y)=r^{-2α} ∈ Lᵖ(D) selon α et p
   enonce: null
@@ -1792,13 +2065,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-23
+  - mes-m-22
+  notions:
+  - mesure-n-0063
+  - mesure-n-0065
+  importance: vital
+  justification: doublon de l'annale ex-2324-ex01
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -1807,6 +2084,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2324-ex01
 - id: mes-uvsq-chap-5-td5-ex5-h-lder
   titre: 'Hölder pour montrer fg ∈ L¹ : 1/p+1/q=1'
   enonce: null
@@ -1819,13 +2097,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 5 - Espaces $L^p$ (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-24
+  notions:
+  - mesure-n-0066
+  - mesure-n-0051
+  importance: secondaire
+  justification: Hölder direct ; L^p sans TD ni annale de calcul à Paris Cité pour l'instant
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -1846,13 +2127,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-13
+  - mes-m-15
+  notions:
+  - mesure-n-0050
+  - mesure-n-0056
+  importance: vital
+  justification: doublon de l'annale ex-2324-ex02q1
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1861,6 +2146,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2324-ex02q1
 - id: mes-uvsq-chap-5-cc2-24-ex1
   titre: 'Fatou : énoncé, inégalité stricte selon a, comparaison théorèmes'
   enonce: null
@@ -1873,13 +2159,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-17
+  - mes-m-18
+  notions:
+  - mesure-n-0055
+  importance: important
+  justification: doublon de l'annale cc2l3-2425-ex01
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -1888,6 +2177,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2l3-2425-ex01
 - id: mes-uvsq-chap-5-td5-ex1-inclusions
   titre: Inclusions Lᵖ ⊂ Lq sur mesure finie
   enonce: null
@@ -1900,13 +2190,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 5 - Espaces $L^p$ (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-24
+  notions:
+  - mesure-n-0069
+  - mesure-n-0066
+  importance: secondaire
+  justification: inclusions L^p sur mesure finie par Hölder ; pas d'énoncé
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -1927,13 +2220,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 5 - Espaces $L^p$ (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-18
+  - mes-m-24
+  notions:
+  - mesure-n-0065
+  - mesure-n-0044
+  importance: secondaire
+  justification: convergence L^p contre convergence p.p., contre-exemple classique ; pas d'énoncé
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -1954,13 +2251,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 5 - Espaces $L^p$ (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-24
+  notions:
+  - mesure-n-0067
+  - mesure-n-0066
+  importance: secondaire
+  justification: preuve de Minkowski à partir de Hölder ; pas d'énoncé
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Important
     difficulte: ★★
@@ -1981,13 +2281,15 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  importance: important
+  justification: doublon de l'annale ex-2324-ex02q3
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -1996,6 +2298,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2324-ex02q3
 - id: mes-uvsq-chap-5-td5-ex4-densit
   titre: Densité de Cᶜ dans Lᵖ(R)
   enonce: null
@@ -2008,13 +2311,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 5 - Espaces $L^p$ (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-24
+  notions:
+  - mesure-n-0065
+  importance: exotique
+  justification: densité des fonctions continues à support compact, technique et absente des annales
+  difficulte: 3
+  temps_min: 45
   indice_tableur:
     importance: Important
     difficulte: ★★★
@@ -2035,13 +2340,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Inégalité de Jensen
+  methodes:
+  - mes-m-24
+  notions:
+  - mesure-n-0065
+  importance: exotique
+  justification: Jensen ne figure pas dans les notions du cours ; aucune annale
+  difficulte: 3
+  temps_min: 30
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -2062,13 +2369,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-14
+  - mes-m-21
+  notions:
+  - mesure-n-0060
+  - mesure-n-0044
+  importance: secondaire
+  justification: doublon de l'annale cc2-2425-ex04
+  difficulte: 3
+  temps_min: 35
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -2077,6 +2388,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2-2425-ex04
 - id: mes-uvsq-chap-5-exam-2023-24-ex1
   titre: f(x,y)=r^{-2α} ∈ Lp(D) selon p et α
   enonce: null
@@ -2089,13 +2401,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-23
+  - mes-m-22
+  notions:
+  - mesure-n-0063
+  - mesure-n-0065
+  importance: vital
+  justification: doublon de l'annale ex-2324-ex01
+  difficulte: 2
+  temps_min: 40
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -2104,6 +2420,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2324-ex01
 - id: mes-uvsq-chap-5-exam-2023-24-ex2
   titre: 'BL puis TCD : lim ∫₀^∞ f(e^{-x/n}) dx'
   enonce: null
@@ -2116,13 +2433,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-13
+  - mes-m-15
+  notions:
+  - mesure-n-0050
+  - mesure-n-0056
+  importance: vital
+  justification: doublon de l'annale ex-2324-ex02q1
+  difficulte: 2
+  temps_min: 25
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -2131,6 +2452,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2324-ex02q1
 - id: mes-uvsq-chap-5-exam-2023-24-ex3
   titre: ∫₀¹ (1/√x)cos(1/nx) dx → 2 via TCD
   enonce: null
@@ -2143,13 +2465,15 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  importance: important
+  justification: doublon de l'annale ex-2324-ex02q3
+  difficulte: 1
+  temps_min: 20
   indice_tableur:
     importance: Vital
     difficulte: ★★
@@ -2158,6 +2482,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-ex-2324-ex02q3
 - id: mes-uvsq-chap-5-cc2-2023-24-ex5
   titre: ∬ ye^{-y²(1+x²)} = π/4 → gaussienne
   enonce: null
@@ -2170,13 +2495,16 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  notions:
+  - mesure-n-0060
+  - mesure-n-0064
+  importance: vital
+  justification: doublon de l'annale mes-gauss-y-exp
+  difficulte: 2
+  temps_min: 30
   indice_tableur:
     importance: Vital
     difficulte: ★★★
@@ -2185,6 +2513,7 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-gauss-y-exp
 - id: mes-uvsq-chap-5-cc2-2025-ex4
   titre: 'f∈L¹ : Σ|f(nx)|/n<∞ p.p.'
   enonce: null
@@ -2197,13 +2526,17 @@
   type_source: annale
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-14
+  - mes-m-21
+  notions:
+  - mesure-n-0060
+  - mesure-n-0044
+  importance: secondaire
+  justification: doublon de l'annale cc2-2425-ex04
+  difficulte: 3
+  temps_min: 35
   indice_tableur:
     importance: Exotique
     difficulte: ★★★★
@@ -2212,3 +2545,4 @@
     statut: absent
     ref: null
   qualite_extraction: a_extraire
+  doublon_de: mes-cc2-2425-ex04

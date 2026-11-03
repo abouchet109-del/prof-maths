@@ -1,0 +1,1754 @@
+# Classement des exercices de mesure et intégration.
+# « annales » = annales UVSQ (Paris Cité n'en a fourni aucune). Les doublons ne sont pas comptés dans les heures.
+
+# ---------- Paris Cité : TD1 ----------
+mes-td1-ex01:
+  sous_chapitre: 'Chapitre 0 - Préliminaires > Rappels de cours'
+  methodes: [mes-m-01]
+  notions: [mesure-n-0002]
+  importance: secondaire
+  justification: 'prérequis ensembliste, jamais évalué seul dans les annales UVSQ'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-td1-ex02:
+  sous_chapitre: 'Chapitre 0 - Préliminaires > Rappels de cours'
+  methodes: [mes-m-01]
+  notions: [mesure-n-0002]
+  importance: secondaire
+  justification: 'prérequis ensembliste, jamais évalué seul dans les annales UVSQ'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-td1-ex03:
+  sous_chapitre: 'Chapitre 0 - Préliminaires > Rappels de cours'
+  methodes: [mes-m-01]
+  notions: [mesure-n-0003]
+  importance: secondaire
+  justification: 'calculs d''indicatrices utiles partout mais jamais évalués seuls'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-td1-ex04:
+  sous_chapitre: 'Chapitre 0 - Préliminaires > Rappels de cours'
+  methodes: [mes-m-01]
+  notions: [mesure-n-0003]
+  importance: secondaire
+  justification: 'lecture de sommes d''indicatrices, préparation aux fonctions étagées'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-td1-ex05:
+  sous_chapitre: 'Chapitre 0 - Préliminaires > Limite supérieure, limite inférieure'
+  methodes: [mes-m-02]
+  notions: [mesure-n-0004, mesure-n-0006]
+  importance: secondaire
+  justification: 'limsup de suites réelles : rappel d''analyse, utile pour Fatou'
+  difficulte: 1
+  temps_min: 25
+  doublon_de: null
+mes-td1-ex06:
+  sous_chapitre: 'Chapitre 0 - Préliminaires > Limite supérieure, limite inférieure'
+  methodes: [mes-m-02, mes-m-01]
+  notions: [mesure-n-0005, mesure-n-0003]
+  importance: important
+  justification: 'limsup d''ensembles, nécessaire pour Borel-Cantelli et l''annale cc2l3-2425-ex04'
+  difficulte: 2
+  temps_min: 35
+  doublon_de: null
+mes-td1-ex07:
+  sous_chapitre: 'Chapitre 0 - Préliminaires > Rappels de cours'
+  methodes: [mes-m-03]
+  notions: [mesure-n-0001, mesure-n-0047]
+  importance: secondaire
+  justification: 'dénombrabilités usuelles, à connaître mais rarement évaluées'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-td1-ex08:
+  sous_chapitre: 'Chapitre 0 - Préliminaires > Rappels de cours'
+  methodes: [mes-m-03]
+  notions: [mesure-n-0001, mesure-n-0047]
+  importance: secondaire
+  justification: 'résultats de dénombrabilité utilisés comme outils, pas comme sujet d''examen'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: null
+
+# ---------- Paris Cité : TD2 ----------
+mes-td2-ex01:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-05, mes-m-04]
+  notions: [mesure-n-0011, mesure-n-0008]
+  importance: vital
+  justification: 'tribu engendrée et vérification des axiomes : base du TD2, axiomes dans 5 annales UVSQ'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-td2-ex02:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-05]
+  notions: [mesure-n-0011, mesure-n-0009]
+  importance: secondaire
+  justification: 'calcul fini de tribu engendrée, entraînement rapide'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-td2-ex03:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-04, mes-m-05, mes-m-03]
+  notions: [mesure-n-0011, mesure-n-0008, mesure-n-0001]
+  importance: important
+  justification: 'tribu dénombrable/codénombrable, classique repris en TD UVSQ et en TD4 de Paris Cité'
+  difficulte: 2
+  temps_min: 35
+  doublon_de: null
+mes-td2-ex04:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-05, mes-m-04]
+  notions: [mesure-n-0011]
+  importance: secondaire
+  justification: 'comparaison de tribus engendrées, absente des annales'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-td2-ex05:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-05]
+  notions: [mesure-n-0011, mesure-n-0009]
+  importance: secondaire
+  justification: 'tribu engendrée par une partition, consolidation'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+mes-td2-ex06:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-05]
+  notions: [mesure-n-0012, mesure-n-0013, mesure-n-0059]
+  importance: secondaire
+  justification: 'preuve longue de B(R2)=B(R)⊗B(R), technique de transport de tribu'
+  difficulte: 3
+  temps_min: 45
+  doublon_de: null
+mes-td2-ex07:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-05]
+  notions: [mesure-n-0012, mesure-n-0013]
+  importance: secondaire
+  justification: 'familles génératrices des boréliens, résultat de cours plus que d''examen'
+  difficulte: 2
+  temps_min: 35
+  doublon_de: null
+mes-td2-ex08:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-07]
+  notions: [mesure-n-0012, mesure-n-0010]
+  importance: important
+  justification: 'traduire un ensemble en unions/intersections dénombrables, comme l''annale ex-2425-ex01'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-td2-ex09:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-05]
+  notions: [mesure-n-0011, mesure-n-0013]
+  importance: secondaire
+  justification: 'tribus engendrées par des grilles, long et peu rentable'
+  difficulte: 3
+  temps_min: 40
+  doublon_de: null
+mes-td2-ex10:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-05, mes-m-03]
+  notions: [mesure-n-0008, mesure-n-0001]
+  importance: exotique
+  justification: 'aucune tribu infinie dénombrable : preuve par atomes, hors des sujets'
+  difficulte: 3
+  temps_min: 50
+  doublon_de: null
+
+# ---------- Paris Cité : TD3 ----------
+mes-td3-ex01:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition'
+  methodes: [mes-m-06]
+  notions: [mesure-n-0014, mesure-n-0009]
+  importance: important
+  justification: 'sa question 1 est l''annale UVSQ cc1-2425-ex01'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-td3-ex02:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition'
+  methodes: [mes-m-06]
+  notions: [mesure-n-0014, mesure-n-0016]
+  importance: secondaire
+  justification: 'monotone implique borélienne : classique court, critère sur famille génératrice'
+  difficulte: 2
+  temps_min: 20
+  doublon_de: null
+mes-td3-ex03:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition'
+  methodes: [mes-m-04, mes-m-06]
+  notions: [mesure-n-0008, mesure-n-0014]
+  importance: secondaire
+  justification: 'mesurabilité pour une tribu non usuelle, consolidation'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-td3-ex04:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables'
+  methodes: [mes-m-07]
+  notions: [mesure-n-0022, mesure-n-0010]
+  importance: vital
+  justification: 'quantificateurs traduits en unions/intersections : geste de l''annale ex-2425-ex01 et de toute preuve p.p.'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-td3-ex05:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables'
+  methodes: [mes-m-07]
+  notions: [mesure-n-0022]
+  importance: secondaire
+  justification: 'variante plus simple de td3-ex04 et de l''annale ex-2425-ex01'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-td3-ex06:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables'
+  methodes: [mes-m-07, mes-m-06]
+  notions: [mesure-n-0020, mesure-n-0022]
+  importance: secondaire
+  justification: 'indice aléatoire f_N(x), astuce de découpage dénombrable'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+mes-td3-ex07:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition'
+  methodes: [mes-m-06, mes-m-05]
+  notions: [mesure-n-0017, mesure-n-0014]
+  importance: secondaire
+  justification: 'tribu engendrée par une fonction, notion peu évaluée'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+
+# ---------- Paris Cité : TD4 ----------
+mes-td4-ex01:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.4 Définition et exemples'
+  methodes: [mes-m-08, mes-m-03]
+  notions: [mesure-n-0026, mesure-n-0001]
+  importance: secondaire
+  justification: 'mesure 0-1 sur les codénombrables ; méthode déjà travaillée sur l''annale vitale cc1-2324-ex01'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+mes-td4-ex02:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.4 Définition et exemples'
+  methodes: [mes-m-08]
+  notions: [mesure-n-0026, mesure-n-0030]
+  importance: secondaire
+  justification: 'mesures sur N, interversion de sommes positives'
+  difficulte: 1
+  temps_min: 30
+  doublon_de: null
+mes-td4-ex03:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Propriétés des mesures (CM du 13/10)'
+  methodes: [mes-m-03, mes-m-09, mes-m-08]
+  notions: [mesure-n-0038, mesure-n-0028, mesure-n-0047]
+  importance: secondaire
+  justification: 'décomposition atomique, couverte par l''annale cc1-2526-ex03 classée important'
+  difficulte: 3
+  temps_min: 45
+  doublon_de: null
+mes-td4-ex04:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Propriétés des mesures (CM du 13/10)'
+  methodes: [mes-m-09, mes-m-02]
+  notions: [mesure-n-0038, mesure-n-0036, mesure-n-0005]
+  importance: vital
+  justification: 'Borel-Cantelli en 15 min, propriétés des mesures présentes dans 6 annales UVSQ'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-td4-ex05:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.4 Définition et exemples'
+  methodes: [mes-m-08]
+  notions: [mesure-n-0026, mesure-n-0002]
+  importance: important
+  justification: 'mesure image : vérifier qu''une application est une mesure (5 annales), notion reprise en probabilités'
+  difficulte: 2
+  temps_min: 35
+  doublon_de: null
+mes-td4-ex06:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)'
+  methodes: [mes-m-10]
+  notions: [mesure-n-0039, mesure-n-0031, mesure-n-0042]
+  importance: important
+  justification: 'vrai/faux sur la mesure de Lebesgue, format de question de cours fréquent'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-td4-ex07:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)'
+  methodes: [mes-m-09, mes-m-10, mes-m-03]
+  notions: [mesure-n-0045, mesure-n-0034, mesure-n-0036]
+  importance: secondaire
+  justification: 'fonction de répartition et atomes, proche de cc1-2526-ex03'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: null
+mes-td4-ex08:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)'
+  methodes: [mes-m-10]
+  notions: [mesure-n-0031, mesure-n-0039]
+  importance: secondaire
+  justification: 'ensemble de Vitali : culture du cours, guidé, rarement en examen'
+  difficulte: 3
+  temps_min: 35
+  doublon_de: null
+
+# ---------- Paris Cité : TD5 ----------
+mes-td5-ex01:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue'
+  methodes: [mes-m-12]
+  notions: [mesure-n-0023, mesure-n-0049, mesure-n-0050]
+  importance: secondaire
+  justification: 'méthode standard étagées puis positives, déjà vitale via ex-2526-ex02'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+mes-td5-ex02:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-12, mes-m-14]
+  notions: [mesure-n-0050, mesure-n-0051]
+  importance: secondaire
+  justification: 'additivité sur une partition par Beppo-Levi, court'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-td5-ex03:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-18]
+  notions: [mesure-n-0050, mesure-n-0056]
+  importance: vital
+  justification: 'identifier l''hypothèse manquante de Beppo-Levi / TCD, réflexe exigé dans 18 annales de convergence'
+  difficulte: 1
+  temps_min: 25
+  doublon_de: null
+mes-td5-ex04:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-14]
+  notions: [mesure-n-0050, mesure-n-0056]
+  importance: vital
+  justification: 'théorème d''intégration terme à terme et son contre-exemple, méthode de 4 annales'
+  difficulte: 2
+  temps_min: 35
+  doublon_de: null
+mes-td5-ex05:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-13]
+  notions: [mesure-n-0050]
+  importance: secondaire
+  justification: 'Beppo-Levi direct, déjà vital via ex-2324-ex02q1'
+  difficulte: 2
+  temps_min: 20
+  doublon_de: null
+mes-td5-ex06:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056]
+  importance: vital
+  justification: 'TCD avec (1+x/n)^n : domination type de 16 annales UVSQ'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+mes-td5-ex07q1:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-14]
+  notions: [mesure-n-0050]
+  importance: vital
+  justification: 'annale UVSQ (CC2 L3 2024) reprise en TD de Paris Cité, série de fonctions positives'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-td5-ex07q2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-14]
+  notions: [mesure-n-0056, mesure-n-0050]
+  importance: secondaire
+  justification: 'variante signée de ex07q1, majoration plus délicate'
+  difficulte: 3
+  temps_min: 30
+  doublon_de: null
+mes-td5-ex08:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15, mes-m-17]
+  notions: [mesure-n-0056, mesure-n-0055]
+  importance: vital
+  justification: 'cinq limites d''intégrales : exactement le format des CC2 et examens UVSQ'
+  difficulte: 2
+  temps_min: 60
+  doublon_de: null
+mes-td5-ex09:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056, mesure-n-0044]
+  importance: important
+  justification: 'TCD avec limite p.p. hors d''un négligeable, piège fréquent'
+  difficulte: 2
+  temps_min: 20
+  doublon_de: null
+
+# ---------- Paris Cité : TD6 ----------
+mes-td6-ex01:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19]
+  notions: [mesure-n-0057]
+  importance: secondaire
+  justification: 'continuité d''une primitive, application directe'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-td6-ex02:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: secondaire
+  justification: 'même schéma que l''annale cc2-2425-ex02 (classée important), plus long'
+  difficulte: 3
+  temps_min: 60
+  doublon_de: null
+mes-td6-ex03:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20, mes-m-22]
+  notions: [mesure-n-0057, mesure-n-0058, mesure-n-0064]
+  importance: secondaire
+  justification: 'intégrale à paramètre avec équation différentielle et changement de variable, long'
+  difficulte: 3
+  temps_min: 50
+  doublon_de: null
+mes-td6-ex04:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: important
+  justification: 'transformée de Fourier : continuité et dérivation sous l''intégrale, classique'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-td6-ex05:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: vital
+  justification: 'même F que l''examen UVSQ 2025-26 ; continuité et dérivation dans 4 annales'
+  difficulte: 2
+  temps_min: 45
+  doublon_de: null
+mes-td6-ex06:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: secondaire
+  justification: 'convolution, même technique que td6-ex04'
+  difficulte: 2
+  temps_min: 35
+  doublon_de: null
+
+# ---------- Paris Cité : TD7 ----------
+mes-td7-ex01:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21]
+  notions: [mesure-n-0059, mesure-n-0060]
+  importance: secondaire
+  justification: 'mesure du sous-graphe par Tonelli, proche du TD UVSQ chap-4-td4-ex6'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+mes-td7-ex02:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21, mes-m-22]
+  notions: [mesure-n-0061, mesure-n-0063, mesure-n-0064]
+  importance: vital
+  justification: 'intégrale de Gauss par Fubini et polaires, présente sous une autre forme dans l''annale gaussienne'
+  difficulte: 1
+  temps_min: 25
+  doublon_de: null
+mes-td7-ex03:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21, mes-m-18]
+  notions: [mesure-n-0061, mesure-n-0060]
+  importance: secondaire
+  justification: 'contre-exemple à Fubini sans intégrabilité, court'
+  difficulte: 2
+  temps_min: 20
+  doublon_de: null
+mes-td7-ex04:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21, mes-m-22]
+  notions: [mesure-n-0060, mesure-n-0062, mesure-n-0063]
+  importance: vital
+  justification: 'neuf calculs d''intégrales multiples : Fubini-Tonelli (6 annales) et changements de variables'
+  difficulte: 2
+  temps_min: 70
+  doublon_de: null
+mes-td7-ex05:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21, mes-m-22]
+  notions: [mesure-n-0060, mesure-n-0063]
+  importance: secondaire
+  justification: 'volume de la boule unité, récurrence classique mais longue'
+  difficulte: 3
+  temps_min: 45
+  doublon_de: null
+mes-td7-ex06:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21, mes-m-22, mes-m-20]
+  notions: [mesure-n-0060, mesure-n-0062, mesure-n-0058]
+  importance: secondaire
+  justification: 'fonctions Gamma et Beta, synthèse longue des chapitres 3 et 4'
+  difficulte: 3
+  temps_min: 60
+  doublon_de: null
+mes-td7-ex07:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21, mes-m-14]
+  notions: [mesure-n-0060, mesure-n-0061]
+  importance: secondaire
+  justification: 'calcul de ζ(2) par Fubini, astuce proche de l''annale ex-2324-ex03'
+  difficulte: 3
+  temps_min: 50
+  doublon_de: null
+
+# ---------- Paris Cité : DM ----------
+mes-dm-s1:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-25, mes-m-04]
+  notions: [mesure-n-0008, mesure-n-0011]
+  importance: secondaire
+  justification: 'DM de Paris Cité sur les classes monotones, aucune annale'
+  difficulte: 2
+  temps_min: 20
+  doublon_de: null
+mes-dm-s2:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-25]
+  notions: [mesure-n-0011]
+  importance: secondaire
+  justification: 'preuve du lemme de classe monotone, technique du DM'
+  difficulte: 3
+  temps_min: 40
+  doublon_de: null
+mes-dm-s3:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)'
+  methodes: [mes-m-25]
+  notions: [mesure-n-0026, mesure-n-0029]
+  importance: secondaire
+  justification: 'unicité des mesures, résultat utile mais démonstration rarement demandée'
+  difficulte: 3
+  temps_min: 40
+  doublon_de: null
+mes-dm-s4:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)'
+  methodes: [mes-m-25, mes-m-10]
+  notions: [mesure-n-0031, mesure-n-0039]
+  importance: secondaire
+  justification: 'application de l''unicité à Lebesgue et aux mesures invariantes par translation'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-dm-s5:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)'
+  methodes: [mes-m-26]
+  notions: [mesure-n-0048]
+  importance: exotique
+  justification: 'théorème de Carathéodory démontré en détail, construction hors des sujets'
+  difficulte: 3
+  temps_min: 60
+  doublon_de: null
+mes-dm-s6:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)'
+  methodes: [mes-m-26, mes-m-10]
+  notions: [mesure-n-0048, mesure-n-0040]
+  importance: exotique
+  justification: 'construction de Lebesgue par mesure extérieure, très technique'
+  difficulte: 3
+  temps_min: 60
+  doublon_de: null
+
+# ---------- Annales UVSQ (énoncé complet) : CC1 ----------
+mes-cc1-2526-ex01:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu'
+  methodes: [mes-m-04]
+  notions: [mesure-n-0008, mesure-n-0010]
+  importance: important
+  justification: 'annale CC1 2025-26 : axiome de tribu en défaut, court'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-cc1-2526-ex02:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-11, mes-m-12]
+  notions: [mesure-n-0049, mesure-n-0051, mesure-n-0050]
+  importance: vital
+  justification: 'encadrement de ∫f par la somme des μ(f>=n) : méthode de 5 annales'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: null
+mes-cc1-2526-ex03:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Propriétés des mesures (CM du 13/10)'
+  methodes: [mes-m-08, mes-m-09, mes-m-03]
+  notions: [mesure-n-0028, mesure-n-0038, mesure-n-0047]
+  importance: important
+  justification: 'atomes au plus dénombrables, sujet repris par les TD4 ex03 et ex07 de Paris Cité'
+  difficulte: 3
+  temps_min: 45
+  doublon_de: null
+mes-cc1-2324-ex01:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu'
+  methodes: [mes-m-04, mes-m-08]
+  notions: [mesure-n-0008, mesure-n-0026, mesure-n-0042]
+  importance: vital
+  justification: 'tribu puis mesure à vérifier : les deux méthodes les plus fréquentes du CC1 (5 annales chacune)'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: null
+mes-cc1-2324-ex02:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables'
+  methodes: [mes-m-06]
+  notions: [mesure-n-0014, mesure-n-0015, mesure-n-0022]
+  importance: vital
+  justification: 'recollement mesurable, méthode de 3 annales'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-cc1-2324-ex03:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-11, mes-m-09]
+  notions: [mesure-n-0051, mesure-n-0036, mesure-n-0052]
+  importance: vital
+  justification: 'Markov et continuité décroissante, réutilisés dans 5 annales'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-cc1-2324-ex04:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)'
+  methodes: [mes-m-04]
+  notions: [mesure-n-0042, mesure-n-0043]
+  importance: important
+  justification: 'tribu complétée, annale CC1 2023-24 classique mais plus longue'
+  difficulte: 2
+  temps_min: 45
+  doublon_de: null
+mes-cc1-2324-ex05:
+  sous_chapitre: 'Hors cours actuel > Convergence en mesure'
+  methodes: [mes-m-11, mes-m-09]
+  notions: [mesure-n-0044, mesure-n-0034]
+  importance: secondaire
+  justification: 'convergence en mesure absente du cours de Paris Cité ; outils (Markov, continuité) déjà vitaux'
+  difficulte: 3
+  temps_min: 40
+  doublon_de: null
+mes-cc1-2425-ex01:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition'
+  methodes: [mes-m-06]
+  notions: [mesure-n-0014]
+  importance: important
+  justification: 'identique à la question 1 de td3-ex01 (énoncé plus complet)'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: mes-td3-ex01
+mes-cc1-2425-ex02:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue'
+  methodes: [mes-m-11, mes-m-21]
+  notions: [mesure-n-0049, mesure-n-0060]
+  importance: important
+  justification: 'formule du gâteau en couches, version continue de cc1-2526-ex02'
+  difficulte: 3
+  temps_min: 40
+  doublon_de: null
+mes-cc1-2425-ex03:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu'
+  methodes: [mes-m-04]
+  notions: [mesure-n-0008]
+  importance: vital
+  justification: 'vérification des axiomes de tribu en 10 min, méthode de 5 annales'
+  difficulte: 1
+  temps_min: 10
+  doublon_de: null
+mes-cc1-2425-ex04:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)'
+  methodes: [mes-m-10, mes-m-09]
+  notions: [mesure-n-0039, mesure-n-0038]
+  importance: important
+  justification: 'invariance par translation et sous-additivité, seule annale sur Lebesgue'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+
+# ---------- Annales UVSQ (énoncé complet) : CC2 ----------
+mes-cc2-2324-ex01q1:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056]
+  importance: vital
+  justification: 'limite par TCD, méthode de 16 annales'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-cc2-2324-ex01q2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056, mesure-n-0044]
+  importance: secondaire
+  justification: 'TCD avec limite p.p., répétition des vitaux'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-cc2-2324-ex02:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15, mes-m-23]
+  notions: [mesure-n-0056, mesure-n-0051]
+  importance: vital
+  justification: 'TCD avec discussion selon un paramètre p, intégrabilité des puissances (3 annales)'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-cc2-2324-ex03:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-16]
+  notions: [mesure-n-0056, mesure-n-0028]
+  importance: secondaire
+  justification: 'TCD sur N, déjà vital via cc2l3-2425-ex05'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-cc2-2324-ex04:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: vital
+  justification: 'continuité et dérivabilité d''une intégrale à paramètre, 4 annales ; ici avec |t| et le cas t=0'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: null
+mes-gauss-y-exp:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21]
+  notions: [mesure-n-0060, mesure-n-0064]
+  importance: vital
+  justification: 'Tonelli dans les deux ordres pour obtenir Gauss, méthode de 6 annales'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-cc2-2425-ex01q1:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-16]
+  notions: [mesure-n-0056, mesure-n-0028]
+  importance: secondaire
+  justification: 'TCD sur N, répétition'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-cc2-2425-ex01q2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056, mesure-n-0044]
+  importance: secondaire
+  justification: 'TCD avec limite p.p., répétition des vitaux'
+  difficulte: 2
+  temps_min: 20
+  doublon_de: null
+mes-cc2-2425-ex01q3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056]
+  importance: secondaire
+  justification: 'TCD après changement de variable ou majoration, répétition'
+  difficulte: 2
+  temps_min: 20
+  doublon_de: null
+mes-cc2-2425-ex02:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: important
+  justification: 'intégrale à paramètre dérivée deux fois, version longue de la méthode vitale'
+  difficulte: 3
+  temps_min: 50
+  doublon_de: null
+mes-cc2-2425-ex03q1:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21]
+  notions: [mesure-n-0061]
+  importance: important
+  justification: 'calcul direct par Fubini, rapide'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-cc2-2425-ex03q2:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21]
+  notions: [mesure-n-0060, mesure-n-0061]
+  importance: vital
+  justification: 'inversion de l''ordre d''intégration, geste type de 6 annales'
+  difficulte: 2
+  temps_min: 20
+  doublon_de: null
+mes-cc2-2425-ex04:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-14, mes-m-21]
+  notions: [mesure-n-0060, mesure-n-0050, mesure-n-0044]
+  importance: secondaire
+  justification: 'Tonelli série-intégrale puis conséquence p.p., astucieux ; tableur : exotique'
+  difficulte: 3
+  temps_min: 35
+  doublon_de: null
+mes-cc2l3-2425-ex01:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-17, mes-m-18]
+  notions: [mesure-n-0055]
+  importance: important
+  justification: 'énoncé de Fatou et cas d''inégalité stricte, question de cours possible'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-cc2l3-2425-ex03q1:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-17, mes-m-15]
+  notions: [mesure-n-0055, mesure-n-0056]
+  importance: important
+  justification: 'limite infinie par Fatou, seconde utilisation annale de Fatou'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-cc2l3-2425-ex03q2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15, mes-m-13]
+  notions: [mesure-n-0056, mesure-n-0050]
+  importance: vital
+  justification: 'même limite par TCD et par Beppo-Levi : compare les deux théorèmes'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-cc2l3-2425-ex04:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-11, mes-m-15, mes-m-09, mes-m-02]
+  notions: [mesure-n-0056, mesure-n-0005, mesure-n-0034]
+  importance: vital
+  justification: 'synthèse Markov + TCD + limsup d''ensembles, présent deux fois dans le tableur comme vital'
+  difficulte: 3
+  temps_min: 35
+  doublon_de: null
+mes-cc2l3-2425-ex05:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-16]
+  notions: [mesure-n-0056, mesure-n-0028]
+  importance: vital
+  justification: 'TCD pour la mesure de comptage, méthode de 3 annales'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+
+# ---------- Annales UVSQ (énoncé complet) : examens ----------
+mes-ex-2526-ex01:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables'
+  methodes: [mes-m-06]
+  notions: [mesure-n-0021, mesure-n-0022, mesure-n-0015]
+  importance: vital
+  justification: 'mesurabilité d''une troncature, examen 2025-26, méthode de 3 annales'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-ex-2526-ex02:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue'
+  methodes: [mes-m-12, mes-m-08]
+  notions: [mesure-n-0026, mesure-n-0023, mesure-n-0025, mesure-n-0050]
+  importance: vital
+  justification: 'mesure de densité : σ-additivité puis méthode standard, examen 2025-26'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: null
+mes-ex-2526-ex03q1:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056]
+  importance: important
+  justification: 'TCD avec domination moins évidente près de 0'
+  difficulte: 2
+  temps_min: 20
+  doublon_de: null
+mes-ex-2526-ex03q2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15, mes-m-13]
+  notions: [mesure-n-0056, mesure-n-0050]
+  importance: secondaire
+  justification: 'intégrale infinie à n fixé, à repérer avant tout théorème ; court'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-ex-2526-ex03q3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-22, mes-m-15]
+  notions: [mesure-n-0056, mesure-n-0062]
+  importance: important
+  justification: 'changement de variable puis TCD, variante fréquente des limites d''intégrales'
+  difficulte: 3
+  temps_min: 30
+  doublon_de: null
+mes-ex-2526-ex04:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: vital
+  justification: 'quasi identique à td6-ex05 (même F, même équation F''''+F=1/t)'
+  difficulte: 2
+  temps_min: 45
+  doublon_de: mes-td6-ex05
+mes-ex-2324-ex01:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-23, mes-m-22]
+  notions: [mesure-n-0063, mesure-n-0065, mesure-n-0069]
+  importance: vital
+  justification: 'intégrabilité en polaires selon α, présente 3 fois dans le tableur ; question L^p en fin'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: null
+mes-ex-2324-ex02q1:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-13]
+  notions: [mesure-n-0050]
+  importance: vital
+  justification: 'limite par Beppo-Levi (monotonie à établir), seule annale de BL pur'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+mes-ex-2324-ex02q2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056]
+  importance: secondaire
+  justification: 'TCD direct, répétition'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-ex-2324-ex02q3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056]
+  importance: important
+  justification: 'TCD avec domination 1/√x intégrable, présent 3 fois dans le tableur'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-ex-2324-ex03:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21, mes-m-15]
+  notions: [mesure-n-0061, mesure-n-0060]
+  importance: secondaire
+  justification: 'intégrale de Dirichlet par Fubini, guidé mais long ; tableur : exotique'
+  difficulte: 3
+  temps_min: 40
+  doublon_de: null
+mes-ex-2324-ex04:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)'
+  methodes: [mes-m-26, mes-m-04, mes-m-08]
+  notions: [mesure-n-0048]
+  importance: secondaire
+  justification: 'mesure extérieure : traitée par le DM de Paris Cité (dm-s5), une seule annale'
+  difficulte: 3
+  temps_min: 50
+  doublon_de: null
+mes-ex-2425-ex01:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables'
+  methodes: [mes-m-07, mes-m-09]
+  notions: [mesure-n-0022, mesure-n-0038, mesure-n-0042]
+  importance: vital
+  justification: '{g<f} comme union sur Q puis σ-sous-additivité : geste de base des preuves p.p.'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-ex-2425-ex02q1:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056, mesure-n-0044]
+  importance: vital
+  justification: 'TCD abstrait (f_n e^{-f_n} bornée), méthode de 16 annales'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-ex-2425-ex02q2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15, mes-m-14]
+  notions: [mesure-n-0056]
+  importance: secondaire
+  justification: 'série alternée par TCD sur les sommes partielles, répétition'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-ex-2425-ex02q3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-14]
+  notions: [mesure-n-0050]
+  importance: important
+  justification: 'développement en série et intégration terme à terme, même schéma que td5-ex07q1'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-ex-2425-ex04:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.4 Définition et exemples'
+  methodes: [mes-m-08, mes-m-12]
+  notions: [mesure-n-0026, mesure-n-0034]
+  importance: important
+  justification: 'limite croissante de mesures : σ-additivité avec interversion de limites'
+  difficulte: 2
+  temps_min: 35
+  doublon_de: null
+mes-ex-2425-ex05:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-23]
+  notions: [mesure-n-0057, mesure-n-0051]
+  importance: important
+  justification: 'continuité et comportement au bord selon r, intégrales à paramètre (4 annales)'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: null
+
+# ---------- UVSQ : TD et entrées du tableur ----------
+mes-uvsq-chap-1-ex-1:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu'
+  methodes: [mes-m-04]
+  notions: [mesure-n-0008, mesure-n-0010]
+  importance: secondaire
+  justification: 'pas d''énoncé ; méthode déjà vitale via cc1-2425-ex03 et td2-ex01 (tableur : vital)'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-uvsq-chap-1-ex-2:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu'
+  methodes: [mes-m-04]
+  notions: [mesure-n-0008, mesure-n-0010]
+  importance: important
+  justification: 'quasi identique à l''annale cc1-2526-ex01 (parties finies ou cofinies)'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: mes-cc1-2526-ex01
+mes-uvsq-chap-1-ex-7:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne'
+  methodes: [mes-m-04, mes-m-08, mes-m-03]
+  notions: [mesure-n-0011, mesure-n-0008, mesure-n-0001]
+  importance: important
+  justification: 'tribu des dénombrables/codénombrables = td2-ex03 ; sa mesure associée = td4-ex01'
+  difficulte: 2
+  temps_min: 35
+  doublon_de: mes-td2-ex03
+mes-uvsq-chap-1-ex-8:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition'
+  methodes: [mes-m-04]
+  notions: [mesure-n-0017]
+  importance: secondaire
+  justification: 'tribu trace, vérification d''axiomes sans difficulté ; pas d''énoncé'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-uvsq-chap-1-ex-cc1-23-ex4:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)'
+  methodes: [mes-m-04]
+  notions: [mesure-n-0042, mesure-n-0043]
+  importance: important
+  justification: 'doublon de l''annale cc1-2324-ex04'
+  difficulte: 2
+  temps_min: 45
+  doublon_de: mes-cc1-2324-ex04
+mes-uvsq-chap-1-ex-cc1-23-ex1:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu'
+  methodes: [mes-m-04, mes-m-08]
+  notions: [mesure-n-0008, mesure-n-0026, mesure-n-0042]
+  importance: vital
+  justification: 'doublon de l''annale cc1-2324-ex01'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-cc1-2324-ex01
+mes-uvsq-chap-1-ex-5:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition'
+  methodes: [mes-m-04]
+  notions: [mesure-n-0017, mesure-n-0002]
+  importance: secondaire
+  justification: 'tribu image réciproque, vérification d''axiomes courte ; pas d''énoncé'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-uvsq-chap-1-ex-6:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.2 Démonstration de la proposition - lemmes préparatoires'
+  methodes: [mes-m-05]
+  notions: [mesure-n-0019]
+  importance: secondaire
+  justification: 'lemme de transport de tribu, preuve de cours ; pas d''énoncé, aucune annale'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-uvsq-chap-1-ex-cc1-25-ex3:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu'
+  methodes: [mes-m-04]
+  notions: [mesure-n-0008]
+  importance: vital
+  justification: 'doublon de l''annale cc1-2425-ex03'
+  difficulte: 1
+  temps_min: 10
+  doublon_de: mes-cc1-2425-ex03
+mes-uvsq-chap-1-ex-cc1-25-ex4:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)'
+  methodes: [mes-m-10, mes-m-09]
+  notions: [mesure-n-0039, mesure-n-0038]
+  importance: important
+  justification: 'doublon de l''annale cc1-2425-ex04'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-cc1-2425-ex04
+mes-uvsq-chap-1-ex-9:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)'
+  methodes: [mes-m-10, mes-m-03]
+  notions: [mesure-n-0039, mesure-n-0042, mesure-n-0001]
+  importance: exotique
+  justification: 'ensemble de Cantor, culture ; aucune annale, pas d''énoncé'
+  difficulte: 3
+  temps_min: 50
+  doublon_de: null
+mes-uvsq-chap-1-ex-cc1-23-ex2:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu'
+  methodes: [mes-m-08]
+  notions: [mesure-n-0026]
+  importance: vital
+  justification: 'seconde partie de l''annale cc1-2324-ex01 (mesure 0-1 sur T0)'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-cc1-2324-ex01
+mes-uvsq-chap-1-cc1-2025-ex1:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu'
+  methodes: [mes-m-04]
+  notions: [mesure-n-0008, mesure-n-0010]
+  importance: important
+  justification: 'doublon de l''annale cc1-2526-ex01'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: mes-cc1-2526-ex01
+mes-uvsq-chap-1-cc1-2025-ex2:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-11, mes-m-12]
+  notions: [mesure-n-0049, mesure-n-0051]
+  importance: vital
+  justification: 'doublon de l''annale cc1-2526-ex02'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-cc1-2526-ex02
+mes-uvsq-chap-1-cc1-2023-24-ex1:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu'
+  methodes: [mes-m-04, mes-m-08]
+  notions: [mesure-n-0008, mesure-n-0026]
+  importance: vital
+  justification: 'doublon de l''annale cc1-2324-ex01'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-cc1-2324-ex01
+mes-uvsq-chap-1-cc1-2023-24-ex4:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)'
+  methodes: [mes-m-04]
+  notions: [mesure-n-0042, mesure-n-0043]
+  importance: important
+  justification: 'doublon de l''annale cc1-2324-ex04'
+  difficulte: 2
+  temps_min: 45
+  doublon_de: mes-cc1-2324-ex04
+mes-uvsq-chap-1-exam-24-25-ex4:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.4 Définition et exemples'
+  methodes: [mes-m-08, mes-m-12]
+  notions: [mesure-n-0026, mesure-n-0034]
+  importance: important
+  justification: 'doublon de l''annale ex-2425-ex04'
+  difficulte: 2
+  temps_min: 35
+  doublon_de: mes-ex-2425-ex04
+mes-uvsq-chap-2-cc23-24-ex2:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables'
+  methodes: [mes-m-06]
+  notions: [mesure-n-0014, mesure-n-0022]
+  importance: vital
+  justification: 'doublon de l''annale cc1-2324-ex02'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: mes-cc1-2324-ex02
+mes-uvsq-chap-2-cc23-24-ex3:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-11, mes-m-09]
+  notions: [mesure-n-0051, mesure-n-0036]
+  importance: vital
+  justification: 'doublon de l''annale cc1-2324-ex03'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: mes-cc1-2324-ex03
+mes-uvsq-chap-2-td2-ex5:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables'
+  methodes: [mes-m-07, mes-m-06]
+  notions: [mesure-n-0022, mesure-n-0004]
+  importance: secondaire
+  justification: 'mesurabilité de limsup/liminf, résultat de cours couvert par td3-ex04 ; pas d''énoncé'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-uvsq-chap-2-cc1-25-ex2:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue'
+  methodes: [mes-m-11, mes-m-21]
+  notions: [mesure-n-0049, mesure-n-0060]
+  importance: important
+  justification: 'entrée du tableur rattachée au CC1 2024-25 ex2 (formule du gâteau), voir cas limite'
+  difficulte: 3
+  temps_min: 40
+  doublon_de: mes-cc1-2425-ex02
+mes-uvsq-chap-2-exam24-25-ex1:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables'
+  methodes: [mes-m-07, mes-m-09]
+  notions: [mesure-n-0022, mesure-n-0038]
+  importance: vital
+  justification: 'doublon de l''annale ex-2425-ex01'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-ex-2425-ex01
+mes-uvsq-chap-2-td2-ex6:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue'
+  methodes: [mes-m-14, mes-m-12]
+  notions: [mesure-n-0053, mesure-n-0051]
+  importance: secondaire
+  justification: 'intégrale d''une fonction en escalier infinie, découpage en série ; pas d''énoncé'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-uvsq-chap-2-td2-ex7:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-11]
+  notions: [mesure-n-0051]
+  importance: secondaire
+  justification: 'intégrable n''implique pas limite nulle, contre-exemple classique ; pas d''énoncé'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+mes-uvsq-chap-2-td2-ex8:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-09, mes-m-11]
+  notions: [mesure-n-0044, mesure-n-0052, mesure-n-0034]
+  importance: secondaire
+  justification: 'inégalité p.p. via les ensembles {f>1+1/n}, technique déjà dans ex-2425-ex01'
+  difficulte: 2
+  temps_min: 20
+  doublon_de: null
+mes-uvsq-chap-2-td2-ex9:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-11]
+  notions: [mesure-n-0051]
+  importance: secondaire
+  justification: 'Markov généralisée, variante de l''annale vitale cc1-2324-ex03'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-uvsq-chap-2-cc1-23-ex5:
+  sous_chapitre: 'Hors cours actuel > Convergence en mesure'
+  methodes: [mes-m-11, mes-m-09]
+  notions: [mesure-n-0044]
+  importance: secondaire
+  justification: 'doublon de l''annale cc1-2324-ex05'
+  difficulte: 3
+  temps_min: 40
+  doublon_de: mes-cc1-2324-ex05
+mes-uvsq-chap-2-exam24-25-ex2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15, mes-m-14]
+  notions: [mesure-n-0056]
+  importance: vital
+  justification: 'regroupe ex-2425-ex02 q1 et q2 ; rattaché à q1'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: mes-ex-2425-ex02q1
+mes-uvsq-chap-2-cc1-2023-24-ex2:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables'
+  methodes: [mes-m-06]
+  notions: [mesure-n-0014, mesure-n-0022]
+  importance: vital
+  justification: 'doublon de l''annale cc1-2324-ex02'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: mes-cc1-2324-ex02
+mes-uvsq-chap-2-cc1-2023-24-ex3:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-11, mes-m-09]
+  notions: [mesure-n-0051, mesure-n-0036]
+  importance: vital
+  justification: 'doublon de l''annale cc1-2324-ex03'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: mes-cc1-2324-ex03
+mes-uvsq-chap-2-exam-2024-25-ex1:
+  sous_chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables'
+  methodes: [mes-m-07, mes-m-09]
+  notions: [mesure-n-0022, mesure-n-0038]
+  importance: vital
+  justification: 'doublon de l''annale ex-2425-ex01'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-ex-2425-ex01
+mes-uvsq-chap-2-exam-2024-25-ex2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15, mes-m-14]
+  notions: [mesure-n-0056]
+  importance: vital
+  justification: 'regroupe ex-2425-ex02 q1 à q3 ; rattaché à q1'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: mes-ex-2425-ex02q1
+mes-uvsq-chap-2-cc1-2024-25-ex2:
+  sous_chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue'
+  methodes: [mes-m-11, mes-m-21]
+  notions: [mesure-n-0049, mesure-n-0060]
+  importance: important
+  justification: 'doublon de l''annale cc1-2425-ex02'
+  difficulte: 3
+  temps_min: 40
+  doublon_de: mes-cc1-2425-ex02
+mes-uvsq-chap-3-td3-ex1:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-18]
+  notions: [mesure-n-0050, mesure-n-0055]
+  importance: secondaire
+  justification: 'contre-exemples BL et Fatou, même rôle que td5-ex03 (vital) ; pas d''énoncé'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-uvsq-chap-3-td3-ex4:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056, mesure-n-0044]
+  importance: secondaire
+  justification: 'TCD avec limite p.p., même schéma que td5-ex09 ; pas d''énoncé'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-uvsq-chap-3-cc2-24-ex3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-17, mes-m-15]
+  notions: [mesure-n-0055, mesure-n-0056]
+  importance: important
+  justification: 'doublon de l''annale cc2l3-2425-ex03q1'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-cc2l3-2425-ex03q1
+mes-uvsq-chap-3-cc2-24-ex2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-14]
+  notions: [mesure-n-0050]
+  importance: vital
+  justification: 'même énoncé que td5-ex07q1 de Paris Cité (énoncé complet)'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-td5-ex07q1
+mes-uvsq-chap-3-cc2-24-ex5:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-16]
+  notions: [mesure-n-0056, mesure-n-0028]
+  importance: vital
+  justification: 'doublon de l''annale cc2l3-2425-ex05'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: mes-cc2l3-2425-ex05
+mes-uvsq-chap-3-cc2-24-ex4:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-11, mes-m-15, mes-m-09, mes-m-02]
+  notions: [mesure-n-0056, mesure-n-0005]
+  importance: vital
+  justification: 'doublon de l''annale cc2l3-2425-ex04'
+  difficulte: 3
+  temps_min: 35
+  doublon_de: mes-cc2l3-2425-ex04
+mes-uvsq-chap-3-td3-ex2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-18]
+  notions: [mesure-n-0056]
+  importance: secondaire
+  justification: 'masse qui s''échappe, variante de td5-ex03 ; pas d''énoncé'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-uvsq-chap-3-td3-ex3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-14]
+  notions: [mesure-n-0050]
+  importance: secondaire
+  justification: 'séries de fonctions par Beppo-Levi, même schéma que td5-ex07q1 ; pas d''énoncé'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: null
+mes-uvsq-chap-3-cc2-25-ex3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15, mes-m-13]
+  notions: [mesure-n-0056, mesure-n-0050]
+  importance: vital
+  justification: 'doublon de l''annale cc2l3-2425-ex03q2'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-cc2l3-2425-ex03q2
+mes-uvsq-chap-3-exam23-24-f-t:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: vital
+  justification: 'doublon de l''annale cc2-2324-ex04'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-cc2-2324-ex04
+mes-uvsq-chap-3-cc2-25-ex4:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-14, mes-m-21]
+  notions: [mesure-n-0060, mesure-n-0044]
+  importance: secondaire
+  justification: 'doublon de l''annale cc2-2425-ex04'
+  difficulte: 3
+  temps_min: 35
+  doublon_de: mes-cc2-2425-ex04
+mes-uvsq-chap-3-cc2-24-ex1:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-17, mes-m-18]
+  notions: [mesure-n-0055]
+  importance: important
+  justification: 'doublon de l''annale cc2l3-2425-ex01'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-cc2l3-2425-ex01
+mes-uvsq-chap-3-cc2-2024-ex3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-17, mes-m-15]
+  notions: [mesure-n-0055, mesure-n-0056]
+  importance: important
+  justification: 'regroupe cc2l3-2425-ex03 q1 et q2 ; rattaché à q1'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-cc2l3-2425-ex03q1
+mes-uvsq-chap-3-cc2-2024-ex5:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-16]
+  notions: [mesure-n-0056, mesure-n-0028]
+  importance: vital
+  justification: 'doublon de l''annale cc2l3-2425-ex05'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: mes-cc2l3-2425-ex05
+mes-uvsq-chap-3-cc2-2024-ex4:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-11, mes-m-15, mes-m-09, mes-m-02]
+  notions: [mesure-n-0056, mesure-n-0005]
+  importance: vital
+  justification: 'doublon de l''annale cc2l3-2425-ex04'
+  difficulte: 3
+  temps_min: 35
+  doublon_de: mes-cc2l3-2425-ex04
+mes-uvsq-chap-3-cc2-2025-ex3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15, mes-m-13]
+  notions: [mesure-n-0056, mesure-n-0050]
+  importance: vital
+  justification: 'doublon de l''annale cc2l3-2425-ex03q2'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-cc2l3-2425-ex03q2
+mes-uvsq-chap-3-exam-24-25-ex2-q3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-14]
+  notions: [mesure-n-0050]
+  importance: important
+  justification: 'doublon de l''annale ex-2425-ex02q3'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-ex-2425-ex02q3
+mes-uvsq-chap-4-td4-ex5-1:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21]
+  notions: [mesure-n-0060, mesure-n-0061]
+  importance: secondaire
+  justification: 'Fubini sur un triangle, entraînement ; td7-ex04 de Paris Cité est vital'
+  difficulte: 1
+  temps_min: 15
+  doublon_de: null
+mes-uvsq-chap-4-td4-ex5-2:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21]
+  notions: [mesure-n-0061]
+  importance: secondaire
+  justification: 'Fubini sur un triangle, entraînement'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-uvsq-chap-4-td4-ex5-3:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-22]
+  notions: [mesure-n-0063]
+  importance: secondaire
+  justification: 'polaires sur le disque, entraînement ; pas d''énoncé'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+mes-uvsq-chap-4-td4-ex6:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21]
+  notions: [mesure-n-0060, mesure-n-0059]
+  importance: secondaire
+  justification: 'sous-graphe par Tonelli, proche de td7-ex01 et de cc1-2425-ex02'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-uvsq-chap-4-exam23-24-ex1:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-23, mes-m-22]
+  notions: [mesure-n-0063, mesure-n-0065]
+  importance: vital
+  justification: 'doublon de l''annale ex-2324-ex01'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-ex-2324-ex01
+mes-uvsq-chap-4-exam23-24-ex5:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21]
+  notions: [mesure-n-0060, mesure-n-0064]
+  importance: vital
+  justification: 'doublon de l''annale mes-gauss-y-exp'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-gauss-y-exp
+mes-uvsq-chap-4-td4-ex7:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-22]
+  notions: [mesure-n-0062]
+  importance: secondaire
+  justification: 'changement de variables en dimension 3 sur un tétraèdre, long ; pas d''énoncé'
+  difficulte: 3
+  temps_min: 45
+  doublon_de: null
+mes-uvsq-chap-4-exam24-25-ex5:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-23]
+  notions: [mesure-n-0057]
+  importance: important
+  justification: 'doublon de l''annale ex-2425-ex05'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-ex-2425-ex05
+mes-uvsq-chap-4-cc2-23-ex4:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: vital
+  justification: 'doublon de l''annale cc2-2324-ex04'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-cc2-2324-ex04
+mes-uvsq-chap-4-cc2-25-ex2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: important
+  justification: 'doublon de l''annale cc2-2425-ex02'
+  difficulte: 3
+  temps_min: 50
+  doublon_de: mes-cc2-2425-ex02
+mes-uvsq-chap-4-exam23-24-ex3:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21, mes-m-15]
+  notions: [mesure-n-0061]
+  importance: secondaire
+  justification: 'doublon de l''annale ex-2324-ex03'
+  difficulte: 3
+  temps_min: 40
+  doublon_de: mes-ex-2324-ex03
+mes-uvsq-chap-4-exam-2023-24-ex1:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-23, mes-m-22]
+  notions: [mesure-n-0063, mesure-n-0065]
+  importance: vital
+  justification: 'doublon de l''annale ex-2324-ex01'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-ex-2324-ex01
+mes-uvsq-chap-4-exam-2023-24-ex5:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21]
+  notions: [mesure-n-0060, mesure-n-0064]
+  importance: vital
+  justification: 'doublon de l''annale mes-gauss-y-exp'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-gauss-y-exp
+mes-uvsq-chap-4-cc2-2023-24-ex4:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: vital
+  justification: 'doublon de l''annale cc2-2324-ex04'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-cc2-2324-ex04
+mes-uvsq-chap-4-exam-2024-25-ex5:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-23]
+  notions: [mesure-n-0057]
+  importance: important
+  justification: 'doublon de l''annale ex-2425-ex05'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-ex-2425-ex05
+mes-uvsq-chap-4-cc2-2025-ex2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre'
+  methodes: [mes-m-19, mes-m-20]
+  notions: [mesure-n-0057, mesure-n-0058]
+  importance: important
+  justification: 'doublon de l''annale cc2-2425-ex02'
+  difficulte: 3
+  temps_min: 50
+  doublon_de: mes-cc2-2425-ex02
+mes-uvsq-chap-5-exam23-24-ex1:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-23, mes-m-22]
+  notions: [mesure-n-0063, mesure-n-0065]
+  importance: vital
+  justification: 'doublon de l''annale ex-2324-ex01'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-ex-2324-ex01
+mes-uvsq-chap-5-td5-ex5-h-lder:
+  sous_chapitre: 'Chapitre 5 - Espaces $L^p$ (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-24]
+  notions: [mesure-n-0066, mesure-n-0051]
+  importance: secondaire
+  justification: 'Hölder direct ; L^p sans TD ni annale de calcul à Paris Cité pour l''instant'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: null
+mes-uvsq-chap-5-exam23-24-ex2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-13, mes-m-15]
+  notions: [mesure-n-0050, mesure-n-0056]
+  importance: vital
+  justification: 'doublon de l''annale ex-2324-ex02q1'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: mes-ex-2324-ex02q1
+mes-uvsq-chap-5-cc2-24-ex1:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-17, mes-m-18]
+  notions: [mesure-n-0055]
+  importance: important
+  justification: 'doublon de l''annale cc2l3-2425-ex01'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-cc2l3-2425-ex01
+mes-uvsq-chap-5-td5-ex1-inclusions:
+  sous_chapitre: 'Chapitre 5 - Espaces $L^p$ (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-24]
+  notions: [mesure-n-0069, mesure-n-0066]
+  importance: secondaire
+  justification: 'inclusions L^p sur mesure finie par Hölder ; pas d''énoncé'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+mes-uvsq-chap-5-td5-ex2-cv:
+  sous_chapitre: 'Chapitre 5 - Espaces $L^p$ (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-18, mes-m-24]
+  notions: [mesure-n-0065, mesure-n-0044]
+  importance: secondaire
+  justification: 'convergence L^p contre convergence p.p., contre-exemple classique ; pas d''énoncé'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: null
+mes-uvsq-chap-5-td5-ex3-mink:
+  sous_chapitre: 'Chapitre 5 - Espaces $L^p$ (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-24]
+  notions: [mesure-n-0067, mesure-n-0066]
+  importance: secondaire
+  justification: 'preuve de Minkowski à partir de Hölder ; pas d''énoncé'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: null
+mes-uvsq-chap-5-exam23-24-ex3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056]
+  importance: important
+  justification: 'doublon de l''annale ex-2324-ex02q3'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: mes-ex-2324-ex02q3
+mes-uvsq-chap-5-td5-ex4-densit:
+  sous_chapitre: 'Chapitre 5 - Espaces $L^p$ (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-24]
+  notions: [mesure-n-0065]
+  importance: exotique
+  justification: 'densité des fonctions continues à support compact, technique et absente des annales'
+  difficulte: 3
+  temps_min: 45
+  doublon_de: null
+mes-uvsq-chap-5-td5-ex6-jensen:
+  sous_chapitre: 'Hors cours actuel > Inégalité de Jensen'
+  methodes: [mes-m-24]
+  notions: [mesure-n-0065]
+  importance: exotique
+  justification: 'Jensen ne figure pas dans les notions du cours ; aucune annale'
+  difficulte: 3
+  temps_min: 30
+  doublon_de: null
+mes-uvsq-chap-5-cc2-25-ex4:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-14, mes-m-21]
+  notions: [mesure-n-0060, mesure-n-0044]
+  importance: secondaire
+  justification: 'doublon de l''annale cc2-2425-ex04'
+  difficulte: 3
+  temps_min: 35
+  doublon_de: mes-cc2-2425-ex04
+mes-uvsq-chap-5-exam-2023-24-ex1:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-23, mes-m-22]
+  notions: [mesure-n-0063, mesure-n-0065]
+  importance: vital
+  justification: 'doublon de l''annale ex-2324-ex01'
+  difficulte: 2
+  temps_min: 40
+  doublon_de: mes-ex-2324-ex01
+mes-uvsq-chap-5-exam-2023-24-ex2:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-13, mes-m-15]
+  notions: [mesure-n-0050, mesure-n-0056]
+  importance: vital
+  justification: 'doublon de l''annale ex-2324-ex02q1'
+  difficulte: 2
+  temps_min: 25
+  doublon_de: mes-ex-2324-ex02q1
+mes-uvsq-chap-5-exam-2023-24-ex3:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-15]
+  notions: [mesure-n-0056]
+  importance: important
+  justification: 'doublon de l''annale ex-2324-ex02q3'
+  difficulte: 1
+  temps_min: 20
+  doublon_de: mes-ex-2324-ex02q3
+mes-uvsq-chap-5-cc2-2023-24-ex5:
+  sous_chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser'
+  methodes: [mes-m-21]
+  notions: [mesure-n-0060, mesure-n-0064]
+  importance: vital
+  justification: 'doublon de l''annale mes-gauss-y-exp'
+  difficulte: 2
+  temps_min: 30
+  doublon_de: mes-gauss-y-exp
+mes-uvsq-chap-5-cc2-2025-ex4:
+  sous_chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes'
+  methodes: [mes-m-14, mes-m-21]
+  notions: [mesure-n-0060, mesure-n-0044]
+  importance: secondaire
+  justification: 'doublon de l''annale cc2-2425-ex04'
+  difficulte: 3
+  temps_min: 35
+  doublon_de: mes-cc2-2425-ex04

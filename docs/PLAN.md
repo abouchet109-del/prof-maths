@@ -55,16 +55,30 @@ Limite : sans accès direct à Anki, le système ne voit pas les cartes dues ni 
 | 3b Vérification sur images | fait : annales de Paris Cité et énoncés douteux ; 10 fautes de maths corrigées. Restent `a_verifier` : `topo-partiel2020-21-ex01` et `ex02` (sujet absent), `topo-exam2021-22-ex01`, `mes-td4-ex03`, `mes-td4-ex05` (coquilles dans les PDF) |
 | 4 Lecture d'Anki | fait, depuis `tgmathankidonnées.apkg` (instantané, pas de lecture en direct) |
 | 5 Notions | fait : 382 notions (topologie 94, mesure 69, modélisation 75, probas 144) |
-| 6 Classement | modélisation faite ; topologie, mesure et probas en cours |
+| 6 Classement | fait pour les 4 matières (Opus) ; voir le bilan ci-dessous |
 | 7a-7b Couverture et trous | fait : 237 cartes à créer, dont 9 prérequis de L1-L2 en attente de confirmation par l'utilisateur |
 | 7c-7d Rédaction et relecture | fait : 509 cartes ; relecture Opus de 46 cartes, aucune erreur de fond, 5 cartes précisées |
 | 7e Paquet | fait : `anki/paquets/prof-maths-2026-11-03.apkg`, à importer par l'utilisateur |
 | 8 Corrigés vérifiés | à la demande, rien encore |
 | 9-12 Socle, planificateur, skills, tests | à faire |
 
+**Bilan du classement** (heures estimées par les agents, doublons exclus) :
+
+| Matière | Annales Paris Cité | Vital | Important | Secondaire | Exotique |
+|---|---|---|---|---|---|
+| Topologie | 30 ex., 16,1 h | 40 ex., 13,8 h | 33 ex., 10,2 h | 83 ex., 22,8 h | 37 ex., 14,5 h |
+| Mesure | aucune | 30 ex., 15,2 h | 23 ex., 11,9 h | 74 ex., 34,5 h | 6 ex., 4,9 h |
+| Modélisation | 11 ex., 8,2 h | 9 ex., 5,9 h | 8 ex., 2,9 h | 4 ex., 1,8 h | 1 ex., 0,8 h |
+| Probas | 15 ex., 8,8 h | 27 ex., 12,8 h | 26 ex., 10,3 h | 97 ex., 37 h | 35 ex., 16,3 h |
+| **Total** | **33 h** | **47,7 h** | **35,3 h** | 96 h | 36,5 h |
+
+Annales, vitaux et importants : environ 116 h sur 158 h d'exercices, ce qui laisse environ 40 h pour les reprises et une partie des secondaires.
+
+À reprendre au planificateur : en mesure, les vitaux sont surtout des annales UVSQ ; en probas, les vitaux des chapitres 4 et 5 viennent de l'UVSQ et sont classés sur leur titre seul (à confirmer à l'extraction) ; en topologie, les Hilbert et la norme d'opérateur sont vitaux mais hors du cours actuel, et le calcul différentiel UVSQ est exotique faute d'annale de Paris Cité ; doublons incertains signalés par les agents (proba chap-2-exam-24-25-ex5, mesure chap-2-cc1-25-ex2).
+
 **En attente de l'utilisateur :** import du paquet ; installation d'AnkiConnect ; réponse sur les 9 prérequis de L1-L2 et sur les fonctions génératrices au programme d'ECG ; éventuels sujets du partiel de topologie 2020-21.
 
-**Points ouverts :** 3 notions de mesure sans carte faute de source (mesure extérieure et Carathéodory, intégrales contre comptage, Dirac et densité, intégrale de Gauss) ; aucun TD sur le processus de Poisson ; annales de probas de l'UVSQ non extraites ; ton poly de modélisation contient deux erreurs (PageRank p. 21, apériodicité p. 9), corrigées dans les cartes.
+**Points ouverts :** 3 notions de mesure sans carte faute de source (mesure extérieure et Carathéodory, intégrales contre comptage, Dirac et densité, intégrale de Gauss) ; aucun TD sur le processus de Poisson ; annales de probas de l'UVSQ non extraites ; le poly de modélisation contient deux erreurs (PageRank p. 21, apériodicité p. 9), corrigées dans les cartes.
 
 **Coût observé :** environ 250 000 tokens par agent pour les tâches lourdes ; une limite de session atteinte une fois, reprise sans perte.
 

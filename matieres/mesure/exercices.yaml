@@ -16,13 +16,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 0 - Préliminaires > Rappels de cours
+  methodes:
+  - mes-m-01
+  notions:
+  - mesure-n-0002
+  importance: secondaire
+  justification: prérequis ensembliste, jamais évalué seul dans les annales UVSQ
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -47,13 +49,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 0 - Préliminaires > Rappels de cours
+  methodes:
+  - mes-m-01
+  notions:
+  - mesure-n-0002
+  importance: secondaire
+  justification: prérequis ensembliste, jamais évalué seul dans les annales UVSQ
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -80,13 +84,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 0 - Préliminaires > Rappels de cours
+  methodes:
+  - mes-m-01
+  notions:
+  - mesure-n-0003
+  importance: secondaire
+  justification: calculs d'indicatrices utiles partout mais jamais évalués seuls
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -110,13 +116,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 0 - Préliminaires > Rappels de cours
+  methodes:
+  - mes-m-01
+  notions:
+  - mesure-n-0003
+  importance: secondaire
+  justification: lecture de sommes d'indicatrices, préparation aux fonctions étagées
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -142,13 +150,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 0 - Préliminaires > Limite supérieure, limite inférieure
+  methodes:
+  - mes-m-02
+  notions:
+  - mesure-n-0004
+  - mesure-n-0006
+  importance: secondaire
+  justification: 'limsup de suites réelles : rappel d''analyse, utile pour Fatou'
+  difficulte: 1
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: officiel
@@ -176,13 +187,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 0 - Préliminaires > Limite supérieure, limite inférieure
+  methodes:
+  - mes-m-02
+  - mes-m-01
+  notions:
+  - mesure-n-0005
+  - mesure-n-0003
+  importance: important
+  justification: limsup d'ensembles, nécessaire pour Borel-Cantelli et l'annale cc2l3-2425-ex04
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -207,13 +222,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 0 - Préliminaires > Rappels de cours
+  methodes:
+  - mes-m-03
+  notions:
+  - mesure-n-0001
+  - mesure-n-0047
+  importance: secondaire
+  justification: dénombrabilités usuelles, à connaître mais rarement évaluées
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -239,13 +257,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 0 - Préliminaires > Rappels de cours
+  methodes:
+  - mes-m-03
+  notions:
+  - mesure-n-0001
+  - mesure-n-0047
+  importance: secondaire
+  justification: résultats de dénombrabilité utilisés comme outils, pas comme sujet d'examen
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -268,13 +289,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-05
+  - mes-m-04
+  notions:
+  - mesure-n-0011
+  - mesure-n-0008
+  importance: vital
+  justification: 'tribu engendrée et vérification des axiomes : base du TD2, axiomes dans 5 annales UVSQ'
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -297,13 +322,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-05
+  notions:
+  - mesure-n-0011
+  - mesure-n-0009
+  importance: secondaire
+  justification: calcul fini de tribu engendrée, entraînement rapide
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -326,13 +354,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-04
+  - mes-m-05
+  - mes-m-03
+  notions:
+  - mesure-n-0011
+  - mesure-n-0008
+  - mesure-n-0001
+  importance: important
+  justification: tribu dénombrable/codénombrable, classique repris en TD UVSQ et en TD4 de Paris Cité
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -356,13 +390,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-05
+  - mes-m-04
+  notions:
+  - mesure-n-0011
+  importance: secondaire
+  justification: comparaison de tribus engendrées, absente des annales
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -386,13 +423,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-05
+  notions:
+  - mesure-n-0011
+  - mesure-n-0009
+  importance: secondaire
+  justification: tribu engendrée par une partition, consolidation
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: officiel
@@ -417,13 +457,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-05
+  notions:
+  - mesure-n-0012
+  - mesure-n-0013
+  - mesure-n-0059
+  importance: secondaire
+  justification: preuve longue de B(R2)=B(R)⊗B(R), technique de transport de tribu
+  difficulte: 3
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: officiel
@@ -448,13 +492,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-05
+  notions:
+  - mesure-n-0012
+  - mesure-n-0013
+  importance: secondaire
+  justification: familles génératrices des boréliens, résultat de cours plus que d'examen
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -478,13 +525,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-07
+  notions:
+  - mesure-n-0012
+  - mesure-n-0010
+  importance: important
+  justification: traduire un ensemble en unions/intersections dénombrables, comme l'annale ex-2425-ex01
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -508,13 +558,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-05
+  notions:
+  - mesure-n-0011
+  - mesure-n-0013
+  importance: secondaire
+  justification: tribus engendrées par des grilles, long et peu rentable
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -544,13 +597,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-05
+  - mes-m-03
+  notions:
+  - mesure-n-0008
+  - mesure-n-0001
+  importance: exotique
+  justification: 'aucune tribu infinie dénombrable : preuve par atomes, hors des sujets'
+  difficulte: 3
+  temps_min: 50
   indice_tableur: null
   corrige:
     statut: officiel
@@ -574,13 +631,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition
+  methodes:
+  - mes-m-06
+  notions:
+  - mesure-n-0014
+  - mesure-n-0009
+  importance: important
+  justification: sa question 1 est l'annale UVSQ cc1-2425-ex01
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -599,13 +659,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition
+  methodes:
+  - mes-m-06
+  notions:
+  - mesure-n-0014
+  - mesure-n-0016
+  importance: secondaire
+  justification: 'monotone implique borélienne : classique court, critère sur famille génératrice'
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -627,13 +690,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition
+  methodes:
+  - mes-m-04
+  - mes-m-06
+  notions:
+  - mesure-n-0008
+  - mesure-n-0014
+  importance: secondaire
+  justification: mesurabilité pour une tribu non usuelle, consolidation
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -655,13 +722,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables
+  methodes:
+  - mes-m-07
+  notions:
+  - mesure-n-0022
+  - mesure-n-0010
+  importance: vital
+  justification: 'quantificateurs traduits en unions/intersections : geste de l''annale ex-2425-ex01 et de toute preuve p.p.'
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -683,13 +753,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables
+  methodes:
+  - mes-m-07
+  notions:
+  - mesure-n-0022
+  importance: secondaire
+  justification: variante plus simple de td3-ex04 et de l'annale ex-2425-ex01
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -708,13 +780,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables
+  methodes:
+  - mes-m-07
+  - mes-m-06
+  notions:
+  - mesure-n-0020
+  - mesure-n-0022
+  importance: secondaire
+  justification: indice aléatoire f_N(x), astuce de découpage dénombrable
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -735,13 +811,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition
+  methodes:
+  - mes-m-06
+  - mes-m-05
+  notions:
+  - mesure-n-0017
+  - mesure-n-0014
+  importance: secondaire
+  justification: tribu engendrée par une fonction, notion peu évaluée
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -762,13 +842,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.4 Définition et exemples
+  methodes:
+  - mes-m-08
+  - mes-m-03
+  notions:
+  - mesure-n-0026
+  - mesure-n-0001
+  importance: secondaire
+  justification: mesure 0-1 sur les codénombrables ; méthode déjà travaillée sur l'annale vitale cc1-2324-ex01
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -790,13 +874,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.4 Définition et exemples
+  methodes:
+  - mes-m-08
+  notions:
+  - mesure-n-0026
+  - mesure-n-0030
+  importance: secondaire
+  justification: mesures sur N, interversion de sommes positives
+  difficulte: 1
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -822,13 +909,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Propriétés des mesures (CM du 13/10)
+  methodes:
+  - mes-m-03
+  - mes-m-09
+  - mes-m-08
+  notions:
+  - mesure-n-0038
+  - mesure-n-0028
+  - mesure-n-0047
+  importance: secondaire
+  justification: décomposition atomique, couverte par l'annale cc1-2526-ex03 classée important
+  difficulte: 3
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: absent
@@ -847,13 +940,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Propriétés des mesures (CM du 13/10)
+  methodes:
+  - mes-m-09
+  - mes-m-02
+  notions:
+  - mesure-n-0038
+  - mesure-n-0036
+  - mesure-n-0005
+  importance: vital
+  justification: Borel-Cantelli en 15 min, propriétés des mesures présentes dans 6 annales UVSQ
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: absent
@@ -879,13 +977,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.4 Définition et exemples
+  methodes:
+  - mes-m-08
+  notions:
+  - mesure-n-0026
+  - mesure-n-0002
+  importance: important
+  justification: 'mesure image : vérifier qu''une application est une mesure (5 annales), notion reprise en probabilités'
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: absent
@@ -911,13 +1012,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)
+  methodes:
+  - mes-m-10
+  notions:
+  - mesure-n-0039
+  - mesure-n-0031
+  - mesure-n-0042
+  importance: important
+  justification: vrai/faux sur la mesure de Lebesgue, format de question de cours fréquent
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -943,13 +1049,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)
+  methodes:
+  - mes-m-09
+  - mes-m-10
+  - mes-m-03
+  notions:
+  - mesure-n-0045
+  - mesure-n-0034
+  - mesure-n-0036
+  importance: secondaire
+  justification: fonction de répartition et atomes, proche de cc1-2526-ex03
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: absent
@@ -975,13 +1087,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)
+  methodes:
+  - mes-m-10
+  notions:
+  - mesure-n-0031
+  - mesure-n-0039
+  importance: secondaire
+  justification: 'ensemble de Vitali : culture du cours, guidé, rarement en examen'
+  difficulte: 3
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: absent
@@ -1000,13 +1116,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue
+  methodes:
+  - mes-m-12
+  notions:
+  - mesure-n-0023
+  - mesure-n-0049
+  - mesure-n-0050
+  importance: secondaire
+  justification: méthode standard étagées puis positives, déjà vitale via ex-2526-ex02
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -1027,13 +1147,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-12
+  - mes-m-14
+  notions:
+  - mesure-n-0050
+  - mesure-n-0051
+  importance: secondaire
+  justification: additivité sur une partition par Beppo-Levi, court
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -1058,13 +1182,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-18
+  notions:
+  - mesure-n-0050
+  - mesure-n-0056
+  importance: vital
+  justification: identifier l'hypothèse manquante de Beppo-Levi / TCD, réflexe exigé dans 18 annales de convergence
+  difficulte: 1
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -1086,13 +1213,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-14
+  notions:
+  - mesure-n-0050
+  - mesure-n-0056
+  importance: vital
+  justification: théorème d'intégration terme à terme et son contre-exemple, méthode de 4 annales
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: absent
@@ -1112,13 +1242,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-13
+  notions:
+  - mesure-n-0050
+  importance: secondaire
+  justification: Beppo-Levi direct, déjà vital via ex-2324-ex02q1
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -1140,13 +1272,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  importance: vital
+  justification: 'TCD avec (1+x/n)^n : domination type de 16 annales UVSQ'
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -1174,13 +1308,15 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-14
+  notions:
+  - mesure-n-0050
+  importance: vital
+  justification: annale UVSQ (CC2 L3 2024) reprise en TD de Paris Cité, série de fonctions positives
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1203,13 +1339,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-14
+  notions:
+  - mesure-n-0056
+  - mesure-n-0050
+  importance: secondaire
+  justification: variante signée de ex07q1, majoration plus délicate
+  difficulte: 3
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -1235,13 +1374,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  - mes-m-17
+  notions:
+  - mesure-n-0056
+  - mesure-n-0055
+  importance: vital
+  justification: 'cinq limites d''intégrales : exactement le format des CC2 et examens UVSQ'
+  difficulte: 2
+  temps_min: 60
   indice_tableur: null
   corrige:
     statut: absent
@@ -1261,13 +1404,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  - mesure-n-0044
+  importance: important
+  justification: TCD avec limite p.p. hors d'un négligeable, piège fréquent
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -1289,13 +1435,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  notions:
+  - mesure-n-0057
+  importance: secondaire
+  justification: continuité d'une primitive, application directe
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -1320,13 +1468,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: secondaire
+  justification: même schéma que l'annale cc2-2425-ex02 (classée important), plus long
+  difficulte: 3
+  temps_min: 60
   indice_tableur: null
   corrige:
     statut: absent
@@ -1348,13 +1500,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  - mes-m-22
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  - mesure-n-0064
+  importance: secondaire
+  justification: intégrale à paramètre avec équation différentielle et changement de variable, long
+  difficulte: 3
+  temps_min: 50
   indice_tableur: null
   corrige:
     statut: absent
@@ -1377,13 +1535,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: important
+  justification: 'transformée de Fourier : continuité et dérivation sous l''intégrale, classique'
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -1404,13 +1566,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: vital
+  justification: même F que l'examen UVSQ 2025-26 ; continuité et dérivation dans 4 annales
+  difficulte: 2
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: absent
@@ -1432,13 +1598,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: secondaire
+  justification: convolution, même technique que td6-ex04
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: absent
@@ -1459,13 +1629,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  notions:
+  - mesure-n-0059
+  - mesure-n-0060
+  importance: secondaire
+  justification: mesure du sous-graphe par Tonelli, proche du TD UVSQ chap-4-td4-ex6
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -1487,13 +1660,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  - mes-m-22
+  notions:
+  - mesure-n-0061
+  - mesure-n-0063
+  - mesure-n-0064
+  importance: vital
+  justification: intégrale de Gauss par Fubini et polaires, présente sous une autre forme dans l'annale gaussienne
+  difficulte: 1
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -1514,13 +1692,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  - mes-m-18
+  notions:
+  - mesure-n-0061
+  - mesure-n-0060
+  importance: secondaire
+  justification: contre-exemple à Fubini sans intégrabilité, court
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -1548,13 +1730,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  - mes-m-22
+  notions:
+  - mesure-n-0060
+  - mesure-n-0062
+  - mesure-n-0063
+  importance: vital
+  justification: 'neuf calculs d''intégrales multiples : Fubini-Tonelli (6 annales) et changements de variables'
+  difficulte: 2
+  temps_min: 70
   indice_tableur: null
   corrige:
     statut: absent
@@ -1577,13 +1764,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  - mes-m-22
+  notions:
+  - mesure-n-0060
+  - mesure-n-0063
+  importance: secondaire
+  justification: volume de la boule unité, récurrence classique mais longue
+  difficulte: 3
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: absent
@@ -1608,13 +1799,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  - mes-m-22
+  - mes-m-20
+  notions:
+  - mesure-n-0060
+  - mesure-n-0062
+  - mesure-n-0058
+  importance: secondaire
+  justification: fonctions Gamma et Beta, synthèse longue des chapitres 3 et 4
+  difficulte: 3
+  temps_min: 60
   indice_tableur: null
   corrige:
     statut: absent
@@ -1636,13 +1833,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  - mes-m-14
+  notions:
+  - mesure-n-0060
+  - mesure-n-0061
+  importance: secondaire
+  justification: calcul de ζ(2) par Fubini, astuce proche de l'annale ex-2324-ex03
+  difficulte: 3
+  temps_min: 50
   indice_tableur: null
   corrige:
     statut: absent
@@ -1673,13 +1874,17 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-25
+  - mes-m-04
+  notions:
+  - mesure-n-0008
+  - mesure-n-0011
+  importance: secondaire
+  justification: DM de Paris Cité sur les classes monotones, aucune annale
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -1706,13 +1911,15 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.2 Tribu engendrée et tribu borélienne
+  methodes:
+  - mes-m-25
+  notions:
+  - mesure-n-0011
+  importance: secondaire
+  justification: preuve du lemme de classe monotone, technique du DM
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: absent
@@ -1744,13 +1951,16 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)
+  methodes:
+  - mes-m-25
+  notions:
+  - mesure-n-0026
+  - mesure-n-0029
+  importance: secondaire
+  justification: unicité des mesures, résultat utile mais démonstration rarement demandée
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: absent
@@ -1772,13 +1982,18 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)
+  methodes:
+  - mes-m-25
+  - mes-m-10
+  notions:
+  - mesure-n-0031
+  - mesure-n-0039
+  importance: secondaire
+  justification: application de l'unicité à Lebesgue et aux mesures invariantes par translation
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -1821,13 +2036,15 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)
+  methodes:
+  - mes-m-26
+  notions:
+  - mesure-n-0048
+  importance: exotique
+  justification: théorème de Carathéodory démontré en détail, construction hors des sujets
+  difficulte: 3
+  temps_min: 60
   indice_tableur: null
   corrige:
     statut: absent
@@ -1861,13 +2078,17 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)
+  methodes:
+  - mes-m-26
+  - mes-m-10
+  notions:
+  - mesure-n-0048
+  - mesure-n-0040
+  importance: exotique
+  justification: construction de Lebesgue par mesure extérieure, très technique
+  difficulte: 3
+  temps_min: 60
   indice_tableur: null
   corrige:
     statut: absent
@@ -1888,13 +2109,16 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu
+  methodes:
+  - mes-m-04
+  notions:
+  - mesure-n-0008
+  - mesure-n-0010
+  importance: important
+  justification: 'annale CC1 2025-26 : axiome de tribu en défaut, court'
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1926,13 +2150,18 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-11
+  - mes-m-12
+  notions:
+  - mesure-n-0049
+  - mesure-n-0051
+  - mesure-n-0050
+  importance: vital
+  justification: 'encadrement de ∫f par la somme des μ(f>=n) : méthode de 5 annales'
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1960,13 +2189,19 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Propriétés des mesures (CM du 13/10)
+  methodes:
+  - mes-m-08
+  - mes-m-09
+  - mes-m-03
+  notions:
+  - mesure-n-0028
+  - mesure-n-0038
+  - mesure-n-0047
+  importance: important
+  justification: atomes au plus dénombrables, sujet repris par les TD4 ex03 et ex07 de Paris Cité
+  difficulte: 3
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1995,13 +2230,18 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu
+  methodes:
+  - mes-m-04
+  - mes-m-08
+  notions:
+  - mesure-n-0008
+  - mesure-n-0026
+  - mesure-n-0042
+  importance: vital
+  justification: 'tribu puis mesure à vérifier : les deux méthodes les plus fréquentes du CC1 (5 annales chacune)'
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2027,13 +2267,17 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables
+  methodes:
+  - mes-m-06
+  notions:
+  - mesure-n-0014
+  - mesure-n-0015
+  - mesure-n-0022
+  importance: vital
+  justification: recollement mesurable, méthode de 3 annales
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2058,13 +2302,18 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-11
+  - mes-m-09
+  notions:
+  - mesure-n-0051
+  - mesure-n-0036
+  - mesure-n-0052
+  importance: vital
+  justification: Markov et continuité décroissante, réutilisés dans 5 annales
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2092,13 +2341,16 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)
+  methodes:
+  - mes-m-04
+  notions:
+  - mesure-n-0042
+  - mesure-n-0043
+  importance: important
+  justification: tribu complétée, annale CC1 2023-24 classique mais plus longue
+  difficulte: 2
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2130,13 +2382,17 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Hors cours actuel > Convergence en mesure
+  methodes:
+  - mes-m-11
+  - mes-m-09
+  notions:
+  - mesure-n-0044
+  - mesure-n-0034
+  importance: secondaire
+  justification: convergence en mesure absente du cours de Paris Cité ; outils (Markov, continuité) déjà vitaux
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2159,13 +2415,15 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.1 Définition
+  methodes:
+  - mes-m-06
+  notions:
+  - mesure-n-0014
+  importance: important
+  justification: identique à la question 1 de td3-ex01 (énoncé plus complet)
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2173,6 +2431,7 @@
       fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2024-2025.pdf
       page: null
   qualite_extraction: ok
+  doublon_de: mes-td3-ex01
 - id: mes-cc1-2425-ex02
   titre: 'Formule du gâteau en couches : intégrale de ψ(t)=μ(f>t)'
   enonce: |
@@ -2199,13 +2458,17 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue
+  methodes:
+  - mes-m-11
+  - mes-m-21
+  notions:
+  - mesure-n-0049
+  - mesure-n-0060
+  importance: important
+  justification: formule du gâteau en couches, version continue de cc1-2526-ex02
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2228,13 +2491,15 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.1 Notion de tribu
+  methodes:
+  - mes-m-04
+  notions:
+  - mesure-n-0008
+  importance: vital
+  justification: vérification des axiomes de tribu en 10 min, méthode de 5 annales
+  difficulte: 1
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2264,13 +2529,18 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: |-
+    Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)
+  methodes:
+  - mes-m-10
+  - mes-m-09
+  notions:
+  - mesure-n-0039
+  - mesure-n-0038
+  importance: important
+  justification: invariance par translation et sous-additivité, seule annale sur Lebesgue
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2294,13 +2564,15 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  importance: vital
+  justification: limite par TCD, méthode de 16 annales
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2324,13 +2596,16 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  - mesure-n-0044
+  importance: secondaire
+  justification: TCD avec limite p.p., répétition des vitaux
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2357,13 +2632,17 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  - mes-m-23
+  notions:
+  - mesure-n-0056
+  - mesure-n-0051
+  importance: vital
+  justification: TCD avec discussion selon un paramètre p, intégrabilité des puissances (3 annales)
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2387,13 +2666,16 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-16
+  notions:
+  - mesure-n-0056
+  - mesure-n-0028
+  importance: secondaire
+  justification: TCD sur N, déjà vital via cc2l3-2425-ex05
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2419,13 +2701,17 @@
     nature: partiel
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: vital
+  justification: continuité et dérivabilité d'une intégrale à paramètre, 4 annales ; ici avec |t| et le cas t=0
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2454,13 +2740,16 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  notions:
+  - mesure-n-0060
+  - mesure-n-0064
+  importance: vital
+  justification: Tonelli dans les deux ordres pour obtenir Gauss, méthode de 6 annales
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2484,13 +2773,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-16
+  notions:
+  - mesure-n-0056
+  - mesure-n-0028
+  importance: secondaire
+  justification: TCD sur N, répétition
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2515,13 +2807,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  - mesure-n-0044
+  importance: secondaire
+  justification: TCD avec limite p.p., répétition des vitaux
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2545,13 +2840,15 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  importance: secondaire
+  justification: TCD après changement de variable ou majoration, répétition
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2581,13 +2878,17 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: important
+  justification: intégrale à paramètre dérivée deux fois, version longue de la méthode vitale
+  difficulte: 3
+  temps_min: 50
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2611,13 +2912,15 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  notions:
+  - mesure-n-0061
+  importance: important
+  justification: calcul direct par Fubini, rapide
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2641,13 +2944,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  notions:
+  - mesure-n-0060
+  - mesure-n-0061
+  importance: vital
+  justification: inversion de l'ordre d'intégration, geste type de 6 annales
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2672,13 +2978,18 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-14
+  - mes-m-21
+  notions:
+  - mesure-n-0060
+  - mesure-n-0050
+  - mesure-n-0044
+  importance: secondaire
+  justification: 'Tonelli série-intégrale puis conséquence p.p., astucieux ; tableur : exotique'
+  difficulte: 3
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2704,13 +3015,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-17
+  - mes-m-18
+  notions:
+  - mesure-n-0055
+  importance: important
+  justification: énoncé de Fatou et cas d'inégalité stricte, question de cours possible
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2734,13 +3048,17 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-17
+  - mes-m-15
+  notions:
+  - mesure-n-0055
+  - mesure-n-0056
+  importance: important
+  justification: limite infinie par Fatou, seconde utilisation annale de Fatou
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2764,13 +3082,17 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  - mes-m-13
+  notions:
+  - mesure-n-0056
+  - mesure-n-0050
+  importance: vital
+  justification: 'même limite par TCD et par Beppo-Levi : compare les deux théorèmes'
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2796,13 +3118,20 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-11
+  - mes-m-15
+  - mes-m-09
+  - mes-m-02
+  notions:
+  - mesure-n-0056
+  - mesure-n-0005
+  - mesure-n-0034
+  importance: vital
+  justification: synthèse Markov + TCD + limsup d'ensembles, présent deux fois dans le tableur comme vital
+  difficulte: 3
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2827,13 +3156,16 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-16
+  notions:
+  - mesure-n-0056
+  - mesure-n-0028
+  importance: vital
+  justification: TCD pour la mesure de comptage, méthode de 3 annales
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2860,13 +3192,17 @@
     nature: exam
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables
+  methodes:
+  - mes-m-06
+  notions:
+  - mesure-n-0021
+  - mesure-n-0022
+  - mesure-n-0015
+  importance: vital
+  justification: mesurabilité d'une troncature, examen 2025-26, méthode de 3 annales
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2893,13 +3229,19 @@
     nature: exam
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ) > Comment calculer une intégrale de Lebesgue
+  methodes:
+  - mes-m-12
+  - mes-m-08
+  notions:
+  - mesure-n-0026
+  - mesure-n-0023
+  - mesure-n-0025
+  - mesure-n-0050
+  importance: vital
+  justification: 'mesure de densité : σ-additivité puis méthode standard, examen 2025-26'
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2923,13 +3265,15 @@
     nature: exam
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  importance: important
+  justification: TCD avec domination moins évidente près de 0
+  difficulte: 2
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2953,13 +3297,17 @@
     nature: exam
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  - mes-m-13
+  notions:
+  - mesure-n-0056
+  - mesure-n-0050
+  importance: secondaire
+  justification: intégrale infinie à n fixé, à repérer avant tout théorème ; court
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -2985,13 +3333,17 @@
     nature: exam
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-22
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  - mesure-n-0062
+  importance: important
+  justification: changement de variable puis TCD, variante fréquente des limites d'intégrales
+  difficulte: 3
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3018,13 +3370,17 @@
     nature: exam
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-20
+  notions:
+  - mesure-n-0057
+  - mesure-n-0058
+  importance: vital
+  justification: quasi identique à td6-ex05 (même F, même équation F''+F=1/t)
+  difficulte: 2
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3032,6 +3388,7 @@
       fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige.pdf
       page: null
   qualite_extraction: ok
+  doublon_de: mes-td6-ex05
 - id: mes-ex-2324-ex01
   titre: 'Intégrabilité de 1/(x^2+y^2)^α sur le disque : L^∞ et L^p'
   enonce: |
@@ -3051,13 +3408,18 @@
     nature: exam
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-23
+  - mes-m-22
+  notions:
+  - mesure-n-0063
+  - mesure-n-0065
+  - mesure-n-0069
+  importance: vital
+  justification: intégrabilité en polaires selon α, présente 3 fois dans le tableur ; question L^p en fin
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3081,13 +3443,15 @@
     nature: exam
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-13
+  notions:
+  - mesure-n-0050
+  importance: vital
+  justification: limite par Beppo-Levi (monotonie à établir), seule annale de BL pur
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3111,13 +3475,15 @@
     nature: exam
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  importance: secondaire
+  justification: TCD direct, répétition
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3141,13 +3507,15 @@
     nature: exam
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  importance: important
+  justification: TCD avec domination 1/√x intégrable, présent 3 fois dans le tableur
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3174,13 +3542,17 @@
     nature: exam
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ) > Notions à maîtriser
+  methodes:
+  - mes-m-21
+  - mes-m-15
+  notions:
+  - mesure-n-0061
+  - mesure-n-0060
+  importance: secondaire
+  justification: 'intégrale de Dirichlet par Fubini, guidé mais long ; tableur : exotique'
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3218,13 +3590,17 @@
     nature: exam
     annee: 2023-24
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > Compléments (CM du 20/10)
+  methodes:
+  - mes-m-26
+  - mes-m-04
+  - mes-m-08
+  notions:
+  - mesure-n-0048
+  importance: secondaire
+  justification: 'mesure extérieure : traitée par le DM de Paris Cité (dm-s5), une seule annale'
+  difficulte: 3
+  temps_min: 50
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3251,13 +3627,18 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.3.3 Opérations sur les fonctions mesurables
+  methodes:
+  - mes-m-07
+  - mes-m-09
+  notions:
+  - mesure-n-0022
+  - mesure-n-0038
+  - mesure-n-0042
+  importance: vital
+  justification: '{g<f} comme union sur Q puis σ-sous-additivité : geste de base des preuves p.p.'
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3281,13 +3662,16 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  notions:
+  - mesure-n-0056
+  - mesure-n-0044
+  importance: vital
+  justification: TCD abstrait (f_n e^{-f_n} bornée), méthode de 16 annales
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3312,13 +3696,16 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-15
+  - mes-m-14
+  notions:
+  - mesure-n-0056
+  importance: secondaire
+  justification: série alternée par TCD sur les sommes partielles, répétition
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3342,13 +3729,15 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Les théorèmes
+  methodes:
+  - mes-m-14
+  notions:
+  - mesure-n-0050
+  importance: important
+  justification: développement en série et intégration terme à terme, même schéma que td5-ex07q1
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3371,13 +3760,17 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables > 1.4 Définition et exemples
+  methodes:
+  - mes-m-08
+  - mes-m-12
+  notions:
+  - mesure-n-0026
+  - mesure-n-0034
+  importance: important
+  justification: 'limite croissante de mesures : σ-additivité avec interversion de limites'
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -3404,13 +3797,17 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ) > Intégrales à paramètre
+  methodes:
+  - mes-m-19
+  - mes-m-23
+  notions:
+  - mesure-n-0057
+  - mesure-n-0051
+  importance: important
+  justification: continuité et comportement au bord selon r, intégrales à paramètre (4 annales)
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel

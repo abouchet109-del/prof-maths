@@ -15,13 +15,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Rappels sur le modèle probabiliste > 1.3 Probabilité
+  methodes:
+  - proba-m-21
+  notions:
+  - proba-n-0004
+  importance: secondaire
+  justification: axiomes de base, jamais testés seuls en annale
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -42,13 +44,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Rappels sur le modèle probabiliste > 1.3 Probabilité
+  methodes:
+  - proba-m-21
+  notions:
+  - proba-n-0001
+  importance: secondaire
+  justification: existence d'une probabilité sur un ensemble fini, hors annales
+  difficulte: 1
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: officiel
@@ -73,13 +77,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Rappels sur le modèle probabiliste > 1.3 Probabilité
+  methodes:
+  - proba-m-21
+  notions:
+  - proba-n-0004
+  importance: secondaire
+  justification: minoration de P(A∩B), hors annales
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -103,13 +109,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Rappels sur le modèle probabiliste > 1.3 Probabilité
+  methodes:
+  - proba-m-21
+  notions:
+  - proba-n-0005
+  importance: secondaire
+  justification: inégalités de Bonferroni par récurrence, hors annales
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: officiel
@@ -141,13 +149,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Rappels sur le modèle probabiliste > 1.3 Probabilité
+  methodes:
+  - proba-m-21
+  - proba-m-15
+  notions:
+  - proba-n-0002
+  - proba-n-0117
+  importance: vital
+  justification: limsup d'événements, prérequis de Borel-Cantelli (2 annales) ; seul exercice Paris Cité dessus
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -172,13 +184,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.2 Lois discrètes classiques
+  methodes:
+  - proba-m-01
+  - proba-m-19
+  notions:
+  - proba-n-0018
+  - proba-n-0058
+  importance: vital
+  justification: 'binomiale : loi, E, Var (méthode dans 5 annales), très court'
+  difficulte: 1
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: officiel
@@ -202,13 +218,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.2 Lois discrètes classiques
+  methodes:
+  - proba-m-01
+  - proba-m-19
+  notions:
+  - proba-n-0020
+  - proba-n-0058
+  importance: vital
+  justification: 'géométrique : loi, E, Var par séries (5 annales)'
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -232,13 +252,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.2 Lois discrètes classiques
+  methodes:
+  - proba-m-19
+  - proba-m-20
+  notions:
+  - proba-n-0019
+  - proba-n-0137
+  importance: important
+  justification: modéliser et approcher par Poisson (modélisation dans 2 annales)
+  difficulte: 1
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: officiel
@@ -262,13 +286,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.2 Lois discrètes classiques
+  methodes:
+  - proba-m-19
+  - proba-m-20
+  notions:
+  - proba-n-0019
+  - proba-n-0137
+  importance: secondaire
+  justification: même méthode que td1-ex08
+  difficulte: 1
+  temps_min: 10
   indice_tableur: null
   corrige:
     statut: officiel
@@ -299,13 +327,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 1 - Rappels sur le modèle probabiliste > 1.3 Probabilité
+  methodes:
+  - proba-m-21
+  notions:
+  - proba-n-0002
+  importance: secondaire
+  justification: symétrique de td1-ex05 (liminf)
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: officiel
@@ -332,13 +362,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.3 Variables aléatoires à densité
+  methodes:
+  - proba-m-26
+  notions:
+  - proba-n-0026
+  importance: secondaire
+  justification: supports de lois, jamais demandé en annale
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -364,13 +396,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.3 Variables aléatoires à densité
+  methodes:
+  - proba-m-03
+  - proba-m-05
+  - proba-m-06
+  notions:
+  - proba-n-0030
+  - proba-n-0048
+  - proba-n-0027
+  importance: vital
+  justification: loi de g(X) (3 annales) et E par transfert (6 annales)
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -394,13 +432,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.3 Variables aléatoires à densité
+  methodes:
+  - proba-m-03
+  - proba-m-05
+  notions:
+  - proba-n-0030
+  - proba-n-0048
+  importance: important
+  justification: loi de g(X) avec g non monotone, prolonge td2-ex02
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -426,13 +468,19 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Vecteurs aléatoires > 4.3.1 Loi gaussienne sur R
+  methodes:
+  - proba-m-03
+  - proba-m-06
+  - proba-m-25
+  notions:
+  - proba-n-0104
+  - proba-n-0107
+  - proba-n-0030
+  importance: vital
+  justification: 'gaussienne : transformations et moments, base des vecteurs gaussiens (2 annales)'
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -459,13 +507,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.3 Variables aléatoires à densité
+  methodes:
+  - proba-m-26
+  notions:
+  - proba-n-0026
+  importance: secondaire
+  justification: supports, hors annales
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -494,13 +544,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.3 Variables aléatoires à densité
+  methodes:
+  - proba-m-06
+  - proba-m-03
+  notions:
+  - proba-n-0027
+  - proba-n-0031
+  - proba-n-0069
+  importance: vital
+  justification: fonction et loi Gamma, utilisées dans exa2425-ex04 et par2425-ex03
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -524,13 +579,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.3 Variables aléatoires à densité
+  methodes:
+  - proba-m-06
+  - proba-m-03
+  notions:
+  - proba-n-0024
+  - proba-n-0048
+  importance: vital
+  justification: normaliser une densité puis loi de |X|, format de par2425-ex02
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -552,13 +611,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.3 Variables aléatoires à densité
+  methodes:
+  - proba-m-03
+  - proba-m-05
+  notions:
+  - proba-n-0030
+  - proba-n-0034
+  importance: secondaire
+  justification: transformations de Cauchy, répétitif après td2-ex02 et ex03
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -579,13 +642,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.3 Variables aléatoires à densité
+  methodes:
+  - proba-m-03
+  notions:
+  - proba-n-0030
+  importance: exotique
+  justification: invariance par la transformation de Gauss, astuce isolée
+  difficulte: 3
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -611,13 +676,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.5 Inégalités
+  methodes:
+  - proba-m-13
+  - proba-m-27
+  notions:
+  - proba-n-0039
+  - proba-n-0040
+  - proba-n-0036
+  importance: vital
+  justification: Markov par encadrement d'indicatrices, repris dans par2526-ex03
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: officiel
@@ -640,13 +710,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.5 Inégalités
+  methodes:
+  - proba-m-13
+  notions:
+  - proba-n-0039
+  importance: secondaire
+  justification: Chernov (Markov sur exp), absent des annales
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -676,13 +748,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.5 Inégalités
+  methodes:
+  - proba-m-13
+  - proba-m-14
+  notions:
+  - proba-n-0042
+  - proba-n-0039
+  importance: secondaire
+  justification: Hoeffding, long, hors annales
+  difficulte: 3
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: officiel
@@ -706,13 +782,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.5 Inégalités
+  methodes:
+  - proba-m-13
+  - proba-m-14
+  notions:
+  - proba-n-0060
+  - proba-n-0089
+  importance: vital
+  justification: inégalité de Cantelli, même mécanique que par2526-ex03 (3 annales)
+  difficulte: 3
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -742,13 +822,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.5 Inégalités
+  methodes:
+  - proba-m-13
+  - proba-m-09
+  notions:
+  - proba-n-0039
+  - proba-n-0086
+  importance: secondaire
+  justification: bornes de Chernoff, calculatoire, hors annales
+  difficulte: 3
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -774,13 +858,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Caractériser une loi > 3.3.3 Propriétés caractéristiques
+  methodes:
+  - proba-m-23
+  - proba-m-03
+  notions:
+  - proba-n-0053
+  - proba-n-0052
+  importance: important
+  justification: vérifier une FdR, en tirer densité et loi de g(X)
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: absent
@@ -803,13 +891,18 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Caractériser une loi > 3.3 La fonction de répartition
+  methodes:
+  - proba-m-23
+  - proba-m-03
+  - proba-m-04
+  notions:
+  - proba-n-0050
+  - proba-n-0047
+  importance: important
+  justification: loi mixte par FdR et fonctions tests, min avec une constante
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -834,13 +927,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Caractériser une loi > 3.3.1 Premières propriétés
+  methodes:
+  - proba-m-23
+  notions:
+  - proba-n-0050
+  - proba-n-0051
+  importance: secondaire
+  justification: lois mixtes, hors annales
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -863,13 +959,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.4.1 Espérance dans le cas général
+  methodes:
+  - proba-m-24
+  notions:
+  - proba-n-0037
+  - proba-n-0021
+  importance: secondaire
+  justification: espérance par la queue, hors annales
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -893,13 +992,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.4.1 Espérance dans le cas général
+  methodes:
+  - proba-m-24
+  notions:
+  - proba-n-0078
+  - proba-n-0033
+  importance: secondaire
+  justification: version à densité de td4-ex04, hors annales
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -923,13 +1025,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Caractériser une loi > 3.4.3 Variables aléatoires bornées
+  methodes:
+  - proba-m-25
+  notions:
+  - proba-n-0062
+  - proba-n-0063
+  importance: secondaire
+  justification: moments et support borné, hors annales
+  difficulte: 3
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -952,13 +1057,17 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Caractériser une loi > 3.4.1 Définition et exemples
+  methodes:
+  - proba-m-01
+  notions:
+  - proba-n-0055
+  - proba-n-0019
+  - proba-n-0020
+  importance: vital
+  justification: séries Poisson et géométrique, calculs des annales (5)
+  difficulte: 2
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: absent
@@ -980,13 +1089,16 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Caractériser une loi > 3.4.1 Définition et exemples
+  methodes:
+  - proba-m-25
+  notions:
+  - proba-n-0055
+  - proba-n-0063
+  importance: exotique
+  justification: contre-exemple log-normale, jamais en annale
+  difficulte: 3
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: absent
@@ -1011,13 +1123,18 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Caractériser une loi > 3.5.2 Fonctions caractéristiques de lois classiques
+  methodes:
+  - proba-m-01
+  - proba-m-02
+  notions:
+  - proba-n-0019
+  - proba-n-0022
+  - proba-n-0068
+  importance: vital
+  justification: 'annale ; Poisson : E et FC (méthodes dans 5 et 4 annales)'
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1045,13 +1162,18 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.3 Variables aléatoires à densité
+  methodes:
+  - proba-m-06
+  - proba-m-03
+  notions:
+  - proba-n-0024
+  - proba-n-0048
+  - proba-n-0052
+  importance: vital
+  justification: annale ; loi de g(X) par FdR (3 annales)
+  difficulte: 2
+  temps_min: 30
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1090,13 +1212,21 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Caractériser une loi > 3.5.3 Propriétés caractéristiques
+  methodes:
+  - proba-m-04
+  - proba-m-02
+  - proba-m-10
+  - proba-m-09
+  - proba-m-01
+  notions:
+  - proba-n-0048
+  - proba-n-0072
+  - proba-n-0095
+  importance: vital
+  justification: annale ; max et min par FdR, FC d'une somme indépendante
+  difficulte: 3
+  temps_min: 60
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1122,13 +1252,17 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Caractériser une loi > 3.5.2 Fonctions caractéristiques de lois classiques
+  methodes:
+  - proba-m-01
+  - proba-m-02
+  notions:
+  - proba-n-0020
+  - proba-n-0068
+  importance: vital
+  justification: annale ; FC de la géométrique (4 annales)
+  difficulte: 1
+  temps_min: 15
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1155,13 +1289,18 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Caractériser une loi > 3.3 La fonction de répartition
+  methodes:
+  - proba-m-03
+  - proba-m-06
+  notions:
+  - proba-n-0048
+  - proba-n-0052
+  - proba-n-0029
+  importance: vital
+  justification: annale ; FdR, loi de X², E par transfert
+  difficulte: 1
+  temps_min: 25
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1196,13 +1335,18 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Vecteurs aléatoires > 4.2.1 Inégalités
+  methodes:
+  - proba-m-14
+  - proba-m-13
+  notions:
+  - proba-n-0089
+  - proba-n-0090
+  - proba-n-0039
+  importance: vital
+  justification: annale ; Cauchy-Schwarz et Paley-Zygmund (3 annales)
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1232,13 +1376,19 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 2 - Variables aléatoires réelles > 2.5 Inégalités
+  methodes:
+  - proba-m-14
+  - proba-m-01
+  - proba-m-17
+  notions:
+  - proba-n-0042
+  - proba-n-0018
+  - proba-n-0058
+  importance: vital
+  justification: annale ; polynômes de Bernstein, Jensen et variance binomiale
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1271,13 +1421,17 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 5 - Convergences > 5.3.3 Le théorème central limite
+  methodes:
+  - proba-m-18
+  - proba-m-19
+  notions:
+  - proba-n-0142
+  - proba-n-0020
+  importance: important
+  justification: annale ; énoncé du TCL et simulation R, méthodes rares (1 et 2 annales)
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1319,13 +1473,22 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Vecteurs aléatoires > 4.1.2 Fonctions de vecteurs aléatoires
+  methodes:
+  - proba-m-07
+  - proba-m-08
+  - proba-m-09
+  - proba-m-04
+  - proba-m-06
+  notions:
+  - proba-n-0081
+  - proba-n-0082
+  - proba-n-0084
+  - proba-n-0088
+  importance: vital
+  justification: annale ; changement de variables, marginales, indépendance
+  difficulte: 3
+  temps_min: 50
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1355,13 +1518,18 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Vecteurs aléatoires > 4.3.3 Propriétés
+  methodes:
+  - proba-m-11
+  - proba-m-12
+  notions:
+  - proba-n-0116
+  - proba-n-0112
+  - proba-n-0115
+  importance: vital
+  justification: 'annale ; vecteur gaussien : indépendance, FC, densité'
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1392,13 +1560,22 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 5 - Convergences > 5.2.2 Convergence presque sûre
+  methodes:
+  - proba-m-09
+  - proba-m-06
+  - proba-m-13
+  - proba-m-15
+  - proba-m-17
+  - proba-m-16
+  notions:
+  - proba-n-0039
+  - proba-n-0124
+  - proba-n-0132
+  importance: vital
+  justification: annale ; Markov, Borel-Cantelli, LFGN, convergence en moyenne
+  difficulte: 3
+  temps_min: 45
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1425,13 +1602,18 @@
     nature: exam
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 3 - Caractériser une loi > 3.5.2 Fonctions caractéristiques de lois classiques
+  methodes:
+  - proba-m-01
+  - proba-m-02
+  - proba-m-19
+  notions:
+  - proba-n-0019
+  - proba-n-0068
+  importance: vital
+  justification: 'annale ; Poisson : E, FC, simulation R'
+  difficulte: 1
+  temps_min: 20
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1463,13 +1645,19 @@
     nature: exam
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Vecteurs aléatoires > 4.1.2 Fonctions de vecteurs aléatoires
+  methodes:
+  - proba-m-06
+  - proba-m-07
+  - proba-m-08
+  notions:
+  - proba-n-0081
+  - proba-n-0084
+  - proba-n-0029
+  importance: vital
+  justification: annale ; Pareto, densité de (XY,X), marginale
+  difficulte: 2
+  temps_min: 40
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1497,13 +1685,20 @@
     nature: exam
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 4 - Vecteurs aléatoires > 4.3.3 Propriétés
+  methodes:
+  - proba-m-11
+  - proba-m-12
+  - proba-m-09
+  notions:
+  - proba-n-0113
+  - proba-n-0116
+  - proba-n-0115
+  - proba-n-0101
+  importance: vital
+  justification: 'annale ; vecteur gaussien 3D : variance nulle, image affine, densité'
+  difficulte: 2
+  temps_min: 35
   indice_tableur: null
   corrige:
     statut: officiel
@@ -1558,13 +1753,23 @@
     nature: exam
     annee: 2025-26
   disponible: true
-  sous_chapitre: null
-  methodes: []
-  notions: []
-  importance: null
-  justification: null
-  difficulte: null
-  temps_min: null
+  sous_chapitre: Chapitre 5 - Convergences > 5.2.1 Convergence en probabilité
+  methodes:
+  - proba-m-16
+  - proba-m-15
+  - proba-m-13
+  - proba-m-14
+  - proba-m-09
+  - proba-m-20
+  notions:
+  - proba-n-0119
+  - proba-n-0117
+  - proba-n-0128
+  - proba-n-0135
+  importance: vital
+  justification: annale ; tous les modes de convergence et leurs contre-exemples
+  difficulte: 3
+  temps_min: 60
   indice_tableur: null
   corrige:
     statut: officiel

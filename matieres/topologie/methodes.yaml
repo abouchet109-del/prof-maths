@@ -1,0 +1,94 @@
+# Méthodes types de topologie (L3 Paris Cité).
+# annales : nombre d'exercices d'annales de Paris Cité (30 annales prioritaires) qui utilisent la méthode.
+- id: topo-m-01
+  titre: 'Montrer qu''une partie est ouverte ou fermée (boules, image réciproque d''un ouvert ou d''un fermé par une application continue)'
+  notions: [topo-n-0012, topo-n-0014, topo-n-0049]
+  annales: 4
+- id: topo-m-02
+  titre: 'Caractérisation séquentielle de l''adhérence et des fermés : prendre une suite de A convergente et montrer que sa limite est dans A'
+  notions: [topo-n-0043, topo-n-0040]
+  annales: 7
+- id: topo-m-03
+  titre: 'Déterminer intérieur, adhérence et frontière d''une partie concrète (inclusions évidentes, puis boules ou suites)'
+  notions: [topo-n-0018, topo-n-0022, topo-n-0025]
+  annales: 2
+- id: topo-m-04
+  titre: 'Raisonner sur intérieur, adhérence et densité par les définitions (voisinages, boules, dualité, plus grand ouvert, plus petit fermé)'
+  notions: [topo-n-0019, topo-n-0023, topo-n-0024, topo-n-0028]
+  annales: 6
+- id: topo-m-05
+  titre: 'Prouver qu''une application est continue, lipschitzienne ou isométrique (epsilon-alpha, suites, inégalité triangulaire) et exploiter la continuité sur une partie dense'
+  notions: [topo-n-0048, topo-n-0049, topo-n-0050]
+  annales: 5
+- id: topo-m-06
+  titre: 'Vérifier qu''une application est une distance ou une norme (axiomes, inégalité triangulaire)'
+  notions: [topo-n-0008]
+  annales: 3
+- id: topo-m-07
+  titre: 'Comparer deux distances ou deux normes : inégalité dans un sens, suite contre-exemple dans l''autre (équivalence ou non)'
+  notions: [topo-n-0034, topo-n-0036]
+  annales: 2
+- id: topo-m-08
+  titre: 'Montrer qu''une suite est de Cauchy et qu''un espace est complet ou non (fermé d''un complet, limite candidate, suite de Cauchy divergente)'
+  notions: [topo-n-0053, topo-n-0056, topo-n-0060]
+  annales: 5
+- id: topo-m-09
+  titre: 'Théorème de Picard : choisir l''espace complet, vérifier stabilité et contraction (éventuellement d''une itérée ou à paramètre), conclure'
+  notions: [topo-n-0065, topo-n-0067, topo-n-0068]
+  annales: 6
+- id: topo-m-10
+  titre: 'Théorème de Baire : écrire l''espace complet comme union dénombrable de fermés et en trouver un d''intérieur non vide'
+  notions: [topo-n-0070, topo-n-0072]
+  annales: 2
+- id: topo-m-11
+  titre: 'Compacité séquentielle : extraire une sous-suite convergente (Bolzano-Weierstrass), valeurs d''adhérence, raisonnement par l''absurde'
+  notions: [topo-n-0082, topo-n-0045, topo-n-0085]
+  annales: 5
+- id: topo-m-12
+  titre: 'Propriétés structurelles des compacts : Borel-Lebesgue, fermé d''un compact, compact fermé, produit et image continue, compacts emboîtés'
+  notions: [topo-n-0075, topo-n-0080, topo-n-0089, topo-n-0091]
+  annales: 3
+- id: topo-m-13
+  titre: 'Fonction continue sur un compact : bornes atteintes, minimisation, théorème de Heine'
+  notions: [topo-n-0092, topo-n-0093]
+  annales: 0
+- id: topo-m-14
+  titre: 'Distance à une partie : d(x,A)=0 ssi x adhérent, caractère 1-lipschitzien, approximation d''un inf'
+  notions: [topo-n-0015]
+  annales: 3
+- id: topo-m-15
+  titre: 'Espaces produits : distance produit, ouverts et fermés produits, convergence composante par composante'
+  notions: [topo-n-0033, topo-n-0089]
+  annales: 3
+- id: topo-m-16
+  titre: 'Norme d''une application linéaire continue : majoration, puis suite de fonctions qui atteint ou approche la borne (hors cours actuel)'
+  notions: [topo-n-0050]
+  annales: 4
+- id: topo-m-17
+  titre: 'Projection sur un convexe fermé ou un sous-espace fermé d''un espace de Hilbert : caractérisation, Pythagore (hors cours actuel)'
+  notions: []
+  annales: 4
+- id: topo-m-18
+  titre: 'Produit scalaire, norme hilbertienne, familles orthonormées, Bessel et Parseval (hors cours actuel)'
+  notions: []
+  annales: 3
+- id: topo-m-19
+  titre: 'Connexité : union de connexes d''intersection non vide, image continue d''un connexe, partie ouverte et fermée, valeurs intermédiaires (hors cours actuel)'
+  notions: []
+  annales: 3
+- id: topo-m-20
+  titre: 'Construire un contre-exemple (dans R, R^2 ou par une suite de fonctions) pour montrer qu''une réciproque ou une hypothèse affaiblie échoue'
+  notions: [topo-n-0021, topo-n-0088, topo-n-0069]
+  annales: 5
+- id: topo-m-21
+  titre: 'Calcul différentiel : différentielle, accroissements finis, inversion locale, fonctions implicites (hors programme de topologie Paris Cité)'
+  notions: []
+  annales: 0
+- id: topo-m-22
+  titre: 'Inégalités de convexité sur R^n : Young, Hölder, Minkowski, normes p'
+  notions: [topo-n-0010]
+  annales: 0
+- id: topo-m-23
+  titre: 'Manipulations ensemblistes et topologies sur un ensemble fini'
+  notions: [topo-n-0001, topo-n-0002, topo-n-0003]
+  annales: 0
