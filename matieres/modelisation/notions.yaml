@@ -1,0 +1,600 @@
+- id: mod-n-0001
+  titre: 'Fonction génératrice'
+  type: definition
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.2.1 Définition'
+  enonce: 'Pour $X$ à valeurs dans $\mathbb{N}$, $G_X(z)=\mathbb{E}[z^X]=\sum_{k\ge0}\mathbb{P}(X=k)z^k$, rayon de convergence $\ge1$, définie et continue sur $[-1,1]$ ; $G_X(0)=\mathbb{P}(X=0)$, $G_X(1)=1$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 1}
+  essentiel: true
+- id: mod-n-0002
+  titre: 'Fonctions génératrices des lois usuelles'
+  type: exemple
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.2.1 Définition'
+  enonce: 'Bernoulli $\mathcal{B}(p)$ : $1-p+pz$ ; binomiale $\mathcal{B}(n,p)$ : $(1-p+pz)^n$ ; Poisson $\mathcal{P}(\lambda)$ : $e^{\lambda(z-1)}$ ; géométrique $\mathcal{G}(p)$ ($q=1-p$) : $\frac{pz}{1-qz}$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 2}
+  essentiel: true
+- id: mod-n-0003
+  titre: 'Caractérisation de la loi par la fonction génératrice'
+  type: propriete
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.2.1 Définition'
+  enonce: 'Pour $X,Y$ à valeurs dans $\mathbb{N}$, $G_X=G_Y$ si et seulement si $X$ et $Y$ ont même loi (unicité du développement en série entière).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 2}
+  essentiel: true
+- id: mod-n-0004
+  titre: 'Fonction génératrice d''une somme de variables indépendantes'
+  type: propriete
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.2.2 Sommes de variables indépendantes'
+  enonce: 'Si $X,Y$ sont indépendantes à valeurs dans $\mathbb{N}$, $G_{X+Y}=G_XG_Y$ ; pour $X_1,\dots,X_n$ i.i.d. de loi $X$, $G_{X_1+\cdots+X_n}=G_X^n$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 3}
+  essentiel: true
+- id: mod-n-0005
+  titre: 'Dérivées de la fonction génératrice et moments'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.2.3 Dérivées de la fonction génératrice et moments'
+  enonce: 'Pour $p\in\mathbb{N}^*$ : $\mathbb{E}[X^p]<+\infty \iff G_X$ de classe $C^p$ sur $[0,1]$, et alors $G_X^{(p)}(1)=\mathbb{E}[X(X-1)\cdots(X-p+1)]$. En particulier $\mathbb{E}[X]=G_X^{\prime}(1)$ et $\mathrm{Var}(X)=G_X^{\prime\prime}(1)+G_X^{\prime}(1)-G_X^{\prime}(1)^2$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 3}
+  essentiel: true
+- id: mod-n-0006
+  titre: 'Démonstration de l''équivalence moment / régularité de G'
+  type: demonstration
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.2.3 Dérivées de la fonction génératrice et moments'
+  enonce: 'Limite à gauche en 1 de $G_X^{(p)}$ (série à termes positifs croissante) égale à la somme de la série, puis récurrence sur $k\le p$ avec le théorème des accroissements finis pour la dérivabilité en 1.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 4}
+  essentiel: false
+- id: mod-n-0007
+  titre: 'Moments des lois usuelles via la fonction génératrice'
+  type: exemple
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.2.3 Dérivées de la fonction génératrice et moments'
+  enonce: 'On retrouve par dérivation en 1 : Bernoulli $p$, $p(1-p)$ ; binomiale $np$, $np(1-p)$ ; Poisson $\lambda$, $\lambda$ ; géométrique $1/p$, $q/p^2$ (espérance, variance).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 5}
+  essentiel: false
+- id: mod-n-0008
+  titre: 'Processus de Galton-Watson'
+  type: definition
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.1 Présentation du modèle'
+  enonce: 'Avec $(X_{i,j})$ i.i.d. à valeurs dans $\mathbb{N}$ : $Z_0=1$, $Z_{n+1}=\sum_{j=1}^{Z_n}X_{n,j}$ (somme vide $=0$). $Z_n$ est la taille de la génération $n$ ; $Z_n$ est indépendant de $(X_{i,j})_{i\ge n}$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 6}
+  essentiel: true
+- id: mod-n-0009
+  titre: 'Espérance et variance de Z_n'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.2 Moments de Z_n'
+  enonce: 'Avec $m=\mathbb{E}[X_{i,j}]$ : $\mathbb{E}[Z_n]=m^n$. Avec $\sigma^2=\mathrm{Var}(X_{i,j})$ : $\mathrm{Var}(Z_n)=\sigma^2 m^{n-1}\sum_{k=0}^{n-1}m^k$, soit $n\sigma^2$ si $m=1$ et $\sigma^2\frac{m^{n-1}(m^n-1)}{m-1}$ si $m\ne1$ ($m>0$).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 7}
+  essentiel: true
+- id: mod-n-0010
+  titre: 'Calcul de E[Z_{n+1}] et de E[Z_{n+1}^2] par conditionnement sur Z_n'
+  type: demonstration
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.2 Moments de Z_n'
+  enonce: 'Décomposer selon le système complet $\{Z_n=k\}$ et utiliser l''indépendance de $Z_n$ et des $X_{n,j}$ : $\mathbb{E}[Z_{n+1}]=m\mathbb{E}[Z_n]$ et $\mathbb{E}[Z_{n+1}^2]=\sigma^2\mathbb{E}[Z_n]+m^2\mathbb{E}[Z_n^2]$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 7}
+  essentiel: true
+- id: mod-n-0011
+  titre: 'Fonction génératrice de Z_n'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.2 Moments de Z_n'
+  enonce: 'Si $g$ est la fonction génératrice de $X_{i,j}$, la fonction génératrice $G_n$ de $Z_n$ vérifie $G_n=g^{\circ n}$ ($n$ compositions, $g^{\circ0}=\mathrm{Id}$), soit $G_{n+1}=G_n\circ g$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 8}
+  essentiel: true
+- id: mod-n-0012
+  titre: 'Cas Z_0 = N déterministe'
+  type: propriete
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.2 Moments de Z_n'
+  enonce: 'Si $Z_0=N$ : $\mathbb{E}[Z_n]=Nm^n$, $\mathrm{Var}(Z_n)=N\sigma^2(m^{n-1}+\cdots+m^{2n-2})$ pour $n\ge1$, $G_n=(g^{\circ n})^N$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 9}
+  essentiel: false
+- id: mod-n-0013
+  titre: 'Extinction presque sûre si m < 1 (Markov)'
+  type: demonstration
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.3 Probabilité d''extinction'
+  enonce: 'Avec $E=\bigcup_n\{Z_n=0\}$ (suite croissante) : $\mathbb{P}(Z_n\ge1)\le\mathbb{E}[Z_n]=m^n\to0$ par l''inégalité de Markov, donc $\mathbb{P}(E)=1$ si $m<1$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 10}
+  essentiel: true
+- id: mod-n-0014
+  titre: 'Probabilité d''extinction'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.3 Probabilité d''extinction'
+  enonce: 'La probabilité d''extinction $\mathbb{P}(E)$ est la plus petite solution dans $[0,1]$ de l''équation $g(s)=s$ (preuve : $\mathbb{P}(Z_n=0)=g^{\circ n}(0)\to\mathbb{P}(E)$, continuité de $g$, croissance de $g^{\circ n}$).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 10}
+  essentiel: true
+- id: mod-n-0015
+  titre: 'Dichotomie sous-critique, critique, sur-critique pour l''extinction'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.3 Probabilité d''extinction'
+  enonce: 'Si $\mathbb{E}[X_{i,j}]>1$ : $\mathbb{P}(E)<1$. Si $\mathbb{E}[X_{i,j}]\le1$ et $\mathbb{P}(X_{i,j}=1)<1$ : $\mathbb{P}(E)=1$. Si $X_{i,j}=1$ p.s. : $Z_n=1$ p.s. et $\mathbb{P}(E)=0$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 10}
+  essentiel: true
+- id: mod-n-0016
+  titre: 'Étude de h(s) = g(s) - s sur [0,1] (convexité)'
+  type: methode
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.3 Probabilité d''extinction'
+  enonce: 'Pour trouver la plus petite racine de $g(s)=s$ : $g$ est croissante et convexe ($g^{\prime},g^{\prime\prime}\ge0$), strictement convexe si $\mathbb{P}(X\ge2)>0$ ; tableau de variation de $h(s)=g(s)-s$ selon $m\le1$ ou $m>1$ ; cas $\mathbb{P}(X\in\{0,1\})=1$ traité à part ($g$ affine).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 11}
+  essentiel: true
+- id: mod-n-0017
+  titre: 'Temps d''extinction, cas sous-critique'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.4 Comportement asymptotique'
+  enonce: 'Si $m\in]0,1[$ et $\mathbb{E}[Z_1^2]<+\infty$, avec $\tau=\inf\{n\ge0\mid Z_n=0\}$ : il existe $C>0$ tel que $\mathbb{P}(\tau>n)\sim C m^n$ quand $n\to+\infty$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 12}
+  essentiel: true
+- id: mod-n-0018
+  titre: 'Temps d''extinction, cas critique'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.4 Comportement asymptotique'
+  enonce: 'Si $m=1$ et $0<\sigma^2<+\infty$ : $\mathbb{P}(\tau>n)\sim\frac{2}{n\sigma^2}$ quand $n\to+\infty$ (démonstration renvoyée au TD).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 13}
+  essentiel: true
+- id: mod-n-0019
+  titre: 'Convergence de Z_n / m^n, cas sur-critique'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  sous_chapitre: '1.3.4 Comportement asymptotique'
+  enonce: 'Si $m>1$ (et moment d''ordre 2), il existe $W\in[0,+\infty[$ avec $\mathbb{E}[W]=1$, $\mathrm{Var}(W)=\frac{\sigma^2}{m(m-1)}$, telle que $Z_n/m^n\to W$ p.s. et dans $L^2$ ; de plus $\mathbb{P}(W>0)=1-\mathbb{P}(E)$ (admis).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap1-galton-watson.pdf, page: 14}
+  essentiel: true
+- id: mod-n-0020
+  titre: 'Matrice markovienne'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.1.1 Matrices markoviennes, graphes de transition'
+  enonce: 'Sur $E$ fini, $P=(P(x,y))$ avec $P(x,y)\ge0$ et $\sum_{y\in E}P(x,y)=1$ pour tout $x$ (matrice de transition ou stochastique). Le produit est celui des matrices : $PQ(x,y)=\sum_z P(x,z)Q(z,y)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 1}
+  essentiel: true
+- id: mod-n-0021
+  titre: 'Produit et puissances de matrices markoviennes'
+  type: propriete
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.1.1 Matrices markoviennes, graphes de transition'
+  enonce: 'Un produit de matrices markoviennes est markovienne ; en particulier $P^n(x,y)=\sum_{a_1,\dots,a_{n-1}}P(x,a_1)\cdots P(a_{n-1},y)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 1}
+  essentiel: true
+- id: mod-n-0022
+  titre: 'Mesure de probabilité sur E et produit µP'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.1.1 Matrices markoviennes, graphes de transition'
+  enonce: '$\mathcal{P}(E)$ : familles $\mu\ge0$ de somme 1. Pour $\mu\in\mathcal{P}(E)$, $\mu P(x)=\sum_{y}\mu(y)P(y,x)$ ; $\mu P\in\mathcal{P}(E)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 2}
+  essentiel: true
+- id: mod-n-0023
+  titre: 'Graphe de transition'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.1.1 Matrices markoviennes, graphes de transition'
+  enonce: 'Graphe orienté de sommets les points de $E$, avec une arête $x\to y$ étiquetée $P(x,y)$ lorsque $P(x,y)>0$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 2}
+  essentiel: true
+- id: mod-n-0024
+  titre: 'Chaîne de Markov homogène'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.1.2 Chaînes de Markov et matrices markoviennes'
+  enonce: 'Suite $(X_n)$ à valeurs dans $E$ telle que $\mathbb{P}(X_{n+1}=b\mid X_0=a_0,\dots,X_n=a)=\mathbb{P}(X_{n+1}=b\mid X_n=a)=P(a,b)$. La loi de $X_0$ est la loi initiale.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 3}
+  essentiel: true
+- id: mod-n-0025
+  titre: 'Probabilité d''une trajectoire'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.1.2 Chaînes de Markov et matrices markoviennes'
+  enonce: '$(X_n)$ est une chaîne de Markov de matrice $P$ et de loi initiale $\mu_0$ si et seulement si $\mathbb{P}(X_0=a_0,\dots,X_n=a_n)=\mu_0(a_0)P(a_0,a_1)\cdots P(a_{n-1},a_n)$ pour tout $n$ et tous $a_i$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 3}
+  essentiel: true
+- id: mod-n-0026
+  titre: 'Équation de récurrence aléatoire'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.1.3 Comment construire une chaîne de Markov ?'
+  enonce: 'Si $(U_n)$ i.i.d., $X_0\sim\mu_0$ indépendante des $U_i$ et $\varphi:E\times F\to E$, alors $X_{n+1}=\varphi(X_n,U_{n+1})$ définit une chaîne de Markov de loi initiale $\mu_0$ et de matrice $P(x,y)=\mathbb{P}(\varphi(x,U_1)=y)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 4}
+  essentiel: true
+- id: mod-n-0027
+  titre: 'Construction d''une chaîne de matrice P donnée'
+  type: methode
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.1.3 Comment construire une chaîne de Markov ?'
+  enonce: 'Pour toute $\mu_0$ et $P$, avec $U_i$ uniformes sur $[0,1]$ et, pour chaque $e_i$, des intervalles disjoints $I_{i,j}$ partitionnant $[0,1]$ de longueur $P(e_i,e_j)$, poser $\varphi(e_i,u)=e_j$ si $u\in I_{i,j}$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 5}
+  essentiel: true
+- id: mod-n-0028
+  titre: 'Loi de X_n et transitions d''ordre k'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.1.4 Transitions d''ordres supérieurs'
+  enonce: 'La loi $\mu_n$ de $X_n$ vérifie $\mu_n=\mu_0P^n$, et $\mathbb{P}(X_{n+k}=y\mid X_n=x)=P^k(x,y)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 5}
+  essentiel: true
+- id: mod-n-0029
+  titre: 'Notation P_{x_0}'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.1.4 Transitions d''ordres supérieurs'
+  enonce: 'Si $\mu_0=\delta_{x_0}$, on note $\mathbb{P}_{x_0}$ la loi de la chaîne issue de $x_0$ : $\mathbb{P}_{x_0}(X_1=x_1,X_2=x_2)=P(x_0,x_1)P(x_1,x_2)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 6}
+  essentiel: false
+- id: mod-n-0030
+  titre: 'Accessibilité'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.2.1 Accessibilité, irréductibilité'
+  enonce: '$y$ est accessible depuis $x$ ($x\to y$) s''il existe $n\ge1$ et un chemin $x=a_0,\dots,a_n=y$ avec $P(a_i,a_{i+1})>0$ ; équivalent à l''existence d''un chemin orienté dans le graphe de transition.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 6}
+  essentiel: true
+- id: mod-n-0031
+  titre: 'Caractérisation matricielle de l''accessibilité'
+  type: propriete
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.2.1 Accessibilité, irréductibilité'
+  enonce: '$y$ est accessible depuis $x$ si et seulement s''il existe $n\ge1$ tel que $P^n(x,y)>0$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 7}
+  essentiel: true
+- id: mod-n-0032
+  titre: 'Chaîne irréductible'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.2.1 Accessibilité, irréductibilité'
+  enonce: '$P$ est irréductible si pour tous $x,y$, $x\to y$ et $y\to x$, c''est-à-dire si le graphe de transition est fortement connexe.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 7}
+  essentiel: true
+- id: mod-n-0033
+  titre: 'États récurrents et transitoires (cas fini)'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.2.2 États récurrents et transitoires dans le cas fini'
+  enonce: '$x$ est récurrent si $\forall y,\ x\to y\Rightarrow y\to x$ ; transitoire sinon (il existe $y$ avec $x\to y$ et $y\not\to x$). $\mathcal{T}$ : transitoires, $\mathcal{R}$ : récurrents.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 7}
+  essentiel: true
+- id: mod-n-0034
+  titre: 'Définition générale de la récurrence'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.2.2 États récurrents et transitoires dans le cas fini'
+  enonce: '$x$ est récurrent si $\mathbb{P}_x(\exists n\ge1,\ X_n=x)=1$, transitoire si cette probabilité est $<1$. Pour $E$ fini, cela équivaut (admis) à la définition par accessibilité.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 8}
+  essentiel: false
+- id: mod-n-0035
+  titre: 'Classes récurrentes'
+  type: propriete
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.2.2 États récurrents et transitoires dans le cas fini'
+  enonce: 'Si $x$ est récurrent et $x\to y$, alors $y$ est récurrent ; $\to$ est transitive ; sur $\mathcal{R}$, $\to$ est une relation d''équivalence dont les classes sont les classes récurrentes. Une chaîne sur $E$ fini est irréductible si elle n''a pas d''état transitoire et une seule classe récurrente.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 8}
+  essentiel: true
+- id: mod-n-0036
+  titre: 'Existence d''un état récurrent'
+  type: propriete
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.2.2 États récurrents et transitoires dans le cas fini'
+  enonce: 'Dans un espace d''états fini, il existe toujours au moins un état récurrent (preuve : chaîne d''états transitoires distincts de longueur $\le|E|$).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 8}
+  essentiel: false
+- id: mod-n-0037
+  titre: 'Chaîne apériodique'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.2.3 Chaîne apériodique'
+  enonce: 'Une chaîne irréductible est apériodique s''il existe $n_0\ge1$ tel que $P^n(x,y)>0$ pour tous $n>n_0$ et tous $x,y\in E$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 8}
+  essentiel: true
+- id: mod-n-0038
+  titre: 'Condition suffisante d''apériodicité'
+  type: propriete
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.2.3 Chaîne apériodique'
+  enonce: 'Une chaîne irréductible telle qu''il existe $x_0$ avec $P(x_0,x_0)>0$ est apériodique.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 9}
+  essentiel: true
+- id: mod-n-0039
+  titre: 'Mesure de probabilité invariante'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.1 Loi invariante'
+  enonce: '$\mu\in\mathcal{P}(E)$ est invariante si $\mu P=\mu$ (vecteur propre à gauche de valeur propre 1).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 9}
+  essentiel: true
+- id: mod-n-0040
+  titre: 'Stationnarité sous une loi invariante'
+  type: propriete
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.1 Loi invariante'
+  enonce: 'Si $\mu$ est invariante et $X_0\sim\mu$, alors $X_n\sim\mu$ pour tout $n$ (car $\mu_n=\mu P^n=\mu$).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 9}
+  essentiel: true
+- id: mod-n-0041
+  titre: 'Existence d''une mesure invariante'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.2 Existence et unicité d''une mesure invariante'
+  enonce: 'Toute matrice stochastique sur $E$ fini admet au moins une mesure de probabilité invariante.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 10}
+  essentiel: true
+- id: mod-n-0042
+  titre: 'Preuve d''existence par moyennes de Cesàro et compacité'
+  type: demonstration
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.2 Existence et unicité d''une mesure invariante'
+  enonce: 'Poser $\mu_n=\frac1n(\mu_1+\mu_1P+\cdots+\mu_1P^{n-1})$ ; $\mu_nP=\mu_n+\frac1n(\mu_1P^n-\mu_1)$ ; extraire une sous-suite convergente dans le compact $\mathcal{P}(E)$ et passer à la limite.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 10}
+  essentiel: false
+- id: mod-n-0043
+  titre: 'Unicité de la mesure invariante (cas irréductible)'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.2 Existence et unicité d''une mesure invariante'
+  enonce: 'Si $P$ est irréductible, elle admet une unique mesure de probabilité invariante $\pi$, et $\pi(x)>0$ pour tout $x\in E$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 10}
+  essentiel: true
+- id: mod-n-0044
+  titre: 'Preuve de l''unicité par principe du maximum'
+  type: demonstration
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.2 Existence et unicité d''une mesure invariante'
+  enonce: 'Il suffit de montrer $\dim\ker(P-I_N)=1$ : pour $v$ dans le noyau, l''ensemble $C$ des indices où $v_i$ est maximal est stable par $\to$, donc égal à $E$ par irréductibilité, et $v$ est proportionnel à $(1,\dots,1)^T$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 11}
+  essentiel: true
+- id: mod-n-0045
+  titre: 'Convergence au sens de Cesàro'
+  type: propriete
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.3 Convergence vers la mesure invariante'
+  enonce: 'Si $P$ est irréductible sur $E$ fini, de mesure invariante $\pi$, alors pour tous $a,b$ : $\frac1n\sum_{k=0}^{n-1}P^k(a,b)\to\pi(b)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 11}
+  essentiel: true
+- id: mod-n-0046
+  titre: 'Théorème de Perron-Frobenius'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.3 Convergence vers la mesure invariante'
+  enonce: 'Si $P$ est markovienne irréductible apériodique, 1 est valeur propre simple et toute autre valeur propre $\lambda$ vérifie $|\lambda|<1$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 11}
+  essentiel: true
+- id: mod-n-0047
+  titre: 'Convergence vers la mesure invariante et vitesse'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.3 Convergence vers la mesure invariante'
+  enonce: 'Si $P$ est irréductible apériodique, pour toute loi initiale $\mu_0$, $\mu_0P^n\to\pi$, à vitesse $|\lambda_2|^n$ où $\lambda_2$ est la valeur propre de module maximal parmi celles différentes de 1 (preuve donnée si $P$ diagonalisable).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 12}
+  essentiel: true
+- id: mod-n-0048
+  titre: 'Théorème ergodique'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.4 Théorème ergodique'
+  enonce: 'Chaîne irréductible de mesure invariante $\pi$, $f:E\to\mathbb{R}$ : $\frac1n\sum_{i=0}^{n-1}f(X_i)\to\sum_q f(q)\pi(q)$ p.s. En particulier la fraction de temps passé en $q$ tend vers $\pi(q)$ (admis).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 13}
+  essentiel: true
+- id: mod-n-0049
+  titre: 'Deux moyens de calculer la loi limite'
+  type: methode
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.4 Théorème ergodique'
+  enonce: 'Pour une chaîne irréductible apériodique : déterminer le vecteur propre à gauche de valeur propre 1, ou simuler de longues trajectoires et mesurer la fraction de temps passé en chaque état (principe de PageRank et des MCMC).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 13}
+  essentiel: false
+- id: mod-n-0050
+  titre: 'Temps de retour'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.4 Théorème ergodique'
+  enonce: 'Pour $a\in E$, $T_a=\inf\{n\ge1 : X_n=a\}$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 14}
+  essentiel: true
+- id: mod-n-0051
+  titre: 'Mesure invariante et temps de retour moyen'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.3.4 Théorème ergodique'
+  enonce: 'Chaîne irréductible sur $E$ fini, mesure invariante $\pi$ : pour tout $a$, $\mathbb{E}_a[T_a]<+\infty$ et $\pi(a)=\frac{1}{\mathbb{E}_a[T_a]}$ (esquisse par loi forte des grands nombres sur les retours successifs i.i.d.).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 14}
+  essentiel: true
+- id: mod-n-0052
+  titre: 'Chaîne décalée en temps'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.4.1 Chaîne décalée en temps'
+  enonce: 'Conditionnellement à $\{X_k=a\}$ (de probabilité $>0$), $(X_{n+k})_{n\ge0}$ est une chaîne de Markov de loi initiale $\delta_a$ et de matrice $P$ (propriété de Markov simple).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 16}
+  essentiel: true
+- id: mod-n-0053
+  titre: 'État absorbant'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.4.2 États absorbants et probabilités d''absorption'
+  enonce: '$a\in E$ est absorbant si $P(a,a)=1$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 17}
+  essentiel: true
+- id: mod-n-0054
+  titre: 'Probabilité d''absorption'
+  type: definition
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.4.2 États absorbants et probabilités d''absorption'
+  enonce: 'Pour $a$ absorbant, $p_x(a)=\mathbb{P}_x(\exists n\ge0 : X_n=a)$ ; on a $p_a(a)=1$ et $p_b(a)=0$ pour $b\ne a$ absorbant.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 17}
+  essentiel: true
+- id: mod-n-0055
+  titre: 'Système linéaire des probabilités d''absorption'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.4.2 États absorbants et probabilités d''absorption'
+  enonce: 'Pour $a$ absorbant et tout $x\in E$ : $p_x(a)=\sum_{y\in E}P(x,y)\,p_y(a)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 17}
+  essentiel: true
+- id: mod-n-0056
+  titre: 'Urne d''Ehrenfest : modèle'
+  type: exemple
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.5.1 Modèle de migration de particules : urne d''Ehrenfest'
+  enonce: 'Sur $S=\{0,\dots,N\}$ (nombre de particules dans $A$) : $P(x,x)=\epsilon$, $P(x,x-1)=(1-\epsilon)\frac xN$, $P(x,x+1)=(1-\epsilon)\frac{N-x}N$ ; chaîne irréductible apériodique.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 18}
+  essentiel: true
+- id: mod-n-0057
+  titre: 'Mesure invariante de l''urne d''Ehrenfest'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.5.1 Modèle de migration de particules : urne d''Ehrenfest'
+  enonce: 'La mesure invariante est la loi binomiale $\mathcal{B}(N,1/2)$ : $\pi(k)=\binom Nk 2^{-N}$ (preuve par récurrence sur $\pi=\pi P$ coordonnée par coordonnée, puis normalisation).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 19}
+  essentiel: true
+- id: mod-n-0058
+  titre: 'Concentration de la loi binomiale'
+  type: propriete
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.5.1 Modèle de migration de particules : urne d''Ehrenfest'
+  enonce: 'Si $X\sim\mathcal{B}(N,p)$ : $\mathbb{P}(|X-\mathbb{E}[X]|>\varepsilon\sqrt N)\le2e^{-2\varepsilon^2}$ (écart typique de l''ordre de $\sqrt N$).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 20}
+  essentiel: false
+- id: mod-n-0059
+  titre: 'PageRank : marche aléatoire sur le graphe du web'
+  type: methode
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.5.2 PageRank'
+  enonce: 'L''importance $m$ des pages vérifie $m_j=\sum_{i\to j}\frac{m_i}{d^+(i)}$, soit $mP=m$ avec $P(i,j)=\frac1{d^+(i)}\mathbf 1_{i\to j}$ : $m$ est une mesure invariante de la marche aléatoire sur le graphe.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 21}
+  essentiel: true
+- id: mod-n-0060
+  titre: 'PageRank : matrice de transition modifiée'
+  type: methode
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  sous_chapitre: '2.5.2 PageRank'
+  enonce: 'Avec $Q(i,j)=\frac1N$ : $P_\epsilon=(1-\epsilon)P+\epsilon Q$ est irréductible et apériodique pour tout $\epsilon>0$ ; itération $\mu_{n+1}=\mu_nP_\epsilon=(1-\epsilon)\mu_nP+\epsilon\mu_n Q$ (en pratique $\epsilon\approx0{,}15$).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap2-markov.pdf, page: 21}
+  essentiel: true
+- id: mod-n-0061
+  titre: 'Processus ponctuel et processus de comptage'
+  type: definition
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.1.1 Processus ponctuels et processus de renouvellement'
+  enonce: 'Processus ponctuel : $0<T_1<T_2<\cdots$ p.s., tendant vers $+\infty$. Processus de comptage associé : $N_t=\mathrm{Card}\{n\ge1\mid T_n\le t\}$ ; on a $\{N_t\ge n\}=\{T_n\le t\}$ et $\{N_t=n\}=\{T_n\le t<T_{n+1}\}$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 1}
+  essentiel: true
+- id: mod-n-0062
+  titre: 'Processus de renouvellement'
+  type: definition
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.1.1 Processus ponctuels et processus de renouvellement'
+  enonce: 'Processus de comptage associé à $T_n=\sum_{k=1}^n\tau_k$ avec $(\tau_k)$ i.i.d. p.s. strictement positives (loi de renouvellement : loi de $\tau_1$).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 2}
+  essentiel: true
+- id: mod-n-0063
+  titre: 'Petit théorème de renouvellement'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.1.1 Processus ponctuels et processus de renouvellement'
+  enonce: 'Si $\mathbb{E}[\tau_1]<+\infty$ : $\lim_{t\to+\infty}\frac{N_t}{t}=\frac1{\mathbb{E}[\tau_1]}$ p.s. (loi forte des grands nombres et encadrement $T_{N_t}\le t<T_{N_t+1}$).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 2}
+  essentiel: true
+- id: mod-n-0064
+  titre: 'Processus de Poisson'
+  type: definition
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.1.2 Processus de Poisson'
+  enonce: 'Processus de renouvellement dont la loi de renouvellement est exponentielle de paramètre $\lambda>0$ (intensité), de densité $\lambda e^{-\lambda x}\mathbf 1_{\mathbb{R}_+}(x)$. Absence de mémoire : $\mathbb{P}(X>t+\Delta t\mid X>t)=\mathbb{P}(X>\Delta t)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 3}
+  essentiel: true
+- id: mod-n-0065
+  titre: 'Loi de N_t pour un processus de Poisson'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.1.2 Processus de Poisson'
+  enonce: 'Pour un processus de Poisson d''intensité $\lambda$, $N_t\sim\mathcal{P}(\lambda t)$ : $\mathbb{P}(N_t=n)=\frac{(\lambda t)^n}{n!}e^{-\lambda t}$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 3}
+  essentiel: true
+- id: mod-n-0066
+  titre: 'Loi de T_n (loi gamma)'
+  type: propriete
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.1.2 Processus de Poisson'
+  enonce: '$T_n$, somme de $n$ exponentielles de paramètre $\lambda$, suit la loi gamma de paramètres $n$ et $\lambda$ : $f_{T_n}(x)=\frac{\lambda^nx^{n-1}}{(n-1)!}e^{-\lambda x}\mathbf 1_{\mathbb{R}_+}(x)$ ; preuve de la loi de $N_t$ par $\mathbb{P}(N_t=n)=\mathbb{P}(T_n\le t)-\mathbb{P}(T_{n+1}\le t)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 3}
+  essentiel: true
+- id: mod-n-0067
+  titre: 'Loi conditionnelle des temps de saut (uniformes ordonnées)'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.1.2 Processus de Poisson'
+  enonce: 'Conditionnellement à $\{N_t=n\}$, $(T_1,\dots,T_n)$ a la loi de $(U_{(1)},\dots,U_{(n)})$, réordonnement croissant de $n$ uniformes i.i.d. sur $[0,t]$ ; densité $\frac{n!}{t^n}\mathbf 1_{0<u_1<\cdots<u_n<t}$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 4}
+  essentiel: true
+- id: mod-n-0068
+  titre: 'Accroissements indépendants et stationnaires'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.1.3 Processus à accroissements indépendants et stationnaires'
+  enonce: 'Pour $0=t_0<t_1<\cdots<t_n$, les variables $N_{t_k}-N_{t_{k-1}}$ sont indépendantes de loi $\mathcal{P}(\lambda(t_k-t_{k-1}))$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 6}
+  essentiel: true
+- id: mod-n-0069
+  titre: 'Preuve des accroissements indépendants via multinomiale'
+  type: demonstration
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.1.3 Processus à accroissements indépendants et stationnaires'
+  enonce: 'Conditionner sur $N_{t_n}=k_1+\cdots+k_n$, utiliser les temps uniformes (tirages multinomiaux dans les intervalles) puis multiplier par $\mathbb{P}(N_{t_n}=k_1+\cdots+k_n)$ pour retrouver un produit de lois de Poisson.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 6}
+  essentiel: false
+- id: mod-n-0070
+  titre: 'Le processus de comptage de Poisson est markovien homogène'
+  type: propriete
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.1.3 Processus à accroissements indépendants et stationnaires'
+  enonce: '$\mathbb{P}(N_{t_{n+1}}=k_{n+1}\mid N_{t_1}=k_1,\dots,N_{t_n}=k_n)=\mathbb{P}(N_{t_{n+1}}=k_{n+1}\mid N_{t_n}=k_n)=\mathbb{P}(N_{t_{n+1}-t_n}=k_{n+1}-k_n)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 7}
+  essentiel: true
+- id: mod-n-0071
+  titre: 'Propriété de Markov du processus de Poisson'
+  type: propriete
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.1.3 Processus à accroissements indépendants et stationnaires'
+  enonce: 'Pour tout $s\ge0$, $\tilde N=(N_{t+s}-N_s)_{t\ge0}$ est un processus de Poisson de même intensité $\lambda$, indépendant de $(N_t)_{t\in[0,s]}$ ; le processus ponctuel $\{T_n-s\mid T_n>s\}$ est un processus ponctuel de Poisson d''intensité $\lambda$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 7}
+  essentiel: true
+- id: mod-n-0072
+  titre: 'File d''attente M/M/infini : modèle'
+  type: definition
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.2 Exemple d''application : étude de la file d''attente M/M/1/1'
+  enonce: 'Arrivées : processus ponctuel de Poisson $(T_i)$ d''intensité $\lambda$ ; infinité de guichets ; temps de service $S_i$ i.i.d. exponentiels de paramètre $\mu$ ; $n_0$ clients en service à $t=0$ de temps restants $R_i$ exponentiels de paramètre $\mu$ ; $N_t=\sum_{i=1}^{n_0}\mathbf 1_{t\le R_i}+\sum_{i=1}^{A_t}\mathbf 1_{t\le T_i+S_i}$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 9}
+  essentiel: true
+- id: mod-n-0073
+  titre: 'Loi du nombre de clients à l''instant t'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.2 Exemple d''application : étude de la file d''attente M/M/1/1'
+  enonce: '$N_t$ suit la loi $\mathcal{B}(n_0,p_t)*\mathcal{P}(\alpha_t)$ avec $p_t=e^{-\mu t}$ et $\alpha_t=\frac\lambda\mu(1-e^{-\mu t})$ (somme indépendante d''une binomiale et d''une Poisson).'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 9}
+  essentiel: true
+- id: mod-n-0074
+  titre: 'Preuve : loi de Y_t par conditionnement et uniformes'
+  type: demonstration
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.2 Exemple d''application : étude de la file d''attente M/M/1/1'
+  enonce: 'Conditionnellement à $A_t=n$, les arrivées sont des uniformes sur $[0,t]$ ; $Y_t\mid A_t=n\sim\mathcal{B}(n,q_t)$ avec $q_t=\mathbb{P}(S\ge U)=\frac1{\mu t}(1-e^{-\mu t})$ ; sommer sur $n$ donne $Y_t\sim\mathcal{P}(\lambda tq_t)$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 9}
+  essentiel: true
+- id: mod-n-0075
+  titre: 'Loi d''équilibre de la file M/M/infini'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  sous_chapitre: '3.2 Exemple d''application : étude de la file d''attente M/M/1/1'
+  enonce: '$N_t$ converge en loi vers $\mathcal{P}(\lambda/\mu)$ quand $t\to+\infty$ ($p_t\to0$, $\alpha_t\to\lambda/\mu$), et $\mathbb{E}[N_t]\to\lambda/\mu$.'
+  source: {etab: paris-cite, fichier: modelisation/cours/chap3-poisson.pdf, page: 10}
+  essentiel: true

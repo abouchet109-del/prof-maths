@@ -1,0 +1,1152 @@
+- id: proba-n-0001
+  titre: 'Probabilité (mesure de probabilité)'
+  type: definition
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.3 Probabilité'
+  enonce: '$P$ à valeurs dans $[0,1]$ avec $P(\emptyset)=0$, $P(\Omega)=1$, additivité sur deux événements disjoints, et continuité $P(\cup_n A_n)=\lim_k P(\cup_{n\le k}A_n)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 6}
+  essentiel: true
+- id: proba-n-0002
+  titre: 'Formulations équivalentes de la continuité (additivité dénombrable, continuité monotone)'
+  type: propriete
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.3 Probabilité'
+  enonce: 'Additivité dénombrable ; si $A_n\uparrow$ alors $P(\cup A_n)=\lim P(A_n)$ ; si $A_n\downarrow$ alors $P(\cap A_n)=\lim P(A_n)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 6}
+  essentiel: true
+- id: proba-n-0003
+  titre: 'Espace de probabilité'
+  type: definition
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.3 Probabilité'
+  enonce: 'Un couple $(\Omega,P)$ avec $P$ une probabilité sur $\Omega$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 6}
+  essentiel: true
+- id: proba-n-0004
+  titre: 'Conséquences : monotonie, sous-additivité, $P(A^c)$'
+  type: propriete
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.3 Probabilité'
+  enonce: '$P(A^c)=1-P(A)$ ; $A\subset B\Rightarrow P(A)\le P(B)$ ; $P(A\cup B)\le P(A)+P(B)$ ; $P(\cup_{n}A_n)\le\sum_n P(A_n)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 7}
+  essentiel: true
+- id: proba-n-0005
+  titre: 'Formule du crible (Poincaré)'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.3 Probabilité'
+  enonce: '$P(\cup_{k=1}^n A_k)=\sum_{p=1}^n(-1)^{p+1}\sum_{k_1<\dots<k_p}P(A_{k_1}\cap\dots\cap A_{k_p})$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 7}
+  essentiel: false
+- id: proba-n-0006
+  titre: 'Événement négligeable, presque sûr, propriété vraie presque sûrement'
+  type: definition
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.4 Événement négligeable'
+  enonce: '$A$ est négligeable si $P(A)=0$ ; presque sûr si $P(A)=1$ ; une propriété est vraie p.s. si l''ensemble où elle est fausse est négligeable.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 7}
+  essentiel: true
+- id: proba-n-0007
+  titre: 'Réunion dénombrable de négligeables, intersection dénombrable de presque sûrs'
+  type: propriete
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.4 Événement négligeable'
+  enonce: 'Une réunion finie ou dénombrable d''événements négligeables est négligeable ; une intersection finie ou dénombrable d''événements presque sûrs est presque sûre.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 8}
+  essentiel: true
+- id: proba-n-0008
+  titre: 'Variable aléatoire'
+  type: definition
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.5 Variable aléatoire'
+  enonce: 'Fonction définie sur $(\Omega,P)$ à valeurs dans un ensemble $E$ ; réelle si $E=\mathbb R$, vecteur aléatoire si $E=\mathbb R^d$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 8}
+  essentiel: true
+- id: proba-n-0009
+  titre: 'Loi d''une variable aléatoire'
+  type: definition
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.5 Variable aléatoire'
+  enonce: '$P_X(B)=P(\{\omega : X(\omega)\in B\})=P(X\in B)$ définit une probabilité sur $E$, appelée loi de $X$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 8}
+  essentiel: true
+- id: proba-n-0010
+  titre: 'Égalité presque sûre implique égalité en loi (réciproque fausse)'
+  type: propriete
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.5 Variable aléatoire'
+  enonce: 'Si $X=Y$ p.s., alors $X$ et $Y$ ont même loi. La réciproque est fausse (par exemple $X$ de Bernoulli et $Y=1-X$).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 8}
+  essentiel: true
+- id: proba-n-0011
+  titre: 'Tribu'
+  type: definition
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.6 Quelques mots sur la notion de tribu'
+  enonce: '$\mathcal A\subset\mathcal P(\Omega)$ avec $\Omega\in\mathcal A$, stable par passage au complémentaire et par réunion dénombrable.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 9}
+  essentiel: true
+- id: proba-n-0012
+  titre: 'Tribu engendrée et tribu borélienne'
+  type: definition
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.6 Quelques mots sur la notion de tribu'
+  enonce: '$\sigma(\mathcal C)$ est la plus petite tribu contenant $\mathcal C$ (intersection des tribus contenant $\mathcal C$) ; $\mathcal B(\mathbb R^d)$ est la tribu engendrée par les pavés $\prod]a_i,b_i]$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 10}
+  essentiel: false
+- id: proba-n-0013
+  titre: 'Variable aléatoire (définition rigoureuse, mesurabilité)'
+  type: definition
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  sous_chapitre: '1.6 Quelques mots sur la notion de tribu'
+  enonce: '$X:(\Omega,\mathcal A)\to(E,\mathcal E)$ est une variable aléatoire si $X^{-1}(B)\in\mathcal A$ pour tout $B\in\mathcal E$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 10}
+  essentiel: false
+- id: proba-n-0014
+  titre: 'Les masses strictement positives forment un ensemble au plus dénombrable'
+  type: propriete
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.1 Variables aléatoires discrètes'
+  enonce: '$S=\{\omega : P(\{\omega\})>0\}$ est fini ou dénombrable.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 12}
+  essentiel: true
+- id: proba-n-0015
+  titre: 'Loi discrète et support'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.1 Variables aléatoires discrètes'
+  enonce: 'Si $P(S)=1$ la loi est discrète, de support $S$ ; elle est alors caractérisée par $(p_s=P(\{s\}))_{s\in S}$ et $P(A)=\sum_{s\in A\cap S}p_s$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 12}
+  essentiel: true
+- id: proba-n-0016
+  titre: 'Loi de Dirac'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.2 Lois discrètes classiques'
+  enonce: '$X$ suit la loi de Dirac en $a$ si $P(X=a)=1$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 12}
+  essentiel: false
+- id: proba-n-0017
+  titre: 'Loi de Bernoulli'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.2 Lois discrètes classiques'
+  enonce: '$P(X=1)=p$, $P(X=0)=1-p$, avec $p\in[0,1]$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 13}
+  essentiel: true
+- id: proba-n-0018
+  titre: 'Loi binomiale'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.2 Lois discrètes classiques'
+  enonce: '$P(X=k)=\binom nk p^k(1-p)^{n-k}$ pour $k=0,\dots,n$ ; nombre de succès sur $n$ essais indépendants.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 13}
+  essentiel: true
+- id: proba-n-0019
+  titre: 'Loi de Poisson'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.2 Lois discrètes classiques'
+  enonce: '$P(X=k)=e^{-\lambda}\lambda^k/k!$ pour $k\ge0$, $\lambda>0$ ; support $\mathbb N$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 14}
+  essentiel: true
+- id: proba-n-0020
+  titre: 'Loi géométrique'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.2 Lois discrètes classiques'
+  enonce: '$P(X=k)=p(1-p)^{k-1}$ pour $k\ge1$, $p\in]0,1[$ ; rang du premier succès.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 14}
+  essentiel: true
+- id: proba-n-0021
+  titre: 'Espérance d''une variable discrète positive'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.2 Lois discrètes classiques'
+  enonce: 'Si $X\ge0$ p.s., $E[X]=\sum_{x\in S_X}xP_X(\{x\})\in[0,+\infty]$, indépendante de l''ordre de sommation.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 15}
+  essentiel: true
+- id: proba-n-0022
+  titre: 'Espérance d''une variable discrète quelconque'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.2 Lois discrètes classiques'
+  enonce: 'Si $E[|X|]<+\infty$, $E[X]=\sum_{x\in S_X}xP_X(\{x\})$ (série absolument convergente).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 15}
+  essentiel: true
+- id: proba-n-0023
+  titre: 'Formule de transfert (cas discret)'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.2 Lois discrètes classiques'
+  enonce: '$E[\psi(X)]=\sum_{x\in S_X}\psi(x)P_X(\{x\})$ si $\psi\ge0$ ou si $E[|\psi(X)|]<+\infty$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 15}
+  essentiel: true
+- id: proba-n-0024
+  titre: 'Loi à densité'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.3 Variables aléatoires à densité'
+  enonce: '$f$ localement intégrable, positive, d''intégrale 1, avec $P(]a,b])=\int_a^b f(x)\,dx$ ; alors $P(A)=\int_A f$ pour tout événement $A$, et la densité caractérise la loi.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 16}
+  essentiel: true
+- id: proba-n-0025
+  titre: 'Singletons de probabilité nulle pour une loi à densité'
+  type: propriete
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.3 Variables aléatoires à densité'
+  enonce: 'Si la loi est à densité, $P(\{x\})=0$ pour tout $x$ ; donc $P(]a,b[)=P([a,b[)=P(]a,b])=P([a,b])$. La réciproque est fausse.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 17}
+  essentiel: true
+- id: proba-n-0026
+  titre: 'Support d''une loi à densité'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.3 Variables aléatoires à densité'
+  enonce: '$S=\{x : \forall\epsilon>0,\ P(]x-\epsilon,x+\epsilon[)>0\}$ ; c''est le plus petit fermé de masse 1, et $f$ continue en $x_0$ avec $f(x_0)>0$ implique $x_0\in S$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 17}
+  essentiel: false
+- id: proba-n-0027
+  titre: 'Espérance d''une variable à densité'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.3 Variables aléatoires à densité'
+  enonce: '$E[X]=\int_{\mathbb R}xf_X(x)\,dx$, définie si $X\ge0$ (valeur dans $[0,+\infty]$) ou si $E[|X|]<+\infty$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 17}
+  essentiel: true
+- id: proba-n-0028
+  titre: 'Linéarité de l''espérance'
+  type: propriete
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.3 Variables aléatoires à densité'
+  enonce: '$E[\alpha X+\beta Y]=\alpha E[X]+\beta E[Y]$ pour $X,Y$ d''espérance finie (ou positives avec $\alpha,\beta\ge0$).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 18}
+  essentiel: true
+- id: proba-n-0029
+  titre: 'Formule de transfert (cas à densité)'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.3 Variables aléatoires à densité'
+  enonce: '$E[\psi(X)]=\int_{\mathbb R}\psi(x)f_X(x)\,dx$ si $\psi\ge0$ ou si $E[|\psi(X)|]<+\infty$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 18}
+  essentiel: true
+- id: proba-n-0030
+  titre: 'Méthode de la fonction muette (dimension 1)'
+  type: methode
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.3 Variables aléatoires à densité'
+  enonce: 'S''il existe $f\ge0$ avec $E[\varphi(X)]=\int\varphi f$ pour toute $\varphi$ continue bornée (ou continue positive), alors $X$ a pour densité $f$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 18}
+  essentiel: true
+- id: proba-n-0031
+  titre: 'Exemple : loi de $X^2$ pour $X$ gaussienne centrée réduite'
+  type: exemple
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.3 Variables aléatoires à densité'
+  enonce: 'Par fonction muette en coupant $\mathbb R$ en $]-\infty,0[$ et $]0,+\infty[$ : $f_Y(y)=\frac{e^{-y/2}}{\sqrt{2\pi y}}\mathbf 1_{y>0}$, loi Gamma$(1/2,1/2)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 18}
+  essentiel: false
+- id: proba-n-0032
+  titre: 'Variable étagée et son espérance'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.4.1 Espérance dans le cas général'
+  enonce: '$X=\sum_{i=1}^p\alpha_i\mathbf 1_{A_i}$ ($A_i$ disjoints) ; $E[X]=\sum_i\alpha_iP(A_i)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 19}
+  essentiel: false
+- id: proba-n-0033
+  titre: 'Espérance d''une variable positive (approximation par des étagées)'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.4.1 Espérance dans le cas général'
+  enonce: 'Toute $X\ge0$ est limite croissante de variables étagées $X_n$ ; $E[X]=\lim E[X_n]\in\mathbb R_+\cup\{+\infty\}$, indépendante de la suite choisie.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 20}
+  essentiel: false
+- id: proba-n-0034
+  titre: 'Variable intégrable, espérance générale'
+  type: definition
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.4.1 Espérance dans le cas général'
+  enonce: '$X=X^+-X^-$ est intégrable si $E[X^+]<+\infty$ et $E[X^-]<+\infty$ (soit $E[|X|]<+\infty$) ; $E[X]=E[X^+]-E[X^-]$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 20}
+  essentiel: true
+- id: proba-n-0035
+  titre: 'Linéarité de l''espérance (cas général)'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.4.1 Espérance dans le cas général'
+  enonce: 'Si $X,Y$ sont intégrables, $E[\alpha X+\beta Y]=\alpha E[X]+\beta E[Y]$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 20}
+  essentiel: true
+- id: proba-n-0036
+  titre: 'Théorèmes de convergence monotone et de convergence dominée'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.4.2 Interversion limite/espérance'
+  enonce: 'Si $X_n\to X$ p.s. : (monotone) $0\le X_n\le X_{n+1}$ implique $E[\lim X_n]=\lim E[X_n]$ ; (dominée) $|X_n|\le Y$ p.s. avec $E[Y]<\infty$ implique la même égalité.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 21}
+  essentiel: true
+- id: proba-n-0037
+  titre: 'Interversion série et espérance'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.4.2 Interversion limite/espérance'
+  enonce: '$E[\sum_{p\ge0}X_p]=\sum_{p\ge0}E[X_p]$ si les $X_p$ sont positives ou si $\sum_p E[|X_p|]<+\infty$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 22}
+  essentiel: true
+- id: proba-n-0038
+  titre: 'Positivité de l''espérance'
+  type: propriete
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.5 Inégalités'
+  enonce: 'Si $X\ge0$ alors $E[X]\ge0$ ; si $X\ge Y$ p.s. alors $E[X]\ge E[Y]$ ; une variable p.s. bornée a une espérance finie.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 22}
+  essentiel: true
+- id: proba-n-0039
+  titre: 'Inégalité de Markov'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.5 Inégalités'
+  enonce: 'Pour $t>0$ : $P(X\ge t)\le E[X^+]/t\le E[|X|]/t$ ; plus généralement $P(|X|\ge t)\le E[|X|^p]/t^p$ pour $p>0$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 23}
+  essentiel: true
+- id: proba-n-0040
+  titre: 'Démonstration de Markov : encadrement des fonctions indicatrices'
+  type: demonstration
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.5 Inégalités'
+  enonce: 'On a $\mathbf 1_{[t,+\infty[}(x)\le \frac{\max(0,x)}{t}\le\frac{|x|}{t}$, puis on applique la positivité de l''espérance à $X$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 23}
+  essentiel: false
+- id: proba-n-0041
+  titre: 'Variable positive d''espérance nulle'
+  type: propriete
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.5 Inégalités'
+  enonce: 'Si $X\ge0$ p.s., alors $P(X=0)=1\iff E[X]=0$ (par Markov et continuité croissante de $P$).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 23}
+  essentiel: true
+- id: proba-n-0042
+  titre: 'Inégalité de Jensen'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.5 Inégalités'
+  enonce: 'Si $X$ est d''espérance finie à valeurs dans un intervalle $I$ et $\varphi$ convexe sur $I$, alors $\varphi(E[X])\le E[\varphi(X)]$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 24}
+  essentiel: true
+- id: proba-n-0043
+  titre: 'Comparaison des normes $L^p$'
+  type: propriete
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  sous_chapitre: '2.5 Inégalités'
+  enonce: 'Pour $0<p<q$ : $E[|X|^p]^{1/p}\le E[|X|^q]^{1/q}$ (Jensen appliqué à $|X|^p$ et $x\mapsto x^{q/p}$).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 24}
+  essentiel: true
+- id: proba-n-0044
+  titre: 'Caractérisation d''une loi discrète par les masses ponctuelles'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.1 Masses ponctuelles et densités'
+  enonce: 'Deux variables à valeurs dans $S$ au plus dénombrable ont même loi ssi $P(X=s)=P(Y=s)$ pour tout $s$ ; toute famille $(p_s)$ avec $p_s>0$, $\sum p_s=1$ est une loi.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 25}
+  essentiel: true
+- id: proba-n-0045
+  titre: 'Caractérisation d''une loi par sa densité'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.1 Masses ponctuelles et densités'
+  enonce: 'Toute fonction positive d''intégrale 1 est densité d''une loi ; deux variables à densité ont même loi ssi $f_X=f_Y$ hors d''un ensemble de longueur nulle.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 26}
+  essentiel: true
+- id: proba-n-0046
+  titre: 'Critère de loi distincte par deux densités continues'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.1 Masses ponctuelles et densités'
+  enonce: 'S''il existe $x_0$ où $f_X,f_Y$ sont continues avec $f_X(x_0)\ne f_Y(x_0)$, alors les lois de $X$ et $Y$ sont distinctes.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 26}
+  essentiel: false
+- id: proba-n-0047
+  titre: 'Méthode générale : fonctions tests caractérisant une loi'
+  type: methode
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.2 Fonctionnelles caractérisant une loi : méthode générale'
+  enonce: '$P_X=P_Y\iff\forall\psi\in\mathcal F,\ E[\psi(X)]=E[\psi(Y)]$, avec $\mathcal F$ paramétrée (indicatrices $\mathbf 1_{]-\infty,x]}$, puissances $x^n$, exponentielles $e^{itx}$).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 26}
+  essentiel: true
+- id: proba-n-0048
+  titre: 'Fonction de répartition'
+  type: definition
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.3 La fonction de répartition'
+  enonce: '$F_X(x)=P(X\le x)=P_X(]-\infty,x])$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 27}
+  essentiel: true
+- id: proba-n-0049
+  titre: 'Propriétés de la fonction de répartition'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.3.1 Premières propriétés'
+  enonce: '$F_X$ croissante, $\lim_{-\infty}F_X=0$, $\lim_{+\infty}F_X=1$, continue à droite avec limite à gauche, et $P(X=x)=F_X(x)-\lim_{y\to x^-}F_X(y)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 27}
+  essentiel: true
+- id: proba-n-0050
+  titre: 'Probabilité des intervalles à partir de $F_X$'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.3.1 Premières propriétés'
+  enonce: '$P(]a,b])=F_X(b)-F_X(a)$ ; $P(]a,+\infty[)=1-F_X(a)$ ; $P([a,b])=F_X(b)-\lim_{x\to a^-}F_X(x)$, etc.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 28}
+  essentiel: true
+- id: proba-n-0051
+  titre: 'Discontinuités de $F_X$ ; continuité pour une variable à densité'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.3.1 Premières propriétés'
+  enonce: '$F_X$ a au plus un nombre dénombrable de discontinuités ; si $X$ est à densité, $F_X$ est continue. Une $F_X$ continue n''implique pas une loi à densité.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 28}
+  essentiel: true
+- id: proba-n-0052
+  titre: 'Lien entre fonction de répartition et densité'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.3.1 Premières propriétés'
+  enonce: 'Si $F_X$ est continue et $C^1$ par morceaux, $X$ a pour densité $F_X''$ ; si $f_X$ est continue en $x_0$, $F_X''(x_0)=f_X(x_0)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 29}
+  essentiel: true
+- id: proba-n-0053
+  titre: 'Caractérisation des fonctions de répartition'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.3.3 Propriétés caractéristiques'
+  enonce: '$F$ est la fonction de répartition d''une variable réelle ssi elle est croissante, de limites 0 en $-\infty$ et 1 en $+\infty$, et continue à droite.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 30}
+  essentiel: true
+- id: proba-n-0054
+  titre: 'La fonction de répartition caractérise la loi'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.3.3 Propriétés caractéristiques'
+  enonce: '$X$ et $Y$ ont même loi ssi $F_X=F_Y$ sur $\mathbb R$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 30}
+  essentiel: true
+- id: proba-n-0055
+  titre: 'Moment d''ordre $n$'
+  type: definition
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.4.1 Définition et exemples'
+  enonce: '$X$ admet un moment d''ordre $n$ si $E[|X|^n]<+\infty$ ; il vaut alors $m_n(X)=E[X^n]$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 31}
+  essentiel: true
+- id: proba-n-0056
+  titre: 'Exemple : loi de Pareto, moments d''ordre $<3$ seulement'
+  type: exemple
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.4.1 Définition et exemples'
+  enonce: 'Pour la densité $3x^{-4}\mathbf 1_{x\ge1}$, $E[X^n]=3/(3-n)$ si $n<3$ et $+\infty$ si $n\ge3$ (formule de transfert).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 31}
+  essentiel: false
+- id: proba-n-0057
+  titre: 'Un moment d''ordre $q$ implique les moments d''ordre $p<q$'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.4.1 Définition et exemples'
+  enonce: 'Si $X$ a un moment d''ordre $q$, elle en a un pour tout $p<q$ ; si $X$ a un moment d''ordre $n$, $aX+b$ aussi.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 32}
+  essentiel: true
+- id: proba-n-0058
+  titre: 'Variance et écart-type'
+  type: definition
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.4.2 Variance'
+  enonce: '$\mathrm{var}(X)=E[X^2]-E[X]^2=E[(X-E[X])^2]\ge0$ ; écart-type $=\sqrt{\mathrm{var}(X)}$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 32}
+  essentiel: true
+- id: proba-n-0059
+  titre: 'Variance d''une transformation affine ; variance nulle'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.4.2 Variance'
+  enonce: '$\mathrm{var}(aX+b)=a^2\mathrm{var}(X)$ ; $\mathrm{var}(X)=0$ implique $X$ constante p.s.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 32}
+  essentiel: true
+- id: proba-n-0060
+  titre: 'Inégalité de Bienaymé-Tchebychev'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.4.2 Variance'
+  enonce: 'Pour $t>0$ : $P(|X-E[X]|\ge t)\le\mathrm{var}(X)/t^2$ (Markov appliqué à $|X-E[X]|$ avec $p=2$).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 33}
+  essentiel: true
+- id: proba-n-0061
+  titre: 'Variable aléatoire bornée ; critères de support borné'
+  type: definition
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.4.3 Variables aléatoires bornées'
+  enonce: '$X$ est bornée s''il existe $\alpha\le\beta$ avec $P(X\in[\alpha,\beta])=1$ ; critères via $F_X(\alpha)=0$, $F_X(\beta)=1$ ou via une densité nulle hors de $[\alpha,\beta]$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 33}
+  essentiel: false
+- id: proba-n-0062
+  titre: 'Caractérisation du support borné par les moments'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.4.3 Variables aléatoires bornées'
+  enonce: 'Équivalence : $P(|X|\le\alpha)=1$ ; moments de tout ordre avec $E[|X|^n]\le\alpha^n$ ; moments de tout ordre avec $\lim E[|X|^n]^{1/n}\le\alpha$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 33}
+  essentiel: false
+- id: proba-n-0063
+  titre: 'Les moments caractérisent la loi d''une variable bornée'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.4.3 Variables aléatoires bornées'
+  enonce: 'Si $X$ est bornée, ses moments caractérisent sa loi.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 34}
+  essentiel: true
+- id: proba-n-0064
+  titre: 'Fonction caractéristique'
+  type: definition
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.1 Définition et premières propriétés'
+  enonce: '$\varphi_X(t)=E[e^{itX}]=E[\cos(tX)]+iE[\sin(tX)]$, définie pour toute variable réelle et tout $t\in\mathbb R$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 34}
+  essentiel: true
+- id: proba-n-0065
+  titre: 'Premières propriétés de la fonction caractéristique'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.1 Définition et premières propriétés'
+  enonce: '$\varphi_X(0)=1$ ; $|\varphi_X|\le1$ ; $\varphi_{aX+b}(t)=\varphi_X(at)e^{ibt}$ ; $\varphi_X$ uniformément continue ; tend vers 0 en $\pm\infty$ si $X$ a une densité.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 34}
+  essentiel: true
+- id: proba-n-0066
+  titre: 'Fonctions caractéristiques de Bernoulli et binomiale'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.2 Fonctions caractéristiques de lois classiques'
+  enonce: 'Bernoulli$(p)$ : $1-p+pe^{it}$ ; binomiale$(n,p)$ : $(1-p+pe^{it})^n$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 35}
+  essentiel: true
+- id: proba-n-0067
+  titre: 'Fonction caractéristique de la loi uniforme discrète sur $\{1,\dots,n\}$'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.2 Fonctions caractéristiques de lois classiques'
+  enonce: 'Pour $t\notin2\pi\mathbb Z$ : $\varphi_X(t)=\frac{e^{it}}{n}\cdot\frac{1-e^{itn}}{1-e^{it}}$ ; et $\varphi_X(2k\pi)=1$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 35}
+  essentiel: false
+- id: proba-n-0068
+  titre: 'Fonctions caractéristiques géométrique et Poisson'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.2 Fonctions caractéristiques de lois classiques'
+  enonce: 'Géométrique$(p)$ : $\frac{pe^{it}}{1-(1-p)e^{it}}$ ; Poisson$(\lambda)$ : $e^{\lambda(e^{it}-1)}$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 36}
+  essentiel: true
+- id: proba-n-0069
+  titre: 'Fonctions caractéristiques uniforme, exponentielle, gamma'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.2 Fonctions caractéristiques de lois classiques'
+  enonce: 'Uniforme$[a,b]$ : $\frac{e^{itb}-e^{ita}}{it(b-a)}$ ; exponentielle$(\theta)$ : $\frac{\theta}{\theta-it}$ ; gamma$(\theta,p)$ : $\left(\frac{\theta}{\theta-it}\right)^p$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 36}
+  essentiel: true
+- id: proba-n-0070
+  titre: 'Fonctions caractéristiques gaussienne et de Cauchy'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.2 Fonctions caractéristiques de lois classiques'
+  enonce: '$\mathcal N(\mu,\sigma^2)$ : $e^{i\mu t-\sigma^2t^2/2}$ ; Cauchy (échelle $a$, médiane $x_0$) : $e^{ix_0t-a|t|}$ (admis).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 37}
+  essentiel: true
+- id: proba-n-0071
+  titre: 'Caractérisation des fonctions caractéristiques (Bochner)'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.3 Propriétés caractéristiques'
+  enonce: '$\varphi$ est une fonction caractéristique ssi $\varphi(0)=1$, $\varphi$ continue en 0, $\varphi(-t)=\overline{\varphi(t)}$ et les matrices $(\varphi(t_p-t_q))_{p,q}$ sont hermitiennes positives.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 37}
+  essentiel: false
+- id: proba-n-0072
+  titre: 'La fonction caractéristique caractérise la loi'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.3 Propriétés caractéristiques'
+  enonce: '$X$ et $Y$ ont même loi ssi $\varphi_X=\varphi_Y$ (condition suffisante admise).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 38}
+  essentiel: true
+- id: proba-n-0073
+  titre: 'Inversion de la fonction caractéristique pour une variable à valeurs dans $\mathbb Z$'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.4 Relations avec la densité'
+  enonce: 'Pour $X$ à valeurs dans $\mathbb Z$ : $P(X=k)=\frac1{2\pi}\int_0^{2\pi}\varphi_X(t)e^{-itk}\,dt$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 38}
+  essentiel: true
+- id: proba-n-0074
+  titre: 'Formule d''inversion de Fourier pour une densité'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.4 Relations avec la densité'
+  enonce: 'Si $X$ a une densité et $\varphi_X$ est intégrable, alors en tout point de continuité de $f_X$ : $f_X(x_0)=\frac1{2\pi}\int\varphi_X(t)e^{-itx_0}\,dt$ (admis).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 39}
+  essentiel: true
+- id: proba-n-0075
+  titre: 'Fonction caractéristique et moments'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.5 Relations avec les moments'
+  enonce: 'Si $X$ a un moment d''ordre $n$, $\varphi_X$ est $C^n$, $\varphi_X^{(p)}(t)=i^pE[X^pe^{itX}]$, $\varphi_X^{(p)}(0)=i^pE[X^p]$ et $\varphi_X(t)=\sum_{k\le n}\frac{(it)^k}{k!}E[X^k]+o(t^n)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 39}
+  essentiel: true
+- id: proba-n-0076
+  titre: 'Développement en série entière de $\varphi_X$ avec tous les moments'
+  type: propriete
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  sous_chapitre: '3.5.5 Relations avec les moments'
+  enonce: 'Si $\sum_n\frac{|t|^n}{n!}E[|X|^n]<\infty$ au voisinage de 0, alors $\varphi_X(t)=\sum_n\frac{(it)^n}{n!}E[X^n]$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 39}
+  essentiel: false
+- id: proba-n-0077
+  titre: 'Vecteur aléatoire à densité'
+  type: definition
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.1 Définition'
+  enonce: '$P_X(B)=\int\mathbf 1_B(x)f(x)\,dx_1\cdots dx_n$ pour une $f\ge0$ localement intégrable ; $f$ est une densité ssi $f\ge0$ et $\int_{\mathbb R^n}f=1$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 41}
+  essentiel: true
+- id: proba-n-0078
+  titre: 'Théorèmes de Fubini et Fubini-Tonelli'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.1 Définition'
+  enonce: 'Si $\varphi\ge0$ (Tonelli) ou $\int|\varphi|<\infty$ (Fubini), l''intégrale multiple se calcule comme intégrales itérées dans n''importe quel ordre.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 42}
+  essentiel: true
+- id: proba-n-0079
+  titre: 'Méthode : bornes d''intégration par équivalences (domaine défini par inégalités)'
+  type: methode
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.1 Définition'
+  enonce: 'Pour intégrer en $x$ puis en $y$, on détermine d''abord les bornes de $y$, puis à $y$ fixé celles de $x$, par équivalences, avec un dessin du domaine.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 42}
+  essentiel: true
+- id: proba-n-0080
+  titre: 'Formule de transfert (vecteurs à densité)'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.2 Fonctions de vecteurs aléatoires'
+  enonce: '$E[\varphi(X)]=\int_{\mathbb R^n}\varphi(x)f(x)\,dx$ si $\varphi\ge0$ ou $E[|\varphi(X)|]<\infty$ ; avec $\varphi=\mathbf 1_B$ on retrouve $P(X\in B)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 43}
+  essentiel: true
+- id: proba-n-0081
+  titre: 'Méthode de la fonction muette (dimension $n$)'
+  type: methode
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.2 Fonctions de vecteurs aléatoires'
+  enonce: 'S''il existe $g\ge0$ avec $E[\varphi(X)]=\int\varphi g$ pour toute $\varphi$ continue bornée sur $\mathbb R^n$, alors $X$ a pour densité $g$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 44}
+  essentiel: true
+- id: proba-n-0082
+  titre: 'Changement de variables dans une intégrale multiple'
+  type: methode
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.2 Fonctions de vecteurs aléatoires'
+  enonce: 'Si $\psi$ est un $C^1$-difféomorphisme de $D$ sur $\psi(D)$, $\int_D\varphi(\psi(x))f(x)\,dx=\int_{\psi(D)}\varphi(u)f(\psi^{-1}(u))|J_{\psi^{-1}}(u)|\,du$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 44}
+  essentiel: true
+- id: proba-n-0083
+  titre: 'Exemple : loi de $(X+Y,X-Y)$ par fonction muette et changement de variables'
+  type: exemple
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.2 Fonctions de vecteurs aléatoires'
+  enonce: 'Trois étapes : inverser le changement, calculer le jacobien, déterminer le nouveau domaine par équivalence ; ici densité $3u^2\mathbf 1_{|v|\le u\le1}$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 44}
+  essentiel: false
+- id: proba-n-0084
+  titre: 'Lois marginales à partir de la densité jointe'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.3 Lois marginales'
+  enonce: '$f_{X_p}(x_p)=\int f\,dx_1\cdots\widehat{dx_p}\cdots dx_n$ ; si la loi jointe a une densité, les marginales aussi, mais pas l''inverse (exemple $(X,X)$).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 46}
+  essentiel: true
+- id: proba-n-0085
+  titre: 'Indépendance de vecteurs aléatoires'
+  type: definition
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.4 Indépendance et lois produits'
+  enonce: 'Indépendants ssi $P(X_1\in B_1,\dots,X_p\in B_p)=\prod P(X_i\in B_i)$ pour tous événements $B_i$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 47}
+  essentiel: true
+- id: proba-n-0086
+  titre: 'Indépendance et fonctions mesurables'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.4 Indépendance et lois produits'
+  enonce: 'Si $X_1,\dots,X_p$ sont indépendants, alors $\varphi_1(X_1),\dots,\varphi_p(X_p)$ le sont aussi.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 47}
+  essentiel: true
+- id: proba-n-0087
+  titre: 'Densité produit'
+  type: definition
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.4 Indépendance et lois produits'
+  enonce: '$f(x_1,\dots,x_n)=f_1(x_1)\cdots f_n(x_n)$ est une densité de marginales $f_1,\dots,f_n$, notée $f_1\otimes\cdots\otimes f_n$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 48}
+  essentiel: true
+- id: proba-n-0088
+  titre: 'Caractérisations de l''indépendance pour un vecteur à densité'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.1.4 Indépendance et lois produits'
+  enonce: 'Équivalence : $X_i$ indépendants ; $f=f_{X_1}\otimes\cdots\otimes f_{X_n}$ p.p. ; $f=g_1\otimes\cdots\otimes g_n$ avec $g_i\ge0$ ; $E[\prod\varphi_i(X_i)]=\prod E[\varphi_i(X_i)]$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 48}
+  essentiel: true
+- id: proba-n-0089
+  titre: 'Inégalité de Cauchy-Schwarz'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.1 Inégalités'
+  enonce: 'Si $E[X^2],E[Y^2]<\infty$ : $|E[XY]|\le E[|XY|]\le\sqrt{E[X^2]E[Y^2]}$ ; égalité ssi $X+t_0Y=0$ p.s. (ou $Y=0$ p.s.).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 50}
+  essentiel: true
+- id: proba-n-0090
+  titre: 'Démonstration de Cauchy-Schwarz par discriminant de $E[(X+tY)^2]$'
+  type: demonstration
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.1 Inégalités'
+  enonce: '$P(t)=E[(X+tY)^2]\ge0$ est un polynôme du second degré, donc son discriminant $4E[XY]^2-4E[X^2]E[Y^2]$ est négatif ou nul.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 50}
+  essentiel: false
+- id: proba-n-0091
+  titre: 'Inégalité de Hölder'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.2 Inégalités de Hölder et Minkowski'
+  enonce: 'Pour $p,q>1$ avec $\frac1p+\frac1q=1$ : $E[|XY|]\le E[|X|^p]^{1/p}E[|Y|^q]^{1/q}$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 51}
+  essentiel: true
+- id: proba-n-0092
+  titre: 'Inégalité de Minkowski'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.2 Inégalités de Hölder et Minkowski'
+  enonce: 'Pour $p\ge1$ : $E[|X+Y|^p]^{1/p}\le E[|X|^p]^{1/p}+E[|Y|^p]^{1/p}$ ; les variables à moment d''ordre $p$ forment un espace vectoriel.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 51}
+  essentiel: true
+- id: proba-n-0093
+  titre: 'Fonction de répartition d''un vecteur'
+  type: definition
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.3 Fonction de répartition'
+  enonce: '$F_X(t)=P(X_1\le t_1,\dots,X_n\le t_n)$ ; elle caractérise la loi, et $\partial_{x_1}\cdots\partial_{x_n}F_X=f_X$ si $f_X$ est continue.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 52}
+  essentiel: false
+- id: proba-n-0094
+  titre: 'Fonction caractéristique d''un vecteur'
+  type: definition
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.4 Fonction caractéristique'
+  enonce: '$\varphi_X(t)=E[e^{i\langle t,X\rangle}]$ pour $t\in\mathbb R^n$ ; uniformément continue, bornée par 1, et caractérise la loi.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 53}
+  essentiel: true
+- id: proba-n-0095
+  titre: 'Indépendance et fonction caractéristique'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.4 Fonction caractéristique'
+  enonce: '$X_1,\dots,X_n$ sont indépendantes ssi $\varphi_X(t_1,\dots,t_n)=\prod\varphi_{X_k}(t_k)$ ; si $X,Y$ indépendants, $\varphi_{X+Y}=\varphi_X\varphi_Y$ (réciproque fausse, exemple Cauchy).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 53}
+  essentiel: true
+- id: proba-n-0096
+  titre: 'Covariance'
+  type: definition
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.5 Covariance'
+  enonce: '$\mathrm{cov}(X,Y)=E[XY]-E[X]E[Y]=E[(X-E[X])(Y-E[Y])]$, pour $E[X^2],E[Y^2]<\infty$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 54}
+  essentiel: true
+- id: proba-n-0097
+  titre: 'Propriétés de la covariance ; indépendance implique décorrélation'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.5 Covariance'
+  enonce: '$\mathrm{cov}(X,X)=\mathrm{var}(X)$ ; symétrie ; $\mathrm{cov}(X+a,Y+b)=\mathrm{cov}(X,Y)$ ; $|\mathrm{cov}|\le\sqrt{\mathrm{var}X\,\mathrm{var}Y}$ ; indépendantes implique $\mathrm{cov}=0$ (réciproque fausse).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 54}
+  essentiel: true
+- id: proba-n-0098
+  titre: 'Exemple : variables décorrélées mais non indépendantes'
+  type: exemple
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.5 Covariance'
+  enonce: '$X\sim$ Bernoulli$(1/2)$, $Y$ uniforme sur $\{-1,1\}$ indépendante de $X$, $Z=XY$ : $\mathrm{cov}(X,Z)=0$ mais $\{X=0\}=\{Z=0\}$ donc non indépendantes.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 55}
+  essentiel: false
+- id: proba-n-0099
+  titre: 'Bilinéarité de la covariance et variance d''une somme'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.5 Covariance'
+  enonce: 'La covariance est une forme bilinéaire symétrique positive sur $L^2$ ; $\mathrm{var}(aX+bY)=a^2\mathrm{var}X+2ab\,\mathrm{cov}(X,Y)+b^2\mathrm{var}Y$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 55}
+  essentiel: true
+- id: proba-n-0100
+  titre: 'Matrice de covariance'
+  type: definition
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.5 Covariance'
+  enonce: '$\Gamma_X=(\mathrm{cov}(X_i,X_j))_{i,j}$ ; symétrique positive, et $\mathrm{var}(\sum\alpha_iX_i)=\alpha^T\Gamma_X\alpha$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 56}
+  essentiel: true
+- id: proba-n-0101
+  titre: 'Matrice de covariance non définie positive et liaison affine'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.5 Covariance'
+  enonce: '$\Gamma_X$ n''est pas définie positive ssi il existe $a\ne0$ et $b$ avec $a_1X_1+\dots+a_nX_n=b$ p.s.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 57}
+  essentiel: false
+- id: proba-n-0102
+  titre: 'Effet d''une application linéaire sur moyenne et covariance'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.5 Covariance'
+  enonce: 'Pour $Y=AX$ : $\mu_Y=A\mu_X$ et $\Gamma_Y=A\Gamma_XA^T$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 57}
+  essentiel: true
+- id: proba-n-0103
+  titre: 'Corrélation'
+  type: definition
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.2.5 Covariance'
+  enonce: '$\mathrm{cor}(X,Y)=\frac{\mathrm{cov}(X,Y)}{\sqrt{\mathrm{var}X\,\mathrm{var}Y}}\in[-1,1]$, égale à $\pm1$ ssi liaison affine presque sûre ; $\mathrm{cor}(aX+b,cY+d)=\mathrm{signe}(ac)\,\mathrm{cor}(X,Y)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 58}
+  essentiel: true
+- id: proba-n-0104
+  titre: 'Densité gaussienne centrée réduite et ses moments'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.1 Loi gaussienne sur R'
+  enonce: '$f(x)=e^{-x^2/2}/\sqrt{2\pi}$ est une densité ; $E[X^{2k}]=\frac{(2k)!}{2^kk!}$, $E[X^{2k+1}]=0$, donc $E[X]=0$, $\mathrm{var}(X)=1$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 59}
+  essentiel: true
+- id: proba-n-0105
+  titre: 'Démonstration que $f$ est une densité (passage en polaires)'
+  type: demonstration
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.1 Loi gaussienne sur R'
+  enonce: 'On calcule $(\int f)^2=\frac1{2\pi}\int_{\mathbb R^2}e^{-(x^2+y^2)/2}$ par Fubini-Tonelli puis changement de variables en polaires.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 59}
+  essentiel: false
+- id: proba-n-0106
+  titre: 'Moment exponentiel de la gaussienne centrée réduite'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.1 Loi gaussienne sur R'
+  enonce: 'Pour tout $\lambda\in\mathbb C$, $E[e^{\lambda X}]=e^{\lambda^2/2}$ ; en particulier $\varphi_X(t)=e^{-t^2/2}$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 60}
+  essentiel: true
+- id: proba-n-0107
+  titre: 'Loi gaussienne $\mathcal N(m,\sigma^2)$'
+  type: definition
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.1 Loi gaussienne sur R'
+  enonce: '$Y=m+\sigma X$ ; $E[e^{\lambda Y}]=e^{\lambda m+\lambda^2\sigma^2/2}$, $\varphi_Y(t)=e^{imt-\sigma^2t^2/2}$ ; les constantes sont gaussiennes (variance nulle).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 60}
+  essentiel: true
+- id: proba-n-0108
+  titre: 'Densité de $\mathcal N(m,\sigma^2)$'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.1 Loi gaussienne sur R'
+  enonce: 'Si $\sigma>0$, $f_Y(y)=\frac{e^{-(y-m)^2/(2\sigma^2)}}{\sqrt{2\pi\sigma^2}}$ (par dérivation de la fonction de répartition).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 61}
+  essentiel: true
+- id: proba-n-0109
+  titre: 'Somme de gaussiennes indépendantes'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.2 Définition d''un vecteur gaussien'
+  enonce: 'Si $X_i\sim\mathcal N(\mu_i,\sigma_i^2)$ sont indépendantes, $\sum\alpha_iX_i\sim\mathcal N(\sum\alpha_i\mu_i,\sum\alpha_i^2\sigma_i^2)$ (preuve par fonctions caractéristiques).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 61}
+  essentiel: true
+- id: proba-n-0110
+  titre: 'Vecteur gaussien'
+  type: definition
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.2 Définition d''un vecteur gaussien'
+  enonce: '$X$ est gaussien si pour tout $\alpha\in\mathbb R^n$, $\langle\alpha,X\rangle=\sum\alpha_iX_i$ suit une loi gaussienne ; les vecteurs constants sont gaussiens.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 62}
+  essentiel: true
+- id: proba-n-0111
+  titre: 'Marginales d''un vecteur gaussien (réciproque fausse)'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.3 Propriétés'
+  enonce: 'Les composantes d''un vecteur gaussien sont gaussiennes. Contre-exemple à la réciproque : $X\sim\mathcal N(0,1)$, $Z=XY$ avec $Y=\pm1$ : $(X,Z)$ n''est pas gaussien.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 62}
+  essentiel: true
+- id: proba-n-0112
+  titre: 'Fonction caractéristique d''un vecteur gaussien'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.3 Propriétés'
+  enonce: '$\varphi_X(t)=\exp\left(i\langle t,\mu_X\rangle-\frac12\langle t,\Gamma_Xt\rangle\right)$ ; la loi est caractérisée par $\mu_X$ et $\Gamma_X$, notée $\mathcal N(\mu_X,\Gamma_X)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 63}
+  essentiel: true
+- id: proba-n-0113
+  titre: 'Image affine d''un vecteur gaussien'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.3 Propriétés'
+  enonce: 'Si $X\sim\mathcal N(\mu_X,\Gamma_X)$, alors $AX+b\sim\mathcal N(A\mu_X+b,A\Gamma_XA^T)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 63}
+  essentiel: true
+- id: proba-n-0114
+  titre: 'Existence d''un vecteur gaussien de moyenne et covariance données'
+  type: propriete
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.3 Propriétés'
+  enonce: 'Pour $\mu\in\mathbb R^n$ et $\Gamma$ symétrique positive, il existe un vecteur gaussien de moyenne $\mu$ et covariance $\Gamma$ (diagonalisation $\Gamma=ODO^{-1}$, $Y=OX+\mu$).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 63}
+  essentiel: true
+- id: proba-n-0115
+  titre: 'Densité d''un vecteur gaussien'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.3 Propriétés'
+  enonce: 'Si $\Gamma_X$ est définie positive, $f_X(x)=\frac1{\sqrt{(2\pi)^n\det\Gamma_X}}\exp\left(-\frac12\langle x-\mu_X,\Gamma_X^{-1}(x-\mu_X)\rangle\right)$ ; sinon la loi n''a pas de densité (rang $<n$).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 64}
+  essentiel: true
+- id: proba-n-0116
+  titre: 'Indépendance et décorrélation pour un vecteur gaussien'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  sous_chapitre: '4.3.3 Propriétés'
+  enonce: 'Pour un vecteur gaussien, $X_1,\dots,X_n$ sont indépendantes ssi décorrélées (faux si elles sont seulement gaussiennes individuellement) ; vrai aussi pour deux sous-vecteurs.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 65}
+  essentiel: true
+- id: proba-n-0117
+  titre: 'Lemme de Borel-Cantelli'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.1 Le lemme de Borel-Cantelli'
+  enonce: 'Si $\sum P(A_n)<\infty$ alors $P(\limsup A_n)=0$ ; si les $A_n$ sont indépendants et $\sum P(A_n)=\infty$, alors $P(\limsup A_n)=1$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 67}
+  essentiel: true
+- id: proba-n-0118
+  titre: 'Démonstration de la 2e partie de Borel-Cantelli (majoration $1-x\le e^{-x}$)'
+  type: demonstration
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.1 Le lemme de Borel-Cantelli'
+  enonce: 'Par indépendance $P(\cup_{k=n}^mA_k)=1-\prod(1-P(A_k))\ge1-\exp(-\sum P(A_k))$, puis continuité monotone.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 68}
+  essentiel: false
+- id: proba-n-0119
+  titre: 'Convergence en probabilité'
+  type: definition
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.1 Convergence en probabilité'
+  enonce: '$X_n\xrightarrow{P}X$ si $\forall\varepsilon>0$, $\lim_nP(\|X_n-X\|>\varepsilon)=0$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 68}
+  essentiel: true
+- id: proba-n-0120
+  titre: 'Propriétés de la convergence en probabilité'
+  type: propriete
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.1 Convergence en probabilité'
+  enonce: 'Limite unique p.s. ; stabilité par couple, par $f$ continue, et par combinaison linéaire $\alpha X_n+\beta Y_n\to\alpha X+\beta Y$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 69}
+  essentiel: true
+- id: proba-n-0121
+  titre: 'Convergence presque sûre'
+  type: definition
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.2 Convergence presque sûre'
+  enonce: '$X_n\to X$ p.s. s''il existe un ensemble négligeable $N$ tel que $X_n(\omega)\to X(\omega)$ pour tout $\omega\notin N$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 70}
+  essentiel: true
+- id: proba-n-0122
+  titre: 'Propriétés de la convergence presque sûre'
+  type: propriete
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.2 Convergence presque sûre'
+  enonce: 'Unicité p.s. de la limite ; stabilité par $f$ continue, par couple et par combinaison linéaire.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 71}
+  essentiel: true
+- id: proba-n-0123
+  titre: 'Convergence p.s. implique convergence en probabilité'
+  type: propriete
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.2 Convergence presque sûre'
+  enonce: 'Si $X_n\to X$ p.s. alors $X_n\xrightarrow{P}X$ (convergence dominée sur $\mathbf 1_{\|X-X_n\|>\varepsilon}$).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 71}
+  essentiel: true
+- id: proba-n-0124
+  titre: 'Critère de convergence p.s. par sommabilité (conséquence de Borel-Cantelli)'
+  type: propriete
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.2 Convergence presque sûre'
+  enonce: 'Si $\sum_nP(\|X_n-X\|\ge\varepsilon)<\infty$ pour tout $\varepsilon>0$, alors $X_n\to X$ p.s.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 72}
+  essentiel: true
+- id: proba-n-0125
+  titre: 'Convergence en moyenne d''ordre $p$'
+  type: definition
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.3 Convergence en moyenne d''ordre p'
+  enonce: '$\lim_nE[\|X_n-X\|^p]=0$ ; $p=1$ : convergence en moyenne, $p=2$ : convergence en moyenne quadratique.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 72}
+  essentiel: true
+- id: proba-n-0126
+  titre: 'Propriétés de la convergence en moyenne d''ordre $p$'
+  type: propriete
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.3 Convergence en moyenne d''ordre p'
+  enonce: 'Unicité p.s. de la limite (Minkowski) ; stable par $f$ uniformément continue (pas seulement continue), par couple et combinaison linéaire.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 73}
+  essentiel: false
+- id: proba-n-0127
+  titre: 'Conséquences de la convergence en moyenne d''ordre $p$'
+  type: propriete
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.3 Convergence en moyenne d''ordre p'
+  enonce: 'Convergence en moyenne d''ordre $q\le p$ ; $E[\|X_n\|^p]\to E[\|X\|^p]$ ; pour des variables réelles et $p$ entier, $E[X_n^p]\to E[X^p]$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 74}
+  essentiel: true
+- id: proba-n-0128
+  titre: 'Convergence en moyenne d''ordre $p$ implique convergence en probabilité'
+  type: propriete
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.3 Convergence en moyenne d''ordre p'
+  enonce: '$P(\|X-X_n\|>\varepsilon)\le E[\|X-X_n\|^p]/\varepsilon^p$ (Markov).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 74}
+  essentiel: true
+- id: proba-n-0129
+  titre: 'Convergence en probabilité plus bornitude uniforme implique convergence en moyenne'
+  type: propriete
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.3 Convergence en moyenne d''ordre p'
+  enonce: 'Si $X_n\xrightarrow{P}X$ et $\|X_n\|\le A$ p.s. pour tout $n$, alors $X_n\to X$ en moyenne d''ordre $p$ pour tout $p\ge1$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 74}
+  essentiel: false
+- id: proba-n-0130
+  titre: 'Loi faible des grands nombres'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.4 Lois des grands nombres'
+  enonce: 'Si les $X_n\in L^2$ ont même moyenne $\mu$, variances bornées par $M$ et sont deux à deux décorrélées, alors $\bar X_n\to\mu$ en moyenne quadratique, avec $\mathrm{var}(\bar X_n)\le M/n$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 75}
+  essentiel: true
+- id: proba-n-0131
+  titre: 'Variables i.i.d.'
+  type: definition
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.4 Lois des grands nombres'
+  enonce: 'Variables indépendantes et de même loi.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 76}
+  essentiel: true
+- id: proba-n-0132
+  titre: 'Loi forte des grands nombres'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.2.4 Lois des grands nombres'
+  enonce: 'Si $(X_n)$ sont i.i.d. avec $E[|X_1|]<\infty$, alors $\bar X_n\to E[X_1]$ presque sûrement ; si $E[|X_1|]=\infty$, il n''y a pas de limite finie p.s.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 76}
+  essentiel: true
+- id: proba-n-0133
+  titre: 'Convergence en loi'
+  type: definition
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.1 Convergence en loi'
+  enonce: '$X_n\xrightarrow{L}X$ si $E[f(X_n)]\to E[f(X)]$ pour toute $f$ continue bornée ; la loi limite est unique, pas la variable limite.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 77}
+  essentiel: true
+- id: proba-n-0134
+  titre: 'Convergence en loi et image continue'
+  type: propriete
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.1 Convergence en loi'
+  enonce: 'Si $X_n\xrightarrow{L}X$ et $f$ est continue, alors $f(X_n)\xrightarrow{L}f(X)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 77}
+  essentiel: true
+- id: proba-n-0135
+  titre: 'Convergence en probabilité implique convergence en loi (hiérarchie des convergences)'
+  type: propriete
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.1 Convergence en loi'
+  enonce: 'Si $X_n\xrightarrow{P}X$ alors $X_n\xrightarrow{L}X$ ; donc p.s. et moyenne d''ordre $p$ impliquent aussi la loi, qui est la plus faible.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 78}
+  essentiel: true
+- id: proba-n-0136
+  titre: 'Lemme de Scheffé (1) : cas discret'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.2 Caractériser la convergence en loi'
+  enonce: 'Pour des variables à valeurs dans $\mathbb Z$ : $X_n\xrightarrow{L}X$ ssi $P(X_n=k)\to P(X=k)$ pour tout $k$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 78}
+  essentiel: true
+- id: proba-n-0137
+  titre: 'Exemple : binomiale$(n,\lambda/n)$ converge en loi vers Poisson$(\lambda)$'
+  type: exemple
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.2 Caractériser la convergence en loi'
+  enonce: '$P(X_n=k)\to e^{-\lambda}\lambda^k/k!$ pour tout $k$ ; la somme limite doit être égale à 1 (contre-exemple $X_n=n$).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 78}
+  essentiel: true
+- id: proba-n-0138
+  titre: 'Lemme de Scheffé (2) : cas à densité'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.2 Caractériser la convergence en loi'
+  enonce: 'Si $f_n\to f$ presque partout, alors $X_n\xrightarrow{L}X$ (condition suffisante, non nécessaire).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 79}
+  essentiel: true
+- id: proba-n-0139
+  titre: 'Convergence en loi et fonctions de répartition'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.2 Caractériser la convergence en loi'
+  enonce: '$X_n\xrightarrow{L}X$ ssi $F_n(x)\to F(x)$ en tout point $x$ de continuité de $F$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 80}
+  essentiel: true
+- id: proba-n-0140
+  titre: 'Exemple : $n\min(X_1,\dots,X_n)$ converge en loi vers une exponentielle de paramètre 1'
+  type: exemple
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.2 Caractériser la convergence en loi'
+  enonce: 'Pour $X_i$ i.i.d. uniformes sur $[0,1]$, $F_{Y_n}(t)=1-(1-t/n)^n\to1-e^{-t}$ pour $t\ge0$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 80}
+  essentiel: false
+- id: proba-n-0141
+  titre: 'Théorème de Lévy'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.2 Caractériser la convergence en loi'
+  enonce: '$X_n\xrightarrow{L}X$ ssi $\varphi_n(x)\to\varphi(x)$ en tout $x\in\mathbb R^d$ (admis).'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 81}
+  essentiel: true
+- id: proba-n-0142
+  titre: 'Théorème central limite'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.3 Le théorème central limite'
+  enonce: 'Pour $(X_n)$ i.i.d. dans $L^2$, $\mu=E[X_1]$, $\sigma^2=\mathrm{var}(X_1)$ : $\sqrt n(\bar X_n-\mu)\xrightarrow{L}Z\sim\mathcal N(0,\sigma^2)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 81}
+  essentiel: true
+- id: proba-n-0143
+  titre: 'Démonstration du TCL par fonctions caractéristiques et théorème de Lévy'
+  type: demonstration
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.3 Le théorème central limite'
+  enonce: 'Avec $Z_k=X_k-\mu$ : $\varphi_{Z_1}(s)=1-\frac{\sigma^2}2s^2+o(s^2)$, donc $\varphi(t)=\varphi_{Z_1}(t/\sqrt n)^n\to e^{-\sigma^2t^2/2}$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 81}
+  essentiel: true
+- id: proba-n-0144
+  titre: 'Théorème central limite vectoriel'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Convergences'
+  sous_chapitre: '5.3.3 Le théorème central limite'
+  enonce: 'Pour $X^{(n)}$ i.i.d. dans $\mathbb R^d$ de moyenne $\mu$ et covariance $\Gamma$ : $\sqrt n\left(\frac1n\sum X^{(i)}-\mu\right)\xrightarrow{L}Z\sim\mathcal N(0,\Gamma)$.'
+  source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 82}
+  essentiel: true

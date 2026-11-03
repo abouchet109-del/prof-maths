@@ -1,0 +1,80 @@
+# Couverture du paquet Anki pour modelisation (jugee sur les rectos).
+# Bilan : 0 couverte, 3 partielle, 72 absente.
+mod-n-0001: {statut: absente, notes: []}
+mod-n-0002: {statut: absente, notes: []}
+mod-n-0003: {statut: absente, notes: []}
+mod-n-0004: {statut: absente, notes: []}
+mod-n-0005: {statut: absente, notes: []}
+mod-n-0006: {statut: absente, notes: []}
+# Rectos 3.04, 3.08, 3.13, 3.10 : esperance et variance de Bernoulli, binomiale, Poisson, geometrique (valeurs). Manque : leur obtention par derivation de la fonction generatrice.
+mod-n-0007: {statut: partielle, notes: [1678378265963, 1678378658446, 1678461334109, 1678378883572]}
+mod-n-0008: {statut: absente, notes: []}
+mod-n-0009: {statut: absente, notes: []}
+mod-n-0010: {statut: absente, notes: []}
+mod-n-0011: {statut: absente, notes: []}
+mod-n-0012: {statut: absente, notes: []}
+# Recto 5.1 : inegalite de Markov (l'outil). Manque : son application a P(Z_n>=1) <= m^n et la conclusion d'extinction p.s.
+mod-n-0013: {statut: partielle, notes: [1684254987730]}
+mod-n-0014: {statut: absente, notes: []}
+mod-n-0015: {statut: absente, notes: []}
+mod-n-0016: {statut: absente, notes: []}
+mod-n-0017: {statut: absente, notes: []}
+mod-n-0018: {statut: absente, notes: []}
+mod-n-0019: {statut: absente, notes: []}
+mod-n-0020: {statut: absente, notes: []}
+mod-n-0021: {statut: absente, notes: []}
+mod-n-0022: {statut: absente, notes: []}
+mod-n-0023: {statut: absente, notes: []}
+mod-n-0024: {statut: absente, notes: []}
+mod-n-0025: {statut: absente, notes: []}
+mod-n-0026: {statut: absente, notes: []}
+mod-n-0027: {statut: absente, notes: []}
+mod-n-0028: {statut: absente, notes: []}
+mod-n-0029: {statut: absente, notes: []}
+mod-n-0030: {statut: absente, notes: []}
+mod-n-0031: {statut: absente, notes: []}
+mod-n-0032: {statut: absente, notes: []}
+mod-n-0033: {statut: absente, notes: []}
+mod-n-0034: {statut: absente, notes: []}
+mod-n-0035: {statut: absente, notes: []}
+mod-n-0036: {statut: absente, notes: []}
+mod-n-0037: {statut: absente, notes: []}
+mod-n-0038: {statut: absente, notes: []}
+mod-n-0039: {statut: absente, notes: []}
+mod-n-0040: {statut: absente, notes: []}
+mod-n-0041: {statut: absente, notes: []}
+mod-n-0042: {statut: absente, notes: []}
+mod-n-0043: {statut: absente, notes: []}
+mod-n-0044: {statut: absente, notes: []}
+mod-n-0045: {statut: absente, notes: []}
+mod-n-0046: {statut: absente, notes: []}
+mod-n-0047: {statut: absente, notes: []}
+mod-n-0048: {statut: absente, notes: []}
+mod-n-0049: {statut: absente, notes: []}
+mod-n-0050: {statut: absente, notes: []}
+mod-n-0051: {statut: absente, notes: []}
+mod-n-0052: {statut: absente, notes: []}
+mod-n-0053: {statut: absente, notes: []}
+mod-n-0054: {statut: absente, notes: []}
+mod-n-0055: {statut: absente, notes: []}
+mod-n-0056: {statut: absente, notes: []}
+mod-n-0057: {statut: absente, notes: []}
+mod-n-0058: {statut: absente, notes: []}
+mod-n-0059: {statut: absente, notes: []}
+mod-n-0060: {statut: absente, notes: []}
+mod-n-0061: {statut: absente, notes: []}
+mod-n-0062: {statut: absente, notes: []}
+mod-n-0063: {statut: absente, notes: []}
+mod-n-0064: {statut: absente, notes: []}
+mod-n-0065: {statut: absente, notes: []}
+# Rectos : methode pour retrouver la loi d'Erlang (ch.05) et densite de la loi gamma (ch.03.2). Manque : enonce T_n somme de n exponentielles de parametre lambda suit gamma(n, lambda), et l'usage P(N_t=n)=P(T_n<=t)-P(T_{n+1}<=t).
+mod-n-0066: {statut: partielle, notes: [1732717276071, 1728571758321]}
+mod-n-0067: {statut: absente, notes: []}
+mod-n-0068: {statut: absente, notes: []}
+mod-n-0069: {statut: absente, notes: []}
+mod-n-0070: {statut: absente, notes: []}
+mod-n-0071: {statut: absente, notes: []}
+mod-n-0072: {statut: absente, notes: []}
+mod-n-0073: {statut: absente, notes: []}
+mod-n-0074: {statut: absente, notes: []}
+mod-n-0075: {statut: absente, notes: []}

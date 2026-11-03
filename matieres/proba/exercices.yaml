@@ -1,0 +1,1574 @@
+- id: pro-td1-ex01
+  titre: Bornes sur P(A∩B) pour P(A)=3/4, P(B)=1/3
+  enonce: |
+    Soit $(\Omega,\mathbb{P})$ un espace de probabilité. Soit $A$ et $B$ des événements tels que $\mathbb{P}(A)=\frac34$ et $\mathbb{P}(B)=\frac13$.
+
+    1. Montrer que $\frac1{12}\le \mathbb{P}(A\cap B)\le\frac13$.
+    2. Soit $\Omega=\{1,2,\dots,12\}$ et $\mathbb{P}$ la probabilité uniforme sur $\Omega$. Proposer des exemples d'événements $A$ et $B$ vérifiant les hypothèses et tels que $\mathbb{P}(A\cap B)$ atteigne les bornes ci-dessus.
+    3. Donner des bornes correspondantes pour $\mathbb{P}(A\cup B)$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td1.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td1-ex02
+  titre: Existence d'une probabilité sur {a,b,c}
+  enonce: |
+    À quelle(s) condition(s) sur $x,y\in\mathbb{R}$ existe-t-il une probabilité sur $\Omega=\{a,b,c\}$ vérifiant $\mathbb{P}(\{a,b\})=x$ et $\mathbb{P}(\{b,c\})=y$ ?
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td1.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td1-ex03
+  titre: Inégalité de Bonferroni et tentatives de pénalités
+  enonce: |
+    1. Soit $A,B$ deux événements d'un espace de probabilité $\Omega$. Montrer l'inégalité $\mathbb{P}(A\cap B)\ge \mathbb{P}(A)+\mathbb{P}(B)-1$.
+    2. Soit $A_1,\dots,A_n$ une famille finie d'événements. Montrer l'inégalité :
+       $$\mathbb{P}(A_1\cap\dots\cap A_n)\ge \mathbb{P}(A_1)+\dots+\mathbb{P}(A_n)-n+1.$$
+       Aide : on pourra procéder par récurrence.
+    3. Dans une école de rugby, les joueurs passent un test consistant à marquer des pénalités. Chacun a deux tentatives. On constate que $72\%$ des joueurs ont marqué à la première tentative et $65\%$ ont marqué à la seconde. Montrer que la probabilité qu'un joueur ait marqué aux deux tentatives est supérieure à $37\%$. On déterminera d'abord l'espace des épreuves.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td1.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td1-ex04
+  titre: Inégalités de Bonferroni pour une réunion
+  enonce: |
+    Soit $A_1,\dots,A_n$ une famille d'événements d'un espace de probabilité $(\Omega,\mathbb{P})$. Montrer que
+    $$\mathbb{P}\Big(\bigcup_{i=1}^n A_i\Big)\ge\sum_{i=1}^n\mathbb{P}(A_i)-\sum_{1\le i<j\le n}\mathbb{P}(A_i\cap A_j)$$
+    et que
+    $$\mathbb{P}\Big(\bigcup_{i=1}^n A_i\Big)\le\sum_{i=1}^n\mathbb{P}(A_i)-\sum_{1\le i<j\le n}\mathbb{P}(A_i\cap A_j)+\sum_{1\le i<j<k\le n}\mathbb{P}(A_i\cap A_j\cap A_k).$$
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td1.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td1-ex05
+  titre: Limite supérieure d'événements et inégalité de Fatou
+  enonce: |
+    Soit $(A_i,\ i\ge1)$ une famille dénombrable d'événements. On définit l'événement $\limsup_{i\to+\infty}A_i$ comme l'ensemble de toutes les observations contenues dans un nombre infini de $A_i$.
+
+    1. Montrer l'égalité $\displaystyle\limsup_{i\to+\infty}A_i=\bigcap_{i=1}^{+\infty}\Big(\bigcup_{j=i}^{+\infty}A_j\Big)$.
+    2. Montrer la relation suivante (où $\liminf_{i\to+\infty}B_i:=\bigcup_{i=1}^{+\infty}\bigcap_{j=i}^{+\infty}B_j$) :
+       $$\Big(\limsup_{i\to+\infty}A_i\Big)^c=\liminf_{i\to+\infty}A_i^c.$$
+    3. Calculer $\limsup_{i\to+\infty}A_i$ dans les cas suivants :
+       1. $A_{2i}=F$ et $A_{2i+1}=G$ pour tout $i\ge1$, où $F$ et $G$ sont deux ensembles fixés.
+       2. $A_i=\left]-\infty,\frac{(-1)^i}{i}\right]$ pour tout $i\ge1$.
+       3. $A_i=\left[\frac{(-1)^i}{i},+\infty\right[$ pour tout $i\ge1$.
+    4. Montrer l'inégalité de Fatou :
+       $$\lim_{k\to+\infty}\Big(\sup_{i\ge k}\mathbb{P}(A_i)\Big)\le\mathbb{P}\Big(\limsup_{i\to+\infty}A_i\Big).$$
+       Proposer un exemple où il y a égalité et un exemple où l'inégalité est stricte.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td1.pdf
+    page: 1
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td1-ex06
+  titre: Strikes au bowling (loi binomiale)
+  enonce: |
+    Au bowling, Pierre a une probabilité $3/4$ de faire tomber toutes les quilles (« strike »). Dans une soirée, il lance 18 boules et on considère les lancers indépendants. Soit $X$ la variable aléatoire égale au nombre de « strike » réussis par Pierre.
+
+    1. Quelle est la loi de $X$ ?
+    2. Calculer la probabilité pour que Pierre réussisse dix « strike ».
+    3. Quelle est l'espérance du nombre de « strike » réussis dans une soirée, sa variance ?
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td1.pdf
+    page: 2
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td1-ex07
+  titre: Le trousseau de clefs (loi géométrique)
+  enonce: |
+    Un trousseau de 10 clefs comporte une seule clef ouvrant un appartement. Un ivrogne veut ouvrir la porte de cet appartement. Chaque fois qu'il tire une clef et qu'elle ne convient pas, il la remet dans le trousseau. Soit $X$ le nombre de tirages à effectuer avant d'ouvrir.
+
+    1. Calculer la loi de $X$ ainsi que son espérance et sa variance.
+    2. Quel est le nombre minimal de tentatives que doit faire cet homme pour être sûr d'ouvrir la porte avec une probabilité supérieure à $1/2$ ?
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td1.pdf
+    page: 2
+    numero: Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td1-ex08
+  titre: Gagnants du loto (approximation de Poisson)
+  enonce: |
+    La probabilité d'avoir coché les 6 bons numéros au loto vaut $7{,}2\cdot10^{-8}$. Le nombre de joueurs qui s'apprêtent à jouer samedi prochain est de 12 millions. Soit $X$ le nombre de gagnants du gros lot.
+
+    1. Par quelle loi de probabilité peut-on approcher la loi de $X$ ?
+    2. Quelle est la probabilité qu'il n'y ait aucun gagnant ? plus de deux gagnants ?
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td1.pdf
+    page: 2
+    numero: Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td1-ex09
+  titre: Anniversaires le même jour (approximation de Poisson)
+  enonce: |
+    Pour fêter ses vingt ans, un étudiant de licence invite l'ensemble de sa promotion et de ses enseignants à une soirée. Le nombre des présents s'élève à 324. Soit $X$ le nombre de personnes qui ont leur anniversaire le même jour que leur hôte.
+
+    1. Par quelle loi de probabilité peut-on approcher la loi de $X$ ?
+    2. Quelle est la probabilité qu'il n'y ait aucun invité né le même jour que l'étudiant ? qu'il y en ait un autre ?
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td1.pdf
+    page: 2
+    numero: Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td1-ex10
+  titre: Limite inférieure d'événements et inégalité de Fatou
+  enonce: |
+    Soit $(A_i,\ i\ge1)$ une famille dénombrable d'événements. On définit l'événement $\liminf_{i\to+\infty}A_i$ comme l'ensemble de toutes les observations contenues dans tous les $A_i$ à l'exception éventuelle d'un nombre fini d'entre eux.
+
+    1. Montrer l'égalité $\displaystyle\liminf_{i\to+\infty}A_i=\bigcup_{i=1}^{+\infty}\Big(\bigcap_{j=i}^{+\infty}A_j\Big)$.
+    2. Montrer la relation suivante avec $\limsup_{i\to+\infty}A_i$ : $\displaystyle\liminf_{i\to+\infty}A_i\subset\limsup_{i\to+\infty}A_i$.
+    3. Calculer $\liminf_{i\to+\infty}A_i$ dans les cas suivants :
+       1. $A_{2i}=F$ et $A_{2i+1}=G$ pour tout $i\ge1$, où $F$ et $G$ sont deux ensembles fixés.
+       2. $A_i=\left]-\infty,\frac{(-1)^i}{i}\right]$ pour tout $i\ge1$.
+       3. $A_i=\left[\frac{(-1)^i}{i},+\infty\right[$ pour tout $i\ge1$.
+    4. Montrer l'inégalité de Fatou :
+       $$\mathbb{P}\Big(\liminf_{i\to+\infty}A_i\Big)\le\lim_{k\to+\infty}\Big(\inf_{i\ge k}\mathbb{P}(A_i)\Big).$$
+       Proposer un exemple où il y a égalité et un exemple où l'inégalité est stricte.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td1.pdf
+    page: 2
+    numero: Ex 10
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td2-ex01
+  titre: Support de lois dérivées d'une exponentielle
+  enonce: |
+    Soit $X$ une variable aléatoire de loi exponentielle de paramètre $\lambda>0$. Déterminer le support de la loi de :
+
+    1. $X$
+    2. $\frac1X$
+    3. $\frac1{1+X}$
+    4. $\lfloor X\rfloor$
+    5. $\frac1{1+\lfloor X\rfloor}$
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td2.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td2-ex02
+  titre: Changements de variable à partir d'une uniforme
+  enonce: |
+    Soit $U$ une variable aléatoire de loi uniforme sur $[0,1]$ de densité $f(x)=\mathbf 1_{[0,1]}(x)$.
+
+    1. Soient $a,b\in\mathbb{R}$, déterminer la densité de la variable $X=aU+b$ ainsi que son espérance et sa variance.
+    2. Déterminer la densité de la variable $|X|$ pour $a=3$ et $b=-2$.
+    3. Déterminer la densité de la variable $Y=\tan(|2U-1|\pi/2)$. L'espérance de $Y$ existe-t-elle ?
+    4. Soit $\lambda>0$. Déterminer la densité de la variable $Z=-\frac1\lambda\ln(U)$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td2.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td2-ex03
+  titre: Lois de fonctions d'une variable uniforme
+  enonce: |
+    1. Soit $X$ une variable aléatoire qui suit une loi uniforme sur $[0;1]$. Déterminer la loi de la variable $Y=aX+b$, avec $a,b\in\mathbb{R}$.
+    2. Soit $X$ une variable aléatoire qui suit une loi uniforme sur $[-1;3/2]$. Déterminer la loi de la variable $Y=X^2$.
+    3. Soit $X$ une variable aléatoire qui suit une loi uniforme sur $[-1;1]$. Déterminer la loi de la variable $Y=\exp\left(\frac1X\right)$.
+    4. Soit $X$ une variable aléatoire qui suit une loi uniforme sur $[0;\pi]$. Déterminer la loi de la variable $Y=\sin(X)$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td2.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td2-ex04
+  titre: 'Loi normale centrée réduite : transformations et moments'
+  enonce: |
+    Soit $X$ une variable aléatoire qui suit une loi $\mathcal N(0,1)$.
+
+    1. Quelle est la loi de la variable $aX+b$, $a,b\in\mathbb{R}$ ?
+    2. Calculer par récurrence $\mathbb{E}[X^n]$ pour $n\ge1$.
+    3. On pose $Y=e^{X+1}$. Déterminer une densité de $Y$ et l'espérance de $Y$.
+    4. On pose $Z=X^2+2X$. Déterminer la loi de $Z$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td2.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td2-ex05
+  titre: Support de lois dérivées d'une gaussienne
+  enonce: |
+    Soit $X$ une variable gaussienne centrée réduite. Déterminer le support de la loi de :
+
+    1. $X$
+    2. $\frac1{X^2}$
+    3. $\arctan X$
+    4. $\lfloor X\rfloor$
+    5. $\arctan\lfloor X\rfloor$
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td2.pdf
+    page: 1
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td2-ex06
+  titre: Fonction Gamma et loi Gamma
+  enonce: |
+    On définit la fonction Gamma par
+    $$\Gamma:x\mapsto\int_0^\infty t^{x-1}e^{-t}\,dt$$
+    et, pour deux paramètres $p,\theta>0$, la fonction
+    $$f_{p,\theta}:t\mapsto\frac{\theta^p}{\Gamma(p)}e^{-\theta t}t^{p-1}\mathbf 1_{t>0}.$$
+
+    1. Justifier que la fonction $\Gamma$ est bien définie sur $\mathbb{R}_+^*$.
+    2. Montrer que $\Gamma(x+1)=x\Gamma(x)$, pour tout $x>0$. En déduire que pour tout $n\in\mathbb{N}$, $\Gamma(n+1)=n!$.
+    3. Montrer que $f_{p,\theta}$ définit bien une densité d'une loi de probabilité sur $\mathbb{R}$. On l'appelle loi Gamma, notée $\gamma(p,\theta)$. Calculer l'espérance et la variance d'une variable aléatoire $X$ suivant la loi $\gamma(p,\theta)$.
+    4. Soit $Z$ une variable aléatoire $\mathcal N(0,1)$. Calculer une densité de la variable $Z^2$. Quelle est la loi de $Z^2$ ? Montrer aussi que $\Gamma(1/2)=\sqrt\pi$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td2.pdf
+    page: 2
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td2-ex07
+  titre: Densité affine sur [-1,2] et loi de |X|
+  enonce: |
+    Soit $a$ un réel et $f:\mathbb{R}\to\mathbb{R}$ définie pour $x\in\mathbb{R}$ par $f(x)=a(x-2)\mathbf 1_{[-1;2]}(x)$.
+
+    1. Pour quelle valeur de $a$, $f$ est-elle la densité d'une loi de probabilité d'une variable $X$ ?
+    2. Soit $Y$ la variable aléatoire donnée par : $Y=|X|$. Déterminer la loi de $Y$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td2.pdf
+    page: 2
+    numero: Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td2-ex08
+  titre: Transformations d'une loi de Cauchy
+  enonce: |
+    1. Soit $X$ une variable aléatoire suivant une loi de Cauchy de densité $f(x)=\frac1{\pi(1+x^2)}$ ($x\in\mathbb{R}$). Déterminer les lois des variables suivantes : $\frac1X$, $\frac{1+X}{1-X}$, $X^2$ et $\frac{1-X^2}{1+X^2}$.
+    2. Lesquelles de ces variables aléatoires admettent une espérance finie ou infinie ?
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td2.pdf
+    page: 2
+    numero: Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td2-ex09
+  titre: Invariance de la loi de Gauss (application de Gauss)
+  enonce: |
+    Montrer que si $X$ est une v.a. de loi de densité $\frac1{\ln2}\frac1{1+x}\mathbf 1_{[0,1]}(x)$, alors la v.a. $Y=\frac1X-\left\lfloor\frac1X\right\rfloor$ a même loi que $X$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td2.pdf
+    page: 2
+    numero: Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td3-ex01
+  titre: Inégalité de Markov raffinée et o(1/t)
+  enonce: |
+    Soit $X$ une variable aléatoire réelle, définie sur un espace de probabilité $(\Omega,\mathbb{P})$.
+
+    1. Après avoir justifié l'existence du terme de droite, montrer l'inégalité : pour tout $t>0$ on a $t\,\mathbb{P}(X\ge t)\le\mathbb{E}[X\mathbf 1_{X\ge t}]$.
+    2. En déduire que si $X$ admet une espérance finie, alors $\mathbb{P}(X\ge t)=o\left(\frac1t\right)$ en $+\infty$.
+    3. En déduire, sous les mêmes hypothèses : $\mathbb{P}(|X|\ge t)=o\left(\frac1t\right)$ en $+\infty$.
+    4. Et que conclure si $\mathbb{E}[|X|^n]<+\infty$ ? ($n\in\mathbb{N}^*$)
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td3.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td3-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td3-ex02
+  titre: Inégalité de Chernov
+  enonce: |
+    Soit $t\in\mathbb{R}$ et $X$ une variable aléatoire réelle. Montrer l'inégalité de Chernov :
+    $$\mathbb{P}(X\ge t)\le\inf_{\lambda>0}\mathbb{E}\left[e^{\lambda X}\right]e^{-\lambda t}.$$
+    Dans le cas où $X$ suit une loi de Poisson, puis une loi gaussienne centrée, comparer cette inégalité pour $t>0$ avec les inégalités de Markov.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td3.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td3-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td3-ex03
+  titre: Inégalité de Hoeffding
+  enonce: |
+    Soit $X$ une variable aléatoire réelle telle que $|X|\le1$ presque sûrement. On suppose de plus qu'elle est centrée : $\mathbb{E}[X]=0$.
+
+    1. Soit $t\in\mathbb{R}$ quelconque. Montrer en utilisant la convexité de la fonction exponentielle que :
+       $$\forall x\in[-1,1],\quad \exp(tx)\le\frac{1-x}{2}\exp(-t)+\frac{1+x}{2}\exp(t).\qquad(1)$$
+    2. Après avoir justifié l'existence de l'espérance de $\exp(tX)$, en déduire que : $\mathbb{E}[\exp(tX)]\le\exp\left(\frac{t^2}{2}\right)$.
+    3. En déduire que pour tout $\varepsilon>0$ : $\mathbb{P}(X\ge\varepsilon)\le e^{-\varepsilon^2/2}$, puis que : $\mathbb{P}(|X|\ge\varepsilon)\le2e^{-\varepsilon^2/2}$.
+    4. Soit $(X_n,\ n\ge1)$ une suite de variables aléatoires réelles et indépendantes, de loi uniforme sur $\{-1,1\}$ : $\mathbb{P}(X_n=-1)=\mathbb{P}(X_n=1)=\frac12$. On note $S_n=\sum_{k=1}^nX_k$ pour tout $n\ge1$.
+       1. En utilisant l'inégalité (1), montrer que pour tout $t\in\mathbb{R}$ : $\mathbb{E}[\exp(tS_n)]\le\exp\left(n\frac{t^2}{2}\right)$.
+       2. Montrer que pour tout $\varepsilon>0$ : $\mathbb{P}(|S_n|\ge\varepsilon)\le2\exp\left(-\frac{\varepsilon^2}{2n}\right)$.
+       3. Comparer cette dernière inégalité avec la majoration obtenue grâce à l'inégalité de Bienaymé-Tchebycheff.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td3.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td3-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td3-ex04
+  titre: Inégalité de Cantelli-Tchebycheff
+  enonce: |
+    1. Soit $X$ une variable aléatoire réelle ayant un moment d'ordre 2. On la suppose centrée et on note $\sigma^2$ sa variance. Montrer que pour tout $t>0$ on a l'inégalité :
+       $$\mathbb{P}(X\ge t)\le\frac{\sigma^2}{\sigma^2+t^2}.$$
+       Comparer cette inégalité à l'inégalité de Bienaymé-Tchebycheff.
+    2. Soit $t>0$. Peut-on choisir $X$ (centrée et de variance $\sigma^2$) telle que $\mathbb{P}(X\ge t)=\frac{\sigma^2}{\sigma^2+t^2}$ ?
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td3.pdf
+    page: 2
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td3-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td3-ex05
+  titre: Borne de Chernoff pour une somme de Bernoulli
+  enonce: |
+    Soit $X_1,\dots,X_n$ des variables aléatoires indépendantes suivant chacune des lois de Bernoulli de paramètres respectifs $p_1,\dots,p_n\in[0,1]$. On étudie dans cet exercice comment la somme $S=X_1+\dots+X_n$ peut excéder sa moyenne probabiliste $m=p_1+\dots+p_n$.
+
+    1. Soit $X$ une variable de Bernoulli de paramètre $p\in[0,1]$ et $t$ un réel strictement positif. Vérifier : $\mathbb{E}\left[e^{tX}\right]\le e^{p(e^t-1)}$.
+    2. Soit $\lambda>0$. Montrer que $\mathbb{P}(S\ge\lambda)\le e^{-\lambda t}\,\mathbb{E}\left[e^{tS}\right]$.
+    3. En déduire que
+       $$\mathbb{P}(S\ge m(1+\delta))\le\frac{e^{m(e^t-1)}}{e^{m(1+\delta)t}}$$
+       pour tous $t$ et $\delta$ strictement positifs.
+    4. En choisissant une valeur de $t>0$ optimale, obtenir l'inégalité suivante :
+       $$\mathbb{P}(S\ge m(1+\delta))\le\left(\frac{e^\delta}{(1+\delta)^{1+\delta}}\right)^m.$$
+    5. Soit $p\in]0,1[$, et $Y_n$ une variable aléatoire de loi binomiale de paramètres $n$ et $p$. Quelle est la limite de $\mathbb{P}\left(\frac{Y_n}{n}\le p+\varepsilon\right)$ quand $n$ tend vers l'infini, pour tout $\varepsilon>0$ ?
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td3.pdf
+    page: 2
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/td/td3-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-td4-ex01
+  titre: Fonction de répartition logistique
+  enonce: |
+    Soit $F$ la fonction de $\mathbb{R}$ dans $\mathbb{R}$ définie par
+    $$F(x)=\frac1{1+e^{-bx}}$$
+    où $b$ est un paramètre strictement positif.
+
+    1. Montrer que $F$ est la fonction de répartition d'une certaine loi de probabilité dont on déterminera la densité si elle existe.
+    2. Soit $X$ une v.a. de fonction de répartition $F$, et $Y=e^{-bX}$. Calculer la fonction de répartition de $Y$, ainsi que sa loi.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td4.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: pro-td4-ex02
+  titre: Minimum d'une uniforme et d'une constante
+  enonce: |
+    Soit $X$ une v.a. de loi uniforme sur $[0,1]$. On pose $Y=\min(X,a)$ (avec $a\in]0,1[$).
+
+    1. Déterminer et tracer la fonction de répartition de $Y$.
+    2. Soit $f$ une fonction réelle continue et bornée. Déterminer $\mathbb{E}[f(Y)]$.
+    3. En déduire que la loi de $Y$ est une combinaison linéaire d'une loi à densité et d'une mesure de Dirac.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td4.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: pro-td4-ex03
+  titre: 'Loi mélange : atome et partie uniforme'
+  enonce: |
+    Soit $X$ une variable aléatoire dont la fonction de répartition est donnée par :
+    $$F_X(x)=\begin{cases}0 & \text{si } x<0\\ \frac12x & \text{si } x\in[0,1[\\ 1 & \text{si } x>1\end{cases}$$
+
+    1. Tracer le graphe de $F_X$. $X$ est-elle une variable discrète ? Une variable à densité ?
+    2. Donner les valeurs de $\mathbb{P}\left(X=\frac12\right)$, $\mathbb{P}(X=1)$, $\mathbb{P}\left(\frac34<X\le1\right)$ et $\mathbb{P}\left(\frac34<X<1\right)$.
+    3. Soit $U$ et $V$ deux variables indépendantes telles que $U$ suive une loi de Bernoulli de paramètre $\frac12$ et $V$ suive une loi uniforme sur $[0,1]$. On pose $W=U+(1-U)V$. Autrement dit : $W=1$ si $U=1$, $W=V$ si $U=0$. On dit que la loi de $W$ est un mélange des lois de $V$ et de la constante 1. Montrer que $W$ et $X$ ont même loi.
+    4. Soit $f$ une fonction réelle continue et bornée. Déterminer $\mathbb{E}[f(X)]$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td4.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: pro-td4-ex04
+  titre: Espérance et fonction de répartition d'une v.a. entière
+  enonce: |
+    Soit $X$ une variable aléatoire à valeurs dans $\mathbb{N}$. On note $F_X$ sa fonction de répartition.
+
+    1. Montrer que
+       $$\mathbb{E}[X]=\sum_{n=1}^{+\infty}\mathbb{P}(X\ge n)\quad\text{et}\quad \mathbb{E}[X^2]-\mathbb{E}[X]=2\sum_{n=1}^{+\infty}n\,\mathbb{P}(X>n).$$
+    2. Déterminer une fonction réelle $\varphi$ de sorte que : $\mathbb{E}[\varphi(X)]=\sum_{n\ge0}e^{-n}F_X(n)$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td4.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: pro-td4-ex05
+  titre: Espérance par la queue de distribution
+  enonce: |
+    Soit $X$ une variable aléatoire positive, admettant une densité $f_X$.
+
+    1. Montrer que $\mathbb{E}[X]=\int_0^{+\infty}\mathbb{P}(X>t)\,dt$.
+    2. Plus généralement, montrer que pour tout $p>1$, $\mathbb{E}[X^p]=\int_0^{+\infty}pt^{p-1}\mathbb{P}(X>t)\,dt$.
+    3. Déterminer une fonction réelle $\varphi$ continue et bornée telle que :
+       $$\mathbb{E}[\varphi(X)]=\int_0^{+\infty}\frac{F_X(t)}{1+t^2}\,dt.$$
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td4.pdf
+    page: 2
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: pro-td4-ex06
+  titre: Loi déterminée par ses moments E[X^n]=3^n/(n+1)
+  enonce: |
+    Soit $X$ une variable aléatoire réelle ayant des moments de tous ordres, donnés par la formule :
+    $$\forall n\ge1,\quad\mathbb{E}[X^n]=\frac{3^n}{n+1}.$$
+
+    1. Montrer que $\mathbb{P}(|X|\le3)=1$.
+    2. La loi de $X$ est-elle caractérisée par ses moments ?
+    3. Soit $\varphi$ une série entière de rayon de convergence strictement supérieur à 3. Calculer $\mathbb{E}[\varphi(X)]$, puis, en mettant cette espérance sous forme intégrale, en déduire la loi de $X$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td4.pdf
+    page: 2
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: pro-td4-ex07
+  titre: Moments factoriels (Poisson, géométrique)
+  enonce: |
+    Soit $X$ une variable aléatoire admettant un moment d'ordre $n\ge1$. On note $m_{(n)}(X)$ le moment factoriel d'ordre $n$ défini par
+    $$m_{(n)}(X)=\mathbb{E}[X(X-1)\cdots(X-n+1)].$$
+
+    1. On suppose que $X$ suit une loi de Poisson de paramètre $\lambda>0$. Vérifier que $X$ possède des moments de tous ordres et calculer ses moments factoriels.
+    2. On suppose que $X$ suit une loi géométrique de paramètre $p\in]0,1[$. Vérifier que $X$ possède des moments de tous ordres et calculer ses moments factoriels.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td4.pdf
+    page: 2
+    numero: Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: pro-td4-ex08
+  titre: Loi log-normale non caractérisée par ses moments
+  enonce: |
+    Soit $X$ une variable aléatoire gaussienne centrée réduite. On pose $Y=e^X$.
+
+    1. Montrer que $Y$ possède des moments de tous ordres et calculer ses moments.
+    2. Montrer que $\mathbb{E}[Y^n\sin(2\pi X)]=0$ pour tout $n\ge1$. En déduire que la loi de $Y$ n'est pas caractérisée de façon unique par ses moments.
+  sources:
+  - etab: paris-cite
+    fichier: proba/td/td4.pdf
+    page: 2
+    numero: Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: pro-par2425-ex01
+  titre: 'Cours : loi de Poisson, moments et fonction caractéristique'
+  enonce: |
+    Soit $X$ une variable aléatoire suivant une loi de Poisson de paramètre $\lambda>0$.
+
+    1. Donner $\mathbb{P}(X=k)$ pour tout $k\in\mathbb{N}$.
+    2. Justifier que $X$ admet des moments de tous ordres et calculer $\mathbb{E}(X)$. Vous détaillerez le calcul.
+    3. Calculer explicitement la fonction caractéristique de $X$, $\varphi_X(t)$. Vous détaillerez le calcul.
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/partiel-2024-25.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/partiel-2024-25-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-par2425-ex02
+  titre: Densité 3x^2, A=-log X et polynôme aléatoire
+  enonce: |
+    On considère une variable aléatoire $X$ de densité $f_X$ définie par $f_X(x)=3x^2\mathbf 1_{[0,1]}(x)$, $x\in\mathbb{R}$.
+
+    1. Calculer $\mathbb{P}(X\in]0,1])$.
+    2. On pose $A=-\log X$. Justifier qu'avec probabilité $1$, la variable $A$ est bien définie et est positive.
+    3. Calculer la fonction de répartition de $A$. Quelle est la loi de $A$ ?
+    4. On considère le polynôme à coefficients aléatoires $P(t)=t^2+3At+2A^2+4$, $t\in\mathbb{R}$. Calculer la probabilité que $P$ n'admette aucune racine réelle.
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/partiel-2024-25.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/partiel-2024-25-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-par2425-ex03
+  titre: Maximum et minimum de variables exponentielles i.i.d.
+  enonce: |
+    Pour l'exercice qui suit, on rappelle que des variables aléatoires réelles $X_1,\dots,X_n$ sont indépendantes si
+    $$\mathbb{P}(X_1\in A_1,X_2\in A_2,\dots,X_n\in A_n)=\mathbb{P}(X_1\in A_1)\mathbb{P}(X_2\in A_2)\cdots\mathbb{P}(X_n\in A_n),$$
+    pour tous $A_1\subset\mathbb{R},\dots,A_n\subset\mathbb{R}$. De plus, si $X_1,\dots,X_n$ sont indépendantes, alors pour toutes fonctions $f_1,\dots,f_n:\mathbb{R}\to\mathbb{R}$ telles que $f_1(X_1),\dots,f_n(X_n)$ sont intégrables, on a $\mathbb{E}[f_1(X_1)\cdots f_n(X_n)]=\mathbb{E}[f_1(X_1)]\cdots\mathbb{E}[f_n(X_n)]$.
+
+    On considère une suite $(X_i)_{i\ge1}$ de variables aléatoires indépendantes et identiquement distribuées selon la loi exponentielle de paramètre $1$. On rappelle que la densité commune de ces variables est $f_{X_1}(x)=e^{-x}\mathbf 1_{\mathbb{R}_+}(x)$, $x\in\mathbb{R}$. Les questions 1 et 2 sont indépendantes.
+
+    1. Pour tout $n\ge1$, on considère $M_n=\max(X_1,\dots,X_n)$.
+       1. Calculer la fonction de répartition de $M_n$.
+       2. En déduire la densité de $M_n$ et justifier que $M_n$ admet des moments de tous ordres.
+       3. Montrer, à l'aide d'intégrations par parties successives, que la fonction caractéristique de $M_n$ est donnée par $\displaystyle\phi_{M_n}(t)=\frac{n!}{\prod_{k=1}^n(k-it)}$, $\forall t\in\mathbb{R}$.
+       4. En déduire la valeur de $\mathbb{E}[M_n]$.
+       5. Pour tout $n\ge1$, on pose $S_n=X_1+\frac{X_2}{2}+\dots+\frac{X_n}{n}$. Montrer que $S_n$ et $M_n$ ont la même loi.
+       6. Retrouver la valeur de $\mathbb{E}[M_n]$ et calculer $\mathrm{Var}(M_n)$.
+    2. Pour tout $n\ge1$, on pose maintenant $I_n=1+\min([X_1],\dots,[X_n])$, où $[\cdot]$ désigne la fonction partie entière. On rappelle que pour tout $x\in\mathbb{R}$, $[x]$ est l'unique entier relatif $n\in\mathbb{Z}$ tel que $n\le x<n+1$.
+       1. Calculer $\mathbb{P}(I_n\le k)$ pour tout $k\in\mathbb{N}$.
+       2. En déduire $\mathbb{P}(I_n=k)$ pour tout $k\in\mathbb{N}^*$. Quelle est la loi de $I_n$ ?
+       3. Donner $\mathbb{E}[I_n]$ et $\mathrm{Var}(I_n)$ (sans calcul).
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/partiel-2024-25.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/partiel-2024-25-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-par2526-ex01
+  titre: 'Cours : loi géométrique et fonction caractéristique'
+  enonce: |
+    Soit $X$ une variable aléatoire de loi géométrique de paramètre $p\in]0,1[$.
+
+    1. Donner $\mathbb{P}(X=k)$ pour tout $k\in\mathbb{N}^*$.
+    2. Calculer explicitement la fonction caractéristique $\varphi_X$ de $X$. On détaillera le calcul.
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/partiel-2025-26.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/partiel-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-par2526-ex02
+  titre: Densité x e^{-x^2/2} (loi de Rayleigh) et loi de X^2
+  enonce: |
+    On considère une variable aléatoire $X$ de densité $f_X$ définie par $f_X(x)=xe^{-x^2/2}\mathbf 1_{\mathbb{R}_+}(x)$, $x\in\mathbb{R}$.
+
+    1. Calculer la fonction de répartition $F_X$ de $X$.
+    2. On pose $Y=X^2$. Calculer la fonction de répartition de $Y$. Quelle est la loi de $Y$ ?
+    3. Calculer $\mathbb{E}[X^2]$ de deux manières différentes.
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/partiel-2025-26.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/partiel-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-par2526-ex03
+  titre: Cauchy-Schwarz et inégalité de Paley-Zygmund
+  enonce: |
+    La question 2 peut être traitée en admettant le résultat de la question 1.
+
+    1. On considère deux variables aléatoires $U,V$ telles que $\mathbb{E}[U^2]<+\infty$ et $\mathbb{E}[V^2]<+\infty$.
+       1. Montrer que $\mathbb{E}[|UV|]\le\frac12\mathbb{E}[U^2]+\frac12\mathbb{E}[V^2]$.
+       2. En déduire l'inégalité de Cauchy-Schwarz : $\mathbb{E}[|UV|]\le\sqrt{\mathbb{E}[U^2]\mathbb{E}[V^2]}$.
+          Indication : on commencera par traiter le cas $\mathbb{E}[U^2]=\mathbb{E}[V^2]=1$.
+    2. Soit $X$ une variable aléatoire positive et telle que $0<\mathbb{E}[X^2]<+\infty$ et $\alpha\in]0,1[$.
+       1. Montrer que $(1-\alpha)\mathbb{E}[X]\le\mathbb{E}\left[X\mathbf 1_{\{X\ge\alpha\mathbb{E}[X]\}}\right]$.
+          Indication : on écrira $(1-\alpha)\mathbb{E}[X]=\mathbb{E}[X-\alpha\mathbb{E}[X]]$.
+       2. En utilisant l'inégalité de Cauchy-Schwarz, en déduire que
+          $$\mathbb{P}(X\ge\alpha\mathbb{E}[X])\ge\frac{(1-\alpha)^2\mathbb{E}[X]^2}{\mathbb{E}[X^2]}.$$
+       3. En modifiant légèrement le raisonnement précédent, montrer que
+          $$\mathbb{P}(X\ge\alpha\mathbb{E}[X])\ge\frac{(1-\alpha)^2\mathbb{E}[X]^2}{\mathrm{Var}(X)+(1-\alpha)^2\mathbb{E}[X]^2}.$$
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/partiel-2025-26.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/partiel-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-par2526-ex04
+  titre: Approximation de Bernstein d'une fonction lipschitzienne
+  enonce: |
+    On considère une fonction $f:[0,1]\to\mathbb{R}$ qu'on suppose $L$-Lipschitz, c'est-à-dire telle que
+    $$|f(x)-f(y)|\le L|x-y|,\quad\forall x,y\in[0,1].$$
+    Pour tout $p\in[0,1]$ et $n\ge1$, on considère une variable aléatoire $X_p^{(n)}$ de loi binomiale de paramètres $n$ et $p$ et on pose
+    $$Q_n(p)=\mathbb{E}\left[f\left(\frac{X_p^{(n)}}{n}\right)\right],\quad\forall p\in[0,1].$$
+
+    1. Montrer que $Q_n$ est une fonction polynomiale de degré $\le n$.
+    2. Montrer l'inégalité $|Q_n(p)-f(p)|\le\frac Ln\,\mathbb{E}\left[(X_p^{(n)}-np)^2\right]^{1/2}$.
+    3. En déduire que $\sup_{p\in[0,1]}|Q_n(p)-f(p)|\to0$ quand $n\to\infty$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/partiel-2025-26.pdf
+    page: 2
+    numero: Ex 4
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/partiel-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-exa2425-ex01
+  titre: 'Cours : TLC et simulation en R'
+  enonce: |
+    1. Énoncer le théorème limite central pour des variables aléatoires réelles.
+    2. Soit $k\in\mathbb{N}^*$ et $p\in]0,1[$. On considère la fonction R suivante :
+       ```r
+       T<-function(k,p){
+       x<-rbinom(1,1,p);
+       n<-1;
+       while(sum(x)<k){n<-n+1; x=c(x,rbinom(1,1,p))}
+       print(n)
+       }
+       ```
+       Expliquer ce que cette fonction permet de simuler. Si $k=1$ quelle est la loi de la variable aléatoire obtenue en sortie ?
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/exam-2024-25.pdf
+    page: 2
+    numero: Ex 1
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/exam-2024-25-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-exa2425-ex02
+  titre: Découpage d'une longueur L en L1=XL et L2=(1-X)L
+  enonce: |
+    Soit $L$ une variable aléatoire positive admettant une densité de probabilité $h$ sur $]0,+\infty[$ et $X$ une variable aléatoire de loi uniforme sur $]0,1[$, indépendante de $L$. On définit deux variables aléatoires $L_1$ et $L_2$ par $L_1=XL$ et $L_2=(1-X)L$.
+
+    La question 2 peut être traitée en admettant les résultats de la question 1.
+
+    1. (a) Montrer que l'application
+       $$\varphi:]0,1[\times]0,+\infty[\to]0,+\infty[\times]0,+\infty[:(x,l)\mapsto(xl,(1-x)l)$$
+       est un $C^1$-difféomorphisme.
+
+       (b) Montrer que le vecteur aléatoire $(L_1,L_2)$ admet pour densité la fonction
+       $$f_{L_1,L_2}(u,v)=\frac{h(u+v)}{u+v}\mathbf 1_{]0,+\infty[^2}(u,v).$$
+       En déduire que $f_{L_1}(u)=f_{L_2}(u)=\int_u^{+\infty}\frac{h(x)}{x}\,dx$, $u>0$.
+    2. Soit $\lambda>0$. On suppose désormais que $h(x)=\lambda^2x\exp(-\lambda x)\mathbf 1_{]0,+\infty[}(x)$, $x\in\mathbb{R}$.
+
+       (a) Vérifier que $h$ est bien une densité de probabilité.
+
+       (b) Déterminer $f_{L_1,L_2}$, $f_{L_1}$ et $f_{L_2}$. En déduire que les variables $L_1,L_2$ sont indépendantes et donner leur loi.
+
+       (c) Justifier l'existence de $\mathbb{E}[L_1L_2]$ et déterminer sa valeur.
+
+       (d) Déterminer et reconnaître la loi de $Z=\min(L_1,L_2)$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/exam-2024-25.pdf
+    page: 2
+    numero: Ex 2
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/exam-2024-25-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-exa2425-ex03
+  titre: Vecteur gaussien et indépendance de combinaisons linéaires
+  enonce: |
+    Soit $(X,Y)$ un vecteur gaussien centré, tel que $\mathbb{E}[X^2]=\mathbb{E}[Y^2]=1$.
+
+    1. Montrer que $X+Y$ et $X-Y$ sont indépendantes.
+    2. Dans cette question, on suppose que $X+Y$ et $2X-Y$ sont indépendantes. Montrer que $\mathrm{Cov}(X,Y)=1$. En déduire que $X=-Y$ p.s.
+    3. Dans cette question, on suppose que $X-2Y$ et $2X-Y$ sont indépendantes.
+       1. Calculer $\mathrm{Cov}(X,Y)$.
+       2. Déterminer la fonction caractéristique de $(X,Y)$.
+       3. Vérifier que la loi de $(X,Y)$ admet une densité et la déterminer.
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/exam-2024-25.pdf
+    page: 2
+    numero: Ex 3
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/exam-2024-25-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-exa2425-ex04
+  titre: 'Produit de variables exponentielles : convergence vers 0'
+  enonce: |
+    On considère une suite $(X_i)_{i\ge1}$ de variables aléatoires i.i.d. de loi exponentielle de paramètre 1 et on pose
+    $$Y_n=\prod_{i=1}^nX_i,\quad n\ge1.$$
+
+    1. Déterminer $\mathbb{E}[Y_n]$.
+    2. Montrer que $\mathbb{E}[X_1^{1/2}]=\frac{\sqrt\pi}2$ et en déduire $\mathbb{E}[Y_n^{1/2}]$.
+    3. Montrer que, pour tout $\varepsilon>0$, $\mathbb{P}(Y_n>\varepsilon)\le\frac{(\sqrt\pi/2)^n}{\sqrt\varepsilon}$.
+    4. En déduire que $Y_n\xrightarrow{\text{p.s.}}0$ quand $n\to+\infty$.
+    5. On admet que $\ln X_1$ est intégrable et que $\mathbb{E}[\ln X_1]<0$. Retrouver la convergence presque sûre de $Y_n$ en utilisant la loi forte des grands nombres.
+    6. La suite $(Y_n)$ converge-t-elle vers $0$ en moyenne ?
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/exam-2024-25.pdf
+    page: 3
+    numero: Ex 4
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/exam-2024-25-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-exa2526-ex01
+  titre: 'Cours : loi de Poisson et simulation en R'
+  enonce: |
+    1. Soit $X$ une variable de Poisson de paramètre $\lambda>0$.
+       1. Donner $\mathbb{P}(X=n)$ pour tout $n\in\mathbb{N}$.
+       2. Donner la valeur de $\mathbb{E}[X]$ et détailler le calcul.
+       3. Donner l'expression de la fonction caractéristique de $X$ et détailler le calcul.
+    2. Écrire une fonction en langage R permettant de simuler une somme de $N$ variables de Poisson de paramètre $\lambda$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/exam-2025-26.pdf
+    page: 2
+    numero: Ex 1
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/exam-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-exa2526-ex02
+  titre: Densité de Pareto et densité du produit XY
+  enonce: |
+    Soit $\alpha>0$ et la fonction $f(x)=\frac{\alpha}{x^{\alpha+1}}\mathbf 1_{]1,+\infty[}(x)$.
+
+    1. Vérifier que $f$ est une densité de probabilité.
+
+    Soient $X$ et $Y$ deux variables indépendantes de même densité $f$.
+
+    1. Montrer que le vecteur aléatoire $(XY,X)$ admet pour densité la fonction
+       $$g(u,v)=\frac{\alpha^2}{u^{\alpha+1}}\frac1v\mathbf 1_{]1,+\infty[}(u)\mathbf 1_{]1,u[}(v).$$
+    2. En déduire une densité de $Z=XY$.
+    3. Calculer l'espérance de la variable $1/\ln(Z)$.
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/exam-2025-26.pdf
+    page: 2
+    numero: Ex 2
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/exam-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-exa2526-ex03
+  titre: Vecteur gaussien de matrice de covariance donnée
+  enonce: |
+    Soit $(X,Y,Z)$ un vecteur gaussien d'espérance $(0,3,2)$, de matrice de covariance
+    $$\Gamma=\begin{pmatrix}2&1&-2\\1&1&-2\\-2&-2&4\end{pmatrix}.$$
+
+    1. Calculer $\mathrm{Var}(2Y+Z)$. Que peut-on en déduire sur la variable $2Y+Z$ ?
+    2. Donner la loi du vecteur $(X-Y,Z)$. Qu'en déduisez-vous sur $X-Y$ et $Z$ ?
+    3. Montrer que $(X,Y)$ admet une densité et la calculer.
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/exam-2025-26.pdf
+    page: 2
+    numero: Ex 3
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/exam-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: pro-exa2526-ex04
+  titre: 'Modes de convergence : suite X_n valant 0 ou n'
+  enonce: |
+    On considère une suite $(X_n)_{n\ge1}$ de variables aléatoires indépendantes telles que, pour tout $n\ge1$,
+    $$\mathbb{P}(X_n=0)=1-\frac1n\quad\text{et}\quad\mathbb{P}(X_n=n)=\frac1n.$$
+    Les quatre questions suivantes peuvent être traitées indépendamment les unes des autres.
+
+    1. (a) Montrer que $X_n$ tend vers 0 en probabilité, quand $n\to+\infty$.
+
+       (b) Montrer qu'avec une probabilité égale à $1$, $X_n=n$ pour une infinité d'indices $n$.
+
+       (c) En déduire que $X_n$ ne converge pas vers $0$ presque sûrement.
+
+       (d) A-t-on convergence en moyenne d'ordre 1 ?
+    2. Dans cette question, on considère une suite $(Z_n)_{n\ge1}$ de variables aléatoires positives telle que $M:=\sup_{n\ge1}\mathbb{E}[Z_n^2]<+\infty$ et telle que $Z_n$ converge vers $0$ en loi, quand $n\to\infty$.
+
+       (a) Montrer que, pour tout $a>0$, $\mathbb{E}[Z_n]\le\mathbb{E}[\min(Z_n,a)]+M^{1/2}\,\mathbb{P}(Z_n>a)^{1/2}$.
+       Indication : on commencera par montrer que pour tout $z\ge0$, $z\le\min(z;a)+z\mathbf 1_{\{z>a\}}$.
+
+       (b) En déduire que $\mathbb{E}[Z_n]\to0$ quand $n\to\infty$.
+    3. Dans cette question, on pose $Y_n=\frac1n\sum_{k=1}^nX_k$, $n\ge1$.
+
+       (a) Montrer que $\mathbb{E}[Y_n]=1$ et $\mathrm{Var}(Y_n)=\frac{n-1}{2n}$.
+       Indication : on rappelle que pour tout nombre entier $N$, $1+2+\dots+N=N(N+1)/2$.
+
+       (b) En utilisant la question 2, montrer que $Y_n$ ne converge pas en loi vers $0$, quand $n\to+\infty$.
+
+       (c) A-t-on convergence en probabilité ?
+    4. Dans cette question, on considère une suite $(X'_n)_{n\ge1}$ de variables aléatoires indépendantes telles que, pour tout $n\ge1$,
+       $$\mathbb{P}(X'_n=0)=1-\frac1{n^2}\quad\text{et}\quad\mathbb{P}(X'_n=n)=\frac1{n^2},$$
+       et on pose $Y'_n=\frac1n\sum_{k=1}^nX'_k$, $n\ge1$.
+
+       (a) Montrer que $X'_n$ converge vers $0$ presque sûrement.
+
+       (b) En déduire que $Y'_n$ converge vers $0$ presque sûrement.
+       Indication : on rappelle le résultat d'analyse suivant : si une suite à valeurs réelles $(u_n)_{n\ge1}$ converge vers une limite $\ell$, alors $\frac1n\sum_{k=1}^nu_k\to\ell$ quand $n\to\infty$ (théorème de Cesàro).
+  sources:
+  - etab: paris-cite
+    fichier: proba/annales/exam-2025-26.pdf
+    page: 2
+    numero: Ex 4
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: proba/annales/exam-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok

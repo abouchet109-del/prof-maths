@@ -1,0 +1,752 @@
+- id: topo-n-0001
+  titre: 'Formules de De Morgan'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.1 Rappels sur la théorie des ensembles'
+  enonce: '$\left(\bigcup_i A_i\right)^c=\bigcap_i A_i^c$ et $\left(\bigcap_i A_i\right)^c=\bigcup_i A_i^c$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0002
+  titre: 'Distributivité de l''union et de l''intersection'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.1 Rappels sur la théorie des ensembles'
+  enonce: '$\left(\bigcap_{i}A_i\right)\cup\left(\bigcap_{j}B_j\right)=\bigcap_{(i,j)}(A_i\cup B_j)$ et $\left(\bigcup_{i}A_i\right)\cap\left(\bigcup_{j}B_j\right)=\bigcup_{(i,j)}(A_i\cap B_j)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 1}
+  essentiel: false
+- id: topo-n-0003
+  titre: 'Topologie, espace topologique, ouverts'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.2 Espace topologique'
+  enonce: 'Une topologie sur $X$ est $\tau\subset\mathcal P(X)$ contenant $X$ et $\emptyset$, stable par intersection finie et par union quelconque. Ses éléments sont les ouverts.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0004
+  titre: 'Partie fermée'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.2 Espace topologique'
+  enonce: '$A$ est fermé si et seulement si $A^c\in\tau$. $\emptyset$ et $X$ sont à la fois ouverts et fermés.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0005
+  titre: 'Stabilité des fermés'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.2 Espace topologique'
+  enonce: 'Une union finie de fermés est fermée ; une intersection quelconque de fermés est fermée (par De Morgan).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0006
+  titre: 'Espace topologique séparé'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.2 Espace topologique'
+  enonce: '$(X,\tau)$ est séparé si pour $x\neq y$ il existe $U,V\in\tau$ avec $x\in U$, $y\in V$, $U\cap V=\emptyset$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0007
+  titre: 'Topologies grossière et discrète (séparé ou non)'
+  type: exemple
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.2 Espace topologique'
+  enonce: '$\mathcal P(X)$ et $\{\emptyset,X\}$ sont des topologies ; la première est séparée, la seconde non (une suite convergente peut avoir plusieurs limites).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 3}
+  essentiel: false
+- id: topo-n-0008
+  titre: 'Distance, espace métrique'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.3 Espace métrique'
+  enonce: '$d:X\times X\to\mathbb R$ avec $d\ge0$, $d(x,y)=0\Leftrightarrow x=y$, $d(x,y)=d(y,x)$ et $d(x,y)\le d(x,z)+d(z,y)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0009
+  titre: 'Seconde inégalité triangulaire'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.3 Espace métrique'
+  enonce: '$|d(x,y)-d(y,z)|\le d(x,z)$ pour tous $x,y,z\in X$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 3}
+  essentiel: false
+- id: topo-n-0010
+  titre: 'Distances usuelles : $d_\infty$, $d_p$, distance discrète'
+  type: exemple
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.3 Espace métrique'
+  enonce: 'Sur $\mathbb R^n$ : $d_\infty=\max_k|x_k-y_k|$, $d_p=\left(\sum_k|x_k-y_k|^p\right)^{1/p}$ ($d_2$ euclidienne). Sur tout ensemble : $d(x,y)=1$ si $x\neq y$, $0$ sinon.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0011
+  titre: 'Boule ouverte, boule fermée, sphère'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.3 Espace métrique'
+  enonce: '$B(a,r)=\{d(a,x)<r\}$, $\bar B(a,r)=\{d(a,x)\le r\}$, $S(a,r)=\{d(a,x)=r\}=\bar B(a,r)\setminus B(a,r)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0012
+  titre: 'Topologie associée à une distance'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.3 Espace métrique'
+  enonce: '$\tau=\{A:\ A=\emptyset\text{ ou }\forall x\in A,\exists r>0,\ B(x,r)\subset A\}$ est une topologie séparée sur $X$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0013
+  titre: 'Démonstration que la topologie d''une distance est séparée'
+  type: demonstration
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.3 Espace métrique'
+  enonce: 'Pour $x\neq y$, avec $r=d(x,y)/2$, on a $B(x,r)\cap B(y,r)=\emptyset$ par l''inégalité triangulaire.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 4}
+  essentiel: false
+- id: topo-n-0014
+  titre: 'Une boule ouverte est ouverte, une boule fermée est fermée'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.3 Espace métrique'
+  enonce: 'Dans un espace métrique, $B(x,r)$ est ouvert et $\bar B(x,r)$ est fermé (technique : $\epsilon=r-d(x,y)$, inégalité triangulaire).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0015
+  titre: 'Distance d''un point à une partie, entre deux parties'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.3 Espace métrique'
+  enonce: '$d(a,B)=\inf_{b\in B}d(a,b)$ et $d(A,B)=\inf_{a\in A}d(a,B)=\inf_{(a,b)\in A\times B}d(a,b)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 5}
+  essentiel: false
+- id: topo-n-0016
+  titre: 'Voisinage'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: '$V$ est un voisinage de $x$ s''il existe un ouvert $O$ avec $x\in O\subset V$. Dans un espace métrique : il existe $r>0$ avec $B(x,r)\subset V$. Un ouvert est voisinage de tous ses points.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 5}
+  essentiel: true
+- id: topo-n-0017
+  titre: 'Propriétés des voisinages'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: 'Une intersection finie de voisinages de $x$ en est un ; toute partie contenant un voisinage de $x$ est un voisinage de $x$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 5}
+  essentiel: false
+- id: topo-n-0018
+  titre: 'Point intérieur, intérieur'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: '$x$ est intérieur à $A$ si $A$ est un voisinage de $x$ ; $\mathring A$ est l''ensemble des points intérieurs à $A$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0019
+  titre: 'Intérieur : plus grand ouvert inclus dans $A$'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: '$\mathring A$ est le plus grand ouvert inclus dans $A$ ; $A$ est ouvert si et seulement si $A=\mathring A$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0020
+  titre: 'Propriétés de l''intérieur'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: '$A\subset B\Rightarrow\mathring A\subset\mathring B$ ; $\mathring{\mathring A}=\mathring A$ ; $(A\cap B)^\circ=\mathring A\cap\mathring B$ ; $\mathring A\cup\mathring B\subset(A\cup B)^\circ$ (inclusion en général stricte).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0021
+  titre: 'Contre-exemple : intérieur d''une union'
+  type: exemple
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: 'Dans $\mathbb R$ : $([-1,0]\cup[0,1])^\circ=]-1,1[\ \neq\ ]-1,0[\cup]0,1[$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 7}
+  essentiel: false
+- id: topo-n-0022
+  titre: 'Point adhérent, adhérence'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: '$x$ est adhérent à $A$ si tout voisinage de $x$ rencontre $A$. Dans un espace métrique : $x\in\bar A\Leftrightarrow\forall\epsilon>0,\ B(x,\epsilon)\cap A\neq\emptyset$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0023
+  titre: 'Dualité intérieur / adhérence'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: '$(\bar A)^c=(A^c)^\circ$ et $(\mathring A)^c=\overline{A^c}$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0024
+  titre: 'Propriétés de l''adhérence'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: '$A\subset B\Rightarrow\bar A\subset\bar B$ ; $\bar{\bar A}=\bar A$ ; $\overline{A\cup B}=\bar A\cup\bar B$ ; $\overline{A\cap B}\subset\bar A\cap\bar B$ ; $\bar A$ est le plus petit fermé contenant $A$ ; $A$ fermé $\Leftrightarrow A=\bar A$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0025
+  titre: 'Frontière'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: '$\partial A=\bar A\setminus\mathring A$. Exemples dans $\mathbb R$ : $\partial[0,1[=\{0,1\}$, $\partial\mathbb Q=\mathbb R$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0026
+  titre: 'Frontière de $A$ et de son complémentaire ; partition de $X$'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: '$\partial A=\partial(A^c)$ et $X=\mathring A\cup(A^c)^\circ\cup\partial A$, union disjointe.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 8}
+  essentiel: true
+- id: topo-n-0027
+  titre: 'Point d''accumulation, point isolé'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: 'Pour $x\in\bar A$ : accumulation si tout voisinage $V$ de $x$ vérifie $(V\setminus\{x\})\cap A\neq\emptyset$ ; isolé s''il existe $V$ avec $(V\setminus\{x\})\cap A=\emptyset$ (alors $x\in A$).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 8}
+  essentiel: false
+- id: topo-n-0028
+  titre: 'Partie dense'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: '$A$ est dense dans $X$ si et seulement si $\bar A=X$. Exemple : $\mathbb Q$ et $\mathbb Q^c$ sont denses dans $\mathbb R$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 8}
+  essentiel: true
+- id: topo-n-0029
+  titre: 'Espace séparable'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.4 Intérieur, adhérence et frontière'
+  enonce: 'Un espace topologique est séparable s''il contient une partie dense au plus dénombrable ($\mathbb R$ l''est car $\mathbb Q$ est dénombrable). À ne pas confondre avec séparé.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 8}
+  essentiel: false
+- id: topo-n-0030
+  titre: 'Topologie induite, sous-espace topologique'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.5 Sous-espace topologique, sous-espace métrique'
+  enonce: '$\tau_Y=\{A\cap Y:A\in\tau\}$ est une topologie sur $Y$. Les fermés de $Y$ sont les $B\cap Y$ avec $B$ fermé de $X$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 8}
+  essentiel: true
+- id: topo-n-0031
+  titre: 'Distance induite, sous-espace métrique'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.5 Sous-espace topologique, sous-espace métrique'
+  enonce: 'La restriction de $d$ à $Y\times Y$ est une distance sur $Y$ ; $(Y,d_{Y\times Y})$ est un sous-espace métrique.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 9}
+  essentiel: true
+- id: topo-n-0032
+  titre: 'La topologie de la distance induite est la topologie induite'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.5 Sous-espace topologique, sous-espace métrique'
+  enonce: '$A\subset Y$ est ouvert (resp. fermé) dans $(Y,d)$ si et seulement si $A=B\cap Y$ avec $B$ ouvert (resp. fermé) de $(X,d)$. Exemple : $]0,1]$ est ouvert dans $[-1,1]$ et fermé dans $]0,2[$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 9}
+  essentiel: true
+- id: topo-n-0033
+  titre: 'Espace métrique produit (produit fini)'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.6 Espace métrique produit, distances équivalentes'
+  enonce: 'Sur $X=\prod_{k=1}^nX_k$, $d(x,y)=\sum_kd_k(x_k,y_k)$ est une distance.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 10}
+  essentiel: true
+- id: topo-n-0034
+  titre: 'Distances topologiquement, uniformément, Lipschitz équivalentes'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.6 Espace métrique produit, distances équivalentes'
+  enonce: 'Lipschitz : $\frac1Cd\le\delta\le Cd$. Uniforme : $\forall\epsilon\,\exists\alpha$ uniforme en $x,y$ tel que $d<\alpha\Rightarrow\delta<\epsilon$ et réciproquement. Topologique : même chose avec $\alpha$ dépendant de $x$ et $\epsilon$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 11}
+  essentiel: true
+- id: topo-n-0035
+  titre: 'Équivalence topologique et même topologie'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.6 Espace métrique produit, distances équivalentes'
+  enonce: 'Deux distances sont topologiquement équivalentes si et seulement si elles définissent la même topologie.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 11}
+  essentiel: true
+- id: topo-n-0036
+  titre: 'Hiérarchie des équivalences de distances'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.6 Espace métrique produit, distances équivalentes'
+  enonce: 'Lipschitz équivalentes $\Rightarrow$ uniformément équivalentes $\Rightarrow$ topologiquement équivalentes.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 12}
+  essentiel: true
+- id: topo-n-0037
+  titre: 'Distance bornée associée : $\delta=d/(1+d)$'
+  type: exemple
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.6 Espace métrique produit, distances équivalentes'
+  enonce: '$\delta(x,y)=\frac{d(x,y)}{1+d(x,y)}$ est une distance uniformément équivalente à $d$ (croissance de $t\mapsto t/(1+t)$ pour l''inégalité triangulaire).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 12}
+  essentiel: true
+- id: topo-n-0038
+  titre: 'Distance sur un produit dénombrable'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.6 Espace métrique produit, distances équivalentes'
+  enonce: 'Sur $X=\prod_kX_k$, $d(x,y)=\sum_{k}2^{-k}\frac{d_k(x_k,y_k)}{1+d_k(x_k,y_k)}$ est une distance.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 13}
+  essentiel: false
+- id: topo-n-0039
+  titre: 'Suite convergente'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.7 Suite dans un espace métrique'
+  enonce: '$u_n\to x$ si $\forall V\in\mathcal V_x,\exists N,\forall n\ge N,\ u_n\in V$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 13}
+  essentiel: true
+- id: topo-n-0040
+  titre: 'Convergence en espace métrique'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.7 Suite dans un espace métrique'
+  enonce: '$u_n\to x$ si et seulement si $\forall\epsilon>0,\exists N,\forall n\ge N,\ d(u_n,x)<\epsilon$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 13}
+  essentiel: true
+- id: topo-n-0041
+  titre: 'Suite extraite'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.7 Suite dans un espace métrique'
+  enonce: '$(v_n)$ est extraite de $(u_n)$ s''il existe $\varphi:\mathbb N\to\mathbb N$ strictement croissante avec $v_n=u_{\varphi(n)}$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 14}
+  essentiel: true
+- id: topo-n-0042
+  titre: 'Convergence d''une suite et de ses suites extraites'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.7 Suite dans un espace métrique'
+  enonce: '$(u_n)$ converge si et seulement si toute suite extraite de $(u_n)$ converge.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 14}
+  essentiel: false
+- id: topo-n-0043
+  titre: 'Caractérisation séquentielle de l''adhérence et des fermés'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.7 Suite dans un espace métrique'
+  enonce: 'Dans un espace métrique : $x\in\bar A$ si et seulement s''il existe $(u_n)$ dans $A$ avec $u_n\to x$ ; $A$ est fermé si et seulement si toute suite convergente de $A$ a sa limite dans $A$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 14}
+  essentiel: true
+- id: topo-n-0044
+  titre: 'Valeur d''adhérence d''une suite'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.7 Suite dans un espace métrique'
+  enonce: '$x$ est valeur d''adhérence de $(u_n)$ si $\forall V\in\mathcal V_x,\forall N,\exists n\ge N,\ u_n\in V$ (en métrique : $\forall\epsilon,\forall N,\exists n\ge N,\ d(x,u_n)<\epsilon$).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 14}
+  essentiel: true
+- id: topo-n-0045
+  titre: 'Valeur d''adhérence et suite extraite convergente'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.7 Suite dans un espace métrique'
+  enonce: 'Dans un espace métrique, $x$ est valeur d''adhérence de $(u_n)$ si et seulement si $(u_n)$ possède une suite extraite qui converge vers $x$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 15}
+  essentiel: true
+- id: topo-n-0046
+  titre: 'Ensemble des valeurs d''adhérence'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.7 Suite dans un espace métrique'
+  enonce: 'L''ensemble des valeurs d''adhérence de $(u_n)$ est le fermé $\bigcap_{n}\overline{\{u_m:m\ge n\}}$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 15}
+  essentiel: true
+- id: topo-n-0047
+  titre: 'Continuité en un point (espaces topologiques)'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.8 Application entre deux espaces métriques'
+  enonce: '$f$ est continue en $x$ si $\forall V\in\mathcal V_{f(x)},\exists U\in\mathcal V_x,\ f(U)\subset V$ ; continue si elle l''est en tout point.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 16}
+  essentiel: true
+- id: topo-n-0048
+  titre: 'Continuité en un point : $\epsilon$-$\alpha$ et séquentielle'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.8 Application entre deux espaces métriques'
+  enonce: 'Entre espaces métriques, équivalents : $f$ continue en $x$ ; $\forall\epsilon,\exists\alpha,\ d(x,x'')<\alpha\Rightarrow\delta(f(x),f(x''))<\epsilon$ ; $u_n\to x\Rightarrow f(u_n)\to f(x)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 16}
+  essentiel: true
+- id: topo-n-0049
+  titre: 'Caractérisations de la continuité globale'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.8 Application entre deux espaces métriques'
+  enonce: 'Équivalents : $f$ continue ; image réciproque de tout ouvert ouverte ; image réciproque de tout fermé fermée ; $f(\bar A)\subset\overline{f(A)}$ pour toute partie $A$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 16}
+  essentiel: true
+- id: topo-n-0050
+  titre: 'Uniforme continuité, application lipschitzienne, isométrie, homéomorphisme'
+  type: definition
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.8 Application entre deux espaces métriques'
+  enonce: 'Uniformément continue : $\alpha$ ne dépend que de $\epsilon$. Lipschitzienne : $\delta(f(x),f(x''))\le Cd(x,x'')$. Isométrie : égalité. Homéomorphisme : bijection continue de réciproque continue.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 17}
+  essentiel: true
+- id: topo-n-0051
+  titre: 'Hiérarchie isométrie / lipschitzienne / uniformément continue / continue'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.8 Application entre deux espaces métriques'
+  enonce: 'Isométrie $\Rightarrow$ lipschitzienne $\Rightarrow$ uniformément continue $\Rightarrow$ continue. Une isométrie surjective est un homéomorphisme.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 18}
+  essentiel: true
+- id: topo-n-0052
+  titre: 'Équivalence de distances et applications identité'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace métrique'
+  sous_chapitre: '1.8 Application entre deux espaces métriques'
+  enonce: '$d$ et $\delta$ sont topologiquement (resp. uniformément, Lipschitz) équivalentes si et seulement si les identités $(X,d)\to(X,\delta)$ et $(X,\delta)\to(X,d)$ sont continues (resp. uniformément continues, lipschitziennes).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 18}
+  essentiel: false
+- id: topo-n-0053
+  titre: 'Suite de Cauchy'
+  type: definition
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.1 Suite de Cauchy'
+  enonce: '$\forall\epsilon>0,\exists n,\forall p,q\ge n,\ d(u_p,u_q)<\epsilon$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0054
+  titre: 'Toute suite convergente est de Cauchy'
+  type: propriete
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.1 Suite de Cauchy'
+  enonce: 'Toute suite convergente est de Cauchy (la réciproque est fausse en général).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0055
+  titre: 'Suite de Cauchy avec valeur d''adhérence'
+  type: propriete
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.1 Suite de Cauchy'
+  enonce: 'Toute suite de Cauchy ayant une valeur d''adhérence $x$ converge vers $x$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0056
+  titre: 'Espace métrique complet'
+  type: definition
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.2 Espace métrique complet'
+  enonce: '$(X,d)$ est complet si toute suite de Cauchy de $X$ converge.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0057
+  titre: 'Exemples d''espaces complets ou non'
+  type: exemple
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.2 Espace métrique complet'
+  enonce: '$\mathbb R$ est complet ; $\mathbb Q$ (suite $10^{-n}\lfloor10^n\sqrt2\rfloor$) et $\mathbb R\setminus\mathbb Q$ (suite $\sqrt2/n$) ne le sont pas ; un ensemble muni de la distance discrète est complet.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0058
+  titre: 'Partie bornée, diamètre'
+  type: definition
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.2 Espace métrique complet'
+  enonce: '$A$ est bornée s''il existe $M$ avec $d(x,y)\le M$ sur $A$ ; $\operatorname{diam}(A)=\sup_{x,y\in A}d(x,y)$. On a $\operatorname{diam}(\mathring A)\le\operatorname{diam}(A)=\operatorname{diam}(\bar A)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0059
+  titre: 'Suite décroissante de fermés de diamètre tendant vers 0 (caractérisation de la complétude)'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.2 Espace métrique complet'
+  enonce: '$X$ est complet si et seulement si pour toute suite décroissante de fermés non vides $(A_n)$ avec $\operatorname{diam}(A_n)\to0$, $\bigcap_nA_n$ est un singleton.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0060
+  titre: 'Sous-espace complet et fermé'
+  type: propriete
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.2 Espace métrique complet'
+  enonce: 'Si $(Y,d)$ est complet, $Y$ est fermé dans $X$. Si $X$ est complet : $Y$ complet si et seulement si $Y$ fermé.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0061
+  titre: 'Produit fini d''espaces complets'
+  type: propriete
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.2 Espace métrique complet'
+  enonce: 'Un produit fini d''espaces complets, muni de $D=\sum_kd_k$ (ou $D_p$, $D_\infty$), est complet. En particulier $\mathbb R^n$, $\mathbb C$, $\mathbb C^n$ sont complets.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0062
+  titre: 'Application bornée'
+  type: definition
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.3 Application à valeurs dans un espace métrique complet'
+  enonce: '$f:X\to Y$ est bornée si $f(X)$ est une partie bornée de $Y$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 4}
+  essentiel: false
+- id: topo-n-0063
+  titre: 'Complétude de $\mathcal B(X,Y)$ et $C_b(X,Y)$'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.3 Application à valeurs dans un espace métrique complet'
+  enonce: 'Avec $D(f,g)=\sup_x\delta(f(x),g(x))$, si $Y$ est complet alors $\mathcal B(X,Y)$ et $C_b(X,Y)$ sont complets (limite uniforme de continues continue).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0064
+  titre: 'Prolongement des applications uniformément continues'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.3 Application à valeurs dans un espace métrique complet'
+  enonce: 'Si $f:A\to Y$ est uniformément continue, $Y$ complet et $A$ dense dans $X$, alors $f$ a un unique prolongement continu à $X$, lui-même uniformément continu.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 5}
+  essentiel: true
+- id: topo-n-0065
+  titre: 'Point fixe, application contractante'
+  type: definition
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.4 Théorème de point fixe'
+  enonce: '$a$ est point fixe de $f$ si $f(a)=a$. $f$ est contractante s''il existe $C\in]0,1[$ avec $d(f(x),f(y))\le Cd(x,y)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0066
+  titre: 'Exemple : $\sqrt{1+x^2}-1$ contractante sur $[-M,M]$ mais pas sur $\mathbb R$'
+  type: exemple
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.4 Théorème de point fixe'
+  enonce: 'Par l''inégalité des accroissements finis, $|f''(x)|\le M/\sqrt{1+M^2}<1$ sur $[-M,M]$ ; aucun $C<1$ ne convient sur $\mathbb R$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 6}
+  essentiel: false
+- id: topo-n-0067
+  titre: 'Théorème de point fixe de Picard'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.4 Théorème de point fixe'
+  enonce: 'Toute application contractante d''un espace métrique complet dans lui-même possède un unique point fixe.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0068
+  titre: 'Méthode de point fixe (suite itérée $u_{n+1}=f(u_n)$)'
+  type: methode
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.4 Théorème de point fixe'
+  enonce: 'Poser $u_{n+1}=f(u_n)$ ; $d(u_{n+1},u_n)\le C^nd(u_1,u_0)$, d''où $(u_n)$ de Cauchy, convergente vers un point fixe (continuité de $f$) ; unicité par $d(a_1,a_2)\le Cd(a_1,a_2)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0069
+  titre: 'Contre-exemple : $|f(x)-f(y)|<|x-y|$ ne suffit pas'
+  type: exemple
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.4 Théorème de point fixe'
+  enonce: '$f(x)=\sqrt{1+x^2}$ vérifie $|f(x)-f(y)|<|x-y|$ sur $\mathbb R$ mais n''a aucun point fixe.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0070
+  titre: 'Théorème de Baire'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.5 Théorème de Baire'
+  enonce: 'Dans un espace métrique complet, une intersection dénombrable d''ouverts denses est dense.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 8}
+  essentiel: true
+- id: topo-n-0071
+  titre: 'Démonstration du théorème de Baire (boules fermées emboîtées)'
+  type: demonstration
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.5 Théorème de Baire'
+  enonce: 'Construire $\bar B(u_n,r_n)\subset O_n\cap B(u_{n-1},r_{n-1})$ avec $r_n\le1/n$, puis appliquer la caractérisation de la complétude par fermés emboîtés.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 8}
+  essentiel: false
+- id: topo-n-0072
+  titre: 'Baire : union dénombrable de fermés d''intérieur vide'
+  type: propriete
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.5 Théorème de Baire'
+  enonce: 'Dans un espace métrique complet, une union dénombrable de fermés d''intérieur vide est d''intérieur vide.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 9}
+  essentiel: true
+- id: topo-n-0073
+  titre: 'Baire : recouvrement dénombrable par des fermés'
+  type: propriete
+  chapitre: 'Chapitre 2 - Espace complet'
+  sous_chapitre: '2.5 Théorème de Baire'
+  enonce: 'Si un espace métrique complet est union dénombrable de fermés $F_n$, l''un des $F_n$ est d''intérieur non vide.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap2-espaces-complets.pdf, page: 9}
+  essentiel: true
+- id: topo-n-0074
+  titre: 'Recouvrement, sous-recouvrement'
+  type: definition
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.1 Définitions et propriétés'
+  enonce: '$(A_i)_{i\in I}$ est un recouvrement de $X$ si $X=\bigcup_iA_i$ ; c''est un sous-recouvrement si $J\subset I$ et $X=\bigcup_{i\in J}A_i$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0075
+  titre: 'Espace compact (propriété de Borel-Lebesgue)'
+  type: definition
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.1 Définitions et propriétés'
+  enonce: 'Un espace topologique séparé est compact si de tout recouvrement par des ouverts on peut extraire un sous-recouvrement fini.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0076
+  titre: 'Exemples de compacts et non-compacts'
+  type: exemple
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.1 Définitions et propriétés'
+  enonce: '$\mathbb R$ n''est pas compact ($\mathbb R=\bigcup_n]n-1,n+1[$) ; un espace métrique fini est compact ; un espace discret est compact si et seulement s''il est fini.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0077
+  titre: 'Partie compacte'
+  type: definition
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.1 Définitions et propriétés'
+  enonce: '$A$ est une partie compacte de $X$ si $A$ est compact pour la topologie induite.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0078
+  titre: 'Compacité d''une partie par recouvrements d''ouverts de $X$'
+  type: propriete
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.1 Définitions et propriétés'
+  enonce: '$A$ est compacte si et seulement si de tout recouvrement de $A$ par des ouverts de $X$ on peut extraire un sous-recouvrement fini.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0079
+  titre: 'Caractérisation de la compacité par les fermés'
+  type: propriete
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.1 Définitions et propriétés'
+  enonce: 'Un espace séparé est compact si et seulement si pour toute famille de fermés dont toute sous-famille finie a une intersection non vide, l''intersection totale est non vide.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0080
+  titre: 'Compact implique fermé ; fermé d''un compact'
+  type: propriete
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.1 Définitions et propriétés'
+  enonce: 'Dans un espace séparé, une partie compacte est fermée. Si $X$ est compact, $A$ est compacte si et seulement si $A$ est fermée.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0081
+  titre: 'Un compact est borné'
+  type: propriete
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.1 Définitions et propriétés'
+  enonce: 'Toute partie compacte d''un espace métrique est bornée (donc fermée et bornée ; la réciproque est fausse en général).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0082
+  titre: 'Théorème de Bolzano-Weierstrass'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.2 Suites dans un espace métrique compact'
+  enonce: 'Un espace métrique est compact si et seulement si toute suite de cet espace possède une valeur d''adhérence.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0083
+  titre: 'Lemme de Lebesgue'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.2 Suites dans un espace métrique compact'
+  enonce: 'Si $X$ vérifie Bolzano-Weierstrass, pour tout recouvrement ouvert $(U_i)$ il existe $\epsilon>0$ tel que tout $B(x,\epsilon)$ est inclus dans un $U_i$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0084
+  titre: 'Précompacité'
+  type: definition
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.2 Suites dans un espace métrique compact'
+  enonce: '$X$ est précompact si $\forall\epsilon>0,\exists x_1,\dots,x_n,\ X=\bigcup_kB(x_k,\epsilon)$. Si $X$ vérifie Bolzano-Weierstrass, il est précompact (lemme 2).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0085
+  titre: 'Suite d''un compact avec au plus une valeur d''adhérence'
+  type: propriete
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.2 Suites dans un espace métrique compact'
+  enonce: 'Dans un espace métrique compact, une suite ayant au plus une valeur d''adhérence converge.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0086
+  titre: 'Un compact est complet'
+  type: propriete
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.2 Suites dans un espace métrique compact'
+  enonce: 'Tout espace métrique compact est complet (réciproque fausse : $\mathbb R$).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0087
+  titre: 'Compacts de $\mathbb R$'
+  type: propriete
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.3 Compacts de $\mathbb R^d$'
+  enonce: 'Les compacts de $\mathbb R$ usuel sont les parties fermées et bornées.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0088
+  titre: 'Fermé borné non compact : la borne est métrique'
+  type: exemple
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.3 Compacts de $\mathbb R^d$'
+  enonce: 'Avec $d=\frac{|x-y|}{1+|x-y|}$, $(\mathbb R,d)$ est fermé et borné mais $(n)$ n''a pas de valeur d''adhérence ; $]0,1[$ est fermé et borné dans lui-même mais $(1/n)$ n''a pas de valeur d''adhérence.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 8}
+  essentiel: false
+- id: topo-n-0089
+  titre: 'Produit fini de compacts'
+  type: propriete
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.3 Compacts de $\mathbb R^d$'
+  enonce: 'Le produit fini d''espaces métriques compacts, muni de $D_p$ ($p\in[1,+\infty]$), est compact.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 8}
+  essentiel: true
+- id: topo-n-0090
+  titre: 'Compacts de $\mathbb R^d$ et $\mathbb C^d$'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.3 Compacts de $\mathbb R^d$'
+  enonce: 'Les compacts de $\mathbb R^d$ (resp. $\mathbb C^d$) sont les parties fermées et bornées.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 9}
+  essentiel: true
+- id: topo-n-0091
+  titre: 'Image d''un compact par une application continue'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.4 Applications continues sur un compact'
+  enonce: 'L''image d''un compact par une application continue est compacte.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 9}
+  essentiel: true
+- id: topo-n-0092
+  titre: 'Fonction continue sur un compact : bornée et atteint ses bornes'
+  type: propriete
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.4 Applications continues sur un compact'
+  enonce: 'Si $X$ est un espace métrique compact et $f:X\to\mathbb R$ continue, il existe $x_m,x_M$ avec $f(x_m)\le f(x)\le f(x_M)$ pour tout $x$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 10}
+  essentiel: true
+- id: topo-n-0093
+  titre: 'Théorème de Heine'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.4 Applications continues sur un compact'
+  enonce: 'Sur un espace métrique compact, toute application continue est uniformément continue.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 10}
+  essentiel: true
+- id: topo-n-0094
+  titre: 'Bijection continue d''un compact : homéomorphisme'
+  type: propriete
+  chapitre: 'Chapitre 3 - Espace compact'
+  sous_chapitre: '3.4 Applications continues sur un compact'
+  enonce: 'Une bijection continue $f:X\to Y$ entre espaces métriques avec $X$ compact est un homéomorphisme (l''image d''un fermé est un compact donc un fermé).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 11}
+  essentiel: true

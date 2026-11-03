@@ -1,0 +1,772 @@
+# Cartes a creer pour modelisation : 75 notions (72 absentes, 3 partielles) + 2 prerequis L1-L2.
+# programme_ecg: true avec confiance a_confirmer = jugement de connaissance generale, sans source ici.
+- id: mod-a-001
+  origine: cours_l3
+  notion: mod-n-0001
+  titre: "Fonction génératrice d'une variable à valeurs dans N"
+  raison: "absente du paquet (aucune carte sur la fonction génératrice d'une loi)"
+  programme_ecg: true
+  exercices: [par2324-ex01, par2526-ex02, exa2324-ex01, exa2526-ex01, td1-ex01, td1-ex02, td1-ex03, td1-ex04, td1-ex05]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 1}
+  confiance: a_confirmer
+- id: mod-a-002
+  origine: cours_l3
+  notion: mod-n-0002
+  titre: "Fonctions génératrices des lois usuelles"
+  raison: "absente du paquet"
+  programme_ecg: true
+  exercices: [par2324-ex01, par2526-ex02, td1-ex01, td1-ex07]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 2}
+  confiance: a_confirmer
+- id: mod-a-003
+  origine: cours_l3
+  notion: mod-n-0003
+  titre: "Caractérisation de la loi par la fonction génératrice"
+  raison: "absente du paquet"
+  programme_ecg: true
+  exercices: [par2324-ex01, td1-ex03, td1-ex04]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 2}
+  confiance: a_confirmer
+- id: mod-a-004
+  origine: cours_l3
+  notion: mod-n-0004
+  titre: "Fonction génératrice d'une somme de variables indépendantes"
+  raison: "absente du paquet"
+  programme_ecg: true
+  exercices: [par2324-ex01, td1-ex01, td1-ex03, td1-ex04]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 3}
+  confiance: a_confirmer
+- id: mod-a-005
+  origine: cours_l3
+  notion: mod-n-0005
+  titre: "Dérivées de la fonction génératrice et moments"
+  raison: "absente du paquet"
+  programme_ecg: true
+  exercices: [par2324-ex01, par2526-ex02, td1-ex02, td1-ex05, td1-ex09]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 3}
+  confiance: a_confirmer
+- id: mod-a-006
+  origine: cours_l3
+  notion: mod-n-0006
+  titre: "Démonstration de l'équivalence moment / régularité de G"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [td1-ex09]
+  priorite: 2
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 4}
+  confiance: sure
+- id: mod-a-007
+  origine: cours_l3
+  notion: mod-n-0007
+  titre: "Moments des lois usuelles via la fonction génératrice"
+  raison: "partielle : le paquet donne espérance et variance de Bernoulli, binomiale, Poisson, géométrique (1ere année), pas leur obtention par dérivation de G en 1"
+  programme_ecg: true
+  exercices: [par2324-ex01, par2526-ex02, td1-ex02]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 5}
+  confiance: a_confirmer
+- id: mod-a-008
+  origine: cours_l3
+  notion: mod-n-0008
+  titre: "Processus de Galton-Watson"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex01, par2526-ex02, exa2324-ex01, exa2526-ex01, td1-ex05, td1-ex06, td1-ex07, td1-ex08, td1-ex09]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 6}
+  confiance: sure
+- id: mod-a-009
+  origine: cours_l3
+  notion: mod-n-0009
+  titre: "Espérance et variance de Z_n"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex01, exa2324-ex01, exa2526-ex01, td1-ex05, td1-ex06]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 7}
+  confiance: sure
+- id: mod-a-010
+  origine: cours_l3
+  notion: mod-n-0010
+  titre: "Calcul de E[Z_{n+1}] et E[Z_{n+1}^2] par conditionnement sur Z_n"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [td1-ex05, td1-ex06]
+  priorite: 2
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 7}
+  confiance: sure
+- id: mod-a-011
+  origine: cours_l3
+  notion: mod-n-0011
+  titre: "Fonction génératrice de Z_n (G_n = g composée n fois)"
+  raison: "absente du paquet (les cartes 'famille génératrice' sont d'algèbre linéaire)"
+  programme_ecg: false
+  exercices: [par2324-ex01, par2526-ex02, td1-ex05, td1-ex07]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 8}
+  confiance: sure
+- id: mod-a-012
+  origine: cours_l3
+  notion: mod-n-0012
+  titre: "Galton-Watson avec Z_0 = N déterministe"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex01, td1-ex06]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 9}
+  confiance: sure
+- id: mod-a-013
+  origine: cours_l3
+  notion: mod-n-0013
+  titre: "Extinction presque sûre si m < 1 (inégalité de Markov)"
+  raison: "partielle : le paquet a l'inégalité de Markov (outil), pas son application P(Z_n>=1) <= m^n ni la conclusion P(E)=1"
+  programme_ecg: false
+  exercices: [par2526-ex02, par2324-ex01, td1-ex08]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 10}
+  confiance: sure
+- id: mod-a-014
+  origine: cours_l3
+  notion: mod-n-0014
+  titre: "Probabilité d'extinction : plus petite solution de g(s) = s"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex01, par2526-ex02, exa2324-ex01, exa2526-ex01, td1-ex07, td1-ex08]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 10}
+  confiance: sure
+- id: mod-a-015
+  origine: cours_l3
+  notion: mod-n-0015
+  titre: "Dichotomie sous-critique, critique, sur-critique pour l'extinction"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex01, par2526-ex02, td1-ex07, td1-ex08]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 10}
+  confiance: sure
+- id: mod-a-016
+  origine: cours_l3
+  notion: mod-n-0016
+  titre: "Méthode : étude de h(s) = g(s) - s sur [0,1] (convexité)"
+  raison: "absente du paquet (les cartes de convexité existent, pas la méthode appliquée à g)"
+  programme_ecg: false
+  exercices: [par2324-ex01, exa2324-ex01, exa2526-ex01, td1-ex07]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 11}
+  confiance: sure
+- id: mod-a-017
+  origine: cours_l3
+  notion: mod-n-0017
+  titre: "Temps d'extinction, cas sous-critique : P(tau > n) équivalent à C m^n"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2526-ex02]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 12}
+  confiance: sure
+- id: mod-a-018
+  origine: cours_l3
+  notion: mod-n-0018
+  titre: "Temps d'extinction, cas critique : P(tau > n) équivalent à 2/(n sigma^2)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2526-ex02, td1-ex09]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 13}
+  confiance: sure
+- id: mod-a-019
+  origine: cours_l3
+  notion: mod-n-0019
+  titre: "Convergence de Z_n / m^n vers W, cas sur-critique"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2526-ex02]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap1-galton-watson.pdf, page: 14}
+  confiance: sure
+- id: mod-a-020
+  origine: cours_l3
+  notion: mod-n-0020
+  titre: "Matrice markovienne (stochastique)"
+  raison: "absente du paquet (seul le produit de matrices générique existe)"
+  programme_ecg: false
+  exercices: [par2324-ex02, par2526-ex01, exa2324-ex02, td2-ex01]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 1}
+  confiance: sure
+- id: mod-a-021
+  origine: cours_l3
+  notion: mod-n-0021
+  titre: "Produit et puissances de matrices markoviennes"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex02, par2526-ex01, exa2526-ex02, td2-ex04]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 1}
+  confiance: sure
+- id: mod-a-022
+  origine: cours_l3
+  notion: mod-n-0022
+  titre: "Mesure de probabilité sur E et produit mu P"
+  raison: "absente du paquet (les cartes de mesure sont en théorie de la mesure générale)"
+  programme_ecg: false
+  exercices: [exa2324-ex02, td2-ex02, td2-ex05]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 2}
+  confiance: sure
+- id: mod-a-023
+  origine: cours_l3
+  notion: mod-n-0023
+  titre: "Graphe de transition"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex02, par2526-ex01, exa2324-ex02, exa2526-ex02, td2-ex03, td2-ex04]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 2}
+  confiance: sure
+- id: mod-a-024
+  origine: cours_l3
+  notion: mod-n-0024
+  titre: "Chaîne de Markov homogène"
+  raison: "absente du paquet (la carte 'inégalité de Markov' n'a aucun rapport)"
+  programme_ecg: false
+  exercices: [par2324-ex02, par2526-ex01, exa2526-ex02, td2-ex02]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 3}
+  confiance: sure
+- id: mod-a-025
+  origine: cours_l3
+  notion: mod-n-0025
+  titre: "Probabilité d'une trajectoire"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex02]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 3}
+  confiance: sure
+- id: mod-a-026
+  origine: cours_l3
+  notion: mod-n-0026
+  titre: "Équation de récurrence aléatoire X_{n+1} = phi(X_n, U_{n+1})"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2526-ex02]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 4}
+  confiance: sure
+- id: mod-a-027
+  origine: cours_l3
+  notion: mod-n-0027
+  titre: "Construction d'une chaîne de matrice P donnée"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 5}
+  confiance: sure
+- id: mod-a-028
+  origine: cours_l3
+  notion: mod-n-0028
+  titre: "Loi de X_n (mu_n = mu_0 P^n) et transitions d'ordre k"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex02, par2526-ex01, td2-ex02, td2-ex03, td2-ex07]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 5}
+  confiance: sure
+- id: mod-a-029
+  origine: cours_l3
+  notion: mod-n-0029
+  titre: "Notation P_{x_0} (chaîne issue de x_0)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2526-ex01, td2-ex04]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 6}
+  confiance: sure
+- id: mod-a-030
+  origine: cours_l3
+  notion: mod-n-0030
+  titre: "Accessibilité entre états"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex02, td2-ex08]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 6}
+  confiance: sure
+- id: mod-a-031
+  origine: cours_l3
+  notion: mod-n-0031
+  titre: "Caractérisation matricielle de l'accessibilité (P^n(x,y) > 0)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex02, td2-ex08]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 7}
+  confiance: sure
+- id: mod-a-032
+  origine: cours_l3
+  notion: mod-n-0032
+  titre: "Chaîne irréductible"
+  raison: "absente du paquet (les cartes sur les polynômes irréductibles n'ont aucun rapport)"
+  programme_ecg: false
+  exercices: [par2324-ex02, par2526-ex01, exa2526-ex02, td2-ex04]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 7}
+  confiance: sure
+- id: mod-a-033
+  origine: cours_l3
+  notion: mod-n-0033
+  titre: "États récurrents et transitoires (cas fini)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex02, par2526-ex01, exa2324-ex02, td2-ex04, td2-ex06, td2-ex13]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 7}
+  confiance: sure
+- id: mod-a-034
+  origine: cours_l3
+  notion: mod-n-0034
+  titre: "Définition générale de la récurrence (P_x(retour) = 1)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 8}
+  confiance: sure
+- id: mod-a-035
+  origine: cours_l3
+  notion: mod-n-0035
+  titre: "Classes récurrentes"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2324-ex02, par2526-ex01, exa2324-ex02, td2-ex04, td2-ex13]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 8}
+  confiance: sure
+- id: mod-a-036
+  origine: cours_l3
+  notion: mod-n-0036
+  titre: "Existence d'un état récurrent (espace fini)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 8}
+  confiance: sure
+- id: mod-a-037
+  origine: cours_l3
+  notion: mod-n-0037
+  titre: "Chaîne apériodique"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [td2-ex09, td2-ex12, td2-ex13]
+  priorite: 2
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 8}
+  confiance: sure
+- id: mod-a-038
+  origine: cours_l3
+  notion: mod-n-0038
+  titre: "Condition suffisante d'apériodicité (P(x_0,x_0) > 0)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [td2-ex03, td2-ex07, td2-ex09, td2-ex12]
+  priorite: 2
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 9}
+  confiance: sure
+- id: mod-a-039
+  origine: cours_l3
+  notion: mod-n-0039
+  titre: "Mesure de probabilité invariante (mu P = mu)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2324-ex02, exa2526-ex02, td2-ex05, td2-ex06]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 9}
+  confiance: sure
+- id: mod-a-040
+  origine: cours_l3
+  notion: mod-n-0040
+  titre: "Stationnarité sous une loi invariante"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [td2-ex07]
+  priorite: 2
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 9}
+  confiance: sure
+- id: mod-a-041
+  origine: cours_l3
+  notion: mod-n-0041
+  titre: "Existence d'une mesure invariante (E fini)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2324-ex02, td2-ex05, td2-ex06]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 10}
+  confiance: sure
+- id: mod-a-042
+  origine: cours_l3
+  notion: mod-n-0042
+  titre: "Preuve d'existence par moyennes de Cesàro et compacité"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 10}
+  confiance: sure
+- id: mod-a-043
+  origine: cours_l3
+  notion: mod-n-0043
+  titre: "Unicité de la mesure invariante (cas irréductible)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2526-ex02, td2-ex08]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 10}
+  confiance: sure
+- id: mod-a-044
+  origine: cours_l3
+  notion: mod-n-0044
+  titre: "Preuve de l'unicité par principe du maximum"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 11}
+  confiance: sure
+- id: mod-a-045
+  origine: cours_l3
+  notion: mod-n-0045
+  titre: "Convergence au sens de Cesàro vers pi"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 11}
+  confiance: sure
+- id: mod-a-046
+  origine: cours_l3
+  notion: mod-n-0046
+  titre: "Théorème de Perron-Frobenius"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [td2-ex03, td2-ex07, td2-ex09, td2-ex12, td2-ex13]
+  priorite: 2
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 11}
+  confiance: sure
+- id: mod-a-047
+  origine: cours_l3
+  notion: mod-n-0047
+  titre: "Convergence vers la mesure invariante et vitesse |lambda_2|^n"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [td2-ex03, td2-ex09, td2-ex12, td2-ex13]
+  priorite: 2
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 12}
+  confiance: sure
+- id: mod-a-048
+  origine: cours_l3
+  notion: mod-n-0048
+  titre: "Théorème ergodique"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [td2-ex12]
+  priorite: 2
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 13}
+  confiance: sure
+- id: mod-a-049
+  origine: cours_l3
+  notion: mod-n-0049
+  titre: "Deux moyens de calculer la loi limite"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [td2-ex12]
+  priorite: 2
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 13}
+  confiance: sure
+- id: mod-a-050
+  origine: cours_l3
+  notion: mod-n-0050
+  titre: "Temps de retour T_a"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2526-ex02, td2-ex12]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 14}
+  confiance: sure
+- id: mod-a-051
+  origine: cours_l3
+  notion: mod-n-0051
+  titre: "Mesure invariante et temps de retour moyen : pi(a) = 1/E_a[T_a]"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2526-ex02, td2-ex12]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 14}
+  confiance: sure
+- id: mod-a-052
+  origine: cours_l3
+  notion: mod-n-0052
+  titre: "Chaîne décalée en temps (propriété de Markov simple)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [par2526-ex01]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 16}
+  confiance: sure
+- id: mod-a-053
+  origine: cours_l3
+  notion: mod-n-0053
+  titre: "État absorbant"
+  raison: "absente du paquet (seule 'valeur absolue' ressort)"
+  programme_ecg: false
+  exercices: [exa2324-ex02, td2-ex13]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 17}
+  confiance: sure
+- id: mod-a-054
+  origine: cours_l3
+  notion: mod-n-0054
+  titre: "Probabilité d'absorption"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2324-ex02, td2-ex13]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 17}
+  confiance: sure
+- id: mod-a-055
+  origine: cours_l3
+  notion: mod-n-0055
+  titre: "Système linéaire des probabilités d'absorption"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2324-ex02, td2-ex13]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 17}
+  confiance: sure
+- id: mod-a-056
+  origine: cours_l3
+  notion: mod-n-0056
+  titre: "Urne d'Ehrenfest : modèle"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2526-ex02]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 18}
+  confiance: sure
+- id: mod-a-057
+  origine: cours_l3
+  notion: mod-n-0057
+  titre: "Mesure invariante de l'urne d'Ehrenfest : binomiale B(N,1/2)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2526-ex02]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 19}
+  confiance: sure
+- id: mod-a-058
+  origine: cours_l3
+  notion: mod-n-0058
+  titre: "Concentration de la loi binomiale"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 20}
+  confiance: sure
+- id: mod-a-059
+  origine: cours_l3
+  notion: mod-n-0059
+  titre: "PageRank : marche aléatoire sur le graphe du web"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 21}
+  confiance: sure
+- id: mod-a-060
+  origine: cours_l3
+  notion: mod-n-0060
+  titre: "PageRank : matrice de transition modifiée P_epsilon"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap2-markov.pdf, page: 21}
+  confiance: sure
+- id: mod-a-061
+  origine: cours_l3
+  notion: mod-n-0061
+  titre: "Processus ponctuel et processus de comptage"
+  raison: "absente du paquet (seule la mesure de comptage générale existe)"
+  programme_ecg: false
+  exercices: [exa2324-ex03, exa2324-ex04, exa2526-ex03]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 1}
+  confiance: sure
+- id: mod-a-062
+  origine: cours_l3
+  notion: mod-n-0062
+  titre: "Processus de renouvellement"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2324-ex04, exa2526-ex03]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 2}
+  confiance: sure
+- id: mod-a-063
+  origine: cours_l3
+  notion: mod-n-0063
+  titre: "Petit théorème de renouvellement : N_t / t tend vers 1/E[tau]"
+  raison: "absente du paquet (seule la loi faible des grands nombres existe)"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 2}
+  confiance: sure
+- id: mod-a-064
+  origine: cours_l3
+  notion: mod-n-0064
+  titre: "Processus de Poisson (renouvellement exponentiel, absence de mémoire)"
+  raison: "absente du paquet (la loi sans mémoire du paquet est celle de la géométrique)"
+  programme_ecg: false
+  exercices: [exa2324-ex03, exa2324-ex04, exa2526-ex03]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 3}
+  confiance: sure
+- id: mod-a-065
+  origine: cours_l3
+  notion: mod-n-0065
+  titre: "Loi de N_t pour un processus de Poisson : Poisson(lambda t)"
+  raison: "absente du paquet (carte sur la loi de Poisson, pas sur le processus)"
+  programme_ecg: false
+  exercices: [exa2324-ex03, exa2324-ex04]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 3}
+  confiance: sure
+- id: mod-a-066
+  origine: cours_l3
+  notion: mod-n-0066
+  titre: "Loi de T_n (loi gamma) et P(N_t=n) = P(T_n<=t) - P(T_{n+1}<=t)"
+  raison: "partielle : le paquet a la densité gamma et une méthode pour la loi d'Erlang (2e année), pas l'énoncé T_n somme de n exponentielles ni son usage pour la loi de N_t"
+  programme_ecg: false
+  exercices: [exa2324-ex04, exa2324-ex03]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 3}
+  confiance: a_confirmer
+- id: mod-a-067
+  origine: cours_l3
+  notion: mod-n-0067
+  titre: "Loi conditionnelle des temps de saut (uniformes ordonnées)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2324-ex03]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 4}
+  confiance: sure
+- id: mod-a-068
+  origine: cours_l3
+  notion: mod-n-0068
+  titre: "Accroissements indépendants et stationnaires du processus de Poisson"
+  raison: "absente du paquet (les cartes d'indépendance sont celles des variables finies)"
+  programme_ecg: false
+  exercices: [exa2324-ex03, exa2324-ex04, exa2526-ex03]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 6}
+  confiance: sure
+- id: mod-a-069
+  origine: cours_l3
+  notion: mod-n-0069
+  titre: "Preuve des accroissements indépendants via multinomiale"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 6}
+  confiance: sure
+- id: mod-a-070
+  origine: cours_l3
+  notion: mod-n-0070
+  titre: "Le processus de comptage de Poisson est markovien homogène"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 7}
+  confiance: sure
+- id: mod-a-071
+  origine: cours_l3
+  notion: mod-n-0071
+  titre: "Propriété de Markov du processus de Poisson"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [exa2526-ex03, exa2324-ex04]
+  priorite: 1
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 7}
+  confiance: sure
+- id: mod-a-072
+  origine: cours_l3
+  notion: mod-n-0072
+  titre: "File d'attente M/M/infini : modèle"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 9}
+  confiance: sure
+- id: mod-a-073
+  origine: cours_l3
+  notion: mod-n-0073
+  titre: "Loi du nombre de clients à l'instant t (binomiale * Poisson)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 9}
+  confiance: sure
+- id: mod-a-074
+  origine: cours_l3
+  notion: mod-n-0074
+  titre: "Preuve : loi de Y_t par conditionnement et uniformes"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 9}
+  confiance: sure
+- id: mod-a-075
+  origine: cours_l3
+  notion: mod-n-0075
+  titre: "Loi d'équilibre de la file M/M/infini : Poisson(lambda/mu)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: modelisation/cours/chap3-poisson.pdf, page: 10}
+  confiance: sure
+- id: mod-a-076
+  origine: prerequis_l1l2
+  notion: null
+  titre: "Lemme de substitution : conditionner par une variable indépendante (P(f(X,Y) dans B) = intégrale de P(f(x,Y) dans B) selon la loi de X)"
+  raison: "nécessaire pour P(M_1=k) en intégrant sur T'_1 indépendant de N ; ni dans les notions, ni dans le paquet (seules probabilités totales discrètes et transfert existent) ; programme ECG incertain"
+  programme_ecg: false
+  exercices: [exa2324-ex04]
+  priorite: 1
+  source: null
+  confiance: a_confirmer
+- id: mod-a-077
+  origine: prerequis_l1l2
+  notion: null
+  titre: "Sommation des équivalents : si v_{n+1} - v_n tend vers c > 0 (équivalent à c), alors v_n est équivalent à c n"
+  raison: "nécessaire pour passer de 1/u_{n+1} - 1/u_n équivalent à phi''(1-)/2 à u_n équivalent à 2/(phi''(1-) n) ; le paquet n'a que la définition des suites équivalentes ; programme ECG incertain"
+  programme_ecg: false
+  exercices: [td1-ex09]
+  priorite: 2
+  source: null
+  confiance: a_confirmer

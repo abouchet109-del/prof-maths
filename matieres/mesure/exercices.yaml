@@ -1,0 +1,3420 @@
+- id: mes-td1-ex01
+  titre: Formules de Hausdorff
+  enonce: |
+    Soit $f:E\to F$ une application.
+    1. Montrer que pour toute famille $(B_i)_{i\in I}$ de parties de $F$, on a :
+       (a) $f^{-1}(\bigcup_{i\in I}B_i)=\bigcup_{i\in I}f^{-1}(B_i)$
+       (b) $f^{-1}(\bigcap_{i\in I}B_i)=\bigcap_{i\in I}f^{-1}(B_i)$
+    2. Montrer que toute famille $(A_i)_{i\in I}$ de parties de $E$, on a $f(\bigcup_{i\in I}A_i)=\bigcup_{i\in I}f(A_i)$.
+    3. Montrer que si $f$ est injective, on a $f(\bigcap_{i\in I}A_i)=\bigcap_{i\in I}f(A_i)$. Montrer par un contre-exemple que l'égalité est fausse en général.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td1-corrige.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td1-ex02
+  titre: Images directes et réciproques, complémentaires
+  enonce: |
+    Soit $f:E\to F$ une application.
+    1. Montrer que pour toute partie $A$ de $F$, on a $f^{-1}(A^c)=(f^{-1}(A))^c$.
+    2. Que peut-on dire de $f(A^c)$ pour une partie $A$ de $E$ ?
+    3. Montrer que : $f$ est surjective si et seulement si $\forall B\subset F,\ f(f^{-1}(B))=B$.
+    4. Montrer que : $f$ injective si et seulement si $\forall A\subset E,\ f^{-1}(f(A))=A$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td1-corrige.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td1-ex03
+  titre: Fonction indicatrice
+  enonce: |
+    Pour toute partie $A$ d'un ensemble $\Omega$, on appelle fonction indicatrice de $A$, notée $\mathbf 1_A$, l'application de $\Omega$ vers $\{0,1\}$ définie par $\mathbf 1_A(\omega)=1$ si $\omega\in A$, $\mathbf 1_A(\omega)=0$ si $\omega\notin A$.
+    Soient $A$, $B$ et $C$ trois parties de $\Omega$.
+    1. Vérifier que $\mathbf 1_A+\mathbf 1_B=\mathbf 1_{A\cup B}+\mathbf 1_{A\cap B}$.
+    2. Écrire $\mathbf 1_{A\cap B}$ et $\mathbf 1_{A\cup B}$ en fonction de $\mathbf 1_A$ et $\mathbf 1_B$.
+    3. Déterminer les fonctions indicatrices des ensembles suivants : $A^c$, $A\setminus B$, $A\cup B\cup C$ et $A\Delta B$ en fonction de $\mathbf 1_A$, $\mathbf 1_B$ et $\mathbf 1_C$.
+    4. Soit $(A_n)_{n\in\mathbb N^*}$ une suite de parties de $E$. Déterminer $\mathbf 1_{\bigcap_{n=1}^N A_n}$, $N\in\mathbb N$, en fonction des $\mathbf 1_{A_n}$. En déduire
+    $$\mathbf 1_{\bigcup_{n=1}^N A_n}=\sum_{n=1}^N(-1)^{n+1}\Big(\sum_{1\le i_1<i_2<\dots<i_n\le N}\mathbf 1_{A_{i_1}\cap\dots\cap A_{i_n}}\Big)$$
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td1-corrige.pdf
+    page: 2
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td1-ex04
+  titre: Représentations graphiques de sommes d'indicatrices
+  enonce: |
+    Représenter graphiquement les fonctions suivantes définies sur $\mathbb R$ :
+    1. $f=\sum_{n\ge0}\mathbf 1_{[n,+\infty[}$
+    2. $g=\sum_{n\ge0}\mathbf 1_{[0,n]}$
+    3. $h=\sum_{n\ge0}(n+1)\mathbf 1_{[n,n+1[}$
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td1-corrige.pdf
+    page: 4
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td1-ex05
+  titre: limsup et liminf de suites réelles
+  enonce: |
+    Soit $(u_n)_{n\in\mathbb N}$ une suite de réels. On définit $v_k:=\sup_{n\ge k}u_n$ et $w_k:=\inf_{n\ge k}u_n$.
+    1. Montrer que ces deux suites sont monotones et convergentes dans $\overline{\mathbb R}$. On définit ainsi la limite supérieure et inférieure de la suite $(u_n)_{n\in\mathbb N}$ par : $\limsup_{n\to+\infty}u_n:=\lim_{k\to+\infty}v_k$ et $\liminf_{n\to+\infty}u_n:=\lim_{k\to+\infty}w_k$.
+    2. Montrer que la suite $(u_n)_{n\in\mathbb N}$ converge vers $\ell\in\overline{\mathbb R}$ si et seulement si : $\limsup_{n\to+\infty}u_n=\liminf_{n\to+\infty}u_n=\ell$.
+    3. Déterminer les limites inférieures et supérieures des suites suivantes :
+       (a) $a_n=(-1)^n$
+       (b) $b_n=4+\dfrac{(-1)^n}{n+1}+\sin\!\big(\dfrac{n\pi}{2}\big)$
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td1-corrige.pdf
+    page: 4
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td1-ex06
+  titre: limsup et liminf d'ensembles
+  enonce: |
+    Soit $(A_n)_{n\in\mathbb N}$ une suite de parties d'un ensemble $\Omega$.
+    1. Déterminer $\limsup_{n\to+\infty}A_n$ et $\liminf_{n\to+\infty}A_n$ lorsque $A_{2p}=F$ et $A_{2p+1}=G$ où $F$ et $G$ sont deux parties de $\Omega$.
+    2. Calculer $(\limsup_{n\to+\infty}A_n)^c$ et montrer que $\liminf_{n\to+\infty}A_n\subset\limsup_{n\to+\infty}A_n$.
+    3. Calculer $\limsup_{n\to+\infty}A_n$ et $\liminf_{n\to+\infty}A_n$ dans les cas suivants :
+       (a) $A_n:=]-\infty,a_n]$ pour tout $n\in\mathbb N^*$, où $a_{2p}:=1+\dfrac1{2p}$ pour tout $p\in\mathbb N^*$ et $a_{2p+1}:=-1-\dfrac1{2p+1}$ pour tout $p\in\mathbb N$.
+       (b) $A_{2p}=]0,3+\dfrac1{3p}[$ et $A_{2p+1}=]-1-\dfrac1{3p},2]$ pour tout $p\in\mathbb N^*$.
+       (c) $A_k=p_k\mathbb N$ où $(p_k)_{k\in\mathbb N}$ est la suite des nombres premiers et $p_k\mathbb N$ est l'ensemble des multiples de $p_k$.
+    4. Montrer que dans le cas général : $\limsup_{n\to+\infty}\mathbf 1_{A_n}=\mathbf 1_{\limsup_{n\to+\infty}A_n}$. Donner une expression analogue pour la limite inférieure.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td1-corrige.pdf
+    page: 5
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td1-ex07
+  titre: 'Rappels : ensembles dénombrables'
+  enonce: |
+    Montrer que les ensembles suivants sont dénombrables :
+    1. $\mathbb N^*$
+    2. $\mathbb Z$
+    3. $\mathbb N^2$
+    4. $\mathbb Q$
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td1-corrige.pdf
+    page: 8
+    numero: Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td1-ex08
+  titre: 'Dénombrabilité : produits, réunions, suites finies'
+  enonce: |
+    1. Montrer que tout produit fini d'ensembles dénombrables est dénombrable.
+    2. Montrer que toute réunion dénombrable d'ensembles dénombrables est dénombrable.
+    3. Soit $D$ un ensemble dénombrable. Montrer que l'ensemble des suites finies d'éléments de $D$ est dénombrable.
+    4. Montrer que l'ensemble des parties finies de $D$ est dénombrable.
+    5. Montrer que $\{0,1\}^{\mathbb N^*}$ n'est pas dénombrable.
+    6. Montrer que l'intervalle $[0,1]$ n'est pas dénombrable.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td1-corrige.pdf
+    page: 9
+    numero: Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td2-ex01
+  titre: Tribu engendrée par une partie
+  enonce: |
+    Soit $E$ un ensemble et $B\subset E$ une partie de $E$.
+    1. Déterminer $\sigma(\{B\})$.
+    2. Montrer que $\mathcal A:=\{A\subset E : B\subset A \text{ ou } B\cap A=\emptyset\}$ est une tribu sur $E$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td2-corrige.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td2-ex02
+  titre: Tribus engendrées sur un ensemble à quatre éléments
+  enonce: |
+    Soit $X:=\{a,b,c,d\}$ un ensemble contenant quatre éléments.
+    1. Déterminer la tribu sur $X$ engendrée par les singletons.
+    2. Déterminer la tribu sur $X$ engendrée par $\{\{a\},\{b,c\}\}$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td2-corrige.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td2-ex03
+  titre: Tribu engendrée par les singletons
+  enonce: |
+    Soit $X$ un ensemble et soit $S$ l'ensemble de ses singletons.
+    1. On suppose $X$ dénombrable (au plus). Déterminer $\sigma(S)$.
+    2. On suppose $X$ non dénombrable. Déterminer $\sigma(S)$. On commencera par montrer que $\mathcal A:=\{A\subset X : A \text{ (au plus) dénombrable ou } A^c \text{ (au plus) dénombrable}\}$ est une tribu.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td2-corrige.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td2-ex04
+  titre: Tribu produit et réunion de tribus
+  enonce: |
+    Soient $\mathcal E$ et $\mathcal F$ deux tribus sur l'ensemble $E$.
+    1. La famille $\mathcal E\times\mathcal F:=\{A\times B : A\in\mathcal E,\ B\in\mathcal F\}$ est-elle une tribu sur $E\times E$ ?
+    2. La famille $\mathcal E\cup\mathcal F$ est-elle une tribu sur $E$ ? Puis montrer que
+    $$\sigma(\mathcal E\cup\mathcal F)=\sigma(\{A\cup B : A\in\mathcal E,\ B\in\mathcal F\})=\sigma(\{A\cap B : A\in\mathcal E,\ B\in\mathcal F\})$$
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td2-corrige.pdf
+    page: 2
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td2-ex05
+  titre: Tribu engendrée par une partition
+  enonce: |
+    Soient $E$ un ensemble, $n\in\mathbb N^*$ et $A_1,\dots,A_n$ une partition finie de $E$.
+    1. Décrire la tribu engendrée par $A_1,\dots,A_n$. Quel est son nombre d'éléments ?
+    2. Peut-on généraliser au cas d'une partition dénombrable ?
+    3. Proposer une tribu de cardinal infini sur $\mathbb N$, telle que tous ses éléments sont de cardinal infini (excepté l'ensemble vide).
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td2-corrige.pdf
+    page: 3
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td2-ex06
+  titre: Tribu borélienne sur R^2
+  enonce: |
+    Soit $\mathcal T$ la tribu sur $\mathbb R^2$ engendrée par $\{A\times B : A,B\in\mathcal B(\mathbb R)\}$. On va montrer ici que $\mathcal T=\mathcal B(\mathbb R^2)$.
+    1. Montrer que tout ouvert de $\mathbb R^2$ est réunion au plus dénombrable de produits d'intervalles ouverts de $\mathbb R$. En déduire que $\mathcal B(\mathbb R^2)\subset\mathcal T$.
+    2. Soient $A$ un ouvert de $\mathbb R$ et $\mathcal T_1:=\{B\in\mathcal B(\mathbb R) : A\times B\in\mathcal B(\mathbb R^2)\}$. Montrer que $\mathcal T_1$ est une tribu sur $\mathbb R$ contenant les ouverts de $\mathbb R$. En déduire que $\mathcal T_1=\mathcal B(\mathbb R)$.
+    3. Soient $B\in\mathcal B(\mathbb R)$ et $\mathcal T_2:=\{A\in\mathcal B(\mathbb R) : A\times B\in\mathcal B(\mathbb R^2)\}$. Montrer que $\mathcal T_2=\mathcal B(\mathbb R)$.
+    4. Montrer que $\mathcal T\subset\mathcal B(\mathbb R^2)$ et donc que $\mathcal T=\mathcal B(\mathbb R^2)$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td2-corrige.pdf
+    page: 3
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td2-ex07
+  titre: Tribu borélienne sur R^d
+  enonce: |
+    Soit $d\in\mathbb N^*$. Montrer que la tribu borélienne de $\mathbb R^d$ est générée par :
+    1. l'ensemble de toutes les boules ouvertes de $\mathbb R^d$.
+       Indication : on commencera par montrer que tout ouvert de $\mathbb R^d$ est réunion dénombrable de boules ouvertes de $\mathbb R^d$.
+    2. l'ensemble des cubes ouverts à extrémités rationnelles.
+    3. les intervalles $]a,b]$ avec $(a,b)\in\mathbb R^2$ tels que $a<b$ dans le cas où $d=1$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td2-corrige.pdf
+    page: 4
+    numero: Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td2-ex08
+  titre: Exemples de boréliens
+  enonce: |
+    1. Démontrer que $A:=\{x\in\mathbb R : \exists n\in\mathbb N^*,\ |x-n|<1/n\}$ est un borélien de $\mathbb R$.
+    2. Démontrer que $B:=\{(x,x)\in\mathbb R^2 : x\in\mathbb R\}$ est un borélien de $\mathbb R^2$.
+    3. Démontrer que $C:=\{(x,y)\in\mathbb R^2 : x^2+y^2=1 \text{ et } x\notin\mathbb Q\}$ est un borélien de $\mathbb R^2$.
+    4. Soient $d\in\mathbb N^*$ et $(f_n)_{n\in\mathbb N}$ une suite de fonctions continues de $\mathbb R^d$ dans $\mathbb R$. Démontrer que $D:=\{x\in\mathbb R^d : \lim_{n\to+\infty}f_n(x)=0\}$ est un borélien de $\mathbb R^d$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td2-corrige.pdf
+    page: 5
+    numero: Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td2-ex09
+  titre: Tribus engendrées par des intervalles ]na,(n+1)a]
+  enonce: |
+    Soit $a\in\mathbb R^*$. On note $\mathcal E_a$ la tribu sur $\mathbb R$ engendrée par tous les intervalles de la forme $]na,(n+1)a]$ lorsque $n$ parcourt $\mathbb Z$.
+    1. Montrer que $\mathcal E_a$ est constituée des ensembles qui sont des réunions quelconques d'intervalles $I_{a,n}:=]na,(n+1)a]$, avec $n\in\mathbb Z$ (une réunion vide étant par convention l'ensemble vide).
+    2. À quelles conditions sur le couple de réels $b>0$ et $c>0$ a-t-on $\mathcal E_b\subset\mathcal E_c$ ?
+    3. Montrer que la tribu engendrée par la classe $\bigcup_{n\in\mathbb N^*}\mathcal E_{a/n}$ est la tribu borélienne.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td2-corrige.pdf
+    page: 6
+    numero: Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td2-ex10
+  titre: Pas de tribu infinie dénombrable
+  enonce: |
+    Le but de cet exercice est de prouver qu'il n'existe pas d'espace mesurable $(E,\mathcal E)$ avec $\mathcal E$ infini et dénombrable.
+    1. Si $E$ est fini, conclure.
+    2. On suppose désormais que $E$ est de cardinal infini et que $\mathcal E$ est infini et dénombrable. Pour tout $x\in E$, on définit l'atome de $x$ par
+    $$C(x):=\bigcap_{A\in\mathcal E,\ x\in A}A.$$
+       (a) Justifier que la relation $\sim$ sur $E\times E$ définie par $x\sim y$ si et seulement si $\forall A\in\mathcal E,\ x\in A\iff y\in A$ est une relation d'équivalence.
+       (b) Montrer que pour tout $x\in E$, $C(x)$ est égal à la classe d'équivalence de $x$ pour la relation $\sim$. Les atomes forment ainsi une partition de $E$.
+       (c) Montrer que pour tout $x\in E$, $C(x)\in\mathcal E$.
+       (d) En déduire que tout élément $A$ de $\mathcal E$ s'écrit comme une union au plus dénombrable d'atomes.
+       (e) Si $\mathcal E$ contient un nombre fini d'atomes, montrer que $\mathcal E$ est de cardinal fini.
+       (f) Montrer que $\mathcal E$ ne peut pas être dénombrable.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td2-corrige.pdf
+    page: 6
+    numero: Ex 10
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: mesure/td/td2-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-td3-ex01
+  titre: Fonctions mesurables pour des tribus simples
+  enonce: |
+    Décrire l'ensemble des fonctions mesurables de $(E,\mathcal E)$ dans $(\mathbb R,\mathcal B(\mathbb R))$ dans les cas suivants :
+    1. $E$ quelconque et $\mathcal E:=\{\emptyset,E\}$.
+    2. $E$ quelconque et $\mathcal E:=\mathcal P(E)$.
+    3. $E=\{a,b,c,d\}$ et $\mathcal E:=\sigma(\{\{a\},\{b,c\}\})$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td3.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td3-ex02
+  titre: Fonction monotone borélienne
+  enonce: |
+    Soit $f$ une application monotone de $\mathbb R$ dans $\mathbb R$. Montrer que $f$ est borélienne.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td3.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td3-ex03
+  titre: Tribu des ensembles symétriques
+  enonce: |
+    Soit $\mathcal F:=\{A\subset\mathbb R : \forall x\in A : (-x)\in A\}$.
+    1. Montrer que $\mathcal F$ est une tribu sur $\mathbb R$.
+    2. Les fonctions définies par $f(x):=x$, $g(x):=x^2$ et $h(x):=e^x$ sont-elles mesurables de $(\mathbb R,\mathcal F)$ dans $(\mathbb R,\mathcal B(\mathbb R))$ ?
+    3. Donner une condition nécessaire et suffisante pour qu'une application soit mesurable de $(\mathbb R,\mathcal F)$ dans $(\mathbb R,\mathcal B(\mathbb R))$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td3.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td3-ex04
+  titre: Ensembles de convergence d'une suite de fonctions mesurables
+  enonce: |
+    Soient $(E,\mathcal E)$ un espace mesurable et $(f_n)_{n\in\mathbb N}$ une suite de fonctions mesurables de $(E,\mathcal E)$ dans $(\mathbb R,\mathcal B(\mathbb R))$. Montrer que les ensembles suivants sont dans $\mathcal E$ :
+    1. $C_1:=\{x\in E : \text{la suite } (f_n(x))_{n\in\mathbb N} \text{ converge}\}$
+    2. $C_2:=\{x\in E : \lim_{n\to+\infty}f_n(x)=+\infty\}$
+    3. $C_3:=\{x\in E : \text{la suite } (f_n(x))_{n\in\mathbb N} \text{ est bornée}\}$
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td3.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td3-ex05
+  titre: Ensembles {f>=g}, {f<g}, {f=g}
+  enonce: |
+    Soient $(E,\mathcal E)$ un espace mesurable et $f,g:E\to\overline{\mathbb R}$ des applications mesurables de $(E,\mathcal E)$ dans $(\overline{\mathbb R},\mathcal B(\overline{\mathbb R}))$. Montrer que les ensembles suivants sont dans $\mathcal E$ :
+    1. $A:=\{x\in E : f(x)\ge g(x)\}$
+    2. $B:=\{x\in E : f(x)<g(x)\}$
+    3. $C:=\{x\in E : f(x)=g(x)\}$
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td3.pdf
+    page: 1
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td3-ex06
+  titre: Fonction f_N(x)(x) mesurable
+  enonce: |
+    Soit $(f_n)_{n\in\mathbb N}$ une suite de fonctions mesurables de l'espace mesurable $(E,\mathcal E)$ dans $(\mathbb R,\mathcal B(\mathbb R))$ et $N:(E,\mathcal E)\to(\mathbb N,\mathcal P(\mathbb N))$ une application mesurable. Montrer que la fonction $\varphi:(E,\mathcal E)\to(\mathbb R,\mathcal B(\mathbb R))$ définie par $\varphi(x):=f_{N(x)}(x)$ est mesurable.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td3.pdf
+    page: 1
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td3-ex07
+  titre: Mesurabilité par rapport à la tribu engendrée par g
+  enonce: |
+    Soient $f$ et $g$ les fonctions définies sur $[0,3]$ par
+    $$f(x):=\begin{cases}0,&\text{si }x\in[0,1]\\1,&\text{si }x\in]1,3]\end{cases},\qquad g(x):=\begin{cases}2,&\text{si }x\in[0,1]\\-1,&\text{si }x\in]1,2]\\4,&\text{si }x\in]2,3]\end{cases}$$
+    Montrer que $f$ est mesurable par rapport à la tribu $\sigma(g)$ mais que la réciproque est fausse.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td3.pdf
+    page: 1
+    numero: Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td4-ex01
+  titre: Mesure 0-1 sur la tribu dénombrable-codénombrable
+  enonce: |
+    Soit $E$ un ensemble non dénombrable muni de la tribu $\mathcal E$ engendrée par les singletons. On pose pour $A\in\mathcal E$,
+    $$\mu(A):=\begin{cases}0,&\text{si }A\text{ est (au plus) dénombrable}\\1,&\text{si }A\text{ est non dénombrable}\end{cases}$$
+    Montrer que $\mu$ est une mesure sur $(E,\mathcal E)$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td4.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td4-ex02
+  titre: Mesures sur (N, P(N))
+  enonce: |
+    1. Soit $(u_n)_{n\in\mathbb N}$ une suite telle que $u_n\in[0,+\infty]$ pour tout $n\in\mathbb N$.
+       (a) Montrer que l'application $\mu(A):=\sum_{n\in A}u_n$ est une mesure sur $(\mathbb N,\mathcal P(\mathbb N))$.
+       (b) Caractériser les ensembles de mesure nulle pour $\mu$.
+    2. Réciproquement, si $\mu$ est une mesure sur $(\mathbb N,\mathcal P(\mathbb N))$, montrer qu'il existe une suite $(u_n)_{n\in\mathbb N}$ dans $[0,+\infty]$ telle que $\mu(A)=\sum_{n\in A}u_n$ pour tout $A\in\mathcal P(\mathbb N)$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td4.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td4-ex03
+  titre: Mesures de Radon, atomes et partie diffuse
+  enonce: |
+    Soit $\mathbb R$ muni de sa tribu borélienne. Soit $\mu$ une mesure telle que $\mu(K)<+\infty$ pour tout compact $K$ (une telle mesure est dite de Radon). Soit $D:=\{a\in\mathbb R : \mu(\{a\})>0\}$.
+    1. Soit $n$ et $p$ des entiers strictement positifs et $D_{n,p}:=\{a\in\mathbb R : |a|\le n,\ \mu(\{a\})\ge1/p\}$.
+       (a) Montrer que $D_{n,p}$ est fini.
+       (b) Montrer que $D$ est (au plus) dénombrable.
+    2. On pose pour tout $B\in\mathcal B(\mathbb R)$, $\lambda(B):=\mu(D\cap B)$.
+       (a) Montrer que cela a un sens et que $\lambda$ est une mesure de Radon.
+       (b) Montrer que $\lambda=\sum_{a\in D}\mu(\{a\})\delta_a$.
+    3. Montrer que $\mu=\lambda+\nu$ où $\nu$ est une mesure de Radon telle que pour tout $x\in\mathbb R$, $\nu(\{x\})=0$ (une telle mesure est dite diffuse).
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td4.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_verifier
+- id: mes-td4-ex04
+  titre: Théorème de Borel-Cantelli
+  enonce: |
+    Soit $(E,\mathcal E)$ un espace mesurable, $\mu$ une mesure. Soit $(A_n)_{n\in\mathbb N}$ une suite d'éléments de $\mathcal E$. Montrer que si la série $\sum_{n\in\mathbb N}\mu(A_n)$ converge, alors $\mu(\limsup_{n\to+\infty}A_n)=0$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td4.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td4-ex05
+  titre: Mesure image
+  enonce: |
+    Soit $(E,\mathcal E,\mu)$ un espace mesuré et $f:(E,\mathcal E)\to(F,\mathcal F)$ une application mesurable.
+    1. Montrer que
+    $$f_*\mu:\ \mathcal F\longrightarrow[0,+\infty],\quad B\longmapsto\mu(f^{-1}(B))$$
+    définit une mesure sur $(F,\mathcal F)$ appelée mesure image de $\mu$ par $f$ (on la note aussi $f(\mu)$ ou $\mu_f$).
+    2. Déterminer la mesure image $f_*\mu$ dans le cas où $\mu:=\delta_a$ avec $a\in E$.
+    3. Soit $f$ la fonction $f(x):=x^3$ définie sur $\mathbb R$ et $\lambda$ la mesure de Lebesgue sur $\mathbb R$. Étant donné un intervalle $[a,b]\subset\mathbb R$, calculer $f_*\lambda([a,b])$.
+    4. Soit $g:(E',\mathcal E')\to(G,\mathcal G)$ une application mesurable, avec $f:(E,\mathcal E)\to(E',\mathcal E')$. Montrer que $(g\circ f)_*\mu=g_*(f_*\mu)$.
+    5. Soit $\nu$ une mesure sur $F$ et supposons $f$ surjective. Montrer qu'il existe une unique mesure $\mu$ sur $(E,f^{-1}(\mathcal F))$ telle que $\nu=f_*\mu$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td4.pdf
+    page: 1
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_verifier
+- id: mes-td4-ex06
+  titre: Vrai ou faux sur la mesure de Lebesgue
+  enonce: |
+    On se place sur $\mathbb R$ muni de la tribu borélienne $\mathcal B(\mathbb R)$ et de la mesure de Lebesgue $\lambda$. Les affirmations suivantes sont-elles vraies ou fausses ? Justifier votre réponse.
+    1. Si $A\subset\mathbb R$ est dense dans $\mathbb R$, alors $\lambda(A\cap]0,1])>0$.
+    2. Si $U$ est un ouvert non vide de $\mathbb R$, alors $\lambda(U)>0$.
+    3. Si $K$ est un compact de $\mathbb R$, alors $K$ est mesurable et $\lambda(K)<+\infty$.
+    4. Si $A$ est une partie mesurable telle que $\lambda(A)<+\infty$, alors il existe un compact $K$ tel que $A\subset K$.
+    5. Si $A$ est une partie mesurable telle que $\lambda(A)>0$, alors il existe un ouvert non vide contenu dans $A$.
+    6. Si $A$ est une partie mesurable telle que $\lambda(A)=0$, alors $A$ est fermé.
+    7. Soit $\mathcal C\subset\mathcal P(\mathbb R)$ tel que $\mathcal B(\mathbb R)=\sigma(\mathcal C)$. Soient $m_1$ et $m_2$ deux mesures sur $(\mathbb R,\mathcal B(\mathbb R))$ telles que $m_1(A)=m_2(A)$ pour tout $A\in\mathcal C$. Alors, $m_1=m_2$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td4.pdf
+    page: 2
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td4-ex07
+  titre: Fonction de répartition et atomes
+  enonce: |
+    On se place sur la droite réelle $(\mathbb R,\mathcal B(\mathbb R))$.
+    1. Soit $\mu$ une mesure finie sur $(\mathbb R,\mathcal B(\mathbb R))$. On définit sur $\mathbb R$ la fonction $F$ par $F(x):=\mu(]-\infty,x])$.
+       (a) Montrer que $F$ est croissante et déterminer les limites de $F$ en $-\infty$ et $+\infty$.
+       (b) Montrer que $F$ est continue à droite.
+       (c) Montrer que $F$ est continue en $y\in\mathbb R$ si et seulement si $\mu(\{y\})=0$.
+       (d) On appelle atome de $\mu$ tout élément $x\in\mathbb R$ tel que $\mu(\{x\})>0$. Montrer que le nombre d'atomes de $\mu$ est fini ou dénombrable.
+    2. On rappelle qu'une mesure $\mu$ sur $(E,\mathcal E)$ est $\sigma$-finie s'il existe une suite croissante d'éléments $A_n\in\mathcal E$ telle que $\bigcup_{n\in\mathbb N}A_n=E$ et $\mu(A_n)<+\infty$ pour tout $n\in\mathbb N$. Soit $\mu$ une mesure $\sigma$-finie sur $(\mathbb R,\mathcal B(\mathbb R))$. Montrer que le nombre d'atomes de $\mu$ est également fini ou dénombrable.
+    3. Donner un exemple de mesure $\mu$ sur $(\mathbb R,\mathcal B(\mathbb R))$ qui admet un nombre non dénombrable d'atomes.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td4.pdf
+    page: 2
+    numero: Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td4-ex08
+  titre: Ensemble de Vitali non mesurable
+  enonce: |
+    Le but de cet exercice est de construire un sous-ensemble de $\mathbb R$ non mesurable (pour la tribu borélienne).
+    1. Montrer que la relation définie par $x\sim y\iff x-y\in\mathbb Q$ est une relation d'équivalence sur $\mathbb R$. En déduire que $\bigcup_{x\in\mathbb R}(x+\mathbb Q)$ forme une partition de $\mathbb R$.
+    2. D'après l'axiome du choix, il existe un ensemble $A$ de représentants de la partition, c'est-à-dire que pour tout $x\in\mathbb R$, il existe un unique $y\in A$ tel que $x-y\in\mathbb Q$. Justifier que l'on peut imposer que $A\subset[0,1[$.
+       Indication : on pourra considérer la fonction partie entière.
+    3. Étant donné cet ensemble $A\subset[0,1[$ de représentants de la partition, on pose
+    $$B=\bigcup_{q\in\mathbb Q\cap[-1,1]}(q+A).$$
+    Montrer que l'union définissant $B$ est disjointe et que $[0,1]\subset B\subset[-1,2]$.
+    4. Montrer que $A$ n'est pas mesurable en raisonnant par l'absurde sur les valeurs des mesures de Lebesgue $\lambda(A)$ et $\lambda(B)$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td4.pdf
+    page: 2
+    numero: Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td5-ex01
+  titre: Invariance par translation de l'intégrale de Lebesgue
+  enonce: |
+    Soit $d\in\mathbb N^*$. Dans $\mathbb R^d$ muni de la mesure de Lebesgue, soit $f$ une fonction intégrable, et $a\in\mathbb R^d$. Montrer que $\int_{\mathbb R^d}f(x-a)\,dx=\int_{\mathbb R^d}f(x)\,dx$. On montrera l'égalité d'abord pour les fonctions simples puis pour les fonctions positives.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td5.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td5-ex02
+  titre: Intégrale sur une partition dénombrable
+  enonce: |
+    On considère un espace mesuré $(E,\mathcal A,\mu)$, $f$ une fonction mesurable, et $(A_n)_{n\in\mathbb N}$ une partition dénombrable de $E$.
+    1. On suppose que $f$ est positive. Montrer que $\int_Ef\,d\mu=\sum_{n=0}^{+\infty}\int_{A_n}f\,d\mu$.
+    2. Montrer que l'égalité ci-dessus est toujours vraie si $f$ est intégrable.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td5.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td5-ex03
+  titre: Contre-exemple n 1_]0,1/n]
+  enonce: |
+    Soit $\lambda$ la mesure de Lebesgue sur $\mathbb R$. Soit $(f_n)_{n\in\mathbb N^*}$ la suite de fonctions donnée par $f_n:=n\mathbf 1_{]0,\frac1n]}$.
+    1. Montrer que $(f_n)_{n\in\mathbb N^*}$ est une suite de fonctions positives convergeant simplement vers une fonction $f$ que l'on déterminera.
+    2. Calculer $\int_{\mathbb R}f_n\,d\lambda$ et montrer que cette intégrale ne converge pas vers $\int_{\mathbb R}f\,d\lambda$.
+    3. Que manque-t-il pour pouvoir appliquer :
+       (a) le théorème de Beppo-Levi ?
+       (b) le théorème de convergence dominée ?
+    4. Mêmes questions en remplaçant la mesure de Lebesgue $\lambda$ par la mesure $\mu$ définie par $\mu(A):=\int_A|x|\,d\lambda(x)$ pour tout borélien $A$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td5.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td5-ex04
+  titre: Interversion série-intégrale
+  enonce: |
+    Soit $(E,\mathcal A,\mu)$ un espace mesuré et $(f_n)_{n\in\mathbb N}$ une suite de fonctions intégrables par rapport à $\mu$.
+    1. Montrer que si $\sum_{n\in\mathbb N}\int_E|f_n|\,d\mu<+\infty$, alors $\int_E\sum_{n\in\mathbb N}f_n\,d\mu=\sum_{n\in\mathbb N}\int_Ef_n\,d\mu$.
+       Indication : commencer par supposer que $f_n\ge0$ pour tout $n\in\mathbb N$.
+    2. On définit $f_n(x):=e^{-nx}-2e^{-2nx}$ si $x>0$ et $f_n(x)=0$ sinon. Calculer et comparer $\int_{\mathbb R}\sum_{n\in\mathbb N}f_n(x)\,dx$ et $\sum_{n\in\mathbb N}\int_{\mathbb R}f_n(x)\,dx$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td5.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td5-ex05
+  titre: Limite par Beppo-Levi
+  enonce: |
+    Soit $f:]0,+\infty]\to]0,+\infty]$ une fonction mesurable. En appliquant le théorème de Beppo-Levi, déterminer la limite
+    $$\lim_{n\to+\infty}\int_0^n\frac{f(x)}{\sqrt{1+\frac xn}}\,dx$$
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td5.pdf
+    page: 1
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td5-ex06
+  titre: Limite par convergence dominée
+  enonce: |
+    1. Montrer que pour tout $x\ge0$, $\ln(1+x)\le x$.
+    2. Pour tout $n\in\mathbb N^*$, on pose
+    $$I_n:=\int_0^n\Big(1+\frac xn\Big)^ne^{-2x}\,dx$$
+    Déterminer la limite de la suite $(I_n)_{n\in\mathbb N^*}$ en appliquant le théorème de convergence dominée.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td5.pdf
+    page: 1
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td5-ex07q1
+  titre: Intégrale de x e^{-ax}/(1-e^{-bx}) en série
+  enonce: |
+    Soit $a>0$, $b>0$ et
+    $$f(x):=\frac{xe^{-ax}}{1-e^{-bx}},\quad x>0.$$
+    Montrer que $\int_0^{+\infty}f(x)\,dx=\sum_{n=0}^{+\infty}\dfrac1{(a+nb)^2}$.
+    Indication : développer $f(x)$ sous la forme $\sum_{n\in\mathbb N}u_n(x)$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td5.pdf
+    page: 2
+    numero: Ex 7 q1
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+      page: 2
+  qualite_extraction: ok
+- id: mes-td5-ex07q2
+  titre: Intégrale de sin(x)/(e^x-1) en série
+  enonce: |
+    Soit
+    $$g(x):=\frac{\sin(x)}{e^x-1},\quad x>0.$$
+    Montrer que $\int_0^{+\infty}g(x)\,dx=\sum_{n=1}^{+\infty}\dfrac1{n^2+1}$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td5.pdf
+    page: 2
+    numero: Ex 7 q2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td5-ex08
+  titre: Limites de suites d'intégrales
+  enonce: |
+    Calculer les limites quand $n$ tend vers l'infini des suites d'intégrales suivantes :
+    1. $\displaystyle\int_0^1\frac{1+nt}{(1+t)^n}\,dt$
+    2. $\displaystyle\int_0^{+\infty}\frac{\cos(nt)}{(nt+1)(1+t^2)}\,dt$
+    3. $\displaystyle\int_0^{+\infty}\frac{t}{1+t^n}\,dt$ $(n\ge3)$
+    4. $\displaystyle\int_0^{+\infty}\arcsin\Big(\frac1\pi\arctan\Big(\frac n{t^2}\Big)\Big)\,dt$
+    5. $\displaystyle\int_0^{+\infty}\frac{n\ln(1+\frac tn)}{(1+t^2)^2}\,dt$ $(n\ge1)$
+
+    Indication : on rappelle que pour tout $t>-1$, $\ln(1+t)\le t$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td5.pdf
+    page: 2
+    numero: Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td5-ex09
+  titre: Limite avec 1/(1+n sin^2 x)
+  enonce: |
+    Soit $f$ une fonction intégrable sur $\mathbb R$. Calculer
+    $$\lim_{n\to+\infty}\int_{\mathbb R}\frac{f(x)}{1+n\sin(x)^2}\,dx.$$
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td5.pdf
+    page: 2
+    numero: Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td6-ex01
+  titre: Continuité des intégrales à borne variable
+  enonce: |
+    Soit $\lambda$ la mesure de Lebesgue sur $\mathbb R$ et $f\in L^1_{\mathbb C}(\lambda)$. Pour tout $u\in\mathbb R$, on pose
+    $$F(u):=\int_{-\infty}^uf(x)\,dx$$
+    1. Montrer que $F$ est continue sur $\mathbb R$.
+    2. Soit $a\in\mathbb R$. Montrer que $G:u\mapsto\int_a^uf(x)\,dx$ est continue sur $\mathbb R$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td6.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td6-ex02
+  titre: Intégrale de Dirichlet via un paramètre
+  enonce: |
+    Pour $u\ge0$, on pose
+    $$F(u):=\int_0^{+\infty}\frac{1-\cos(x)}{x^2}e^{-ux}\,dx$$
+    1. Montrer que $F$ est définie et continue sur $[0,+\infty[$. Calculer $\lim_{u\to+\infty}F(u)$.
+    2. Montrer que $F$ est de classe $C^2$ sur $]0,+\infty[$. Calculer $F''$.
+    3. $F$ est-elle dérivable à droite en $0$ ?
+    4. Déduire de 1. et 2. une expression de $F$.
+    5. Déterminer la valeur de $\int_0^{+\infty}\dfrac{1-\cos(x)}{x^2}\,dx$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td6.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td6-ex03
+  titre: Intégrale gaussienne dépendant de t
+  enonce: |
+    Soit, pour $t\in\mathbb R$ et $x>0$, $f(t,x):=\dfrac1{\sqrt{2\pi}}\exp\!\Big(-\dfrac12\Big(x^2+\dfrac{t^2}{x^2}\Big)\Big)$ et $F(t):=\int_0^{+\infty}f(t,x)\,dx$.
+    1. Montrer que $F$ est continue sur $\mathbb R$ vérifiant $F(-t)=F(t)$ pour tout $t\in\mathbb R$.
+    2. Soit $t_0>0$ et $\varepsilon>0$ tel que $]t_0-\varepsilon,t_0+\varepsilon[\subset\mathbb R_+^*$. Montrer que l'on a $\big|\frac{\partial f}{\partial t}(t,x)\big|\le Ae^{-x^2/2}$ pour $x>0$ et $t\in]t_0-\varepsilon,t_0+\varepsilon[$ et une certaine constante $A>0$. En déduire que $F$ est dérivable sur $\mathbb R^*$.
+    3. Montrer que $F$ satisfait une équation différentielle sur $]0,+\infty[$ (on pourra commencer par effectuer le changement de variable $u=t/x$ dans l'expression de $F'(t)$). En déduire l'expression de $F$ sur $\mathbb R$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td6.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td6-ex04
+  titre: Transformée de Fourier d'une fonction intégrable
+  enonce: |
+    Soit $f:\mathbb R\to\mathbb C$ une fonction intégrable (pour la mesure de Lebesgue). On pose
+    $$\hat f:t\mapsto\int_{\mathbb R}f(x)e^{-itx}\,dx$$
+    sa transformée de Fourier.
+    1. Montrer que $\hat f$ est continue (même uniformément continue) et bornée sur $\mathbb R$.
+    2. On suppose de plus que la fonction $g:x\mapsto xf(x)$ est intégrable. Montrer que $\hat f$ est de classe $C^1$ et calculer sa dérivée.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td6.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td6-ex05
+  titre: Équation différentielle F'' + F = 1/x
+  enonce: |
+    1. Montrer que la fonction $F:x\mapsto\int_0^{+\infty}\dfrac{e^{-xt}}{1+t^2}\,dt$ est définie pour tout $x\in\mathbb R_+$, à valeurs réelles, et décroissante.
+    2. Montrer que $F$ est deux fois dérivable sur $\mathbb R_+^*$.
+    3. Montrer que $\forall x\in\mathbb R_+^*$, $F''(x)+F(x)=\dfrac1x$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td6.pdf
+    page: 1
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td6-ex06
+  titre: Convolution d'une fonction intégrable et d'une fonction bornée
+  enonce: |
+    1. Soit $f$ une fonction intégrable sur $\mathbb R$ muni de la mesure de Lebesgue, et soit $g$ une fonction continue bornée. Montrer que la formule
+    $$f*g(x)=\int_{-\infty}^{+\infty}f(x-y)g(y)\,dy=\int_{-\infty}^{+\infty}g(x-y)f(y)\,dy$$
+    définit une fonction continue et bornée sur $\mathbb R$.
+    2. On suppose de plus que $g$ est de classe $C^1$ et que la fonction $g'$ est bornée. Montrer que $f*g$ est de classe $C^1$ et calculer sa dérivée.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td6.pdf
+    page: 2
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td7-ex01
+  titre: Mesurabilité et mesure de l'ensemble sous le graphe
+  enonce: |
+    Soit $f$ une fonction mesurable de $\mathbb R$ dans $\mathbb R_+$. Dire si les parties suivantes de $\mathbb R^2$ sont mesurables et si oui, calculer leur mesure :
+    1. $\{(x,y)\in\mathbb R^2 : 0\le y<f(x)\}$
+    2. $\{(x,y)\in\mathbb R^2 : y=f(x)\}$
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td7.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td7-ex02
+  titre: Intégrale de Gauss par Fubini et coordonnées polaires
+  enonce: |
+    Le but de cet exercice est de calculer l'intégrale $I=\int_0^{+\infty}e^{-x^2}\,dx$.
+    1. Justifier que $I$ est bien définie.
+    2. En appliquant le théorème de Fubini, montrer que $\int_{\mathbb R_+^2}e^{-x^2-y^2}\,dx\,dy=I^2$.
+    3. Calculer $I^2$ en effectuant un changement de variable en coordonnées polaires. Conclure.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td7.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td7-ex03
+  titre: Contre-exemple à Fubini
+  enonce: |
+    On considère la fonction $f$ définie sur $\mathbb R^2$ par $f(x,y):=\dfrac{x^2-y^2}{x^2+y^2}$ si $(x,y)\ne(0,0)$ et $f(0,0):=0$. Calculer
+    $$\int_{\mathbb R}\Big(\int_{\mathbb R}f(x,y)\,dx\Big)dy\quad\text{et}\quad\int_{\mathbb R}\Big(\int_{\mathbb R}f(x,y)\,dy\Big)dx.$$
+    Commenter.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td7.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td7-ex04
+  titre: Calculs d'intégrales multiples
+  enonce: |
+    Calculer l'intégrale de $f$ sur $D$ :
+    1. $f(x,y):=(1+x+y)^{-\alpha}$, $\alpha\in\mathbb R$, $D:=(\mathbb R_+^*)^2$.
+    2. $f(x,y):=(x+y)^{-\alpha}$, $\alpha\in\mathbb R$, $D:=]0,1]^2$.
+    3. $f(x,y):=(x^2+y^2)^{-\alpha}$, $\alpha\in\mathbb R$, $D:=\{(x,y)\in(\mathbb R_+^*)^2 : x^2+y^2<1\}$.
+    4. $f(x,y):=\exp(x+y)$, $D:=\{(x,y)\in\mathbb R^2 : |x+y|\le1,\ |x-y|\le1\}$.
+    5. $f(x,y):=\sin\sqrt{x^2+y^2}$, $D:=\{(x,y)\in\mathbb R^2 : \pi<x^2+y^2\le4\pi^2\}$.
+    6. $f(x,y):=x^2+y^2$, $D:=\{(x,y)\in\mathbb R^2 : \frac{x^2}{a^2}+\frac{y^2}{b^2}\le1\}$ avec $a,b>0$.
+    7. $f(x,y,z):=z$, $D:=\{(x,y,z)\in\mathbb R^3 : x^2+y^2\le1,\ 0\le z\le h\}$ avec $h>0$.
+    8. $f(x,y):=x+y$, $D:=\{(x,y)\in\mathbb R^2 : 0<x^2\le y\le2x^2,\ 1/x\le y\le2/x\}$. (Poser $u=y/x^2$ et $v=xy$).
+    9. $f(x,y,z):=xyz$, $D:=\{(x,y,z)\in\mathbb R^3 : x\ge0,\ y\ge0,\ z\ge0,\ x^2+y^2+z^2\le1\}$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td7.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td7-ex05
+  titre: Volume de la boule unité de R^n
+  enonce: |
+    Soit $n\in\mathbb N^*$. On note $b_n$ le volume de la boule unité de $\mathbb R^n$, i.e. $b_n:=\lambda_n(B_n)$ avec
+    $$B_n:=\{(x_1,\dots,x_n)\in\mathbb R^n : x_1^2+\dots+x_n^2\le1\}$$
+    1. Que valent $b_1$, $b_2$ et $b_3$ ?
+    2. Établir une relation de récurrence entre $b_n$ et $b_{n-2}$, pour tout $n\ge3$, en remarquant que $x_1^2+\dots+x_n^2\le1$ équivaut à $x_1^2+x_2^2\le1$ et $x_3^2+\dots+x_n^2\le1-x_1^2-x_2^2$.
+    3. En déduire l'expression de $b_n$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td7.pdf
+    page: 1
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td7-ex06
+  titre: Fonctions Gamma et Bêta
+  enonce: |
+    Pour $a,b>0$, on pose $\Gamma(a):=\int_0^{+\infty}e^{-t}t^{a-1}\,dt$ et $B(a,b):=\int_0^1t^{a-1}(1-t)^{b-1}\,dt$.
+    1. Montrer que les intégrales $\Gamma(a)$ et $B(a,b)$ sont finies pour tout $a,b>0$.
+    2. Démontrer que la fonction $\Gamma$ est indéfiniment dérivable sur $\mathbb R_+^*$.
+    3. Montrer que pour tout $a,b>0$, $B(a,b)=\dfrac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}$.
+    4. Montrer que pour tout $a>0$, $\Gamma(a+1)=a\Gamma(a)$ puis en déduire la valeur de $\Gamma(n)$ pour tout $n\in\mathbb N^*$.
+    5. Étudier les comportements de la fonction $\Gamma$ (convexité, variations, limites).
+    6. Calculer $\Gamma(n+1/2)$ pour tout $n\in\mathbb N^*$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td7.pdf
+    page: 1
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-td7-ex07
+  titre: Somme de 1/n^2 par une double intégrale
+  enonce: |
+    1. En calculant de deux façons différentes l'intégrale $I:=\int_{\mathbb R_+^2}\dfrac1{(1+y)(1+x^2y)}\,dx\,dy$, donner la valeur de l'intégrale $J=\int_0^{+\infty}\dfrac{\ln(x)}{x^2-1}\,dx$.
+    2. Trouver une relation entre $\int_0^1\dfrac{\ln(x)}{x^2-1}\,dx$ et $\int_1^{+\infty}\dfrac{\ln(x)}{x^2-1}\,dx$ à l'aide d'un changement de variable.
+    3. Montrer que $\int_0^1\dfrac{\ln(x)}{x^2-1}\,dx=\sum_{k=0}^{+\infty}\int_0^1-x^{2k}\ln(x)\,dx$.
+    4. En déduire la valeur de la série $\sum_{n=0}^{+\infty}\dfrac1{(2n+1)^2}$ puis celle de $\sum_{n=1}^{+\infty}\dfrac1{n^2}$.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/td/td7.pdf
+    page: 2
+    numero: Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-dm-s1
+  titre: 'DM : classes monotones et pi-systèmes'
+  enonce: |
+    Soit $E$ un ensemble.
+
+    Définition 1. On dit qu'un ensemble de parties $\mathcal A$ de $E$ est une classe monotone ou encore $\lambda$-système de $E$ si $\mathcal A$ vérifie :
+    i. $E\in\mathcal A$ ;
+    ii. Pour tous $A,B\in\mathcal A$ tels que $B\subset A$, $A\setminus B\in\mathcal A$ (stabilité par différence propre) ;
+    iii. Pour toute suite croissante $(A_n)_{n\ge0}$, $A_n\subset A_{n+1}$, de parties de $\mathcal A$, l'union $\bigcup^{\uparrow}_{n\ge1}A_n\in\mathcal A$.
+
+    Définition 2. On dit qu'un ensemble de parties $\mathcal A$ de $E$ est un $\pi$-système de $E$ si $\mathcal A$ est stable par intersection finie : $A,B\in\mathcal A\Rightarrow A\cap B\in\mathcal A$.
+
+    Questions :
+    1. Montrer que si $\mathcal A$ est à la fois une classe monotone et un $\pi$-système, alors $\mathcal A$ est une tribu.
+    2. Montrer que toute intersection de classes monotones est encore une classe monotone. On peut donc définir la classe monotone engendrée par une famille d'ensembles $\mathcal E$ comme étant la plus petite classe monotone contenant $\mathcal E$, que l'on notera $\mathcal M(\mathcal E)$. C'est-à-dire :
+    $$\mathcal M(\mathcal E)=\bigcap_{\substack{\mathcal M\text{ classe monotone sur }E\\ \mathcal E\subset\mathcal M}}\mathcal M.$$
+  sources:
+  - etab: paris-cite
+    fichier: mesure/dm/dm-facultatif-lebesgue.pdf
+    page: 1
+    numero: Partie I, 1
+  annale_prioritaire: false
+  type_source: dm
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-dm-s2
+  titre: 'DM : lemme de classe monotone'
+  enonce: |
+    Le but de cette partie est de démontrer le théorème suivant (les définitions de classe monotone, $\pi$-système et $\mathcal M(\mathcal E)$ sont celles de la section précédente).
+
+    Théorème 3 (Lemme de classe monotone). Soit $\mathcal E$ un $\pi$-système contenant $E$ (i.e. $E\in\mathcal E$). Alors $\mathcal M(\mathcal E)=\sigma(\mathcal E)$.
+
+    Questions :
+    1. Justifier que l'on a toujours $\mathcal M(\mathcal E)\subset\sigma(\mathcal E)$.
+    2. Justifier que pour montrer l'inclusion inverse il suffit de montrer que $\mathcal M(\mathcal E)$ est un $\pi$-système.
+    3. Soit $B\in\mathcal E$. On pose $\mathcal C_B=\{A\in\mathcal M(\mathcal E) : A\cap B\in\mathcal M(\mathcal E)\}$. Montrer que $\mathcal C_B$ est une classe monotone contenant $\mathcal E$. En déduire que $\forall B\in\mathcal E,\ \forall A\in\mathcal M(\mathcal E),\ A\cap B\in\mathcal M(\mathcal E)$.
+    4. Soit $C\in\mathcal M(\mathcal E)$. Montrer que $\mathcal C_C=\{A\in\mathcal M(\mathcal E),\ A\cap C\in\mathcal M(\mathcal E)\}$ est aussi une classe monotone contenant $\mathcal E$. Conclure.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/dm/dm-facultatif-lebesgue.pdf
+    page: 1
+    numero: Partie I, 2
+  annale_prioritaire: false
+  type_source: dm
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-dm-s3
+  titre: 'DM : théorème d''unicité de mesures'
+  enonce: |
+    Le but de cette partie est de démontrer le théorème suivant.
+
+    Théorème 4 (Unicité d'une mesure finie). Soient $\mu$ et $\nu$ deux mesures sur un espace mesurable $(E,\mathcal A)$ et $\mathcal B\subset\mathcal A$ un $\pi$-système contenant $E$ (i.e. $E\in\mathcal B$) et engendrant $\mathcal A$ (i.e. $\sigma(\mathcal B)=\mathcal A$). On suppose que pour tout $B\in\mathcal B$, $\mu(B)=\nu(B)$. Alors
+    1. Si $\mu(E)=\nu(E)<+\infty$, alors $\mu=\nu$ sur $\mathcal A$ (i.e. $\forall A\in\mathcal A,\ \mu(A)=\nu(A)$).
+    2. S'il existe une suite croissante de parties $E_n\in\mathcal B$, $n\in\mathbb N$, telle que $E=\bigcup_nE_n$ et pour tout $n\in\mathbb N$, $\mu(E_n)=\nu(E_n)<+\infty$, alors $\mu=\nu$ sur $\mathcal A$.
+
+    Définition 5. On dit que la mesure $\mu$ est $\sigma$-finie s'il existe une suite $E_n$, $n\in\mathbb N$, de sous-ensembles mesurables de $E$, telle que $E=\bigcup_nE_n$ et pour tout $n\in\mathbb N$, $\mu(E_n)<+\infty$.
+
+    Questions :
+    1. On suppose que $\mu$ et $\nu$ sont finies. Montrer que $\mathcal C=\{A\in\mathcal A : \mu(A)=\nu(A)\}$ est une classe monotone contenant $\mathcal B$.
+    2. Conclure grâce au lemme de classe monotone.
+    3. On suppose que $\mu$ et $\nu$ sont $\sigma$-finies. Soit $\mu_n$ (respectivement $\nu_n$) la mesure trace de $\mu$ (resp. $\nu$) sur $E_n$. Montrer que $\mu_n=\nu_n$ sur $\mathcal A$.
+    4. Conclure.
+    5. Le théorème est-il encore vrai si l'on enlève l'hypothèse « $\mathcal B$ est un $\pi$-système » ? Donner un contre-exemple.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/dm/dm-facultatif-lebesgue.pdf
+    page: 2
+    numero: Partie I, 3
+  annale_prioritaire: false
+  type_source: dm
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-dm-s4
+  titre: 'DM : applications de l''unicité (Lebesgue)'
+  enonce: |
+    Questions :
+    1. En considérant $\mathcal C$ l'ensemble des intervalles ouverts de $\mathbb R$, démontrer l'unicité de la mesure de Lebesgue (telle que définie dans le théorème de Borel-Lebesgue).
+    2. Plus généralement, montrer que deux mesures $\mu$ et $\nu$ sur $(\mathbb R,\mathcal B(\mathbb R))$ sont égales dès lors qu'elles vérifient pour tout $x\in\mathbb R$, $\mu([0,x])=\nu([0,x])<+\infty$.
+    3. Que peut-on dire d'une mesure $\mu$ sur $(\mathbb R,\mathcal B(\mathbb R))$ invariante par translation ?
+  sources:
+  - etab: paris-cite
+    fichier: mesure/dm/dm-facultatif-lebesgue.pdf
+    page: 2
+    numero: Partie I, 4
+  annale_prioritaire: false
+  type_source: dm
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-dm-s5
+  titre: 'DM : mesures extérieures et théorème de Carathéodory'
+  enonce: |
+    Soit $E$ un ensemble.
+
+    Définition 6. Une application $\mu^*:\mathcal P(E)\to\overline{\mathbb R}_+$ est appelée mesure extérieure si
+    i. $\mu^*(\emptyset)=0$
+    ii. $A\subset B\Rightarrow\mu^*(A)\le\mu^*(B)$
+    iii. Pour toute suite $A_n$, $n\in\mathbb N$, de parties de $E$, $\mu^*(\bigcup_nA_n)\le\sum_{n\in\mathbb N}\mu^*(A_n)$.
+
+    Dans la suite, on fixe une mesure extérieure $\mu^*$ sur $E$.
+
+    Définition 7. Une partie $B\subset E$ est dite $\mu^*$-mesurable si pour toute partie $A$ de $E$, on a $\mu^*(A)=\mu^*(A\cap B)+\mu^*(A\cap B^c)$. On note $\mathcal M(\mu^*)$ l'ensemble des parties $\mu^*$-mesurables.
+
+    Le but de cette partie est de montrer les résultats suivants :
+    Théorème 8. i. $\mathcal M(\mu^*)$ est une tribu qui contient toutes les parties $B\subset E$ telles que $\mu^*(B)=0$.
+    ii. La restriction de $\mu^*$ à $\mathcal M(\mu^*)$ est une mesure.
+
+    Questions :
+    1. Montrer que si $\mu^*(B)=0$ alors $B\in\mathcal M(\mu^*)$.
+    2. Montrer que $\mathcal M(\mu^*)$ contient $\emptyset$, est stable par passage au complémentaire et est stable par union finie.
+    3. Soit $B_n$, $n\in\mathbb N$, d'éléments de $\mathcal M(\mu^*)$, deux à deux disjoints. Montrer que pour tout $m\in\mathbb N$, pour tout $A\subset E$,
+    $$\mu^*(A)=\sum_{n=0}^m\mu^*(A\cap B_n)+\mu^*\Big(A\cap\Big(\bigcap_{n=0}^mB_n^c\Big)\Big)\ \ge\ \sum_{n=0}^m\mu^*(A\cap B_n)+\mu^*\Big(A\cap\Big(\bigcap_{n=0}^{+\infty}B_n^c\Big)\Big).$$
+    4. En déduire que $\bigcup_nB_n\in\mathcal M(\mu^*)$.
+    5. Montrer que pour toute suite $B_n$, $n\in\mathbb N$, d'éléments de $\mathcal M(\mu^*)$, deux à deux disjoints, alors $\bigcup_nB_n\in\mathcal M(\mu^*)$.
+    6. Conclure sur le fait que $\mathcal M(\mu^*)$ est une tribu.
+    7. En utilisant l'inégalité de la question 4., montrer que $\mu^*(\bigcup_nB_n)\ge\sum_{n\in\mathbb N}\mu^*(B_n)$, pour toute suite $B_n$, $n\in\mathbb N$, d'éléments de $\mathcal M(\mu^*)$ deux à deux disjoints.
+    8. Conclure que $\mu^*$ restreint à $\mathcal M(\mu^*)$ est une mesure.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/dm/dm-facultatif-lebesgue.pdf
+    page: 2
+    numero: Partie II, 5
+  annale_prioritaire: false
+  type_source: dm
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-dm-s6
+  titre: 'DM : construction de la mesure de Lebesgue'
+  enonce: |
+    Définition 9. Pour toute partie $A\subset\mathbb R$, on définit
+    $$\lambda^*(A)=\inf\Big\{\sum_{i\in\mathbb N}(b_i-a_i) : A\subset\bigcup_{i\in\mathbb N}]a_i,b_i[\Big\}.$$
+
+    Le but de cette partie est de démontrer le résultat suivant :
+    Théorème 10. i. $\lambda^*$ est une mesure extérieure sur $\mathbb R$.
+    ii. $\mathcal B(\mathbb R)\subset\mathcal M(\lambda^*)$
+    iii. Pour tout $a\le b$, $\lambda^*([a,b])=\lambda^*(]a,b[)=b-a$.
+
+    Questions :
+    1. Montrer que $\lambda^*(\emptyset)=0$ et que si $A\subset B$, $\lambda^*(A)\le\lambda^*(B)$.
+    2. Soit $\varepsilon>0$ et soit $A_n$, $n\in\mathbb N$ une suite de parties de $\mathbb R$. Montrer que $\lambda^*(\bigcup_nA_n)\le\sum_{n\in\mathbb N}\lambda^*(A_n)+\varepsilon$.
+    3. En déduire que $\lambda^*$ est une mesure extérieure sur $\mathbb R$.
+    4. Montrer que tout intervalle de la forme $]-\infty,\alpha]$, $\alpha\in\mathbb R$, est dans $\mathcal M(\lambda^*)$.
+    5. En déduire que $\mathcal B(\mathbb R)\subset\mathcal M(\lambda^*)$.
+    6. À l'aide du théorème de compacité de Borel-Lebesgue : de tout recouvrement par des ouverts d'un compact, on peut extraire un sous-recouvrement fini, montrer le point iii. du théorème.
+    7. Montrer que $\lambda^*$ restreint à $\mathcal B(\mathbb R)$ est la mesure de Lebesgue définie en cours.
+  sources:
+  - etab: paris-cite
+    fichier: mesure/dm/dm-facultatif-lebesgue.pdf
+    page: 3
+    numero: Partie II, 6
+  annale_prioritaire: false
+  type_source: dm
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mes-cc1-2526-ex01
+  titre: 'Contre-exemple : parties finies ou de complémentaire fini'
+  enonce: |
+    Sur un ensemble $X$, on note $\mathcal A$ le sous-ensemble de $\mathcal P(X)$ constitué des parties $A$ de $X$ telles que $A$ ou $A^\complement$ soit fini. Montrer, à l'aide d'un contre-exemple, que $\mathcal A$ n'est pas une tribu sur $X$ en général.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc1-2526-ex02
+  titre: Intégrale et séries des mesures de {f>=n}
+  enonce: |
+    On considère un espace mesuré $(X,\mathcal T,\mu)$ tel que $\mu(X)<+\infty$ et on munit $\mathbb R$ de la tribu borélienne $\mathcal B(\mathbb R)$. Soit $f:X\to\mathbb R$ une fonction mesurable positive.
+    Pour cet exercice, on admettra que, pour $(D_n)_{n\in\mathbb N}$ une famille d'éléments de $\mathcal T$ deux à deux disjoints, $\int_{\bigcup_{n\in\mathbb N}D_n}f\,d\mu=\sum_{n\in\mathbb N}\int_{D_n}f\,d\mu$.
+    Pour tout $n\in\mathbb N$, on pose $A_n=\{x\in X : f(x)\ge n\}$.
+    1. Montrer que les ensembles $A_n\setminus A_{n+1}$ appartiennent à $\mathcal T$, sont deux à deux disjoints et que $X=\bigcup_{n\in\mathbb N}(A_n\setminus A_{n+1})$.
+    2. Montrer que
+    $$\sum_{n\in\mathbb N}n\,\mu(A_n\setminus A_{n+1})\le\int_Xf\,d\mu\le\sum_{n\in\mathbb N}(n+1)\,\mu(A_n\setminus A_{n+1}).$$
+    3. On suppose que $\int_Xf\,d\mu<+\infty$.
+       (a) En utilisant la question 2, montrer que, pour tout $N\in\mathbb N^*$, $\sum_{n=1}^N\mu(A_n)\le\int_Xf\,d\mu+N\mu(A_N)$.
+       (b) En déduire que $\sum_{n\in\mathbb N}\mu(A_n)<+\infty$.
+    4. Réciproquement, montrer à l'aide de la question 2 que, si $\sum_{n\in\mathbb N}\mu(A_n)<+\infty$, alors $\int_Xf\,d\mu<+\infty$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc1-2526-ex03
+  titre: Décomposition atomique d'une mesure σ-finie
+  enonce: |
+    Soit $(X,\mathcal T,\mu)$ un espace mesuré tel que, pour tout $x\in X$, $\{x\}\in\mathcal T$.
+    On suppose qu'il existe une famille $(X_n)_{n\in\mathbb N}$ d'éléments de $\mathcal T$ telle que, pour tout $n\in\mathbb N$, $\mu(X_n)<+\infty$ et telle que $X=\bigcup_{n\in\mathbb N}X_n$.
+    1. Montrer que pour tout $n\in\mathbb N$ et $k\in\mathbb N^*$, l'ensemble $\{x\in X_n : \mu(\{x\})\ge\frac1k\}$ a un nombre fini d'éléments.
+    2. En déduire que l'ensemble $A=\{x\in X : \mu(\{x\})>0\}$ est dénombrable puis que $A\in\mathcal T$.
+    3. On définit les applications $\mu_1$ et $\mu_2$ de $\mathcal T$ dans $\mathbb R^+$ par : pour tout $B\in\mathcal T$, $\mu_1(B)=\mu(A\cap B)$, $\mu_2(B)=\mu(A^\complement\cap B)$. Montrer que $\mu_1$ (ou $\mu_2$) est une mesure sur $(X,\mathcal T)$ et que $\mu=\mu_1+\mu_2$.
+    4. Montrer que, pour tout $x\in X$, $\mu_2(\{x\})=0$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1.pdf
+    page: 2
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc1-2324-ex01
+  titre: |-
+    Tribu {E : mu(E)=0 ou mu(X\E)=0} et mesure 0-1
+  enonce: |
+    Soit $(X,\mathcal T,\mu)$ un espace mesuré de mesure non nulle. On définit
+    $$\mathcal T'=\{E\in\mathcal T : \mu(E)=0\text{ ou }\mu(X\setminus E)=0\}.$$
+    1. Montrer que $\mathcal T'$ est une tribu sur $X$.
+    2. Sur $\mathcal T'$, on définit
+    $$\nu(E)=\begin{cases}0&\text{si }\mu(E)=0\\1&\text{si }\mu(X\setminus E)=0.\end{cases}$$
+    Montrer que $\nu$ est une mesure sur $\mathcal T'$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-2023-2024.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2023-2024.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc1-2324-ex02
+  titre: Mesurabilité d'une fonction définie par morceaux
+  enonce: |
+    Soit $(X,\mathcal T)$ un espace mesurable et $f,g:X\to\mathbb R$ deux fonctions mesurables. Pour un $A\in\mathcal T$ donné, on définit
+    $$h(x)=\begin{cases}f(x)&\text{si }x\in A\\g(x)&\text{si }x\in A^\complement\end{cases}$$
+    où la notation $A^\complement$ désigne le complémentaire de $A$ : $A^\complement=X\setminus A$.
+    Montrer que $h$ est mesurable.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-2023-2024.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2023-2024.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc1-2324-ex03
+  titre: Inégalité de Markov et ensemble {f=+inf}
+  enonce: |
+    Soit $(X,\mathcal T,\mu)$ un espace mesuré et $f:X\to\mathbb R^+$ une fonction intégrable. Montrer que, pour tout $n\in\mathbb N^*$
+    $$\mu(\{f\ge n\})\le\frac1n\int_Xf\,d\mu.$$
+    En déduire que $\mu(\{f=+\infty\})=0$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-2023-2024.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2023-2024.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc1-2324-ex04
+  titre: Tribu complétée
+  enonce: |
+    Soit $(X,\mathcal T,\mu)$ un espace mesuré. On considère
+    $$\mathcal N=\{N\in\mathcal T : \mu(N)=0\}$$
+    et
+    $$\mathcal M'=\{A\cup E\text{ où }A\in\mathcal T\text{ et }E\subset N\text{ pour un certain }N\in\mathcal N\}.$$
+    Montrer que $\mathcal M'$ est une tribu sur $X$. On utilisera, après l'avoir montré, que, pour $E\subset N$, on a
+    $$A\cup E=(A\cup N)\cap(A\cup N^\complement\cup E).$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-2023-2024.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2023-2024.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc1-2324-ex05
+  titre: Convergence en mesure
+  enonce: |
+    Soit $(X,\mathcal T,\mu)$ un espace mesuré. On considère une fonction mesurable $f:X\to\mathbb R$ ainsi qu'une suite de fonctions mesurables $(f_n)_{n\in\mathbb N}$ définies de $X$ dans $\mathbb R$. On dit que $(f_n)$ converge en mesure vers $f$ si, pour tout $\epsilon>0$
+    $$\lim_{n\to+\infty}\mu\big(\{x\in X : |f_n(x)-f(x)|\ge\epsilon\}\big)=0$$
+    1. Montrer que, pour tout $\epsilon>0$, pour tout $n\in\mathbb N$, $\{x\in X : |f_n(x)-f(x)|\ge\epsilon\}\in\mathcal T$.
+    2. On prend $(X,\mathcal T,\mu)=(\mathbb R,\mathcal B(\mathbb R),\lambda)$ où $\lambda$ est la mesure de Lebesgue et on considère les fonctions
+    $$f_n=\mathbf 1_{[n,n+1]}=\begin{cases}1&\text{sur }[n,n+1]\\0&\text{sur }\mathbb R\setminus[n,n+1]\end{cases}$$
+    Montrer que cette suite de fonctions converge simplement vers $0$ mais ne converge pas en mesure vers $0$.
+    3. On suppose que $\mu(X)<+\infty$ et que la suite de fonctions $(f_n)_{n\in\mathbb N}$ converge presque partout vers $f$.
+       (a) Pour $\epsilon>0$ fixé, on définit $E_n=\{x\in X : |f_k(x)-f(x)|\ge\epsilon,\text{ pour un }k\ge n\}$. Montrer que $\bigcap_{n\in\mathbb N}E_n\subset\{x\in X : (f_n(x))_{n\in\mathbb N}\text{ ne converge pas vers }f(x)\}$.
+       (b) En déduire que $\mu(\bigcap_{n\in\mathbb N}E_n)=0$ puis que $\lim_{n\to+\infty}\mu(E_n)=0$.
+       (c) Conclure que la suite $(f_n)_{n\in\mathbb N}$ converge en mesure vers $f$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-2023-2024.pdf
+    page: 2
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2023-2024.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc1-2425-ex01
+  titre: Fonctions mesurables pour la tribu grossière
+  enonce: |
+    Sur un ensemble $X$, on considère la tribu $\mathcal T=\{\emptyset,X\}$. Soit $f:X\to\mathbb R$. Montrer que $f$ est mesurable de $(X,\mathcal T)$ dans $(\mathbb R,\mathcal B(\mathbb R))$ si et seulement si $f$ est une fonction constante.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-2024-2025.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc1-2425-ex02
+  titre: 'Formule du gâteau en couches : intégrale de ψ(t)=μ(f>t)'
+  enonce: |
+    Soit $(X,\mathcal T,\mu)$ un espace mesuré tel que $\mu(X)<+\infty$. On considère une fonction mesurable positive $f:X\to\mathbb R_+$ et on définit la fonction $\psi:\mathbb R_+\to\mathbb R_+$ par
+    $$\psi(t)=\mu(S_f(t))\quad\text{où}\quad S_f(t)=\{x\in X : f(x)>t\}.$$
+    1. Montrer que $\psi$ est une fonction décroissante.
+    2. On suppose dans cette question que $f$ est une fonction indicatrice d'un élément $A$ de $\mathcal T$, c'est-à-dire $f=\mathbf 1_A$. Après avoir caractérisé $S_f(t)$ pour tout $t\ge0$, montrer que $\psi=\mu(A)\mathbf 1_{[0,1[}$ sur $[0,+\infty[$. En déduire que
+    $$\int_0^{+\infty}\psi(t)\,dt=\int_Xf\,d\mu.\tag{1}$$
+    3. On suppose dans cette question que $f$ est une fonction étagée positive, c'est-à-dire que $f=\sum_{i=1}^N\alpha_i\mathbf 1_{A_i}$ où les $(A_i)_{1\le i\le N}$ forment une partition de $X$ et les $\alpha_i$ sont des réels positifs. Montrer que, pour tout $t\ge0$
+    $$S_f(t)=\bigcup_{\{i/\alpha_i>t\}}A_i\quad\text{et}\quad\psi(t)=\sum_{i=1}^N\mu(A_i)\mathbf 1_{[0,\alpha_i[}(t).$$
+    En déduire que la formule (1) est vraie.
+
+    À partir de maintenant, on considère le cas général d'une fonction $f$ mesurable positive.
+    4. Soit $(f_n)$ une suite croissante de fonctions mesurables positives qui tend vers $f$. Pour tout $n\in\mathbb N$, pour tout $t\in[0,+\infty[$, on pose $\psi_n(t)=\mu(S_{f_n}(t))$. Montrer que $(\psi_n)$ est une suite croissante et que pour tout $t\in[0,+\infty[$, $\lim_{n\to+\infty}\psi_n(t)=\psi(t)$.
+    5. Conclure que la formule (1) est vraie dans le cas général.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-2024-2025.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc1-2425-ex03
+  titre: Intersection dénombrable de tribus
+  enonce: |
+    Sur un ensemble $X$, on considère une famille dénombrable de tribus $(\mathcal T_n)_{n\in\mathbb N}$. Montrer que $\bigcap_{n\in\mathbb N}\mathcal T_n$ est une tribu. Est-ce que l'hypothèse de dénombrabilité est nécessaire ?
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-2024-2025.pdf
+    page: 2
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc1-2425-ex04
+  titre: 'Invariance par translation : deux points à distance entière'
+  enonce: |
+    Sur $(\mathbb R,\mathcal B(\mathbb R))$, on considère la mesure de Lebesgue $\lambda$ qui satisfait la propriété d'invariance par translation : pour tout $A\in\mathcal B(\mathbb R)$, pour tout $x\in\mathbb R$, $\lambda(A-x)=\lambda(A)$ où $A-x=\{a-x,\ a\in A\}$.
+    Soit $B\in\mathcal B(\mathbb R)$ tel que $\lambda(B)>1$.
+    1. Montrer que
+    $$\lambda(B)=\sum_{n\in\mathbb Z}\lambda(B\cap[n,n+1[)$$
+    puis que
+    $$\lambda(B)=\sum_{n\in\mathbb Z}\lambda((B-n)\cap[0,1[)$$
+    2. En déduire que la suite d'ensembles $(B-n)\cap[0,1[$, $n\in\mathbb Z$ n'est pas constituée d'ensembles tous disjoints 2 à 2.
+    3. Conclure qu'il existe $a$ et $b\in B$ tels que $a-b$ est un entier supérieur ou égal à $1$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-2024-2025.pdf
+    page: 2
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2324-ex01q1
+  titre: Limite de ∫ x^{1/n}/(1+x^n)^n
+  enonce: |
+    Déterminer la limite quand $n$ tend vers l'infini de
+    $$I_n=\int_0^1\frac{x^{1/n}}{\big(1+\frac xn\big)^n}\,dx$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2023-2024.pdf
+    page: 1
+    numero: Ex 1 q1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2023-2024.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2324-ex01q2
+  titre: Limite de ∫ e^{1+cos^n(x)} e^{-|x|}
+  enonce: |
+    Déterminer la limite quand $n$ tend vers l'infini de
+    $$I_n=\int_{-\infty}^{+\infty}e^{1+\cos^n(x)}e^{-|x|}\,dx$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2023-2024.pdf
+    page: 1
+    numero: Ex 1 q2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2023-2024.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2324-ex02
+  titre: Limite de n^2(1-cos(x/n)) x^p selon p
+  enonce: |
+    Pour $p\in\mathbb R$ donné, on définit, pour tout $n\in\mathbb N^*$
+    $$f_n(x)=n^2\Big(1-\cos\Big(\frac xn\Big)\Big)x^p,\quad\forall x\in]0,1[.$$
+    1. Pour tout $x\in]0,1[$, étudier la limite de la suite $(f_n(x))_{n\in\mathbb N}$.
+    2. Étudier la limite de $\int_0^1f_n(x)\,dx$ en fonction de la valeur de $p$.
+    On pourra utiliser, après l'avoir montré, que $\cos(u)\ge1-\frac{u^2}2$, pour $u\in\mathbb R_+$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2023-2024.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2023-2024.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2324-ex03
+  titre: Limite d'une série à paramètre
+  enonce: |
+    Déterminer la limite quand $n$ tend vers $+\infty$ de la suite $(S_n)_{n\in\mathbb N^*}$ où
+    $$S_n=\sum_{k=0}^{+\infty}\frac1{3^k}\Big(1-\frac{(-1)^n}{n(k+1)}\Big),\quad\text{pour }n\in\mathbb N^*.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2023-2024.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2023-2024.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2324-ex04
+  titre: 'F(t)=∫ e^{-|t|x}/(1+x^2) : continuité et dérivée'
+  enonce: |
+    On pose, pour tout $t\in\mathbb R$
+    $$F(t)=\int_0^{+\infty}e^{-|t|x}\frac1{1+x^2}\,dx$$
+    1. Montrer que $F$ est bien définie et continue sur $\mathbb R$.
+    2. Montrer que $F$ est dérivable sur $\mathbb R^*$ et déterminer la dérivée.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2023-2024.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2023-2024.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-gauss-y-exp
+  titre: Intégrale de Gauss via f(x,y)=y e^{-y^2(1+x^2)}
+  enonce: |
+    Sur $\mathbb R_+\times\mathbb R_+$, on définit la fonction $f(x,y)=ye^{-y^2(1+x^2)}$.
+    À l'aide de l'étude de l'intégrale de $\int_{\mathbb R_+\times\mathbb R_+}f(x,y)\,dx\,dy$, montrer que
+    $$\int_0^{+\infty}e^{-x^2}\,dx=\frac{\sqrt\pi}2.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2024-2025.pdf
+    page: 2
+    numero: Ex 3
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2023-2024.pdf
+    page: 1
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2425-ex01q1
+  titre: Limite de la série ∑ 1/(2^k+(-1)^n n)
+  enonce: |
+    Étudier la limite de
+    $$S_n=\sum_{k\in\mathbb N^*}\frac1{2^k+\frac{(-1)^n}{n}}.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2024-2025.pdf
+    page: 1
+    numero: Ex 1 q1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2425-ex01q2
+  titre: Limite de ∫ |sin(1/x)|^{1/n}
+  enonce: |
+    On considère la fonction $f$ définie sur $[0,1]$ par
+    $$f(x)=\begin{cases}\sin(1/x)&\text{si }x\in]0,1]\\0&\text{pour }x=0.\end{cases}$$
+    On définit pour tout $n\in\mathbb N^*$, $g_n(x)=|f(x)|^{1/n}$. Étudier la limite de $\int_0^1g_n(x)\,dx$ quand $n$ tend vers $+\infty$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2024-2025.pdf
+    page: 1
+    numero: Ex 1 q2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2425-ex01q3
+  titre: Limite de ∫ (2+n^2 x)/(1+2n^2x^2) sur [1,+inf[
+  enonce: |
+    Étudier la limite de
+    $$\int_1^{+\infty}\frac{2+n^2x}{1+2n^2x^2}\,dx.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2024-2025.pdf
+    page: 1
+    numero: Ex 1 q3
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2425-ex02
+  titre: F(t)=∫ (sin x / x)^2 e^{-tx}
+  enonce: |
+    On définit, pour tout $(t,x)\in\mathbb R_+\times\mathbb R_+^*$
+    $$f(t,x)=\Big(\frac{\sin x}x\Big)^2e^{-tx}.$$
+    1. Montrer que, pour tout $t\in\mathbb R_+$, la fonction $x\mapsto f(t,x)$ est intégrable sur $\mathbb R_+^*$.
+    On pose $F(t)=\int_0^{+\infty}f(t,x)\,dx$.
+    2. Montrer que $F$ est continue sur $\mathbb R_+$.
+    3. Montrer que $F$ est deux fois dérivable sur $\mathbb R_+^*$ et déterminer $F'$ et $F''$.
+    4. On considère une suite $(t_n)$ de $\mathbb R_+$ telle que $t_n\to+\infty$. Déterminer la limite de $(F'(t_n))$ quand $n$ tend vers $+\infty$.
+    5. En utilisant les questions précédentes, en déduire une expression simple de $F''$ puis de $F'$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2024-2025.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2425-ex03q1
+  titre: Intégrale double ∫ 2xy cos(x y^2)
+  enonce: |
+    Donner la valeur de l'intégrale
+    $$\int_{[0,1]\times[0,2\pi]}2xy\cos(xy^2)\,dx\,dy$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2024-2025.pdf
+    page: 2
+    numero: Ex 3 q1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2425-ex03q2
+  titre: Intégrale itérée avec inversion de l'ordre
+  enonce: |
+    Donner la valeur de l'intégrale
+    $$\int_0^8\Big(\int_{x^{1/3}}^2\frac1{1+y^4}\,dy\Big)dx$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2024-2025.pdf
+    page: 2
+    numero: Ex 3 q2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2-2425-ex04
+  titre: Série ∑ |f(nx)|/n et convergence presque partout
+  enonce: |
+    Soit $f$ une fonction intégrable sur $\mathbb R$.
+    1. Déterminer $\int_{\mathbb R}\sum_{n\in\mathbb N^*}\dfrac{|f(nx)|}n\,dx$.
+    2. En déduire que, pour presque tout $x\in\mathbb R$, $\lim_{n\to+\infty}\dfrac{f(nx)}n=0$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-2024-2025.pdf
+    page: 2
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-cc2l3-2425-ex01
+  titre: 'Lemme de Fatou : énoncé et cas de la suite x^a/n^2 1_[1,n]'
+  enonce: |
+    Soit $a>0$ et $(f_n)_{n\ge2}$ la suite de fonctions $\mathbb R\to\mathbb R$ définies pour $x\in\mathbb R$ et $n\ge2$ par
+    $$f_n(x)=\frac{x^a}{n^2}\,I_{[1,n]}(x)$$
+    1. Énoncer le Lemme de Fatou (cadre général, hypothèses, résultat) puis discuter du caractère strict ou large de l'inégalité de ce lemme, dans le cas de la suite $(f_n)$ ci-dessus, selon les valeurs de $a$.
+    2. Quels sont les atouts et les inconvénients du Lemme de Fatou par rapport aux 2 autres principaux théorèmes de convergence vus en cours ?
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+      page: 2
+  qualite_extraction: ok
+- id: mes-cc2l3-2425-ex03q1
+  titre: Limite de ∫ (n(n-1)x+1)/(ln x + n^2 x^2)
+  enonce: |
+    Déterminer $\lim_{n\to\infty}I_n$ dans le cas suivant :
+    $$I_n=\int_1^{+\infty}\frac{n(n-1)x+1}{\ln(x)+n^2x^2}\,dx$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+    page: 1
+    numero: Ex 3 q1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+      page: 2
+  qualite_extraction: ok
+- id: mes-cc2l3-2425-ex03q2
+  titre: Limite de ∫_0^n (1-x/n)^n sin(x) deux manières
+  enonce: |
+    Déterminer $\lim_{n\to\infty}I_n$ dans le cas suivant (attention : traiter cette question de deux manières différentes) :
+    $$I_n=\int_0^n\Big(1-\frac xn\Big)^n\sin(x)\,dx$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+    page: 1
+    numero: Ex 3 q2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+      page: 2
+  qualite_extraction: ok
+- id: mes-cc2l3-2425-ex04
+  titre: Queue d'une fonction intégrable et limsup/liminf de {|f|>=n}
+  enonce: |
+    Soit $f:X\to\mathbb R$ une fonction intégrable de $(X,\mathcal T,\mu)$ dans $(\mathbb R,\mathcal B(\mathbb R),\lambda)$, où $\lambda$ désigne la mesure de Lebesgue sur $\mathbb R$. Pour tout entier $n\in\mathbb N$, on note $E_n=\{|f|\ge n\}$.
+    1. Montrer que $\int_{E_n}|f|\,d\mu$ tend vers $0$ quand $n\to\infty$.
+    2. Identifier les valeurs du réel $a>0$ pour lesquelles $\mu(E_n)=o(n^{-a})$ quand $n\to\infty$.
+    3. Si $(A_n)_{n\ge1}$ est une suite quelconque de sous-ensembles d'un ensemble $A$, on définit $\liminf A_n=\bigcup_{n\ge1}\bigcap_{k\ge n}A_k$ et $\limsup A_n=\bigcap_{n\ge1}\bigcup_{k\ge n}A_k$. Déterminer $\liminf E_n$ et $\limsup E_n$, puis faire de même pour $\tilde E_n=\{|f|\ge(-1)^nn\}$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+      page: 2
+  qualite_extraction: ok
+- id: mes-cc2l3-2425-ex05
+  titre: Limite de la série ∑ n sin(k/n)/2^k
+  enonce: |
+    Déterminer la limite quand $n\to\infty$ de
+    $$S_n=\sum_{k\ge1}\frac{n\sin(k/n)}{2^k}$$
+    (certaines limites ou inégalités vues en TD pourront être utilisées ici)
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+    page: 1
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/CC2-L3Math-2024-énoncé-et-correction.pdf
+      page: 2
+  qualite_extraction: ok
+- id: mes-ex-2526-ex01
+  titre: Troncature d'une fonction mesurable
+  enonce: |
+    Soit $(X,\mathcal T)$ un espace mesurable et $f:X\to\mathbb R$ une fonction mesurable. On définit la fonction $g:X\to\mathbb R$ par
+    $$g(x)=\begin{cases}1&\text{si }f(x)>1\\f(x)&\text{si }|f(x)|\le1\\-1&\text{si }f(x)<-1\end{cases}$$
+    1. Montrer que $-1\le g(x)\le1$ pour tout $x\in X$.
+    2. Caractériser $\{g\le\alpha\}$ pour tout $\alpha\in\mathbb R$.
+    3. En déduire que $g$ est mesurable.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2526-ex02
+  titre: Mesure de densité f et intégrale par rapport à ν
+  enonce: |
+    On considère un espace mesuré $(X,\mathcal T,\mu)$ et $f:X\to\mathbb R$ une fonction mesurable positive. On définit l'application $\nu:\mathcal T\to\mathbb R$
+    $$\nu(A)=\int_Af\,d\mu.$$
+    1. En utilisant que $\mathbf 1_{\bigcup_{n\in\mathbb N}A_n}=\sum_{n\in\mathbb N}\mathbf 1_{A_n}$ pour une famille $(A_n)_{n\in\mathbb N}$ d'éléments de $\mathcal T$ deux à deux disjoints, montrer que $\nu$ est une mesure.
+    2. Montrer que, pour toute fonction $g:X\to\mathbb R$ étagée positive, on a : $\int_Xg\,d\nu=\int_Xfg\,d\mu$.
+    3. Montrer que le résultat de la question 2. se généralise à toute fonction $g$ mesurable positive.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2526-ex03q1
+  titre: Limite de ∫ 1/(1-n ln x)
+  enonce: |
+    Donner la limite quand $n$ tend vers $+\infty$ de
+    $$\int_0^1\frac1{1-n\ln(x)}\,dx.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen.pdf
+    page: 1
+    numero: Ex 3 q1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2526-ex03q2
+  titre: Limite de ∫ arctan(1+x^2/n)/(1+x)
+  enonce: |
+    Donner la limite quand $n$ tend vers $+\infty$ de
+    $$\int_0^{+\infty}\frac{\arctan(1+x^2/n)}{1+x}\,dx.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen.pdf
+    page: 1
+    numero: Ex 3 q2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2526-ex03q3
+  titre: Limite de (1/n)∫ f(x) (sin(nx)/x)^2 par changement de variable
+  enonce: |
+    Soit $f$ une fonction continue sur $[0,1]$. On considère la suite d'intégrales définie par : pour tout $n\in\mathbb N^*$,
+    $$\frac1n\int_0^1f(x)\Big(\frac{\sin(nx)}x\Big)^2dx.$$
+    Faire un changement de variables en posant $y=nx$. En utilisant que $\int_0^{+\infty}\dfrac{\sin^2x}{x^2}\,dx=\dfrac\pi2$, montrer ensuite que
+    $$\lim_{n\to+\infty}\frac1n\int_0^1f(x)\Big(\frac{\sin(nx)}x\Big)^2dx=\frac\pi2f(0).$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen.pdf
+    page: 2
+    numero: Ex 3 q3
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2526-ex04
+  titre: 'F(t)=∫ e^{-tx}/(1+x^2) : domaine, dérivées, équation F''''+F=1/t'
+  enonce: |
+    Soit la fonction
+    $$F(t)=\int_0^{+\infty}\frac{e^{-tx}}{1+x^2}\,dx.$$
+    1. Donner le domaine de définition $D$ de $F$.
+    2. Montrer que $F$ est dérivable sur $D\setminus\{0\}$ et donner l'expression de la dérivée (en laissant sous la forme d'une intégrale).
+    3. Montrer que $F$ admet une dérivée seconde sur $D\setminus\{0\}$ et que, pour tout $t\in D\setminus\{0\}$, $F''(t)+F(t)=\dfrac1t$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen.pdf
+    page: 2
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2324-ex01
+  titre: 'Intégrabilité de 1/(x^2+y^2)^α sur le disque : L^∞ et L^p'
+  enonce: |
+    Soit $\alpha\in\mathbb R$. On pose, pour tout $(x,y)\in\mathbb R^2\setminus\{(0,0)\}$
+    $$f(x,y)=\frac1{(x^2+y^2)^\alpha}$$
+    et on définit $D=\{(x,y)\in\mathbb R^2 : x^2+y^2\le1\}$.
+    1. Déterminer pour quelles valeurs de $\alpha$, $f$ appartient à $L^\infty(D)$.
+    2. Soit $p\in[1,+\infty[$ donné. Déterminer pour quelles valeurs de $\alpha$, $f$ appartient à $L^p(D)$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2324-ex02q1
+  titre: Limite de ∫ f(e^{-x/n}) avec f croissante
+  enonce: |
+    Soit $f:\mathbb R\to\mathbb R$ une fonction positive, continue et croissante. Déterminer la limite quand $n$ tend vers $+\infty$ de
+    $$\int_0^{+\infty}f(e^{-x/n})\,dx.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024.pdf
+    page: 1
+    numero: Ex 2 q1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2324-ex02q2
+  titre: Limite de ∫ n/(n x^2+x+n)
+  enonce: |
+    Déterminer la limite quand $n$ tend vers $+\infty$ de
+    $$\int_0^{+\infty}\frac n{nx^2+x+n}\,dx.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024.pdf
+    page: 1
+    numero: Ex 2 q2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2324-ex02q3
+  titre: Limite de ∫ x^{-1/2} cos(1/(nx))
+  enonce: |
+    Déterminer la limite quand $n$ tend vers $+\infty$ de
+    $$\int_0^1\frac1{\sqrt x}\cos\Big(\frac1{nx}\Big)\,dx.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024.pdf
+    page: 1
+    numero: Ex 2 q3
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2324-ex03
+  titre: Intégrale de Dirichlet ∫_0^n sin x / x via Fubini
+  enonce: |
+    1. Montrer que l'application $(t,x)\in[0,+\infty[\times[0,n]\mapsto\sin(x)e^{-xt}$ est intégrable.
+    2. En utilisant que, pour tout $x>0$, $\dfrac1x=\int_0^{+\infty}e^{-xt}\,dt$, montrer que, pour tout $n\in\mathbb N^*$
+    $$\int_0^n\frac{\sin(x)}x\,dx=\int_0^{+\infty}\frac1{1+t^2}\Big(1-(\cos(n)+\sin(n)t)e^{-nt}\Big)dt.$$
+    3. En déduire que
+    $$\lim_{n\to+\infty}\int_0^n\frac{\sin(x)}x\,dx=\frac\pi2.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2324-ex04
+  titre: Mesure extérieure et ensembles ν-mesurables
+  enonce: |
+    Soit $X$ un ensemble. On note $\mathcal P(X)$ l'ensemble des parties de $X$ et on considère une application $\nu:\mathcal P(X)\to[0,+\infty]$ qui satisfait les propriétés suivantes :
+    (a) $\nu(\emptyset)=0$.
+    (b) pour tout $A\subset B\subset X$, $\nu(A)\le\nu(B)$.
+    (c) pour toute famille $(A_n)_{n\in\mathbb N}$ d'éléments de $X$, $\nu\big(\bigcup_{n\in\mathbb N}A_n\big)\le\sum_{n\in\mathbb N}\nu(A_n)$.
+
+    1. Dans cette question, on suppose que $X$ est un ensemble non dénombrable et on pose : pour tout $A\in\mathcal P(X)$
+    $$\nu(A)=\begin{cases}0&\text{si }A=\emptyset\\1&\text{si }A\text{ est dénombrable et }A\ne\emptyset\\2&\text{si }A\text{ est non dénombrable.}\end{cases}$$
+    Montrer que $\nu$ satisfait les propriétés (a), (b) et (c). $\nu$ est-elle une mesure ?
+
+    On revient à une application $\nu:\mathcal P(X)\to[0,+\infty]$ quelconque qui satisfait les propriétés (a), (b) et (c). On dit qu'un ensemble $E\subset X$ est $\nu$-mesurable si pour tout $A\subset X$
+    $$\nu(A)=\nu(A\cap E)+\nu(A\setminus E).$$
+    2. Montrer que si $E$ est $\nu$-mesurable, alors le complémentaire de $E$ est $\nu$-mesurable.
+    3. Montrer que si $\nu(E)=0$, alors $E$ est $\nu$-mesurable.
+    4. Soit $(A_n)_{n\in\mathbb N}$ une famille d'éléments $\nu$-mesurables disjoints 2 à 2. Montrer par récurrence que, pour tout $N\in\mathbb N$
+    $$\nu\Big(\bigcup_{n=0}^NA_n\Big)=\sum_{n=0}^N\nu(A_n).$$
+    En déduire que $\nu\big(\bigcup_{n\in\mathbb N}A_n\big)=\sum_{n\in\mathbb N}\nu(A_n)$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024.pdf
+    page: 2
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2023-2024-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2425-ex01
+  titre: Ensembles {g<f} et {g<=a<f}
+  enonce: |
+    On rappelle la notation suivante : pour $f:X\to\mathbb R$ et $g:X\to\mathbb R$, on note $\{g<f\}=\{x\in X : g(x)<f(x)\}$.
+    Soit $(X,\mathcal T,\mu)$ un espace mesuré et soient $f$ et $g$ deux fonctions mesurables de $X\to\mathbb R$.
+    1. Montrer que $\{g<f\}$ et $\{g\le a<f\}$, pour $a\in\mathbb R$, sont des éléments de $\mathcal T$.
+    2. Montrer que $\{g<f\}=\bigcup_{a\in\mathbb Q}\{g\le a<f\}$.
+    3. En déduire que, si $\mu(\{g\le a<f\})=0$, pour tout $a\in\mathbb R$, alors $\mu(\{g<f\})=0$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2024-2025.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2425-ex02q1
+  titre: Convergence dominée pour f_n e^{-f_n}
+  enonce: |
+    Soit $(f_n)_{n\in\mathbb N}$ une suite de fonctions mesurables et positives définies sur $[0,1]$. On suppose que $(f_n)_{n\in\mathbb N}$ converge presque partout vers une fonction $f$. Montrer que
+    $$\lim_{n\to+\infty}\int_0^1f_n(x)e^{-f_n(x)}\,dx=\int_0^1f(x)e^{-f(x)}\,dx.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2024-2025.pdf
+    page: 1
+    numero: Ex 2 q1
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2425-ex02q2
+  titre: Série harmonique alternée par convergence dominée
+  enonce: |
+    Pour tout $n\in\mathbb N$, on pose $f_n(x)=\sum_{k=0}^n(-1)^kx^k$. Appliquer le théorème de convergence dominée pour déterminer
+    $$\lim_{n\to+\infty}\int_0^1f_n(x)\,dx.$$
+    En déduire la valeur de $\sum_{n\ge1}\dfrac{(-1)^n}n$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2024-2025.pdf
+    page: 1
+    numero: Ex 2 q2
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2425-ex02q3
+  titre: Intégrale ∫ x^α ln x/(1-x) en série
+  enonce: |
+    Montrer que, pour tout $\alpha>-1$,
+    $$\int_0^1\frac{x^\alpha\ln x}{1-x}\,dx=-\sum_{n=1}^{+\infty}\frac1{(\alpha+n)^2}.$$
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2024-2025.pdf
+    page: 1
+    numero: Ex 2 q3
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2425-ex04
+  titre: Limite croissante de mesures
+  enonce: |
+    Sur $(X,\mathcal T)$, on considère une famille de mesures $(\mu_n)_{n\in\mathbb N}$ telle que, pour tout $A\in\mathcal T$, $(\mu_n(A))_{n\in\mathbb N}$ est une suite croissante. On définit $\mu(A)=\lim_{n\to+\infty}\mu_n(A)$ pour tout $A\in\mathcal T$. Montrer que $\mu$ est une mesure sur $(X,\mathcal T)$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2024-2025.pdf
+    page: 2
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok
+- id: mes-ex-2425-ex05
+  titre: 'F(t)=∫_0^1 1/(t+x^r) : comportement en 0+'
+  enonce: |
+    Soit $r>0$ fixé. Pour tout $t>0$, on pose
+    $$F(t)=\int_0^1\frac1{t+x^r}\,dx.$$
+    1. Pour commencer, on prend $r=\frac12$. Montrer que $F$ est continue sur $[0,+\infty[$. Donner la limite de $F$ quand $t$ tend vers $0^+$.
+    2. On prend maintenant $r=2$. En faisant le changement de variables $x=\sqrt t\,y$, donner un équivalent de $F$ quand $t$ tend vers $0^+$.
+    3. On prend maintenant $r=1$. Montrer que $F(t)$ tend vers $+\infty$ quand $t$ tend vers $0^+$.
+  sources:
+  - etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-2024-2025.pdf
+    page: 2
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2024-25
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: uvsq/mesure/Théorie de la mesure/Annales/examen-corrige-2024-2025.pdf
+      page: null
+  qualite_extraction: ok

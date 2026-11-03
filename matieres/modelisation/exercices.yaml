@@ -1,0 +1,1075 @@
+- id: mod-td1-ex01
+  titre: Fonctions génératrices des lois usuelles
+  enonce: |
+    Déterminer la fonction génératrice pour une variable $X$ qui suit chacune des lois suivantes :
+    1. une loi binomiale $\mathcal{B}(n,p)$ en partant de sa loi de probabilité,
+    2. une loi binomiale $\mathcal{B}(n,p)$ en la considérant comme la loi d'une somme de variables de Bernoulli,
+    3. une loi de Poisson $\mathcal{P}(\lambda)$,
+    4. une loi géométrique $\mathcal{G}(p)$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td1-galton-watson.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td1-ex02
+  titre: Espérance et variance par les fonctions génératrices
+  enonce: |
+    Retrouver l'espérance et la variance de chacune des lois de l'exercice précédent à l'aide de sa fonction génératrice.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td1-galton-watson.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td1-ex03
+  titre: Urne à quatre boules et score total
+  enonce: |
+    Une urne contient $4$ boules rapportant respectivement $0, 1, 1, 2$ points. On y effectue $n$ tirages avec remise et l'on note $S$ le score total obtenu. Déterminer la fonction génératrice de $S$ et en déduire la loi de $S$. Interpréter le résultat.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td1-galton-watson.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td1-ex04
+  titre: Dés truqués et somme uniforme
+  enonce: |
+    Montrer par les fonctions génératrices qu'il est impossible de « truquer » deux dés cubiques et indépendants pour que la somme des résultats du lancer des deux dés suive une loi uniforme sur $\{2,\dots,12\}$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td1-galton-watson.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td1-ex05
+  titre: Espérance de Z_n dans un processus de Galton-Watson
+  enonce: |
+    Soit $Z=(Z_k,\ k\geqslant 0)$ un processus de Galton-Watson tel que $\mathbb{E}[Z_1]<+\infty$. En utilisant les fonctions génératrices, montrer que :
+    $$\forall n\geqslant 1,\quad \mathbb{E}[Z_n]=\mathbb{E}[Z_1]^n.$$
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td1-galton-watson.pdf
+    page: 1
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td1-ex06
+  titre: Galton-Watson issu de N individus
+  enonce: |
+    Soit $(X_{n,k},\ n\geqslant 0,\ k\geqslant 1)$ une famille de variables aléatoires indépendantes et de même loi, ayant un moment d'ordre $2$. On considère le processus de Galton-Watson $Z=(Z_n,\ n\geqslant 0)$ défini par :
+    $$Z_0=N \quad\text{et}\quad Z_{n+1}=\sum_{k=1}^{Z_n}X_{n,k}\quad\text{pour tout } n\geqslant 0,$$
+    où $N$ est un entier quelconque supérieur ou égal à $1$.
+    1. En reprenant les preuves par récurrence du cours, déterminer $\mathbb{E}[Z_n]$, $\mathrm{var}(Z_n)$ et $G_n=\phi_{Z_n}$.
+    2. Expliquer de façon probabiliste les formules obtenues.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td1-galton-watson.pdf
+    page: 1
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td1-ex07
+  titre: Galton-Watson à loi géométrique, binomiale B(2,p) et B(3,p)
+  enonce: |
+    Soit $(X_{n,k},\ n\geqslant 0,\ k\geqslant 1)$ une famille de variables aléatoires indépendantes suivant toutes une loi géométrique sur $\mathbb{N}$ de paramètre $p\in\,]0,1[$ :
+    $$\forall l\geqslant 0,\quad \mathbb{P}(X_{n,k}=l)=p(1-p)^l.$$
+    On considère le processus de Galton-Watson $Z=(Z_n,\ n\geqslant 0)$ défini par :
+    $$Z_0=1 \quad\text{et}\quad Z_{n+1}=\sum_{k=1}^{Z_n}X_{n,k}\quad\text{pour tout } n\geqslant 0.$$
+    1. Déterminer la loi de $Z_1$, puis celle de $Z_2$.
+    2. Déterminer $\mathbb{E}[Z_n]$ pour tout $n\geqslant 1$.
+    3. Déterminer, en fonction de $p$, la probabilité d'extinction du processus $Z$.
+    4. Mêmes questions avec une loi binomiale $\mathcal{B}(2,p)$.
+    5. Mêmes questions avec une loi binomiale $\mathcal{B}(3,p)$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td1-galton-watson.pdf
+    page: 2
+    numero: Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td1-ex08
+  titre: Population de baleines
+  enonce: |
+    On souhaite étudier une population de baleines au cours des ans. Pour cela, on ne s'intéresse qu'aux individus femelles et on considère une génération par an, régulée par le processus suivant :
+    - Si la baleine meurt dans l'année, son éventuel baleineau meurt également, et elle a $0$ descendant l'année suivante.
+    - Si la baleine survit mais n'a pas de baleineau femelle, elle engendre un descendant dans la population de l'année suivante (elle-même).
+    - Si la baleine survit et a un baleineau femelle, elle engendre deux descendants (elle-même et le baleineau).
+
+    On suppose que toutes les baleines meurent d'une année sur l'autre avec la même probabilité $p$. On note $\mu$ la probabilité d'enfanter un baleineau femelle, et on suppose que la mort et l'enfantement sont indépendants.
+    1. Quelle relation doivent satisfaire $p$ et $\mu$ pour que la population ne s'éteigne pas forcément ?
+    2. Dans ce cas, avec quelle probabilité s'éteindra-t-elle tout de même ?
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td1-galton-watson.pdf
+    page: 2
+    numero: Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td1-ex09
+  titre: 'Cas critique : temps d''extinction d''espérance infinie'
+  enonce: |
+    On considère un processus de Galton-Watson $(Z_n)_{n\in\mathbb{N}}$. On note $\phi$ la fonction génératrice de $Z_1$, et on suppose que $m=\phi'(1)=1$ et que $Z_1$ admet un moment d'ordre $2$, ce qui signifie que $\phi''(1^-)$ existe. On suppose de plus que la variance de $Z_1$ n'est pas nulle. Soit $\tau=\inf\{n\geq 0,\ Z_n=0\}$ le temps d'extinction.
+    1. Justifier que $\tau$ est presque sûrement fini.
+    2. On pose $u_n=\mathbb{P}(\tau>n)$. Écrire $u_n$ en fonction de $G_n(0)$, où $G_n$ est la fonction génératrice de $Z_n$, et en déduire une relation de récurrence sur la suite $(u_n)_n$.
+    3. Que vaut $\lim_{n\to\infty}u_n$ ? En déduire un développement limité à l'ordre de $2$ dans la relation de récurrence.
+    4. Montrer que $\dfrac{1}{u_{n+1}}-\dfrac{1}{u_n}\underset{+\infty}{\sim}\dfrac{\phi''(1^-)}{2}$.
+    5. En déduire que $u_n\underset{+\infty}{\sim}\dfrac{2}{\phi''(1^-)\,n}$.
+    6. Montrer que $\mathbb{E}[\tau]=+\infty$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td1-galton-watson.pdf
+    page: 2
+    numero: Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex01
+  titre: Matrice markovienne à paramètres
+  enonce: |
+    Pour quelles valeurs de $a$, $b$ et $c$, la matrice suivante est-elle une matrice markovienne ?
+    $$P=\begin{pmatrix} 0.5 & 0.1 & a\\ b & 0.2 & 0.4\\ 0.3 & c & 0.1 \end{pmatrix}$$
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex02
+  titre: Loi de X_n pour une chaîne à deux états
+  enonce: |
+    Supposons que $E=\{1,2\}$, que $(X_n)$ soit une chaîne de Markov sur $E$ telle que :
+    - $\mathbb{P}(X_1=1\mid X_0=1)=p_{11}$ et $\mathbb{P}(X_1=2\mid X_0=1)=p_{12}$
+    - $\mathbb{P}(X_1=1\mid X_0=2)=p_{21}$ et $\mathbb{P}(X_1=2\mid X_0=2)=p_{22}$
+
+    Soit $\mu_0=(a,b)$ la mesure initiale, c'est-à-dire que $\mathbb{P}(X_0=1)=a$ et $\mathbb{P}(X_0=2)=b$. On pose $P=(p_{ij})_{1\leq i,j\leq 2}$.
+    1. Donner la loi de $X_1$.
+    2. On note $\mu_n=(a_n,b_n)$ la loi de $X_n$. Donner une formule de récurrence pour $a_n$ et $b_n$.
+    3. Montrer, par récurrence sur $n$, que $(a_n,b_n)=\mu_0P^n$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex03
+  titre: Deux urnes, rouge et bleue
+  enonce: |
+    Une urne rouge contient 2 boules rouges et 3 boules bleues. Une urne bleue contient une boule rouge et 4 boules bleues. On considère le processus aléatoire suivant : à chaque étape, une boule est choisie au hasard dans une urne, on note sa couleur et on la remet dans son urne. La boule suivante est extraite de l'urne dont la couleur coïncide avec celle de la boule extraite à l'étape précédente. L'espace des états correspond à la couleur des urnes dans lesquelles on effectue les tirages : $E=\{R,B\}$.
+    1. Écrire la matrice $P$ de transition de la chaîne de Markov $(X_n)_{n\geq 0}$ ainsi définie, et dessiner son graphe.
+    2. Si on suppose que l'on tire initialement dans l'urne rouge, quelle est la probabilité que l'on tire aussi dans l'urne rouge à l'étape $n=3$ ? Et à l'étape $n=100$ ?
+    3. Montrer que, quelles que soient les probabilités initiales $\mathbb{P}(X_0=R)$ et $\mathbb{P}(X_0=B)$, lorsque $n$ tend vers l'infini, $\mathbb{P}(X_n=R)$ tend vers $1/4$ et $\mathbb{P}(X_n=B)$ tend vers $3/4$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex04
+  titre: 'Chaîne à 7 états : classes et calculs'
+  enonce: |
+    On considère une chaîne de Markov $(X_n)_{n\geq 0}$ sur $\{1,\dots,7\}$ de matrice de transition $Q$ donnée par
+    $$Q=\begin{pmatrix}
+    1/2 & 1/4 & 0 & 1/4 & 0 & 0 & 0\\
+    1/2 & 0 & 0 & 0 & 0 & 0 & 1/2\\
+    0 & 0 & 1/8 & 0 & 7/8 & 0 & 0\\
+    1/4 & 0 & 0 & 0 & 0 & 0 & 3/4\\
+    0 & 1/9 & 7/9 & 0 & 0 & 1/9 & 0\\
+    0 & 0 & 0 & 0 & 0 & 1 & 0\\
+    0 & 0 & 0 & 1 & 0 & 0 & 0
+    \end{pmatrix}$$
+    1. Dessiner le graphe de la chaîne de Markov associée en précisant les probabilités de transitions entre les différents états.
+    2. Déterminer les classes d'états récurrents et transitoires.
+    3. La chaîne est-elle irréductible ?
+    4. Calculer $\mathbb{P}_3(X_2=6)$ et $\mathbb{P}_1(X_2=7)$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 1
+    numero: Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex05
+  titre: Mesures invariantes d'une matrice 2x2
+  enonce: |
+    Soient $p,q\in[0,1]$ et $P:=\begin{pmatrix} p & 1-p\\ 1-q & q\end{pmatrix}$. Donner les mesures invariantes. À quelle condition y en a-t-il une unique ?
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 2
+    numero: Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex06
+  titre: 'Trois matrices : récurrence et mesures invariantes'
+  enonce: |
+    Pour chacune des matrices suivantes,
+    - vérifier qu'il s'agit bien d'une matrice de transition d'une chaîne de Markov
+    - représenter graphiquement la chaîne
+    - déterminer l'ensemble des états récurrents et des états transients
+    - déterminer l'ensemble des mesures invariantes.
+
+    1. $$P_1=\begin{pmatrix} 2/5 & 3/5 & 0\\ 1/5 & 1/2 & 3/10\\ 0 & 2/5 & 3/5 \end{pmatrix}$$
+    2. $$P_2=\begin{pmatrix} 1/2 & 0 & 1/2 & 0\\ 1/2 & 0 & 1/2 & 0\\ 1/3 & 0 & 2/3 & 0\\ 0 & 0 & 0 & 1 \end{pmatrix}$$
+    3. $$P_3=\begin{pmatrix} 0 & 1 & 0\\ 0 & 0 & 1\\ 1 & 0 & 0 \end{pmatrix}$$
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 2
+    numero: Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex07
+  titre: Photocopieuse
+  enonce: |
+    Le fonctionnement d'une photocopieuse est décrit de manière très simplifiée par une chaîne de Markov sur un espace d'état $\Omega=\{0,1\}$, $0$ correspondant à l'état hors service et $1$ correspondant à l'état de marche. La matrice de transition est donnée par :
+    $$P=\begin{pmatrix} 0.6 & 0.4\\ 0.02 & 0.98 \end{pmatrix}$$
+    1. On suppose que $\mathbb{P}(X_0=1)=1$. Déterminer $\mathbb{P}(X_1=1)$ et $\mathbb{P}(X_2=1)$.
+    2. Plus généralement, déterminer une équation de récurrence vérifiée par $u_n=\mathbb{P}(X_n=1)$.
+    3. Déterminer la loi limite $\mu_\infty$ de $X_n$ et vérifier qu'il s'agit d'une distribution stationnaire, autrement dit, que $X_{n+1}$ suit la loi $\mu_\infty$ si $X_n$ suit la loi $\mu_\infty$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 2
+    numero: Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex08
+  titre: 'Chaîne irréductible : positivité de la mesure invariante'
+  enonce: |
+    Soit $X=(X_n,\ n\geqslant 0)$ une chaîne de Markov sur un espace d'états fini $S$ de matrice de transition $P$. On note $\mu_n$ la loi de $X_n$.
+    1. Soit $n\geqslant 0$ et $x\in S$ tel que $\mu_n(x)$ soit strictement positive. Soit $y\in S$ tel qu'il existe un chemin de $x$ à $y$. Montrer qu'il existe $p\geqslant 0$ tel que $\mu_{n+p}(y)>0$.
+    2. On suppose que $X$ est irréductible. Soit $\pi$ la mesure de probabilité invariante. Montrer que pour tout $x\in S$, $\pi(x)>0$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 2
+    numero: Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex09
+  titre: Mutation de l'ADN
+  enonce: |
+    L'ADN est composé des quatre acides aminés $A$, $C$, $G$ et $T$. On s'intéresse à l'acide aminé occupant une position particulière dans un gène et on observe son évolution au cours des générations, dans un modèle (très) simplifié où un parent (unique) engendre un enfant (unique). Lorsque le gène est transmis à la génération suivante, une mutation peut avoir lieu, et il y peut y avoir un changement d'acide aminé au niveau de la position observée, ce que l'on modélise par une chaîne de Markov $(X_n,\ n\geqslant 0)$ sur l'espace d'états $S=\{A,C,G,T\}$ et avec la matrice de transition suivante :
+    $$P_\varepsilon=\begin{pmatrix}
+    1-2\varepsilon & \varepsilon & \varepsilon & 0\\
+    \varepsilon & 1-\varepsilon & 0 & 0\\
+    \varepsilon & 0 & 1-\varepsilon & 0\\
+    2\varepsilon & 0 & 0 & 1-2\varepsilon
+    \end{pmatrix}$$
+    1. Quels sont les états récurrents, transients, les classes de récurrence ?
+    2. Quelle est la distribution à très long terme des acides aminés sur la position observée ? Quelle est la vitesse de convergence vers cette distribution ?
+    3. On suppose qu'à l'instant $0$ l'acide aminé est $A$ et que $\varepsilon$ est à peu près égal à $10^{-6}$. Déterminer, avec une approximation raisonnable, la distribution des acides aminés au bout de 1000 générations.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 3
+    numero: Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex10
+  titre: Propagation d'une information
+  enonce: |
+    On considère la propagation d'une information d'un individu $0$ à un individu $n$ via $n-1$ relais. On note $\alpha$ la probabilité que l'information soit fausse à l'individu $k+1$ sachant qu'elle était vraie en $k$ et $\beta$ la probabilité qu'elle soit vraie en $k+1$ alors qu'elle était fausse en $k$.
+    1. Modéliser l'état de l'information à l'aide d'une chaîne de Markov.
+    2. En déduire un moyen de calculer la probabilité que l'information soit encore vraie pour un nombre de pas tendant vers l'infini.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 3
+    numero: Ex 10
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex11
+  titre: Processus de vie et de mort fini
+  enonce: |
+    Soit $0<p<1$. On modélise un processus de vie et de mort fini par une chaîne de Markov à valeurs dans $\{0,\dots,N\}$. Quand il n'y a pas d'individu, il s'en crée un avec probabilité $p$, quand il y en a $N$, l'un d'eux meurt avec probabilité $1-p$. Quand il y en a $k$, $0<k<N$, il y a une naissance avec probabilité $p$ et une mort avec probabilité $1-p$.
+    1. Dessiner le diagramme de la chaîne.
+    2. Déterminer sa matrice de transition.
+    3. Déterminer la mesure invariante et le comportement asymptotique de la chaîne ?
+    4. Quel est le comportement de la chaîne pour $p$ très petit, très proche de $1$ et $p=\frac12$ ?
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 3
+    numero: Ex 11
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex12
+  titre: Trois produits concurrents
+  enonce: |
+    Les consommateurs de trois produits concurrents ($P_1$, $P_2$ et $P_3$) sont répartis en 50% pour $P_1$, 30% pour $P_2$ et 20% pour $P_3$. Après chaque mois, 60% restent fidèles à $P_1$ contre 70% pour $P_2$ et 90% pour $P_3$. Les autres se répartissent entre les deux autres produits de façon équiprobable. On note $X_n$ le produit choisi par un consommateur quelconque au mois $n$.
+    1. On souhaite modéliser la suite $(X_n,\ n\geqslant 0)$ par une chaîne de Markov. Quelles sont les hypothèses implicites d'une telle modélisation ?
+    2. Quelles sont la loi initiale et la matrice de transition de la chaîne de Markov ? Dessiner le diagramme de la chaîne.
+    3. Quelle est la loi de $X_n$ quand $n$ tend vers l'infini ? En moyenne, à quel produit va la préférence du consommateur ?
+    4. Quelle est la vitesse de convergence de la chaîne de Markov vers sa mesure stationnaire ?
+    5. Soit $T_1$ le nombre de mois avant le premier passage par $P_1$ : $T_1=\inf\{n\geqslant 1\mid X_n=P_1\}$. Que vaut $\mathbb{E}[T_1\mid X_0=P_1]$ ?
+    6. Déterminer un système linéaire d'équations entre $\mathbb{E}[T_1\mid X_0=P_1]$, $\mathbb{E}[T_1\mid X_0=P_2]$ et $\mathbb{E}[T_1\mid X_0=P_3]$, et le résoudre. Est-ce cohérent avec la valeur précédente ?
+    7. On suppose que la chaîne de Markov a atteint son régime stationnaire. Donner le nombre de mois moyen pour qu'un consommateur choisisse le produit $P_1$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 3
+    numero: Ex 12
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-td2-ex13
+  titre: Chaîne à 5 états avec matrice à compléter
+  enonce: |
+    Soit $X=(X_n,\ n\geqslant 0)$ une chaîne de Markov sur l'espace d'états $S=\{1,2,3,4,5\}$, décrite par la matrice de transition suivante :
+    $$P=\begin{pmatrix}
+    \frac12 & 0 & 0 & 0 & \\
+    0 & & \frac13 & \frac13 & 0\\
+    0 & \frac14 & & \frac14 & \frac14\\
+    0 & 0 & 0 & & 0\\
+     & 0 & 0 & 0 & \frac13
+    \end{pmatrix}$$
+    1. Compléter la matrice de transition et tracer le graphe de la chaîne de Markov.
+    2. Quels sont les états récurrents ? transients ? les classes de récurrence ? La chaîne de Markov est-elle irréductible ?
+    3. On suppose que $X_0=1$. Montrer que la loi de $X_n$ converge vers une loi invariante $\pi_1$ que l'on déterminera. Déterminer également la vitesse de cette convergence.
+    4. Dans le cas général, déterminer l'ensemble des lois invariantes.
+    5. On note $\mathcal{C}_1=\{1,5\}$, $\mathcal{C}_2=\{2,3\}$ et $\mathcal{C}_3=\{4\}$. On définit, pour $i\in\{1,2,3\}$ et $x\in S$ : $T_i=\inf\{n\geq 0\mid X_n\in\mathcal{C}_i\}$ et $q_x^{(i)}=\mathbb{P}(T_i<+\infty\mid X_0=x)$. Que vaut $q_x^{(1)}$ si $x\in\mathcal{C}_1$ ? si $x\in\mathcal{C}_3$ ?
+    6. Montrer que pour tout $i\in\{1,2,3\}$ et $x\in S\setminus\mathcal{C}_i$ : $q_x^{(i)}=\sum_{y\in S}P(x,y)\,q_y^{(i)}$.
+    7. En déduire $q_x^{(1)}$ pour $x\in\mathcal{C}_2$.
+    8. Puis en déduire $q_x^{(3)}$ pour tout $x\in S$.
+    9. Soit $x\in S$. On suppose $X_0=x$. Déterminer la loi limite de $X_n$ quand $n$ tend vers l'infini.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/td/td2-markov.pdf
+    page: 3
+    numero: Ex 13
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: ok
+- id: mod-par2324-ex01
+  titre: Galton-Watson de Poisson, taille totale de la population
+  enonce: |
+    On considère un processus de Galton-Watson $Z=(Z_n)_{n\geq 0}$ où le nombre de descendants d'un individu suit une loi de Poisson de paramètre $\lambda>0$. Autrement dit :
+    $$Z_0=1 \quad\text{et pour tout } n\geq 0,\quad Z_{n+1}=\sum_{k=1}^{Z_n}X_{n,k}$$
+    où les $X_{n,k}$, $n\geq 0$, $k\geq 1$, sont indépendantes et de loi $\mathcal{P}(\lambda)$. On rappelle que dans ce cas $\mathbb{E}[X_{0,1}]=\mathrm{Var}(X_{0,1})=\lambda$. On note $G_n$ la fonction génératrice de $Z_n$.
+    1. Montrer que $G_1(z)=e^{\lambda(z-1)}$, $z\in[-1,1]$. Déterminer $G_2$, puis en déduire $\mathbb{P}(Z_2=0)$ et $\mathbb{P}(Z_2=1)$.
+    2. Donner $\mathbb{E}[Z_n]$ et $\mathrm{Var}(Z_n)$ pour tout $n\geq 1$. On fera référence à un résultat de cours.
+    3. On note $E$ l'événement « La population finit par s'éteindre » et $p=\mathbb{P}(E)$. Quelle équation est vérifiée par $p$ ?
+    4. À quelle condition $p$ est-elle égale à $1$ ? Montrer que si $\lambda>1$, alors $p\geq \dfrac{1}{e^\lambda-\lambda}$. Indication : On rappelle que $e^x\geq 1+x$ pour tout $x\in\mathbb{R}$.
+    5. On considère $T=\sum_{k=0}^{+\infty}Z_k$ qui représente la taille totale de la population. Montrer que si $\lambda<1$, alors $\mathbb{E}[T]=\dfrac{1}{1-\lambda}$. Que peut-on dire si $\lambda=1$ ?
+    6. Soit $N\geq 1$. On considère $Z^{(1)},\dots,Z^{(N)}$ des copies indépendantes du processus $Z$, et on note $Z'$ le processus défini par $Z'_n=Z^{(1)}_n+\cdots+Z^{(N)}_n$ pour tout $n\geq 0$. On note $H_n$ la fonction génératrice de $Z'_n$. Montrer que $H_n=(G_1^{\circ n})^N$.
+    7. En déduire la probabilité d'extinction du processus $Z'$, en fonction de $p$.
+    8. On souhaite déterminer la fonction génératrice $\varphi_T$ de $T$.
+       - (a) On note $T'=\sum_{k=0}^{+\infty}Z'_k$ la taille totale de la population du processus $Z'$. Montrer que $\varphi_{T'}=(\varphi_T)^N$.
+       - (b) Expliquer pourquoi, conditionnellement à $Z_1=N$, $T$ a même loi que $1+T'$. On ne demande pas de justification complètement rigoureuse.
+       - (c) En déduire que $\varphi_T$ vérifie l'équation : $\forall s\in[-1,1],\ \varphi_T(s)=s\,G_1(\varphi_T(s))$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/annales/partiel-2023-24.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: modelisation/annales/partiel-2023-24-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mod-par2324-ex02
+  titre: Chaîne de Markov à 6 états, classes et loi de X_n
+  enonce: |
+    Soit $X=(X_n)_{n\geq 0}$ une chaîne de Markov sur $E=\{1,2,3,4,5,6\}$ de matrice de transition $P$ donnée par
+    $$P=\begin{pmatrix}
+    0 & 0.5 & 0 & 0.5 & 0 & 0\\
+    0.2 & 0.4 & 0 & 0 & 0.2 & 0.2\\
+    0.1 & 0.2 & 0 & 0 & 0.7 & 0\\
+    0 & 0 & 0 & 1 & 0 & 0\\
+    0 & 0 & 0 & 0 & 0.4 & 0.6\\
+    0 & 0 & 0 & 0 & 0.6 & 0.4
+    \end{pmatrix}$$
+    1. Dessiner le graphe de transition de la matrice $P$.
+    2. Dans cette question, on suppose que $X_0$ est de loi uniforme sur $E$. Calculer $\mathbb{P}(X_0=1,X_1=2,X_3=2,X_4=5)$.
+    3. L'état 3 est-il accessible depuis l'état 2 ?
+    4. La matrice $P$ est-elle irréductible ?
+    5. Donner les états récurrents, les états transitoires et les classes récurrentes de $P$. On justifiera précisément la réponse.
+    6. Dans cette question, on suppose que $X_0=5$ avec probabilité 1.
+       - (a) Justifier qu'avec probabilité 1, $X_n\in\{5,6\}$ pour tout $n\in\mathbb{N}$.
+       - (b) On considère la matrice $Q=\begin{pmatrix} 0.4 & 0.6\\ 0.6 & 0.4\end{pmatrix}$. Diagonaliser $Q$ puis calculer $Q^n$ pour tout $n\in\mathbb{N}$.
+       - (c) Donner $\mathbb{P}(X_n=5)$ pour tout $n\in\mathbb{N}$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/annales/partiel-2023-24.pdf
+    page: 2
+    numero: Ex 2
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: modelisation/annales/partiel-2023-24-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mod-par2526-ex01
+  titre: Chaîne à 7 états avec paramètre alpha
+  enonce: |
+    On considère la matrice $P$ de taille $7\times 7$ suivante :
+    $$P=\begin{pmatrix}
+    1/5 & 0 & 2/5 & \alpha & 0 & 0 & 0\\
+    0 & 8/9 & 0 & 0 & 1/9 & 0 & 0\\
+    1/2 & 0 & 0 & 0 & 0 & 1/4 & 1/4\\
+    0 & 0 & 0 & 0 & 0 & 0 & 1\\
+    0 & 1/8 & 0 & 0 & 0 & 0 & 7/8\\
+    0 & 0 & 0 & 0 & 0 & 1 & 0\\
+    0 & 0 & 0 & 0 & 8/9 & 0 & 1/9
+    \end{pmatrix},$$
+    où $\alpha\geq 0$.
+    1. Déterminer $\alpha$ de sorte que $P$ soit une matrice stochastique.
+    2. Soit $(X_n)_{n\geq 0}$ une chaîne de Markov associée à la matrice de transition $P$, pour la valeur de $\alpha$ trouvée à la question précédente. On note $E=\{1,2,\dots,7\}$ l'ensemble des états. Dessiner, de façon aussi lisible que possible, le graphe de $(X_n)_{n\geq 0}$ en précisant les probabilités de transition entre les différents états.
+    3. Déterminer les classes de récurrence et les états transitoires.
+    4. La chaîne est-elle irréductible ?
+    5. Calculer $\mathbb{P}_1(X_2=3)$, $\mathbb{P}_5(X_2=5)$ et $\mathbb{P}(X_5=4\mid X_3=7)$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/annales/partiel-2025-26.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: modelisation/annales/partiel-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mod-par2526-ex02
+  titre: 'Galton-Watson géométrique : fonction génératrice de Z_n et extinction'
+  enonce: |
+    Soit $(X_{n,k})_{n\geqslant 0,k\geqslant 1}$ une famille de variables aléatoires indépendantes suivant toutes une loi géométrique sur $\mathbb{N}$ de paramètre $p\in\,]0,1[$ :
+    $$\forall l\geqslant 0,\quad \mathbb{P}(X_{n,k}=l)=p(1-p)^l.$$
+    On considère le processus de Galton-Watson $Z=(Z_n)_{n\geqslant 0}$ défini par :
+    $$Z_0=1 \quad\text{et}\quad Z_{n+1}=\sum_{k=1}^{Z_n}X_{n,k}\quad\text{pour tout } n\geqslant 0.$$
+    On note $\varphi$ la fonction génératrice de $X_{0,1}$ et $m$ son espérance.
+    1. (a) Montrer que $\varphi(s)=\dfrac{p}{1-(1-p)s}$, $s\in[0,1]$. En déduire que $m=\dfrac{1-p}{p}$. Pour quelles valeurs de $p$ a-t-on $m\leq 1$ ?
+       - (b) Déterminer en fonction de $p$ la probabilité d'extinction, que l'on notera $\alpha$.
+       - (c) Soit $T$ le temps d'extinction du processus : $T=\inf\{n\geqslant 0\mid Z_n=0\}$ où l'on pose $\inf\emptyset=+\infty$. Donner un équivalent simple de $\mathbb{P}(T>n)$ quand $n$ tend vers l'infini, dans le cas où $p\in\,]0.5,1[$. On fera référence à un résultat de cours.
+       - (d) Que peut-on dire de $Z_n$ quand $n$ tend vers l'infini, dans le cas où $p\in\,]0,0.5[$ ? On fera référence à un résultat de cours.
+    2. Dans cette question, on suppose que $p\neq\frac12$. Le but de cette question est de calculer la fonction génératrice $G_n$ de $Z_n$. On considère la fonction auxiliaire $u_n(s)=\dfrac{1}{1-G_n(s)}$, $s\in[0,1[$. En particulier $u_0(s)=\dfrac{1}{1-s}$, $s\in[0,1[$.
+       - (a) Montrer que, pour tout $n\geq 0$ et tout $s\in[0,1[$, $u_{n+1}(s)=\dfrac{1}{m}u_n(s)+1$.
+       - (b) En déduire que $u_n(s)=\beta+\dfrac{1}{m^n}(u_0(s)-\beta)$, $s\in[0,1[$, avec $\beta=\dfrac{1-p}{1-2p}$.
+       - (c) Conclure que $G_n$ est donnée par
+         $$\forall n\geq 0,\ \forall s\in[0,1],\quad G_n(s)=\frac{p\,m^n(1-s)+(1-p)s-p}{(1-p)\,m^n(1-s)+(1-p)s-p}.$$
+    3. Dans cette question, on suppose toujours que $p\neq\frac12$.
+       - (a) Déduire de la question précédente que $\mathbb{P}(Z_n=0)=\dfrac{m^{n}-1}{m^{n+1}-1}$ et retrouver la valeur de la probabilité d'extinction dans les deux cas $p<1/2$ et $p>1/2$.
+       - (b) Déterminer $\mathbb{P}(T>n)$ et en donner un équivalent explicite en $+\infty$, quand $p$ appartient à $]0.5,1[$.
+       - (c) Déterminer la loi du temps d'extinction $T$, quand $p$ appartient à $]0.5,1[$.
+    4. Dans cette question, on suppose que $p=1/2$. En s'inspirant des questions précédentes, déterminer $\mathbb{P}(T>n)$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/annales/partiel-2025-26.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: partiel
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: modelisation/annales/partiel-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mod-exa2324-ex01
+  titre: Galton-Watson de loi uniforme sur {0,1,3}
+  enonce: |
+    On considère un processus de Galton-Watson $Z=(Z_n)_{n\in\mathbb{N}}$ défini par $Z_0=1$ et $Z_{n+1}=\sum_{k=1}^{Z_n}X_{k,n}$ pour tout $n\geq 0$, où les variables $X_{k,n}$, $k\geq 1$, $n\geq 0$, sont indépendantes et de même loi sur $\{0,1,3\}$ donnée par
+    $$\mathbb{P}(X_{k,n}=0)=\mathbb{P}(X_{k,n}=1)=\mathbb{P}(X_{k,n}=3)=1/3.$$
+    1. Donner $\mathbb{E}[Z_n]$ pour tout $n\geq 0$.
+    2. Déterminer la fonction génératrice des variables $X_{k,n}$ et en déduire la probabilité d'extinction.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/annales/exam-2023-24.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: modelisation/annales/exam-2023-24-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mod-exa2324-ex02
+  titre: Chaîne à 4 états, lois invariantes et probabilités d'absorption
+  enonce: |
+    Soit $X=(X_n,\ n\geq 0)$ une chaîne de Markov sur $E=\{1,2,3,4\}$, de matrice de transition :
+    $$P=\begin{pmatrix}
+    1 & 0 & 0 & 0\\
+    0.1 & 0 & 0.9 & 0\\
+    0 & 0.4 & 0 & 0.6\\
+    0 & 0 & 0 & 1
+    \end{pmatrix}$$
+    1. Dessiner le graphe de la chaîne de Markov. Quels sont les états récurrents ? absorbants ? transients ? les classes de récurrence ?
+    2. Déterminer l'ensemble des lois invariantes. Expliquer, sans calcul, le comportement asymptotique de la chaîne de Markov.
+    3. On note $a_2$ (resp. $a_3$) la probabilité que la chaîne de Markov issue de $2$ (resp. $3$) arrive en $4$ : $a_i=\mathbb{P}(\exists n\geq 1,\ X_n=4\mid X_0=i)$. Déterminer un système de deux équations linéaires admettant $a_2$ et $a_3$ pour inconnues, puis le résoudre.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/annales/exam-2023-24.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: modelisation/annales/exam-2023-24-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mod-exa2324-ex03
+  titre: Commandes en ligne et processus de Poisson
+  enonce: |
+    On modélise le nombre de commandes passées lors d'une journée sur un site de vente en ligne par un processus de Poisson $N=(N_t)_{t\in[0,24]}$, d'intensité $\lambda>0$, l'unité de temps étant l'heure. On estime qu'il y a en moyenne $2$ commandes par heure.
+    1. Que vaut $\lambda$ ?
+    2. Quelle est la probabilité qu'il n'y ait aucune commande de toute la journée ?
+    3. Quelle est la probabilité qu'il y ait exactement une commande dans chaque intervalle $[k,k+1[$, $k\in\{0,1,\dots,23\}$ ?
+    4. Quelle est la probabilité qu'il y ait autant de commandes avant et après midi ? On donnera la réponse sous la forme de la somme d'une série convergente.
+    5. Sachant qu'il y a eu deux commandes entre 0h et 1h, quelle est la durée moyenne séparant ces deux commandes ?
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/annales/exam-2023-24.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: modelisation/annales/exam-2023-24-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mod-exa2324-ex04
+  titre: Poisson et œufs de tortues
+  enonce: |
+    On considère deux processus de Poisson $N=(N_t)_{t\geq 0}$ et $N'=(N'_t)_{t\geq 0}$ indépendants d'intensités respectives $\lambda>0$ et $\mu>0$. On note $(T'_n)_{n\geq 1}$ les temps de saut du processus $N'$. On suppose que $N$ représente le nombre d'œufs pondus par une colonie de tortues au cours du temps et que $(T'_n)_{n\geq 1}$ représente les instants aléatoires où des scientifiques viennent compter les œufs en question. On pose, pour tout $n\geq 1$, $M_n=N_{T'_n}-N_{T'_{n-1}}$ avec $T'_0=0$.
+    1. Que représente $M_n$ ? Quelles sont les valeurs possibles pour $M_n$ ?
+    2. Montrer que pour tout $\alpha>0$ et tout $k\geq 0$, $\displaystyle\int_0^{+\infty}x^ke^{-\alpha x}\,dx=\frac{k!}{\alpha^{k+1}}$. On pourra procéder par récurrence.
+    3. En déduire $\mathbb{P}(M_1=k)$ pour tout $k\geq 0$.
+    4. Montrer que les variables $M_n$ ont toutes la même loi.
+    5. Justifier que les variables $(M_n)_{n\geq 1}$ sont indépendantes. Pour cela on se contentera de montrer que $M_1$ et $M_2$ sont indépendantes.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/annales/exam-2023-24.pdf
+    page: 2
+    numero: Ex 4
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2023-24
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: modelisation/annales/exam-2023-24-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mod-exa2526-ex01
+  titre: Galton-Watson de loi uniforme sur {0,1,2,3}
+  enonce: |
+    On considère un processus de Galton-Watson $Z=(Z_n)_{n\in\mathbb{N}}$ défini par $Z_0=1$ et $Z_{n+1}=\sum_{k=1}^{Z_n}X_{k,n}$ pour tout $n\geq 0$, où les variables $X_{k,n}$, $k\geq 1$, $n\geq 0$, sont indépendantes et de même loi sur $\{0,1,2,3\}$ donnée par
+    $$\mathbb{P}(X_{k,n}=0)=\mathbb{P}(X_{k,n}=1)=\mathbb{P}(X_{k,n}=2)=\mathbb{P}(X_{k,n}=3)=1/4.$$
+    1. Donner $\mathbb{E}[Z_n]$ pour tout $n\geq 0$.
+    2. Déterminer la fonction génératrice des variables $X_{k,n}$ et en déduire la probabilité d'extinction.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/annales/exam-2025-26.pdf
+    page: 1
+    numero: Ex 1
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: modelisation/annales/exam-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mod-exa2526-ex02
+  titre: Modèle des puces (Ehrenfest)
+  enonce: |
+    Deux chiens $A$ et $B$ dorment côte à côte. Des puces passent d'un chien à l'autre au cours du temps selon le modèle suivant. On suppose qu'il y a au total $N$ puces. À chaque instant, on tire uniformément au hasard une puce et celle-ci saute sur le chien d'à côté. On note $X_n$ le nombre de puces présentes sur le chien $A$ à l'instant $n$, et on suppose que $X_0=N$ p.s.
+    1. Montrer que $X=(X_n)_{n\in\mathbb{N}}$ est une chaîne de Markov sur $E=\{0,1,\dots,N\}$ de noyau de transition défini pour tout $(k,j)\in\{0,\dots,N\}^2$ par
+       $$P(k,j)=\begin{cases}\dfrac{N-k}{N} & \text{si } j=k+1 \text{ et } 0\leq k\leq N-1,\\[2mm] \dfrac{k}{N} & \text{si } j=k-1 \text{ et } 1\leq k\leq N,\\[2mm] 0 & \text{sinon.}\end{cases}$$
+    2. Dessiner le graphe de transition de la chaîne pour $N=3$.
+    3. Justifier que $P$ est irréductible.
+    4. On dit qu'une mesure de probabilité $\pi$ est réversible pour un noyau de transition $Q$ sur un espace $F$ fini si $\pi(x)Q(x,y)=\pi(y)Q(y,x)$ pour tout $x,y\in F$.
+       - (a) Montrer que si $\pi$ est une mesure de probabilité réversible pour $Q$, alors elle est invariante pour $Q$.
+       - (b) Vérifier que la loi $\pi=\mathcal{B}(N,1/2)$ est une mesure de probabilité réversible pour $P$.
+    5. On note $T=\inf\{n\geq 1: X_n=N\}$. Que représente $T$ ? Donner $\mathbb{E}[T]$.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/annales/exam-2025-26.pdf
+    page: 1
+    numero: Ex 2
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: modelisation/annales/exam-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok
+- id: mod-exa2526-ex03
+  titre: Âge et temps résiduel d'un processus de Poisson
+  enonce: |
+    Soit $N=(N_t)_{t\geq 0}$ un processus de Poisson d'intensité $\lambda>0$ et $(T_n)_{n\geq 1}$ le processus ponctuel associé. On fixe un instant $t>0$.
+    1. Montrer que $A_t:=t-T_{N_t}$ a même loi que $\min(X,t)$ où $X$ suit une loi exponentielle de paramètre $\lambda$. Indication : On remarquera que $t-T_{N_t}>s$ si et seulement si $N_t=N_{t-s}$.
+    2. Montrer que $B_t:=T_{N_t+1}-t$ suit la loi exponentielle de paramètre $\lambda$. Indication : On remarquera que $B_t>s$ si et seulement si $N_t=N_{t+s}$.
+    3. Calculer $\mathbb{E}[A_t+B_t]$.
+    4. Justifier que les variables $A_t$ et $B_t$ sont indépendantes.
+  sources:
+  - etab: paris-cite
+    fichier: modelisation/annales/exam-2025-26.pdf
+    page: 1
+    numero: Ex 3
+  annale_prioritaire: true
+  type_source: annale
+  annale:
+    nature: exam
+    annee: 2025-26
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur: null
+  corrige:
+    statut: officiel
+    ref:
+      fichier: modelisation/annales/exam-2025-26-corrige.pdf
+      page: null
+  qualite_extraction: ok

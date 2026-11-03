@@ -1,0 +1,4374 @@
+- id: pro-uvsq-chap-1-ex-1
+  titre: Lancer 3 dés
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Dénombrement, événements, cardinal Ω
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-2
+  titre: Anagrammes ROYAUME/RIRE
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Arrangements, permutations
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-3
+  titre: 10 tomes encyclopédie
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Permutations avec contraintes
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-4
+  titre: Digicode
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Probabilité uniforme, arrangements
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-6
+  titre: Dé truqué
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Probabilité proportionnelle, normalisation
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-8
+  titre: Urne 3 couleurs
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Tirage sans/avec remise
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-9
+  titre: Formule du Crible
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Inclusion-exclusion, récurrence
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-5
+  titre: Belotte (32 cartes)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Combinaisons, probabilités classiques
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-7
+  titre: Paradoxe des anniversaires
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Complémentaire, produit de probas
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-10
+  titre: Main de poker
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 10
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Combinatoire avancée
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-11
+  titre: Tribu sur R
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 11
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Tribu, σ-algèbre
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-13
+  titre: Approximation de P(∪An)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 13
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Continuité de probabilité
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-16
+  titre: Jeu de pièces (10 tours)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 16
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Loi de probabilité, espérance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-12
+  titre: Tribu dénombrable
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 12
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Tribu, σ-additivité
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-14
+  titre: lim sup d'événements
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 14
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Borel-Cantelli, limsup
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-15
+  titre: Evénements indép. de proba 1
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 15
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Indépendance, prob 0 ou 1
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-ex-17
+  titre: Existence espace proba discret
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Ex 17
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Construction d'un espace
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-exam-24-25-ex1
+  titre: Définitions (VA, loi, espérance…)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Exam 24-25 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★
+    mots_cles: Cours pur, à savoir par cœur
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-1-exam-23-24-ex5
+  titre: Urne F/P + loi géométrique mélangée
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces de probabilité / Exam 23-24 Ex5
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Prob totales, Bayes, loi géométrique
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-1
+  titre: Familles 2 enfants
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Prob conditionnelle, symétrie
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-2
+  titre: 3 usines défectueuses
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Prob totales, Bayes
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-3
+  titre: Vaccination et maladie
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Prob totales, Bayes
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-5
+  titre: Indépendance familles 3/4 enf.
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Indépendance vs incompatibilité
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-7
+  titre: Indépendance 2à2 vs mutuelle
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Contre-exemple indépendance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-4
+  titre: Parapluie (8 étages)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★
+    mots_cles: Bayes, prob conditionnelle
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-6
+  titre: Incompatibles ≠ indépendants
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Indépendance, propriétés
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-8
+  titre: Capteurs avion
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Indépendance, séries géométriques
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-9
+  titre: Génétique (yeux bleus)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Bayes appliqué, arbre
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-10
+  titre: Transmission d'info
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 10
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Récurrence, prob conditionnelle
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-11
+  titre: Cartes faces rouges/noires
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 11
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★
+    mots_cles: Bayes, piège classique
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-12
+  titre: Choix de dé α ou β
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 12
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Bayes, limite n→∞
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-17
+  titre: Densité gaussienne
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 17
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Densité, intégrale gaussienne
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-18
+  titre: Densité 2D sur D
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 18
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Densité 2D, intégrale double
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-13
+  titre: Urne de Pólya
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 13
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Échangeabilité, Bayes itéré
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-14
+  titre: Intersection d'événements
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 14
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Majorations de prob
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-15
+  titre: Erreur judiciaire
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 15
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★
+    mots_cles: Bayes, probabilités rares
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-16
+  titre: Poisson + sexe des enfants
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 16
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★
+    mots_cles: Poisson, prob totales
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-ex-19
+  titre: Distance variation totale
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Ex 19
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★★
+    mots_cles: Analyse fonctionnelle, mesure
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-2-exam-24-25-ex5
+  titre: Urne F/P, loi géométrique mélangée
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Prob. conditionnelles / Exam 24-25 Ex5
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Prob totales, Bayes, espérance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-1
+  titre: Somme de deux dés
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Loi discrète, table de proba, min/max
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-3
+  titre: Maladie (loi binomiale)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Loi B(n,p)
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-4
+  titre: Photocopieuse (géom./NB)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Loi géométrique, binomiale négative
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-5
+  titre: Sans mémoire géométrique
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Propriété sans mémoire, récurrence
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-7
+  titre: Densité polynomiale f=c(1-x²)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Densité, FdR, calcul de proba
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-8
+  titre: Loi exponentielle E(λ)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Densité exp, sans mémoire, FdR
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-13
+  titre: E et Var géométrique
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 13
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: E(X), Var(X), fonction génératrice
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-14
+  titre: E et Var Poisson, loi X+Y
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 14
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Stabilité Poisson, conditionnement
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-2
+  titre: Maximum de n tirages
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Loi du maximum, FdR
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-6
+  titre: G(cx) est une FdR ?
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Fonction de répartition, propriétés
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-9
+  titre: Poisson + éclosion d'œufs
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Poisson, mélange
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-10
+  titre: Min(X,Y) loi discrète
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 10
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Minimum, probabilités jointes
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-11
+  titre: Loi géom → nb de filles
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 11
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★
+    mots_cles: Loi d'une transformation
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-12
+  titre: Loi vs égalité p.s.
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 12
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Distinction loi / égalité p.s.
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-15
+  titre: Même loi / contre-exemples
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 15
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Contre-exemples
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ex-16
+  titre: Médiane d'une VA réelle
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Ex 16
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★
+    mots_cles: Médiane, FdR
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-exam-24-25-ex2
+  titre: U~unif[1,3], V=exp(1+U), densité
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Exam 24-25 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Changement de variable, FdR
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-exam-23-24-ex3
+  titre: X~exp(λ), Y=2/(1+X), densité
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / Exam 23-24 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Changement de variable, FdR
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-3-ccr-2024-ex2
+  titre: Densité Pareto, moments, partie ent.
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Variables aléatoires ( / CCR 2024 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: FdR, moments, loi de ⌊T⌋
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-2
+  titre: E et Var densité poly + exp
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Calcul E/Var
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-4
+  titre: U~unif, Y=-ln(U)/λ
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Changement de variable, loi exp
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-9
+  titre: Loi normale, transformations
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: N(m,σ²), σX+m, |X|, X⁴
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-11
+  titre: Bienaymé-Tchebychev
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 11
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Inégalité BT, minoration de proba
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-1
+  titre: E(X) = Σ P(X≥n)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Espérance, série
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-3
+  titre: Caractérisation loi exp
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Sans mémoire → exponentielle
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-5
+  titre: Triangle équilatéral
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★
+    mots_cles: Proba géométrique, uniforme
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-6
+  titre: Variable mixte (X+=max(X,0))
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Loi mixte, FdR
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-8
+  titre: Loi Gamma
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Γ(a,λ), E/Var
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-10
+  titre: Loi log-normale
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 10
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Y=e^X, densité, espérance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-12
+  titre: Processus Poisson (1er arr.)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 12
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Poisson/expo, {X>t}={Nt=0}
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-13
+  titre: tan(U~unif[-π/2,π/2])
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 13
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Changement de variable, Cauchy
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-14
+  titre: Transformations de X~E(λ)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 14
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: 1/X, ln X, |X-1|, FdR
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-18
+  titre: Min de n uniformes Zn=nLn
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 18
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Conv en loi, stat d'ordre
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-19
+  titre: Processus de Poisson complet
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 19
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Sn~Gamma, Nt~Poisson
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-7
+  titre: Loi de Cauchy
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Cauchy, moments inexistants
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-15
+  titre: VA symétrique, covariance
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 15
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Symétrie, covariance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-16
+  titre: Simulation (inverse FdR)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 16
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Inverse généralisée
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ex-17
+  titre: Min de n composants → 0
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Ex 17
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Statistique d'ordre, limite
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-exam-24-25-ex2
+  titre: V=exp(1+U), densité
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / Exam 24-25 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Changement de variable, FdR
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-4-ccr-2024-ex2
+  titre: Densité Pareto, moment, ⌊T⌋
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Espérance, Variance, D / CCR 2024 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: FdR, moments
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-1
+  titre: Densité jointe, marginales
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Marginalisation, indépendance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-2
+  titre: Densité exp 2D
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Marginalisation, P(X<Y)
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-4
+  titre: Loi jointe discrète Poisson
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Marginalisation discrète
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-7
+  titre: U=X+Y, V=X/(X+Y), jacobien
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Changement de variable 2D, jacobien
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-9
+  titre: Cov=0 mais non indépendant
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Contre-exemple covariance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-10
+  titre: E((X+Y)²) normales indép.
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 10
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★
+    mots_cles: Linéarité espérance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-3
+  titre: Critère non-indépendance
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Critère f≠fX·fY
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-5
+  titre: Géométrique 2D, min, somme
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: P(X=Y), loi de X+Y, min
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-6
+  titre: Densité domaine angulaire
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Jacobien, changement de var
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-8
+  titre: Max et Min de n VA iid
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Stat d'ordre, FdR max/min
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-13
+  titre: X1/X2 suit loi de Cauchy
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 13
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Ratio de normales, Cauchy
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-14
+  titre: Densité |y|≤x
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 14
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Jacobien, valeur absolue
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-15
+  titre: Densité sur demi-plan
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 15
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Domaine complexe, indépendance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-11
+  titre: U=X1X2, V=X1/X2
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 11
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Jacobien 2D
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-12
+  titre: Mélange gaussien N aléatoire
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 12
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Conditionnement, loi marginale
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ex-16
+  titre: Somme aléatoire (assurance)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Ex 16
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: E(S) et Var(S) avec N aléatoire
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-exam-24-25-ex3
+  titre: f=cx⁻²y⁻², marginales, indép.
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Exam 24-25 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Densité jointe, marginalisation
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-exam-24-25-ex4
+  titre: fXY=3y sur D, chgt (Y-X,Y+X+1)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Exam 24-25 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Changement de variable 2D
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-exam-23-24-ex4
+  titre: f=cx² sur [-x,x], indépendance
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Exam 23-24 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Densité jointe
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-exam-23-24-ex5
+  titre: densité 2u, loi de (S,T)=(U+V,U-V)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Exam 23-24 Ex5
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Changement de variable 2D
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-ccr-2024-ex1
+  titre: 4e^{-2x-2y}, S=X+Y, T=X/(X+Y)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / CCR 2024 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Jacobien, Beta
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-5-exam-cc1-2022
+  titre: Fontion muette
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Vecteurs aléatoires / Exam CC1 2022
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: '***'
+    mots_cles: f
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-6-ex-1
+  titre: FG binomiale, Bernoulli
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 6 - Fonct. génératrices &  / Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Fonction génératrice, B(n,p), E/Var
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-6-ex-3
+  titre: Propriétés de la FC
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 6 - Fonct. génératrices &  / Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: FC de aX+b, symétrie, FC réelle
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-6-ex-4
+  titre: Calcul FC (6 lois)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 6 - Fonct. génératrices &  / Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: 'FC: Bernoulli, uniforme, Laplace, Cauchy, Gamma, N'
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-6-ex-2
+  titre: FG d'une somme aléatoire
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 6 - Fonct. génératrices &  / Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Composition FG, mélange Poisson-Bernoulli
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-6-ex-5
+  titre: FC loi triangulaire
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 6 - Fonct. génératrices &  / Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: FC de U+V, conv en loi
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-6-ex-6
+  titre: FC Cauchy, stabilité
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 6 - Fonct. génératrices &  / Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Stabilité de Cauchy
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-6-exam-24-25-ex6
+  titre: FC de unif[a,b]
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 6 - Fonct. génératrices &  / Exam 24-25 Ex6
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Calcul de FC
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-6-exam-23-24-ex6
+  titre: FC Xn=±1/2^n, produit, loi limite
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 6 - Fonct. génératrices &  / Exam 23-24 Ex6
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: FC, convergence en loi
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-1
+  titre: Types de convergence
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Conv p.s., L1, L2, en proba
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-4
+  titre: LFGN applications
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Loi forte grands nombres
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-7
+  titre: Max/min de n uniformes
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: FdR Zn, conv en loi, loi E(1)
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-9
+  titre: TCL pour Poisson
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: TCL, loi de Sn
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-10
+  titre: Pièce de monnaie, BT + TCL
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 10
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: BT vs TCL, n₀ suffisant
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-12
+  titre: Composition + Slutsky
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 12
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: g(Xn)→g(X), Slutsky
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-18
+  titre: TCL restaurateur 1200 pers.
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 18
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Application directe TCL
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-2
+  titre: LFGN pour Yn=XnXn+1
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Covariance, LFGN non-iid
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-3
+  titre: Continuité et convergences
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★★
+    mots_cles: Conv p.s. → conv de f(Xn)
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-5
+  titre: Produit/ratio de moyennes
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: LFGN + continuité
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-8
+  titre: B(n,pn) → Poisson(λ)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Conv en loi, critère discret
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-15
+  titre: Bernoulli → exponentielle
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 15
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Géom → expo, conv en loi
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-6
+  titre: f(Sn/n), somme de Poisson
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: LFGN + convergence dominée
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-11
+  titre: 'Cauchy: Sn/√n, Sn/n, Sn/n²'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 11
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: FC Cauchy, convergence en loi
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-13
+  titre: Preuve de Slutsky
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 13
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: FC, preuve rigoureuse
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-14
+  titre: Mesures empiriques → uniforme
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 14
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★
+    mots_cles: Conv en loi, FdR
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-16
+  titre: Convergence sur cercle
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 16
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Conv sur R², cas dégénéré
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ex-17
+  titre: Loi forte Bernoulli (singe)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Ex 17
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★
+    mots_cles: Borel-Cantelli
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-exam-24-25-ex6
+  titre: Sn/n→0 p.s., Sn/√n→N via TCL
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Exam 24-25 Ex6
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: LFGN + TCL, tous modes conv
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-exam-23-24-ex2
+  titre: Σ Poisson, TCL + conv p.s. ratio
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / Exam 23-24 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: TCL + LFGN + ratio
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ccr-2024-ex3
+  titre: Yn→2 en proba mais pas L1
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / CCR 2024 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Distinguer modes de convergence
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-7-ds3-2024-ex2
+  titre: Wn LFGN exp, TCL, min
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 7 - Convergences, LGN, TCL / DS3 2024 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: LFGN, Slutsky, conv en loi
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-ex-1
+  titre: VG centré 3×3, marginalisation
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: VG, loi marginale, blocs indép.
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-ex-2
+  titre: Somme de N(0,1), VG, FC
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: VG, esp/cov, blocs indép, FC
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-ex-3
+  titre: N(0,1) × signe ε
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: VG ou non, Cov vs indép
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-ex-4
+  titre: Couple gaussien corrélé (ρ)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Densité si det≠0, indépendance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-ex-5
+  titre: Moyenne & variance empiriques
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★★
+    mots_cles: X̄n et S²n indép., loi χ²
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-ex-6
+  titre: VG centré 3D, indép. T⊥U
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Combinaison linéaire, orthogonalité
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-ex-8
+  titre: Y=X si |X|<1, -X sinon
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: VG ou non, loi de Y
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-ex-7
+  titre: Indép. sommes de normales
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Orthogonalité dans un sous-espace
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-ex-9
+  titre: Covariance depuis indépendance
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Trouver Γ depuis combinaisons
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-ex-10
+  titre: Densité sur R²₊∪R²₋
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Ex 10
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: VG ou non, densité particulière
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-exam-24-25-ex7
+  titre: VG 5D, blocs, densité, FC
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Exam 24-25 Ex7
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: VG, blocs, combinaisons, densité
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-exam-23-24-ex7
+  titre: VG 4D, blocs 2+2, loi, densité
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / Exam 23-24 Ex7
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: VG, tous les outils
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-8-ds3-2024-ex1
+  titre: VG 3D, densité, indép. aX1+X2
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 8 - Vecteurs gaussiens / DS3 2024 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: VG classique
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-1
+  titre: Estimateurs, biais, RQ
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Biais, RQ, comparaison estimateurs
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-2
+  titre: Variance empirique, loi χ²
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: S²n, Vn, biais, RQ, chi-deux
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-3
+  titre: EMM et EMV pour U[0,θ]
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: EMM, MV, consistance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-4
+  titre: EMM + EMV, loi de Pareto
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: EMM, EMV, Jensen, consistance
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-9
+  titre: IC pour µ et σ² (n=15)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: IC normal, Student, chi-deux
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-10
+  titre: IC asymptotique pour m
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 10
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: TCL, Slutsky, IC asymptotique
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-11
+  titre: IC pour proportion p
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 11
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: BT + TCL, IC pour p
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-5
+  titre: EMV loi discrète
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: EMV discret, biais, RQ
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-6
+  titre: EMM/EMV loi unif symétrique
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: EMV densité symétrique
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-7
+  titre: EMV via ln(1-Xi)~Exp
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: EMV, biais, changement de var
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-13
+  titre: IC depuis Tn=max
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 13
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Conv en loi de n(θ-Tn)/θ
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-14
+  titre: IC via Slutsky
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 14
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Slutsky, IC asymptotique
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-8
+  titre: EMM selon Θ (Pareto 2)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★
+    mots_cles: EMM avec existence conditionnelle
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-ex-12
+  titre: Capture-recapture
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Ex 12
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★
+    mots_cles: IC pour proportion puis pour N
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-exam-24-25-ex8
+  titre: EMM + EMV densité asymétrique
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Exam 24-25 Ex8
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: EMM, EMV, biais, RQ
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-exam-23-24-ex8
+  titre: EMM + EMV f=2/θ(1-x/θ)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / Exam 23-24 Ex8
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: EMM, EMV, biais, RQ
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-td9-ex9
+  titre: IC pour µ et σ² (données num.)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / TD9 Ex9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: IC normal, calcul numérique
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: pro-uvsq-chap-9-td9-ex11-4
+  titre: IC BT et TCL pour p (n=600)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 9 - Statistiques & IC / TD9 Ex11-4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Comparaison IC
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire

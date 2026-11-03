@@ -1,0 +1,2214 @@
+- id: mes-uvsq-chap-1-ex-1
+  titre: Montrer qu'une famille est une tribu (3 axiomes)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex 1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Tribu, axiomes, complémentaire, union dénombrable
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-ex-2
+  titre: Tribu des parties finies ou cofinies
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex 2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Tribu, parties finies, contre-exemple
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-ex-7
+  titre: Tribu des dénombrables + mesure associée
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex 7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Tribu, sigma-additivité, mesure, dénombrable
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-ex-8
+  titre: Tribu trace TY = {A∩Y | A∈T}
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex 8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Tribu trace, restriction
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-ex-cc1-23-ex4
+  titre: Mesure complétée M₀ = {A∪E | E⊂N négligeable}
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex CC1-23 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Mesure complète, ensemble négligeable, tribu
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-ex-cc1-23-ex1
+  titre: T₀ = {E | µ(E)=0 ou µ(Eᶜ)=0} est une tribu
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex CC1-23 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Tribu, mesure, complémentaire
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-ex-5
+  titre: Image réciproque f⁻¹(T) est une tribu sur X
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex 5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★
+    mots_cles: Image réciproque, tribu, application
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-ex-6
+  titre: f⁻¹(sigma(E)) = sigma(f⁻¹(E))
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex 6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Tribu engendrée, image réciproque, interversion
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-ex-cc1-25-ex3
+  titre: Intersection dénombrable de tribus est une tribu
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex CC1-25 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★
+    mots_cles: Intersection de tribus, stabilité
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-ex-cc1-25-ex4
+  titre: Invariance par translation de lambda, B avec lambda(B)>1
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex CC1-25 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Lebesgue, invariance, translation, sigma-finie
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-ex-9
+  titre: 'Ensemble de Cantor K = ∩ Pₙ : compact, lambda(K)=0, non dénombrable'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex 9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Cantor, compact, mesure nulle, non dénombrable
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-ex-cc1-23-ex2
+  titre: ν est une mesure sur T₀
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Ex CC1-23 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★
+    mots_cles: Mesure, sigma-additivité
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-cc1-2025-ex1
+  titre: A={parties finies ou cofinies} n'est pas une tribu
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / CC1 2025 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Tribu, contre-exemple, union infinie
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-cc1-2025-ex2
+  titre: 'f≥0 intégrable : encadrement ∫f et Σµ(An)'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / CC1 2025 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Intégrale, An={f≥n}, encadrement
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-cc1-2023-24-ex1
+  titre: T₀ tribu + ν mesure
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / CC1 2023-24 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Tribu, mesure
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-cc1-2023-24-ex4
+  titre: Mesure complétée M₀
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / CC1 2023-24 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Mesure complète, négligeable
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-1-exam-24-25-ex4
+  titre: Limite de mesures µₙ est une mesure via BL
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 1 - Espaces mesurables et  / Exam 24-25 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Limite de mesures, BL, interversion
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-cc23-24-ex2
+  titre: 'Collage : h=f sur A, g sur Aᶜ est mesurable'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / CC23-24 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Mesurabilité, collage, image réciproque
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-cc23-24-ex3
+  titre: µ({f≥n}) ≤ (1/n)∫f dµ et µ({f=+∞})=0
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / CC23-24 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Intégrabilité, Markov, µ({f=+∞})
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-td2-ex5
+  titre: lim sup et lim inf de fonctions mesurables
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / TD2 Ex5
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: lim sup, lim inf, mesurabilité, convergence p.p.
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-cc1-25-ex2
+  titre: 'Lien ∫f dµ et Σµ(An) : encadrement double'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / CC1-25 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Intégrale, An={f≥n}, encadrement, additivité
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-exam24-25-ex1
+  titre: '{g<f} ∈ T, union sur Q, µ({g<f})=0 par σ-additivité'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / Exam24-25 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Mesurabilité, ensembles de niveau, Q dense, µ=0
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-td2-ex6
+  titre: ∫₀¹ f(x) dx avec f=(-1)^{E(1/x)}
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / TD2 Ex6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Intégrale de Lebesgue, calcul explicite, partie entière
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-td2-ex7
+  titre: 'f continue intégrable sur R+ : limite à +∞'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / TD2 Ex7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★
+    mots_cles: Intégrabilité, limite à l'infini, f≥0
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-td2-ex8
+  titre: ∫_A f dµ ≤ µ(A) pour tout A → f ≤ 1 p.p.
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / TD2 Ex8
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Presque partout, raisonnement par An={f≥1+1/n}
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-td2-ex9
+  titre: Inégalité de Markov généralisée avec phi croissante
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / TD2 Ex9
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Markov, phi croissante, µ({f≥a})
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-cc1-23-ex5
+  titre: 'CV en mesure vs CV p.p. : définition et lien'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / CC1-23 Ex5
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Convergence en mesure, p.p., µ(X)<+∞, Egorov
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-exam24-25-ex2
+  titre: 'TCD : ∫fₙe^{-fₙ}, série alternée Σ(-1)ⁿ/n'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / Exam24-25 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: TCD, convergence p.p., série alternée, ln2
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-cc1-2023-24-ex2
+  titre: Collage h=f sur A, g sur Aᶜ mesurable
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / CC1 2023-24 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Mesurabilité, collage
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-cc1-2023-24-ex3
+  titre: 'Markov : µ({f≥n}) ≤ (1/n)∫f, µ({f=+∞})=0'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / CC1 2023-24 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Markov, µ({f=+∞})
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-exam-2024-25-ex1
+  titre: '{g<f} = Union_Q {g≤a<f} → µ=0'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / Exam 2024-25 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Mesurabilité, Q dense, union
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-exam-2024-25-ex2
+  titre: Différentes limites de ∫fₙ (TCD, BL, série)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / Exam 2024-25 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: TCD, série alternée, ln2
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-2-cc1-2024-25-ex2
+  titre: 'Lien ∫f et Σµ(An) : double encadrement'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 2 - Fonctions mesurables e / CC1 2024-25 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Intégrale, encadrement
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-td3-ex1
+  titre: Contre-exemples BL (décrois.) et Fatou (fₙ<0)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / TD3 Ex1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Beppo-Levi, Fatou, contre-exemple, décroissante, fₙ négatif
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-td3-ex4
+  titre: lim ∫_R f(x)sinⁿ(x) dx = 0 par TCD
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / TD3 Ex4
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: TCD, dominante |f|, sin^n→0 p.p.
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-cc2-24-ex3
+  titre: Iₙ = ∫₁^∞ n(n-1)x+1/(lnx+n²x²) dx → +∞ puis π/2
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / CC2-24 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: TCD, limite ponctuelle, dominante 1/(1+x²), Fatou pour +∞
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-cc2-24-ex2
+  titre: ∫₀^∞ te^{-at}/(1-e^{-bt}) = Σ 1/(a+nb)² via BL
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / CC2-24 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: BL séries, développement géométrique, e^{-bt}
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-cc2-24-ex5
+  titre: Sₙ = Σ_{k≥1} nsin(k/n)/2^k → 2 (TCD sur N)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / CC2-24 Ex5
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: TCD, mesure de comptage, sin(k/n)/(k/n)→1, L1(N)
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-cc2-24-ex4
+  titre: 'Eₙ={|f|≥n} : ∫_{Eₙ}|f|→0, µ(Eₙ)=o(n⁻ᵃ), lim sup/inf'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / CC2-24 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: TCD, Markov, lim inf/sup d'ensembles
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-td3-ex2
+  titre: 'fₙ = triangle sur [0,2/n] : lim ∫ ≠ ∫ lim'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / TD3 Ex2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★
+    mots_cles: TCD sans dominante, contre-exemple classique
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-td3-ex3
+  titre: 'BL séries : ∫₀¹ Σ aⁿE(nx) dx et ∫₀^∞ x^m/(eˣ-1)'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / TD3 Ex3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Beppo-Levi, séries, développement géométrique, interversion
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-cc2-25-ex3
+  titre: 'Iₙ = ∫₀ⁿ (1-x/n)ⁿ sin(x) dx : deux méthodes'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / CC2-25 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: TCD, BL, (1-x/n)^n≤e^{-x}
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-exam23-24-f-t
+  titre: 'F(t)=∫e^{-|t|x}/(1+x²) : continuité et dérivabilité'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / Exam23-24 F(t)
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Intégrale à paramètre, continuité, dérivabilité, dominante
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-cc2-25-ex4
+  titre: 'f∈L¹ : Σ f(nx)/n converge → f(nx)/n → 0 p.p.'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / CC2-25 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: BL, chgt de variables, série de fonctions, p.p.
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-cc2-24-ex1
+  titre: 'Lemme de Fatou : énoncer, strict/large selon a, avantages/inconvénients'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / CC2-24 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★
+    mots_cles: Fatou, inégalité stricte, comparaison BL/Fatou/TCD
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-cc2-2024-ex3
+  titre: lim Iₙ pour 2 intégrales (Fatou + TCD)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / CC2 2024 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: TCD, Fatou, BL, (1-x/n)^n
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-cc2-2024-ex5
+  titre: Sₙ = Σ nsin(k/n)/2^k → 2
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / CC2 2024 Ex5
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: TCD, mesure comptage, sin(u)/u→1
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-cc2-2024-ex4
+  titre: 'Eₙ={|f|≥n} : intégrale, Markov, lim sup/inf'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / CC2 2024 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: TCD, Markov, ensembles de niveau
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-cc2-2025-ex3
+  titre: '∫₀ⁿ (1-x/n)ⁿ sin x dx : deux méthodes'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / CC2 2025 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: TCD, BL, dominante e^{-x}
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-3-exam-24-25-ex2-q3
+  titre: ∫₀¹ xᵅ lnx/(1-x) = -Σ 1/(α+n)²
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 3 - Theoremes de convergen / Exam 24-25 Ex2 Q3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: BL, série de puissances, interversion
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-td4-ex5-1
+  titre: '∬_D dxdy/((1+x²)(1+y²)), D: 0≤y≤x≤1'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / TD4 Ex5.1
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Fubini, domaine triangulaire, itération
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-td4-ex5-2
+  titre: ∬_D aˣbʸ dxdy sur x+y≤1, x,y≥0
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / TD4 Ex5.2
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Fubini, domaine triangulaire, calcul double
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-td4-ex5-3
+  titre: ∬_D (x+y)²/(x²+y²+2) sur le disque unité
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / TD4 Ex5.3
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Coordonnées polaires, jacobien r, disque
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-td4-ex6
+  titre: 'Sous-graphe F : ∫₀^∞ M(y)dy = ∫₀¹ f(x)dx'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / TD4 Ex6
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Fubini-Tonelli, sous-graphe, section, graphe mesure nulle
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-exam23-24-ex1
+  titre: ∬_D f(x,y) dxdy en coordonnées polaires
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / Exam23-24 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Coordonnées polaires, changement de variables, Fubini
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-exam23-24-ex5
+  titre: ∬ ye^{-y²(1+x²)} dxdy → intégrale gaussienne √π/2
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / Exam23-24 Ex5
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Fubini-Tonelli, intégrale gaussienne, polaires
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-td4-ex7
+  titre: g intégrable sur tétraèdre D via chgt (u,v,w)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / TD4 Ex7
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★★
+    mots_cles: Changement de variables, jacobien, domaine complexe
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-exam24-25-ex5
+  titre: 'F(t)=∫₀¹ 1/(t+xʳ)dx : continuité et F(0+)'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / Exam24-25 Ex5
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Intégrale à paramètre, continuité, limite t→0+
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-cc2-23-ex4
+  titre: 'F(t)=∫e^{-|t|x}/(1+x²) : continuité et dérivabilité'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / CC2-23 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Intégrale à paramètre, |t|, dérivabilité
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-cc2-25-ex2
+  titre: 'F(t)=∫(sinx)²e^{-tx}/x : dérivabilité et F'''''
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / CC2-25 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★★
+    mots_cles: Intégrale à paramètre, F'', dominante sur ∂f/∂t
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-exam23-24-ex3
+  titre: Fubini sur [0,n]×R+ pour ∫₀ⁿ sin(x)/x dx
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / Exam23-24 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Fubini, intégrale de Dirichlet, e^{-xt}
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-exam-2023-24-ex1
+  titre: ∬_D f polaire, Fubini-Tonelli sur disque
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / Exam 2023-24 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Polaires, Fubini
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-exam-2023-24-ex5
+  titre: ∬ ye^{-y²(1+x²)} → √π/2 via Fubini
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / Exam 2023-24 Ex5
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Fubini-Tonelli, gaussienne
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-cc2-2023-24-ex4
+  titre: 'F(t)=∫e^{-|t|x}/(1+x²) : étude complète'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / CC2 2023-24 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Intégrale à paramètre, |t|
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-exam-2024-25-ex5
+  titre: 'F(t)=∫₀¹ 1/(t+x^r)dx : cont. + F(0+)'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / Exam 2024-25 Ex5
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Intégrale à paramètre, limite
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-4-cc2-2025-ex2
+  titre: 'F(t)=∫(sinx)²e^{-tx}/x : double dérivation'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 4 - Integrales multiples e / CC2 2025 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: F''(t), dominante
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-exam23-24-ex1
+  titre: f(x,y)=r^{-2α} ∈ Lᵖ(D) selon α et p
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / Exam23-24 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Critère Lp, polaires, intégrale r^{-αp}, alpha<1/p
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-td5-ex5-h-lder
+  titre: 'Hölder pour montrer fg ∈ L¹ : 1/p+1/q=1'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / TD5 Ex5 (Hölder)
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Hölder, exposants conjugués, fg intégrable
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-exam23-24-ex2
+  titre: 'fₙ=f(e^{-x/n}) : BL puis fₙ=(1-x/n)ⁿ TCD'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / Exam23-24 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: BL, TCD, f croissante, (1-x/n)^n→e^{-x}
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-cc2-24-ex1
+  titre: 'Fatou : énoncé, inégalité stricte selon a, comparaison théorèmes'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / CC2-24 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Fatou, inégalité stricte/large selon a, BL vs TCD vs Fatou
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-td5-ex1-inclusions
+  titre: Inclusions Lᵖ ⊂ Lq sur mesure finie
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / TD5 Ex1 (inclusions)
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Inclusions Lp, Hölder, mesure finie
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-td5-ex2-cv
+  titre: 'CV dans Lᵖ ≠ CV p.p. : suite glissante'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / TD5 Ex2 (cv)
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Convergence Lp, p.p., suite glissante, contre-exemple
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-td5-ex3-mink
+  titre: 'Minkowski : inégalité triangulaire dans Lᵖ'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / TD5 Ex3 (Mink)
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★
+    mots_cles: Minkowski, norme Lp
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-exam23-24-ex3
+  titre: ∫₀¹ (1/√x)cos(1/nx) dx → 2 via TCD
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / Exam23-24 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: TCD, dominante 1/√x∈L¹, cos bornée
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-td5-ex4-densit
+  titre: Densité de Cᶜ dans Lᵖ(R)
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / TD5 Ex4 (densité)
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Important
+    difficulte: ★★★
+    mots_cles: Densité, fonctions continues à support compact, approximation
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-td5-ex6-jensen
+  titre: Inégalité de Jensen pour µ probabilité
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / TD5 Ex6 (Jensen)
+  annale_prioritaire: false
+  type_source: td
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: Jensen, fonction convexe, probabilité
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-cc2-25-ex4
+  titre: 'f∈L¹ : Σ|f(nx)|/n<∞ p.p. → f(nx)/n→0 p.p.'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / CC2-25 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: BL, changement de variables, L¹, p.p.
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-exam-2023-24-ex1
+  titre: f(x,y)=r^{-2α} ∈ Lp(D) selon p et α
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / Exam 2023-24 Ex1
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: Critère Lp, polaires, alpha<1/p
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-exam-2023-24-ex2
+  titre: 'BL puis TCD : lim ∫₀^∞ f(e^{-x/n}) dx'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / Exam 2023-24 Ex2
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: BL, TCD, (1-x/n)^n→e^{-x}
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-exam-2023-24-ex3
+  titre: ∫₀¹ (1/√x)cos(1/nx) dx → 2 via TCD
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / Exam 2023-24 Ex3
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★
+    mots_cles: TCD, dominante 1/√x∈L¹
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-cc2-2023-24-ex5
+  titre: ∬ ye^{-y²(1+x²)} = π/4 → gaussienne
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / CC2 2023-24 Ex5
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Vital
+    difficulte: ★★★
+    mots_cles: Fubini, gaussienne
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire
+- id: mes-uvsq-chap-5-cc2-2025-ex4
+  titre: 'f∈L¹ : Σ|f(nx)|/n<∞ p.p.'
+  enonce: null
+  sources:
+  - etab: uvsq
+    fichier: null
+    page: null
+    numero: Chap 5 - Espaces Lp / CC2 2025 Ex4
+  annale_prioritaire: false
+  type_source: annale
+  annale: null
+  disponible: true
+  sous_chapitre: null
+  methodes: []
+  notions: []
+  importance: null
+  justification: null
+  difficulte: null
+  temps_min: null
+  indice_tableur:
+    importance: Exotique
+    difficulte: ★★★★
+    mots_cles: BL, chgt variables, p.p.
+  corrige:
+    statut: absent
+    ref: null
+  qualite_extraction: a_extraire

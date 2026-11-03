@@ -1,0 +1,552 @@
+- id: mesure-n-0001
+  titre: 'Ensemble dénombrable'
+  type: definition
+  chapitre: 'Chapitre 0 - Préliminaires'
+  sous_chapitre: 'Rappels de cours'
+  enonce: 'Un ensemble est dénombrable s''il est en bijection avec $\mathbb{N}$.'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 3}
+  essentiel: true
+- id: mesure-n-0002
+  titre: 'Image réciproque et ses propriétés'
+  type: propriete
+  chapitre: 'Chapitre 0 - Préliminaires'
+  sous_chapitre: 'Rappels de cours'
+  enonce: '$f^{-1}(A)=\{f\in A\}$ ; $f^{-1}$ commute aux réunions et intersections quelconques, et $f^{-1}(A^c)=(f^{-1}(A))^c$ (Prop. 0.1).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 3}
+  essentiel: true
+- id: mesure-n-0003
+  titre: 'Indicatrice d''une partie'
+  type: definition
+  chapitre: 'Chapitre 0 - Préliminaires'
+  sous_chapitre: 'Rappels de cours'
+  enonce: '$\mathbf 1_A(\omega)=1$ si $\omega\in A$, $0$ sinon.'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 3}
+  essentiel: true
+- id: mesure-n-0004
+  titre: 'Limites supérieure et inférieure d''une suite réelle'
+  type: definition
+  chapitre: 'Chapitre 0 - Préliminaires'
+  sous_chapitre: 'Limite supérieure, limite inférieure'
+  enonce: '$\liminf u_n=\lim m_n$, $\limsup u_n=\lim M_n$ avec $m_n=\inf_{p\ge0}u_{n+p}$, $M_n=\sup_{p\ge0}u_{n+p}$.'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 4}
+  essentiel: true
+- id: mesure-n-0005
+  titre: 'Limites supérieure et inférieure d''une suite d''ensembles'
+  type: definition
+  chapitre: 'Chapitre 0 - Préliminaires'
+  sous_chapitre: 'Limite supérieure, limite inférieure'
+  enonce: '$\limsup A_n=\bigcap_{n}\bigcup_{k\ge n}A_k$ (infiniment souvent) ; $\liminf A_n=\bigcup_{n}\bigcap_{k\ge n}A_k$ (à partir d''un certain rang).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 4}
+  essentiel: true
+- id: mesure-n-0006
+  titre: 'limsup et liminf comme valeurs d''adhérence'
+  type: propriete
+  chapitre: 'Chapitre 0 - Préliminaires'
+  sous_chapitre: 'Limite supérieure, limite inférieure'
+  enonce: '$\limsup u_n$ (resp. $\liminf u_n$) est le plus grand (resp. plus petit) élément de $\overline{\mathbb R}$ valeur d''adhérence de $(u_n)$ (Prop. 0.2).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 4}
+  essentiel: false
+- id: mesure-n-0007
+  titre: 'Lois de Morgan'
+  type: propriete
+  chapitre: 'Chapitre 0 - Préliminaires'
+  sous_chapitre: 'Limite supérieure, limite inférieure'
+  enonce: '$(\bigcap A_i)^c=\bigcup A_i^c$, $(\bigcup A_i)^c=\bigcap A_i^c$ ; donc $(\limsup A_n)^c=\liminf A_n^c$ (Prop. 0.3).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 4}
+  essentiel: true
+- id: mesure-n-0008
+  titre: 'Tribu (σ-algèbre), espace mesurable'
+  type: definition
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.1 Notion de tribu'
+  enonce: '$\mathcal T\subset\mathcal P(X)$ contenant $\emptyset$, stable par réunion dénombrable et par passage au complémentaire ; $(X,\mathcal T)$ est un espace mesurable (Déf. 1.1).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 5}
+  essentiel: true
+- id: mesure-n-0009
+  titre: 'Exemples de tribus'
+  type: exemple
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.1 Notion de tribu'
+  enonce: '$\{\emptyset,X\}$ ; $\mathcal P(X)$ ; $\{\emptyset,A,A^c,X\}$, plus petite tribu contenant $A$ (Ex. 1.2).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 5}
+  essentiel: false
+- id: mesure-n-0010
+  titre: 'Propriétés de stabilité d''une tribu'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.1 Notion de tribu'
+  enonce: 'Une tribu contient $X$, est stable par intersection dénombrable, $\setminus$, $\Delta$, $\limsup$, $\liminf$ ; une intersection de tribus est une tribu (Prop. 1.3).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 5}
+  essentiel: true
+- id: mesure-n-0011
+  titre: 'Tribu engendrée'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.2 Tribu engendrée et tribu borélienne'
+  enonce: 'Pour $\mathcal E\subset\mathcal P(X)$, il existe une plus petite tribu $\sigma(\mathcal E)$ contenant $\mathcal E$ (Prop. 1.4).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 5}
+  essentiel: true
+- id: mesure-n-0012
+  titre: 'Tribu borélienne'
+  type: definition
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.2 Tribu engendrée et tribu borélienne'
+  enonce: '$\mathcal B(X)=\sigma(\mathcal O(X))$, tribu engendrée par les ouverts (Déf. 1.5).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 5}
+  essentiel: true
+- id: mesure-n-0013
+  titre: 'Familles génératrices de $\mathcal B(\mathbb R)$'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.2 Tribu engendrée et tribu borélienne'
+  enonce: '$\mathcal B(\mathbb R)=\sigma(\{[a,+\infty[,a\in\mathbb R\})=\sigma(\{[a,+\infty[,a\in\mathbb Q\})=\sigma(\{]a,+\infty[\})$, avec $a\in\mathbb R$ ou $\mathbb Q$.'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 5}
+  essentiel: true
+- id: mesure-n-0014
+  titre: 'Application mesurable, fonction borélienne'
+  type: definition
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.1 Définition'
+  enonce: '$f:(X,\mathcal A)\to(Y,\mathcal B)$ est mesurable si $f^{-1}(B)\in\mathcal A$ pour tout $B\in\mathcal B$ ; borélienne si $\mathcal A=\mathcal B(X)$, $\mathcal B=\mathcal B(Y)$ (Déf. 1.6).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 6}
+  essentiel: true
+- id: mesure-n-0015
+  titre: 'Mesurabilité d''une indicatrice'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.1 Définition'
+  enonce: '$\mathbf 1_A$ est mesurable si et seulement si $A\in\mathcal A$ (Rem. 1.7).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 6}
+  essentiel: false
+- id: mesure-n-0016
+  titre: 'Critère de mesurabilité sur une famille génératrice'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.1 Définition'
+  enonce: 'Si $\mathcal B=\sigma(\mathcal E)$, $f$ est mesurable ssi $f^{-1}(\mathcal E)\subset\mathcal A$. Pour $f$ à valeurs dans $\overline{\mathbb R}$ : borélienne ssi $\{f\ge a\}\in\mathcal A$ pour tout $a$ ; une fonction continue est mesurable (Prop. 1.8).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 6}
+  essentiel: true
+- id: mesure-n-0017
+  titre: 'Tribu image réciproque et tribu trace'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.2 Démonstration de la proposition - lemmes préparatoires'
+  enonce: 'Si $\mathcal B$ est une tribu sur $Y$, $f^{-1}(\mathcal B)$ est une tribu sur $X$ ; $\{X\cap B:B\in\mathcal B\}$ est la tribu trace sur $X\subset Y$ (Lemme 1.9).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 6}
+  essentiel: false
+- id: mesure-n-0018
+  titre: 'Tribu induite par $f$ sur $Y$'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.2 Démonstration de la proposition - lemmes préparatoires'
+  enonce: 'Si $\mathcal A$ est une tribu sur $X$, $\{B\subset Y:f^{-1}(B)\in\mathcal A\}$ est une tribu sur $Y$ (Lemme 1.10).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 6}
+  essentiel: false
+- id: mesure-n-0019
+  titre: 'Image réciproque d''une tribu engendrée'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.2 Démonstration de la proposition - lemmes préparatoires'
+  enonce: '$f^{-1}(\sigma(\mathcal E))=\sigma(f^{-1}(\mathcal E))$ (Lemme 1.11). Applications : $\mathcal B(X)=\{A\cap X:A\in\mathcal B(Y)\}$ pour la topologie induite ; $\mathcal B(\overline{\mathbb R})=\sigma(\{[a,+\infty]\})$.'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 6}
+  essentiel: true
+- id: mesure-n-0020
+  titre: 'Composée et couple de fonctions mesurables'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.3 Opérations sur les fonctions mesurables'
+  enonce: 'La composée de deux fonctions mesurables est mesurable ; $(f_1,f_2)$ est mesurable ssi $f_1$ et $f_2$ le sont (Prop. 1.12).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 7}
+  essentiel: true
+- id: mesure-n-0021
+  titre: 'Max, min, parties positive et négative'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.3 Opérations sur les fonctions mesurables'
+  enonce: 'Si $f$ est mesurable, $\max(f,a)$, $\min(f,a)$, $f^+$, $f^-$ le sont ; $f=f^+-f^-$ et $|f|=f^++f^-$ (Ex. 1.13).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 7}
+  essentiel: true
+- id: mesure-n-0022
+  titre: 'Opérations usuelles sur les fonctions mesurables'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.3 Opérations sur les fonctions mesurables'
+  enonce: '$f+g$, $fg$ mesurables ; $\sup f_n$, $\inf f_n$, $\limsup f_n$, $\liminf f_n$ mesurables ; limite simple de fonctions mesurables mesurable (Prop. 1.14).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 7}
+  essentiel: true
+- id: mesure-n-0023
+  titre: 'Fonction étagée'
+  type: definition
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.3 Opérations sur les fonctions mesurables'
+  enonce: 'Fonction mesurable ne prenant qu''un nombre fini de valeurs finies : $f=\sum_{i\in I}\alpha_i\mathbf 1_{A_i}$, $(A_i)$ partition mesurable finie (Déf. 1.15).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 7}
+  essentiel: true
+- id: mesure-n-0024
+  titre: 'Stabilité des fonctions étagées'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.3 Opérations sur les fonctions mesurables'
+  enonce: 'Les fonctions étagées sont stables par combinaison linéaire, produit, max et min finis (Prop. 1.16).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 7}
+  essentiel: false
+- id: mesure-n-0025
+  titre: 'Lemme fondamental d''approximation'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.3.3 Opérations sur les fonctions mesurables'
+  enonce: 'Toute $f$ mesurable est limite simple de fonctions étagées ; si $f\ge0$ la suite peut être positive croissante ; si $f$ est bornée la convergence peut être uniforme (Th. 1.17).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 7}
+  essentiel: true
+- id: mesure-n-0026
+  titre: 'Mesure positive'
+  type: definition
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.4 Définition et exemples'
+  enonce: '$\mu:\mathcal A\to\overline{\mathbb R}_+$ avec $\mu(\emptyset)=0$ et $\mu(\bigcup A_n)=\sum\mu(A_n)$ pour $(A_n)$ deux à deux disjoints ($\sigma$-additivité) (Déf. 1.18).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 7}
+  essentiel: true
+- id: mesure-n-0027
+  titre: 'Mesure finie, mesure de probabilité, espace mesuré'
+  type: definition
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.4 Définition et exemples'
+  enonce: '$\mu$ finie si $\mu(X)<+\infty$ ; probabilité si $\mu(X)=1$ ; $(X,\mathcal A,\mu)$ est un espace mesuré (Déf. 1.19, 1.20).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 7}
+  essentiel: true
+- id: mesure-n-0028
+  titre: 'Mesures usuelles : nulle, grossière, Dirac, comptage'
+  type: exemple
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.4 Définition et exemples'
+  enonce: 'Mesure nulle ; grossière ($+\infty$ sur tout $A\ne\emptyset$) ; Dirac $\delta_a(A)=\mathbf 1_A(a)$ ; comptage $\mu(A)=\operatorname{Card}A$ si $A$ fini, $+\infty$ sinon (Ex. 1.21).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 8}
+  essentiel: true
+- id: mesure-n-0029
+  titre: 'Mesure trace et mesure conditionnelle'
+  type: exemple
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.4 Définition et exemples'
+  enonce: '$\mu_B(A)=\mu(A\cap B)$ ; si $\mu(B)\ne0$, $\mu(A|B)=\mu(A\cap B)/\mu(B)$ (Ex. 1.21).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 8}
+  essentiel: false
+- id: mesure-n-0030
+  titre: 'Probabilités sur $(\mathbb N,\mathcal P(\mathbb N))$'
+  type: exemple
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.4 Définition et exemples'
+  enonce: 'Une probabilité sur $\mathbb N$ est déterminée par $\mu(\{k\})=p_k$ ; réciproquement $\sum p_k=1$ donne $\mu(A)=\sum_{k\in A}p_k$ (Ex. 1.21).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 8}
+  essentiel: true
+- id: mesure-n-0031
+  titre: 'Théorème de Borel-Lebesgue (admis) : mesure de Lebesgue'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: '1.4 Définition et exemples'
+  enonce: 'Il existe une unique mesure $\lambda_d$ sur $(\mathbb R^d,\mathcal B(\mathbb R^d))$ avec $\lambda_d([0,1]^d)=1$ et $\lambda_d(a+A)=\lambda_d(A)$ (Th. 1.22).'
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 8}
+  essentiel: true
+- id: mesure-n-0032
+  titre: 'Croissance de la mesure'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Propriétés des mesures (CM du 13/10)'
+  enonce: 'Si $A\subset B$, $\mu(A)\le\mu(B)$ et $\mu(B)=\mu(A)+\mu(B\setminus A)$ ; si $\mu(A)<+\infty$, $\mu(B\setminus A)=\mu(B)-\mu(A)$.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 1}
+  essentiel: true
+- id: mesure-n-0033
+  titre: 'Formule $\mu(A\cup B)+\mu(A\cap B)=\mu(A)+\mu(B)$'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Propriétés des mesures (CM du 13/10)'
+  enonce: 'Pour tous $A,B\in\mathcal A$ : $\mu(A\cup B)+\mu(A\cap B)=\mu(A)+\mu(B)$ (union en trois parties disjointes, cas $\mu(A\cap B)=+\infty$ à part).'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 1}
+  essentiel: true
+- id: mesure-n-0034
+  titre: 'Continuité séquentielle croissante'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Propriétés des mesures (CM du 13/10)'
+  enonce: 'Si $A_n\subset A_{n+1}$, alors $\mu(\bigcup_nA_n)=\lim_n\mu(A_n)$.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 1}
+  essentiel: true
+- id: mesure-n-0035
+  titre: 'Démonstration de la continuité croissante par disjonction'
+  type: demonstration
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Propriétés des mesures (CM du 13/10)'
+  enonce: 'On pose $B_0=A_0$, $B_n=A_n\setminus A_{n-1}$ : disjoints, $A_n=\bigsqcup_{k\le n}B_k$, puis $\sigma$-additivité. Technique réutilisable.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 1}
+  essentiel: false
+- id: mesure-n-0036
+  titre: 'Continuité séquentielle décroissante'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Propriétés des mesures (CM du 13/10)'
+  enonce: 'Si $A_{n+1}\subset A_n$ et $\mu(A_{n_0})<+\infty$ pour un $n_0$, alors $\mu(\bigcap_nA_n)=\lim_n\mu(A_n)$.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 1}
+  essentiel: true
+- id: mesure-n-0037
+  titre: 'Contre-exemple si l''hypothèse de finitude est omise'
+  type: exemple
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Propriétés des mesures (CM du 13/10)'
+  enonce: 'Comptage sur $\mathbb N$, $A_n=[n,+\infty[$ : $\mu(A_n)=+\infty$ pour tout $n$ mais $\bigcap A_n=\emptyset$ de mesure $0$.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 2}
+  essentiel: true
+- id: mesure-n-0038
+  titre: '$\sigma$-sous-additivité'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Propriétés des mesures (CM du 13/10)'
+  enonce: '$\mu(\bigcup_nA_n)\le\sum_n\mu(A_n)$ (preuve : $B_n=A_n\setminus\bigcup_{k<n}A_k$ disjoints, $B_n\subset A_n$).'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 2}
+  essentiel: true
+- id: mesure-n-0039
+  titre: 'Mesure de Lebesgue d''un intervalle'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)'
+  enonce: 'Pour tout intervalle $I$ de $\mathbb R$, $\lambda(I)=\operatorname{long}(I)$.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 2}
+  essentiel: true
+- id: mesure-n-0040
+  titre: 'Preuve de $\lambda(I)=\operatorname{long}(I)$ en étapes'
+  type: demonstration
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)'
+  enonce: '(1) $\lambda(\{x\})=0$ par invariance et $n\alpha\le1$ ; (2) $\lambda(]0,1/n])=1/n$ ; (3) bornes rationnelles ; (4) bornes irrationnelles par suite rationnelle monotone et continuité croissante ; (5) intervalles infinis par continuité croissante.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-20.pdf, page: 1}
+  essentiel: false
+- id: mesure-n-0041
+  titre: 'Mesure de Lebesgue d''un pavé'
+  type: propriete
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)'
+  enonce: 'Pour $P=I_1\times\dots\times I_d$, $\lambda_d(P)=\prod_{j=1}^d\lambda(I_j)=\prod_j\operatorname{long}(I_j)$.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-20.pdf, page: 2}
+  essentiel: true
+- id: mesure-n-0042
+  titre: 'Partie $\mu$-négligeable'
+  type: definition
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Compléments (CM du 20/10)'
+  enonce: '$A\subset X$ est $\mu$-négligeable s''il existe $B\in\mathcal A$ avec $A\subset B$ et $\mu(B)=0$.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-20.pdf, page: 2}
+  essentiel: true
+- id: mesure-n-0043
+  titre: 'Mesure complète'
+  type: definition
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Compléments (CM du 20/10)'
+  enonce: '$(X,\mathcal A,\mu)$ est complet si toute partie $\mu$-négligeable appartient à $\mathcal A$.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-20.pdf, page: 3}
+  essentiel: true
+- id: mesure-n-0044
+  titre: 'Propriété vraie $\mu$-presque partout'
+  type: definition
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Compléments (CM du 20/10)'
+  enonce: '$P$ est vraie $\mu$-pp si $\{x:P(x)\text{ fausse}\}$ est $\mu$-négligeable.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-20.pdf, page: 3}
+  essentiel: true
+- id: mesure-n-0045
+  titre: 'Fonction de répartition d''une mesure finie sur $\mathbb R$'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Compléments (CM du 20/10)'
+  enonce: 'Pour $\mu$ finie sur $\mathcal B(\mathbb R)$, $F_\mu(x)=\mu(]-\infty,x])$ est croissante, bornée, continue à droite, de limite $0$ en $-\infty$.'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-20.pdf, page: 3}
+  essentiel: true
+- id: mesure-n-0046
+  titre: 'Mesure de Stieltjes'
+  type: theoreme
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  sous_chapitre: 'Compléments (CM du 20/10)'
+  enonce: 'Réciproquement, $F$ croissante, bornée, continue à droite, de limite $0$ en $-\infty$ : il existe une unique mesure finie $\mu$ avec $F=F_\mu$ (mesure de Stieltjes, $\mu(dx)=dF(x)$ ; si $F$ est $C^1$, $dF(x)=F''(x)dx$ avec $F''$ la dérivée).'
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-20.pdf, page: 3}
+  essentiel: true
+- id: mesure-n-0047
+  titre: 'Dénombrabilité usuelle'
+  type: propriete
+  chapitre: 'Chapitre 1 - Espace mesurable et mesure (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: '$\mathbb N,\mathbb Z,\mathbb Q$ dénombrables ; $\mathbb R$ et $\mathcal P(\mathbb N)$ non dénombrables ; réunion dénombrable d''ensembles dénombrables dénombrable.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: false
+- id: mesure-n-0048
+  titre: 'Mesure extérieure et théorème de Carathéodory'
+  type: methode
+  chapitre: 'Chapitre 1 - Espace mesurable et mesure (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: 'La mesure de Lebesgue est construite via une mesure extérieure et le théorème de Carathéodory (cité sans énoncé détaillé).'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: false
+- id: mesure-n-0049
+  titre: 'Intégrale de Lebesgue (construction)'
+  type: definition
+  chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: 'Définie pour les étagées $\ge0$, puis pour $f\ge0$ mesurable par $\int f=\sup\{\int g:g\text{ étagée},g\le f\}\in[0,+\infty]$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0050
+  titre: 'Théorème de Beppo-Levi (convergence monotone)'
+  type: theoreme
+  chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: 'Si $f_n\ge0$ et $f_n\uparrow f$, alors $\int f_n\uparrow\int f$. Corollaire : interversion $\sum/\int$ pour des termes $\ge0$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0051
+  titre: 'Fonctions intégrables, $L^1$'
+  type: definition
+  chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: '$f$ intégrable si $\int|f|<\infty$, alors $\int f=\int f^+-\int f^-$ ; linéarité, croissance, $|\int f|\le\int|f|$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0052
+  titre: 'Intégrale et ensembles négligeables'
+  type: propriete
+  chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: 'Modifier $f$ sur un négligeable ne change pas $\int f$ ; $f=0$ pp $\iff\int|f|=0$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0053
+  titre: 'Calcul d''une intégrale de Lebesgue'
+  type: methode
+  chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)'
+  sous_chapitre: 'Comment calculer une intégrale de Lebesgue'
+  enonce: 'Étagées puis Beppo-Levi ; comptage sur $\mathbb N$ : $\int f\,d\mu=\sum f(n)$ ; Dirac : $\int f\,d\delta_a=f(a)$ ; densité $\rho$ : $\int f\,d\mu=\int f\rho\,d\lambda$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0054
+  titre: 'Riemann implique Lebesgue'
+  type: propriete
+  chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)'
+  sous_chapitre: 'Comment calculer une intégrale de Lebesgue'
+  enonce: 'Si $f$ est Riemann-intégrable sur $[a,b]$, elle est Lebesgue-intégrable avec la même valeur ; attention aux intégrales impropres.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0055
+  titre: 'Lemme de Fatou'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ)'
+  sous_chapitre: 'Les théorèmes'
+  enonce: 'Si $f_n\ge0$ mesurables, $\int\liminf f_n\le\liminf\int f_n$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0056
+  titre: 'Théorème de convergence dominée'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ)'
+  sous_chapitre: 'Les théorèmes'
+  enonce: 'Si $f_n\to f$ pp et $|f_n|\le g$ avec $g$ intégrable indépendante de $n$, alors $f$ intégrable, $\int f_n\to\int f$ et $\int|f_n-f|\to0$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0057
+  titre: 'Continuité d''une intégrale à paramètre'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ)'
+  sous_chapitre: 'Intégrales à paramètre'
+  enonce: 'Si $t\mapsto f(x,t)$ est continue et $|f(x,t)|\le g(x)$ intégrable, $F(t)=\int f(x,t)dx$ est continue.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0058
+  titre: 'Dérivation sous le signe intégral'
+  type: theoreme
+  chapitre: 'Chapitre 3 - Théorèmes de convergence (UVSQ)'
+  sous_chapitre: 'Intégrales à paramètre'
+  enonce: 'Si $t\mapsto f(x,t)$ est dérivable et $|\partial_tf(x,t)|\le h(x)$ intégrable, $F$ est dérivable et $F''(t)=\int\partial_tf(x,t)dx$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0059
+  titre: 'Tribu produit et mesure produit'
+  type: definition
+  chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: 'Tribu produit $\mathcal A\otimes\mathcal B$ et mesure produit $\mu\otimes\nu$ (existence et unicité pour des mesures $\sigma$-finies).'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0060
+  titre: 'Théorème de Tonelli'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: 'Si $f\ge0$ mesurable, $\iint f=\int(\int f\,d\nu)d\mu=\int(\int f\,d\mu)d\nu$ dans $[0,+\infty]$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0061
+  titre: 'Théorème de Fubini'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: 'Si $\iint|f|<\infty$ (vérifié par Tonelli sur $|f|$), l''interversion est licite et les sections sont intégrables pp.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0062
+  titre: 'Changement de variables'
+  type: theoreme
+  chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: 'Pour $\varphi$ difféomorphisme $C^1$, $\int_{\varphi(U)}f=\int_U(f\circ\varphi)|\det J_\varphi|$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0063
+  titre: 'Coordonnées polaires et sphériques'
+  type: methode
+  chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: 'Polaires : $dx\,dy=r\,dr\,d\theta$ (jacobien $r$). Sphériques : jacobien $r^2\sin\varphi$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0064
+  titre: 'Intégrale de Gauss'
+  type: exemple
+  chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: '$\int_{\mathbb R}e^{-x^2}dx=\sqrt\pi$, par Fubini puis coordonnées polaires.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0065
+  titre: 'Normes $L^p$'
+  type: definition
+  chapitre: 'Chapitre 5 - Espaces $L^p$ (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: '$\|f\|_p=(\int|f|^p)^{1/p}$ pour $1\le p<\infty$ ; $\|f\|_\infty$ borne sup essentielle ; $L^p$ = classes de fonctions modulo égalité pp.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 2}
+  essentiel: true
+- id: mesure-n-0066
+  titre: 'Inégalité de Hölder'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Espaces $L^p$ (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: '$\|fg\|_1\le\|f\|_p\|g\|_q$ avec $1/p+1/q=1$ ; $p=q=2$ : Cauchy-Schwarz.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 2}
+  essentiel: true
+- id: mesure-n-0067
+  titre: 'Inégalité de Minkowski'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Espaces $L^p$ (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: '$\|f+g\|_p\le\|f\|_p+\|g\|_p$.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 2}
+  essentiel: true
+- id: mesure-n-0068
+  titre: 'Complétude de $L^p$ (Riesz-Fischer)'
+  type: theoreme
+  chapitre: 'Chapitre 5 - Espaces $L^p$ (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: '$L^p$ est un espace de Banach ; $L^2$ est un espace de Hilbert.'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 2}
+  essentiel: true
+- id: mesure-n-0069
+  titre: 'Inclusions entre espaces $L^p$'
+  type: propriete
+  chapitre: 'Chapitre 5 - Espaces $L^p$ (UVSQ)'
+  sous_chapitre: 'Notions à maîtriser'
+  enonce: 'Sur un espace de mesure finie, $p\le q\Rightarrow L^q\subset L^p$ ; faux en général sur $\mathbb R$ (mesure infinie).'
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 2}
+  essentiel: true
