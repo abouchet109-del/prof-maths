@@ -1,0 +1,274 @@
+- id: mesure-a-001
+  origine: cours_l3
+  notion: mesure-n-0002
+  titre: 'Image réciproque et ses propriétés (réunion, intersection, complémentaire)'
+  raison: 'partielle : seule la définition existe (note 1786442418924, topologie) ; les propriétés de commutation manquent'
+  programme_ecg: false
+  exercices: [mes-td1-ex01, mes-td1-ex02]
+  priorite: 2
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 3}
+  confiance: sure
+
+- id: mesure-a-002
+  origine: cours_l3
+  notion: mesure-n-0005
+  titre: 'Limites supérieure et inférieure d une suite d ensembles'
+  raison: 'partielle : la carte "lim sup et lim inf" (1786961302793) ne précise pas le cas des suites d ensembles (infiniment souvent / à partir d un certain rang)'
+  programme_ecg: false
+  exercices: [mes-cc2l3-2425-ex04, mes-td1-ex06, mes-td4-ex04]
+  priorite: 1
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 4}
+  confiance: a_confirmer
+
+- id: mesure-a-003
+  origine: cours_l3
+  notion: mesure-n-0006
+  titre: 'limsup et liminf comme plus grande et plus petite valeur d adhérence'
+  raison: 'absente du paquet (la définition de valeur d adhérence existe en topologie, pas le lien avec limsup)'
+  programme_ecg: false
+  exercices: [mes-td1-ex05]
+  priorite: 2
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 4}
+  confiance: sure
+
+- id: mesure-a-004
+  origine: cours_l3
+  notion: mesure-n-0009
+  titre: 'Exemples de tribus : grossière, discrète, engendrée par une partie'
+  raison: 'absente du paquet'
+  programme_ecg: true
+  exercices: [mes-cc1-2425-ex01, mes-td2-ex01, mes-td2-ex02, mes-td3-ex01]
+  priorite: 1
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 5}
+  confiance: a_confirmer
+
+- id: mesure-a-005
+  origine: cours_l3
+  notion: mesure-n-0015
+  titre: 'Mesurabilité d une indicatrice'
+  raison: 'absente du paquet'
+  programme_ecg: false
+  exercices: [mes-cc1-2425-ex02, mes-ex-2526-ex02]
+  priorite: 1
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 6}
+  confiance: sure
+
+- id: mesure-a-006
+  origine: cours_l3
+  notion: mesure-n-0017
+  titre: 'Tribu image réciproque et tribu trace'
+  raison: 'absente du paquet'
+  programme_ecg: false
+  exercices: [mes-td4-ex05, mes-td3-ex07]
+  priorite: 2
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 6}
+  confiance: sure
+
+- id: mesure-a-007
+  origine: cours_l3
+  notion: mesure-n-0018
+  titre: 'Tribu induite par f sur l ensemble d arrivée'
+  raison: 'absente du paquet'
+  programme_ecg: false
+  exercices: [mes-td4-ex05]
+  priorite: 2
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 6}
+  confiance: sure
+
+- id: mesure-a-008
+  origine: cours_l3
+  notion: mesure-n-0019
+  titre: 'Image réciproque d une tribu engendrée'
+  raison: 'absente du paquet'
+  programme_ecg: false
+  exercices: [mes-td3-ex07]
+  priorite: 2
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 6}
+  confiance: sure
+
+- id: mesure-a-009
+  origine: cours_l3
+  notion: mesure-n-0029
+  titre: 'Mesure trace et mesure conditionnelle'
+  raison: 'absente du paquet'
+  programme_ecg: false
+  exercices: [mes-cc1-2526-ex03, mes-dm-s3]
+  priorite: 1
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 8}
+  confiance: sure
+
+- id: mesure-a-010
+  origine: cours_l3
+  notion: mesure-n-0030
+  titre: 'Probabilités sur (N, P(N)) : mu(A) = somme des p_k'
+  raison: 'absente du paquet (les cartes existantes portent sur les probabilités à support fini)'
+  programme_ecg: true
+  exercices: [mes-td4-ex02]
+  priorite: 2
+  source: {etab: paris-cite, fichier: mesure/cours/poly-mesure-integration.pdf, page: 8}
+  confiance: a_confirmer
+
+- id: mesure-a-011
+  origine: cours_l3
+  notion: mesure-n-0032
+  titre: 'Croissance de la mesure et mu(B) = mu(A) + mu(B \ A)'
+  raison: 'partielle : seule la carte au recto vague "prop calculatoire mesure" (1786373161722, réponse en image) pourrait la contenir ; à vérifier avant de créer'
+  programme_ecg: true
+  exercices: [mes-cc1-2425-ex02, mes-ex-2324-ex04]
+  priorite: 1
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 1}
+  confiance: a_confirmer
+
+- id: mesure-a-012
+  origine: cours_l3
+  notion: mesure-n-0033
+  titre: 'Formule mu(A U B) + mu(A n B) = mu(A) + mu(B)'
+  raison: 'partielle : même carte vague 1786373161722 ; à vérifier avant de créer'
+  programme_ecg: true
+  exercices: []
+  priorite: 3
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 1}
+  confiance: a_confirmer
+
+- id: mesure-a-013
+  origine: cours_l3
+  notion: mesure-n-0035
+  titre: 'Démonstration de la continuité croissante par disjonction (B_n = A_n \ A_(n-1))'
+  raison: 'absente du paquet (technique de preuve réutilisable)'
+  programme_ecg: false
+  exercices: [mes-cc1-2526-ex02]
+  priorite: 1
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 1}
+  confiance: sure
+
+- id: mesure-a-014
+  origine: cours_l3
+  notion: mesure-n-0037
+  titre: 'Contre-exemple si l hypothèse de finitude est omise (comptage, A_n = [n, +inf[)'
+  raison: 'absente du paquet'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 2}
+  confiance: sure
+
+- id: mesure-a-015
+  origine: cours_l3
+  notion: mesure-n-0038
+  titre: 'Sigma-sous-additivité de la mesure'
+  raison: 'partielle : même carte vague 1786373161722 ; à vérifier avant de créer'
+  programme_ecg: true
+  exercices: [mes-ex-2324-ex04, mes-td4-ex04]
+  priorite: 1
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-13.pdf, page: 2}
+  confiance: a_confirmer
+
+- id: mesure-a-016
+  origine: cours_l3
+  notion: mesure-n-0040
+  titre: 'Preuve de lambda(I) = long(I) en étapes'
+  raison: 'absente du paquet'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-20.pdf, page: 1}
+  confiance: sure
+
+- id: mesure-a-017
+  origine: cours_l3
+  notion: mesure-n-0043
+  titre: 'Mesure complète'
+  raison: 'absente du paquet (la carte de complétude existante est topologique)'
+  programme_ecg: false
+  exercices: [mes-cc1-2324-ex04]
+  priorite: 1
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-20.pdf, page: 3}
+  confiance: sure
+
+- id: mesure-a-018
+  origine: cours_l3
+  notion: mesure-n-0046
+  titre: 'Mesure de Stieltjes associée à une fonction croissante continue à droite'
+  raison: 'absente du paquet'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {etab: paris-cite, fichier: mesure/notes/cm-2026-10-20.pdf, page: 3}
+  confiance: sure
+
+- id: mesure-a-019
+  origine: cours_l3
+  notion: mesure-n-0047
+  titre: 'Dénombrabilité usuelle : N, Z, Q dénombrables ; R et P(N) non dénombrables'
+  raison: 'partielle : la réunion dénombrable est couverte ; manquent les exemples classiques (seule la carte du deck Doublons à supprimer 1769024516946 existe) et la non-dénombrabilité de R et P(N)'
+  programme_ecg: false
+  exercices: [mes-td1-ex08, mes-td4-ex01]
+  priorite: 2
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  confiance: a_confirmer
+
+- id: mesure-a-020
+  origine: cours_l3
+  notion: mesure-n-0048
+  titre: 'Mesure extérieure et théorème de Carathéodory'
+  raison: 'absente du paquet'
+  programme_ecg: false
+  exercices: [mes-ex-2324-ex04, mes-dm-s5, mes-dm-s6]
+  priorite: 1
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  confiance: sure
+
+- id: mesure-a-021
+  origine: cours_l3
+  notion: mesure-n-0053
+  titre: 'Calcul d une intégrale : comptage, Dirac, mesure à densité'
+  raison: 'partielle : comptage/Dirac vus comme mesures (1786373133349), mais pas l intégrale par rapport à elles ni la mesure à densité'
+  programme_ecg: false
+  exercices: [mes-ex-2526-ex02, mes-td5-ex03]
+  priorite: 1
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  confiance: sure
+
+- id: mesure-a-022
+  origine: cours_l3
+  notion: mesure-n-0063
+  titre: 'Coordonnées polaires et sphériques : jacobiens'
+  raison: 'absente du paquet (seule la jacobienne générale existe)'
+  programme_ecg: false
+  exercices: [mes-ex-2324-ex01, mes-td7-ex02, mes-td7-ex04, mes-td7-ex05]
+  priorite: 1
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  confiance: sure
+
+- id: mesure-a-023
+  origine: cours_l3
+  notion: mesure-n-0064
+  titre: 'Intégrale de Gauss par Fubini puis coordonnées polaires'
+  raison: 'absente du paquet (la valeur de Gamma(1/2) existe, pas la méthode)'
+  programme_ecg: false
+  exercices: [mes-gauss-y-exp, mes-td7-ex02]
+  priorite: 1
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  confiance: a_confirmer
+
+- id: mesure-a-024
+  origine: cours_l3
+  notion: mesure-n-0069
+  titre: 'Inclusions entre espaces L^p (mesure finie)'
+  raison: 'absente du paquet'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 2}
+  confiance: sure
+
+- id: mesure-a-025
+  origine: prerequis_l1l2
+  notion: null
+  titre: 'Relation d équivalence, classes et partition ; ensemble de représentants (axiome du choix)'
+  raison: 'aucune carte trouvée dans le paquet (Grep relation, classe d équivalence, partition, représentant, axiome du choix) ; outil de mes-td2-ex10 et de la construction de Vitali'
+  programme_ecg: false
+  exercices: [mes-td2-ex10, mes-td4-ex08]
+  priorite: 2
+  source: null
+  confiance: a_confirmer

@@ -1,0 +1,68 @@
+- id: mod-m-01
+  titre: 'Calculer la fonction génératrice d''une loi (usuelle ou finie) et en tirer la loi et les moments'
+  notions: [mod-n-0001, mod-n-0002, mod-n-0003, mod-n-0005, mod-n-0007]
+  annales: 4
+- id: mod-m-02
+  titre: 'Fonction génératrice d''une somme de variables indépendantes (produit des fonctions génératrices)'
+  notions: [mod-n-0004, mod-n-0012]
+  annales: 1
+- id: mod-m-03
+  titre: 'Espérance et variance de Z_n (E[Z_n] = m^n, formule du cours ou conditionnement sur Z_n)'
+  notions: [mod-n-0009, mod-n-0010]
+  annales: 3
+- id: mod-m-04
+  titre: 'Fonction génératrice de Z_n par composition itérée et calcul de P(Z_n = k)'
+  notions: [mod-n-0011, mod-n-0012]
+  annales: 2
+- id: mod-m-05
+  titre: 'Probabilité d''extinction : plus petite racine de phi(s) = s sur [0,1], selon m <= 1 ou m > 1'
+  notions: [mod-n-0014, mod-n-0015, mod-n-0016]
+  annales: 4
+- id: mod-m-06
+  titre: 'Temps d''extinction : P(T > n) = 1 - G_n(0) et équivalent selon le régime'
+  notions: [mod-n-0013, mod-n-0017, mod-n-0018]
+  annales: 1
+- id: mod-m-07
+  titre: 'Modéliser par une matrice stochastique (vérifier, compléter) et dessiner le graphe de transition'
+  notions: [mod-n-0020, mod-n-0023, mod-n-0024, mod-n-0027]
+  annales: 4
+- id: mod-m-08
+  titre: 'Probabilité d''une trajectoire et transitions d''ordre n (mu P^n, coefficients de P^2)'
+  notions: [mod-n-0021, mod-n-0022, mod-n-0025, mod-n-0028, mod-n-0029]
+  annales: 2
+- id: mod-m-09
+  titre: 'Classer les états : accessibilité, classes récurrentes, états transitoires, irréductibilité'
+  notions: [mod-n-0030, mod-n-0031, mod-n-0032, mod-n-0033, mod-n-0035, mod-n-0036]
+  annales: 4
+- id: mod-m-10
+  titre: 'Déterminer les lois invariantes (pi P = pi, une par classe récurrente, réversibilité)'
+  notions: [mod-n-0039, mod-n-0041, mod-n-0043, mod-n-0057]
+  annales: 2
+- id: mod-m-11
+  titre: 'Calculer P^n (diagonalisation 2x2), loi limite et vitesse de convergence'
+  notions: [mod-n-0021, mod-n-0028, mod-n-0046, mod-n-0047, mod-n-0049]
+  annales: 1
+- id: mod-m-12
+  titre: 'Probabilités d''absorption ou d''atteinte par analyse au premier pas (système linéaire)'
+  notions: [mod-n-0052, mod-n-0053, mod-n-0054, mod-n-0055]
+  annales: 1
+- id: mod-m-13
+  titre: 'Temps de retour moyen : E_x[T_x] = 1/pi(x)'
+  notions: [mod-n-0048, mod-n-0050, mod-n-0051]
+  annales: 1
+- id: mod-m-14
+  titre: 'Processus de Poisson : loi de N_t et accroissements indépendants stationnaires pour calculer des probabilités'
+  notions: [mod-n-0064, mod-n-0065, mod-n-0068, mod-n-0071]
+  annales: 3
+- id: mod-m-15
+  titre: 'Temps de saut et temps aléatoires : lois exponentielle et gamma, conditionnement, indépendance'
+  notions: [mod-n-0061, mod-n-0066, mod-n-0070, mod-n-0071]
+  annales: 2
+- id: mod-m-16
+  titre: 'Loi conditionnelle des temps de saut sachant N_t = n (uniformes ordonnées)'
+  notions: [mod-n-0067]
+  annales: 1
+- id: mod-m-17
+  titre: 'Équation fonctionnelle par conditionnement sur la première génération (taille totale)'
+  notions: [mod-n-0004, mod-n-0011]
+  annales: 1

@@ -1,0 +1,1928 @@
+- id: proba-a-001-1
+  notion: proba-n-0004
+  recto: 'Que vaut \(P(A^c)\) en fonction de \(P(A)\) ?'
+  verso: '\(P(A^c)=1-P(A)\) (conséquence de \(P(\Omega)=1\) et de l''additivité sur deux événements disjoints).'
+  source: 'Poly Probabilités 5, ch. 1, p. 6 (PDF)'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-001-2
+  notion: proba-n-0004
+  recto: 'Monotonie d''une probabilité : que dire de \(P(A)\) et \(P(B)\) si \(A\subset B\) ?'
+  verso: '\(A\subset B\Rightarrow P(A)\le P(B)\).'
+  source: 'Poly Probabilités 5, ch. 1, p. 7 (PDF)'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-001-3
+  notion: proba-n-0004
+  recto: 'Sous-additivité finie : majorer \(P(A_1\cup\dots\cup A_n)\) (cas \(n=2\) : \(P(A\cup B)\)).'
+  verso: '\(P(A\cup B)\le P(A)+P(B)\) et, par récurrence, \(P(A_1\cup\dots\cup A_n)\le P(A_1)+\dots+P(A_n)\), pour des événements quelconques (non disjoints).'
+  source: 'Poly Probabilités 5, ch. 1, p. 7 (PDF)'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-001-4
+  notion: proba-n-0004
+  recto: 'Sous-additivité dénombrable : majorer \(P\big(\bigcup_{n\in\mathbb N}A_n\big)\). Comment le démontre-t-on ?'
+  verso: '\(P\big(\bigcup_{n\in\mathbb N}A_n\big)\le\sum_{n=0}^{+\infty}P(A_n)\) (le second membre peut valoir \(+\infty\)).<br>Preuve : sous-additivité finie sur \(\bigcup_{k\le n}A_k\), puis passage à la limite \(n\to+\infty\) (continuité de \(P\)).'
+  source: 'Poly Probabilités 5, ch. 1, p. 7 (PDF)'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-002-1
+  notion: proba-n-0007
+  recto: 'Que dire d''une réunion finie ou dénombrable d''événements négligeables ?'
+  verso: 'Elle est négligeable.'
+  source: 'Poly Probabilités 5, ch. 1, p. 8 (PDF)'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-002-2
+  notion: proba-n-0007
+  recto: 'Que dire d''une intersection finie ou dénombrable d''événements presque sûrs ?'
+  verso: 'Elle est presque sûre (par passage au complémentaire à partir de la réunion de négligeables).'
+  source: 'Poly Probabilités 5, ch. 1, p. 8 (PDF)'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-002-3
+  notion: proba-n-0007
+  recto: 'Preuve qu''une réunion dénombrable \(\bigcup_{n\ge1}A_n\) d''événements négligeables est négligeable.'
+  verso: 'Sous-additivité : \(P\big(\bigcup_{n\ge1}A_n\big)\le\sum_{n\ge1}P(A_n)=\sum_{n\ge1}0=0\).'
+  source: 'Poly Probabilités 5, ch. 1, p. 8 (PDF)'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-002-4
+  notion: proba-n-0007
+  recto: 'Pour la loi gaussienne centrée réduite, que vaut \(P(\mathbb Z)\) et pourquoi ?'
+  verso: '\(P(\mathbb Z)=\sum_{n\in\mathbb Z}P(\{n\})=0\) : chaque singleton est négligeable et \(\mathbb Z\) est dénombrable.'
+  source: 'Poly Probabilités 5, ch. 1, p. 8 (PDF)'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-003-1
+  notion: proba-n-0010
+  recto: 'Si \(X\) et \(Y\) sont égales presque sûrement, que dire de leurs lois ?'
+  verso: 'Elles ont même loi. (La réciproque est fausse.)'
+  source: 'Poly Probabilités 5, ch. 1, p. 8 (PDF)'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-003-2
+  notion: proba-n-0010
+  recto: 'Contre-exemple : deux variables de même loi mais non égales presque sûrement.'
+  verso: '\(X\) de Bernoulli de paramètre \(1/2\) et \(Y=1-X\) : même loi, mais \(\{X=Y\}=\{X=1/2\}\) est vide, donc \(P(X=Y)=0\).'
+  source: 'Poly Probabilités 5, ch. 1, p. 8 (PDF)'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-003-3
+  notion: proba-n-0010
+  recto: 'Preuve que \(X=Y\) p.s. implique \(P_X=P_Y\).'
+  verso: '\(N=\{X\neq Y\}\) est négligeable. Pour tout événement \(B\) : \(\{X\in B,\ Y\notin B\}\subset N\) est négligeable, donc \(P(X\in B)=P(X\in B,\ Y\in B)\). Symétriquement \(P(Y\in B)=P(X\in B,\ Y\in B)\). D''où \(P_X(B)=P_Y(B)\).'
+  source: 'Poly Probabilités 5, ch. 1, p. 9 (PDF)'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-004-1
+  notion: proba-n-0014
+  recto: 'Soit \((\Omega,P)\) un espace de probabilité. Que dire de \(S=\{\omega : P(\{\omega\})\gt 0\}\) ?'
+  verso: '\(S\) est fini ou dénombrable.'
+  source: 'Poly Probabilités 5, ch. 2, p. 12 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-004-2
+  notion: proba-n-0014
+  recto: 'Preuve que \(S=\{\omega : P(\{\omega\})\gt 0\}\) est au plus dénombrable.'
+  verso: '\(S=\bigcup_{n\ge1}S_n\) avec \(S_n=\{\omega : P(\{\omega\})\gt 1/n\}\). Chaque \(S_n\) a au plus \(n\) éléments (sinon sa probabilité dépasserait \(1\)) : \(S\) est une réunion croissante dénombrable d''ensembles finis.'
+  source: 'Poly Probabilités 5, ch. 2, p. 12 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-005-1
+  notion: proba-n-0024
+  recto: 'Définition d''une loi \(P\) à densité sur \(\mathbb R\).'
+  verso: 'Il existe \(f:\mathbb R\to\mathbb R\) localement intégrable, positive, avec \(\int_{\mathbb R}f(x)\,dx=1\), telle que pour tous \(a\le b\) dans \([-\infty,+\infty]\) : \(P(]a,b])=\int_a^b f(x)\,dx\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 16 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-005-2
+  notion: proba-n-0024
+  recto: 'Pour une loi de densité \(f\), que vaut \(P(A)\) pour un événement \(A\) quelconque de \(\mathbb R\) ? Que peut-on en conclure ?'
+  verso: '\(P(A)=\int_A f(x)\,dx=\int_{\mathbb R}\mathbf 1_A(x)f(x)\,dx\) (établi pour tout événement, pas seulement les \(]a,b]\)). Donc la densité caractérise la loi.'
+  source: 'Poly Probabilités 5, ch. 2, p. 16 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-005-3
+  notion: proba-n-0024
+  recto: 'Correspondance formelle entre loi discrète et loi à densité dans la formule \(P(A)\).'
+  verso: 'Discret : \(P(A)=\sum_{s\in S}\mathbf 1_A(s)P(\{s\})\). Densité : \(P(A)=\int_{\mathbb R}\mathbf 1_A(x)f(x)\,dx\). On passe de l''un à l''autre par \(P(\{s\})\leftrightarrow f(x)\) et \(\sum_{s\in S}\leftrightarrow\int_{\mathbb R}dx\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 16 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-006-1
+  notion: proba-n-0025
+  recto: 'Que vaut \(P(\{x\})\) pour une loi à densité ?'
+  verso: '\(P(\{x\})=0\) pour tout \(x\in\mathbb R\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 17 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-006-2
+  notion: proba-n-0025
+  recto: 'Pour une loi à densité et \(a\le b\), comparer \(P(]a,b[)\), \(P([a,b[)\), \(P(]a,b])\), \(P([a,b])\).'
+  verso: 'Elles sont toutes égales (les singletons \(\{a\},\{b\}\) sont de probabilité nulle).'
+  source: 'Poly Probabilités 5, ch. 2, p. 17 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-006-3
+  notion: proba-n-0025
+  recto: '\(P(\{x\})=0\) pour tout \(x\) suffit-il pour que la loi soit à densité ?'
+  verso: 'Non : il existe des lois qui ne sont ni discrètes ni à densité et vérifient pourtant \(P(\{x\})=0\) pour tout \(x\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 17 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-007-1
+  notion: proba-n-0026
+  recto: 'Définition du support \(S\) d''une loi \(P\) à densité sur \(\mathbb R\).'
+  verso: '\(S=\{x\in\mathbb R : \forall\epsilon\gt 0,\ P(]x-\epsilon,x+\epsilon[)\gt 0\}\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 17 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [definition]
+- id: proba-a-007-2
+  notion: proba-n-0026
+  recto: 'Pourquoi ne définit-on pas le support d''une loi à densité par \(\{x : P(\{x\})\gt 0\}\) ?'
+  verso: 'Cet ensemble est vide : tous les singletons sont de probabilité nulle pour une loi à densité.'
+  source: 'Poly Probabilités 5, ch. 2, p. 17 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [definition]
+- id: proba-a-007-3
+  notion: proba-n-0026
+  recto: 'Propriétés du support \(S\) d''une loi à densité : nature de \(S\), \(P(S)\), minimalité.'
+  verso: '\(S\) est un fermé de \(\mathbb R\) avec \(P(S)=1\) ; c''est le plus petit (pour l''inclusion) fermé de masse \(1\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 17 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [definition]
+- id: proba-a-007-4
+  notion: proba-n-0026
+  recto: 'Critère pour qu''un point \(x_0\) appartienne au support d''une loi de densité \(f\).'
+  verso: 'Si \(f\) est continue en \(x_0\) et \(f(x_0)\gt 0\), alors \(x_0\in S\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 17 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [definition]
+- id: proba-a-007-5
+  notion: proba-n-0026
+  recto: 'Supports de la loi gaussienne (variance \(\gt 0\)), de la loi exponentielle, de la loi uniforme sur \([a,b]\).'
+  verso: 'Gaussienne : \(\mathbb R\). Exponentielle : \(\mathbb R_+\). Uniforme sur \([a,b]\) : \([a,b]\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 17 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [definition]
+- id: proba-a-008-1
+  notion: proba-n-0027
+  recto: '\(X\) de densité \(f_X\) avec \(f_X=0\) presque partout sur \(\mathbb R_-\) (support dans \(\mathbb R_+\)) : définition de \(E[X]\).'
+  verso: '\(E[X]=\int_{\mathbb R}xf_X(x)\,dx=\int_0^{+\infty}xf_X(x)\,dx\in[0,+\infty]\) (bien définie car \(xf_X(x)\ge0\) ; l''espérance peut être infinie).'
+  source: 'Poly Probabilités 5, ch. 2, p. 17 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-008-2
+  notion: proba-n-0027
+  recto: '\(X\) de densité \(f_X\), de signe quelconque : quand \(E[X]\) est-elle définie et que vaut-elle ?'
+  verso: 'Si \(E[|X|]\lt +\infty\), c''est-à-dire si \(x\mapsto xf_X(x)\) est absolument intégrable : \(E[X]=\int_{\mathbb R}xf_X(x)\,dx\in\mathbb R\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 18 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-009-1
+  notion: proba-n-0030
+  recto: 'Énoncer la méthode de la fonction muette en dimension 1.'
+  verso: 'Soit \(X\) réelle. S''il existe \(f\ge0\) telle que \(E[\varphi(X)]=\int_{\mathbb R}\varphi(x)f(x)\,dx\) pour toute \(\varphi\) continue bornée (ou pour toute \(\varphi\) continue positive), alors \(X\) a pour densité \(f\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 18 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [methode]
+- id: proba-a-009-2
+  notion: proba-n-0030
+  recto: 'Densité de \(Y=\psi(X)\) par la fonction muette : les étapes.'
+  verso: 'Soit \(\varphi\) continue bornée. Formule de transfert : \(E[\varphi(Y)]=\int_{\mathbb R}\varphi(\psi(x))f_X(x)\,dx\). Changement de variable \(y=\psi(x)\) (en découpant \(\mathbb R\) si \(\psi\) n''est pas injective). On obtient \(E[\varphi(Y)]=\int\varphi(y)g(y)\,dy\) : \(g\) est la densité de \(Y\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 18 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [methode]
+- id: proba-a-009-3
+  notion: proba-n-0030
+  recto: 'Pourquoi ne peut-on pas poser directement \(y=x^2\) dans \(\int_{\mathbb R}\varphi(x^2)f(x)\,dx\) ?'
+  verso: '\(x\mapsto x^2\) est \(C^1\) mais non injective sur \(\mathbb R\). On coupe l''intégrale en \(]-\infty,0[\) et \(]0,+\infty[\), où elle est \(C^1\) et bijective sur \(]0,+\infty[\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 18 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [methode]
+- id: proba-a-010-1
+  notion: proba-n-0031
+  recto: 'Loi de \(Y=X^2\) pour \(X\) gaussienne centrée réduite.'
+  verso: '\(Y\) a pour densité \(f_Y(y)=\dfrac{e^{-y/2}}{\sqrt{2\pi y}}\mathbf 1_{y\gt 0}\) : loi Gamma\(\left(\tfrac12,\tfrac12\right)\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 19 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 3
+  tags: [exemple]
+- id: proba-a-010-2
+  notion: proba-n-0031
+  recto: '\(X\sim\mathcal N(0,1)\), \(Y=X^2\) : que donne le changement de variable sur \(]-\infty,0[\) dans \(\int_{-\infty}^0\varphi(x^2)\frac{e^{-x^2/2}}{\sqrt{2\pi}}dx\) ?'
+  verso: 'Inverse : \(x=-\sqrt y\) ; élément différentiel : \(dx=-\frac{1}{2\sqrt y}dy\) ; bornes : \(x\to-\infty\Rightarrow y\to+\infty\), \(x\to0^-\Rightarrow y\to0\). Résultat : \(\tfrac12\int_0^{+\infty}\varphi(y)\frac{e^{-y/2}}{\sqrt{2\pi y}}dy\) ; la partie \(]0,+\infty[\) donne la même valeur, d''où la densité de \(Y\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 19 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 3
+  tags: [exemple]
+- id: proba-a-011-1
+  notion: proba-n-0032
+  recto: 'Variable étagée \(X=\sum_{i=1}^p\alpha_i\mathbf 1_{A_i}\) (\(A_i\) deux à deux disjoints) : que vaut \(E[X]\) ?'
+  verso: '\(E[X]=\sum_{i=1}^p\alpha_iP(A_i)\). (Une variable étagée ne prend qu''un nombre fini de valeurs ; c''est en particulier une variable discrète.)'
+  source: 'Poly Probabilités 5, ch. 2, p. 19 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 3
+  tags: [definition]
+- id: proba-a-012-1
+  notion: proba-n-0040
+  recto: 'Preuve de Markov : quel encadrement de \(\mathbf 1_{[t,+\infty[}(x)\) utilise-t-on (\(t\gt 0\)) ?'
+  verso: 'Pour tout \(x\in\mathbb R\) : \(\mathbf 1_{[t,+\infty[}(x)\le\dfrac{x}{t}\mathbf 1_{[t,+\infty[}(x)\le\dfrac{\max(0,x)}{t}\le\dfrac{|x|}{t}\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 23 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [demonstration]
+- id: proba-a-012-2
+  notion: proba-n-0040
+  recto: 'Comment conclut-on la preuve de Markov à partir de cet encadrement ?'
+  verso: 'On applique l''encadrement à \(X\) et on prend l''espérance (positivité de l''espérance), avec \(P(X\ge t)=E\left[\mathbf 1_{[t,+\infty[}(X)\right]\) : \(P(X\ge t)\le\dfrac{E[X^+]}{t}\le\dfrac{E[|X|]}{t}\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 23 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [demonstration]
+- id: proba-a-013-1
+  notion: proba-n-0041
+  recto: 'Si \(X\ge0\) p.s., à quelle condition sur \(E[X]\) a-t-on \(P(X=0)=1\) ?'
+  verso: 'Pour \(X\) presque sûrement positive : \(P(X=0)=1\iff E[X]=0\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 23 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-013-2
+  notion: proba-n-0041
+  recto: 'Preuve de \(E[X]=0\Rightarrow P(X=0)=1\) pour \(X\ge0\) p.s.'
+  verso: '\(P(X=0)=1-P(X\gt 0)\) et, par continuité croissante, \(P(X\gt 0)=\lim_n P(X\gt 1/n)\). Markov donne \(0\le P(X\gt 1/n)\le nE[X]=0\) pour tout \(n\ge1\). Donc \(P(X\gt 0)=0\) et \(P(X=0)=1\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 23 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-014-1
+  notion: proba-n-0042
+  recto: 'Énoncer l''inégalité de Jensen pour une variable aléatoire.'
+  verso: 'Soit \(X\) d''espérance finie, à valeurs dans un intervalle \(I\), et \(\varphi\) convexe sur \(I\), telle que \(\varphi(X)\) soit p.s. positive ou d''espérance finie. Alors \(\varphi(E[X])\le E[\varphi(X)]\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 24 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-014-2
+  notion: proba-n-0042
+  recto: 'Si \(X\) d''espérance finie est à valeurs dans un intervalle \(I\) (\(S_X\subset I\)), où se trouve \(E[X]\) ? Appartient-elle à \(S_X\) ?'
+  verso: '\(E[X]\in I\) (ex. : \(a\le X\le b\) p.s. \(\Rightarrow a\le E[X]\le b\)), ce qui donne un sens à \(\varphi(E[X])\) dans Jensen. Mais \(E[X]\) n''est pas forcément dans \(S_X\) : Bernoulli\((1/2)\) a pour support \(\{0,1\}\) et pour espérance \(1/2\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 24 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-015-1
+  notion: proba-n-0043
+  recto: 'Comparer \(E[|X|^p]^{1/p}\) et \(E[|X|^q]^{1/q}\) pour \(0\lt p\lt q\).'
+  verso: '\(E[|X|^p]^{1/p}\le E[|X|^q]^{1/q}\) pour toute variable réelle \(X\) et tous \(0\lt p\lt q\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 24 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-015-2
+  notion: proba-n-0043
+  recto: 'Preuve de \(E[|X|^p]^{1/p}\le E[|X|^q]^{1/q}\) (\(0\lt p\lt q\)) par Jensen.'
+  verso: 'Jensen pour \(|X|^p\) à valeurs dans \([0,+\infty[\) et \(x\mapsto x^{q/p}\), convexe sur \([0,+\infty[\) car \(q/p\gt 1\) : \(\big(E[|X|^p]\big)^{q/p}\le E[|X|^q]\). On applique ensuite \(x\mapsto x^{1/q}\), croissante sur \(\mathbb R_+\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 24 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-016-1
+  notion: proba-n-0045
+  recto: 'Quelles fonctions \(f\) sont des densités de lois sur \(\mathbb R\) ?'
+  verso: 'Toute fonction \(f\) suffisamment régulière (localement intégrable), positive, d''intégrale \(1\) : il existe alors une variable aléatoire dont la loi admet la densité \(f\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 25 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-016-2
+  notion: proba-n-0045
+  recto: 'Deux variables \(X,Y\) de densités \(f_X,f_Y\) : à quelle condition ont-elles même loi ?'
+  verso: '\(P_X=P_Y\iff f_X=f_Y\) sauf éventuellement sur un ensemble de longueur nulle.'
+  source: 'Poly Probabilités 5, ch. 3, p. 26 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-016-3
+  notion: proba-n-0045
+  recto: 'Qu''appelle-t-on ensemble de longueur nulle pour comparer deux densités ? Un exemple ?'
+  verso: 'Un ensemble \(A\) tel que \(\int_A dx=0\). Par exemple tout ensemble fini ou dénombrable. La densité d''une loi n''est donc pas unique.'
+  source: 'Poly Probabilités 5, ch. 3, p. 26 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-017-1
+  notion: proba-n-0046
+  recto: 'Critère simple pour montrer que deux variables de densités \(f_X,f_Y\) n''ont pas la même loi.'
+  verso: 'S''il existe \(x_0\) où \(f_X\) et \(f_Y\) sont toutes deux continues avec \(f_X(x_0)\neq f_Y(x_0)\), alors les lois de \(X\) et \(Y\) sont distinctes.'
+  source: 'Poly Probabilités 5, ch. 3, p. 26 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-017-2
+  notion: proba-n-0046
+  recto: 'Preuve du critère « \(f_X(x_0)\neq f_Y(x_0)\) en un point de continuité commun \(\Rightarrow\) lois distinctes ».'
+  verso: '\(F_X\) et \(F_Y\) sont dérivables en \(x_0\) avec \(F_X^{\prime}(x_0)=f_X(x_0)\neq f_Y(x_0)=F_Y^{\prime}(x_0)\). Donc \(F_X\neq F_Y\), et comme la fonction de répartition caractérise la loi, les lois sont différentes.'
+  source: 'Poly Probabilités 5, ch. 3, p. 31 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-018-1
+  notion: proba-n-0047
+  recto: 'Schéma général pour caractériser une loi par des fonctions tests.'
+  verso: 'On a \(P_X(A)=E[\mathbf 1_A(X)]\). Pour une famille \(\mathcal F\) de fonctions tests assez riche : \(P_X=P_Y\iff\forall\psi\in\mathcal F,\ E[\psi(X)]=E[\psi(Y)]\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 26 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [methode]
+- id: proba-a-018-2
+  notion: proba-n-0047
+  recto: 'Famille de tests paramétrée \(\mathcal F=\{\psi_\lambda,\lambda\in\Lambda\}\) : à quoi se ramène \(P_X=P_Y\) ?'
+  verso: 'Avec \(H_X(\lambda)=E[\psi_\lambda(X)]\) : \(P_X=P_Y\iff\forall\lambda\in\Lambda,\ H_X(\lambda)=H_Y(\lambda)\). La fonction \(H_X\) caractérise la loi de \(X\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 26 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [methode]
+- id: proba-a-018-3
+  notion: proba-n-0047
+  recto: 'Quelle fonctionnelle obtient-on avec les fonctions tests \(\mathcal F=\{\mathbf 1_{]-\infty,x]},x\in\mathbb R\}\) ?'
+  verso: 'La fonction de répartition : \(H_X(x)=E[\mathbf 1_{]-\infty,x]}(X)]=F_X(x)\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 26-27 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [methode]
+- id: proba-a-018-4
+  notion: proba-n-0047
+  recto: 'Quelle étude conduit à la famille de tests \(\mathcal F=\{x\mapsto x^n,n\in\mathbb N\}\) ?'
+  verso: 'L''étude des moments \(E[X^n]\). (Ils caractérisent la loi par exemple pour une variable bornée.)'
+  source: 'Poly Probabilités 5, ch. 3, p. 27 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [methode]
+- id: proba-a-018-5
+  notion: proba-n-0047
+  recto: 'Quelle fonctionnelle obtient-on avec les fonctions tests \(\mathcal F=\{x\mapsto e^{itx},t\in\mathbb R\}\) ?'
+  verso: 'La fonction caractéristique : \(H_X(t)=E[e^{itX}]=\varphi_X(t)\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 27 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [methode]
+- id: proba-a-019-1
+  notion: proba-n-0050
+  recto: 'Exprimer \(P(a\lt X\le b)\) et \(P(X\gt a)\) avec \(F_X\).'
+  verso: '\(P(]a,b])=F_X(b)-F_X(a)\) et \(P(]a,+\infty[)=1-F_X(a)\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 28 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-019-2
+  notion: proba-n-0050
+  recto: 'Exprimer \(P(X\lt a)\) et \(P(X\ge a)\) avec \(F_X\) (limite à gauche).'
+  verso: '\(P(X\lt a)=\lim_{x\to a^-}F_X(x)\) et \(P(X\ge a)=1-\lim_{x\to a^-}F_X(x)\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 28 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-019-3
+  notion: proba-n-0050
+  recto: 'Exprimer \(P(a\le X\le b)\) avec \(F_X\) (\(a\lt b\)).'
+  verso: '\(P([a,b])=F_X(b)-\lim_{x\to a^-}F_X(x)\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 28 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-019-4
+  notion: proba-n-0050
+  recto: 'Exprimer \(P(a\lt X\lt b)\) et \(P(a\le X\lt b)\) avec \(F_X\) (\(a\lt b\)).'
+  verso: '\(P(]a,b[)=\lim_{x\to b^-}F_X(x)-F_X(a)\) et \(P([a,b[)=\lim_{x\to b^-}F_X(x)-\lim_{x\to a^-}F_X(x)\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 28 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-019-5
+  notion: proba-n-0050
+  recto: 'Que vaut \(P(X=x)\) en fonction de \(F_X\) ?'
+  verso: '\(P(X=x)=F_X(x)-\lim_{y\to x^-}F_X(y)\) : c''est le saut de \(F_X\) en \(x\). (\(F_X\) est toujours continue à droite.)'
+  source: 'Poly Probabilités 5, ch. 3, p. 27-28 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-020-1
+  notion: proba-n-0051
+  recto: 'Combien de discontinuités peut avoir \(F_X\) ? Où sont-elles ?'
+  verso: 'Au plus un nombre dénombrable. \(F_X\) est discontinue exactement aux \(x\) tels que \(P(X=x)\gt 0\) (au plus dénombrables, d''après la proposition sur \(\{\omega : P(\{\omega\})\gt 0\}\)).'
+  source: 'Poly Probabilités 5, ch. 3, p. 28 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 2
+  tags: [propriete]
+- id: proba-a-020-2
+  notion: proba-n-0051
+  recto: 'Que dire de \(F_X\) si \(X\) est une variable à densité ? Pourquoi ?'
+  verso: '\(F_X\) est continue sur \(\mathbb R\) : \(P(X=x)=0\) pour tout \(x\), donc \(F_X\) est continue à gauche (et elle l''est déjà à droite).'
+  source: 'Poly Probabilités 5, ch. 3, p. 28 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 2
+  tags: [propriete]
+- id: proba-a-020-3
+  notion: proba-n-0051
+  recto: '\(F_X\) continue implique-t-elle que la loi de \(X\) est à densité ?'
+  verso: 'Non : une fonction de répartition peut être continue sans que la loi ait une densité.'
+  source: 'Poly Probabilités 5, ch. 3, p. 29 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 2
+  tags: [propriete]
+- id: proba-a-021-1
+  notion: proba-n-0052
+  recto: 'Si \(F_X\) est continue sur \(\mathbb R\) et \(C^1\) par morceaux, que dire de \(X\) ?'
+  verso: '\(X\) est à densité et \(F_X^{\prime}\) est une densité de sa loi.'
+  source: 'Poly Probabilités 5, ch. 3, p. 29 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-021-2
+  notion: proba-n-0052
+  recto: 'Si \(X\) a une densité \(f_X\) continue en \(x_0\), que dire de \(F_X\) en \(x_0\) ?'
+  verso: '\(F_X\) est dérivable en \(x_0\) et \(F_X^{\prime}(x_0)=f_X(x_0)\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 29 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-021-3
+  notion: proba-n-0052
+  recto: 'Exprimer \(F_X(x)\) à l''aide de la densité \(f_X\).'
+  verso: '\(F_X(x)=\int_{-\infty}^x f_X(y)\,dy\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 29 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-022-1
+  notion: proba-n-0053
+  recto: 'Caractériser les fonctions \(F:\mathbb R\to\mathbb R\) qui sont des fonctions de répartition de variables aléatoires réelles.'
+  verso: '\(F\) est une fonction de répartition \(\iff\) \(F\) est croissante, \(\lim_{-\infty}F=0\), \(\lim_{+\infty}F=1\), et \(F\) est continue à droite. (Condition nécessaire démontrée ; suffisante admise.)'
+  source: 'Poly Probabilités 5, ch. 3, p. 30 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-023-1
+  notion: proba-n-0054
+  recto: 'La fonction de répartition caractérise-t-elle la loi ? Énoncer.'
+  verso: 'Oui : deux variables réelles \(X,Y\) ont même loi \(\iff F_X=F_Y\) sur \(\mathbb R\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 30 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-023-2
+  notion: proba-n-0054
+  recto: 'Schéma de preuve de \(F_X=F_Y\Rightarrow P_X=P_Y\).'
+  verso: '\(F_X=F_Y\) entraîne que \(P_X\) et \(P_Y\) coïncident sur tous les intervalles (corollaire sur \(P(]a,b])\), etc.), puis sur les réunions dénombrables disjointes d''intervalles, les complémentaires et les réunions croissantes ; cela suffit à les faire coïncider sur tous les événements. (Schéma, non démonstration complète.)'
+  source: 'Poly Probabilités 5, ch. 3, p. 31 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-024-1
+  notion: proba-n-0056
+  recto: '\(X\) de densité \(f(x)=3x^{-4}\mathbf 1_{x\ge1}\) (loi de Pareto) : calculer \(E[X^n]\), \(n\in\mathbb N^*\).'
+  verso: 'Formule de transfert : \(E[X^n]=3\int_1^{+\infty}x^{n-4}dx\). Pour \(n\lt 3\) : \(\dfrac{3}{3-n}\) ; pour \(n\ge3\) : \(+\infty\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 31 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [exemple]
+- id: proba-a-024-2
+  notion: proba-n-0056
+  recto: 'Quels moments admet la loi de Pareto de densité \(3x^{-4}\mathbf 1_{x\ge1}\) ?'
+  verso: 'Les moments d''ordre \(1\) et \(2\) seulement (\(E[X]=3/2\), \(E[X^2]=3\)) ; aucun moment d''ordre \(\ge3\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 31 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [exemple]
+- id: proba-a-025-1
+  notion: proba-n-0057
+  recto: 'Si \(X\) a un moment d''ordre \(q\in\mathbb N^*\), quels autres moments a-t-elle ?'
+  verso: 'Elle a un moment d''ordre \(p\) pour tout \(p\in\mathbb N^*\) tel que \(p\lt q\) (conséquence de la comparaison \(E[|X|^p]^{1/p}\le E[|X|^q]^{1/q}\)).'
+  source: 'Poly Probabilités 5, ch. 3, p. 32 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-025-2
+  notion: proba-n-0057
+  recto: 'Pour vérifier que \(X\) possède des moments de tout ordre, que suffit-il de vérifier ?'
+  verso: 'Qu''elle possède des moments d''ordre pair.'
+  source: 'Poly Probabilités 5, ch. 3, p. 32 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-025-3
+  notion: proba-n-0057
+  recto: 'Si \(X\) possède un moment d''ordre \(n\), que dire de \(aX+b\) (\(a,b\in\mathbb R\)) ? Pourquoi ?'
+  verso: '\(aX+b\) possède aussi un moment d''ordre \(n\) : \(E[|aX+b|^n]\le\sum_{k=0}^n\binom nk|a|^k|b|^{n-k}E[|X|^k]\lt +\infty\), car \(X\) a un moment d''ordre \(k\) pour tout \(k\le n\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 32 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-026-1
+  notion: proba-n-0061
+  recto: 'Définition d''une variable aléatoire réelle bornée.'
+  verso: 'Il existe \(\alpha\le\beta\) réels avec \(P(X\in[\alpha,\beta])=1\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 33 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 2
+  tags: [definition]
+- id: proba-a-026-2
+  notion: proba-n-0061
+  recto: 'Critère de support borné par la fonction de répartition.'
+  verso: 'S''il existe \(\alpha\le\beta\) réels avec \(F_X(\alpha)=0\) et \(F_X(\beta)=1\), alors \(P(X\in]\alpha,\beta])=F_X(\beta)-F_X(\alpha)=1\) : \(X\) est bornée.'
+  source: 'Poly Probabilités 5, ch. 3, p. 33 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 2
+  tags: [definition]
+- id: proba-a-026-3
+  notion: proba-n-0061
+  recto: 'Critère de support borné par la densité.'
+  verso: 'Si \(X\) a une densité \(f_X\) nulle sur \(]-\infty,\alpha[\cup]\beta,+\infty[\) (avec \(\alpha\le\beta\) réels), alors \(P(X\in[\alpha,\beta])=\int_\alpha^\beta f_X=\int_{\mathbb R}f_X=1\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 33 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 2
+  tags: [definition]
+- id: proba-a-026-4
+  notion: proba-n-0061
+  recto: 'Les lois géométrique, gaussienne et exponentielle sont-elles à support borné ? Citer des lois à support borné.'
+  verso: 'Aucune des trois n''est à support borné. Sont à support borné : l''uniforme sur \([0,1]\) ou sur \(\{1,\dots,n\}\), les lois binomiales.'
+  source: 'Poly Probabilités 5, ch. 3, p. 33 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 2
+  tags: [definition]
+- id: proba-a-027-1
+  notion: proba-n-0062
+  recto: 'Caractérisation du support borné par les moments : énoncer l''équivalence (\(\alpha\ge0\)).'
+  verso: 'Équivalence entre :<br>1. \(P(X\in[-\alpha,\alpha])=1\) ;<br>2. \(X\) a des moments de tout ordre et \(E[|X|^n]\le\alpha^n\) pour tout \(n\ge1\) ;<br>3. \(X\) a des moments de tout ordre et \(\lim_{n\to+\infty}E[|X|^n]^{1/n}\le\alpha\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 33 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 2
+  tags: [theoreme]
+- id: proba-a-027-2
+  notion: proba-n-0062
+  recto: 'Preuve de 3 \(\Rightarrow\) 1 dans la caractérisation du support borné par les moments.'
+  verso: 'Posons \(m_n=E[|X|^n]^{1/n}\) : par Jensen \(m_n\le m_{n+1}\), donc \(m_n\uparrow m_\infty\le\alpha\). Markov : \(P(|X|\gt \alpha+\varepsilon)\le\left(\frac{m_n}{\alpha+\varepsilon}\right)^n\le\left(\frac{m_\infty}{\alpha+\varepsilon}\right)^n\to0\). Puis continuité monotone : \(P(|X|\gt \alpha)=\lim_n P(|X|\gt \alpha+1/n)=0\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 33-34 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 2
+  tags: [theoreme]
+- id: proba-a-028-1
+  notion: proba-n-0063
+  recto: 'Que dire des moments d''une variable aléatoire bornée vis-à-vis de sa loi ?'
+  verso: 'Si \(X\) est bornée, ses moments \((E[X^n])_{n\ge1}\) caractérisent sa loi.'
+  source: 'Poly Probabilités 5, ch. 3, p. 34 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 2
+  tags: [propriete]
+- id: proba-a-029-1
+  notion: proba-n-0064
+  recto: 'Définition de la fonction caractéristique \(\varphi_X\) d''une variable réelle \(X\).'
+  verso: '\(\forall t\in\mathbb R,\ \varphi_X(t)=E\left[e^{itX}\right]=E[\cos(tX)]+iE[\sin(tX)]\in\mathbb C\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 34 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-029-2
+  notion: proba-n-0064
+  recto: 'Pourquoi \(\varphi_X(t)\) est-elle définie pour toute variable réelle \(X\) et tout \(t\) ?'
+  verso: 'Car \(|e^{itX}|=1\) : la variable \(e^{itX}\) est bornée, donc d''espérance bien définie.'
+  source: 'Poly Probabilités 5, ch. 3, p. 34 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-029-3
+  notion: proba-n-0064
+  recto: 'Calculer \(\varphi_X(t)\) pour \(X\) discrète de support \(S_X\), puis pour \(X\) de densité \(f_X\).'
+  verso: 'Formule de transfert. Discret : \(\varphi_X(t)=\sum_{k\in S_X}e^{itk}P(X=k)\). Densité : \(\varphi_X(t)=\int_{\mathbb R}e^{itx}f_X(x)\,dx\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 35-36 et 38 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-030-1
+  notion: proba-n-0065
+  recto: 'Que valent \(\varphi_X(0)\) et la borne sur \(|\varphi_X(t)|\) ?'
+  verso: '\(\varphi_X(0)=1\) et \(|\varphi_X(t)|\le1\) pour tout \(t\) (car \(|E[e^{itX}]|\le E[|e^{itX}|]=1\)).'
+  source: 'Poly Probabilités 5, ch. 3, p. 34 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-030-2
+  notion: proba-n-0065
+  recto: 'Exprimer \(\varphi_{aX+b}(t)\) en fonction de \(\varphi_X\).'
+  verso: '\(\varphi_{aX+b}(t)=\varphi_X(at)\,e^{ibt}\) (car \(e^{it(aX+b)}=e^{iatX}e^{itb}\)).'
+  source: 'Poly Probabilités 5, ch. 3, p. 34 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-030-3
+  notion: proba-n-0065
+  recto: 'Régularité de \(\varphi_X\) sur \(\mathbb R\) pour toute variable \(X\).'
+  verso: '\(\varphi_X\) est uniformément continue sur \(\mathbb R\) (via \(\sup_t|\varphi_X(t+u)-\varphi_X(t)|\le E|e^{iuX}-1|\to0\) quand \(u\to0\), par convergence dominée).'
+  source: 'Poly Probabilités 5, ch. 3, p. 34-35 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-030-4
+  notion: proba-n-0065
+  recto: 'Comportement de \(\varphi_X(t)\) quand \(t\to\pm\infty\) si la loi de \(X\) a une densité ?'
+  verso: '\(\varphi_X(t)\to0\) quand \(t\to\pm\infty\) (théorème de Riemann-Lebesgue, admis).'
+  source: 'Poly Probabilités 5, ch. 3, p. 34-35 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-031-1
+  notion: proba-n-0066
+  recto: 'Fonction caractéristique de la loi de Bernoulli de paramètre \(p\).'
+  verso: '\(\varphi_X(t)=e^{it\cdot0}P(X=0)+e^{it\cdot1}P(X=1)=1-p+pe^{it}\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 35 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-031-2
+  notion: proba-n-0066
+  recto: 'Fonction caractéristique de la loi binomiale de paramètres \(n,p\).'
+  verso: '\(\varphi_X(t)=\sum_{k=0}^n\binom nk p^k(1-p)^{n-k}e^{ikt}=(1-p+pe^{it})^n\) (formule du binôme).'
+  source: 'Poly Probabilités 5, ch. 3, p. 35 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-032-1
+  notion: proba-n-0067
+  recto: 'Fonction caractéristique de la loi uniforme sur \(\{1,\dots,n\}\) pour \(t\notin2\pi\mathbb Z\).'
+  verso: '\(\varphi_X(t)=\sum_{k=1}^n\frac{e^{itk}}{n}=\dfrac{e^{it}}{n}\cdot\dfrac{1-e^{itn}}{1-e^{it}}\) (somme géométrique de raison \(e^{it}\)).'
+  source: 'Poly Probabilités 5, ch. 3, p. 35 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-032-2
+  notion: proba-n-0067
+  recto: 'Pour \(X\) uniforme sur \(\{1,\dots,n\}\), que vaut \(\varphi_X(2k\pi)\), \(k\in\mathbb Z\) ?'
+  verso: '\(\varphi_X(2k\pi)=1\) (tous les \(e^{i2k\pi j}\) valent \(1\)).'
+  source: 'Poly Probabilités 5, ch. 3, p. 35 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-033-1
+  notion: proba-n-0068
+  recto: 'Fonction caractéristique de la loi géométrique de paramètre \(p\in]0,1[\) (\(P(X=k)=p(1-p)^{k-1}\), \(k\ge1\)).'
+  verso: '\(\varphi_X(t)=\sum_{k\ge1}e^{itk}p(1-p)^{k-1}=\dfrac{pe^{it}}{1-(1-p)e^{it}}\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 35 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-033-2
+  notion: proba-n-0068
+  recto: 'Fonction caractéristique de la loi de Poisson de paramètre \(\lambda\gt 0\).'
+  verso: '\(\varphi_X(t)=\sum_{k\ge0}e^{itk}\frac{\lambda^k}{k!}e^{-\lambda}=e^{\lambda e^{it}}e^{-\lambda}=e^{\lambda(e^{it}-1)}\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 36 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-034-1
+  notion: proba-n-0069
+  recto: 'Fonction caractéristique de la loi uniforme sur \([a,b]\) (\(a\lt b\)), pour \(t\neq0\).'
+  verso: '\(\varphi_X(t)=\dfrac1{b-a}\int_a^b e^{itx}dx=\dfrac{e^{itb}-e^{ita}}{it(b-a)}\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 36 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-034-2
+  notion: proba-n-0069
+  recto: 'Fonction caractéristique de la loi exponentielle de paramètre \(\theta\gt 0\) (densité \(\theta e^{-\theta x}\mathbf 1_{x\gt 0}\)).'
+  verso: '\(\varphi_X(t)=\int_0^{+\infty}e^{itx}\theta e^{-\theta x}dx=\dfrac{\theta}{\theta-it}\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 36 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-034-3
+  notion: proba-n-0069
+  recto: 'Fonction caractéristique de la loi gamma de paramètres \(\theta\gt 0\) (taux) et \(p\gt 0\) (forme), de densité \(\frac{\theta^p}{\Gamma(p)}x^{p-1}e^{-\theta x}\mathbf 1_{x\gt 0}\).'
+  verso: '\(\varphi_X(t)=\left(\dfrac{\theta}{\theta-it}\right)^p\). (Pour \(p=1\), c''est l''exponentielle.)'
+  source: 'Poly Probabilités 5, ch. 3, p. 36 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-034-4
+  notion: proba-n-0069
+  recto: 'Comment obtient-on \(\varphi\) de la loi gamma\((\theta,p)\) pour \(p\) entier ?'
+  verso: 'Intégration par parties avec \(\Gamma(p)=(p-1)\Gamma(p-1)\) : \(\varphi_{\theta,p}(t)=\frac{\theta}{\theta-it}\varphi_{\theta,p-1}(t)\). Récurrence jusqu''à \(p=1\) (exponentielle) : \(\left(\frac{\theta}{\theta-it}\right)^p\). Valable pour tout \(p\gt 0\) (admis).'
+  source: 'Poly Probabilités 5, ch. 3, p. 36 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-035-1
+  notion: proba-n-0070
+  recto: 'Fonction caractéristique de la loi gaussienne de moyenne \(\mu\) et de variance \(\sigma^2\).'
+  verso: '\(\varphi_X(t)=e^{i\mu t-\sigma^2t^2/2}\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 37 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-035-2
+  notion: proba-n-0070
+  recto: 'Fonction caractéristique de la loi de Cauchy de densité \(x\mapsto\dfrac{a}{\pi\left(a^2+(x-x_0)^2\right)}\) (échelle \(a\gt 0\), médiane \(x_0\)).'
+  verso: '\(\varphi_X(t)=e^{ix_0t-a|t|}\) (résultat admis ; analyse complexe ou de Fourier).'
+  source: 'Poly Probabilités 5, ch. 3, p. 37 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-036-1
+  notion: proba-n-0071
+  recto: 'Caractériser les fonctions \(\varphi:\mathbb R\to\mathbb C\) qui sont des fonctions caractéristiques de variables réelles.'
+  verso: '\(\varphi\) est une fonction caractéristique \(\iff\)<br>1. \(\varphi(0)=1\) ;<br>2. \(\varphi\) est continue en \(0\) ;<br>3. \(\varphi(-t)=\overline{\varphi(t)}\) pour tout \(t\) ;<br>4. pour tout \(k\ge1\) et \(t_1,\dots,t_k\in\mathbb R\), la matrice hermitienne \((\varphi(t_p-t_q))_{1\le p,q\le k}\) est positive.<br>(Seule la condition nécessaire est démontrée.)'
+  source: 'Poly Probabilités 5, ch. 3, p. 37 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-037-1
+  notion: proba-n-0072
+  recto: 'La fonction caractéristique caractérise-t-elle la loi ? Énoncer.'
+  verso: 'Oui : \(X\) et \(Y\) ont même loi \(\iff\varphi_X=\varphi_Y\) (sens direct par la formule de transfert ; sens réciproque admis).'
+  source: 'Poly Probabilités 5, ch. 3, p. 38 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-038-1
+  notion: proba-n-0073
+  recto: 'Retrouver \(P(X=k)\) à partir de \(\varphi_X\) pour \(X\) à valeurs dans \(\mathbb Z\).'
+  verso: '\(\forall k\in\mathbb Z,\ P(X=k)=\dfrac1{2\pi}\int_0^{2\pi}\varphi_X(t)e^{-itk}\,dt\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 38 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-038-2
+  notion: proba-n-0073
+  recto: 'Preuve de la formule d''inversion \(P(X=k)=\frac1{2\pi}\int_0^{2\pi}\varphi_X(t)e^{-itk}dt\).'
+  verso: 'Avec \(p_n=P(X=n)\) : \(\varphi_X(t)e^{-itk}=\sum_{n\in\mathbb Z}p_ne^{it(n-k)}\). On intervertit somme et intégrale (la série des modules vaut \(\sum p_n=1\)). Or \(\int_0^{2\pi}e^{it(n-k)}dt=0\) si \(n\ne k\) et \(2\pi\) si \(n=k\) : l''intégrale vaut \(2\pi p_k\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 38 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-039-1
+  notion: proba-n-0074
+  recto: 'Formule d''inversion de Fourier : retrouver la densité \(f_X\) à partir de \(\varphi_X\) (hypothèses et formule).'
+  verso: 'Si \(X\) a une densité \(f_X\) et si \(\varphi_X\) est intégrable (\(\int|\varphi_X|\lt +\infty\)), alors en tout point \(x_0\) de continuité de \(f_X\) : \(f_X(x_0)=\dfrac1{2\pi}\int_{-\infty}^{+\infty}\varphi_X(t)e^{-itx_0}\,dt\) (admis).'
+  source: 'Poly Probabilités 5, ch. 3, p. 39 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-040-1
+  notion: proba-n-0075
+  recto: 'Si \(X\) possède un moment d''ordre \(n\), quelle régularité a \(\varphi_X\) et que vaut sa dérivée d''ordre \(p\le n\) ?'
+  verso: '\(\varphi_X\) est de classe \(C^n\) et \(\varphi_X^{(p)}(t)=i^pE\left[X^pe^{itX}\right]\) pour \(p=1,\dots,n\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 39 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-040-2
+  notion: proba-n-0075
+  recto: 'Retrouver \(E[X^p]\) à partir de \(\varphi_X\) (moment d''ordre \(n\ge p\)).'
+  verso: '\(\varphi_X^{(p)}(0)=i^pE[X^p]\), donc \(E[X^p]=\varphi_X^{(p)}(0)/i^p\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 39 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-040-3
+  notion: proba-n-0075
+  recto: 'Développement limité de \(\varphi_X\) en \(0\) si \(X\) possède un moment d''ordre \(n\).'
+  verso: '\(\varphi_X(t)=1+itE[X]+\dots+\dfrac{(it)^n}{n!}E[X^n]+o(t^n)\) quand \(t\to0\).'
+  source: 'Poly Probabilités 5, ch. 3, p. 39 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-040-4
+  notion: proba-n-0075
+  recto: 'Si \(\varphi_X\) est \(C^1\), \(X\) a-t-elle un moment d''ordre \(1\) ? Exemple.'
+  verso: 'Pas forcément : la réciproque est fausse. Si \(X\) a pour densité \(c\,\mathbf 1_{|x|\gt 2}\dfrac{1}{x^2\ln|x|}\), alors \(X\) n''a aucun moment et \(\varphi_X\) est continûment dérivable.'
+  source: 'Poly Probabilités 5, ch. 3, p. 40 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-041-1
+  notion: proba-n-0076
+  recto: 'Quand a-t-on \(\varphi_X(t)=\sum_{n\ge0}\frac{(it)^n}{n!}E[X^n]\) ?'
+  verso: 'Pour les \(t\) (voisinage de \(0\)) tels que \(\sum_{n\ge0}\frac{|t|^n}{n!}E[|X|^n]\lt +\infty\) : on peut alors intervertir somme et espérance.'
+  source: 'Poly Probabilités 5, ch. 3, p. 39 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-041-2
+  notion: proba-n-0076
+  recto: 'Dans ce cas (série entière de \(\varphi_X\) autour de \(0\)), que permettent moments et \(\varphi_X\) l''un pour l''autre ?'
+  verso: 'Les moments donnent \(\varphi_X\) au voisinage de \(0\) ; réciproquement, l''unicité du développement en série entière de \(\varphi_X\) permet d''en déduire les moments.'
+  source: 'Poly Probabilités 5, ch. 3, p. 39 (PDF)'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-042-1
+  notion: proba-n-0077
+  recto: 'Définition d''un vecteur aléatoire \(X\) à valeurs dans \(\mathbb R^n\) à densité.'
+  verso: 'Il existe \(f:\mathbb R^n\to\mathbb R\) positive, localement intégrable, telle que pour tout événement \(B\) de \(\mathbb R^n\) : \(P_X(B)=\int_{\mathbb R^n}\mathbf 1_B(x_1,\dots,x_n)f(x_1,\dots,x_n)\,dx_1\cdots dx_n\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 41 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-042-2
+  notion: proba-n-0077
+  recto: 'Conditions pour qu''une fonction \(f\) sur \(\mathbb R^n\) soit une densité de probabilité.'
+  verso: '\(f\) localement intégrable, \(f\ge0\) et \(\int_{\mathbb R^n}f(x_1,\dots,x_n)\,dx_1\cdots dx_n=1\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 41 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-042-3
+  notion: proba-n-0077
+  recto: 'Quand deux densités sur \(\mathbb R^n\) définissent-elles la même loi ? Critère de lois distinctes.'
+  verso: 'Ssi elles sont égales presque partout (la densité n''est pas unique). Si deux densités prennent des valeurs distinctes en un point de \(\mathbb R^n\) où elles sont toutes deux continues, les lois sont distinctes.'
+  source: 'Poly Probabilités 5, ch. 4, p. 41 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-043-1
+  notion: proba-n-0079
+  recto: 'Pour calculer \(\iint\dots dx\,dy\) en intégrant d''abord en \(x\) puis en \(y\), comment détermine-t-on les bornes ?'
+  verso: 'Dans l''ordre inverse : on détermine d''abord les bornes de \(y\), puis, à \(y\) fixé, celles de \(x\). On procède par équivalences en vérifiant que chaque inégalité du système initial figure (éventuellement transformée) dans le système final ; un dessin du domaine permet de contrôler.'
+  source: 'Poly Probabilités 5, ch. 4, p. 42 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [methode]
+- id: proba-a-043-2
+  notion: proba-n-0079
+  recto: 'Domaine \(D=\{x\ge0,\ y\ge0,\ x+y\le1\}\) : bornes pour intégrer en \(x\) puis en \(y\).'
+  verso: '\(0\le x,\ 0\le y,\ x+y\le1\iff0\le y\le x+y\le1\iff\begin{cases}0\le y\le1\\0\le x\le1-y\end{cases}\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 42 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [methode]
+- id: proba-a-043-3
+  notion: proba-n-0079
+  recto: 'Vérifier que \(f(x,y)=3(x+y)\mathbf 1_{(x,y)\in D}\), \(D=\{x\ge0,y\ge0,x+y\le1\}\), est une densité.'
+  verso: '\(f\ge0\) et, par Fubini-Tonelli : \(\int_{\mathbb R^2}f=3\int_0^1\left(\int_0^{1-y}(x+y)\,dx\right)dy=3\int_0^1\tfrac12(1-y^2)\,dy=3\left(\tfrac12-\tfrac16\right)=1\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 42-43 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [methode]
+- id: proba-a-044-1
+  notion: proba-n-0080
+  recto: 'Formule de transfert pour un vecteur \(X\) de densité \(f\) et \(\varphi:\mathbb R^n\to\mathbb R\).'
+  verso: 'Si \(\varphi\ge0\) : \(E[\varphi(X)]=\int_{\mathbb R^n}\varphi(x)f(x)\,dx\in[0,+\infty]\). Si \(E[|\varphi(X)|]\lt +\infty\) : même formule, valeur finie dans \(\mathbb R\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 43 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-044-2
+  notion: proba-n-0080
+  recto: 'Que donne la formule de transfert pour \(\varphi=\mathbf 1_B\) (\(B\) événement de \(\mathbb R^n\)) ?'
+  verso: '\(E[\mathbf 1_B(X)]=\int_Bf(x_1,\dots,x_n)\,dx_1\cdots dx_n=P(X\in B)\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 43 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-044-3
+  notion: proba-n-0080
+  recto: '\((X,Y)\) de densité \(3(x+y)\mathbf 1_{x\ge0,y\ge0,x+y\le1}\) : calculer \(E[XY]\).'
+  verso: 'Transfert + Fubini : \(E[XY]=3\int_0^1\left(\int_0^{1-y}xy(x+y)\,dx\right)dy=3\int_0^1\left(\tfrac{y(1-y)^3}{3}+\tfrac{y^2(1-y)^2}{2}\right)dy=\dfrac1{10}\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 43 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-045-1
+  notion: proba-n-0081
+  recto: 'Énoncer la méthode de la fonction muette pour un vecteur \(X\) de \(\mathbb R^n\).'
+  verso: 'S''il existe \(g\ge0\) suffisamment régulière telle que \(E[\varphi(X)]=\int_{\mathbb R^n}\varphi(x)g(x)\,dx\) pour toute \(\varphi\) continue bornée sur \(\mathbb R^n\), alors la loi de \(X\) admet \(g\) pour densité.'
+  source: 'Poly Probabilités 5, ch. 4, p. 44 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [methode]
+- id: proba-a-046-1
+  notion: proba-n-0082
+  recto: 'Changement de variables \(u=\psi(x)\) dans \(\int_D\varphi(\psi(x))f(x)\,dx\) : hypothèses et formule.'
+  verso: '\(D\) ouvert, \(\psi\) \(C^1\)-difféomorphisme de \(D\) sur \(\psi(D)\) :<br>\(\int_D\varphi(\psi(x))f(x)\,dx=\int_{\psi(D)}\varphi(u)\,f(\psi^{-1}(u))\,|J_{\psi^{-1}}(u)|\,du=\int_{\psi(D)}\varphi(u)\,f(\psi^{-1}(u))\dfrac{1}{|J_\psi(\psi^{-1}(u))|}\,du\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 44 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [methode]
+- id: proba-a-046-2
+  notion: proba-n-0082
+  recto: 'Si le domaine \(D\) n''est pas ouvert (ex. \(D=\{x\ge0,y\ge0,x+y\le1\}\)), peut-on appliquer le changement de variables ?'
+  verso: 'Oui : on remplace \(D\) par son intérieur \(\mathring D\), ce qui ne modifie pas la valeur de l''intégrale (cas de l''exemple du poly).'
+  source: 'Poly Probabilités 5, ch. 4, p. 45 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [methode]
+- id: proba-a-047-1
+  notion: proba-n-0083
+  recto: '\((X,Y)\) de densité \(3(x+y)\mathbf 1_D\), \(D=\{x\ge0,y\ge0,x+y\le1\}\). Densité de \((U,V)=(X+Y,X-Y)\).'
+  verso: '\(f_{(U,V)}(u,v)=\dfrac{3u}{2}\mathbf 1_{(u,v)\in D^{\prime}}\) avec \(D^{\prime}=\{(u,v):|v|\le u\le1\}\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 44-45 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [exemple]
+- id: proba-a-047-2
+  notion: proba-n-0083
+  recto: 'Les trois étapes du changement \((u,v)=(x+y,x-y)\) dans l''intégrale de \(E[\varphi(U,V)]\).'
+  verso: '1. Inverser : \(x=\frac{u+v}2,\ y=\frac{u-v}2\), et \(3(x+y)\) devient \(3u\).<br>2. Jacobien : \(|\det J_{\psi^{-1}}|=\left|\det\begin{pmatrix}1/2&amp;1/2\\1/2&amp;-1/2\end{pmatrix}\right|=\tfrac12\), donc \(dx\,dy=\tfrac12du\,dv\).<br>3. Nouveau domaine par équivalences : \((x,y)\in D\iff-v\le u,\ v\le u,\ u\le1\iff|v|\le u\le1\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 44-45 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [exemple]
+- id: proba-a-047-3
+  notion: proba-n-0083
+  recto: 'Changement de variables : quelles précautions prendre en déterminant le nouveau domaine \(\psi(D)\) ?'
+  verso: 'Procéder par équivalences et non par implications (erreur très fréquente) ; vérifier que chacune des inégalités définissant \(D\) trouve sa traduction dans \(\psi(D)\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 45 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [exemple]
+- id: proba-a-048-1
+  notion: proba-n-0084
+  recto: 'Densité de la composante \(X_p\) d''un vecteur \((X_1,\dots,X_n)\) de densité \(f\).'
+  verso: '\(f_{X_p}(x_p)=\int_{\mathbb R^{n-1}}f(x_1,\dots,x_n)\,dx_1\cdots dx_{p-1}dx_{p+1}\cdots dx_n\) (on intègre toutes les autres variables).'
+  source: 'Poly Probabilités 5, ch. 4, p. 46 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-048-2
+  notion: proba-n-0084
+  recto: 'Densité du sous-vecteur \((X_1,\dots,X_p)\) d''un vecteur \((X_1,\dots,X_n)\) de densité \(f\).'
+  verso: '\(f_{(X_1,\dots,X_p)}(x_1,\dots,x_p)=\int_{\mathbb R^{n-p}}f(x_1,\dots,x_n)\,dx_{p+1}\cdots dx_n\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 46 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-048-3
+  notion: proba-n-0084
+  recto: 'Si les lois marginales ont une densité, la loi jointe en a-t-elle une ? Contre-exemple.'
+  verso: 'Non : la loi jointe à densité entraîne marginales à densité, pas l''inverse. Pour \(X\) uniforme sur \([0,1]\), la loi de \((X,X)\) est concentrée sur la diagonale du carré (ensemble de surface nulle) : pas de densité, alors que les marginales en ont une.'
+  source: 'Poly Probabilités 5, ch. 4, p. 46-47 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-048-4
+  notion: proba-n-0084
+  recto: '\((X,Y)\) de densité \(3(x+y)\mathbf 1_{x\ge0,y\ge0,x+y\le1}\) : densité de \(X\).'
+  verso: '\(f_X(x)=\int_{\mathbb R}f(x,y)\,dy=\int_0^{1-x}3(x+y)\,dy=\tfrac32(1-x^2)\mathbf 1_{0\le x\le1}\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 46 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-049-1
+  notion: proba-n-0087
+  recto: 'Densité produit : définition et propriétés (\(f_1,\dots,f_n\) densités de lois réelles).'
+  verso: '\(f(x_1,\dots,x_n)=f_1(x_1)\cdots f_n(x_n)\) est une densité sur \(\mathbb R^n\), dont les marginales unidimensionnelles sont \(f_1,\dots,f_n\). Notée \(f_1\otimes\dots\otimes f_n\) (densité de la loi produit).'
+  source: 'Poly Probabilités 5, ch. 4, p. 48 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-049-2
+  notion: proba-n-0087
+  recto: 'Pourquoi \(f_1\otimes\dots\otimes f_n\) est-elle une densité de marginales \(f_i\) ?'
+  verso: '\(f\ge0\) et, par Fubini-Tonelli, \(\int_{\mathbb R^n}f=\prod_{i}\int_{\mathbb R}f_i=1\). Pour la marginale en \(x_1\) : \(f_{X_1}(x_1)=f_1(x_1)\prod_{i\ge2}\int_{\mathbb R}f_i=f_1(x_1)\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 48 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-050-1
+  notion: proba-n-0088
+  recto: 'Indépendance pour un vecteur \(X=(X_1,\dots,X_n)\) de densité \(f\) : critère par les densités.'
+  verso: '\(X_1,\dots,X_n\) indépendantes \(\iff f=f_{X_1}\otimes\dots\otimes f_{X_n}\) presque partout.'
+  source: 'Poly Probabilités 5, ch. 4, p. 48 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-050-2
+  notion: proba-n-0088
+  recto: 'Pour \(X\) de densité \(f\), peut-on prouver l''indépendance sans calculer les marginales ?'
+  verso: 'Oui : \(X_1,\dots,X_n\) indépendantes \(\iff\) il existe \(g_1,\dots,g_n\ge0\) avec \(f=g_1\otimes\dots\otimes g_n\) presque partout. (Avec \(C_i=\int g_i\), on a \(C_1\cdots C_n=1\) et \(f_{X_i}=g_i/C_i\).)'
+  source: 'Poly Probabilités 5, ch. 4, p. 48-49 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-050-3
+  notion: proba-n-0088
+  recto: 'Indépendance et espérance d''un produit : caractérisation (vecteur \(X\) de densité).'
+  verso: '\(X_1,\dots,X_n\) indépendantes \(\iff\) pour toutes fonctions \(\varphi_1,\dots,\varphi_n\), positives ou telles que les \(\varphi_i(X_i)\) soient d''espérance finie : \(E[\varphi_1(X_1)\cdots\varphi_n(X_n)]=E[\varphi_1(X_1)]\cdots E[\varphi_n(X_n)]\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 48 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-050-4
+  notion: proba-n-0088
+  recto: 'Si \(X_1,\dots,X_n\) sont réelles indépendantes d''espérance finie, que dire de \(X_1\cdots X_n\) ? Et sans indépendance ?'
+  verso: 'Indépendantes : \(X_1\cdots X_n\) est d''espérance finie. Faux sans indépendance : pour \(n\ge2\), prendre \(X\) intégrable avec \(E[|X|^n]=+\infty\) et \(X_1=\dots=X_n=X\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 48 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-050-5
+  notion: proba-n-0088
+  recto: 'Indépendance de deux sous-vecteurs \((X_1,\dots,X_p)\) et \((X_{p+1},\dots,X_n)\) de densités \(f_1\) et \(f_2\) : critère.'
+  verso: 'Ils sont indépendants \(\iff\) la loi de \((X_1,\dots,X_n)\) admet \(f_1\otimes f_2\) pour densité.'
+  source: 'Poly Probabilités 5, ch. 4, p. 50 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-050-6
+  notion: proba-n-0088
+  recto: 'La caractérisation de l''indépendance par \(E[\prod\varphi_i(X_i)]=\prod E[\varphi_i(X_i)]\) exige-t-elle une densité ?'
+  verso: 'Non : cette équivalence avec l''indépendance est valable pour tout vecteur aléatoire, à densité ou non.'
+  source: 'Poly Probabilités 5, ch. 4, p. 50 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-051-1
+  notion: proba-n-0093
+  recto: 'Définition de la fonction de répartition d''un vecteur \(X=(X_1,\dots,X_n)\).'
+  verso: '\(F_X(t)=P(X_1\le t_1,\dots,X_n\le t_n)\) pour \(t=(t_1,\dots,t_n)\in\mathbb R^n\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 52 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [definition]
+- id: proba-a-051-2
+  notion: proba-n-0093
+  recto: 'La fonction de répartition d''un vecteur caractérise-t-elle sa loi ?'
+  verso: 'Oui : \(X\) et \(Y\) à valeurs dans \(\mathbb R^n\) ont même loi \(\iff F_X=F_Y\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 52 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [definition]
+- id: proba-a-051-3
+  notion: proba-n-0093
+  recto: 'Retrouver la densité \(f_X\) d''un vecteur à partir de \(F_X\).'
+  verso: 'Si \(f_X\) est continue et assez régulière pour que les dérivations soient permises : \(\dfrac{\partial}{\partial x_1}\cdots\dfrac{\partial}{\partial x_n}F_X(x)=f_X(x)\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 52 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [definition]
+- id: proba-a-052-1
+  notion: proba-n-0094
+  recto: 'Définition de la fonction caractéristique d''un vecteur \(X=(X_1,\dots,X_n)\).'
+  verso: '\(\varphi_X(t)=E\left[e^{i\langle t,X\rangle}\right]\) pour \(t\in\mathbb R^n\), avec \(\langle t,X\rangle=\sum_{k=1}^nt_kX_k\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 53 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-052-2
+  notion: proba-n-0094
+  recto: 'Propriétés de la fonction caractéristique d''un vecteur (définition, continuité, borne, valeur en \(0\)).'
+  verso: 'Définie et uniformément continue sur \(\mathbb R^n\) ; bornée par \(1\), valeur \(1\) atteinte en \(0\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 53 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-052-3
+  notion: proba-n-0094
+  recto: 'La fonction caractéristique d''un vecteur caractérise-t-elle sa loi ?'
+  verso: 'Oui : deux vecteurs aléatoires de \(\mathbb R^n\) ont même loi \(\iff\) ils ont même fonction caractéristique (réciproque admise).'
+  source: 'Poly Probabilités 5, ch. 4, p. 53 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-053-1
+  notion: proba-n-0095
+  recto: 'Indépendance de \(X_1,\dots,X_n\) et fonction caractéristique de \(X=(X_1,\dots,X_n)\) : critère.'
+  verso: '\(X_1,\dots,X_n\) indépendantes \(\iff\forall(t_1,\dots,t_n)\in\mathbb R^n,\ \varphi_X(t_1,\dots,t_n)=\varphi_{X_1}(t_1)\cdots\varphi_{X_n}(t_n)\). Vrai aussi si les \(X_k\) sont eux-mêmes des vecteurs.'
+  source: 'Poly Probabilités 5, ch. 4, p. 53 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-053-2
+  notion: proba-n-0095
+  recto: 'Fonction caractéristique de \(X+Y\) pour \(X,Y\) indépendants (vecteurs de \(\mathbb R^n\)). Preuve.'
+  verso: '\(\varphi_{X+Y}(t)=\varphi_X(t)\varphi_Y(t)\). Preuve : \(e^{i\langle t,X+Y\rangle}=e^{i\langle t,X\rangle}e^{i\langle t,Y\rangle}\), puis factorisation de l''espérance du produit de variables indépendantes.'
+  source: 'Poly Probabilités 5, ch. 4, p. 53 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-053-3
+  notion: proba-n-0095
+  recto: '\(\varphi_{X+Y}=\varphi_X\varphi_Y\) implique-t-elle l''indépendance de \(X\) et \(Y\) ? Contre-exemple.'
+  verso: 'Non. \(X\) de Cauchy de paramètre \(\lambda\) (\(\varphi_X(t)=e^{-\lambda|t|}\)) : \(\varphi_{X+X}(t)=\varphi_X(2t)=e^{-2\lambda|t|}=\varphi_X(t)^2\), pourtant \(X\) n''est pas indépendante d''elle-même.'
+  source: 'Poly Probabilités 5, ch. 4, p. 54 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-054-1
+  notion: proba-n-0098
+  recto: '\(X\sim\) Bernoulli\((1/2)\), \(Y\) uniforme sur \(\{-1,1\}\) indépendante de \(X\), \(Z=XY\) : que vaut \(\mathrm{cov}(X,Z)\) ?'
+  verso: '\(\mathrm{cov}(X,Z)=E\left[\left(X-\tfrac12\right)XY\right]=E\left[\left(X-\tfrac12\right)X\right]E[Y]=0\) (indépendance de \(X\) et \(Y\), \(E[Y]=0\)) : \(X\) et \(Z\) sont décorrélées.'
+  source: 'Poly Probabilités 5, ch. 4, p. 55 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [exemple]
+- id: proba-a-054-2
+  notion: proba-n-0098
+  recto: 'Même exemple (\(X\) Bernoulli\((1/2)\), \(Y\) uniforme sur \(\{-1,1\}\) indépendante, \(Z=XY\)) : \(X\) et \(Z\) sont-elles indépendantes ?'
+  verso: 'Non : \(\{X=0\}=\{Z=0\}\), donc \(P(X=0,Z=0)=\tfrac12\neq P(X=0)P(Z=0)=\left(\tfrac12\right)^2\). Décorrélées mais non indépendantes.'
+  source: 'Poly Probabilités 5, ch. 4, p. 55 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [exemple]
+- id: proba-a-055-1
+  notion: proba-n-0100
+  recto: 'Définition de la matrice de covariance \(\Gamma_X\) de \(X=(X_1,\dots,X_n)\) (hypothèse sur les \(X_i\)).'
+  verso: 'Si \(E[X_i^2]\lt +\infty\) pour tout \(i\) : \(\Gamma_X=(\mathrm{cov}(X_i,X_j))_{i,j=1}^n\) (variances sur la diagonale).'
+  source: 'Poly Probabilités 5, ch. 4, p. 56 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-055-2
+  notion: proba-n-0100
+  recto: 'Propriétés de la matrice de covariance \(\Gamma_X\). Pourquoi est-elle positive ?'
+  verso: '\(\Gamma_X\) est symétrique positive. Positive car, pour tout \(\alpha\) : \(\alpha^T\Gamma_X\alpha=\mathrm{cov}\left(\sum\alpha_iX_i,\sum\alpha_iX_i\right)=\mathrm{var}\left(\sum\alpha_iX_i\right)\ge0\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 56-57 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-055-3
+  notion: proba-n-0100
+  recto: 'Exprimer \(\mathrm{cov}\left(\sum\alpha_iX_i,\sum\beta_jX_j\right)\) et \(\mathrm{var}\left(\sum\alpha_iX_i\right)\) avec \(\Gamma_X\).'
+  verso: '\(\mathrm{cov}\left(\sum_i\alpha_iX_i,\sum_j\beta_jX_j\right)=\sum_{i,j}\alpha_i\beta_j\mathrm{cov}(X_i,X_j)=\alpha^T\Gamma_X\beta\), et \(\mathrm{var}\left(\sum_i\alpha_iX_i\right)=\alpha^T\Gamma_X\alpha=\sum\alpha_i^2\mathrm{var}(X_i)+2\sum_{i\lt j}\alpha_i\alpha_j\mathrm{cov}(X_i,X_j)\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 56 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-056-1
+  notion: proba-n-0101
+  recto: 'Quand \(\Gamma_X\) n''est-elle pas définie positive ? Interprétation.'
+  verso: '\(\Gamma_X\) n''est pas définie positive \(\iff\) il existe \(a\neq0\) et \(b\in\mathbb R\) avec \(a_1X_1+\dots+a_nX_n=b\) p.s. (liaison affine non triviale). Cela équivaut à \(\mathrm{rang}\,\Gamma_X\lt n\), noyau non trivial.'
+  source: 'Poly Probabilités 5, ch. 4, p. 57 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-056-2
+  notion: proba-n-0101
+  recto: 'Si \(\Gamma_Xa=0\) avec \(a\neq0\), pourquoi \(\sum a_iX_i\) est-elle constante p.s. ?'
+  verso: '\(\mathrm{var}\left(\sum a_iX_i\right)=a^T\Gamma_Xa=0\) : une variable de variance nulle est constante presque sûrement : \(\sum a_iX_i=b\) p.s.'
+  source: 'Poly Probabilités 5, ch. 4, p. 57 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-057-1
+  notion: proba-n-0102
+  recto: '\(X\) vecteur de \(\mathbb R^n\) de moyenne \(\mu_X\) et covariance \(\Gamma_X\), \(A\) matrice \(m\times n\), \(Y=AX\) : moyenne et covariance de \(Y\).'
+  verso: '\(\mu_Y=A\mu_X\) et \(\Gamma_Y=A\Gamma_XA^T\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 57 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-057-2
+  notion: proba-n-0102
+  recto: 'Preuve de \(\Gamma_{AX}=A\Gamma_XA^T\).'
+  verso: 'Avec \((AX)_i=\sum_ka_{i,k}X_k\) et la bilinéarité de la covariance : \(\Gamma_Y(i,j)=\sum_{k,l}a_{i,k}\,\mathrm{cov}(X_k,X_l)\,a_{j,l}=\sum_{k,l}a_{i,k}\Gamma_X(k,l)a_{j,l}=(A\Gamma_XA^T)(i,j)\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 58 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-058-1
+  notion: proba-n-0104
+  recto: '\(X\) de densité \(f(x)=\dfrac{e^{-x^2/2}}{\sqrt{2\pi}}\) : calculer \(E[X^{2k}]\), \(k\ge0\).'
+  verso: '\(E[X^{2k}]=\dfrac{(2k)!}{2^kk!}=(2k-1)(2k-3)\cdots3\cdot1\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 59 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-058-2
+  notion: proba-n-0104
+  recto: 'Pour \(X\sim\mathcal N(0,1)\) : moments d''ordre impair, \(E[X]\) et \(\mathrm{var}(X)\).'
+  verso: '\(E[X^{2k+1}]=0\) (intégrale sur \(\mathbb R\) d''une fonction impaire). Donc \(E[X]=0\) et \(\mathrm{var}(X)=E[X^2]=1\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 59 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-058-3
+  notion: proba-n-0104
+  recto: 'Comment établit-on la récurrence sur \(E[X^{2k}]\) pour \(X\sim\mathcal N(0,1)\) ?'
+  verso: 'Intégration par parties avec \(x^{2k}e^{-x^2/2}=x^{2k-1}\cdot xe^{-x^2/2}\) : termes de bord nuls, d''où \(E[X^{2k}]=(2k-1)E[X^{2k-2}]\) (avec \(E[X^0]=1\)). Les moments existent à tout ordre car \(X\) a des moments d''ordre pair.'
+  source: 'Poly Probabilités 5, ch. 4, p. 59 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-059-1
+  notion: proba-n-0105
+  recto: 'Montrer que \(f(x)=\dfrac{e^{-x^2/2}}{\sqrt{2\pi}}\) est une densité (calcul de \(\int f\)).'
+  verso: '\(f\ge0\) continue. \(\left(\int f\right)^2=\int_{\mathbb R^2}f(x)f(y)\,dx\,dy\) (Fubini-Tonelli) \(=\frac1{2\pi}\int_{\mathbb R^2}e^{-(x^2+y^2)/2}dx\,dy\). Coordonnées polaires : \(=\frac1{2\pi}\int_0^{2\pi}d\theta\int_0^{+\infty}\rho e^{-\rho^2/2}d\rho=\left[-e^{-\rho^2/2}\right]_0^{+\infty}=1\). Donc \(\int f=1\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 59 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [demonstration]
+- id: proba-a-060-1
+  notion: proba-n-0106
+  recto: 'Moment exponentiel de \(X\sim\mathcal N(0,1)\) : \(E[e^{\lambda X}]\) pour \(\lambda\in\mathbb C\).'
+  verso: '\(E\left[|e^{\lambda X}|\right]\lt +\infty\) et \(E\left[e^{\lambda X}\right]=e^{\lambda^2/2}\) pour tout \(\lambda\in\mathbb C\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 60 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 2
+  tags: [propriete]
+- id: proba-a-060-2
+  notion: proba-n-0106
+  recto: 'En déduire la fonction caractéristique de \(X\sim\mathcal N(0,1)\).'
+  verso: 'Avec \(\lambda=it\) : \(\varphi_X(t)=E[e^{itX}]=e^{(it)^2/2}=e^{-t^2/2}\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 60 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 2
+  tags: [propriete]
+- id: proba-a-060-3
+  notion: proba-n-0106
+  recto: 'Preuve de \(E[e^{\lambda X}]=e^{\lambda^2/2}\) pour \(X\sim\mathcal N(0,1)\).'
+  verso: 'Intégrabilité : \(|e^{\lambda x}|\le e^{|\lambda||x|}\le e^{|\lambda|x}+e^{-|\lambda|x}=2\sum_{k}\frac{|\lambda|^{2k}x^{2k}}{(2k)!}\), d''où \(E|e^{\lambda X}|\le2\sum_k\frac{|\lambda|^{2k}}{2^kk!}=2e^{|\lambda|^2/2}\). Puis \(E[e^{\lambda X}]=\sum_n\frac{\lambda^n}{n!}E[X^n]=\sum_k\frac{\lambda^{2k}}{2^kk!}=e^{\lambda^2/2}\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 60 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 2
+  tags: [propriete]
+- id: proba-a-061-1
+  notion: proba-n-0107
+  recto: 'Définition de la loi gaussienne \(\mathcal N(m,\sigma^2)\) à partir de \(X\sim\mathcal N(0,1)\). Espérance et variance ?'
+  verso: '\(Y=m+\sigma X\) (\(m\in\mathbb R\), \(\sigma\gt 0\)) suit la loi \(\mathcal N(m,\sigma^2)\) ; \(E[Y]=m\), \(\mathrm{var}(Y)=\sigma^2\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 60 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [definition]
+- id: proba-a-061-2
+  notion: proba-n-0107
+  recto: '\(Y\sim\mathcal N(m,\sigma^2)\) : que vaut \(E[e^{\lambda Y}]\) (\(\lambda\in\mathbb C\)) ? Preuve.'
+  verso: '\(E[e^{\lambda Y}]=e^{\lambda m+\lambda^2\sigma^2/2}\). Preuve : \(E\left[e^{\lambda m}e^{(\lambda\sigma)X}\right]=e^{\lambda m}e^{(\lambda\sigma)^2/2}\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 60 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [definition]
+- id: proba-a-061-3
+  notion: proba-n-0107
+  recto: 'Une variable aléatoire constante est-elle gaussienne ?'
+  verso: 'Oui : les constantes font partie des variables gaussiennes (cas de variance nulle).'
+  source: 'Poly Probabilités 5, ch. 4, p. 60 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [definition]
+- id: proba-a-062-1
+  notion: proba-n-0108
+  recto: 'Densité de \(Y\sim\mathcal N(m,\sigma^2)\) avec \(\sigma\gt 0\).'
+  verso: '\(f_Y(y)=\dfrac{e^{-(y-m)^2/(2\sigma^2)}}{\sqrt{2\pi\sigma^2}}\), \(y\in\mathbb R\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 61 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-062-2
+  notion: proba-n-0108
+  recto: 'Retrouver la densité de \(Y=m+\sigma X\) (\(\sigma\gt 0\), \(X\sim\mathcal N(0,1)\)) par la fonction de répartition.'
+  verso: '\(F_Y(y)=P\left(X\le\frac{y-m}{\sigma}\right)=F_X\left(\frac{y-m}{\sigma}\right)\), \(C^1\) car \(f\) est continue ; donc \(f_Y(y)=F_Y^{\prime}(y)=\frac1\sigma f\left(\frac{y-m}\sigma\right)\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 61 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-063-1
+  notion: proba-n-0109
+  recto: 'Somme de gaussiennes indépendantes : \(X_i\sim\mathcal N(\mu_i,\sigma_i^2)\) indépendantes. Loi de \(\sum\alpha_iX_i\) ?'
+  verso: '\(\sum_{i=1}^n\alpha_iX_i\sim\mathcal N\left(\sum_i\alpha_i\mu_i,\ \sum_i\alpha_i^2\sigma_i^2\right)\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 61 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-063-2
+  notion: proba-n-0109
+  recto: 'Preuve de la loi de \(\sum\alpha_iX_i\) (gaussiennes indépendantes) par fonctions caractéristiques.'
+  verso: 'Indépendance : \(\varphi_{\sum\alpha_kX_k}(t)=\prod_k\varphi_{\alpha_kX_k}(t)=\prod_ke^{i\alpha_k\mu_kt-\alpha_k^2\sigma_k^2t^2/2}=e^{i(\sum\alpha_k\mu_k)t-\frac12(\sum\alpha_k^2\sigma_k^2)t^2}\) : fonction caractéristique d''une loi gaussienne de moyenne \(\sum\alpha_k\mu_k\) et variance \(\sum\alpha_k^2\sigma_k^2\) ; elle caractérise la loi.'
+  source: 'Poly Probabilités 5, ch. 4, p. 61 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-064-1
+  notion: proba-n-0110
+  recto: 'Définition d''un vecteur gaussien \(X=(X_1,\dots,X_n)\).'
+  verso: 'Pour tout \(\alpha\in\mathbb R^n\), la variable \(\langle\alpha,X\rangle=\sum_i\alpha_iX_i\) suit une loi gaussienne.'
+  source: 'Poly Probabilités 5, ch. 4, p. 62 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-064-2
+  notion: proba-n-0110
+  recto: 'Un vecteur constant est-il gaussien ?'
+  verso: 'Oui : toute combinaison linéaire est constante, donc gaussienne (variance nulle).'
+  source: 'Poly Probabilités 5, ch. 4, p. 62 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-064-3
+  notion: proba-n-0110
+  recto: 'Un vecteur dont les composantes sont gaussiennes indépendantes est-il gaussien ? Pourquoi ?'
+  verso: 'Oui : toute combinaison linéaire de gaussiennes indépendantes est gaussienne (somme de gaussiennes indépendantes). C''est ainsi que l''on voit qu''il existe des vecteurs gaussiens.'
+  source: 'Poly Probabilités 5, ch. 4, p. 62 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-065-1
+  notion: proba-n-0111
+  recto: 'Les composantes (et sous-vecteurs) d''un vecteur gaussien sont-elles gaussiennes ? Pourquoi ?'
+  verso: 'Oui : \(X_i\) est une combinaison linéaire (simple) des \(X_j\), donc gaussienne ; de même tout sous-vecteur \((X_{i_1},\dots,X_{i_k})\) est un vecteur gaussien.'
+  source: 'Poly Probabilités 5, ch. 4, p. 62 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-065-2
+  notion: proba-n-0111
+  recto: 'Contre-exemple : des composantes gaussiennes ne font pas un vecteur gaussien.'
+  verso: '\(X\sim\mathcal N(0,1)\), \(Y\) indépendante avec \(P(Y=1)=P(Y=-1)=\frac12\), \(Z=XY\sim\mathcal N(0,1)\). Mais \((X,Z)\) n''est pas gaussien : \(P(X+Z=0)=P(Y=-1)=\frac12\), donc \(X+Z\) n''est ni constante ni à densité, donc pas gaussienne.'
+  source: 'Poly Probabilités 5, ch. 4, p. 62 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-066-1
+  notion: proba-n-0112
+  recto: 'Fonction caractéristique d''un vecteur gaussien \(X\) de moyenne \(\mu_X\) et covariance \(\Gamma_X\).'
+  verso: '\(\varphi_X(t)=\exp\left(i\langle t,\mu_X\rangle-\tfrac12\langle t,\Gamma_Xt\rangle\right)\), \(t\in\mathbb R^n\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 63 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-066-2
+  notion: proba-n-0112
+  recto: 'Par quoi la loi d''un vecteur gaussien est-elle caractérisée ? Quelle notation ?'
+  verso: 'Par sa moyenne \(\mu_X\) et sa matrice de covariance \(\Gamma_X\) (car \(\varphi_X\) caractérise la loi) ; on note \(X\sim\mathcal N(\mu_X,\Gamma_X)\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 63 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-066-3
+  notion: proba-n-0112
+  recto: 'Preuve de la formule de \(\varphi_X\) pour un vecteur gaussien.'
+  verso: '\(\langle t,X\rangle\) est gaussienne, de moyenne \(\langle t,\mu_X\rangle\) et de variance \(t^T\Gamma_Xt=\langle t,\Gamma_Xt\rangle\). Donc \(\varphi_X(t)=E[e^{i\langle t,X\rangle}]=\varphi_{\langle t,X\rangle}(1)=e^{i\langle t,\mu_X\rangle-\frac12\langle t,\Gamma_Xt\rangle}\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 63 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-067-1
+  notion: proba-n-0113
+  recto: '\(X\sim\mathcal N(\mu_X,\Gamma_X)\) dans \(\mathbb R^n\), \(A\) matrice \(p\times n\), \(b\in\mathbb R^p\) : loi de \(AX+b\) ?'
+  verso: '\(AX+b\) est un vecteur gaussien et \(AX+b\sim\mathcal N(A\mu_X+b,\ A\Gamma_XA^T)\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 63 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-067-2
+  notion: proba-n-0113
+  recto: 'Preuve que \(AX+b\) est un vecteur gaussien de paramètres \((A\mu_X+b,A\Gamma_XA^T)\).'
+  verso: 'Toute combinaison linéaire de \(AX+b\) est une combinaison linéaire de \(X\) (gaussienne) plus une constante : gaussienne. Moyenne et covariance : calcul sur \(\mu_{AX}=A\mu_X\) et \(\Gamma_{AX}=A\Gamma_XA^T\) (la constante \(b\) décale la moyenne seulement).'
+  source: 'Poly Probabilités 5, ch. 4, p. 63 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-068-1
+  notion: proba-n-0114
+  recto: 'Existence d''un vecteur gaussien de moyenne \(\mu\in\mathbb R^n\) et de covariance \(\Gamma\) donnée.'
+  verso: 'Pour toute matrice \(\Gamma\) \(n\times n\) symétrique positive, il existe un vecteur gaussien de moyenne \(\mu\) et de covariance \(\Gamma\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 63 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-068-2
+  notion: proba-n-0114
+  recto: 'Construction d''un vecteur gaussien de moyenne \(\mu\) et covariance \(\Gamma\) (symétrique positive).'
+  verso: 'Diagonaliser \(\Gamma=ODO^{-1}\) (\(O\) orthogonale, \(D=\mathrm{diag}(\lambda_i)\), \(\lambda_i\ge0\)). Prendre \(X_i\sim\mathcal N(0,\lambda_i)\) indépendantes (\(X\) a pour covariance \(D\)), puis \(Y=OX+\mu\) : moyenne \(\mu\), covariance \(ODO^T=\Gamma\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 63 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-069-1
+  notion: proba-n-0115
+  recto: 'Densité d''un vecteur gaussien \(X\sim\mathcal N(\mu_X,\Gamma_X)\) avec \(\Gamma_X\) définie positive.'
+  verso: '\(f_X(x)=\dfrac1{\sqrt{(2\pi)^n\det\Gamma_X}}\exp\left(-\tfrac12\langle x-\mu_X,\Gamma_X^{-1}(x-\mu_X)\rangle\right)\), \(x\in\mathbb R^n\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 64 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-069-2
+  notion: proba-n-0115
+  recto: 'Un vecteur gaussien de covariance non définie positive (rang \(\lt n\)) a-t-il une densité ? Pourquoi ?'
+  verso: 'Non : il est à valeurs dans un sous-espace affine de dimension \(\mathrm{rang}\,\Gamma\lt n\), de volume (mesure de Lebesgue) nul, donc sa loi ne peut pas être à densité.'
+  source: 'Poly Probabilités 5, ch. 4, p. 64 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-069-3
+  notion: proba-n-0115
+  recto: 'Idée de la preuve de la densité d''un vecteur gaussien (\(\Gamma_X\) définie positive).'
+  verso: '\(\Gamma_X=ODO^{-1}\), \(\lambda_i\gt 0\) ; \(X\) a même loi que \(OU+\mu_X\), \(U_i\sim\mathcal N(0,\lambda_i)\) indépendantes (densité produit). Fonction muette et changement de variables affine \(x=Ou+\mu_X\) (valeur absolue du jacobien \(=1\)). Puis \(\lambda_1\cdots\lambda_n=\det\Gamma_X\) et \(\sum u_i^2/\lambda_i=\langle x-\mu_X,\Gamma_X^{-1}(x-\mu_X)\rangle\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 64-65 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-070-1
+  notion: proba-n-0116
+  recto: 'Vecteur gaussien \(X=(X_1,\dots,X_n)\) : lien entre indépendance et décorrélation des composantes.'
+  verso: '\(X_1,\dots,X_n\) sont indépendantes \(\iff\) elles sont décorrélées (\(\Gamma_X\) diagonale).'
+  source: 'Poly Probabilités 5, ch. 4, p. 65 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-070-2
+  notion: proba-n-0116
+  recto: 'Version pour deux sous-vecteurs d''un vecteur gaussien \((X_1,\dots,X_n)\) : indépendance de \((X_1,\dots,X_p)\) et \((X_{p+1},\dots,X_n)\).'
+  verso: 'Indépendants \(\iff\forall k\in\{1,\dots,p\},\ \forall l\in\{p+1,\dots,n\},\ \mathrm{cov}(X_k,X_l)=0\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 65 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-070-3
+  notion: proba-n-0116
+  recto: 'Preuve de « décorrélées \(\Rightarrow\) indépendantes » pour un vecteur gaussien.'
+  verso: '\(\Gamma_X=\mathrm{diag}(\sigma_1^2,\dots,\sigma_n^2)\), donc \(\varphi_X(t)=e^{i\sum t_k\mu_k-\frac12\sum t_k^2\sigma_k^2}=\prod_ke^{it_k\mu_k-t_k^2\sigma_k^2/2}=\prod_k\varphi_{X_k}(t_k)\) : indépendance par le critère sur les fonctions caractéristiques. (Réciproque : indépendantes \(\Rightarrow\) décorrélées.)'
+  source: 'Poly Probabilités 5, ch. 4, p. 65 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-070-4
+  notion: proba-n-0116
+  recto: 'Si \(X,Z\) sont seulement gaussiennes (pas un vecteur gaussien), décorrélées \(\Rightarrow\) indépendantes ?'
+  verso: 'Non. \(X\sim\mathcal N(0,1)\), \(Y=\pm1\) indépendante équiprobable, \(Z=XY\sim\mathcal N(0,1)\) : \(\mathrm{cov}(X,Z)=E[X^2]E[Y]=0\), mais \(X,Z\) ne sont pas indépendantes (sinon \((X,Z)\) serait gaussien ; or \(X+Z\) ne l''est pas).'
+  source: 'Poly Probabilités 5, ch. 4, p. 65-66 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-071-1
+  notion: proba-n-0117
+  recto: 'Lemme de Borel-Cantelli, 1re partie : énoncer (avec l''événement \(\limsup A_n\)).'
+  verso: 'Si \(\sum_{n\in\mathbb N}P(A_n)\lt +\infty\), alors \(P\left(\limsup_nA_n\right)=0\), où \(\limsup_nA_n=\bigcap_{n\ge0}\bigcup_{k\ge n}A_k\) est l''événement « une infinité des \(A_n\) ont lieu ».'
+  source: 'Poly Probabilités 5, ch. 5, p. 67 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-071-2
+  notion: proba-n-0117
+  recto: 'Preuve de la 1re partie de Borel-Cantelli.'
+  verso: 'Pour tout \(N\) : \(P\left(\bigcap_n\bigcup_{k\ge n}A_k\right)\le P\left(\bigcup_{k\ge N}A_k\right)\le\sum_{n\ge N}P(A_n)\), reste d''une série convergente donc de limite \(0\) quand \(N\to+\infty\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 67 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-071-3
+  notion: proba-n-0117
+  recto: 'Lemme de Borel-Cantelli, 2e partie : énoncer (hypothèses et conclusion).'
+  verso: 'Si les \(A_n\) sont indépendants et \(\sum_{n}P(A_n)=+\infty\), alors \(P\left(\limsup_nA_n\right)=1\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 67 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-071-4
+  notion: proba-n-0117
+  recto: 'La 2e partie de Borel-Cantelli reste-t-elle vraie sans indépendance ? Contre-exemple.'
+  verso: 'Non. Prendre \(A_n=A\) pour tout \(n\) avec \(P(A)\in]0,1[\) : \(\sum P(A_n)=+\infty\) mais \(\limsup A_n=A\) est de probabilité \(P(A)\lt 1\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 67 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-072-1
+  notion: proba-n-0118
+  recto: 'Preuve de Borel-Cantelli (2e partie) : quelle majoration élémentaire sert, et sur quel produit ?'
+  verso: 'Pour \(x\in[0,1]\) : \(0\le1-x\le e^{-x}\), appliquée à \(\prod_{k=n}^m(1-P(A_k))\le\exp\left(-\sum_{k=n}^mP(A_k)\right)\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 68 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [demonstration]
+- id: proba-a-072-2
+  notion: proba-n-0118
+  recto: 'Déroulé de la preuve de Borel-Cantelli (2e partie), après la majoration \(1-x\le e^{-x}\).'
+  verso: 'Indépendance : \(P\left(\bigcup_{k=n}^mA_k\right)=1-\prod_{k=n}^m(1-P(A_k))\ge1-\exp\left(-\sum_{k=n}^mP(A_k)\right)\). Quand \(m\to+\infty\) (série divergente) : \(P\left(\bigcup_{k\ge n}A_k\right)=1\) pour tout \(n\). La suite \(\left(\bigcup_{k\ge n}A_k\right)_n\) est décroissante, donc \(P(\limsup A_n)=\lim_nP\left(\bigcup_{k\ge n}A_k\right)=1\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 68 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [demonstration]
+- id: proba-a-073-1
+  notion: proba-n-0120
+  recto: 'Unicité de la limite en probabilité : que dire si \(X_n\xrightarrow{P}X\) et \(X_n\xrightarrow{P}Y\) ?'
+  verso: '\(X=Y\) presque sûrement.'
+  source: 'Poly Probabilités 5, ch. 5, p. 69 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-073-2
+  notion: proba-n-0120
+  recto: 'Preuve de l''unicité p.s. de la limite en probabilité.'
+  verso: '\(\{\|X-Y\|\gt \varepsilon\}\subset\{\|X_n-X\|\gt \varepsilon/2\}\cup\{\|X_n-Y\|\gt \varepsilon/2\}\) donne \(P(\|X-Y\|\gt \varepsilon)\le P(\|X_n-X\|\gt \varepsilon/2)+P(\|X_n-Y\|\gt \varepsilon/2)\to0\). Puis continuité croissante sur \(A_p=\{\|X-Y\|\gt 1/p\}\) : \(P(\|X-Y\|\gt 0)=\lim_pP(A_p)=0\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 69 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-073-3
+  notion: proba-n-0120
+  recto: 'Convergence en probabilité de deux suites \(X_n\to X\), \(Y_n\to Y\) : que dire du couple \((X_n,Y_n)\) ?'
+  verso: '\((X_n,Y_n)\xrightarrow{P}(X,Y)\) (car \(\|(X_n,Y_n)-(X,Y)\|\le\|X_n-X\|+\|Y_n-Y\|\)).'
+  source: 'Poly Probabilités 5, ch. 5, p. 69 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-073-4
+  notion: proba-n-0120
+  recto: 'Si \(X_n\xrightarrow{P}X\) et \(f\) est continue sur \(\mathbb R^d\), que dire de \(f(X_n)\) ?'
+  verso: '\(f(X_n)\xrightarrow{P}f(X)\). (Démontré dans le poly pour \(f\) uniformément continue via \(\{\|f(X_n)-f(X)\|\gt \varepsilon\}\subset\{\|X_n-X\|\gt \eta\}\) ; cas général admis.)'
+  source: 'Poly Probabilités 5, ch. 5, p. 70 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-073-5
+  notion: proba-n-0120
+  recto: 'Convergence en probabilité et combinaison linéaire : \(X_n\xrightarrow{P}X\), \(Y_n\xrightarrow{P}Y\) (même dimension \(d\)).'
+  verso: '\(\alpha X_n+\beta Y_n\xrightarrow{P}\alpha X+\beta Y\) pour tous \(\alpha,\beta\in\mathbb R\) (couple puis image continue).'
+  source: 'Poly Probabilités 5, ch. 5, p. 70 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-074-1
+  notion: proba-n-0121
+  recto: 'Définition de la convergence presque sûre \(X_n\xrightarrow{p.s.}X\).'
+  verso: 'Il existe un ensemble négligeable \(N\subset\Omega\) tel que \(\forall\omega\in\Omega\setminus N,\ \lim_{n\to+\infty}X_n(\omega)=X(\omega)\) (convergence simple hors d''un ensemble négligeable).'
+  source: 'Poly Probabilités 5, ch. 5, p. 70 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-074-2
+  notion: proba-n-0121
+  recto: '\(X\) uniforme sur \([0,1]\), \(X_n=\mathbf 1_{[0,1/n]}(X)\) : convergence presque sûre ?'
+  verso: 'Si \(X(\omega)\neq0\), \(X_n(\omega)=0\) dès que \(1/n\lt X(\omega)\), donc \(X_n(\omega)\to0\). Comme \(P(X\neq0)=1\), \(X_n\xrightarrow{p.s.}0\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 70 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-075-1
+  notion: proba-n-0122
+  recto: 'Unicité presque sûre de la limite pour la convergence p.s. : énoncer et justifier.'
+  verso: 'Si \(X_n\to X\) et \(X_n\to Y\) p.s., alors \(X=Y\) p.s. Car hors de \(N_X\cup N_Y\) (négligeable), \(\lim X_n(\omega)=X(\omega)=Y(\omega)\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 71 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-075-2
+  notion: proba-n-0122
+  recto: 'Si \(X_n\to X\) p.s. et \(f\) continue sur \(\mathbb R^d\), que dire de \(f(X_n)\) ?'
+  verso: '\(f(X_n)\to f(X)\) presque sûrement.'
+  source: 'Poly Probabilités 5, ch. 5, p. 71 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-075-3
+  notion: proba-n-0122
+  recto: 'Si \(X_n\to X\) p.s. et \(Y_n\to Y\) p.s., que dire du couple \((X_n,Y_n)\) ?'
+  verso: '\((X_n,Y_n)\to(X,Y)\) presque sûrement.'
+  source: 'Poly Probabilités 5, ch. 5, p. 71 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-075-4
+  notion: proba-n-0122
+  recto: 'Si \(X_n\to X\) p.s. et \(Y_n\to Y\) p.s. (même dimension), que dire de \(\alpha X_n+\beta Y_n\) ?'
+  verso: '\(\alpha X_n+\beta Y_n\to\alpha X+\beta Y\) presque sûrement, pour tous \(\alpha,\beta\in\mathbb R\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 71 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-076-1
+  notion: proba-n-0123
+  recto: 'Lien entre convergence presque sûre et convergence en probabilité.'
+  verso: 'Si \(X_n\to X\) presque sûrement, alors \(X_n\xrightarrow{P}X\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 71 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-076-2
+  notion: proba-n-0123
+  recto: 'Preuve de « p.s. \(\Rightarrow\) probabilité ».'
+  verso: 'Pour \(\varepsilon\gt 0\) : \(Y_n=\mathbf 1_{\|X-X_n\|\gt \varepsilon}\to0\) p.s., avec \(|Y_n|\le1\). Convergence dominée : \(P(\|X-X_n\|\gt \varepsilon)=E[Y_n]\to E[0]=0\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 71 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-076-3
+  notion: proba-n-0123
+  recto: 'La convergence en probabilité implique-t-elle la convergence presque sûre ?'
+  verso: 'Non en général : il existe des suites qui convergent en probabilité mais pas presque sûrement. Réciproque partielle : si \(\sum_nP(\|X_n-X\|\ge\varepsilon)\lt +\infty\) pour tout \(\varepsilon\gt 0\), alors convergence p.s.'
+  source: 'Poly Probabilités 5, ch. 5, p. 72 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-077-1
+  notion: proba-n-0124
+  recto: 'Critère de convergence p.s. par sommabilité (conséquence de Borel-Cantelli) : énoncer.'
+  verso: 'Si pour tout \(\varepsilon\gt 0\), \(\sum_{n}P(\|X_n-X\|\ge\varepsilon)\lt +\infty\), alors \(X_n\to X\) presque sûrement.'
+  source: 'Poly Probabilités 5, ch. 5, p. 72 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-077-2
+  notion: proba-n-0124
+  recto: 'Preuve du critère « \(\sum_nP(\|X_n-X\|\ge\varepsilon)\lt \infty\ \forall\varepsilon\Rightarrow\) convergence p.s. ».'
+  verso: 'Soit \(A_{n,p}=\{\|X_n-X\|\ge1/p\}\). Borel-Cantelli (1re partie) : \(P(A_p)=0\) avec \(A_p=\limsup_nA_{n,p}\) ; réunion dénombrable sur \(p\in\mathbb N^*\) négligeable. Hors de cette réunion : \(\forall p,\ \exists n,\ \forall k\ge n,\ \|X_k-X\|\lt 1/p\), c''est la convergence \(X_k\to X\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 72 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-078-1
+  notion: proba-n-0125
+  recto: 'Définition de la convergence en moyenne d''ordre \(p\ge1\) de \(X_n\) vers \(X\) (hypothèse de moments).'
+  verso: 'Si \(\|X\|\) et les \(\|X_n\|\) possèdent un moment d''ordre \(p\) : \(X_n\to X\) en moyenne d''ordre \(p\) si \(\lim_{n\to+\infty}E\left[\|X_n-X\|^p\right]=0\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 72 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-078-2
+  notion: proba-n-0125
+  recto: 'Noms de la convergence en moyenne d''ordre \(p=1\) et \(p=2\).'
+  verso: '\(p=1\) : convergence en moyenne. \(p=2\) : convergence en moyenne quadratique.'
+  source: 'Poly Probabilités 5, ch. 5, p. 72 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-079-1
+  notion: proba-n-0126
+  recto: 'Unicité de la limite en moyenne d''ordre \(p\) : énoncer et justifier.'
+  verso: 'Si \(X_n\to X\) et \(X_n\to Y\) en moyenne d''ordre \(p\), alors \(X=Y\) p.s. Minkowski : \(E[\|X-Y\|^p]^{1/p}\le E[\|X-X_n\|^p]^{1/p}+E[\|X_n-Y\|^p]^{1/p}\to0\), donc \(\|X-Y\|=0\) p.s. (variable positive d''espérance nulle).'
+  source: 'Poly Probabilités 5, ch. 5, p. 73 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-079-2
+  notion: proba-n-0126
+  recto: 'Convergence en moyenne d''ordre \(p\) et image par \(f\) : quelle hypothèse sur \(f\) ? Pourquoi pas « continue » ?'
+  verso: 'Si \(X_n\to X\) en moyenne d''ordre \(p\) et \(f\) est uniformément continue, alors \(f(X_n)\to f(X)\) en moyenne d''ordre \(p\). Faux pour \(f\) seulement continue : rien ne garantit que \(\|f(X_n)-f(X)\|\) ait un moment d''ordre \(p\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 73 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-079-3
+  notion: proba-n-0126
+  recto: 'Convergence en moyenne d''ordre \(p\) de \(X_n\to X\) et \(Y_n\to Y\) : que dire du couple \((X_n,Y_n)\) ?'
+  verso: '\((X_n,Y_n)\to(X,Y)\) en moyenne d''ordre \(p\) (car \(\|(X_n,Y_n)-(X,Y)\|^2=\|X_n-X\|^2+\|Y_n-Y\|^2\)).'
+  source: 'Poly Probabilités 5, ch. 5, p. 73 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-079-4
+  notion: proba-n-0126
+  recto: 'Convergence en moyenne d''ordre \(p\) et combinaison linéaire : \(X_n\to X\), \(Y_n\to Y\) (même dimension).'
+  verso: '\(\alpha X_n+\beta Y_n\to\alpha X+\beta Y\) en moyenne d''ordre \(p\), pour tous \(\alpha,\beta\in\mathbb R\) (couple, puis \((x,y)\mapsto\alpha x+\beta y\) lipschitzienne donc uniformément continue).'
+  source: 'Poly Probabilités 5, ch. 5, p. 73 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-080-1
+  notion: proba-n-0127
+  recto: 'Si \(X_n\to X\) en moyenne d''ordre \(p\ge1\), que dire de la convergence en moyenne d''ordre \(q\in[1,p]\) ?'
+  verso: '\(X_n\to X\) en moyenne d''ordre \(q\) pour tout \(q\in[1,p]\) (Jensen : \(E[\|X-X_n\|^q]^{1/q}\le E[\|X-X_n\|^p]^{1/p}\)).'
+  source: 'Poly Probabilités 5, ch. 5, p. 74 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-080-2
+  notion: proba-n-0127
+  recto: 'Si \(X_n\to X\) en moyenne d''ordre \(p\), que dire de \(E[\|X_n\|^p]\) ?'
+  verso: '\(E[\|X_n\|^p]\to E[\|X\|^p]\) (Minkowski : \(\left|E[\|X_n\|^p]^{1/p}-E[\|X\|^p]^{1/p}\right|\le E[\|X_n-X\|^p]^{1/p}\)).'
+  source: 'Poly Probabilités 5, ch. 5, p. 74 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-080-3
+  notion: proba-n-0127
+  recto: 'Variables réelles, \(p\in\mathbb N^*\), \(X_n\to X\) en moyenne d''ordre \(p\) : que dire de \(E[X_n^p]\) ?'
+  verso: '\(E[X_n^p]\to E[X^p]\). (Pour \(p=1\) : \(|E[X_n]-E[X]|\le E[|X_n-X|]\) ; pour \(p\ge2\) : \(|x^p-y^p|\le p|x-y|(|x|^{p-1}+|y|^{p-1})\) et Hölder.)'
+  source: 'Poly Probabilités 5, ch. 5, p. 74 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-081-1
+  notion: proba-n-0128
+  recto: 'Lien entre convergence en moyenne d''ordre \(p\) et convergence en probabilité.'
+  verso: 'Si \(X_n\to X\) en moyenne d''ordre \(p\), alors \(X_n\xrightarrow{P}X\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 74 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-081-2
+  notion: proba-n-0128
+  recto: 'Preuve de « moyenne d''ordre \(p\) \(\Rightarrow\) probabilité ».'
+  verso: 'Markov : pour \(\varepsilon\gt 0\), \(P(\|X-X_n\|\gt \varepsilon)\le\dfrac{E[\|X-X_n\|^p]}{\varepsilon^p}\to0\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 74 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-082-1
+  notion: proba-n-0129
+  recto: 'Convergence en probabilité \(\Rightarrow\) convergence en moyenne : sous quelle hypothèse supplémentaire ?'
+  verso: 'Si \(X_n\xrightarrow{P}X\) et s''il existe \(A\ge0\) tel que \(\|X_n\|\le A\) p.s. pour tout \(n\) (uniformément bornées), alors \(X_n\to X\) en moyenne d''ordre \(p\) pour tout \(p\ge1\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 74 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-082-2
+  notion: proba-n-0129
+  recto: 'Idée de la preuve : proba + uniformément bornées \(\Rightarrow\) convergence en moyenne d''ordre \(p\).'
+  verso: '\(X\) est aussi bornée par \(A\) p.s. (\(P(\|X\|\ge A+\varepsilon)\le P(\|X-X_n\|\ge\varepsilon)\to0\)). On découpe \(\|X_n-X\|\) selon \(\le\varepsilon\) ou \(\gt \varepsilon\) et on applique Minkowski : \(E[\|X_n-X\|^p]^{1/p}\le\varepsilon+2A\,P(\|X_n-X\|\gt \varepsilon)^{1/p}\), donc \(\limsup\le\varepsilon\) pour tout \(\varepsilon\gt 0\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 74-75 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-083-1
+  notion: proba-n-0131
+  recto: 'Que signifie « les variables \(X_n\) sont i.i.d. » ?'
+  verso: 'Indépendantes et identiquement distribuées : elles sont indépendantes et ont toutes la même loi.'
+  source: 'Poly Probabilités 5, ch. 5, p. 76 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [definition]
+- id: proba-a-084-1
+  notion: proba-n-0132
+  recto: 'Loi forte des grands nombres : énoncer (hypothèses et mode de convergence).'
+  verso: 'Soit \((X_n)\) i.i.d. réelles avec \(E[|X_1|]\lt +\infty\), \(\bar X_n=\frac1n\sum_{i=1}^nX_i\). Alors \(\bar X_n\to E[X_1]\) presque sûrement.'
+  source: 'Poly Probabilités 5, ch. 5, p. 76 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-084-2
+  notion: proba-n-0132
+  recto: 'Loi forte des grands nombres si \(E[|X_1|]=+\infty\) : que dire de \(\bar X_n\) ?'
+  verso: '\(\bar X_n\) ne converge presque sûrement vers aucune limite finie.'
+  source: 'Poly Probabilités 5, ch. 5, p. 77 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-084-3
+  notion: proba-n-0132
+  recto: 'Loi faible des grands nombres (version du poly) : énoncer.'
+  verso: '\((X_n)\) réelles de moment d''ordre \(2\), de même moyenne \(\mu\), de variances uniformément bornées, deux à deux décorrélées. Alors \(\bar X_n\to\mu\) en moyenne quadratique (donc en probabilité).'
+  source: 'Poly Probabilités 5, ch. 5, p. 75-76 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-084-4
+  notion: proba-n-0132
+  recto: 'Preuve de la loi faible des grands nombres (variances \(\le M\), décorrélées, moyenne \(\mu\)).'
+  verso: '\(E[\bar X_n]=\mu\). Décorrélation : \(\mathrm{var}(\bar X_n)=\frac1{n^2}\sum_{i=1}^n\mathrm{var}(X_i)\le\frac Mn\to0\). Or \(\mathrm{var}(\bar X_n)=E\left[|\bar X_n-\mu|^2\right]\) : convergence en moyenne quadratique vers \(\mu\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 76 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-085-1
+  notion: proba-n-0133
+  recto: 'Définition de la convergence en loi \(X_n\xrightarrow{L}X\) pour des vecteurs aléatoires de \(\mathbb R^d\).'
+  verso: 'Pour toute fonction \(f:\mathbb R^d\to\mathbb R\) continue bornée : \(\lim_{n\to+\infty}E[f(X_n)]=E[f(X)]\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 77 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-085-2
+  notion: proba-n-0133
+  recto: 'Convergence en loi : unicité de la limite ?'
+  verso: 'Unicité de la loi limite, pas de la variable limite : si \(X_n\xrightarrow{L}X\), alors \(X_n\xrightarrow{L}Y\) \(\iff X\) et \(Y\) ont même loi.'
+  source: 'Poly Probabilités 5, ch. 5, p. 77 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-085-3
+  notion: proba-n-0133
+  recto: 'La convergence en loi exige-t-elle que \(X_n\) et \(X\) soient définies sur le même espace de probabilité ? Que mesure-t-elle ?'
+  verso: 'Non : seules comptent leurs lois sur un même \(\mathbb R^d\). Elle dit que la loi de \(X_n\) est proche de celle de \(X\) pour \(n\) grand, pas que \(X_n\) est proche de \(X\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 77 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-085-4
+  notion: proba-n-0133
+  recto: '\(P_{X_n}=\tfrac12\delta_{1/n}+\tfrac12\delta_{n/(n+1)}\) : \(X_n\) converge-t-elle en loi, vers quoi ?'
+  verso: 'Pour \(f\) continue bornée : \(E[f(X_n)]=\tfrac12f(1/n)+\tfrac12f(\tfrac n{n+1})\to\tfrac12f(0)+\tfrac12f(1)\) : convergence en loi vers Bernoulli\((1/2)\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 77 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [definition]
+- id: proba-a-086-1
+  notion: proba-n-0134
+  recto: 'Si \(X_n\xrightarrow{L}X\) et \(f\) est continue (à valeurs dans \(\mathbb R^k\)), que dire de \(f(X_n)\) ?'
+  verso: '\(f(X_n)\xrightarrow{L}f(X)\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 77 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [propriete]
+- id: proba-a-087-1
+  notion: proba-n-0136
+  recto: 'Lemme de Scheffé (1) : \(X,X_1,X_2,\dots\) à valeurs dans \(\mathbb Z\). Critère de convergence en loi.'
+  verso: '\(X_n\xrightarrow{L}X\iff\) pour tout \(k\in\mathbb Z\), \(\lim_nP(X_n=k)=P(X=k)\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 78 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-087-2
+  notion: proba-n-0136
+  recto: 'Scheffé (1) : la convergence de chaque \(P(X_n=k)\), \(k\in\mathbb Z\), suffit-elle ? Contre-exemple.'
+  verso: 'Non : la famille limite doit encore être de somme \(1\). Pour \(X_n=n\) (constante), \(P(X_n=k)\to0\) pour tout \(k\), mais aucune variable \(X\) à valeurs dans \(\mathbb Z\) n''a \(P(X=k)=0\) pour tout \(k\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 78-79 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-088-1
+  notion: proba-n-0138
+  recto: 'Lemme de Scheffé (2) : \(X,X_n\) de densités \(f,f_n\). Condition suffisante de convergence en loi.'
+  verso: 'Si \(f_n(x)\to f(x)\) en tout \(x\in\mathbb R^d\) sauf éventuellement sur un ensemble négligeable, alors \(X_n\xrightarrow{L}X\). Condition suffisante, non nécessaire.'
+  source: 'Poly Probabilités 5, ch. 5, p. 79 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-088-2
+  notion: proba-n-0138
+  recto: '\(X\sim\mathcal N(0,1)\), \(X^{\prime}_n=nX\) : \(X^{\prime}_n\) converge-t-elle en loi ?'
+  verso: 'Non : \(P(|X^{\prime}_n|\le M)=P(|X|\le M/n)\to0\) pour tout \(M\) : la masse s''échappe de tout intervalle borné. (Les densités de \(X^{\prime}_n\) tendent pourtant simplement vers \(0\), qui n''est pas une densité.)'
+  source: 'Poly Probabilités 5, ch. 5, p. 79-80 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-089-1
+  notion: proba-n-0139
+  recto: 'Convergence en loi et fonctions de répartition : énoncer l''équivalence.'
+  verso: '\(X_n\xrightarrow{L}X\iff F_n(x)\to F(x)\) en tout point \(x\) où \(F\) est continue (\(F,F_n\) fonctions de répartition de \(X,X_n\)).'
+  source: 'Poly Probabilités 5, ch. 5, p. 80 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-089-2
+  notion: proba-n-0139
+  recto: 'Pourquoi n''exige-t-on la convergence de \(F_n\) qu''aux points de continuité de \(F\) ? Exemple avec \(X_n=1/n\).'
+  verso: '\(X_n=1/n\to X=0\) en loi. \(F_{X_n}(t)=\mathbf 1_{t\ge1/n}\to\mathbf 1_{t\gt 0}\), qui diffère de \(F_X(t)=\mathbf 1_{t\ge0}\) en \(t=0\), point de discontinuité de \(F_X\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 80 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-089-3
+  notion: proba-n-0139
+  recto: 'Les \(F_n\) peuvent-elles converger simplement sans convergence en loi ? Exemple.'
+  verso: 'Oui : pour \(X_n=n\), les \(F_n\) convergent partout vers la fonction nulle, qui n''est pas une fonction de répartition ; pas de convergence en loi.'
+  source: 'Poly Probabilités 5, ch. 5, p. 80 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-090-1
+  notion: proba-n-0140
+  recto: '\(X_i\) i.i.d. uniformes sur \([0,1]\), \(Y_n=n\min(X_1,\dots,X_n)\) : loi limite ?'
+  verso: '\(F_{Y_n}(t)=1-P(X_1\gt t/n)^n\) (indépendance, même loi) \(=1-(1-t/n)^n\) pour \(t\in[0,n]\) (\(0\) si \(t\le0\), \(1\) si \(t\ge n\)). Quand \(n\to\infty\) : \(\to1-e^{-t}\) si \(t\ge0\), c''est la fonction de répartition d''une exponentielle de paramètre \(1\). Donc \(Y_n\xrightarrow{L}\mathcal E(1)\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 80 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [exemple]
+- id: proba-a-091-1
+  notion: proba-n-0141
+  recto: 'Théorème de Lévy : énoncer l''équivalence entre convergence en loi et fonctions caractéristiques.'
+  verso: 'Avec \(\varphi,\varphi_n\) les fonctions caractéristiques de \(X,X_n\) (vecteurs de \(\mathbb R^d\)) : \(X_n\xrightarrow{L}X\iff\varphi_n(x)\to\varphi(x)\) en tout \(x\in\mathbb R^d\) (admis).'
+  source: 'Poly Probabilités 5, ch. 5, p. 81 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-091-2
+  notion: proba-n-0141
+  recto: 'Les \(\varphi_n\) peuvent-elles converger simplement sans convergence en loi ? Exemple.'
+  verso: 'Oui : avec \(X_n=nX\), \(X\sim\mathcal N(0,1)\), on a \(\varphi_{X_n}(t)=e^{-n^2t^2/2}\to\mathbf 1_{t=0}\), non continue en \(0\) : ce n''est pas une fonction caractéristique ; pas de convergence en loi.'
+  source: 'Poly Probabilités 5, ch. 5, p. 81 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-092-1
+  notion: proba-n-0143
+  recto: 'Preuve du TCL (\(X_n\) i.i.d. réelles, moment d''ordre \(2\), \(\mu=E[X_1]\), \(\sigma^2=\mathrm{var}(X_1)\)) par fonctions caractéristiques et Lévy.'
+  verso: '\(Z_k=X_k-\mu\) (indépendantes, centrées, variance \(\sigma^2\)) ; \(\sqrt n(\bar X_n-\mu)=\frac{Z_1+\dots+Z_n}{\sqrt n}\). Moment d''ordre \(2\) : \(\varphi_{Z_1}(s)=1-\frac{\sigma^2}2s^2+o(s^2)\). Indépendance : \(\varphi(t)=\varphi_{Z_1}\left(\frac t{\sqrt n}\right)^n=\left(1-\frac{\sigma^2t^2}{2n}+o\left(\frac1n\right)\right)^n\to e^{-\sigma^2t^2/2}\), fonction caractéristique de \(\mathcal N(0,\sigma^2)\). Lévy conclut.'
+  source: 'Poly Probabilités 5, ch. 5, p. 81-82 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [demonstration]
+- id: proba-a-093-1
+  notion: proba-n-0144
+  recto: 'Théorème central limite vectoriel : énoncer.'
+  verso: 'Soit \((X^{(n)})\) des vecteurs aléatoires de \(\mathbb R^d\) indépendants, de même loi, dont les coordonnées ont un moment d''ordre \(2\) ; \(\mu\) la moyenne et \(\Gamma\) la covariance de \(X^{(1)}\). Alors \(\sqrt n\left(\frac1n\sum_{i=1}^nX^{(i)}-\mu\right)\xrightarrow{L}Z\), vecteur gaussien centré de matrice de covariance \(\Gamma\) (\(Z\sim\mathcal N(0,\Gamma)\)).'
+  source: 'Poly Probabilités 5, ch. 5, p. 82 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 3
+  tags: [theoreme]

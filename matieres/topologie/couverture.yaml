@@ -1,0 +1,94 @@
+topo-n-0001: {statut: couverte, notes: [1664291878792, 1664292557826]}
+topo-n-0002: {statut: couverte, notes: [1664292506346]}
+topo-n-0003: {statut: couverte, notes: [1770140824703, 1786540287802]}
+topo-n-0004: {statut: couverte, notes: [1786448433279, 1786441932447]}
+topo-n-0005: {statut: couverte, notes: [1786441932447, 1786448507951]}
+topo-n-0006: {statut: couverte, notes: [1770141171624, 1786525296595]}
+topo-n-0007: {statut: absente, notes: []}   # aucun recto sur topologie grossière / discrète
+topo-n-0008: {statut: couverte, notes: [1786448736462, 1786448354098]}
+topo-n-0009: {statut: partielle, notes: [1786441479984, 1772830956806]}   # seule l'inégalité triangulaire (recto générique) ; forme inversée en métrique non nommée
+topo-n-0010: {statut: partielle, notes: [1765020913909, 1786441612419]}   # exemples d'espaces métriques et normes Lp ; d_p/d_inf sur R^n et distance discrète non nommées
+topo-n-0011: {statut: couverte, notes: [1786448903783, 1786448927718]}
+topo-n-0012: {statut: couverte, notes: [1772647483015, 1770140867658]}
+topo-n-0013: {statut: couverte, notes: [1770141171624, 1786525296595]}
+topo-n-0014: {statut: partielle, notes: [1786448444687, 1786448903783]}   # recto "boules et fermés" ; "boule ouverte est ouverte" non nommé
+topo-n-0015: {statut: partielle, notes: [1786466066522]}   # point-partie couvert ; distance entre deux parties non nommée
+topo-n-0016: {statut: couverte, notes: [1770140956173, 1737130268084]}
+topo-n-0017: {statut: couverte, notes: [1770140975407]}
+topo-n-0018: {statut: couverte, notes: [1786484059886]}
+topo-n-0019: {statut: partielle, notes: [1786442311898, 1786484077090]}   # "plus grand ouvert inclus" non nommé
+topo-n-0020: {statut: couverte, notes: [1786484077090, 1786484126572, 1786484150966]}
+topo-n-0021: {statut: couverte, notes: [1786484150966]}
+topo-n-0022: {statut: couverte, notes: [1770141239338, 1786467336208]}
+topo-n-0023: {statut: couverte, notes: [1786526255846]}
+topo-n-0024: {statut: couverte, notes: [1786484431523, 1786467377084, 1786442325818]}
+topo-n-0025: {statut: couverte, notes: [1786484163414]}
+topo-n-0026: {statut: couverte, notes: [1786484189113, 1786484202934]}
+topo-n-0027: {statut: couverte, notes: [1770141239338]}
+topo-n-0028: {statut: couverte, notes: [1770141239338, 1786458087545]}
+topo-n-0029: {statut: couverte, notes: [1770141239338]}
+topo-n-0030: {statut: couverte, notes: [1786540307329, 1786448519325, 1786525261017]}
+topo-n-0031: {statut: absente, notes: []}   # distance induite non nommée
+topo-n-0032: {statut: couverte, notes: [1786448519325, 1786525261017, 1786540307329]}
+topo-n-0033: {statut: couverte, notes: [1786525351001, 1786525411486]}
+topo-n-0034: {statut: partielle, notes: [1786448393166, 1786525328168]}   # équivalence uniforme non nommée
+topo-n-0035: {statut: couverte, notes: [1786448424876, 1786525328168]}
+topo-n-0036: {statut: absente, notes: []}   # hiérarchie Lipschitz > uniforme > topologique non nommée
+topo-n-0037: {statut: couverte, notes: [1786525315382]}
+topo-n-0038: {statut: partielle, notes: [1786525351001]}   # le recto 1786525411486 cite produit Lp et sup, pas le produit dénombrable
+topo-n-0039: {statut: couverte, notes: [1770141008352, 1786448462203]}
+topo-n-0040: {statut: couverte, notes: [1765021066764]}
+topo-n-0041: {statut: couverte, notes: [1772219007501, 1786960247773]}
+topo-n-0042: {statut: couverte, notes: [1786960267606, 1786960309989]}
+topo-n-0043: {statut: couverte, notes: [1786467355412, 1786448482473]}
+topo-n-0044: {statut: couverte, notes: [1786960326722]}
+topo-n-0045: {statut: partielle, notes: [1786960326722, 1786960267606]}   # équivalence avec suite extraite convergente non nommée
+topo-n-0046: {statut: absente, notes: []}   # ensemble des valeurs d'adhérence comme fermé non nommé
+topo-n-0047: {statut: couverte, notes: [1786526306402, 1786526323201]}
+topo-n-0048: {statut: couverte, notes: [1786526335449, 1786526285701, 1770141760483]}
+topo-n-0049: {statut: couverte, notes: [1786488160527, 1786526306402]}
+topo-n-0050: {statut: partielle, notes: [1786959988742, 1786466200180, 1786466270955]}   # homéomorphisme non nommé
+topo-n-0051: {statut: partielle, notes: [1786466229119]}   # Lipschitz -> continue ; chaîne complète avec uniforme continuité et isométrie non nommée
+topo-n-0052: {statut: partielle, notes: [1786540678493]}   # lien avec les applications identité non nommé explicitement
+topo-n-0053: {statut: couverte, notes: [1765021326999, 1786629438012, 1786542615757]}
+topo-n-0054: {statut: couverte, notes: [1765021343166]}
+topo-n-0055: {statut: couverte, notes: [1771259222926]}
+topo-n-0056: {statut: couverte, notes: [1765021366209, 1786629612408]}
+topo-n-0057: {statut: couverte, notes: [1765021403032]}
+topo-n-0058: {statut: partielle, notes: [1772186584289]}   # bornée dans R^n seulement ; diamètre non nommé
+topo-n-0059: {statut: couverte, notes: [1786629634299]}
+topo-n-0060: {statut: couverte, notes: [1770141449086]}
+topo-n-0061: {statut: partielle, notes: [1786630722430]}   # R^n complet ; produit fini d'espaces complets en général non nommé
+topo-n-0062: {statut: couverte, notes: [1668706330568, 1771251237309]}
+topo-n-0063: {statut: couverte, notes: [1771251237309, 1765287472236]}
+topo-n-0064: {statut: absente, notes: []}   # seul le prolongement par continuité réel (1ère année) existe
+topo-n-0065: {statut: couverte, notes: [1786466270955, 1787136943964]}
+topo-n-0066: {statut: absente, notes: []}
+topo-n-0067: {statut: couverte, notes: [1787136964616, 1770141912983]}
+topo-n-0068: {statut: partielle, notes: [1770141912983]}   # théorème couvert ; méthode (suite itérée, Cauchy, unicité) non nommée
+topo-n-0069: {statut: absente, notes: []}
+topo-n-0070: {statut: absente, notes: []}   # aucune carte Baire dans le paquet
+topo-n-0071: {statut: absente, notes: []}
+topo-n-0072: {statut: absente, notes: []}
+topo-n-0073: {statut: absente, notes: []}
+topo-n-0074: {statut: absente, notes: []}
+topo-n-0075: {statut: couverte, notes: [1786532074719, 1786532058479]}
+topo-n-0076: {statut: absente, notes: []}
+topo-n-0077: {statut: couverte, notes: [1786532074719]}
+topo-n-0078: {statut: partielle, notes: [1786532074719, 1786532090921]}   # recto "Caractérisation d'un compact" ; recouvrements d'ouverts de X non nommés
+topo-n-0079: {statut: absente, notes: []}
+topo-n-0080: {statut: absente, notes: []}   # compact => fermé non nommé (seulement dimension finie)
+topo-n-0081: {statut: absente, notes: []}
+topo-n-0082: {statut: couverte, notes: [1786960349488, 1786540547855]}
+topo-n-0083: {statut: partielle, notes: [1786960349488]}   # lemme de Lebesgue non nommé
+topo-n-0084: {statut: couverte, notes: [1786959959699, 1786960349488]}
+topo-n-0085: {statut: absente, notes: []}
+topo-n-0086: {statut: absente, notes: []}
+topo-n-0087: {statut: couverte, notes: [1786531922854, 1786533420890]}
+topo-n-0088: {statut: absente, notes: []}
+topo-n-0089: {statut: couverte, notes: [1786531953268]}
+topo-n-0090: {statut: couverte, notes: [1786531953268, 1786531922854]}
+topo-n-0091: {statut: couverte, notes: [1786531967279]}
+topo-n-0092: {statut: couverte, notes: [1786488214838, 1770198404684]}
+topo-n-0093: {statut: couverte, notes: [1786544302569]}
+topo-n-0094: {statut: absente, notes: []}

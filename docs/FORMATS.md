@@ -52,6 +52,38 @@ Règles d'extraction :
 - Ne jamais compléter ni corriger un énoncé : si une formule est illisible dans le texte extrait, ouvrir la page du PDF. Si le doute reste : `qualite_extraction: a_verifier`.
 - Ne jamais rédiger de corrigé pendant l'extraction.
 
+## `matieres/<matiere>/methodes.yaml` et `classement.yaml`
+
+`methodes.yaml` : les méthodes types de la matière.
+
+```yaml
+- id: topo-m-01
+  titre: 'Montrer qu''une partie est fermée par la caractérisation séquentielle'
+  notions: [topo-n-0021]
+  annales: 6                       # nombre d'exercices d'annales de Paris Cité qui l'utilisent
+```
+
+`classement.yaml` : un dictionnaire indexé par l'id d'exercice, fusionné ensuite par `tools/classement.py fusionner`.
+
+```yaml
+topo-td1-ex03:
+  sous_chapitre: 'Chapitre 1 - Espace métrique > 1.3 Normes'
+  methodes: [topo-m-01]
+  notions: [topo-n-0012]
+  importance: vital                # vital|important|secondaire|exotique
+  justification: 'méthode présente dans 4 annales de Paris Cité'
+  difficulte: 2                    # 1..3
+  temps_min: 25
+  doublon_de: null                 # id d'un exercice identique déjà classé : il ne sera pas planifié deux fois
+```
+
+Définitions :
+- **vital** : indispensable pour réussir au moins correctement l'examen final ; méthodes récurrentes des annales de Paris Cité.
+- **important** : fréquent ou très utile, sans être le cœur des sujets.
+- **secondaire** : utile pour consolider, rarement décisif.
+- **exotique** : peu classique ou difficile, ne tombe jamais ou presque aux examens.
+- Une annale prioritaire reçoit aussi une importance : elle reste planifiée quoi qu'il arrive, mais son importance dit ce que sa méthode vaut pour le reste du classement.
+
 ## `matieres/<matiere>/notions.yaml`
 
 Inventaire de ce qu'il faut savoir, relevé dans le cours.
@@ -93,6 +125,30 @@ Le jugement porte sur le recto (les réponses sont souvent en image) : un recto 
   source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 3}   # null pour un prérequis sans source
   confiance: sure                  # sure|a_confirmer : à confirmer par mini-test ou par l'utilisateur
 ```
+
+## `matieres/<matiere>/cartes.yaml`
+
+Cartes rédigées par le système, exportées vers Anki par paquets ne contenant que les nouvelles cartes.
+
+```yaml
+- id: topo-a-012-1                 # <id de cartes_a_creer>-<k> : une notion peut donner plusieurs cartes
+  notion: topo-n-0070
+  recto: 'Énoncer le théorème de Baire dans un espace métrique complet.'
+  verso: 'Dans un espace métrique complet, une intersection dénombrable d''ouverts denses est dense.'
+  source: 'Poly de topologie Paris Cité, ch. 2, p. 7'
+  chapitre: 'Chapitre 2 - Espace complet'   # sert au nom du sous-paquet
+  priorite: 1                      # reprise de cartes_a_creer
+  tags: [definition]               # type de la notion ; matière et priorité ajoutées à l'export
+```
+
+Règles de rédaction :
+- une seule idée par carte ; un recto formulé comme une question précise ; un verso court ;
+- maths en MathJax : `\( ... \)` en ligne, `\[ ... \]` en bloc ; pas de liste à apprendre en bloc, la découper ;
+- un théorème : hypothèses complètes et conclusion ; une carte à part pour un contre-exemple ou un piège utile ;
+- rédigée en lisant la source réelle à la page indiquée, jamais de mémoire ; `source` non vide sur chaque carte ;
+- une notion `partielle` : seulement ce qui manque au paquet (indiqué dans `raison`).
+
+Paquet Anki : `tg::Maths::L3 Paris Cité::<Matière>::<chapitre>`, étiquette `prof-maths` sur chaque carte.
 
 ## Résultat d'un exercice (`state/resultats.yaml`, à venir)
 `reussi` (seul), `aide` (réussi avec un indice), `presque` (pas loin avec l'aide), `non_fait` (pas réussi). Correspondance avec les tableurs : Réussi → `reussi`, Pas loin → `presque`, Loin et Non fait → `non_fait`.

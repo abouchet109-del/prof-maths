@@ -1,0 +1,380 @@
+- id: topo-a-001
+  origine: cours_l3
+  notion: topo-n-0007
+  titre: "Topologies grossière et discrète (séparé ou non)"
+  raison: "absente du paquet : aucun recto sur les topologies grossière et discrète"
+  programme_ecg: false
+  exercices: [topo-td1-ex02, topo-td2-ex03]
+  priorite: 2
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 3}
+  confiance: sure
+- id: topo-a-002
+  origine: cours_l3
+  notion: topo-n-0009
+  titre: "Seconde inégalité triangulaire"
+  raison: "partielle : seul le recto générique 'inégalité triangulaire' existe ; la forme |d(x,y)-d(y,z)| <= d(x,z) en espace métrique n'est pas nommée (la carte 'inversé' vient d'un cours de complexes)"
+  programme_ecg: true
+  exercices: [topo-partiel2022-23-ex02, topo-td2-ex06]
+  priorite: 1
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 3}
+  confiance: a_confirmer
+- id: topo-a-003
+  origine: cours_l3
+  notion: topo-n-0010
+  titre: "Distances usuelles : d_infini, d_p, distance discrète"
+  raison: "partielle : exemples d'espaces métriques et normes Lp existent, mais d_p et d_infini sur R^n et la distance discrète ne sont pas nommées"
+  programme_ecg: false
+  exercices: [topo-td1-ex03, topo-td1-ex08, topo-td3-ex05]
+  priorite: 2
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 3}
+  confiance: sure
+- id: topo-a-004
+  origine: cours_l3
+  notion: topo-n-0014
+  titre: "Une boule ouverte est ouverte, une boule fermée est fermée"
+  raison: "partielle : recto 'boules et fermés' ; la boule ouverte est ouverte (technique epsilon = r - d(x,y)) n'est pas nommée"
+  programme_ecg: false
+  exercices: [topo-partiel2021-22-ex01, topo-td1-ex08]
+  priorite: 1
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 4}
+  confiance: a_confirmer
+- id: topo-a-005
+  origine: cours_l3
+  notion: topo-n-0015
+  titre: "Distance d'un point à une partie, entre deux parties"
+  raison: "partielle : distance d'un point à un ensemble existe ; la distance entre deux parties d(A,B) n'est pas nommée"
+  programme_ecg: false
+  exercices: [topo-td1-ex09, topo-td1-ex10]
+  priorite: 2
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 5}
+  confiance: sure
+- id: topo-a-006
+  origine: cours_l3
+  notion: topo-n-0019
+  titre: "Intérieur : plus grand ouvert inclus dans A"
+  raison: "partielle : recto 'Intérieur d'un ouvert' et 'proposition calculatoire sur l'intérieur' ; la caractérisation plus grand ouvert et A ouvert ssi A = int(A) n'est pas nommée"
+  programme_ecg: false
+  exercices: [topo-td1-ex12, topo-td1-ex13, topo-td1-ex14]
+  priorite: 1
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 6}
+  confiance: a_confirmer
+- id: topo-a-007
+  origine: cours_l3
+  notion: topo-n-0031
+  titre: "Distance induite, sous-espace métrique"
+  raison: "absente du paquet : la topologie induite existe, mais pas la distance induite ni le sous-espace métrique"
+  programme_ecg: false
+  exercices: [topo-partiel2020-21-ex01, topo-td1-ex04]
+  priorite: 1
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 9}
+  confiance: sure
+- id: topo-a-008
+  origine: cours_l3
+  notion: topo-n-0034
+  titre: "Distances topologiquement, uniformément, Lipschitz équivalentes"
+  raison: "partielle : 'distance équivalente' et 'équivalence topologique' existent ; l'équivalence uniforme n'est pas nommée"
+  programme_ecg: false
+  exercices: [topo-td3-ex02, topo-td2-ex02]
+  priorite: 2
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 11}
+  confiance: a_confirmer
+- id: topo-a-009
+  origine: cours_l3
+  notion: topo-n-0036
+  titre: "Hiérarchie des équivalences de distances"
+  raison: "absente du paquet : Lipschitz => uniforme => topologique n'est nommée dans aucun recto"
+  programme_ecg: false
+  exercices: [topo-td3-ex02, topo-td2-ex02]
+  priorite: 2
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 12}
+  confiance: a_confirmer
+- id: topo-a-010
+  origine: cours_l3
+  notion: topo-n-0038
+  titre: "Distance sur un produit dénombrable"
+  raison: "partielle : 'distance sur un espace produit' existe ; la somme 2^-k d_k/(1+d_k) sur un produit dénombrable n'est pas nommée (le recto voisin cite produit Lp et supremum)"
+  programme_ecg: false
+  exercices: [topo-td4-ex08]
+  priorite: 2
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 13}
+  confiance: a_confirmer
+- id: topo-a-011
+  origine: cours_l3
+  notion: topo-n-0045
+  titre: "Valeur d'adhérence et suite extraite convergente"
+  raison: "partielle : recto 'valeur d'adhérence' (définition) ; l'équivalence avec une suite extraite convergente n'est pas nommée"
+  programme_ecg: false
+  exercices: [topo-td2-ex02, topo-td2-ex04, topo-dm2022-23-ex02]
+  priorite: 2
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 15}
+  confiance: a_confirmer
+- id: topo-a-012
+  origine: cours_l3
+  notion: topo-n-0046
+  titre: "Ensemble des valeurs d'adhérence d'une suite"
+  raison: "absente du paquet : le fait que ce soit le fermé intersection des adhérences des queues n'est pas nommé"
+  programme_ecg: false
+  exercices: [topo-td2-ex04]
+  priorite: 2
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 15}
+  confiance: sure
+- id: topo-a-013
+  origine: cours_l3
+  notion: topo-n-0050
+  titre: "Uniforme continuité, lipschitzienne, isométrie, homéomorphisme"
+  raison: "partielle : continuité uniforme, lipschitzienne, contractante et isométrie existent ; homéomorphisme non nommé"
+  programme_ecg: false
+  exercices: [topo-td3-ex03, topo-dm2023-24-ex01]
+  priorite: 2
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 17}
+  confiance: sure
+- id: topo-a-014
+  origine: cours_l3
+  notion: topo-n-0051
+  titre: "Hiérarchie isométrie / lipschitzienne / uniformément continue / continue"
+  raison: "partielle : recto 'Fonction Lipschitzienne et continuité' ; la chaîne complète avec uniforme continuité et isométrie surjective = homéomorphisme n'est pas nommée"
+  programme_ecg: false
+  exercices: [topo-td4-ex06, topo-td4-ex07]
+  priorite: 2
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 18}
+  confiance: a_confirmer
+- id: topo-a-015
+  origine: cours_l3
+  notion: topo-n-0052
+  titre: "Équivalence de distances et applications identité"
+  raison: "partielle : recto 'Continuité et applications topologiquement équivalentes' ; le lien avec les identités continues / uniformément continues / lipschitziennes n'est pas nommé"
+  programme_ecg: false
+  exercices: [topo-td2-ex02, topo-td3-ex02]
+  priorite: 2
+  source: {fichier: topologie/cours/chap1-espaces-metriques.pdf, page: 18}
+  confiance: a_confirmer
+- id: topo-a-016
+  origine: cours_l3
+  notion: topo-n-0058
+  titre: "Partie bornée, diamètre"
+  raison: "partielle : seule la partie bornée de R^n existe ; partie bornée d'un espace métrique et diamètre (diam(A) = diam(adhérence)) non nommés"
+  programme_ecg: false
+  exercices: [topo-partiel2021-22-ex03, topo-td3-ex04, topo-dm2022-23-ex02]
+  priorite: 1
+  source: {fichier: topologie/cours/chap2-espaces-complets.pdf, page: 2}
+  confiance: sure
+- id: topo-a-017
+  origine: cours_l3
+  notion: topo-n-0061
+  titre: "Produit fini d'espaces complets"
+  raison: "partielle : R^n complet existe ; produit fini d'espaces complets en général non nommé"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: topologie/cours/chap2-espaces-complets.pdf, page: 3}
+  confiance: sure
+- id: topo-a-018
+  origine: cours_l3
+  notion: topo-n-0064
+  titre: "Prolongement des applications uniformément continues"
+  raison: "absente du paquet : seul le prolongement par continuité réel (1ère année) existe"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: topologie/cours/chap2-espaces-complets.pdf, page: 5}
+  confiance: sure
+- id: topo-a-019
+  origine: cours_l3
+  notion: topo-n-0066
+  titre: "Exemple : sqrt(1+x^2)-1 contractante sur [-M,M] mais pas sur R"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: topologie/cours/chap2-espaces-complets.pdf, page: 6}
+  confiance: sure
+- id: topo-a-020
+  origine: cours_l3
+  notion: topo-n-0068
+  titre: "Méthode de point fixe (suite itérée u_{n+1} = f(u_n))"
+  raison: "partielle : le théorème de Banach-Picard existe ; la méthode (Cauchy par C^n d(u1,u0), limite = point fixe, unicité) n'est pas nommée"
+  programme_ecg: false
+  exercices: [topo-td3-ex08, topo-partiel2021-22-ex04, topo-partiel2023-24-ex03, topo-partiel2023-24-ex05, topo-exam2023-24-ex01]
+  priorite: 1
+  source: {fichier: topologie/cours/chap2-espaces-complets.pdf, page: 7}
+  confiance: a_confirmer
+- id: topo-a-021
+  origine: cours_l3
+  notion: topo-n-0069
+  titre: "Contre-exemple : |f(x)-f(y)| < |x-y| ne suffit pas"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [topo-td3-ex05, topo-td4-ex07]
+  priorite: 2
+  source: {fichier: topologie/cours/chap2-espaces-complets.pdf, page: 7}
+  confiance: sure
+- id: topo-a-022
+  origine: cours_l3
+  notion: topo-n-0070
+  titre: "Théorème de Baire"
+  raison: "absente du paquet : aucune carte Baire"
+  programme_ecg: false
+  exercices: [topo-partiel2022-23-ex04, topo-exam2021-22-ex03, topo-td3-ex09, topo-td3-ex10]
+  priorite: 1
+  source: {fichier: topologie/cours/chap2-espaces-complets.pdf, page: 8}
+  confiance: sure
+- id: topo-a-023
+  origine: cours_l3
+  notion: topo-n-0071
+  titre: "Démonstration du théorème de Baire (boules fermées emboîtées)"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: topologie/cours/chap2-espaces-complets.pdf, page: 8}
+  confiance: sure
+- id: topo-a-024
+  origine: cours_l3
+  notion: topo-n-0072
+  titre: "Baire : union dénombrable de fermés d'intérieur vide"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [topo-partiel2022-23-ex04, topo-exam2021-22-ex03, topo-td3-ex09]
+  priorite: 1
+  source: {fichier: topologie/cours/chap2-espaces-complets.pdf, page: 9}
+  confiance: sure
+- id: topo-a-025
+  origine: cours_l3
+  notion: topo-n-0073
+  titre: "Baire : recouvrement dénombrable par des fermés"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [topo-exam2021-22-ex03, topo-td3-ex09, topo-td3-ex10]
+  priorite: 1
+  source: {fichier: topologie/cours/chap2-espaces-complets.pdf, page: 9}
+  confiance: sure
+- id: topo-a-026
+  origine: cours_l3
+  notion: topo-n-0074
+  titre: "Recouvrement, sous-recouvrement"
+  raison: "absente du paquet : vocabulaire non nommé dans les rectos de compacité"
+  programme_ecg: false
+  exercices: [topo-partiel2023-24-ex04]
+  priorite: 1
+  source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 1}
+  confiance: sure
+- id: topo-a-027
+  origine: cours_l3
+  notion: topo-n-0076
+  titre: "Exemples de compacts et non-compacts"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [topo-partiel2020-21-ex01]
+  priorite: 1
+  source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 1}
+  confiance: sure
+- id: topo-a-028
+  origine: cours_l3
+  notion: topo-n-0078
+  titre: "Compacité d'une partie par recouvrements d'ouverts de X"
+  raison: "partielle : définition de partie compacte et recto 'Caractérisation d'un compact' ; recouvrements par des ouverts de X (et non de la partie) non nommés"
+  programme_ecg: false
+  exercices: [topo-partiel2023-24-ex04]
+  priorite: 1
+  source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 2}
+  confiance: a_confirmer
+- id: topo-a-029
+  origine: cours_l3
+  notion: topo-n-0079
+  titre: "Caractérisation de la compacité par les fermés"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [topo-td4-ex04, topo-td3-ex04]
+  priorite: 2
+  source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 2}
+  confiance: sure
+- id: topo-a-030
+  origine: cours_l3
+  notion: topo-n-0080
+  titre: "Compact implique fermé ; fermé d'un compact"
+  raison: "absente du paquet : seul compact = fermé borné en dimension finie existe"
+  programme_ecg: false
+  exercices: [topo-partiel2023-24-ex04, topo-partiel2020-21-ex01, topo-td4-ex01]
+  priorite: 1
+  source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 2}
+  confiance: a_confirmer
+- id: topo-a-031
+  origine: cours_l3
+  notion: topo-n-0081
+  titre: "Un compact est borné"
+  raison: "absente du paquet : seul compact = fermé borné en dimension finie existe"
+  programme_ecg: false
+  exercices: [topo-partiel2020-21-ex01, topo-dm2021-22-ex01]
+  priorite: 1
+  source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 3}
+  confiance: a_confirmer
+- id: topo-a-032
+  origine: cours_l3
+  notion: topo-n-0083
+  titre: "Lemme de Lebesgue"
+  raison: "partielle : recto 'Lemme de Bolzano-Weierstrass' ; le lemme de Lebesgue (nombre de Lebesgue d'un recouvrement ouvert) n'est pas nommé"
+  programme_ecg: false
+  exercices: [topo-td4-ex10, topo-td4-ex09]
+  priorite: 2
+  source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 4}
+  confiance: a_confirmer
+- id: topo-a-033
+  origine: cours_l3
+  notion: topo-n-0085
+  titre: "Suite d'un compact avec au plus une valeur d'adhérence"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [topo-td4-ex08, topo-dm2020-21-ex02]
+  priorite: 2
+  source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 6}
+  confiance: sure
+- id: topo-a-034
+  origine: cours_l3
+  notion: topo-n-0086
+  titre: "Un compact est complet"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [topo-td4-ex03, topo-td4-ex08]
+  priorite: 2
+  source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 7}
+  confiance: sure
+- id: topo-a-035
+  origine: cours_l3
+  notion: topo-n-0088
+  titre: "Fermé borné non compact : la borne est métrique"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: [topo-dm2021-22-ex01]
+  priorite: 2
+  source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 8}
+  confiance: sure
+- id: topo-a-036
+  origine: cours_l3
+  notion: topo-n-0094
+  titre: "Bijection continue d'un compact : homéomorphisme"
+  raison: "absente du paquet"
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source: {fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 11}
+  confiance: sure
+- id: topo-a-037
+  origine: prerequis_l1l2
+  notion: null
+  titre: "Extraction diagonale (procédé diagonal de Cantor)"
+  raison: "prérequis absent du paquet (aucune carte sur l'extraction diagonale) et hors programme ECG ; sert à la compacité séquentielle d'un produit dénombrable"
+  programme_ecg: false
+  exercices: [topo-td4-ex08]
+  priorite: 2
+  source: null
+  confiance: a_confirmer
+- id: topo-a-038
+  origine: prerequis_l1l2
+  notion: null
+  titre: "Identité du parallélogramme (norme euclidienne strictement convexe)"
+  raison: "prérequis : seule l'identité de polarisation est dans le paquet, pas l'identité du parallélogramme ; présence au programme ECG incertaine"
+  programme_ecg: false
+  exercices: [topo-dm2022-23-ex02]
+  priorite: 2
+  source: null
+  confiance: a_confirmer
