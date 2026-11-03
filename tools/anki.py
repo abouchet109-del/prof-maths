@@ -61,6 +61,14 @@ def deck_id(nom: str) -> int:
     return (1 << 30) | (h & ((1 << 30) - 1))
 
 
+BALISE = re.compile(r"<(?!/?(?:br|b|i|u|em|strong|code|pre|sup|sub|div|span|ul|ol|li|p|hr)\b)", re.I)
+
+
+def html(texte: str) -> str:
+    """Un « < » mathématique (u_n<1) serait lu comme une balise et masquerait la suite."""
+    return BALISE.sub("&lt;", texte)
+
+
 def etiquette(texte: str) -> str:
     return re.sub(r"[^\w.\-]", "_", str(texte).strip())
 
@@ -113,7 +121,7 @@ def main() -> int:
         decks.setdefault(nom, genanki.Deck(deck_id(nom), nom))
         tags = ["prof-maths", c["matiere"], f"priorite-{c.get('priorite') or 3}",
                 *[etiquette(t) for t in c.get("tags") or []]]
-        decks[nom].add_note(genanki.Note(model=m, fields=[c["id"], c["recto"], c["verso"], c["source"]],
+        decks[nom].add_note(genanki.Note(model=m, fields=[c["id"], html(c["recto"]), html(c["verso"]), html(c["source"])],
                                          tags=tags, guid=genanki.guid_for(GUID_NAMESPACE, c["id"])))
     for nom, d in sorted(decks.items()):
         print(f"  {len(d.notes):4} {nom}")
