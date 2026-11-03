@@ -60,7 +60,16 @@ Limite : sans accès direct à Anki, le système ne voit pas les cartes dues ni 
 | 7c-7d Rédaction et relecture | fait : 509 cartes ; relecture Opus de 46 cartes, aucune erreur de fond, 5 cartes précisées |
 | 7e Paquet | fait : `anki/paquets/prof-maths-2026-11-03.apkg`, à importer par l'utilisateur |
 | 8 Corrigés vérifiés | à la demande, rien encore |
-| 9-12 Socle, planificateur, skills, tests | à faire |
+| 9-10 Socle et planificateur | fait : `tools/etat.py`, `plan.py`, `resultat.py`, `check.py`, 14 tests (`tools/tests/`). `plan.py jour` écrit `NOW.md` ; le 04/11 : 6 exercices (120 min), 3 notions, 12 cartes. Marge à l'échéance : +2385 min (6975 min restantes, 9360 min de capacité) |
+| 11 Règles de session | fait en partie : `CLAUDE.md` et skill `debrief`. Pas encore de check-in hebdomadaire ni de skill imprévu (à faire si le besoin apparaît) |
+| 12 Contrôle | fait : tests et `check.py` passent sur les vraies données |
+
+**Choix du planificateur** :
+- **Examens blancs :** la dernière année d'annales de Paris Cité de chaque matière est réservée aux examens blancs de la période à 28 h. Pour la topologie, c'est 2023-24.
+- **Annales :** les annales prioritaires ont leur propre filière, à une nouvelle annale par jour au plus hors de cette période. Elles ne bloquent pas le passage de catégorie.
+- **Nouveaux exercices :** les vitaux passent avant les importants. La matière qui a le plus de minutes vitales restantes commence, puis on alterne.
+- **Cours :** 10 min par notion, tirées des exercices du jour.
+- **Cartes :** les 12 cartes du jour couvrent les exercices des 3 jours suivants. Elles sont suivies dans `state/anki_plan.yaml`.
 
 **Bilan du classement** (heures estimées par les agents, doublons exclus) :
 

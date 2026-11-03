@@ -7,7 +7,7 @@ Il reprend les principes de [archi-ml-ai-researcher](https://github.com/abouchet
 ## Ce que fait le système
 - **Exercices :** tous les exercices de TD, DM et annales (Paris Cité, plus l'UVSQ en complément) sont extraits, classés par sous-chapitre et de vital à exotique. On ne passe à la catégorie suivante d'un sous-chapitre qu'une fois la précédente maîtrisée. Les annales de Paris Cité sont prioritaires et toujours planifiées.
 - **Cours :** les notions manquantes du paquet Anki, y compris les prérequis de L1-L2, sont fichées par le système. L'utilisateur apprend par Anki ; les 30 min de cours quotidiennes servent à approfondir.
-- **Planning (à construire) :** chaque jour, 2 h d'exercices et d'annales, 30 min de cours, les cartes à apprendre et à réviser, puis un debrief qui met à jour le profil de maîtrise.
+- **Planning :** `python tools/plan.py jour` écrit `NOW.md`. Chaque jour, il donne 2 h d'exercices et d'annales, 30 min de cours, les cartes à apprendre et à réviser. Un debrief suit (dire « debrief » à Claude) : il enregistre les résultats avec `tools/resultat.py` et met à jour le profil de maîtrise. Règles pour Claude : `CLAUDE.md`.
 
 ## Où sont les choses
 | Chemin | Contenu |

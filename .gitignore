@@ -9,3 +9,5 @@ inventaire/pdf.json
 # Contenu personnel ou d'un tiers, régénérable par tools/
 inventaire/anki/
 inventaire/trackers/
+inventaire/classement-*.md
+inventaire/enonces-*.md
