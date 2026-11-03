@@ -45,6 +45,29 @@ Limite : sans accès direct à Anki, le système ne voit pas les cartes dues ni 
 - **Tableurs d'exercices UVSQ :** `inventaire/trackers/`, 402 lignes classées, sans la catégorie « secondaire » ; ils ne couvrent pas les TD de Paris Cité.
 - **Manques constatés :** aucune annale de mesure à Paris Cité ; pas de corrigé pour les TD de topologie de Paris Cité ni pour les TD 3 à 7 de mesure ; pas de TD 4 corrigé en probabilités.
 
+## Avancement (03/11/2026)
+
+| Étape | Statut |
+|---|---|
+| 0 Tri et inventaire | fait |
+| 1 Formats | fait (`docs/FORMATS.md`, complété au fil des étapes) |
+| 2-3 Extraction des exercices | fait : topologie 233, mesure 110 + 82 UVSQ, modélisation 33, probas 47 + 162 UVSQ (entrées UVSQ créées depuis les tableurs, énoncé lu seulement si planifié) |
+| 3b Vérification sur images | fait : annales de Paris Cité et énoncés douteux ; 10 fautes de maths corrigées. Restent `a_verifier` : `topo-partiel2020-21-ex01` et `ex02` (sujet absent), `topo-exam2021-22-ex01`, `mes-td4-ex03`, `mes-td4-ex05` (coquilles dans les PDF) |
+| 4 Lecture d'Anki | fait, depuis `tgmathankidonnées.apkg` (instantané, pas de lecture en direct) |
+| 5 Notions | fait : 382 notions (topologie 94, mesure 69, modélisation 75, probas 144) |
+| 6 Classement | modélisation faite ; topologie, mesure et probas en cours |
+| 7a-7b Couverture et trous | fait : 237 cartes à créer, dont 9 prérequis de L1-L2 en attente de confirmation par l'utilisateur |
+| 7c-7d Rédaction et relecture | fait : 509 cartes ; relecture Opus de 46 cartes, aucune erreur de fond, 5 cartes précisées |
+| 7e Paquet | fait : `anki/paquets/prof-maths-2026-11-03.apkg`, à importer par l'utilisateur |
+| 8 Corrigés vérifiés | à la demande, rien encore |
+| 9-12 Socle, planificateur, skills, tests | à faire |
+
+**En attente de l'utilisateur :** import du paquet ; installation d'AnkiConnect ; réponse sur les 9 prérequis de L1-L2 et sur les fonctions génératrices au programme d'ECG ; éventuels sujets du partiel de topologie 2020-21.
+
+**Points ouverts :** 3 notions de mesure sans carte faute de source (mesure extérieure et Carathéodory, intégrales contre comptage, Dirac et densité, intégrale de Gauss) ; aucun TD sur le processus de Poisson ; annales de probas de l'UVSQ non extraites ; ton poly de modélisation contient deux erreurs (PageRank p. 21, apériodicité p. 9), corrigées dans les cartes.
+
+**Coût observé :** environ 250 000 tokens par agent pour les tâches lourdes ; une limite de session atteinte une fois, reprise sans perte.
+
 ## Étapes
 
 | # | Étape | Exécutant | Modèle, effort | Entrée | Sortie |
