@@ -13,6 +13,12 @@
 - `mesure-n-0008` Tribu (σ-algèbre), espace mesurable · mesure/cours/poly-mesure-integration.pdf p.5
 - `topo-n-0014` Une boule ouverte est ouverte, une boule fermée e… · topologie/cours/chap1-espaces-metriques.pdf p.4
 
+## Anki — tout le sujet du jour
+```
+(nid:1675962967594,1678461078486,1770140867658,1772647483015,1786372853926,1786372904697,1786372937098,1786372952836,1786372985313,1786373423320,1786373447636,1786441932447,1786448433279,1786448444687,1786448482473,1786448903783,1786467355412 or "Id:topo-a-004-1" or "Id:topo-a-004-2" or "Id:topo-a-004-3" or "Id:proba-a-033-1" or "Id:proba-a-033-2")
+```
+Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes selon mes réponses” pour réviser sans perturber le planning Anki.
+
 ## Anki — à apprendre (12 nouvelles)
 ```
 "Id:topo-a-004-1" or "Id:topo-a-004-2" or "Id:topo-a-004-3" or "Id:proba-a-033-1" or "Id:proba-a-033-2" or "Id:topo-a-008-1" or "Id:topo-a-008-2" or "Id:topo-a-009-1" or "Id:mesure-a-002-1" or "Id:mesure-a-002-2" or "Id:mesure-a-015-1" or "Id:mesure-a-015-2"
@@ -22,5 +28,5 @@
 - Toutes les cartes dues : `is:due`
 
 ## Échéance
-- Restant : 6975 min (annales 1985, vital 2865, important 2125) ; capacité jusqu'au 2027-01-10 : 9360 min ; marge : 2385 min.
-- Examens : semaine du 2027-01-11 (dates à confirmer).
+- Restant : 6975 min (annales 1985, vital 2865, important 2125) ; capacité jusqu'au 2027-01-03 : 8520 min ; marge : 1545 min.
+- Examens : semaine du 2027-01-04 (dates à confirmer).

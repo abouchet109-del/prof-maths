@@ -156,3 +156,12 @@ def test_sous_chapitre_au_score_le_plus_faible():
     p = P.plan_jour(c, D(2026, 11, 4))
     nouveaux = [e["id"] for e, g in p["items"] if g == "nouveau"]
     assert nouveaux[0] == "a2"                # A (score 0) avant B (score 1)
+
+
+def test_recherche_sujet():
+    cou = {"n1": {"statut": "couverte", "notes": [30, 10]}, "n2": {"statut": "couverte", "notes": [10, 20]},
+           "n3": {"notes": [99]}}
+    cartes = [{"id": "a", "notion": "n1"}, {"id": "b", "notion": "n3"}, {"id": "c", "notion": "n2"}]
+    assert P.recherche_sujet(["n1", "n2"], cou, cartes) == '(nid:10,20,30 or "Id:a" or "Id:c")'
+    assert P.recherche_sujet(["n9"], cou, cartes) == ""
+    assert P.recherche_sujet(["n3"], {}, cartes) == '("Id:b")'

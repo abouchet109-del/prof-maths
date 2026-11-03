@@ -25,7 +25,16 @@ def contexte(racine=E.RACINE) -> dict:
         "notions": E.charger_notions(racine),
         "cartes": E.charger_cartes(racine),
         "anki_plan": E.charger_yaml(racine / "state" / "anki_plan.yaml", {}),
+        "couverture": charger_couverture(racine),
     }
+
+
+def charger_couverture(racine=E.RACINE) -> dict:
+    """notion -> {statut, notes} fusionné sur toutes les matières (matieres/<m>/couverture.yaml)."""
+    res = {}
+    for m in E.MATIERES:
+        res.update(E.charger_yaml(racine / "matieres" / m / "couverture.yaml", {}) or {})
+    return res
 
 
 def _etats(exos, resultats, d):
@@ -172,6 +181,15 @@ def _requete(ids) -> str:
     return " or ".join(f'"Id:{i}"' for i in ids)
 
 
+def recherche_sujet(notions, couverture, cartes) -> str:
+    """Recherche Anki unique : anciennes notes (nid:...) + nouvelles cartes (\"Id:...\") des notions."""
+    notions = set(notions)
+    nids = sorted({int(n) for k in notions for n in ((couverture or {}).get(k) or {}).get("notes") or []})
+    parts = ([f"nid:{','.join(map(str, nids))}"] if nids else [])
+    parts += [f'"Id:{c["id"]}"' for c in cartes if c.get("notion") in notions]
+    return f"({' or '.join(parts)})" if parts else ""
+
+
 def anki(ctx, plan) -> dict:
     """Cartes nouvelles du jour (sans jamais redonner une carte) et cartes déjà données à réviser."""
     d = str(plan["date"])
@@ -257,12 +275,18 @@ def rediger(ctx, plan, cartes) -> list[str]:
         if not plan["items"]:
             L.append("- (rien à planifier)")
         notions = cours_du_jour(ctx, plan)
+        sujet = {n["id"] for n in notions} | {n for e, _ in plan["items"] for n in e.get("notions") or []}
         L += ["", f"## Cours ({info['minutes_cours']} min)"]
         for n in notions:
             s = n.get("source") or {}
             L.append(f"- `{n['id']}` {_court(n['titre'], 50)} · {s.get('fichier')} p.{s.get('page')}")
         if not notions:
             L.append("- (aucune notion liée)")
+        rech = recherche_sujet(sujet, ctx.get("couverture"), ctx["cartes"])
+        L += ["", "## Anki — tout le sujet du jour"]
+        L += ["```", rech, "```"] if rech else ["- (aucune carte pour ces notions)"]
+        L.append("Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes selon mes réponses” "
+                 "pour réviser sans perturber le planning Anki.")
     L += ["", f"## Anki — à apprendre ({len(cartes['nouvelles'])} nouvelles)"]
     L += ["```", _requete(cartes["nouvelles"]), "```"] if cartes["nouvelles"] else ["- (aucune)"]
     L += ["", "## Anki — à réviser", "- Toutes les cartes dues : `is:due`"]

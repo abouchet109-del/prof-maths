@@ -1,7 +1,7 @@
 # Disponibilités pour les révisions (lu par tools/plan.py).
 debut: 2026-11-03
-fin: 2027-01-10                  # rien n'est planifié après cette date
-examens: 2027-01-11              # semaine d'examens
+fin: 2027-01-03                  # rien n'est planifié après cette date
+examens: 2027-01-04              # « semaine du 9 janvier » (un samedi) : on vise le lundi 04/01 par prudence
 examens_a_confirmer: true        # dates exactes à confirmer
 minutes_exercices_jour: 120
 minutes_cours_jour: 30

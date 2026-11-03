@@ -56,7 +56,7 @@ Limite : sans accès direct à Anki, le système ne voit pas les cartes dues ni 
 | 4 Lecture d'Anki | fait, depuis `tgmathankidonnées.apkg` (instantané, pas de lecture en direct) |
 | 5 Notions | fait : 382 notions (topologie 94, mesure 69, modélisation 75, probas 144) |
 | 6 Classement | fait pour les 4 matières (Opus) ; voir le bilan ci-dessous |
-| 7a-7b Couverture et trous | fait : 237 cartes à créer, dont 9 prérequis de L1-L2 en attente de confirmation par l'utilisateur |
+| 7a-7b Couverture et trous | fait : 237 cartes à créer, dont 9 prérequis de L1-L2, tous inconnus de l'utilisateur. Ils ont donné 20 cartes (étiquette `prerequis-l1l2`), relues par Opus : 1 erreur corrigée (φ″ devenu φ′ à cause de l'échappement YAML), 1 carte retirée car elle donnait la solution d'une annale. Paquet : `prof-maths-2026-11-03-2.apkg`. Les fonctions génératrices n'étaient pas au programme d'ECG ; elles sont couvertes par les cartes de modélisation |
 | 7c-7d Rédaction et relecture | fait : 509 cartes ; relecture Opus de 46 cartes, aucune erreur de fond, 5 cartes précisées |
 | 7e Paquet | fait : `anki/paquets/prof-maths-2026-11-03.apkg`, à importer par l'utilisateur |
 | 8 Corrigés vérifiés | à la demande, rien encore |
@@ -85,7 +85,9 @@ Annales, vitaux et importants : environ 116 h sur 158 h d'exercices, ce qui lais
 
 À reprendre au planificateur : en mesure, les vitaux sont surtout des annales UVSQ ; en probas, les vitaux des chapitres 4 et 5 viennent de l'UVSQ et sont classés sur leur titre seul (à confirmer à l'extraction) ; en topologie, les Hilbert et la norme d'opérateur sont vitaux mais hors du cours actuel, et le calcul différentiel UVSQ est exotique faute d'annale de Paris Cité ; doublons incertains signalés par les agents (proba chap-2-exam-24-25-ex5, mesure chap-2-cc1-25-ex2).
 
-**En attente de l'utilisateur :** import du paquet ; installation d'AnkiConnect ; réponse sur les 9 prérequis de L1-L2 et sur les fonctions génératrices au programme d'ECG ; éventuels sujets du partiel de topologie 2020-21.
+**En attente de l'utilisateur :** import des deux paquets ; installation d'AnkiConnect, utile pour étiqueter les anciennes cartes par chapitre ; éventuel sujet du partiel de topologie 2020-21.
+
+**Examens :** « semaine du 9 janvier ». Le 09/01/2027 est un samedi, donc le planning vise par prudence le lundi 04/01 : le planning finit le 03/01, avec une marge de +1545 min. `NOW.md` donne aussi une recherche Anki par sujet du jour, qui réunit anciennes et nouvelles cartes grâce aux `nid` de `couverture.yaml`.
 
 **Points ouverts :** 3 notions de mesure sans carte faute de source (mesure extérieure et Carathéodory, intégrales contre comptage, Dirac et densité, intégrale de Gauss) ; aucun TD sur le processus de Poisson ; annales de probas de l'UVSQ non extraites ; le poly de modélisation contient deux erreurs (PageRank p. 21, apériodicité p. 9), corrigées dans les cartes.
 

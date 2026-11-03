@@ -1191,3 +1191,27 @@
   chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
   priorite: 3
   tags: [theoreme]
+- id: mod-a-076-1
+  notion: null
+  recto: 'Lemme de substitution : \(X\) et \(Y\) sont indépendantes (à valeurs dans \(E\) et \(F\)), \(f:E\times F\to G\) est mesurable et \(B\) est une partie mesurable de \(G\). Exprimer \(P(f(X,Y)\in B)\).'
+  verso: '\(P(f(X,Y)\in B)=\int_E P(f(x,Y)\in B)\,P_X(dx)\) : on fixe \(x\), on calcule avec \(Y\) seule, puis on intègre selon la loi \(P_X\) de \(X\). Si \(X\) est discrète, c''est \(\sum_xP(X=x)\,P(f(x,Y)\in B)\) ; si \(X\) a une densité \(g\), c''est \(\int P(f(x,Y)\in B)\,g(x)\,dx\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-exa2324-ex04'
+  chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
+  priorite: 1
+  tags: [prerequis-l1l2, theoreme]
+- id: mod-a-077-1
+  notion: null
+  recto: 'Sommation des équivalents : si \(v_{n+1}-v_n\to c\) avec \(c>0\) (donc \(v_{n+1}-v_n\sim c\)), que dire de \(v_n\) ? Quel énoncé général le justifie ?'
+  verso: '\(v_n\sim cn\) quand \(n\to+\infty\). Énoncé général : si \(a_k\sim b_k\) avec \(b_k\ge0\) et \(\sum b_k\) divergente, alors \(\sum_{k=0}^{n-1}a_k\sim\sum_{k=0}^{n-1}b_k\). Ici \(a_k=v_{k+1}-v_k\), \(b_k=c\) (série divergente car \(c>0\)) : \(v_n-v_0\sim cn\), et \(v_0\) est négligeable devant \(n\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-td1-ex09'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 2
+  tags: [prerequis-l1l2, theoreme]
+- id: mod-a-077-2
+  notion: null
+  recto: 'Cas critique de Galton-Watson : \(u_n=P(\tau>n)>0\) vérifie \(\frac1{u_{n+1}}-\frac1{u_n}\sim\frac{\phi^{\prime\prime}(1^-)}2\) avec \(\phi^{\prime\prime}(1^-)>0\). Comment en déduit-on un équivalent de \(u_n\) ?'
+  verso: 'Avec \(v_n=\frac1{u_n}\) et \(c=\frac{\phi^{\prime\prime}(1^-)}2>0\), la sommation des équivalents donne \(v_n\sim\frac{\phi^{\prime\prime}(1^-)}2\,n\). Puis, les termes étant non nuls, on passe à l''inverse : \(u_n=\frac1{v_n}\sim\frac2{\phi^{\prime\prime}(1^-)\,n}\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-td1-ex09'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 2
+  tags: [prerequis-l1l2, methode]
