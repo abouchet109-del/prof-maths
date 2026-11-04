@@ -403,3 +403,19 @@
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 2
   tags: [prerequis-l1l2, methode]
+- id: mesure-e001
+  notion: null
+  recto: 'Pour \((f_n)\) mesurables, écrire l''ensemble \(C\) où \((f_n(x))\) converge à l''aide d''intersections et réunions dénombrables. Quelle règle de traduction \(\forall,\exists\to\cap,\cup\) ?'
+  verso: 'Critère de Cauchy : \(x\in C\iff\forall m\ge1,\exists N,\forall p,q\ge N,\ |f_p(x)-f_q(x)|\le 1/m\). Donc \(C=\bigcap_{m\ge1}\bigcup_{N\in\mathbb N}\bigcap_{p,q\ge N}\{|f_p-f_q|\le 1/m\}\in\mathcal E\). Règle : \(\forall\to\bigcap\), \(\exists\to\bigcup\), dans l''ordre d''apparition ; tous les indices dans \(\mathbb N\) (on remplace \(\varepsilon\) par \(1/m\) pour rester dénombrable).'
+  source: 'mes-td3-ex04 ; séance 2026-11-04'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [erreur]
+- id: mesure-e002
+  notion: mesure-n-0008
+  recto: 'Sur \(X=\{1,2,3\}\), \(T=\{\emptyset,\{1\},\{2,3\},X\}\) est une tribu. Parmi \(1\in T\), \(\{1\}\in T\), \(\{1\}\subset T\), \(\{1\}\subset X\), lesquelles sont vraies ?'
+  verso: '\(\{1\}\in T\) et \(\{1\}\subset X\) sont vraies. \(1\in T\) est fausse (\(1\) est un point de \(X\), pas une partie) et \(\{1\}\subset T\) aussi (\(1\) n''est pas un élément de \(T\)). Une tribu est un ensemble de **parties** de \(X\) : on écrit \(A\in T\) (A mesurable) et \(A\subset X\).'
+  source: 'Séance 2026-11-04 (cours : élément contre sous-ensemble)'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [erreur]

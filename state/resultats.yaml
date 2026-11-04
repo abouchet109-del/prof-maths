@@ -1,1 +1,30 @@
-[]
+- date: 2026-11-04
+  exercice: pro-par2425-ex01
+  resultat: presque
+  palier_aide: 0
+  note: 'Q3 non faite (definition de phi_X pas apprise, donnee) ; Q2 : x^k au lieu de k^n, k=0 oublie dans E(X)'
+- date: 2026-11-04
+  exercice: mes-td2-ex01
+  resultat: presque
+  palier_aide: 1
+  note: Q1 synthese non redigee ; Q2 non terminee (inclusion fausse A dans sigma({B}), plan 3 axiomes par morceau faux)
+- date: 2026-11-04
+  exercice: topo-td1-ex05
+  resultat: aide
+  palier_aide: 1
+  note: Q2 reussie apres un indice ; manque A=X et l'inclusion intersection dans A
+- date: 2026-11-04
+  exercice: mes-td3-ex04
+  resultat: presque
+  palier_aide: 2
+  note: traduction forall-exists-forall en inter-union-inter ; Q2 non reussie apres palier 1 ; Q3 non traitee
+- date: 2026-11-04
+  exercice: topo-td1-ex04
+  resultat: non_fait
+  palier_aide: 0
+  note: 2/11 justes (1 et 7) ; 2,4,6 faux (ni ouvert ni ferme, reunion infinie de fermes) ; 3,5,8-11 non faits
+- date: 2026-11-04
+  exercice: mes-cc1-2425-ex03
+  resultat: presque
+  palier_aide: 4
+  note: Q1 reunion denombrable non redigee, Q2 non traitee ; preuve equivalente donnee plus tot (Prop 1.3 pt 5)
