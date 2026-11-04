@@ -165,3 +165,11 @@ def test_recherche_sujet():
     assert P.recherche_sujet(["n1", "n2"], cou, cartes) == '(nid:10,20,30 or "Id:a" or "Id:c")'
     assert P.recherche_sujet(["n9"], cou, cartes) == ""
     assert P.recherche_sujet(["n3"], {}, cartes) == '("Id:b")'
+
+
+def test_recherche_a_revoir():
+    entrees = [{"pour": "2026-11-05", "nid": 30, "raison": "x"}, {"pour": "2026-11-05", "nid": 10},
+               {"pour": "2026-11-05", "id": "topo-a-001-1"}, {"pour": "2026-11-06", "nid": 99}]
+    assert P.recherche_a_revoir(entrees, "2026-11-05") == '(nid:10,30 or "Id:topo-a-001-1")'
+    assert P.recherche_a_revoir(entrees, "2026-11-07") == ""
+    assert P.recherche_a_revoir(None, "2026-11-05") == ""

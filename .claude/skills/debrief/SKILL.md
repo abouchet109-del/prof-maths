@@ -71,7 +71,7 @@ Demander, en un seul message, pour chaque exercice du plan : le niveau, le temps
    - **les nouvelles cartes** : dans `matieres/<m>/cartes.yaml`, chercher par `notion:` et par mot-clé dans le recto ;
    - **les anciennes cartes de l'utilisateur** (prépa, `AoutLicenceMath`…) : dans `matieres/<m>/couverture.yaml`, relever les `notes` de la notion, puis lire leur recto dans `inventaire/anki/notes.jsonl` (recherche par `"id": <nid>`). Ajouter une recherche par mot-clé dans ce fichier, car une carte peut couvrir le point sans être rattachée à la notion. Le verso de beaucoup d'anciennes cartes est une image : on ne compare que le recto.
    - **La règle :**
-     - si une carte existante couvre déjà exactement le point, n'en créer aucune. L'écrire dans `## Mises à jour`, avec l'id ou le nid de cette carte et la recherche Anki `nid:<nid>` ou `"Id:<id>"`, pour que l'utilisateur la revoie ;
+     - si une carte existante couvre déjà exactement le point, n'en créer aucune. La **mettre à réviser pour le lendemain** : ajouter à `state/a_revoir.yaml` l'entrée `{pour: <date du prochain NOW>, nid: <nid>, raison: "<confusion>"}`, ou `id: <id>` pour une carte de `cartes.yaml`. Le faire avant `plan.py` (§5) : `NOW.md` en tire une recherche Anki. Le noter aussi dans `## Mises à jour` ;
      - une carte d'erreur ne se crée que si elle vise une confusion que les cartes existantes ne traitent pas.
 
    `inventaire/anki/notes.jsonl` est l'instantané du paquet au 03/11/2026. Les cartes créées par le système depuis cette date sont toutes dans `cartes.yaml`.
@@ -87,7 +87,7 @@ Demander, en un seul message, pour chaque exercice du plan : le niveau, le temps
 1. Cartes nouvelles (s'il y en a) : `python tools/anki.py`, puis ouvrir le paquet indiqué par la sortie (`Start-Process "anki\paquets\<fichier>.apkg"`).
 2. Plan du lendemain : `python tools/plan.py jour --date <demain>`.
 3. `python tools/check.py`. **Pas de commit tant qu'il échoue.**
-4. `git add` avec des chemins explicites : `journal/<date>.md`, `state/`, `matieres/*/cartes.yaml` touchés, `anki/registre.csv`, `NOW.md`.
+4. `git add` avec des chemins explicites : `journal/<date>.md`, `state/` (dont `a_revoir.yaml`), `matieres/*/cartes.yaml` touchés, `anki/registre.csv`, `NOW.md`.
 5. `git commit -m "debrief: <date>"`, un seul commit, puis `git push`.
 
 ## 6. Clore (3 à 5 lignes)

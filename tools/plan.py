@@ -25,6 +25,7 @@ def contexte(racine=E.RACINE) -> dict:
         "notions": E.charger_notions(racine),
         "cartes": E.charger_cartes(racine),
         "anki_plan": E.charger_yaml(racine / "state" / "anki_plan.yaml", {}),
+        "a_revoir": E.charger_yaml(racine / "state" / "a_revoir.yaml", []),
         "couverture": charger_couverture(racine),
     }
 
@@ -190,6 +191,15 @@ def recherche_sujet(notions, couverture, cartes) -> str:
     return f"({' or '.join(parts)})" if parts else ""
 
 
+def recherche_a_revoir(entrees, d) -> str:
+    """Cartes existantes que le debrief a demandé de revoir ce jour (state/a_revoir.yaml, champ `pour`)."""
+    du_jour = [e for e in entrees or [] if str(e.get("pour")) == str(d)]
+    nids = sorted({int(e["nid"]) for e in du_jour if e.get("nid")})
+    parts = ([f"nid:{','.join(map(str, nids))}"] if nids else [])
+    parts += [f'"Id:{i}"' for i in dict.fromkeys(e["id"] for e in du_jour if e.get("id"))]
+    return f"({' or '.join(parts)})" if parts else ""
+
+
 def anki(ctx, plan) -> dict:
     """Cartes nouvelles du jour (sans jamais redonner une carte) et cartes déjà données à réviser."""
     d = str(plan["date"])
@@ -292,6 +302,10 @@ def rediger(ctx, plan, cartes) -> list[str]:
     L += ["", "## Anki — à réviser", "- Toutes les cartes dues : `is:due`"]
     if cartes["revoir"]:
         L.append(f"- Déjà données, liées aux exercices du jour ({len(cartes['revoir'])}) : `{_requete(cartes['revoir'])}`")
+    rech = recherche_a_revoir(ctx.get("a_revoir"), plan["date"])
+    if rech:
+        L += ["- Cartes existantes à revoir, signalées au debrief (paquet filtré, “replanifier” **coché**) :",
+              "```", rech, "```"]
     L += ["", "## Échéance"] + echeance(ctx, plan)
     return L
 
