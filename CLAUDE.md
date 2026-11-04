@@ -5,7 +5,8 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 ## Principes
 - **Le code calcule, Claude juge.** États des exercices, reprises, déverrouillage des catégories et plan du jour viennent des scripts (`tools/etat.py`, `tools/plan.py`). Ne jamais les recalculer de tête ni éditer `NOW.md` ou `state/resultats.yaml` à la main.
 - **Un niveau ne monte que sur preuve** : un exercice fait seul et vérifié. Ce que l'utilisateur déclare sans le montrer compte, mais au moindre doute sur « seul », c'est `aide`.
-- **Debrief après chaque journée** : skill `debrief`.
+- **Debrief après chaque journée** : skill `debrief`, **dans la même conversation que la séance**, qui connaît déjà les exercices et les aides données. Ne jamais renvoyer l'utilisateur vers une autre conversation. C'est la séance qui remplit le suivi : `resultat.py`, journal, cartes d'erreurs, `plan.py`, commit.
+- **Une conversation par jour** : cours, exercices, puis debrief. Le lendemain, nouvelle conversation.
 - **Annales de Paris Cité prioritaires** : si le temps manque, on coupe d'abord l'exotique, puis le secondaire, jamais une annale.
 
 ## Pendant une séance d'exercices

@@ -20,7 +20,7 @@
    - Nouvelles cartes : coller la recherche « à apprendre » dans **Outils → Créer un paquet filtré**, puis étudier ce paquet (12 cartes).
 3. **Cours (30 min) :** relire les notions indiquées, aux pages données, pour approfondir. Pour réviser tout un sujet, coller la recherche « tout le sujet du jour » dans un paquet filtré, en décochant « replanifier les cartes selon mes réponses ». Elle réunit tes anciennes cartes `AoutLicenceMath` et les nouvelles.
 4. **Exercices (2 h) :** les faire dans l'ordre de la liste ; le PDF et la page sont indiqués. En cas de blocage, ouvrir une conversation Claude dans `D:\Projets\prof-maths` (Sonnet, effort high). L'aide est graduée : une question qui oriente, puis la méthode, puis l'étape clé, puis la solution. Dès le premier indice, l'exercice compte comme `aide`.
-5. **Le soir (10-15 min) :** ouvrir une nouvelle conversation et dire « debrief ».
+5. **Le soir (10-15 min) :** dans la même conversation que la séance, dire « debrief » et donner les temps. Une conversation par jour : cours, exercices, puis debrief.
    - Donner le résultat de chaque exercice.
    - Répondre à 3 à 5 questions de compréhension, qui sont notées et corrigées.
    - Le debrief crée des cartes sur tes erreurs, écrit `NOW.md` pour le lendemain et fait le commit.
