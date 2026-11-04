@@ -67,12 +67,20 @@ Demander, en un seul message, pour chaque exercice du plan : le niveau, le temps
 ## 4. Mises à jour
 
 1. **Journal** : compléter `journal/<date>.md` (temps réel, notes des questions, corrections).
-2. **Cartes d'erreurs** : une carte par confusion révélée (exercice `presque` ou `aide`, ou note 0-1), si elle vaut d'être retenue. Ajouter en fin de `matieres/<m>/cartes.yaml` :
+2. **Avant toute carte, chercher celles qui existent** (aucun doublon), pour la notion en cause :
+   - **les nouvelles cartes** : dans `matieres/<m>/cartes.yaml`, chercher par `notion:` et par mot-clé dans le recto ;
+   - **les anciennes cartes de l'utilisateur** (prépa, `AoutLicenceMath`…) : dans `matieres/<m>/couverture.yaml`, relever les `notes` de la notion, puis lire leur recto dans `inventaire/anki/notes.jsonl` (recherche par `"id": <nid>`). Ajouter une recherche par mot-clé dans ce fichier, car une carte peut couvrir le point sans être rattachée à la notion. Le verso de beaucoup d'anciennes cartes est une image : on ne compare que le recto.
+   - **La règle :**
+     - si une carte existante couvre déjà exactement le point, n'en créer aucune. L'écrire dans `## Mises à jour`, avec l'id ou le nid de cette carte et la recherche Anki `nid:<nid>` ou `"Id:<id>"`, pour que l'utilisateur la revoie ;
+     - une carte d'erreur ne se crée que si elle vise une confusion que les cartes existantes ne traitent pas.
+
+   `inventaire/anki/notes.jsonl` est l'instantané du paquet au 03/11/2026. Les cartes créées par le système depuis cette date sont toutes dans `cartes.yaml`.
+3. **Cartes d'erreurs** : une carte par confusion révélée (exercice `presque` ou `aide`, ou note 0-1), si elle vaut d'être retenue et qu'elle passe le contrôle ci-dessus. Ajouter en fin de `matieres/<m>/cartes.yaml` :
    - `id: <m>-eNNN` (numéro libre suivant), `notion`, `chapitre`, `priorite: 1`, `tags: [erreur]` ;
    - recto : une question qui vise précisément la confusion ; verso : la réponse juste en 1 à 3 lignes ; source : poly et page, ou l'exercice ;
    - maths en `\( … \)`, texte YAML entre apostrophes ou en bloc `|`.
-3. **Notion de cours mal comprise** (note 0 sur Q4) : l'indiquer dans `## Mises à jour` ; le planificateur la reprend au cours du lendemain si elle figure dans `NOW.md`.
-4. **Ne jamais** réorganiser le planning à la main : c'est le rôle de `plan.py`.
+4. **Notion de cours mal comprise** (note 0 sur Q4) : l'indiquer dans `## Mises à jour` ; le planificateur la reprend au cours du lendemain si elle figure dans `NOW.md`.
+5. **Ne jamais** réorganiser le planning à la main : c'est le rôle de `plan.py`.
 
 ## 5. Commandes (une par une, depuis la racine)
 
