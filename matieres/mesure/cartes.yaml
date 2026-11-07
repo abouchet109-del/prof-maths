@@ -1,24 +1,24 @@
 # Cartes de mesure et intégration (Paris Cité L3, UVSQ pour les notions etab: uvsq). Pages = repères "--- page N ---" du PDF (diapo pour l'UVSQ).
 - id: mesure-a-001-1
   notion: mesure-n-0002
-  recto: 'Soit \(f:\Omega\to E\). Comment l''image réciproque \(f^{-1}\) se comporte-t-elle avec les réunions et intersections quelconques ?'
-  verso: 'Pour toute famille \((A_i)_{i\in I}\) de parties de \(E\) : \(f^{-1}\left(\bigcup_i A_i\right)=\bigcup_i f^{-1}(A_i)\) et \(f^{-1}\left(\bigcap_i A_i\right)=\bigcap_i f^{-1}(A_i)\).'
+  recto: 'Prop. 0.1 (point 3) : image réciproque d''une réunion et d''une intersection'
+  verso: 'Soit \(f:\Omega\to E\) une application de \(\Omega\) dans un ensemble \(E\).<br>Si \((A_i)_{i\in I}\) est une famille quelconque de parties de \(E\), \(f^{-1}(\cup_{i\in I}A_i)=\cup_{i\in I}f^{-1}(A_i)\) et \(f^{-1}(\cap_{i\in I}A_i)=\cap_{i\in I}f^{-1}(A_i)\).<br>(le poly écrit « parties de \(\Omega\) » : coquille, les \(A_i\) sont des parties de \(E\))'
   source: 'Poly de mesure Paris Cité, ch. 0, Prop. 0.1, p. 3'
   chapitre: 'Chapitre 0 - Préliminaires'
   priorite: 2
   tags: [propriete]
 - id: mesure-a-001-2
   notion: mesure-n-0002
-  recto: 'Soit \(f:\Omega\to E\) et \(A\subset E\). Que vaut le complémentaire de \(f^{-1}(A)\) ?'
-  verso: '\(\Omega\setminus f^{-1}(A)=f^{-1}(E\setminus A)\) : l''image réciproque commute avec le passage au complémentaire.'
+  recto: 'Prop. 0.1 (point 4) : image réciproque d''un complémentaire'
+  verso: 'Soit \(f:\Omega\to E\) une application de \(\Omega\) dans un ensemble \(E\) et \(A\) une partie de \(E\).<br>\(\complement_\Omega(f^{-1}(A))=f^{-1}(\complement_E A)\).'
   source: 'Poly de mesure Paris Cité, ch. 0, Prop. 0.1, p. 3'
   chapitre: 'Chapitre 0 - Préliminaires'
   priorite: 2
   tags: [propriete]
 - id: mesure-a-001-3
   notion: mesure-n-0002
-  recto: 'Que dire de \(f^{-1}(A)\) et \(f^{-1}(B)\) si \(A\subset B\) ?'
-  verso: '\(f^{-1}(A)\subset f^{-1}(B)\) (monotonie de l''image réciproque).'
+  recto: 'Prop. 0.1 (point 2) : monotonie de l''image réciproque'
+  verso: 'Soit \(f:\Omega\to E\) une application de \(\Omega\) dans un ensemble \(E\).<br>Si \(A\subseteq B\), alors \(f^{-1}(A)\subseteq f^{-1}(B)\).'
   source: 'Poly de mesure Paris Cité, ch. 0, Prop. 0.1, p. 3'
   chapitre: 'Chapitre 0 - Préliminaires'
   priorite: 2
@@ -26,16 +26,16 @@
 
 - id: mesure-a-002-1
   notion: mesure-n-0005
-  recto: 'Définir \(\limsup A_n\) pour une suite d''ensembles \((A_n)_{n\ge1}\) de \(X\).'
-  verso: '\(\limsup A_n=\bigcap_{n\ge1}\bigcup_{k\ge n}A_k=\{x\in X : \forall n\ge1,\ \exists k\ge n,\ x\in A_k\}\) : les \(x\) qui appartiennent à \(A_k\) infiniment souvent.'
+  recto: 'Déf : limite supérieure d''une suite d''ensembles'
+  verso: 'Soit \((A_n)_{n\ge1}\) une suite dénombrable de sous-ensembles d''un ensemble \(X\). On définit la limite supérieure de la suite \(A_n\) par :<br>\(\limsup_{n\to+\infty}A_n=\bigcap_{n\ge1}\bigcup_{k\ge n}A_k=\{x\in X : \forall n\ge1,\ \exists k\ge n,\ \text{tel que } x\in A_k\}=\{x\in X : x\in A_k \text{ infiniment souvent}\}\).'
   source: 'Poly de mesure Paris Cité, ch. 0, p. 4'
   chapitre: 'Chapitre 0 - Préliminaires'
   priorite: 1
   tags: [definition]
 - id: mesure-a-002-2
   notion: mesure-n-0005
-  recto: 'Définir \(\liminf A_n\) pour une suite d''ensembles \((A_n)_{n\ge1}\) de \(X\).'
-  verso: '\(\liminf A_n=\bigcup_{n\ge1}\bigcap_{k\ge n}A_k=\{x\in X : \exists n\ge1,\ \forall k\ge n,\ x\in A_k\}\) : les \(x\) qui appartiennent à \(A_k\) à partir d''un certain rang.'
+  recto: 'Déf : limite inférieure d''une suite d''ensembles'
+  verso: 'Soit \((A_n)_{n\ge1}\) une suite dénombrable de sous-ensembles d''un ensemble \(X\). On définit la limite inférieure de la suite \(A_n\) par :<br>\(\liminf_{n\to+\infty}A_n=\bigcup_{n\ge1}\bigcap_{k\ge n}A_k=\{x\in X : \exists n\ge1,\ \forall k\ge n,\ \text{tel que } x\in A_k\}=\{x\in X : x\in A_k \text{ à partir d''un certain rang}\}\).'
   source: 'Poly de mesure Paris Cité, ch. 0, p. 4'
   chapitre: 'Chapitre 0 - Préliminaires'
   priorite: 1
@@ -43,8 +43,8 @@
 
 - id: mesure-a-003-1
   notion: mesure-n-0006
-  recto: 'Pour une suite réelle \((u_n)\), comment \(\limsup u_n\) et \(\liminf u_n\) se lisent-elles avec les valeurs d''adhérence ?'
-  verso: '\(\limsup u_n\) est la plus grande valeur d''adhérence de \((u_n)\) dans \(\overline{\mathbb R}\) (un max), \(\liminf u_n\) la plus petite (un min).'
+  recto: 'Prop. 0.2 : limites supérieure et inférieure et valeurs d''adhérence'
+  verso: 'Soit \((u_n)_{n\ge0}\) une suite à valeurs réelles. Alors<br>\(\limsup_{n\to+\infty}u_n=\max\{\ell\in\overline{\mathbb R} : \ell \text{ valeur d''adhérence de } (u_n)_{n\ge0}\}\)<br>\(\liminf_{n\to+\infty}u_n=\min\{\ell\in\overline{\mathbb R} : \ell \text{ valeur d''adhérence de } (u_n)_{n\ge0}\}\).'
   source: 'Poly de mesure Paris Cité, ch. 0, Prop. 0.2, p. 4'
   chapitre: 'Chapitre 0 - Préliminaires'
   priorite: 2
@@ -52,24 +52,24 @@
 
 - id: mesure-a-004-1
   notion: mesure-n-0009
-  recto: 'Quelle est la tribu grossière sur un ensemble \(X\) ?'
-  verso: '\(\{\emptyset, X\}\).'
+  recto: 'Exemple 1.2 (point 1) : tribu grossière'
+  verso: 'Soit \(X\) un ensemble. Tribu grossière : \(T=\{\emptyset,X\}\).'
   source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.2, p. 5'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [exemple]
 - id: mesure-a-004-2
   notion: mesure-n-0009
-  recto: 'Quelle est la tribu triviale (discrète) sur un ensemble \(X\) ?'
-  verso: '\(\mathcal P(X)\), l''ensemble de toutes les parties de \(X\).'
+  recto: 'Exemple 1.2 (point 2) : tribu triviale (nom du poly)'
+  verso: 'Soit \(X\) un ensemble. \(T=\mathcal P(X)\) est une tribu sur \(X\) : la tribu discrète.<br>(le poly écrit « tribu triviale » pour \(\mathcal P(X)\) ; usuellement, « triviale » désigne \(\{\emptyset,X\}\), que le poly appelle « grossière »)'
   source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.2, p. 5'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [exemple]
 - id: mesure-a-004-3
   notion: mesure-n-0009
-  recto: 'Quelle est la tribu engendrée par une partie \(A\subset X\) ?'
-  verso: '\(\{\emptyset, A, A^c, X\}\) : c''est la plus petite tribu contenant \(A\).'
+  recto: 'Exemple 1.2 (point 3) : tribu engendrée par une partie'
+  verso: 'Soit \(X\) un ensemble et \(A\subset X\). \(T=\{\emptyset,A,A^c,X\}\) est une tribu. C''est la plus petite tribu contenant le sous-ensemble \(A\).'
   source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.2, p. 5'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
@@ -77,8 +77,8 @@
 
 - id: mesure-a-005-1
   notion: mesure-n-0015
-  recto: 'Soit \((X,\mathcal A)\) un espace mesurable et \(A\subset X\). Quand l''indicatrice \(\mathbf 1_A\) est-elle mesurable ?'
-  verso: '\(\mathbf 1_A\) est mesurable si et seulement si \(A\in\mathcal A\).'
+  recto: 'Rem. 1.7 : mesurabilité de l''indicatrice'
+  verso: 'Si \(A\subset X\), \(X\) muni de la tribu \(\mathcal A\), on constate que la fonction indicatrice \(\mathbf 1_A\) est mesurable ssi \(A\in\mathcal A\).'
   source: 'Poly de mesure Paris Cité, ch. 1, Rem. 1.7, p. 6'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
@@ -86,16 +86,16 @@
 
 - id: mesure-a-006-1
   notion: mesure-n-0017
-  recto: 'Soit \(f:X\to Y\) et \(\mathcal B\) une tribu sur \(Y\). Que dire de \(f^{-1}(\mathcal B)\) ?'
-  verso: 'C''est une tribu sur \(X\), appelée tribu image réciproque de \(\mathcal B\) par \(f\).'
+  recto: 'Lemme 1.9 : tribu image réciproque'
+  verso: 'Soit \(f:X\to Y\) une application et \(\mathcal B\) une tribu sur \(Y\). Alors \(f^{-1}(\mathcal B)\) est une tribu sur \(X\). On l''appelle tribu image réciproque de \(\mathcal B\) par \(f\).'
   source: 'Poly de mesure Paris Cité, ch. 1, Lemme 1.9, p. 6'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 2
   tags: [propriete]
 - id: mesure-a-006-2
   notion: mesure-n-0017
-  recto: 'Soit \(X\subset Y\) et \(\mathcal B\) une tribu sur \(Y\). Qu''est-ce que la tribu trace de \(\mathcal B\) sur \(X\) ?'
-  verso: '\(\{X\cap B : B\in\mathcal B\}\), une tribu sur \(X\).'
+  recto: 'Lemme 1.9 (application) : tribu trace'
+  verso: 'Soit \(X\subset Y\) et \(\mathcal B\) une tribu sur \(Y\). Alors l''ensemble \(\{X\cap B : B\in\mathcal B\}\) est une tribu sur \(X\), appelée la tribu trace de \(\mathcal B\) sur \(X\).'
   source: 'Poly de mesure Paris Cité, ch. 1, Lemme 1.9, p. 6'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 2
@@ -103,8 +103,8 @@
 
 - id: mesure-a-007-1
   notion: mesure-n-0018
-  recto: 'Soit \(f:X\to Y\) et \(\mathcal A\) une tribu sur \(X\). Quelle est la tribu induite de \(\mathcal A\) par \(f\) sur \(Y\) ?'
-  verso: '\(\{B\subset Y : f^{-1}(B)\in\mathcal A\}\), une tribu sur \(Y\).'
+  recto: 'Lemme 1.10 : tribu induite'
+  verso: 'Soit \(f:X\to Y\) une application et \(\mathcal A\) une tribu sur \(X\). Alors l''ensemble \(\mathcal B=\{B\subset Y : f^{-1}(B)\in\mathcal A\}\) est une tribu sur \(Y\) appelée tribu induite de \(\mathcal A\) par \(f\) sur \(Y\).'
   source: 'Poly de mesure Paris Cité, ch. 1, Lemme 1.10, p. 6'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 2
@@ -112,24 +112,24 @@
 
 - id: mesure-a-008-1
   notion: mesure-n-0019
-  recto: 'Soit \(f:X\to Y\) et \(\mathcal E\subset\mathcal P(Y)\). Que vaut \(f^{-1}(\sigma(\mathcal E))\) ?'
-  verso: '\(f^{-1}(\sigma(\mathcal E))=\sigma(f^{-1}(\mathcal E))\).'
+  recto: 'Lemme 1.11 : image réciproque de la tribu engendrée'
+  verso: 'Soit \(f:X\to Y\) et \(\mathcal E\subset\mathcal P(Y)\). Alors \(f^{-1}(\sigma(\mathcal E))=\sigma(f^{-1}(\mathcal E))\).'
   source: 'Poly de mesure Paris Cité, ch. 1, Lemme 1.11, p. 6'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 2
   tags: [propriete]
 - id: mesure-a-008-2
   notion: mesure-n-0019
-  recto: 'Soit \(Y\) un espace topologique et \(X\subset Y\) muni de la topologie induite. Comment s''écrit \(\mathcal B(X)\) à l''aide de \(\mathcal B(Y)\) ?'
-  verso: '\(\mathcal B(X)=\{A\cap X : A\in\mathcal B(Y)\}\).'
+  recto: 'Lemme 1.11 (application 1) : tribu borélienne d''un sous-espace'
+  verso: 'Soit \(Y\) un espace topologique muni de la tribu \(\mathcal B(Y)\) et \(X\subset Y\) muni de la topologie induite. Alors \(\mathcal B(X)=\{A\cap X : A\in\mathcal B(Y)\}\).'
   source: 'Poly de mesure Paris Cité, ch. 1, Lemme 1.11, application 1, p. 6'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 2
   tags: [propriete]
 - id: mesure-a-008-3
   notion: mesure-n-0019
-  recto: 'Donner deux familles de parties qui engendrent la tribu borélienne de \(\overline{\mathbb R}\).'
-  verso: '\(\mathcal B(\overline{\mathbb R})=\sigma(\{[a,+\infty] : a\in\mathbb R\})=\sigma(\{]a,+\infty] : a\in\mathbb R\})\).'
+  recto: 'Lemme 1.11 (application 2) : tribu borélienne de \(\overline{\mathbb R}\)'
+  verso: 'En prenant \(X=\mathbb R\), \(Y=\overline{\mathbb R}\), on montre que (avec les résultats précédents sur \(\mathcal B(\mathbb R)\)) :<br>\(\mathcal B(\overline{\mathbb R})=\sigma(\{[a,+\infty],\ a\in\mathbb R\})=\sigma(\{]a,+\infty],\ a\in\mathbb R\})\).'
   source: 'Poly de mesure Paris Cité, ch. 1, Lemme 1.11, application 2, p. 6'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 2
@@ -137,16 +137,16 @@
 
 - id: mesure-a-009-1
   notion: mesure-n-0029
-  recto: 'Soit \(\mu\) une mesure sur \((X,\mathcal A)\) et \(B\in\mathcal A\). Définir la mesure trace de \(\mu\) sur \(B\).'
-  verso: '\(\mu_B(A)=\mu(A\cap B)\) pour tout \(A\in\mathcal A\).'
+  recto: 'Exemple 1.21 : mesure trace'
+  verso: 'Soit \(\mu\) une mesure sur \((X,\mathcal A)\) et \(B\in\mathcal A\). La mesure trace de \(\mu\) sur \(B\) est la mesure définie par : pour tout \(A\in\mathcal A\), \(\mu_B(A)=\mu(A\cap B)\).'
   source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.21, p. 8'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [exemple]
 - id: mesure-a-009-2
   notion: mesure-n-0029
-  recto: 'Soit \(\mu\) une mesure sur \((X,\mathcal A)\) et \(B\in\mathcal A\). Définir la mesure conditionnelle sachant \(B\).'
-  verso: 'Pour \(A\in\mathcal A\) : \(\mu(A|B)=\dfrac{\mu(A\cap B)}{\mu(B)}=\dfrac{\mu_B(A)}{\mu(B)}\), définie pour \(0 < \mu(B) < +\infty\) (le cours écrit seulement \(\mu(B)\neq0\), mais si \(\mu(B)=+\infty\) le quotient n''a pas de sens).'
+  recto: 'Exemple 1.21 : mesure conditionnelle'
+  verso: 'Soit \(\mu\) une mesure sur \((X,\mathcal A)\) et \(B\in\mathcal A\) avec \(0 < \mu(B) < +\infty\). La mesure conditionnelle sachant \(B\) est définie par : pour tout \(A\in\mathcal A\), \(\mu(A|B)=\dfrac{\mu(A\cap B)}{\mu(B)}=\dfrac{\mu_B(A)}{\mu(B)}\).<br>(le poly écrit seulement « si \(\mu(B)\neq0\) » ; il faut aussi \(\mu(B) < +\infty\) pour que le quotient ait un sens)'
   source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.21, p. 8'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
@@ -154,16 +154,16 @@
 
 - id: mesure-a-010-1
   notion: mesure-n-0030
-  recto: 'Par quoi une mesure de probabilité \(\mu\) sur \((\mathbb N,\mathcal P(\mathbb N))\) est-elle déterminée ? Quelle formule ?'
-  verso: 'Par ses valeurs sur les singletons : \(A\) est au plus dénombrable, donc \(\mu(A)=\sum_{k\in A}\mu(\{k\})\).'
+  recto: 'Exemple 1.21 : mesure de probabilité sur \(\mathbb N\) déterminée par les singletons'
+  verso: 'Toute mesure de probabilité sur \((\mathbb N,\mathcal P(\mathbb N))\) est déterminée par ses valeurs sur les singletons. En effet, soit \(\mu\) une mesure de probabilité sur \((\mathbb N,\mathcal P(\mathbb N))\), alors pour tout \(A\subset\mathbb N\), \(\mu(A)=\mu\left(\bigcup_{k\in A}\{k\}\right)=\sum_{k\in A}\mu(\{k\})\), où l''on a utilisé dans la dernière égalité le fait que \(A\) est au plus dénombrable.'
   source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.21, p. 8'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 2
   tags: [exemple]
 - id: mesure-a-010-2
   notion: mesure-n-0030
-  recto: 'Soit \((p_k)_{k\in\mathbb N}\) une suite de réels positifs avec \(\sum_k p_k=1\). Que définit \(\mu(A)=\sum_{k\in A}p_k\) sur \(\mathcal P(\mathbb N)\) ?'
-  verso: 'Une mesure de probabilité sur \((\mathbb N,\mathcal P(\mathbb N))\) : \(\mu(\emptyset)=0\), \(\sigma\)-additivité par regroupement des sommes, \(\mu(\mathbb N)=\sum_k p_k=1\).'
+  recto: 'Exemple 1.21 : mesure de probabilité associée à une suite \((p_k)\)'
+  verso: 'Si l''on se donne une suite \((p_k)_{k\in\mathbb N}\) de réels positifs vérifiant \(\sum_{k\in\mathbb N}p_k=1\), alors l''application \(\mu:\mathcal P(\mathbb N)\to[0,1]\), \(A\mapsto\sum_{k\in A}p_k\) est une mesure de probabilité sur \((\mathbb N,\mathcal P(\mathbb N))\).<br>En effet, pour des \(A_n\in\mathcal P(\mathbb N)\) deux à deux disjoints, \(\mu\left(\bigcup_nA_n\right)=\sum_{k\in\cup_nA_n}p_k=\sum_{n\in\mathbb N}\sum_{k\in A_n}p_k=\sum_{n\in\mathbb N}\mu(A_n)\) ; trivialement \(\mu(\emptyset)=0\), et \(\mu(\mathbb N)=\sum_kp_k=1\).<br>(le poly écrit « suite de réels » et « soit \(A_n\in\mathcal P(\mathbb N)\) » : il faut \(p_k\ge0\) et des \(A_n\) deux à deux disjoints)'
   source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.21, p. 8'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 2
@@ -171,24 +171,24 @@
 
 - id: mesure-a-011-1
   notion: mesure-n-0032
-  recto: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré et \(A\subset B\) dans \(\mathcal A\). Comparer \(\mu(A)\) et \(\mu(B)\), et exprimer \(\mu(B)\).'
-  verso: '\(\mu(A)\le\mu(B)\) (\(\mu\) est croissante pour l''inclusion) et \(\mu(B)=\mu(A)+\mu(B\setminus A)\).'
+  recto: 'Prop. (i) : croissance de \(\mu\)'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré et \(A,B\in\mathcal A\).<br>Si \(A\subset B\), alors \(\mu(A)\le\mu(B)\) (\(\mu\) est croissante pour l''inclusion).<br>De plus, dans le cas \(A\subset B\) : \(\mu(B)=\mu(A)+\mu(B\setminus A)\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 1'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [propriete]
 - id: mesure-a-011-2
   notion: mesure-n-0032
-  recto: 'Pour \(A\subset B\) dans \(\mathcal A\), quand a-t-on \(\mu(B\setminus A)=\mu(B)-\mu(A)\) ?'
-  verso: 'Si \(\mu(A) < +\infty\). Si \(\mu(A)=+\infty\), on ne peut rien dire sur \(\mu(B\setminus A)\) à partir de cette formule.'
+  recto: 'Rem. : \(\mu(B\setminus A)=\mu(B)-\mu(A)\) (suite de la Prop. (i))'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré et \(A,B\in\mathcal A\) avec \(A\subset B\).<br>Si \(\mu(A) < +\infty\), alors \(\mu(B\setminus A)=\mu(B)-\mu(A)\).<br>Si \(\mu(A)=+\infty\), on ne peut rien dire sur \(\mu(B\setminus A)\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 1'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [propriete]
 - id: mesure-a-011-3
   notion: mesure-n-0032
-  recto: 'Comment prouver \(\mu(B)=\mu(A)+\mu(B\setminus A)\) pour \(A\subset B\) ?'
-  verso: '\(B=A\cup(B\cap A^c)\) est une union disjointe d''éléments de \(\mathcal A\) ; on applique l''additivité de \(\mu\). Comme \(\mu(B\setminus A)\ge0\), on en tire \(\mu(A)\le\mu(B)\).'
+  recto: 'Preuve : croissance de \(\mu\) (Prop. (i))'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré et \(A\subset B\) dans \(\mathcal A\).<br>\(B=A\cup(B\cap A^c)\) est une union disjointe d''éléments de \(\mathcal A\), donc \(\mu(B)=\mu(A)+\mu(B\cap A^c)\) (additivité). Comme \(\mu(B\setminus A)\ge0\), on obtient \(\mu(A)\le\mu(B)\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 1'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
@@ -196,16 +196,16 @@
 
 - id: mesure-a-012-1
   notion: mesure-n-0033
-  recto: 'Pour \(A,B\in\mathcal A\), quelle relation lie \(\mu(A\cup B)\), \(\mu(A\cap B)\), \(\mu(A)\) et \(\mu(B)\) ?'
-  verso: '\(\mu(A\cup B)+\mu(A\cap B)=\mu(A)+\mu(B)\).'
+  recto: 'Prop. (ii) : \(\mu(A\cup B)+\mu(A\cap B)\)'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré.<br>Pour tous \(A,B\in\mathcal A\) : \(\mu(A\cup B)+\mu(A\cap B)=\mu(A)+\mu(B)\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 1'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 3
   tags: [propriete]
 - id: mesure-a-012-2
   notion: mesure-n-0033
-  recto: 'Comment démontre-t-on \(\mu(A\cup B)+\mu(A\cap B)=\mu(A)+\mu(B)\) ?'
-  verso: 'Si \(\mu(A\cap B)=+\infty\) : \(A\cap B\) est inclus dans \(A\), \(B\) et \(A\cup B\), donc les deux membres valent \(+\infty\). Sinon \(A\cup B=(A\setminus(A\cap B))\cup(B\setminus(A\cap B))\cup(A\cap B)\), union disjointe : \(\mu(A\cup B)=\mu(A)-\mu(A\cap B)+\mu(B)-\mu(A\cap B)+\mu(A\cap B)\).'
+  recto: 'Preuve : \(\mu(A\cup B)+\mu(A\cap B)=\mu(A)+\mu(B)\) (Prop. (ii))'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré et \(A,B\in\mathcal A\).<br>Si \(\mu(A\cap B)=+\infty\) : \(A\cap B\) est inclus dans \(A\), \(B\) et \(A\cup B\), donc par croissance les deux membres valent \(+\infty\).<br>Sinon \(A\cup B=(A\setminus(A\cap B))\cup(B\setminus(A\cap B))\cup(A\cap B)\), union disjointe ; avec \(\mu(A\setminus(A\cap B))=\mu(A)-\mu(A\cap B)\) (mesure finie), on obtient \(\mu(A\cup B)=\mu(A)+\mu(B)-\mu(A\cap B)\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 1'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 3
@@ -213,16 +213,16 @@
 
 - id: mesure-a-013-1
   notion: mesure-n-0035
-  recto: 'Continuité croissante (\(A_n\subset A_{n+1}\), montrer \(\mu(\bigcup A_n)=\lim\mu(A_n)\)) : en quelles parties disjointes décompose-t-on les \(A_n\) ?'
-  verso: '\(B_0=A_0\) et \(B_n=A_n\setminus A_{n-1}\) pour \(n\ge1\) : les \(B_n\) sont dans \(\mathcal A\), deux à deux disjoints, \(A_n=\bigcup_{k=0}^n B_k\) et \(\bigcup_n A_n=\bigcup_n B_n\).'
+  recto: 'Preuve : continuité séquentielle croissante, décomposition (Prop. (iii), 1/2)'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré et \((A_n)\) dans \(\mathcal A\) avec \(A_n\subset A_{n+1}\) pour tout \(n\).<br>\(A_n=A_{n-1}\cup(A_n\setminus A_{n-1})\). On note \(B_0=A_0\) et \(B_n=A_n\setminus A_{n-1}\) pour \(n\ge1\). Alors \(A_n=\bigcup_{k=0}^nB_k\), et les \(B_n\) sont deux à deux disjoints et dans \(\mathcal A\) ; de plus \(\bigcup_nA_n=\bigcup_nB_n\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 1'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [demonstration]
 - id: mesure-a-013-2
   notion: mesure-n-0035
-  recto: 'Continuité croissante : avec \(B_0=A_0\), \(B_n=A_n\setminus A_{n-1}\), comment conclut-on \(\mu(\bigcup A_n)=\lim\mu(A_n)\) ?'
-  verso: 'Additivité : \(\mu(A_n)=\sum_{k=0}^n\mu(B_k)\). \(\sigma\)-additivité : \(\mu(\bigcup A_n)=\mu(\bigcup B_n)=\sum_{n}\mu(B_n)=\lim_n\sum_{k=0}^n\mu(B_k)=\lim_n\mu(A_n)\).'
+  recto: 'Preuve : continuité séquentielle croissante, conclusion (Prop. (iii), 2/2)'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré et \((A_n)\) dans \(\mathcal A\) avec \(A_n\subset A_{n+1}\) ; \(B_0=A_0\), \(B_n=A_n\setminus A_{n-1}\) (\(B_n\) disjoints, \(A_n=\bigcup_{k=0}^nB_k\)).<br>\(\mu(A_n)=\sum_{k=0}^n\mu(B_k)\) (additivité). Comme \(\bigcup_nA_n=\bigcup_nB_n\) : \(\mu(\bigcup_nA_n)=\mu(\bigcup_nB_n)=\sum_n\mu(B_n)=\lim_n\sum_{k=0}^n\mu(B_k)=\lim_n\mu(A_n)\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 1'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
@@ -230,8 +230,8 @@
 
 - id: mesure-a-014-1
   notion: mesure-n-0037
-  recto: 'Continuité décroissante : que peut-il arriver si on omet l''hypothèse « il existe \(n_0\) avec \(\mu(A_{n_0}) < +\infty\) » ? Contre-exemple.'
-  verso: 'Sur \((\mathbb N,\mathcal P(\mathbb N))\) avec la mesure de comptage et \(A_n=[n,+\infty[\cap\mathbb N\) (décroissante) : \(\mu(A_n)=+\infty\) pour tout \(n\), mais \(\bigcap_n A_n=\emptyset\) de mesure \(0\). Donc \(\mu(\bigcap A_n)\neq\lim\mu(A_n)\).'
+  recto: 'Exemple : contre-exemple à la continuité séquentielle décroissante si l''hypothèse (P) est fausse'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré.<br>Hypothèse (P) de la Prop. (iv) : il existe \(n_0\in\mathbb N\) avec \(\mu(A_{n_0}) < +\infty\).<br>Contre-exemple si (P) est fausse : \(X=\mathbb N\), \(\mathcal A=\mathcal P(\mathbb N)\), \(\mu\) la mesure de comptage. Soit \(A_n=[n,+\infty[\cap\mathbb N\) : \(\mu(A_n)=+\infty\) pour tout \(n\) et \(A_{n+1}\subset A_n\). Mais \(\bigcap_nA_n=\emptyset\) et \(\mu(\emptyset)=0\), donc \(\mu(\bigcap A_n)\neq\lim\mu(A_n)\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 2'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 3
@@ -239,16 +239,16 @@
 
 - id: mesure-a-015-1
   notion: mesure-n-0038
-  recto: 'Énoncer la \(\sigma\)-sous-additivité d''une mesure \(\mu\).'
-  verso: 'Pour toute suite \((A_n)\) d''éléments de \(\mathcal A\) : \(\mu\left(\bigcup_n A_n\right)\le\sum_n\mu(A_n)\).'
+  recto: 'Prop. (v) : \(\sigma\)-sous-additivité'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré.<br>Soit \((A_n)\) une suite d''éléments de \(\mathcal A\). Alors \(\mu\left(\bigcup_nA_n\right)\le\sum_n\mu(A_n)\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 2'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [propriete]
 - id: mesure-a-015-2
   notion: mesure-n-0038
-  recto: 'Comment démontre-t-on la \(\sigma\)-sous-additivité de \(\mu\) ?'
-  verso: 'Poser \(B_0=A_0\) et \(B_n=A_n\setminus\bigcup_{k<n}A_k\) : les \(B_n\) sont deux à deux disjoints, \(\bigcup B_n=\bigcup A_n\) et \(B_n\subset A_n\). Donc \(\mu(\bigcup A_n)=\sum\mu(B_n)\le\sum\mu(A_n)\).'
+  recto: 'Preuve : \(\sigma\)-sous-additivité (Prop. (v))'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré et \((A_n)\) dans \(\mathcal A\).<br>Soit \(B_n=A_n\setminus\bigcup_{k < n}A_k\) et \(B_0=A_0\). Alors \(\bigcup_nB_n=\bigcup_nA_n\), les \(B_n\) sont deux à deux disjoints, et \(B_n\subset A_n\) donc \(\mu(B_n)\le\mu(A_n)\). D''où \(\mu(\bigcup_nA_n)=\sum_n\mu(B_n)\le\sum_n\mu(A_n)\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 2'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
@@ -256,40 +256,40 @@
 
 - id: mesure-a-016-1
   notion: mesure-n-0040
-  recto: 'Preuve de \(\lambda(I)=\operatorname{long}(I)\), étape 1 : pourquoi \(\lambda(\{x\})=0\) ?'
-  verso: 'Par invariance par translation, \(\lambda(\{x\})=\alpha=\lambda(\{0\})\). Les \(n\) points \(\frac1k\) (\(1\le k\le n\)) sont dans \([0,1]\) : \(n\alpha=\lambda(\{\frac1k:1\le k\le n\})\le\lambda([0,1])=1\). Donc \(0\le\alpha\le\frac1n\) pour tout \(n\), d''où \(\alpha=0\).'
+  recto: 'Preuve : \(\lambda(I)=\operatorname{long}(I)\), étape 1 (\(\lambda(\{x\})=0\))'
+  verso: 'Soit \(\lambda\) la mesure de Lebesgue sur \(\mathbb R\) ; on prouve \(\lambda(I)=\operatorname{long}(I)\) pour tout intervalle \(I\) de \(\mathbb R\).<br>Pour tout \(x\in\mathbb R\), \(\lambda(\{x\})=0\).<br>Soit \(\alpha=\lambda(\{0\})\) : par invariance par translation \(\lambda(\{x\})=\alpha\). Les \(n\) points \(\frac1k\) (\(1\le k\le n\)) sont dans \([0,1]\) : \(n\alpha=\lambda(\{\frac1k:1\le k\le n\})\le\lambda([0,1])=1\) (\(\sigma\)-additivité, croissance). Donc \(0\le\alpha\le\frac1n\) pour tout \(n\in\mathbb N\), d''où \(\alpha=0\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 2'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 3
   tags: [demonstration]
 - id: mesure-a-016-2
   notion: mesure-n-0040
-  recto: 'Preuve de \(\lambda(I)=\operatorname{long}(I)\), étape 2 : pourquoi \(\lambda(]0,\frac1n])=\frac1n\) ?'
-  verso: '\(]0,1]=\bigsqcup_{k=1}^n]\frac{k-1}n,\frac kn]\), donc \(1=\sum_{k=1}^n\lambda(]\frac{k-1}n,\frac kn])=n\,\lambda(]0,\frac1n])\) par invariance par translation.'
+  recto: 'Preuve : \(\lambda(I)=\operatorname{long}(I)\), étape 2 (\(\lambda(]0,\frac1n])=\frac1n\))'
+  verso: 'Soit \(\lambda\) la mesure de Lebesgue sur \(\mathbb R\) ; on prouve \(\lambda(I)=\operatorname{long}(I)\) pour tout intervalle \(I\) de \(\mathbb R\).<br>Pour tout \(n\in\mathbb N^*\), \(\lambda(]0,\frac1n])=\frac1n\).<br>\(]0,1]=\bigsqcup_{k=1}^n]\frac{k-1}n,\frac kn]\) (disjoints) et \(\lambda(]0,1])=1\) d''après l''étape 1. Donc \(1=\sum_{k=1}^n\lambda(]\frac{k-1}n,\frac kn])=n\,\lambda(]0,\frac1n])\) par invariance par translation.'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 2'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 3
   tags: [demonstration]
 - id: mesure-a-016-3
   notion: mesure-n-0040
-  recto: 'Preuve de \(\lambda(I)=\operatorname{long}(I)\), étape 3 : pourquoi \(\lambda(]r,r''])=r''-r\) pour \(r < r''\) rationnels ?'
-  verso: 'Réduire au même dénominateur : \(r=\frac{k_1}n\), \(r''=\frac{k_2}n\), \(k_1 < k_2\). Alors \(]r,r'']=\bigsqcup_{k=k_1+1}^{k_2}]\frac{k-1}n,\frac kn]\) et chaque morceau a pour mesure \(\lambda(]0,\frac1n])=\frac1n\) : \(\lambda(]r,r''])=\frac{k_2-k_1}n=r''-r\).'
+  recto: 'Preuve : \(\lambda(I)=\operatorname{long}(I)\), étape 3 (bornes rationnelles)'
+  verso: 'Soit \(\lambda\) la mesure de Lebesgue sur \(\mathbb R\) ; on prouve \(\lambda(I)=\operatorname{long}(I)\) pour tout intervalle \(I\) de \(\mathbb R\).<br>Pour tous rationnels \(r < r''\), \(\lambda(]r,r''])=r''-r\).<br>On met \(r\) et \(r''\) au même dénominateur : \(r=\frac{k_1}n\), \(r''=\frac{k_2}n\) avec \(k_1,k_2\in\mathbb Z\), \(n\in\mathbb N^*\), \(k_1 < k_2\). Alors \(]r,r'']=\bigsqcup_{k=k_1+1}^{k_2}]\frac{k-1}n,\frac kn]\), chaque morceau a pour mesure \(\lambda(]0,\frac1n])=\frac1n\) (invariance par translation), d''où \(\lambda(]r,r''])=\frac{k_2-k_1}n=r''-r\).'
   source: 'Cours Paris Cité, notes du CM du 20/10/2026, p. 1'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 3
   tags: [demonstration]
 - id: mesure-a-016-4
   notion: mesure-n-0040
-  recto: 'Preuve de \(\lambda(I)=\operatorname{long}(I)\), étape 4 : comment passer à des bornes \(a < b\) irrationnelles ?'
-  verso: '\(\mathbb Q\) est dense : prendre des rationnels \(r_n\downarrow a\) et \(r''_n\uparrow b\) avec \(r_n < r''_n\). Alors \(]r_n,r''_n]\uparrow]a,b]\) et, par continuité croissante, \(\lambda(]a,b])=\lim(r''_n-r_n)=b-a\).'
+  recto: 'Preuve : \(\lambda(I)=\operatorname{long}(I)\), étape 4 (bornes irrationnelles)'
+  verso: 'Soit \(\lambda\) la mesure de Lebesgue sur \(\mathbb R\) ; on prouve \(\lambda(I)=\operatorname{long}(I)\) pour tout intervalle \(I\) de \(\mathbb R\).<br>Soient \(a < b\) réels non rationnels : \(\lambda(]a,b])=b-a\).<br>\(\mathbb Q\) est dense dans \(\mathbb R\) : il existe des suites de rationnels \((r_n)\) décroissante de limite \(a\) et \((r''_n)\) croissante de limite \(b\), avec \(r_n < r''_n\). Alors \(]r_n,r''_n]\uparrow]a,b]\) et, par continuité séquentielle croissante, \(\lambda(]a,b])=\lim\lambda(]r_n,r''_n])=\lim(r''_n-r_n)=b-a\).'
   source: 'Cours Paris Cité, notes du CM du 20/10/2026, p. 2'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 3
   tags: [demonstration]
 - id: mesure-a-016-5
   notion: mesure-n-0040
-  recto: 'Preuve de \(\lambda(I)=\operatorname{long}(I)\), étape 5 : comment traiter les autres types d''intervalles et les intervalles infinis ?'
-  verso: 'Les points sont de mesure nulle : \(\lambda([a,b])=\lambda(]a,b])=\lambda(]a,b[)=\lambda([a,b[)=b-a\). Et \([a,+\infty[=\bigcup_n[a,a+n[\) croissante donne \(\lambda([a,+\infty[)=\lim n=+\infty\) ; de même \(\lambda(]-\infty,b])=\lambda(]-\infty,+\infty[)=+\infty\).'
+  recto: 'Preuve : \(\lambda(I)=\operatorname{long}(I)\), conclusion (autres intervalles, intervalles infinis)'
+  verso: 'Soit \(\lambda\) la mesure de Lebesgue sur \(\mathbb R\) ; on prouve \(\lambda(I)=\operatorname{long}(I)\) pour tout intervalle \(I\) de \(\mathbb R\).<br>Pour tous \(a < b\) réels : \(\lambda([a,b])=\lambda(]a,b])=\lambda(]a,b[)=\lambda([a,b[)=b-a\) (les points sont de mesure nulle).<br>\(\lambda([a,+\infty[)=\lambda(\bigcup_{n}[a,a+n[)=\lim_n\lambda([a,a+n[)=\lim n=+\infty\) (continuité séquentielle croissante). De même \(\lambda(]-\infty,b])=\lambda(]-\infty,+\infty[)=+\infty\).'
   source: 'Cours Paris Cité, notes du CM du 20/10/2026, p. 2'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 3
@@ -297,8 +297,8 @@
 
 - id: mesure-a-017-1
   notion: mesure-n-0043
-  recto: 'Quand un espace mesuré \((X,\mathcal A,\mu)\) (ou la mesure \(\mu\)) est-il complet ?'
-  verso: 'Quand toute partie \(\mu\)-négligeable appartient à \(\mathcal A\) (\(A\subset X\) est \(\mu\)-négligeable s''il existe \(B\in\mathcal A\) avec \(A\subset B\) et \(\mu(B)=0\)).'
+  recto: 'Déf : espace mesuré complet'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré.<br>On dit que \(A\subset X\) est \(\mu\)-négligeable s''il existe \(B\in\mathcal A\) tel que \(A\subset B\) et \(\mu(B)=0\). Soit \(\mathcal N(\mu)\) l''ensemble des parties \(\mu\)-négligeables.<br>On dit que \((X,\mathcal A,\mu)\) est complet si \(A\in\mathcal N(\mu)\Rightarrow A\in\mathcal A\). On dit alors que \(\mu\) est complète.'
   source: 'Cours Paris Cité, notes du CM du 20/10/2026, p. 3'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
@@ -306,16 +306,16 @@
 
 - id: mesure-a-018-1
   notion: mesure-n-0046
-  recto: 'Énoncer la réciproque sur les mesures finies de \((\mathbb R,\mathcal B(\mathbb R))\) : mesure de Stieltjes associée à \(F\).'
-  verso: 'Soit \(F:\mathbb R\to\mathbb R_+\) croissante, bornée, continue à droite, avec \(\lim_{x\to-\infty}F(x)=0\). Il existe une unique mesure finie \(\mu\) sur \((\mathbb R,\mathcal B(\mathbb R))\) telle que \(F=F_\mu\), où \(F_\mu(x)=\mu(]-\infty,x])\). \(\mu\) est la mesure de Stieltjes associée à \(F\).'
+  recto: 'Thm : mesures finies sur \(\mathbb R\) et mesure de Stieltjes (2)'
+  verso: '1) Soit \(\mu\) une mesure finie sur \((\mathbb R,\mathcal B(\mathbb R))\). On définit pour tout \(x\in\mathbb R\) : \(F_\mu(x)=\mu(]-\infty,x])\). La fonction \(F_\mu\) est croissante, bornée, continue à droite, et \(\lim_{x\to-\infty}F_\mu(x)=0\).<br>2) Inversement, soit \(F:\mathbb R\to\mathbb R_+\) croissante, bornée, continue à droite et telle que \(\lim_{x\to-\infty}F(x)=0\). Alors il existe une unique mesure \(\mu\) finie sur \((\mathbb R,\mathcal B(\mathbb R))\) telle que \(F=F_\mu\). On appelle \(\mu\) la mesure de Stieltjes associée à \(F\).'
   source: 'Cours Paris Cité, notes du CM du 20/10/2026, p. 3'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 3
   tags: [theoreme]
 - id: mesure-a-018-2
   notion: mesure-n-0046
-  recto: 'Quelle notation pour la mesure de Stieltjes \(\mu\) associée à \(F=F_\mu\), et que devient-elle si \(F\) est \(\mathcal C^1\) ?'
-  verso: '\(\mu(dx)=dF(x)\) ; si \(F\) est \(\mathcal C^1\), \(dF(x)=F''(x)\,dx\).'
+  recto: 'Rem. : notation \(\mu(dx)=dF(x)\) (mesure de Stieltjes)'
+  verso: 'Lorsque \(F=F_\mu\) (\(\mu\) mesure finie sur \((\mathbb R,\mathcal B(\mathbb R))\), \(F_\mu(x)=\mu(]-\infty,x])\)), on note souvent \(\mu(dx)=dF(x)\).<br>Si \(F\) est \(\mathcal C^1\), on a \(dF(x)=F''(x)\,dx\).'
   source: 'Cours Paris Cité, notes du CM du 20/10/2026, p. 3'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 3
@@ -324,7 +324,7 @@
 - id: mesure-a-019-1
   notion: mesure-n-0047
   recto: 'Citer des ensembles dénombrables classiques (un ensemble \(E\) est dénombrable s''il existe une injection de \(E\) dans \(\mathbb N\)).'
-  verso: 'Tout ensemble fini, \(\mathbb N\), \(\mathbb Z\), \(\mathbb N^2\), \(\mathbb Q\), \(\mathbb N^d\).'
+  verso: 'Tout ensemble fini, \(\mathbb N\), \(\mathbb Z\), \(\mathbb N^2\), \(\mathbb Q\), \(\mathbb N^d\).<br>(convention UVSQ. Le poly de Paris Cité, p. 3, dit « dénombrable » pour « en bijection avec \(\mathbb N\) » : un ensemble fini y est seulement « au plus dénombrable »)'
   source: 'UVSQ, Théorie de la mesure, séance 1, diapo 5'
   chapitre: 'Chapitre 1 - Espace mesurable et mesure (UVSQ)'
   priorite: 2
@@ -340,7 +340,7 @@
 
 - id: mesure-a-022-1
   notion: mesure-n-0063
-  recto: 'Changement de variables en coordonnées polaires : quelle formule pour \(\int_{\mathbb R^2}f(x,y)\,dx\,dy\) (\(f\) positive ou intégrable) ?'
+  recto: 'Changement de variables en coordonnées polaires : quelle formule pour \(\int_{\mathbb R^2}f(x,y)\,dx\,dy\) (\(f\) mesurable, positive ou intégrable) ?'
   verso: 'Avec \(\varphi(\rho,\theta)=(\rho\cos\theta,\rho\sin\theta)\) sur \(]0,+\infty[\times]0,2\pi[\) : \(\int_{\mathbb R^2}f(x,y)\,dx\,dy=\int_{]0,+\infty[\times]0,2\pi[}f(\rho\cos\theta,\rho\sin\theta)\,\rho\,d\rho\,d\theta\) (jacobien \(\rho\)).'
   source: 'UVSQ, Théorie de la mesure, séance 9, diapo 12'
   chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)'
@@ -348,7 +348,7 @@
   tags: [methode]
 - id: mesure-a-022-2
   notion: mesure-n-0063
-  recto: 'Changement de variables en coordonnées sphériques : quelle formule pour \(\int_{\mathbb R^3}f(x,y,z)\,dx\,dy\,dz\) (\(f\) positive ou intégrable) ?'
+  recto: 'Changement de variables en coordonnées sphériques : quelle formule pour \(\int_{\mathbb R^3}f(x,y,z)\,dx\,dy\,dz\) (\(f\) mesurable, positive ou intégrable) ?'
   verso: 'Avec \(\psi(\rho,\theta,\delta)=(\rho\cos\theta\cos\delta,\ \rho\sin\theta\cos\delta,\ \rho\sin\delta)\) sur \(G=]0,+\infty[\times]-\pi,\pi[\times]-\frac\pi2,\frac\pi2[\) : \(\int_{\mathbb R^3}f\,dx\,dy\,dz=\int_G f\circ\psi(\rho,\theta,\delta)\,\rho^2\cos\delta\,d\rho\,d\theta\,d\delta\) (jacobien \(\rho^2\cos\delta\)).'
   source: 'UVSQ, Théorie de la mesure, séance 10, diapos 1-2'
   chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)'
@@ -366,14 +366,14 @@
 - id: mesure-a-024-2
   notion: mesure-n-0069
   recto: 'Mesure finie : comment retenir l''inclusion \(\mathcal L^\infty(X)\subset\mathcal L^1(X)\) ?'
-  verso: 'Si \(\mu(\{|f| > C\})=0\), alors \(\int_X|f|\,d\mu\le C\,\mu(X) < +\infty\).'
+  verso: 'Si \(f\in\mathcal L^\infty(X)\), il existe \(C\) avec \(\mu(\{|f| > C\})=0\), et alors \(\int_X|f|\,d\mu\le C\,\mu(X) < +\infty\).'
   source: 'UVSQ, Théorie de la mesure, séance 10, diapo 6'
   chapitre: 'Chapitre 5 - Espaces Lp (UVSQ)'
   priorite: 3
   tags: [propriete]
 - id: mesure-a-024-3
   notion: mesure-n-0069
-  recto: 'Sur \(\mathbb R\) (mesure infinie), les espaces \(\mathcal L^p\) sont-ils comparables ? Contre-exemples pour \(\mathcal L^\infty\) et \(\mathcal L^1\).'
+  recto: 'Sur \(\mathbb R\) muni de la mesure de Lebesgue (mesure infinie), les espaces \(\mathcal L^p\) sont-ils comparables ? Contre-exemples pour \(\mathcal L^\infty\) et \(\mathcal L^1\).'
   verso: 'Non : \(\mathcal L^\infty(\mathbb R)\not\subset\mathcal L^1(\mathbb R)\) (exemple \(f=1\)) et \(\mathcal L^1(\mathbb R)\not\subset\mathcal L^\infty(\mathbb R)\) (exemple \(f(x)=\frac1{\sqrt{|x|}}\) sur \([-1,1]\), \(0\) ailleurs).'
   source: 'UVSQ, Théorie de la mesure, séance 10, diapo 7'
   chapitre: 'Chapitre 5 - Espaces Lp (UVSQ)'
@@ -405,7 +405,7 @@
   tags: [prerequis-l1l2, methode]
 - id: mesure-e001
   notion: null
-  recto: 'Pour \((f_n)\) mesurables, écrire l''ensemble \(C\) où \((f_n(x))\) converge à l''aide d''intersections et réunions dénombrables. Quelle règle de traduction \(\forall,\exists\to\cap,\cup\) ?'
+  recto: 'Soit \((E,\mathcal E)\) un espace mesurable et \((f_n)\) une suite de fonctions mesurables de \((E,\mathcal E)\) dans \((\mathbb R,\mathcal B(\mathbb R))\). Écrire l''ensemble \(C\) où \((f_n(x))\) converge à l''aide d''intersections et réunions dénombrables. Quelle règle de traduction \(\forall,\exists\to\cap,\cup\) ?'
   verso: 'Critère de Cauchy : \(x\in C\iff\forall m\ge1,\exists N,\forall p,q\ge N,\ |f_p(x)-f_q(x)|\le 1/m\). Donc \(C=\bigcap_{m\ge1}\bigcup_{N\in\mathbb N}\bigcap_{p,q\ge N}\{|f_p-f_q|\le 1/m\}\in\mathcal E\). Règle : \(\forall\to\bigcap\), \(\exists\to\bigcup\), dans l''ordre d''apparition ; tous les indices dans \(\mathbb N\) (on remplace \(\varepsilon\) par \(1/m\) pour rester dénombrable).'
   source: 'mes-td3-ex04 ; séance 2026-11-04'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'

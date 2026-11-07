@@ -133,16 +133,21 @@ Cartes rédigées par le système, exportées vers Anki par paquets ne contenant
 ```yaml
 - id: topo-a-012-1                 # <id de cartes_a_creer>-<k> : une notion peut donner plusieurs cartes
   notion: topo-n-0070
-  recto: 'Énoncer le théorème de Baire dans un espace métrique complet.'
-  verso: 'Dans un espace métrique complet, une intersection dénombrable d''ouverts denses est dense.'
+  recto: 'Thm 2.12 : théorème de Baire'
+  verso: 'Soit \((X,d)\) un espace métrique complet. Toute intersection dénombrable d''ouverts denses de \(X\) est dense dans \(X\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Espace complet'   # sert au nom du sous-paquet
   priorite: 1                      # reprise de cartes_a_creer
   tags: [definition]               # type de la notion ; matière et priorité ajoutées à l'export
 ```
 
-Règles de rédaction :
-- une seule idée par carte ; un recto formulé comme une question précise ; un verso court ;
+Règles de rédaction (format demandé par l'utilisateur le 07/11/2026, celui de ses propres cartes) :
+- **cartes de cours :**
+  - recto = type et nom de l'énoncé : `Déf : <nom>`, `Prop. <n°> : <nom>`, `Thm <n°> : <nom>`, `Lemme`, `Cor.`, `Exemple : <nom>` ou `Preuve : <nom>`, avec le numéro et le nom du poly quand il y en a ;
+  - verso = l'énoncé du poly recopié fidèlement, avec son cadre et toutes ses hypothèses ;
+  - si l'énoncé a plusieurs points, une carte par point, chacune recopiée fidèlement avec son cadre ;
+  - une carte `Preuve :` donne l'idée de la preuve du poly en 2 à 5 lignes ;
+- **cartes d'erreurs** (`*-eNNN`, tag `erreur`) et **prérequis** (tag `prerequis-l1l2`) : une question précise au recto, un verso court ;
 - maths en MathJax : `\( ... \)` en ligne, `\[ ... \]` en bloc ; pas de liste à apprendre en bloc, la découper ;
 - un théorème : hypothèses complètes et conclusion ; une carte à part pour un contre-exemple ou un piège utile ;
 - rédigée en lisant la source réelle à la page indiquée, jamais de mémoire ; `source` non vide sur chaque carte ;

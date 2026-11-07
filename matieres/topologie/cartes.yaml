@@ -1,32 +1,32 @@
 # Cartes de topologie (Paris Cité L3). Pages = repères "--- page N ---" du PDF.
 - id: topo-a-001-1
   notion: topo-n-0007
-  recto: 'Sur un ensemble \(X\), quelles sont la topologie grossière et la topologie discrète ?'
-  verso: 'Grossière : \(\{\emptyset, X\}\). Discrète : \(\mathcal P(X)\) (toute partie est ouverte).'
+  recto: 'Exemple : topologie discrète et topologie grossière'
+  verso: 'Soit \(X\) un ensemble non vide. \(\mathcal P(X)\) et \(\{\emptyset,X\}\) sont des topologies sur \(X\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 2'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
   tags: [exemple]
 - id: topo-a-001-2
   notion: topo-n-0007
-  recto: 'L''espace \((X,\mathcal P(X))\) (topologie discrète) est-il séparé ? Pourquoi ?'
-  verso: 'Oui : pour \(x \neq y\), prendre \(U=\{x\}\) et \(V=\{y\}\), ouverts disjoints.'
+  recto: 'Exemple : \((X,\mathcal P(X))\) est séparé'
+  verso: '\((X,\mathcal P(X))\) est un espace topologique séparé (prendre \(U=\{x\}\) et \(V=\{y\}\)).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
   tags: [exemple]
 - id: topo-a-001-3
   notion: topo-n-0007
-  recto: 'L''espace \((X,\{\emptyset, X\})\) (topologie grossière) est-il séparé ?'
-  verso: 'Non dès que \(X\) a deux points distincts \(x, y\) : le seul ouvert contenant \(x\) (ou \(y\)) est \(X\).'
+  recto: 'Exemple : \((X,\{\emptyset,X\})\) n''est pas séparé'
+  verso: '\((X,\{\emptyset,X\})\) n''est pas séparé (le seul ouvert contenant \(x\) ou \(y\) est \(X\)).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
   tags: [exemple]
 - id: topo-a-001-4
   notion: topo-n-0007
-  recto: 'Quelle propriété surprenante peut avoir une suite convergente dans un espace topologique non séparé ?'
-  verso: 'Elle peut avoir plusieurs limites.'
+  recto: 'Exemple : suite à plusieurs limites'
+  verso: 'Un espace topologique non séparé peut avoir des propriétés surprenantes. Par exemple, une suite convergente peut avoir plusieurs limites.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -34,8 +34,8 @@
 
 - id: topo-a-002-1
   notion: topo-n-0009
-  recto: 'Énoncer la seconde inégalité triangulaire dans un espace métrique \((X,d)\).'
-  verso: 'Pour tous \(x,y,z\in X\) : \(|d(x,y)-d(y,z)|\le d(x,z)\).'
+  recto: 'Rem. 2 : seconde inégalité triangulaire'
+  verso: 'Soit \((X,d)\) un espace métrique. On déduit facilement de l''inégalité triangulaire que \(|d(x,y)-d(y,z)|\le d(x,z)\), \(\forall x,y,z\in X\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
@@ -43,24 +43,24 @@
 
 - id: topo-a-003-1
   notion: topo-n-0010
-  recto: 'Définir la distance \(d_\infty\) sur \(\mathbb R^n\).'
-  verso: '\(d_\infty(x,y)=\max_{k\in\{1,\dots,n\}}|x_k-y_k|\).'
+  recto: 'Exemple : distance \(d_\infty\)'
+  verso: '\(d_\infty:(x,y)\mapsto\max_{k\in\{1,\dots,n\}}|x_k-y_k|\) est une distance sur \(\mathbb R^n\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
   tags: [exemple]
 - id: topo-a-003-2
   notion: topo-n-0010
-  recto: 'Définir la distance \(d_p\) sur \(\mathbb R^n\) pour \(p\in[1,+\infty[\). Quel cas particulier est la distance euclidienne ?'
-  verso: '\(d_p(x,y)=\left(\sum_{k=1}^n|x_k-y_k|^p\right)^{1/p}\) ; \(d_2\) est la distance euclidienne.'
+  recto: 'Exemple : distances \(d_p\)'
+  verso: 'Pour tout \(p\in[1,+\infty[\), \(d_p:(x,y)\mapsto\left(\sum_{k=1}^n|x_k-y_k|^p\right)^{1/p}\) est une distance sur \(\mathbb R^n\). En particulier, \(d_2\) est la distance euclidienne.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
   tags: [exemple]
 - id: topo-a-003-3
   notion: topo-n-0010
-  recto: 'Définir la distance discrète sur un ensemble non vide \(X\).'
-  verso: '\(d(x,y)=1\) si \(x\neq y\), \(d(x,y)=0\) si \(x=y\).'
+  recto: 'Exemple : distance discrète'
+  verso: 'Soit \(X\) un ensemble non vide. L''application \(d:(x,y)\mapsto 1\) si \(x\neq y\), \(0\) si \(x=y\), est une distance sur \(X\) appelée distance discrète.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -68,24 +68,24 @@
 
 - id: topo-a-004-1
   notion: topo-n-0014
-  recto: 'Dans un espace métrique, une boule ouverte \(B(x,r)\) est-elle ouverte ? une boule fermée \(\overline B(x,r)\) est-elle fermée ?'
-  verso: 'Oui aux deux : \(B(x,r)\) est ouverte et \(\overline B(x,r)\) est fermée.'
+  recto: 'Prop. 5 : boule ouverte et boule fermée'
+  verso: 'Soit \((X,d)\) un espace métrique. Une boule ouverte est ouverte et une boule fermée est fermée.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 4'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
   tags: [propriete]
 - id: topo-a-004-2
   notion: topo-n-0014
-  recto: 'Comment montrer qu''une boule ouverte \(B(x,r)\) est ouverte ?'
-  verso: 'Pour \(y\in B(x,r)\), poser \(\epsilon=r-d(x,y) > 0\). Si \(z\in B(y,\epsilon)\) : \(d(x,z)\le d(x,y)+d(y,z) < (r-\epsilon)+\epsilon=r\), donc \(B(y,\epsilon)\subset B(x,r)\).'
+  recto: 'Preuve : une boule ouverte est ouverte (Prop. 5)'
+  verso: 'Soit \(y\in B(x,r)\), donc \(d(x,y) < r\). Posons \(\epsilon=r-d(x,y) > 0\).<br>Pour tout \(z\in B(y,\epsilon)\) : \(d(x,z)\le d(x,y)+d(y,z) < (r-\epsilon)+\epsilon=r\).<br>Donc \(B(y,\epsilon)\subset B(x,r)\) et la boule \(B(x,r)\) est ouverte.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 5'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
   tags: [propriete]
 - id: topo-a-004-3
   notion: topo-n-0014
-  recto: 'Comment montrer qu''une boule fermée \(\overline B(x,r)\) est fermée ?'
-  verso: 'Son complémentaire est \(\{z : d(x,z) > r\}\). Pour \(y\) dedans, poser \(\epsilon=d(x,y)-r > 0\). Si \(z\in B(y,\epsilon)\) : \(d(x,z)\ge d(x,y)-d(y,z) > (r+\epsilon)-\epsilon=r\). Le complémentaire est ouvert.'
+  recto: 'Preuve : une boule fermée est fermée (Prop. 5)'
+  verso: 'Si \(\overline B(x,r)=X\), c''est immédiat. Sinon, soit \(y\in(\overline B(x,r))^c=\{z\in X / d(x,z) > r\}\). Posons \(\epsilon=d(x,y)-r > 0\).<br>Pour tout \(z\in B(y,\epsilon)\) : \(d(x,z)\ge d(x,y)-d(y,z) > (r+\epsilon)-\epsilon=r\). Donc \(B(y,\epsilon)\subset(\overline B(x,r))^c\), qui est ouvert : la boule fermée est fermée.<br>(le poly écrit \((r-\epsilon)-\epsilon\) : coquille, car \(d(x,y)=r+\epsilon\))'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 5'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
@@ -93,8 +93,8 @@
 
 - id: topo-a-005-1
   notion: topo-n-0015
-  recto: 'Dans un espace métrique, définir la distance \(d(A,B)\) entre deux parties \(A\) et \(B\).'
-  verso: 'Avec \(d(a,B)=\inf_{b\in B}d(a,b)\) : \(d(A,B)=\inf_{a\in A}d(a,B)=\inf_{(a,b)\in A\times B}d(a,b)\).'
+  recto: 'Déf : distance entre deux parties'
+  verso: 'Soient \((X,d)\) un espace métrique et \(A,B\in\mathcal P(X)\) non vides. On pose, pour tout \(a\in A\), \(d(a,B)=\inf_{b\in B}d(a,b)\) et \(d(A,B)=\inf_{a\in A}d(a,B)=\inf_{(a,b)\in A\times B}d(a,b)\).<br>(le poly écrit seulement \(A,B\in\mathcal P(X)\) ; il faut des parties non vides pour que ces bornes inférieures soient finies)'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 5'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -102,16 +102,16 @@
 
 - id: topo-a-006-1
   notion: topo-n-0019
-  recto: 'Caractériser l''intérieur \(\mathring A\) d''une partie \(A\) par une propriété de maximalité.'
-  verso: '\(\mathring A\) est le plus grand ouvert inclus dans \(A\) (réunion de tous les ouverts inclus dans \(A\)).'
+  recto: 'Prop. 7 (i) : intérieur, plus grand ouvert'
+  verso: 'Soit \((X,\tau)\) un espace topologique et \(A\in\mathcal P(X)\). \(\mathring A\) est le plus grand ouvert inclus dans \(A\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 6'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
   tags: [propriete]
 - id: topo-a-006-2
   notion: topo-n-0019
-  recto: 'Caractériser les parties ouvertes à l''aide de l''intérieur.'
-  verso: '\(A\) est ouverte si et seulement si \(A=\mathring A\).'
+  recto: 'Prop. 7 (ii) : ouvert et intérieur'
+  verso: 'Soit \((X,\tau)\) un espace topologique et \(A\in\mathcal P(X)\). \(A\) est ouvert si et seulement si \(A=\mathring A\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 6'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
@@ -119,16 +119,16 @@
 
 - id: topo-a-007-1
   notion: topo-n-0031
-  recto: 'Soit \((X,d)\) un espace métrique et \(Y\subset X\) non vide. Qu''appelle-t-on distance induite et sous-espace métrique ?'
-  verso: 'La restriction de \(d\) à \(Y\times Y\) est une distance sur \(Y\), dite distance induite ; \((Y,d_{Y\times Y})\) est un sous-espace métrique de \((X,d)\).'
+  recto: 'Prop. 14 : distance induite, sous-espace métrique'
+  verso: 'Soient \((X,d)\) un espace métrique et \(Y\in\mathcal P(X)\) une partie non vide. La restriction de \(d\) à \(Y\times Y\) est une distance sur \(Y\) appelée distance induite par \(d\). On dit que \((Y,d_{Y\times Y})\) est un sous-espace métrique de \((X,d)\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 9'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
   tags: [definition]
 - id: topo-a-007-2
   notion: topo-n-0031
-  recto: 'Dans le sous-espace métrique \((Y,d)\) de \((X,d)\), comment s''écrit la boule ouverte \(B_Y(x,r)\) de centre \(x\in Y\) ?'
-  verso: '\(B_Y(x,r)=\{y\in Y : d(x,y) < r\}=B(x,r)\cap Y\).'
+  recto: 'Preuve : boule d''un sous-espace métrique (Prop. 15)'
+  verso: 'Soient \((X,d)\) un espace métrique, \(Y\in\mathcal P(X)\) non vide, \(x\in Y\) et \(r_x > 0\). La boule de centre \(x\) et de rayon \(r_x\) dans \((Y,d)\) est \(B_Y(x,r_x)=\{y\in Y / d(x,y) < r_x\}=B(x,r_x)\cap Y\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 9'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
@@ -136,16 +136,16 @@
 
 - id: topo-a-008-1
   notion: topo-n-0034
-  recto: 'Définir : deux distances \(d\) et \(\delta\) sur \(X\) sont uniformément équivalentes.'
-  verso: 'Pour tout \(\epsilon > 0\) il existe \(\alpha > 0\) tel que pour tous \(x,y\in X\) : \(d(x,y) < \alpha\Rightarrow\delta(x,y) < \epsilon\) et \(\delta(x,y) < \alpha\Rightarrow d(x,y) < \epsilon\).'
+  recto: 'Déf : distances uniformément équivalentes'
+  verso: 'Soient \(d\) et \(\delta\) deux distances sur un même ensemble \(X\). On dit que \(d\) et \(\delta\) sont uniformément équivalentes si et seulement si, pour tout \(\epsilon > 0\), il existe \(\alpha > 0\) tel que, pour tous \(x,y\in X\),<br>\(d(x,y) < \alpha\Rightarrow\delta(x,y) < \epsilon\)<br>\(\delta(x,y) < \alpha\Rightarrow d(x,y) < \epsilon\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 11'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
   tags: [definition]
 - id: topo-a-008-2
   notion: topo-n-0034
-  recto: 'Quelle différence entre distances topologiquement équivalentes et uniformément équivalentes ?'
-  verso: 'Topologiquement : \(\forall x\,\forall\epsilon\,\exists\alpha\,\forall y\ldots\) (\(\alpha\) dépend de \(x\) et \(\epsilon\)). Uniformément : \(\forall\epsilon\,\exists\alpha\,\forall x,y\ldots\) (\(\alpha\) ne dépend que de \(\epsilon\)).'
+  recto: 'Déf : distances topologiquement équivalentes'
+  verso: 'Soient \(d\) et \(\delta\) deux distances sur un même ensemble \(X\). On dit que \(d\) et \(\delta\) sont topologiquement équivalentes si et seulement si, pour tous \(x\in X\) et \(\epsilon > 0\), il existe \(\alpha > 0\) tel que, pour tout \(y\in X\),<br>\(d(x,y) < \alpha\Rightarrow\delta(x,y) < \epsilon\)<br>\(\delta(x,y) < \alpha\Rightarrow d(x,y) < \epsilon\).<br>(différence avec l''équivalence uniforme : ici \(\alpha\) dépend de \(x\) et \(\epsilon\) ; là, \(\alpha\) ne dépend que de \(\epsilon\))'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 11'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -153,8 +153,8 @@
 
 - id: topo-a-009-1
   notion: topo-n-0036
-  recto: 'Quelles implications relient distances Lipschitz équivalentes, uniformément équivalentes et topologiquement équivalentes ?'
-  verso: 'Lipschitz équivalentes \(\Rightarrow\) uniformément équivalentes \(\Rightarrow\) topologiquement équivalentes.'
+  recto: 'Prop. 18 : équivalences Lipschitz, uniforme, topologique'
+  verso: 'Soient \(d\) et \(\delta\) deux distances sur un même ensemble \(X\).<br>Lipschitz équivalentes \(\Rightarrow\) uniformément équivalentes \(\Rightarrow\) topologiquement équivalentes.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 12'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -162,16 +162,16 @@
 
 - id: topo-a-010-1
   notion: topo-n-0038
-  recto: 'Sur un produit dénombrable \(X=\prod_{k=0}^{+\infty}X_k\) d''espaces métriques \((X_k,d_k)\), quelle distance utilise-t-on ?'
-  verso: '\(d(x,y)=\sum_{k=0}^{+\infty}2^{-k}\dfrac{d_k(x_k,y_k)}{1+d_k(x_k,y_k)}\) (série convergente car \(\sum_k 2^{-k}\) converge).'
+  recto: 'Prop. 19 : distance sur un produit dénombrable'
+  verso: 'Soient \(((X_k,d_k))_{k\in\mathbb N}\) une famille dénombrable d''espaces métriques et \(X=\prod_{k=0}^{+\infty}X_k\) l''ensemble produit. Posons \(d(x,y)=\sum_{k=0}^{+\infty}2^{-k}\dfrac{d_k(x_k,y_k)}{1+d_k(x_k,y_k)}\), \(\forall x,y\in X\). La fonction \(d\) est bien définie car la série \(\sum_k2^{-k}\) est convergente.<br>La fonction \(d\) est une distance sur l''espace produit \(X\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 13'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
   tags: [propriete]
 - id: topo-a-010-2
   notion: topo-n-0038
-  recto: 'Pourquoi ne peut-on pas définir la distance d''un produit dénombrable par \(\sum_k d_k(x_k,y_k)\) comme pour un produit fini ?'
-  verso: 'Cette série n''est pas convergente en général.'
+  recto: 'Rem. : pas de somme simple sur un produit dénombrable'
+  verso: 'On ne peut pas étendre directement la distance \(D(x,y)=\sum_{k=1}^nd_k(x_k,y_k)\) du produit fini à un produit dénombrable d''espaces métriques, car la série \(\sum_kd_k(x_k,y_k)\) n''est pas convergente, en général.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 11'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -179,8 +179,8 @@
 
 - id: topo-a-011-1
   notion: topo-n-0045
-  recto: 'Dans un espace métrique, caractériser une valeur d''adhérence \(x\) d''une suite \((u_n)\) à l''aide des suites extraites.'
-  verso: '\(x\) est valeur d''adhérence de \((u_n)\) si et seulement si \((u_n)\) possède une suite extraite qui converge vers \(x\).'
+  recto: 'Prop. 24 : valeur d''adhérence et suite extraite'
+  verso: 'Soit \((u_n)_{n\in\mathbb N}\) une suite d''un espace métrique \((X,d)\). Un point \(x\in X\) est valeur d''adhérence de la suite \((u_n)_{n\in\mathbb N}\) si et seulement si \((u_n)_{n\in\mathbb N}\) possède une suite extraite qui converge vers \(x\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 15'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -188,8 +188,8 @@
 
 - id: topo-a-012-1
   notion: topo-n-0046
-  recto: 'Dans un espace métrique, donner l''ensemble des valeurs d''adhérence d''une suite \((u_n)\) comme intersection.'
-  verso: 'C''est le fermé \(\bigcap_{n\in\mathbb N}\overline{\{u_m : m\ge n\}}\) (intersection des adhérences des queues de la suite).'
+  recto: 'Prop. 25 : ensemble des valeurs d''adhérence'
+  verso: 'Soit \((u_n)_{n\in\mathbb N}\) une suite d''un espace métrique \((X,d)\). L''ensemble des valeurs d''adhérence de la suite \((u_n)_{n\in\mathbb N}\) est le fermé \(\bigcap_{n\in\mathbb N}\overline{\{u_m / m\ge n\}}\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 15'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -197,8 +197,8 @@
 
 - id: topo-a-013-1
   notion: topo-n-0050
-  recto: 'Définir un homéomorphisme entre deux espaces métriques \((X,d)\) et \((Y,\delta)\).'
-  verso: 'Une bijection \(f:X\to Y\) continue dont la bijection réciproque est continue (bijection bicontinue). On dit alors que \(X\) et \(Y\) sont homéomorphes.'
+  recto: 'Déf : homéomorphisme'
+  verso: 'Soit \(f\) une application entre deux espaces métriques \((X,d)\) et \((Y,\delta)\). On dit que \(f\) est un homéomorphisme (ou un isomorphisme d''espace topologique) si et seulement si \(f\) est une bijection continue dont la bijection réciproque est continue (i.e. \(f\) est une bijection bi-continue). On dit alors que \((X,d)\) et \((Y,\delta)\) sont homéomorphes.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 17'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -206,16 +206,16 @@
 
 - id: topo-a-014-1
   notion: topo-n-0051
-  recto: 'Quelle chaîne d''implications relie isométrie, application lipschitzienne, uniformément continue et continue ?'
-  verso: 'Isométrie \(\Rightarrow\) lipschitzienne \(\Rightarrow\) uniformément continue \(\Rightarrow\) continue.'
+  recto: 'Rem. 1 : isométrie, lipschitzienne, uniformément continue, continue'
+  verso: 'Soit \(f\) une application entre deux espaces métriques \((X,d)\) et \((Y,\delta)\).<br>\(f\) est une isométrie \(\Rightarrow\) \(f\) est lipschitzienne \(\Rightarrow\) \(f\) est uniformément continue \(\Rightarrow\) \(f\) est continue.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 18'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
   tags: [propriete]
 - id: topo-a-014-2
   notion: topo-n-0051
-  recto: 'Qu''est-ce qu''une isométrie surjective entre espaces métriques ? Pourquoi ?'
-  verso: 'C''est un homéomorphisme : une isométrie est injective, donc surjective implique bijective, et \(\delta(y,y'')=d(f^{-1}(y),f^{-1}(y''))\) prouve que \(f^{-1}\) est continue.'
+  recto: 'Rem. 2 : une isométrie surjective est un homéomorphisme'
+  verso: 'Soit \(f:(X,d)\to(Y,\delta)\) une isométrie entre deux espaces métriques. Une isométrie surjective est un homéomorphisme. En effet, une isométrie est injective, donc une isométrie surjective est bijective. L''égalité \(\delta(f(x),f(x''))=d(x,x'')\), \(\forall x,x''\in X\), est alors équivalente à \(\delta(y,y'')=d(f^{-1}(y),f^{-1}(y''))\), \(\forall y,y''\in Y\), ce qui prouve que \(f^{-1}\) est continue.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 18'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -223,24 +223,24 @@
 
 - id: topo-a-015-1
   notion: topo-n-0052
-  recto: 'Caractériser « \(d\) et \(\delta\) topologiquement équivalentes » avec les applications identité.'
-  verso: 'Si et seulement si \(\mathrm{id}:(X,d)\to(X,\delta)\) et \(\mathrm{id}:(X,\delta)\to(X,d)\) sont continues.'
+  recto: 'Rem. 3 (i) : équivalence topologique et applications identité'
+  verso: 'Deux distances \(d\) et \(\delta\) sur un même ensemble \(X\) sont topologiquement équivalentes ssi les applications identité de \((X,d)\) dans \((X,\delta)\) et de \((X,\delta)\) dans \((X,d)\) sont continues.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 18'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
   tags: [propriete]
 - id: topo-a-015-2
   notion: topo-n-0052
-  recto: 'Caractériser « \(d\) et \(\delta\) uniformément équivalentes » avec les applications identité.'
-  verso: 'Si et seulement si \(\mathrm{id}:(X,d)\to(X,\delta)\) et \(\mathrm{id}:(X,\delta)\to(X,d)\) sont uniformément continues.'
+  recto: 'Rem. 3 (ii) : équivalence uniforme et applications identité'
+  verso: 'Deux distances \(d\) et \(\delta\) sur un même ensemble \(X\) sont uniformément équivalentes ssi les applications identité de \((X,d)\) dans \((X,\delta)\) et de \((X,\delta)\) dans \((X,d)\) sont uniformément continues.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 18'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
   tags: [propriete]
 - id: topo-a-015-3
   notion: topo-n-0052
-  recto: 'Caractériser « \(d\) et \(\delta\) Lipschitz équivalentes » avec les applications identité.'
-  verso: 'Si et seulement si \(\mathrm{id}:(X,d)\to(X,\delta)\) et \(\mathrm{id}:(X,\delta)\to(X,d)\) sont lipschitziennes.'
+  recto: 'Rem. 3 (iii) : équivalence Lipschitz et applications identité'
+  verso: 'Deux distances \(d\) et \(\delta\) sur un même ensemble \(X\) sont Lipschitz équivalentes ssi les applications identité de \((X,d)\) dans \((X,\delta)\) et de \((X,\delta)\) dans \((X,d)\) sont lipschitziennes.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 18'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -248,32 +248,32 @@
 
 - id: topo-a-016-1
   notion: topo-n-0058
-  recto: 'Définir une partie bornée \(A\) d''un espace métrique \((X,d)\).'
-  verso: 'Il existe \(M > 0\) tel que \(d(x,y)\le M\) pour tous \(x,y\in A\).'
+  recto: 'Déf : partie bornée'
+  verso: 'Soit \((X,d)\) un espace métrique. On dit qu''une partie \(A\in\mathcal P(X)\) est bornée s''il existe \(M > 0\) tel que \(d(x,y)\le M\), pour tous \(x,y\in A\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 2'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
   tags: [definition]
 - id: topo-a-016-2
   notion: topo-n-0058
-  recto: 'Définir le diamètre d''une partie bornée \(A\) d''un espace métrique.'
-  verso: '\(\operatorname{diam}(A)=\sup_{x,y\in A}d(x,y)\).'
+  recto: 'Déf : diamètre d''une partie bornée'
+  verso: 'Soit \(A\) une partie bornée d''un espace métrique \((X,d)\). On définit le diamètre de \(A\) en posant \(\operatorname{diam}(A)=\sup_{x,y\in A}d(x,y)\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 2'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
   tags: [definition]
 - id: topo-a-016-3
   notion: topo-n-0058
-  recto: 'Caractériser une partie bornée \(A\) avec une boule, pour \(x\in X\) fixé.'
-  verso: '\(A\) est bornée si et seulement s''il existe \(r > 0\) tel que \(A\subset B(x,r)\).'
+  recto: 'Rem. 1 : partie bornée et boule'
+  verso: 'Soient \((X,d)\) un espace métrique et \(x\in X\). On montre facilement que la partie \(A\) est bornée si et seulement si il existe \(r > 0\) tel que \(A\subset B(x,r)\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 2'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
   tags: [definition]
 - id: topo-a-016-4
   notion: topo-n-0058
-  recto: 'Comparer \(\operatorname{diam}(\mathring A)\), \(\operatorname{diam}(A)\) et \(\operatorname{diam}(\overline A)\).'
-  verso: '\(\operatorname{diam}(\mathring A)\le\operatorname{diam}(A)=\operatorname{diam}(\overline A)\) (le diamètre est croissant pour l''inclusion).'
+  recto: 'Rem. 2 : diamètre de l''intérieur et de l''adhérence'
+  verso: 'Dans un espace métrique, on vérifie que \(A\subset B\Rightarrow\operatorname{diam}(A)\le\operatorname{diam}(B)\). En particulier, \(\operatorname{diam}(\mathring A)\le\operatorname{diam}(A)=\operatorname{diam}(\overline A)\), avec la convention \(\operatorname{diam}(\emptyset)=0\).<br>(le poly ne donne pas cette convention, nécessaire si \(\mathring A=\emptyset\))'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 2'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -281,8 +281,8 @@
 
 - id: topo-a-017-1
   notion: topo-n-0061
-  recto: 'Un produit fini d''espaces métriques complets \((X_k,d_k)\), \(1\le k\le n\), est-il complet ? Pour quelle distance ?'
-  verso: 'Oui, pour \(D(x,y)=\sum_{k=1}^n d_k(x_k,y_k)\) (aussi pour \(D_p\), \(p\in[1,+\infty]\)). Donc \(\mathbb R^n\), \(\mathbb C\) et \(\mathbb C^n\) sont complets.'
+  recto: 'Prop. 32 : produit fini d''espaces complets'
+  verso: 'Soit \(((X_k,d_k))_{k=1}^n\) une famille finie d''espaces métriques complets. On note \(X=\prod_{k=1}^nX_k\) l''espace produit et \(D\) la distance définie par \(D(x,y)=\sum_{k=1}^nd_k(x_k,y_k)\), \(\forall x,y\in X\). L''espace métrique \((X,D)\) est alors complet.<br>Remarques : on montre de même que, pour tout \(p\in[1,+\infty]\), \((X,D_p)\) est complet ; on en déduit que \(\mathbb R^n\), \(\mathbb C\) et \(\mathbb C^n\) sont complets, pour tout \(n\in\mathbb N^*\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 3-4'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
@@ -290,16 +290,16 @@
 
 - id: topo-a-018-1
   notion: topo-n-0064
-  recto: 'Énoncer le théorème de prolongement des applications uniformément continues.'
-  verso: 'Soient \((X,d)\), \((Y,\delta)\) métriques, \(A\subset X\) dense, \(f:A\to Y\) uniformément continue, \(Y\) complet. Alors \(f\) a un unique prolongement continu à \(X\), lui-même uniformément continu.'
+  recto: 'Thm 1 : prolongement des applications uniformément continues'
+  verso: 'Soient \((X,d)\) et \((Y,\delta)\) deux espaces métriques, \(A\in\mathcal P(X)\) et \(f\) une application uniformément continue de \((A,d)\) dans \((Y,\delta)\). Si \(Y\) est complet et \(A\) est dense dans \(X\), alors \(f\) possède un unique prolongement continu sur \(X\). De plus, ce prolongement est uniformément continu.'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 5'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
   tags: [theoreme]
 - id: topo-a-018-2
   notion: topo-n-0064
-  recto: 'Dans le théorème de prolongement des applications uniformément continues, comment définit-on \(\tilde f(x)\) pour \(x\in X\) ?'
-  verso: 'Prendre \((u_n)\) dans \(A\) avec \(u_n\to x\) (\(A\) dense). \((u_n)\) est de Cauchy, donc \((f(u_n))\) aussi, donc converge (\(Y\) complet) : \(\tilde f(x)=\lim f(u_n)\), indépendante du choix de la suite.'
+  recto: 'Preuve : définition du prolongement \(\tilde f\) (Thm 1)'
+  verso: 'Soit \(x\in X\). Comme \(A\) est dense, il existe une suite \((u_n)\) de \(A\) avec \(u_n\to x\). Cette suite est de Cauchy, donc \((f(u_n))\) est de Cauchy dans \((Y,\delta)\) (\(f\) uniformément continue), donc converge vers un \(y\in Y\) complet.<br>Ce \(y\) ne dépend pas du choix de la suite (deux suites convergeant vers \(x\) ont des images de même limite). On pose \(\tilde f(x)=y\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 5'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
@@ -307,16 +307,16 @@
 
 - id: topo-a-019-1
   notion: topo-n-0066
-  recto: 'Soit \(f(x)=\sqrt{1+x^2}-1\) et \(M > 0\). \(f\) est-elle contractante sur \([-M,M]\) ? sur \(\mathbb R\) ?'
-  verso: 'Contractante sur \([-M,M]\) : \(|f''(x)|=\dfrac{|x|}{\sqrt{1+x^2}}\le\dfrac{M}{\sqrt{1+M^2}} < 1\), donc \(|f(x)-f(y)|\le\dfrac{M}{\sqrt{1+M^2}}|x-y|\) (accroissements finis). Pas contractante sur \(\mathbb R\).'
+  recto: 'Exemple : \(\sqrt{1+x^2}-1\) contractante sur \([-M,M]\)'
+  verso: 'Pour tout \(M > 0\), la fonction \(f:x\mapsto\sqrt{1+x^2}-1\) est contractante sur \([-M,M]\), mais ne l''est pas sur \(\mathbb R\). En effet, pour tout \(x\in[-M,M]\), on a \(|f''(x)|=\left|\dfrac{x}{\sqrt{1+x^2}}\right|\le\dfrac{M}{\sqrt{1+M^2}} < 1\). Donc, par l''inégalité des accroissements finis, \(|f(x)-f(y)|\le\dfrac{M}{\sqrt{1+M^2}}|x-y|\), \(\forall x,y\in[-M,M]\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 6'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
   tags: [exemple]
 - id: topo-a-019-2
   notion: topo-n-0066
-  recto: 'Pourquoi \(f(x)=\sqrt{1+x^2}-1\) n''est-elle pas contractante sur \(\mathbb R\) ?'
-  verso: 'Si \(C\) convenait : \(\left|\dfrac{f(x)-f(y)}{x-y}\right|\le C\). En faisant tendre \(y\to+\infty\), le quotient tend vers \(1\), d''où \(1\le C\) : aucun \(C < 1\) ne convient.'
+  recto: 'Exemple : \(\sqrt{1+x^2}-1\) non contractante sur \(\mathbb R\)'
+  verso: 'Soit \(f:x\mapsto\sqrt{1+x^2}-1\). Il n''existe pas de \(C < 1\) tel que \(|f(x)-f(y)|\le C|x-y|\), \(\forall x,y\in\mathbb R\). En effet, si une constante \(C\) vérifie cette inégalité, en faisant tendre \(y\) vers \(+\infty\) (\(x\) fixé) dans \(\left|\dfrac{f(x)-f(y)}{x-y}\right|\le C\), on obtient \(1\le C\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 6'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
@@ -324,32 +324,32 @@
 
 - id: topo-a-020-1
   notion: topo-n-0068
-  recto: 'Théorème de Picard : comment construit-on le point fixe d''une contraction \(f\) d''un espace complet \(X\) ?'
-  verso: 'Prendre \(u_0\in X\) et poser \(u_{n+1}=f(u_n)\) : la suite converge vers le point fixe (la preuve donne une méthode de calcul).'
+  recto: 'Thm 2 : point fixe de Picard'
+  verso: 'Toute application contractante d''un espace métrique complet non vide dans lui-même possède un unique point fixe.<br>Remarque du poly : la démonstration construit \(u_{n+1}=f(u_n)\) à partir d''un \(u_0\in X\) (méthode de point fixe) : le théorème dit que la solution existe, sa démonstration dit comment la calculer.<br>(le poly omet « non vide » : la preuve part d''un \(u_0\in X\), et sur \(X=\emptyset\) il n''y a pas de point fixe)'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
   tags: [methode]
 - id: topo-a-020-2
   notion: topo-n-0068
-  recto: 'Méthode de point fixe (\(f\) de rapport \(C < 1\)) : quelle estimation prouve que \((u_n)\), \(u_{n+1}=f(u_n)\), est de Cauchy ?'
-  verso: '\(d(u_{n+1},u_n)\le C^n d(u_1,u_0)\), d''où pour \(p > q\) : \(d(u_p,u_q)\le\sum_{n=q}^{p-1}C^n d(u_1,u_0)\le\dfrac{C^q}{1-C}d(u_1,u_0)\to 0\).'
+  recto: 'Preuve : la suite \((u_n)\) est de Cauchy (Thm 2)'
+  verso: 'Soit \(f:X\to X\) contractante de rapport \(C\in]0,1[\). Étant donné \(u_0\in X\), on pose \(u_{n+1}=f(u_n)\). Alors \(d(u_{n+1},u_n)\le C\,d(u_n,u_{n-1})\le\dots\le C^nd(u_1,u_0)\), puis pour \(p > q\) : \(d(u_p,u_q)\le\sum_{n=q}^{p-1}C^nd(u_1,u_0)\le\dfrac{C^q}{1-C}d(u_1,u_0)\).<br>Comme \(C^q\to0\), la suite \((u_n)\) est de Cauchy.'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
   tags: [methode]
 - id: topo-a-020-3
   notion: topo-n-0068
-  recto: 'Méthode de point fixe : pourquoi la limite \(a\) de \((u_n)\) est-elle un point fixe de \(f\) ?'
-  verso: '\(X\) complet donc \(u_n\to a\) ; \(f\) est continue, donc en passant à la limite dans \(u_{n+1}=f(u_n)\) : \(f(a)=a\).'
+  recto: 'Preuve : la limite est un point fixe (Thm 2)'
+  verso: 'La suite \((u_n)\) est de Cauchy et \(X\) est complet, donc il existe \(a\in X\) tel que \(u_n\to a\). Comme \(f\) est continue, en faisant tendre \(n\) vers \(+\infty\) dans l''identité \(f(u_n)=u_{n+1}\), on obtient \(f(a)=a\) : \(a\) est un point fixe de \(f\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
   tags: [methode]
 - id: topo-a-020-4
   notion: topo-n-0068
-  recto: 'Méthode de point fixe : comment prouver l''unicité du point fixe d''une contraction de rapport \(C < 1\) ?'
-  verso: 'Si \(f(a_1)=a_1\) et \(f(a_2)=a_2\) : \(d(a_1,a_2)=d(f(a_1),f(a_2))\le C\,d(a_1,a_2)\) avec \(C < 1\), donc \(d(a_1,a_2)=0\) et \(a_1=a_2\).'
+  recto: 'Preuve : unicité du point fixe (Thm 2)'
+  verso: 'Supposons que \(f\) possède deux points fixes \(a_1\) et \(a_2\). On a alors \(d(a_1,a_2)=d(f(a_1),f(a_2))\le C\,d(a_1,a_2)\) où \(C < 1\), ce qui conduit à \(d(a_1,a_2)=0\), i.e. \(a_1=a_2\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -357,8 +357,8 @@
 
 - id: topo-a-021-1
   notion: topo-n-0069
-  recto: 'Le théorème de point fixe reste-t-il vrai avec l''hypothèse \(|f(x)-f(y)| < |x-y|\) (\(x\neq y\)) à la place de « \(f\) contractante » ? Contre-exemple.'
-  verso: 'Non. \(f(x)=\sqrt{1+x^2}\) sur \(\mathbb R\) : \(|f''(x)|=\dfrac{|x|}{\sqrt{1+x^2}} < 1\) donc \(|f(x)-f(y)| < |x-y|\), mais \(f(a)=a\) donnerait \(1+a^2=a^2\) : aucun point fixe.'
+  recto: 'Rem. : Picard faux avec \(|f(x)-f(y)| < |x-y|\)'
+  verso: 'Dans le théorème de point fixe de Picard, on ne peut pas remplacer l''hypothèse « \(f\) est contractante » par « \(|f(x)-f(y)| < |x-y|\), \(\forall x,y\in X\), \(x\neq y\) ». En effet, considérons la fonction \(f:x\mapsto\sqrt{1+x^2}\). Elle vérifie l''inégalité \(|f(x)-f(y)| < |x-y|\) pour \(x\neq y\) car \(|f''(x)|=\dfrac{|x|}{\sqrt{1+x^2}} < 1\), \(\forall x\in\mathbb R\). Mais il n''existe pas de \(a\in\mathbb R\) tel que \(f(a)=a\) (élevée au carré, cette identité devient \(1+a^2=a^2\)).<br>(le poly écrit « \(\forall x,y\in X\) » : l''inégalité stricte est fausse pour \(x=y\))'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 2
@@ -366,8 +366,8 @@
 
 - id: topo-a-022-1
   notion: topo-n-0070
-  recto: 'Énoncer le théorème de Baire dans un espace métrique complet.'
-  verso: 'Dans un espace métrique complet \((X,d)\), toute intersection dénombrable d''ouverts denses est dense : si les \(O_n\) (\(n\in\mathbb N\)) sont des ouverts denses, \(\bigcap_n O_n\) est dense dans \(X\).'
+  recto: 'Thm 3 : théorème de Baire'
+  verso: 'Pour toute famille dénombrable \((O_n)_{n\in\mathbb N}\) d''ouverts denses dans un espace métrique complet \((X,d)\), l''ensemble \(\bigcap_{n\in\mathbb N}O_n\) est dense dans \(X\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 8'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -375,24 +375,24 @@
 
 - id: topo-a-023-1
   notion: topo-n-0071
-  recto: 'Démonstration de Baire (1) : que faut-il montrer et comment démarre-t-on ?'
-  verso: 'Montrer \(\left(\bigcap_n O_n\right)\cap V\neq\emptyset\) pour tout ouvert non vide \(V\). \(O_0\) dense donne \(u_0\in O_0\cap V\) ; cet ensemble est ouvert, donc il existe \(r_0 > 0\) avec \(\overline B(u_0,r_0)\subset O_0\cap V\).'
+  recto: 'Preuve : Baire, début de la construction (Thm 3)'
+  verso: 'Il s''agit de montrer \(\left(\bigcap_nO_n\right)\cap V\neq\emptyset\) pour tout ouvert \(V\). Comme \(O_0\) est dense, \(O_0\cap V\neq\emptyset\) ; soit \(u_0\in O_0\cap V\). Comme \(O_0\cap V\) est ouvert, il existe \(r_0 > 0\) tel que \(\overline B(u_0,r_0)\subset O_0\cap V\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 8'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
   tags: [demonstration]
 - id: topo-a-023-2
   notion: topo-n-0071
-  recto: 'Démonstration de Baire (2) : comment construit-on \(u_n\) et \(r_n\) à partir de \(u_{n-1}\) et \(r_{n-1}\) ?'
-  verso: '\(O_n\) dense donc \(O_n\cap B(u_{n-1},r_{n-1})\neq\emptyset\), et c''est un ouvert : choisir \(u_n\) dedans, puis \(r_n\in\,]0,\frac1n]\) avec \(\overline B(u_n,r_n)\subset O_n\cap B(u_{n-1},r_{n-1})\). Les boules fermées sont emboîtées.'
+  recto: 'Preuve : Baire, récurrence sur les boules (Thm 3)'
+  verso: 'Comme \(O_n\) est dense dans \(X\), \(O_n\cap B(u_{n-1},r_{n-1})\neq\emptyset\) et on peut choisir \(u_n\) dedans. Cet ensemble étant ouvert, on peut aussi choisir \(r_n\in]0,\frac1n]\) tel que \(\overline B(u_n,r_n)\subset O_n\cap B(u_{n-1},r_{n-1})\).<br>La suite \(\left(\overline B(u_n,r_n)\right)_n\) est ainsi décroissante.'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 8'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
   tags: [demonstration]
 - id: topo-a-023-3
   notion: topo-n-0071
-  recto: 'Démonstration de Baire (3) : comment conclut-on avec les boules fermées emboîtées \(\overline B(u_n,r_n)\) ?'
-  verso: '\(\operatorname{diam}\overline B(u_n,r_n)\le 2r_n\to 0\) et \(X\) est complet, donc \(\bigcap_n\overline B(u_n,r_n)\neq\emptyset\) (fermés emboîtés de diamètre tendant vers 0). Comme \(\overline B(u_n,r_n)\subset O_n\cap V\), un point de cette intersection est dans \(\left(\bigcap_n O_n\right)\cap V\).'
+  recto: 'Preuve : Baire, conclusion (Thm 3)'
+  verso: 'On a \(\operatorname{diam}\overline B(u_n,r_n)\le2r_n\to0\). \(X\) étant complet, la proposition 30 donne \(\bigcap_n\overline B(u_n,r_n)\neq\emptyset\). Comme \(\overline B(u_n,r_n)\subset O_n\cap V\), on en déduit \(\left(\bigcap_nO_n\right)\cap V=\bigcap_n(O_n\cap V)\neq\emptyset\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 8'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
@@ -400,16 +400,16 @@
 
 - id: topo-a-024-1
   notion: topo-n-0072
-  recto: 'Baire, version fermés : que dire d''une union dénombrable de fermés d''intérieur vide dans un espace métrique complet ?'
-  verso: 'Elle est d''intérieur vide : si les \(F_n\) sont des fermés d''intérieur vide, \(\left(\bigcup_n F_n\right)^\circ=\emptyset\).'
+  recto: 'Cor. 3 : union dénombrable de fermés d''intérieur vide'
+  verso: 'Pour toute famille dénombrable \((F_n)_{n\in\mathbb N}\) de fermés d''intérieur vide d''un espace métrique complet \((X,d)\), l''ensemble \(\bigcup_{n\in\mathbb N}F_n\) est d''intérieur vide.'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 9'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
   tags: [propriete]
 - id: topo-a-024-2
   notion: topo-n-0072
-  recto: 'Comment déduit-on du théorème de Baire qu''une union dénombrable de fermés d''intérieur vide est d''intérieur vide ?'
-  verso: 'Poser \(O_n=X\setminus F_n\). Comme \(\mathring F_n=\emptyset\), \(O_n\) est un ouvert dense. Baire : \(\bigcap_n O_n\) est dense ; son complémentaire \(\bigcup_n F_n\) est donc d''intérieur vide.'
+  recto: 'Preuve : Cor. 3 à partir de Baire'
+  verso: 'Pour tout \(n\in\mathbb N\), notons \(O_n\) le complémentaire de \(F_n\) dans \(X\). On a \(\overline{O_n}=(\mathring F_n)^c=\emptyset^c=X\). Donc \(O_n\) est un ouvert dense dans \(X\), et par le théorème de Baire \(\bigcap_nO_n\) est dense. En passant au complémentaire, \(\left(\bigcup_nF_n\right)^\circ=\emptyset\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 9'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -417,16 +417,16 @@
 
 - id: topo-a-025-1
   notion: topo-n-0073
-  recto: 'Baire : si un espace métrique complet non vide \(X\) est union dénombrable de fermés \(F_n\), que peut-on dire des \(F_n\) ?'
-  verso: 'Il existe \(n\) tel que \(\mathring F_n\neq\emptyset\) (l''un des fermés est d''intérieur non vide).'
+  recto: 'Cor. 4 : union dénombrable de fermés égale à \(X\)'
+  verso: 'Soit \((F_n)_{n\in\mathbb N}\) une famille dénombrable de fermés d''un espace métrique complet non vide \((X,d)\) telle que \(\bigcup_{n\in\mathbb N}F_n=X\). Il existe \(n\in\mathbb N\) tel que \(\mathring F_n\neq\emptyset\).<br>(le poly ne suppose pas \(X\neq\emptyset\) ; pour \(X=\emptyset\) la conclusion est fausse)'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 9'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
   tags: [propriete]
 - id: topo-a-025-2
   notion: topo-n-0073
-  recto: 'Comment démontre-t-on que, si \(X=\bigcup_n F_n\) avec \(X\) complet et \(F_n\) fermés, l''un des \(F_n\) est d''intérieur non vide ?'
-  verso: 'Par contraposée : si tous les \(\mathring F_n\) sont vides, \(\bigcup_n F_n\) est d''intérieur vide (version précédente de Baire) ; or \(\mathring X=X\neq\emptyset\), donc l''union ne vaut pas \(X\).'
+  recto: 'Preuve : Cor. 4 par contraposée'
+  verso: 'Par contraposée : si \(\mathring F_n=\emptyset\) pour tout \(n\), alors, par le corollaire précédent, \(\left(\bigcup_nF_n\right)^\circ=\emptyset\neq X=\mathring X\) (car \(X\neq\emptyset\)), donc \(\bigcup_nF_n\neq X\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 9'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -434,16 +434,16 @@
 
 - id: topo-a-026-1
   notion: topo-n-0074
-  recto: 'Définir un recouvrement d''un ensemble \(X\).'
-  verso: 'Une famille \((A_i)_{i\in I}\) de parties de \(X\) telle que \(X=\bigcup_{i\in I}A_i\).'
+  recto: 'Déf : recouvrement'
+  verso: 'Soit \(X\) un ensemble non vide. Une famille \((A_i)_{i\in I}\) de parties de \(X\) est appelée recouvrement de \(X\) si et seulement si \(X=\bigcup_{i\in I}A_i\).'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 1'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
   tags: [definition]
 - id: topo-a-026-2
   notion: topo-n-0074
-  recto: 'Définir un sous-recouvrement d''un recouvrement \((A_i)_{i\in I}\) de \(X\).'
-  verso: 'Une sous-famille \((A_i)_{i\in J}\) avec \(J\subset I\) et \(X=\bigcup_{i\in J}A_i\).'
+  recto: 'Déf : sous-recouvrement'
+  verso: 'Soit \((A_i)_{i\in I}\) un recouvrement de \(X\). Si \(J\subset I\) et \(X=\bigcup_{i\in J}A_i\), on dit que \((A_i)_{i\in J}\) est un sous-recouvrement de \((A_i)_{i\in I}\).'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 1'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
@@ -451,24 +451,24 @@
 
 - id: topo-a-027-1
   notion: topo-n-0076
-  recto: '\(\mathbb R\) usuel est-il compact ? Quel recouvrement le montre ?'
-  verso: 'Non : \(\mathbb R=\bigcup_{n\in\mathbb Z}]n-1,n+1[\) est un recouvrement ouvert dont on ne peut extraire aucun sous-recouvrement fini.'
+  recto: 'Exemple : \(\mathbb R\) n''est pas compact'
+  verso: '\(\mathbb R\) usuel n''est pas compact (\(\mathbb R=\bigcup_{n\in\mathbb Z}]n-1,n+1[\)).'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 1'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
   tags: [exemple]
 - id: topo-a-027-2
   notion: topo-n-0076
-  recto: 'Un espace métrique de cardinal fini est-il compact ?'
-  verso: 'Oui.'
+  recto: 'Exemple : espace métrique de cardinal fini'
+  verso: 'Un espace métrique de cardinal fini est compact.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 1'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
   tags: [exemple]
 - id: topo-a-027-3
   notion: topo-n-0076
-  recto: 'Un espace métrique discret est-il compact ?'
-  verso: 'Si et seulement s''il est de cardinal fini.'
+  recto: 'Exemple : espace métrique discret'
+  verso: 'Un espace métrique discret est compact si et seulement s''il est de cardinal fini (en exercice).'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 1'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
@@ -476,8 +476,8 @@
 
 - id: topo-a-028-1
   notion: topo-n-0078
-  recto: 'Soit \(A\) une partie d''un espace séparé \(X\). Caractériser la compacité de \(A\) avec des recouvrements par des ouverts de \(X\).'
-  verso: '\(A\) est compacte si et seulement si, pour toute famille \((U_i)_{i\in I}\) d''ouverts de \(X\) avec \(A\subset\bigcup_{i\in I}U_i\), il existe \(J\subset I\) fini tel que \(A\subset\bigcup_{i\in J}U_i\).'
+  recto: 'Prop. 34 : compacité d''une partie par des ouverts de \(X\)'
+  verso: 'Soient \((X,\tau)\) un espace topologique séparé et \(A\in\mathcal P(X)\). La partie \(A\) est un compact de \(X\) si et seulement si, pour toute famille \((U_i)_{i\in I}\) d''ouverts de \(X\) telle que \(A\subset\bigcup_{i\in I}U_i\), il existe \(J\subset I\) de cardinal fini tel que \(A\subset\bigcup_{i\in J}U_i\).'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 2'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
@@ -485,8 +485,8 @@
 
 - id: topo-a-029-1
   notion: topo-n-0079
-  recto: 'Caractériser la compacité d''un espace séparé \(X\) à l''aide des fermés.'
-  verso: '\(X\) est compact si et seulement si, pour toute famille \((F_i)_{i\in I}\) de fermés dont toute sous-famille finie a une intersection non vide, \(\bigcap_{i\in I}F_i\neq\emptyset\).'
+  recto: 'Prop. 35 : compacité et fermés'
+  verso: 'Un espace topologique séparé \((X,\tau)\) est compact si et seulement si, pour toute famille \((F_i)_{i\in I}\) de fermés de \(X\) telle que, pour tout \(J\subset I\) de cardinal fini, on a \(\bigcap_{i\in J}F_i\neq\emptyset\), l''intersection \(\bigcap_{i\in I}F_i\) est non vide.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 2'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
@@ -494,24 +494,24 @@
 
 - id: topo-a-030-1
   notion: topo-n-0080
-  recto: 'Que dire d''une partie compacte \(A\) d''un espace séparé \(X\) ?'
-  verso: '\(A\) est fermée dans \(X\).'
+  recto: 'Prop. 36 (1) : un compact d''un séparé est fermé'
+  verso: 'Soient \((X,\tau)\) un espace topologique séparé et \(A\in\mathcal P(X)\). Si \(A\) est compact, alors \(A\) est fermé dans \(X\).'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 2'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
   tags: [propriete]
 - id: topo-a-030-2
   notion: topo-n-0080
-  recto: 'Si \(X\) est un espace séparé compact, que dire d''une partie fermée \(A\) de \(X\) ? Comment le prouver ?'
-  verso: '\(A\) est compacte (donc dans un compact : compacte \(\Leftrightarrow\) fermée). Preuve : à un recouvrement ouvert de \(A\) ajouter l''ouvert \(A^c\) pour recouvrir \(X\), puis extraire un sous-recouvrement fini.'
+  recto: 'Prop. 36 (2) : fermé d''un compact'
+  verso: 'Soient \((X,\tau)\) un espace topologique séparé et \(A\in\mathcal P(X)\). Si de plus \(X\) est compact, alors \(A\) est compact si et seulement si \(A\) est fermé dans \(X\).'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 2-3'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
   tags: [propriete]
 - id: topo-a-030-3
   notion: topo-n-0080
-  recto: 'Comment démontre-t-on qu''une partie compacte \(A\) d''un espace séparé \(X\) est fermée ?'
-  verso: 'Pour \(x\notin A\) et \(y\in A\), séparer : ouverts disjoints \(U_y\ni y\), \(V_y\ni x\). Compacité : \(A\subset\bigcup_{k=1}^n U_{y_k}\). Alors \(V=\bigcap_{k=1}^n V_{y_k}\) est ouvert, contient \(x\) et \(V\cap A=\emptyset\) : \(A^c\) est ouvert.'
+  recto: 'Preuve : un compact d''un séparé est fermé (Prop. 36)'
+  verso: 'Soit \(x\in A^c\). Comme \(X\) est séparé, pour tout \(y\in A\), il existe \(U_y\) et \(V_y\) ouverts disjoints avec \(y\in U_y\), \(x\in V_y\). Par compacité de \(A\), \(A\subset\bigcup_{k=1}^nU_{y_k}\) pour des \(y_1,\dots,y_n\in A\).<br>Alors \(V=\bigcap_{k=1}^nV_{y_k}\) est un ouvert (intersection finie) qui contient \(x\), et \(V\cap A=\emptyset\), donc \(V\subset A^c\) : \(A^c\) est ouvert.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 2-3'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
@@ -519,16 +519,16 @@
 
 - id: topo-a-031-1
   notion: topo-n-0081
-  recto: 'Que dire d''une partie compacte d''un espace métrique ? La réciproque est-elle vraie ?'
-  verso: 'Elle est bornée (donc fermée et bornée). La réciproque est fausse en général.'
+  recto: 'Prop. 37 : un compact d''un métrique est borné'
+  verso: 'Toute partie compacte d''un espace métrique est bornée. En particulier, un espace métrique compact est borné. Un compact est donc fermé et borné, mais la réciproque est fausse, en général.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 3'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
   tags: [propriete]
 - id: topo-a-031-2
   notion: topo-n-0081
-  recto: 'Comment démontre-t-on qu''une partie compacte \(A\) d''un espace métrique \(X\) est bornée ?'
-  verso: 'Fixer \(x\in X\) : \(A\subset X=\bigcup_{n\ge 1}B(x,n)\). Borel-Lebesgue donne un sous-recouvrement fini, donc \(A\subset B(x,N)\) pour un \(N\).'
+  recto: 'Preuve : un compact d''un métrique est borné (Prop. 37)'
+  verso: 'Soient \(A\) une partie compacte et \(x\in X\). Comme \(A\subset X=\bigcup_{n\in\mathbb N^*}B(x,n)\), la propriété de Borel-Lebesgue donne \(J\subset\mathbb N\) fini tel que \(A\subset\bigcup_{n\in J}B(x,n)=B(x,\max(J))\). Donc \(A\) est bornée.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 3-4'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
@@ -536,16 +536,16 @@
 
 - id: topo-a-032-1
   notion: topo-n-0083
-  recto: 'Énoncer le lemme (théorème) de Lebesgue.'
-  verso: 'Si l''espace métrique \((X,d)\) vérifie la propriété de Bolzano-Weierstrass (toute suite a une valeur d''adhérence), alors pour tout recouvrement de \(X\) par des ouverts \((U_i)_{i\in I}\), il existe \(\epsilon > 0\) tel que pour tout \(x\in X\), il existe \(i\in I\) avec \(B(x,\epsilon)\subset U_i\).'
+  recto: 'Lemme 1 : théorème de Lebesgue'
+  verso: 'Si l''espace métrique \((X,d)\) satisfait la propriété de Bolzano-Weierstrass (toute suite de l''espace possède une valeur d''adhérence), alors, pour tout recouvrement de \(X\) par des ouverts \((U_i)_{i\in I}\), il existe \(\epsilon > 0\) tel que, pour tout \(x\in X\), il existe un \(i\in I\) pour lequel \(B(x,\epsilon)\subset U_i\).'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 4'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
   tags: [theoreme]
 - id: topo-a-032-2
   notion: topo-n-0083
-  recto: 'Comment démontre-t-on le lemme de Lebesgue ?'
-  verso: 'Par l''absurde : pour tout \(n\) il existe \(u_n\) avec \(B(u_n,\frac1n)\) dans aucun \(U_i\). Une valeur d''adhérence \(x\) de \((u_n)\), une sous-suite \(u_{\varphi(n)}\to x\), \(x\in U_i\), \(B(x,\epsilon)\subset U_i\) : pour \(N\) grand, \(B(u_{\varphi(N)},\frac1{\varphi(N)})\subset B(x,\epsilon)\subset U_i\), contradiction.'
+  recto: 'Preuve : lemme de Lebesgue (Lemme 1)'
+  verso: 'Par l''absurde : pour tout \(n\), il existe \(u_n\in X\) tel que, pour tout \(i\in I\), \(B(u_n,\frac1n)\not\subset U_i\). Par Bolzano-Weierstrass, \((u_n)\) a une valeur d''adhérence \(x\) et une sous-suite \((u_{\varphi(n)})\) converge vers \(x\). Il existe \(i\) avec \(x\in U_i\), puis \(\epsilon > 0\) avec \(B(x,\epsilon)\subset U_i\).<br>Pour \(N\) tel que \(\varphi(N) > \frac2\epsilon\) et \(d(u_{\varphi(N)},x) < \frac\epsilon2\), on a \(B(u_{\varphi(N)},\frac1{\varphi(N)})\subset B(x,\epsilon)\subset U_i\), contradiction.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 5'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
@@ -553,16 +553,16 @@
 
 - id: topo-a-033-1
   notion: topo-n-0085
-  recto: 'Que dire d''une suite d''un espace métrique compact ayant au plus une valeur d''adhérence ?'
-  verso: 'Elle converge (vers son unique valeur d''adhérence).'
+  recto: 'Cor. 5 : suite d''un compact avec au plus une valeur d''adhérence'
+  verso: 'Soient \((X,d)\) un espace métrique compact et \((u_n)_{n\in\mathbb N}\) une suite de \(X\). Si \((u_n)_{n\in\mathbb N}\) possède au plus une valeur d''adhérence, alors \((u_n)_{n\in\mathbb N}\) converge.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 6'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
   tags: [propriete]
 - id: topo-a-033-2
   notion: topo-n-0085
-  recto: 'Comment démontre-t-on qu''une suite d''un compact avec une unique valeur d''adhérence \(x\) converge vers \(x\) ?'
-  verso: 'Pour \(\epsilon > 0\), poser \(F_n=\overline{\{u_m : m\ge n\}}\setminus B(x,\epsilon)\) : fermés décroissants d''intersection \(\{x\}\setminus B(x,\epsilon)=\emptyset\). Par compacité (fermés), un \(F_N\) est vide : \(u_n\in B(x,\epsilon)\) pour \(n\ge N\).'
+  recto: 'Preuve : Cor. 5'
+  verso: 'La suite possède au moins une valeur d''adhérence par compacité, donc une unique, notée \(x\). Pour \(\epsilon > 0\), on définit les fermés \(F_n=\overline{\{u_m / m\ge n\}}\cap(B(x,\epsilon))^c\). Par la Prop. 25, \(\bigcap_nF_n=\emptyset\).<br>Par la Prop. 35, \(F_N=\emptyset\) pour un \(N\) (la suite des \(F_n\) est décroissante). Ainsi \(u_n\in B(x,\epsilon)\) pour tout \(n\ge N\) : la suite tend vers \(x\).'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 6'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
@@ -570,24 +570,24 @@
 
 - id: topo-a-034-1
   notion: topo-n-0086
-  recto: 'Un espace métrique compact est-il complet ?'
-  verso: 'Oui, tout espace métrique compact est complet.'
+  recto: 'Cor. 6 : un compact métrique est complet'
+  verso: 'Un espace métrique compact est complet.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 7'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
   tags: [propriete]
 - id: topo-a-034-2
   notion: topo-n-0086
-  recto: 'Comment démontre-t-on qu''un espace métrique compact est complet ?'
-  verso: 'Une suite de Cauchy d''un compact a une valeur d''adhérence (Bolzano-Weierstrass), et une suite de Cauchy ayant une valeur d''adhérence converge.'
+  recto: 'Preuve : Cor. 6'
+  verso: 'Soit \((u_n)_{n\in\mathbb N}\) une suite de Cauchy de l''espace métrique compact \((X,d)\). Cet espace étant compact, la suite possède une valeur d''adhérence. Comme la suite est de Cauchy, elle est alors convergente.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 7'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
   tags: [propriete]
 - id: topo-a-034-3
   notion: topo-n-0086
-  recto: 'Un espace métrique complet est-il compact ? Contre-exemple.'
-  verso: 'Non : \(\mathbb R\) usuel est complet mais n''est pas compact (ni même borné).'
+  recto: 'Exemple : complet non compact'
+  verso: 'La réciproque du Cor. 6 est fausse. Par exemple, \(\mathbb R\) usuel est complet, mais n''est pas compact (ni même borné).'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 7'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
@@ -595,16 +595,16 @@
 
 - id: topo-a-035-1
   notion: topo-n-0088
-  recto: 'Sur \(\mathbb R\), avec \(d(x,y)=\dfrac{|x-y|}{1+|x-y|}\), l''espace \((\mathbb R,d)\) est-il fermé borné ? compact ? Que montre cet exemple sur « borné » ?'
-  verso: 'Fermé et borné (\(\operatorname{diam}(\mathbb R)=1\)) mais pas compact : la suite \((n)\) n''a pas de valeur d''adhérence. \(d\) est topologiquement équivalente à la distance usuelle : « borné » est une propriété métrique, pas topologique.'
+  recto: 'Rem. 1 : Prop. 38 fausse pour une autre distance sur \(\mathbb R\)'
+  verso: 'La Prop. 38 (les compacts de \(\mathbb R\) usuel sont les parties fermées et bornées de \(\mathbb R\)) n''est pas vraie pour toutes les distances sur \(\mathbb R\). Par exemple, si \(d:(x,y)\mapsto\dfrac{|x-y|}{1+|x-y|}\), alors \((\mathbb R,d)\) est fermé et borné (car \(\operatorname{diam}(\mathbb R)=1\)), mais la suite \((n)_{n\in\mathbb N}\) n''a pas de valeur d''adhérence. La distance \(d\) est pourtant topologiquement équivalente à la distance usuelle sur \(\mathbb R\). Mais la bornitude n''est pas une propriété topologique, c''est une propriété métrique.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 8'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
   tags: [exemple]
 - id: topo-a-035-2
   notion: topo-n-0088
-  recto: 'L''espace \(]0,1[\) (distance usuelle) est-il compact ? Qu''illustre-t-il sur « fermé borné » ?'
-  verso: 'Non : \(]0,1[\) est fermé et borné dans lui-même, mais la suite \((\frac1n)\) n''y a pas de valeur d''adhérence.'
+  recto: 'Rem. 2 : Prop. 38 fausse pour une partie de \(\mathbb R\)'
+  verso: 'La Prop. 38 n''est pas vraie, non plus, pour toute partie de \(\mathbb R\) usuel. Par exemple, \(]0,1[\) est fermé et borné dans \(]0,1[\), mais la suite \((\frac1n)_n\) n''a pas de valeur d''adhérence.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 8'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
@@ -612,16 +612,16 @@
 
 - id: topo-a-036-1
   notion: topo-n-0094
-  recto: 'Que dire d''une bijection continue \(f:X\to Y\) entre espaces métriques avec \(X\) compact ?'
-  verso: '\(f\) est un homéomorphisme (sa réciproque est continue).'
+  recto: 'Prop. 40 : bijection continue sur un compact'
+  verso: 'Soit \(f:X\to Y\) une application continue et bijective entre deux espaces métriques. Si \(X\) est compact, alors \(f\) est un homéomorphisme.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 11'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 3
   tags: [propriete]
 - id: topo-a-036-2
   notion: topo-n-0094
-  recto: 'Comment démontre-t-on qu''une bijection continue \(f:X\to Y\) avec \(X\) compact est bicontinue ?'
-  verso: '\(f^{-1}\) continue revient à : \(f(F)\) fermé pour tout fermé \(F\) de \(X\). Or \(F\) fermé dans le compact \(X\) est compact, \(f(F)\) est compact (image continue), donc fermé.'
+  recto: 'Preuve : Prop. 40'
+  verso: 'Il suffit de montrer que \(f^{-1}\) est continue, c''est-à-dire que \(f(F)\) est fermé pour tout fermé \(F\) de \(X\). Comme \(X\) est compact et \(F\) fermé, \(F\) est compact. Son image \(f(F)\) par l''application continue \(f\) est donc compacte, et ainsi fermée.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 11'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 3
@@ -661,7 +661,7 @@
 - id: topo-e001
   notion: topo-n-0006
   recto: 'Définir un espace topologique séparé, avec les quantificateurs. Pourquoi « il existe deux ouverts disjoints » seul ne suffit-il pas ?'
-  verso: '\((X,\tau)\) est séparé si \(\forall x\neq y\), \(\exists U,V\in\tau\) avec \(x\in U\), \(y\in V\), \(U\cap V=\emptyset\). Sans « \(\forall x\neq y\) » ni \(x\in U\), \(y\in V\), le choix \(U=V=\emptyset\) rendrait la condition toujours vraie. Conséquence : si \(x_n\to x\) et \(x_n\to y\), alors \(x_n\in U\cap V=\emptyset\) pour \(n\) grand : donc \(x=y\).'
+  verso: '\((X,\tau)\) est séparé si \(\forall x\neq y\), \(\exists U,V\in\tau\) avec \(x\in U\), \(y\in V\), \(U\cap V=\emptyset\). Sans « \(\forall x\neq y\) » ni \(x\in U\), \(y\in V\), le choix \(U=V=\emptyset\) rendrait la condition toujours vraie. Conséquence (unicité de la limite) : si \(x_n\to x\), \(x_n\to y\) et \(x\neq y\), on prend \(U\ni x\), \(V\ni y\) ouverts disjoints ; alors \(x_n\in U\cap V=\emptyset\) pour \(n\) grand, absurde. Donc \(x=y\).'
   source: 'Poly de topologie chap. 1, déf. 3 p. 3 ; séance 2026-11-04 (question 4 du debrief)'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
@@ -669,7 +669,7 @@
 - id: topo-e002
   notion: topo-n-0005
   recto: 'Une réunion infinie de fermés est-elle fermée ? Que dire de \(A=[1,2]\cup\bigcup_{n\ge1}\{1/n\}\) dans \(\mathbb R\) ?'
-  verso: 'Non en général : seule la réunion **finie** de fermés est fermée (l''intersection quelconque l''est). Ici chaque \(\{1/n\}\) et \([1,2]\) sont fermés, mais \(0\notin A\) est limite des \(1/n\in A\) : \(A\) n''est pas fermé (ni ouvert). Avec \(0\) ajouté, \(A\cup\{0\}\) est fermé.'
+  verso: 'Non en général : une réunion **finie** de fermés est fermée, mais pas forcément une réunion infinie (une intersection quelconque de fermés, elle, est fermée). Ici chaque \(\{1/n\}\) et \([1,2]\) sont fermés, mais \(0\notin A\) est limite des \(1/n\in A\) : \(A\) n''est pas fermé (ni ouvert). Avec \(0\) ajouté, \(A\cup\{0\}\) est fermé.'
   source: 'topo-td1-ex04, cas 6 ; séance 2026-11-04'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1

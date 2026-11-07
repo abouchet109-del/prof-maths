@@ -15,12 +15,19 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 - **Corrigés** : `officiel` d'abord (ouvrir le PDF à la page de `corrige.ref`). Sinon, une solution rédigée par Claude porte la mention « vérifiée par Claude, à confirmer », avec les étapes douteuses signalées. Un corrigé officiel peut être faux : le dire s'il l'est.
 - Énoncé `null` ou `qualite_extraction` différent de `ok` : lire la page du PDF (`bibliotheque/`, rendu image avec `tools/rendre_page.py`) au lieu de reconstituer l'énoncé.
 
+## Cartes Anki
+- **Format d'une carte de cours :**
+  - recto `Déf : <nom>` ou `Prop. <n°> : <nom>` (de même pour `Thm`, `Lemme`, `Cor.`, `Preuve`) ;
+  - verso = l'énoncé du poly recopié fidèlement, avec cadre et hypothèses.
+- **Cartes d'erreurs :** une question précise. Détail : `docs/FORMATS.md`.
+- **Corriger une carte déjà importée :** la modifier dans `cartes.yaml`, puis lancer `python -I tools/anki.py --reexporter <ids>`. Même GUID, donc Anki met la note à jour sans toucher à la progression.
+
 ## Données et sécurité
 - `bibliotheque/`, `anki/paquets/`, `anki/export/`, `inventaire/anki/`, `inventaire/trackers/` restent hors du dépôt (données personnelles et PDF).
 - Les statuts et remarques des tableurs UVSQ sont ceux d'un ami : ils ne comptent jamais dans le profil.
 - Ne jamais modifier le dépôt de l'archi ML (`D:\Projets\test-Gith`) : on copie seulement.
 - Tout sur D: (venv `.venv` du projet, cache pip `D:\Tools\pip-cache`).
-- Anki : une carte exportée (`anki/registre.csv`) n'est jamais réexportée ni modifiée ici ; Anki en est maître. Ne jamais changer `MODEL_ID`, `MODEL_NAME` ni `GUID_NAMESPACE` d'`anki.py`.
+- Anki : une carte déjà exportée (`anki/registre.csv`) peut être corrigée ; l'utilisateur l'a demandé le 07/11/2026. Pour cela : `cartes.yaml`, puis `--reexporter`, voir « Cartes Anki ». Ne jamais changer `MODEL_ID`, `MODEL_NAME` ni `GUID_NAMESPACE` d'`anki.py`, ni l'`id` d'une carte : la mise à jour dans Anki repose sur eux.
 
 ## Commandes
 - Plan du jour : `python tools/plan.py jour [--date AAAA-MM-JJ]` → `NOW.md`.
