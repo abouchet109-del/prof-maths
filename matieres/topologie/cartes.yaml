@@ -682,3 +682,11 @@
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
   tags: [erreur]
+- id: topo-e004
+  notion: topo-n-0018
+  recto: 'Quel est l''intérieur de \(\mathbb Q\) dans \(\mathbb R\) ? Pourquoi \(\{0\}\) n''est-il pas ouvert dans \(\mathbb R\) ?'
+  verso: '\(x\in\mathring A\iff\exists r>0,\ B(x,r)\subset A\) : c''est la **boule entière** qui doit être dans \(A\), pas seulement son centre. Toute boule \(]x-r,x+r[\) de \(\mathbb R\) contient un irrationnel (\(\mathbb R\setminus\mathbb Q\) est dense), donc n''est jamais incluse dans \(\mathbb Q\) : \(\mathring{\mathbb Q}=\emptyset\) (et \(\mathbb Q\) n''est pas ouvert). De même \(]-\lambda,\lambda[\ni\lambda/2\neq0\) n''est jamais inclus dans \(\{0\}\) : \(\{0\}\) est fermé mais pas ouvert dans \(\mathbb R\) (il l''est pour la distance discrète).'
+  source: 'topo-td1-ex06 Q1 ; cours séance 2026-11-07'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [erreur]

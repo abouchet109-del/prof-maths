@@ -1,3 +1,4 @@
 # Cartes existantes à revoir, ajoutées par le debrief (lu par tools/plan.py).
 # Une entrée : {pour: AAAA-MM-JJ, nid: <note Anki ancienne> | id: <carte cartes.yaml>, raison: "..."}
-[]
+- {pour: 2026-11-09, id: topo-e001, raison: "séparé : oubli de ∀x≠y et de l'argument d'unicité de la limite (07/11, Q1)"}
+- {pour: 2026-11-09, id: topo-e003, raison: "ouvert/fermé dépendent de l'espace ambiant : cas 5 de topo-td1-ex04 mal justifié (07/11)"}

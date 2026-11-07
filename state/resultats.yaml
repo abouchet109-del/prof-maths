@@ -28,3 +28,28 @@
   resultat: presque
   palier_aide: 4
   note: Q1 reunion denombrable non redigee, Q2 non traitee ; preuve equivalente donnee plus tot (Prop 1.3 pt 5)
+- date: 2026-11-07
+  exercice: topo-td1-ex04
+  resultat: presque
+  palier_aide: 2
+  note: cas 1,2,4 ok ; 3 faux (ferme) ; 5 ouvert dans [-1,1] mal justifie ; 6-7 idee ok (0 limite de 1/n), redaction non faite ; 8-9 rayon du ferme non trouve ; 10-11 non faits
+- date: 2026-11-07
+  exercice: pro-par2425-ex02
+  resultat: aide
+  palier_aide: 1
+  note: Q1 ok ; Q2 oubli X=0 (proba nulle) ; discriminant faux puis corrige apres signalement ; Q3 loi exp(3) donnee sans calcul ecrit ; Q4 non redige jusqu'au nombre final
+- date: 2026-11-07
+  exercice: mes-cc1-2324-ex02
+  resultat: aide
+  palier_aide: 2
+  note: teste h^-1(R) au lieu d'un borelien B ; decoupage en deux morceaux donne (palier 2) ; redaction non verifiee
+- date: 2026-11-07
+  exercice: topo-td1-ex06
+  resultat: presque
+  palier_aide: 1
+  note: 'Q1 : n''a pas pense a la densite des irrationnels, a conclu Q ouvert ; Q2 ok (Å = disque pointe ouvert) apres autocorrection ; Q3 Q4 non faits (epuisement)'
+- date: 2026-11-07
+  exercice: pro-td1-ex06
+  resultat: non_fait
+  palier_aide: 0
+  note: non commence (fatigue)

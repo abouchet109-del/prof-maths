@@ -419,3 +419,11 @@
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [erreur]
+- id: mesure-e003
+  notion: mesure-n-0014
+  recto: 'Pour montrer qu''une fonction \(h:(X,\mathcal T)\to\mathbb R\) est mesurable, quelle image réciproque faut-il contrôler ? Pourquoi \(h^{-1}(\mathbb R)\) ne suffit-il pas ? Que vaut \(h^{-1}(B)\) si \(h=f\) sur \(A\) et \(h=g\) sur \(A^c\) ?'
+  verso: 'Il faut \(h^{-1}(B)\in\mathcal T\) pour **tout** borélien \(B\) (ou pour une famille qui engendre \(\mathcal B(\mathbb R)\), comme les \(]a,+\infty[\)). \(h^{-1}(\mathbb R)=X\in\mathcal T\) pour n''importe quelle fonction : cela ne dit rien. Pour la fonction par morceaux : \(h^{-1}(B)=(A\cap f^{-1}(B))\cup(A^c\cap g^{-1}(B))\), élément de \(\mathcal T\) par stabilité de la tribu par complémentaire, intersection et réunion (finies).'
+  source: 'mes-cc1-2324-ex02 ; séance 2026-11-07'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [erreur]

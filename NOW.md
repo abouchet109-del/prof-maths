@@ -1,31 +1,47 @@
-# NOW — jeu. 2026-11-05 (normal)
+# NOW — lun. 2026-11-09 (normal)
 
-## Exercices (120/120 min)
-- [ ] `topo-td1-ex04` reprise · Ouvert et/ou fermé : onze exemples · 35 min · topologie/td/td1.pdf p.1 (Ex 4)
-- [ ] `pro-par2425-ex02` annale 2024-25 · Densité 3x^2, A=-log X et polynôme aléatoire · 30 min · proba/annales/partiel-2024-25.pdf p.1 (Ex 2)
-- [ ] `mes-cc1-2324-ex02` nouveau · Mesurabilité d'une fonction définie par morceaux · 20 min · uvsq/mesure/Théorie de la mesure/Annales/CC1-2023-2024.pdf p.1 (Ex 2)
-- [ ] `topo-td1-ex06` nouveau · Intérieur : Q, disque pointé, graphe · 25 min · topologie/td/td1.pdf p.1 (Ex 6)
-- [ ] `pro-td1-ex06` nouveau · Strikes au bowling (loi binomiale) · 10 min · proba/td/td1.pdf p.2 (Ex 6)
+Bloc du jour : Topologie — Chapitre 1 - Espace métrique > 1.3 Espace métrique (vitaux acquis 0/1)
+
+## Exercices (115/120 min)
+### Reprises (25 min)
+- [ ] `mes-td2-ex01` Tribu engendrée par une partie · 15 min · mesure/td/td2-corrige.pdf p.1 (Ex 1)
+- [ ] `mes-cc1-2425-ex03` Intersection dénombrable de tribus · 10 min · uvsq/mesure/Théorie de la mesure/Annales/CC1-2024-2025.pdf p.2 (Ex 3)
+### Bloc (90 min)
+- [ ] `topo-td1-ex08` Métrique discrète · 20 min · topologie/td/td1.pdf p.2 (Ex 8)
+- [ ] `topo-td1-ex09` Deux fermés disjoints à distance nulle · 15 min · topologie/td/td1.pdf p.2 (Ex 9)
+- [ ] `topo-uvsq-td1-ex03q1` N(f)=||fg|| est une norme : CNS sur g · 15 min · uvsq/topologie/Topologie/TD1_Topologie.pdf p.2 (Ex 3.1)
+- [ ] `topo-uvsq-td2-ex01q1` X+Y ouvert si X ouvert · 10 min · uvsq/topologie/Topologie/TD2.pdf p.1 (Ex 1.1)
+- [ ] `topo-td1-ex07` Adhérence dans les trois premiers exemples de l'exercice 6 · 15 min · topologie/td/td1.pdf p.2 (Ex 7)
+- [ ] `topo-td1-ex13` A ∪ int(A^c) est dense · 15 min · topologie/td/td1.pdf p.2 (Ex 13)
 
 ## Cours (30 min)
-- `topo-n-0012` Topologie associée à une distance · topologie/cours/chap1-espaces-metriques.pdf p.4
-- `topo-n-0004` Partie fermée · topologie/cours/chap1-espaces-metriques.pdf p.2
-- `topo-n-0043` Caractérisation séquentielle de l'adhérence et de… · topologie/cours/chap1-espaces-metriques.pdf p.14
+- `topo-n-0008` Distance, espace métrique · topologie/cours/chap1-espaces-metriques.pdf p.3
+- `topo-n-0011` Boule ouverte, boule fermée, sphère · topologie/cours/chap1-espaces-metriques.pdf p.4
+- `topo-n-0007` Topologies grossière et discrète (séparé ou non) · topologie/cours/chap1-espaces-metriques.pdf p.3
 
 ## Anki — tout le sujet du jour
 ```
-(nid:1669836487205,1672849761043,1675963557629,1675963704354,1676045679161,1678378547807,1770140867658,1772647483015,1786373238661,1786373250163,1786373423320,1786373447636,1786441932447,1786442311898,1786448433279,1786448482473,1786467355412,1786484059886,1786484077090 or "Id:topo-a-006-1" or "Id:topo-a-006-2" or "Id:topo-e003" or "Id:mesure-a-005-1" or "Id:proba-a-005-1" or "Id:proba-a-005-2" or "Id:proba-a-005-3" or "Id:proba-a-021-1" or "Id:proba-a-021-2" or "Id:proba-a-021-3")
+(nid:1770140867658,1770141239338,1772647483015,1786372853926,1786372952836,1786448354098,1786448482473,1786448736462,1786448903783,1786448927718,1786458087545,1786466066522,1786467336208,1786467355412,1786526255846 or "Id:topo-a-001-1" or "Id:topo-a-001-2" or "Id:topo-a-001-3" or "Id:topo-a-001-4" or "Id:topo-a-005-1" or "Id:mesure-e002")
 ```
 Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes selon mes réponses” pour réviser sans perturber le planning Anki.
 
-## Anki — à apprendre (12 nouvelles)
+## Anki — à apprendre (20 nouvelles)
 ```
-"Id:topo-a-006-1" or "Id:topo-a-006-2" or "Id:topo-e003" or "Id:mesure-a-005-1" or "Id:proba-a-005-1" or "Id:proba-a-005-2" or "Id:proba-a-005-3" or "Id:proba-a-021-1" or "Id:proba-a-021-2" or "Id:proba-a-021-3" or "Id:mesure-e002" or "Id:topo-a-002-1"
+"Id:topo-e001" or "Id:topo-e002" or "Id:topo-e004" or "Id:mesure-e001" or "Id:mesure-e003" or "Id:topo-a-001-1" or "Id:topo-a-001-2" or "Id:topo-a-001-3" or "Id:topo-a-001-4" or "Id:topo-a-003-1" or "Id:topo-a-003-2" or "Id:topo-a-003-3" or "Id:topo-a-005-1" or "Id:topo-a-016-1" or "Id:topo-a-016-2" or "Id:topo-a-016-3" or "Id:topo-a-016-4" or "Id:topo-a-007-1" or "Id:topo-a-007-2" or "Id:topo-a-010-1"
 ```
 
 ## Anki — à réviser
 - Toutes les cartes dues : `is:due`
+- Déjà données, liées aux exercices du jour (1) : `"Id:mesure-e002"`
+- Cartes existantes à revoir, signalées au debrief (paquet filtré, “replanifier” **coché**) :
+```
+("Id:topo-e001" or "Id:topo-e003")
+```
 
 ## Échéance
-- Restant : 6975 min (annales 1985, vital 2865, important 2125) ; capacité jusqu'au 2027-01-03 : 8400 min ; marge : 1425 min.
+- Restant : 6975 min ; capacité jusqu'au 2027-01-03 : 8160 min ; marge : 1185 min.
+- topologie : 2410 min (annales 965, vital 830, important 615)
+- mesure : 1625 min (annales 0, vital 910, important 715)
+- modelisation : 1020 min (annales 490, vital 355, important 175)
+- proba : 1920 min (annales 530, vital 770, important 620)
 - Examens : semaine du 2027-01-04 (dates à confirmer).
