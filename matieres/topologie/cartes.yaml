@@ -10,7 +10,7 @@
 - id: topo-a-001-2
   notion: topo-n-0007
   recto: 'Exemple : \((X,\mathcal P(X))\) est séparé'
-  verso: '\((X,\mathcal P(X))\) est un espace topologique séparé (prendre \(U=\{x\}\) et \(V=\{y\}\)).'
+  verso: 'Soit \(X\) un ensemble non vide ; \(x\neq y\) sont deux points de \(X\). \((X,\mathcal P(X))\) est un espace topologique séparé (prendre \(U=\{x\}\) et \(V=\{y\}\)).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -18,7 +18,7 @@
 - id: topo-a-001-3
   notion: topo-n-0007
   recto: 'Exemple : \((X,\{\emptyset,X\})\) n''est pas séparé'
-  verso: '\((X,\{\emptyset,X\})\) n''est pas séparé (le seul ouvert contenant \(x\) ou \(y\) est \(X\)).'
+  verso: 'Soit \(X\) un ensemble non vide ; \(x\neq y\) sont deux points de \(X\). \((X,\{\emptyset,X\})\) n''est pas séparé (le seul ouvert contenant \(x\) ou \(y\) est \(X\)).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -44,7 +44,7 @@
 - id: topo-a-003-1
   notion: topo-n-0010
   recto: 'Exemple : distance \(d_\infty\)'
-  verso: '\(d_\infty:(x,y)\mapsto\max_{k\in\{1,\dots,n\}}|x_k-y_k|\) est une distance sur \(\mathbb R^n\).'
+  verso: 'Soit \(n\in\mathbb N^*\). \(d_\infty:(x,y)\mapsto\max_{k\in\{1,\dots,n\}}|x_k-y_k|\) est une distance sur \(\mathbb R^n\).'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -52,7 +52,7 @@
 - id: topo-a-003-2
   notion: topo-n-0010
   recto: 'Exemple : distances \(d_p\)'
-  verso: 'Pour tout \(p\in[1,+\infty[\), \(d_p:(x,y)\mapsto\left(\sum_{k=1}^n|x_k-y_k|^p\right)^{1/p}\) est une distance sur \(\mathbb R^n\). En particulier, \(d_2\) est la distance euclidienne.'
+  verso: 'Soit \(n\in\mathbb N^*\). Pour tout \(p\in[1,+\infty[\), \(d_p:(x,y)\mapsto\left(\sum_{k=1}^n|x_k-y_k|^p\right)^{1/p}\) est une distance sur \(\mathbb R^n\). En particulier, \(d_2\) est la distance euclidienne.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -77,7 +77,7 @@
 - id: topo-a-004-2
   notion: topo-n-0014
   recto: 'Preuve : une boule ouverte est ouverte (Prop. 5)'
-  verso: 'Soit \(y\in B(x,r)\), donc \(d(x,y) < r\). Posons \(\epsilon=r-d(x,y) > 0\).<br>Pour tout \(z\in B(y,\epsilon)\) : \(d(x,z)\le d(x,y)+d(y,z) < (r-\epsilon)+\epsilon=r\).<br>Donc \(B(y,\epsilon)\subset B(x,r)\) et la boule \(B(x,r)\) est ouverte.'
+  verso: 'Soit \((X,d)\) un espace métrique, \(x\in X\) et \(r > 0\). Soit \(y\in B(x,r)\), donc \(d(x,y) < r\). Posons \(\epsilon=r-d(x,y) > 0\).<br>Pour tout \(z\in B(y,\epsilon)\) : \(d(x,z)\le d(x,y)+d(y,z) < (r-\epsilon)+\epsilon=r\).<br>Donc \(B(y,\epsilon)\subset B(x,r)\) et la boule \(B(x,r)\) est ouverte.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 5'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
@@ -85,7 +85,7 @@
 - id: topo-a-004-3
   notion: topo-n-0014
   recto: 'Preuve : une boule fermée est fermée (Prop. 5)'
-  verso: 'Si \(\overline B(x,r)=X\), c''est immédiat. Sinon, soit \(y\in(\overline B(x,r))^c=\{z\in X / d(x,z) > r\}\). Posons \(\epsilon=d(x,y)-r > 0\).<br>Pour tout \(z\in B(y,\epsilon)\) : \(d(x,z)\ge d(x,y)-d(y,z) > (r+\epsilon)-\epsilon=r\). Donc \(B(y,\epsilon)\subset(\overline B(x,r))^c\), qui est ouvert : la boule fermée est fermée.<br>(le poly écrit \((r-\epsilon)-\epsilon\) : coquille, car \(d(x,y)=r+\epsilon\))'
+  verso: 'Soit \((X,d)\) un espace métrique, \(x\in X\) et \(r > 0\). Si \(\overline B(x,r)=X\), c''est immédiat. Sinon, soit \(y\in(\overline B(x,r))^c=\{z\in X / d(x,z) > r\}\). Posons \(\epsilon=d(x,y)-r > 0\).<br>Pour tout \(z\in B(y,\epsilon)\) : \(d(x,z)\ge d(x,y)-d(y,z) > (r+\epsilon)-\epsilon=r\). Donc \(B(y,\epsilon)\subset(\overline B(x,r))^c\), qui est ouvert : la boule fermée est fermée.<br>(le poly écrit \((r-\epsilon)-\epsilon\) : coquille, car \(d(x,y)=r+\epsilon\))'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 5'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
@@ -171,7 +171,7 @@
 - id: topo-a-010-2
   notion: topo-n-0038
   recto: 'Rem. : pas de somme simple sur un produit dénombrable'
-  verso: 'On ne peut pas étendre directement la distance \(D(x,y)=\sum_{k=1}^nd_k(x_k,y_k)\) du produit fini à un produit dénombrable d''espaces métriques, car la série \(\sum_kd_k(x_k,y_k)\) n''est pas convergente, en général.'
+  verso: 'Soient \(((X_k,d_k))_k\) des espaces métriques. On ne peut pas étendre directement la distance \(D(x,y)=\sum_{k=1}^nd_k(x_k,y_k)\) du produit fini à un produit dénombrable d''espaces métriques, car la série \(\sum_kd_k(x_k,y_k)\) n''est pas convergente, en général.'
   source: 'Poly de topologie Paris Cité, ch. 1, p. 11'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 2
@@ -265,7 +265,7 @@
 - id: topo-a-016-3
   notion: topo-n-0058
   recto: 'Rem. 1 : partie bornée et boule'
-  verso: 'Soient \((X,d)\) un espace métrique et \(x\in X\). On montre facilement que la partie \(A\) est bornée si et seulement si il existe \(r > 0\) tel que \(A\subset B(x,r)\).'
+  verso: 'Soient \((X,d)\) un espace métrique et \(x\in X\). On montre facilement que une partie \(A\in\mathcal P(X)\) est bornée si et seulement si il existe \(r > 0\) tel que \(A\subset B(x,r)\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 2'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -273,7 +273,7 @@
 - id: topo-a-016-4
   notion: topo-n-0058
   recto: 'Rem. 2 : diamètre de l''intérieur et de l''adhérence'
-  verso: 'Dans un espace métrique, on vérifie que \(A\subset B\Rightarrow\operatorname{diam}(A)\le\operatorname{diam}(B)\). En particulier, \(\operatorname{diam}(\mathring A)\le\operatorname{diam}(A)=\operatorname{diam}(\overline A)\), avec la convention \(\operatorname{diam}(\emptyset)=0\).<br>(le poly ne donne pas cette convention, nécessaire si \(\mathring A=\emptyset\))'
+  verso: 'Soient \((X,d)\) un espace métrique et \(A,B\in\mathcal P(X)\). Dans un espace métrique, on vérifie que \(A\subset B\Rightarrow\operatorname{diam}(A)\le\operatorname{diam}(B)\). En particulier, \(\operatorname{diam}(\mathring A)\le\operatorname{diam}(A)=\operatorname{diam}(\overline A)\), avec la convention \(\operatorname{diam}(\emptyset)=0\).<br>(le poly ne donne pas cette convention, nécessaire si \(\mathring A=\emptyset\))'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 2'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -299,7 +299,7 @@
 - id: topo-a-018-2
   notion: topo-n-0064
   recto: 'Preuve : définition du prolongement \(\tilde f\) (Thm 1)'
-  verso: 'Soit \(x\in X\). Comme \(A\) est dense, il existe une suite \((u_n)\) de \(A\) avec \(u_n\to x\). Cette suite est de Cauchy, donc \((f(u_n))\) est de Cauchy dans \((Y,\delta)\) (\(f\) uniformément continue), donc converge vers un \(y\in Y\) complet.<br>Ce \(y\) ne dépend pas du choix de la suite (deux suites convergeant vers \(x\) ont des images de même limite). On pose \(\tilde f(x)=y\).'
+  verso: 'Soient \((X,d)\) et \((Y,\delta)\) deux espaces métriques, \(Y\) complet, \(A\) une partie dense de \(X\) et \(f:A\to Y\) uniformément continue. Soit \(x\in X\). Comme \(A\) est dense, il existe une suite \((u_n)\) de \(A\) avec \(u_n\to x\). Cette suite est de Cauchy, donc \((f(u_n))\) est de Cauchy dans \((Y,\delta)\) (\(f\) uniformément continue), donc converge vers un \(y\in Y\) complet.<br>Ce \(y\) ne dépend pas du choix de la suite (deux suites convergeant vers \(x\) ont des images de même limite). On pose \(\tilde f(x)=y\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 5'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
@@ -333,7 +333,7 @@
 - id: topo-a-020-2
   notion: topo-n-0068
   recto: 'Preuve : la suite \((u_n)\) est de Cauchy (Thm 2)'
-  verso: 'Soit \(f:X\to X\) contractante de rapport \(C\in]0,1[\). Étant donné \(u_0\in X\), on pose \(u_{n+1}=f(u_n)\). Alors \(d(u_{n+1},u_n)\le C\,d(u_n,u_{n-1})\le\dots\le C^nd(u_1,u_0)\), puis pour \(p > q\) : \(d(u_p,u_q)\le\sum_{n=q}^{p-1}C^nd(u_1,u_0)\le\dfrac{C^q}{1-C}d(u_1,u_0)\).<br>Comme \(C^q\to0\), la suite \((u_n)\) est de Cauchy.'
+  verso: 'Soit \((X,d)\) un espace métrique complet non vide et \(f:X\to X\) contractante de rapport \(C\in]0,1[\). Étant donné \(u_0\in X\), on pose \(u_{n+1}=f(u_n)\). Alors \(d(u_{n+1},u_n)\le C\,d(u_n,u_{n-1})\le\dots\le C^nd(u_1,u_0)\), puis pour \(p > q\) : \(d(u_p,u_q)\le\sum_{n=q}^{p-1}C^nd(u_1,u_0)\le\dfrac{C^q}{1-C}d(u_1,u_0)\).<br>Comme \(C^q\to0\), la suite \((u_n)\) est de Cauchy.'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -341,7 +341,7 @@
 - id: topo-a-020-3
   notion: topo-n-0068
   recto: 'Preuve : la limite est un point fixe (Thm 2)'
-  verso: 'La suite \((u_n)\) est de Cauchy et \(X\) est complet, donc il existe \(a\in X\) tel que \(u_n\to a\). Comme \(f\) est continue, en faisant tendre \(n\) vers \(+\infty\) dans l''identité \(f(u_n)=u_{n+1}\), on obtient \(f(a)=a\) : \(a\) est un point fixe de \(f\).'
+  verso: 'Soit \(f:X\to X\) contractante sur l''espace métrique complet \((X,d)\), \(u_0\in X\) et \(u_{n+1}=f(u_n)\). La suite \((u_n)\) est de Cauchy et \(X\) est complet, donc il existe \(a\in X\) tel que \(u_n\to a\). Comme \(f\) est continue, en faisant tendre \(n\) vers \(+\infty\) dans l''identité \(f(u_n)=u_{n+1}\), on obtient \(f(a)=a\) : \(a\) est un point fixe de \(f\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -349,7 +349,7 @@
 - id: topo-a-020-4
   notion: topo-n-0068
   recto: 'Preuve : unicité du point fixe (Thm 2)'
-  verso: 'Supposons que \(f\) possède deux points fixes \(a_1\) et \(a_2\). On a alors \(d(a_1,a_2)=d(f(a_1),f(a_2))\le C\,d(a_1,a_2)\) où \(C < 1\), ce qui conduit à \(d(a_1,a_2)=0\), i.e. \(a_1=a_2\).'
+  verso: 'Soit \(f:X\to X\) contractante de rapport \(C\in]0,1[\) sur un espace métrique \((X,d)\). Supposons que \(f\) possède deux points fixes \(a_1\) et \(a_2\). On a alors \(d(a_1,a_2)=d(f(a_1),f(a_2))\le C\,d(a_1,a_2)\) où \(C < 1\), ce qui conduit à \(d(a_1,a_2)=0\), i.e. \(a_1=a_2\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -376,7 +376,7 @@
 - id: topo-a-023-1
   notion: topo-n-0071
   recto: 'Preuve : Baire, début de la construction (Thm 3)'
-  verso: 'Il s''agit de montrer \(\left(\bigcap_nO_n\right)\cap V\neq\emptyset\) pour tout ouvert \(V\). Comme \(O_0\) est dense, \(O_0\cap V\neq\emptyset\) ; soit \(u_0\in O_0\cap V\). Comme \(O_0\cap V\) est ouvert, il existe \(r_0 > 0\) tel que \(\overline B(u_0,r_0)\subset O_0\cap V\).'
+  verso: 'Soit \((O_n)_{n\in\mathbb N}\) une famille d''ouverts denses d''un espace métrique complet \((X,d)\) et \(V\) un ouvert non vide. Il s''agit de montrer \(\left(\bigcap_nO_n\right)\cap V\neq\emptyset\) pour tout ouvert \(V\). Comme \(O_0\) est dense, \(O_0\cap V\neq\emptyset\) ; soit \(u_0\in O_0\cap V\). Comme \(O_0\cap V\) est ouvert, il existe \(r_0 > 0\) tel que \(\overline B(u_0,r_0)\subset O_0\cap V\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 8'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
@@ -384,7 +384,7 @@
 - id: topo-a-023-2
   notion: topo-n-0071
   recto: 'Preuve : Baire, récurrence sur les boules (Thm 3)'
-  verso: 'Comme \(O_n\) est dense dans \(X\), \(O_n\cap B(u_{n-1},r_{n-1})\neq\emptyset\) et on peut choisir \(u_n\) dedans. Cet ensemble étant ouvert, on peut aussi choisir \(r_n\in]0,\frac1n]\) tel que \(\overline B(u_n,r_n)\subset O_n\cap B(u_{n-1},r_{n-1})\).<br>La suite \(\left(\overline B(u_n,r_n)\right)_n\) est ainsi décroissante.'
+  verso: 'Soit \((O_n)_{n\ge0}\) une famille d''ouverts denses d''un espace métrique complet \((X,d)\), \(V\) un ouvert non vide, et \(u_{n-1}\in X\), \(r_{n-1} > 0\) le point et le rayon déjà construits. Comme \(O_n\) est dense dans \(X\), \(O_n\cap B(u_{n-1},r_{n-1})\neq\emptyset\) et on peut choisir \(u_n\) dedans. Cet ensemble étant ouvert, on peut aussi choisir \(r_n\in]0,\frac1n]\) tel que \(\overline B(u_n,r_n)\subset O_n\cap B(u_{n-1},r_{n-1})\).<br>La suite \(\left(\overline B(u_n,r_n)\right)_n\) est ainsi décroissante.'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 8'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
@@ -392,7 +392,7 @@
 - id: topo-a-023-3
   notion: topo-n-0071
   recto: 'Preuve : Baire, conclusion (Thm 3)'
-  verso: 'On a \(\operatorname{diam}\overline B(u_n,r_n)\le2r_n\to0\). \(X\) étant complet, la proposition 30 donne \(\bigcap_n\overline B(u_n,r_n)\neq\emptyset\). Comme \(\overline B(u_n,r_n)\subset O_n\cap V\), on en déduit \(\left(\bigcap_nO_n\right)\cap V=\bigcap_n(O_n\cap V)\neq\emptyset\).'
+  verso: 'Soit \((O_n)_{n\in\mathbb N}\) une famille d''ouverts denses d''un espace métrique complet \((X,d)\) et \(V\) un ouvert non vide. On note \(\overline B(u_n,r_n)\) les boules fermées emboîtées construites, avec \(r_n\to0\). On a \(\operatorname{diam}\overline B(u_n,r_n)\le2r_n\to0\). \(X\) étant complet, la proposition 30 donne \(\bigcap_n\overline B(u_n,r_n)\neq\emptyset\). Comme \(\overline B(u_n,r_n)\subset O_n\cap V\), on en déduit \(\left(\bigcap_nO_n\right)\cap V=\bigcap_n(O_n\cap V)\neq\emptyset\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 8'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 3
@@ -409,7 +409,7 @@
 - id: topo-a-024-2
   notion: topo-n-0072
   recto: 'Preuve : Cor. 3 à partir de Baire'
-  verso: 'Pour tout \(n\in\mathbb N\), notons \(O_n\) le complémentaire de \(F_n\) dans \(X\). On a \(\overline{O_n}=(\mathring F_n)^c=\emptyset^c=X\). Donc \(O_n\) est un ouvert dense dans \(X\), et par le théorème de Baire \(\bigcap_nO_n\) est dense. En passant au complémentaire, \(\left(\bigcup_nF_n\right)^\circ=\emptyset\).'
+  verso: 'Soit \((F_n)_{n\in\mathbb N}\) une famille de fermés d''intérieur vide d''un espace métrique complet \((X,d)\). Pour tout \(n\in\mathbb N\), notons \(O_n\) le complémentaire de \(F_n\) dans \(X\). On a \(\overline{O_n}=(\mathring F_n)^c=\emptyset^c=X\). Donc \(O_n\) est un ouvert dense dans \(X\), et par le théorème de Baire \(\bigcap_nO_n\) est dense. En passant au complémentaire, \(\left(\bigcup_nF_n\right)^\circ=\emptyset\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 9'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -426,7 +426,7 @@
 - id: topo-a-025-2
   notion: topo-n-0073
   recto: 'Preuve : Cor. 4 par contraposée'
-  verso: 'Par contraposée : si \(\mathring F_n=\emptyset\) pour tout \(n\), alors, par le corollaire précédent, \(\left(\bigcup_nF_n\right)^\circ=\emptyset\neq X=\mathring X\) (car \(X\neq\emptyset\)), donc \(\bigcup_nF_n\neq X\).'
+  verso: 'Soit \((F_n)_{n\in\mathbb N}\) une famille de fermés d''un espace métrique complet non vide \((X,d)\) telle que \(\bigcup_nF_n=X\). Par contraposée : si \(\mathring F_n=\emptyset\) pour tout \(n\), alors, par le corollaire précédent, \(\left(\bigcup_nF_n\right)^\circ=\emptyset\neq X=\mathring X\) (car \(X\neq\emptyset\)), donc \(\bigcup_nF_n\neq X\).'
   source: 'Poly de topologie Paris Cité, ch. 2, p. 9'
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 1
@@ -511,7 +511,7 @@
 - id: topo-a-030-3
   notion: topo-n-0080
   recto: 'Preuve : un compact d''un séparé est fermé (Prop. 36)'
-  verso: 'Soit \(x\in A^c\). Comme \(X\) est séparé, pour tout \(y\in A\), il existe \(U_y\) et \(V_y\) ouverts disjoints avec \(y\in U_y\), \(x\in V_y\). Par compacité de \(A\), \(A\subset\bigcup_{k=1}^nU_{y_k}\) pour des \(y_1,\dots,y_n\in A\).<br>Alors \(V=\bigcap_{k=1}^nV_{y_k}\) est un ouvert (intersection finie) qui contient \(x\), et \(V\cap A=\emptyset\), donc \(V\subset A^c\) : \(A^c\) est ouvert.'
+  verso: 'Soient \((X,\tau)\) un espace séparé et \(A\) un compact de \(X\). Soit \(x\in A^c\). Comme \(X\) est séparé, pour tout \(y\in A\), il existe \(U_y\) et \(V_y\) ouverts disjoints avec \(y\in U_y\), \(x\in V_y\). Par compacité de \(A\), \(A\subset\bigcup_{k=1}^nU_{y_k}\) pour des \(y_1,\dots,y_n\in A\).<br>Alors \(V=\bigcap_{k=1}^nV_{y_k}\) est un ouvert (intersection finie) qui contient \(x\), et \(V\cap A=\emptyset\), donc \(V\subset A^c\) : \(A^c\) est ouvert.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 2-3'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
@@ -528,7 +528,7 @@
 - id: topo-a-031-2
   notion: topo-n-0081
   recto: 'Preuve : un compact d''un métrique est borné (Prop. 37)'
-  verso: 'Soient \(A\) une partie compacte et \(x\in X\). Comme \(A\subset X=\bigcup_{n\in\mathbb N^*}B(x,n)\), la propriété de Borel-Lebesgue donne \(J\subset\mathbb N\) fini tel que \(A\subset\bigcup_{n\in J}B(x,n)=B(x,\max(J))\). Donc \(A\) est bornée.'
+  verso: 'Soit \((X,d)\) un espace métrique. Soient \(A\) une partie compacte et \(x\in X\). Comme \(A\subset X=\bigcup_{n\in\mathbb N^*}B(x,n)\), la propriété de Borel-Lebesgue donne \(J\subset\mathbb N\) fini tel que \(A\subset\bigcup_{n\in J}B(x,n)=B(x,\max(J))\). Donc \(A\) est bornée.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 3-4'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 1
@@ -545,7 +545,7 @@
 - id: topo-a-032-2
   notion: topo-n-0083
   recto: 'Preuve : lemme de Lebesgue (Lemme 1)'
-  verso: 'Par l''absurde : pour tout \(n\), il existe \(u_n\in X\) tel que, pour tout \(i\in I\), \(B(u_n,\frac1n)\not\subset U_i\). Par Bolzano-Weierstrass, \((u_n)\) a une valeur d''adhérence \(x\) et une sous-suite \((u_{\varphi(n)})\) converge vers \(x\). Il existe \(i\) avec \(x\in U_i\), puis \(\epsilon > 0\) avec \(B(x,\epsilon)\subset U_i\).<br>Pour \(N\) tel que \(\varphi(N) > \frac2\epsilon\) et \(d(u_{\varphi(N)},x) < \frac\epsilon2\), on a \(B(u_{\varphi(N)},\frac1{\varphi(N)})\subset B(x,\epsilon)\subset U_i\), contradiction.'
+  verso: 'Soit \((X,d)\) un espace métrique vérifiant Bolzano-Weierstrass et \((U_i)_{i\in I}\) un recouvrement de \(X\) par des ouverts. Par l''absurde : pour tout \(n\), il existe \(u_n\in X\) tel que, pour tout \(i\in I\), \(B(u_n,\frac1n)\not\subset U_i\). Par Bolzano-Weierstrass, \((u_n)\) a une valeur d''adhérence \(x\) et une sous-suite \((u_{\varphi(n)})\) converge vers \(x\). Il existe \(i\) avec \(x\in U_i\), puis \(\epsilon > 0\) avec \(B(x,\epsilon)\subset U_i\).<br>Pour \(N\) tel que \(\varphi(N) > \frac2\epsilon\) et \(d(u_{\varphi(N)},x) < \frac\epsilon2\), on a \(B(u_{\varphi(N)},\frac1{\varphi(N)})\subset B(x,\epsilon)\subset U_i\), contradiction.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 5'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
@@ -621,7 +621,7 @@
 - id: topo-a-036-2
   notion: topo-n-0094
   recto: 'Preuve : Prop. 40'
-  verso: 'Il suffit de montrer que \(f^{-1}\) est continue, c''est-à-dire que \(f(F)\) est fermé pour tout fermé \(F\) de \(X\). Comme \(X\) est compact et \(F\) fermé, \(F\) est compact. Son image \(f(F)\) par l''application continue \(f\) est donc compacte, et ainsi fermée.'
+  verso: 'Soit \(f:X\to Y\) continue bijective entre deux espaces métriques, \(X\) compact. Il suffit de montrer que \(f^{-1}\) est continue, c''est-à-dire que \(f(F)\) est fermé pour tout fermé \(F\) de \(X\). Comme \(X\) est compact et \(F\) fermé, \(F\) est compact. Son image \(f(F)\) par l''application continue \(f\) est donc compacte, et ainsi fermée.'
   source: 'Poly de topologie Paris Cité, ch. 3, p. 11'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 3
@@ -637,7 +637,7 @@
 - id: topo-a-037-2
   notion: null
   recto: 'Extraction diagonale \(\psi(p)=\theta_p(p)\) (avec \(\theta_n=\varphi_0\circ\dots\circ\varphi_n\)) : pourquoi \(\psi\) est-elle strictement croissante et pourquoi la coordonnée \(n\) converge-t-elle ?'
-  verso: '\(\psi(p+1)=\theta_p(\varphi_{p+1}(p+1))\ge\theta_p(p+1)>\theta_p(p)=\psi(p)\) (car \(\varphi(k)\ge k\) et \(\theta_p\) strictement croissante). Pour \(p\ge n\), \(\psi(p)\) est un indice de la suite extraite par \(\theta_n\) : \((x^{\psi(p)}_n)_{p\ge n}\) est une sous-suite de \((x^{\theta_n(q)}_n)_q\), qui converge ; donc elle converge aussi.'
+  verso: 'Les \(\varphi_n\) sont des extractrices (applications strictement croissantes de \(\mathbb N\) dans \(\mathbb N\)). \(\psi(p+1)=\theta_p(\varphi_{p+1}(p+1))\ge\theta_p(p+1)>\theta_p(p)=\psi(p)\) (car \(\varphi(k)\ge k\) et \(\theta_p\) strictement croissante). Pour \(p\ge n\), \(\psi(p)\) est un indice de la suite extraite par \(\theta_n\) : \((x^{\psi(p)}_n)_{p\ge n}\) est une sous-suite de \((x^{\theta_n(q)}_n)_q\), qui converge ; donc elle converge aussi.'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-td4-ex08'
   chapitre: 'Chapitre 3 - Espace compact'
   priorite: 2
@@ -677,7 +677,7 @@
 - id: topo-e003
   notion: topo-n-0004
   recto: '\(]0,1]\) est-il ouvert ? fermé ? dans \(\mathbb R\), puis dans \(X=[-1,1]\) (distance usuelle).'
-  verso: 'Dans \(\mathbb R\) : ni ouvert (\(1\) n''a pas de boule dans \(A\)) ni fermé (\(0\notin A\) est adhérent à \(A\)). Dans \(X=[-1,1]\) : ouvert (\(]0,1]=X\cap]0,2[\)) mais pas fermé (le complémentaire \([-1,0]\) n''est pas ouvert dans \(X\) : \(0\) n''a pas de boule). Ouvert et fermé ne sont pas des contraires, et dépendent de l''espace ambiant \(X\).'
+  verso: 'Soit \(A=]0,1]\). Dans \(\mathbb R\) : ni ouvert (\(1\) n''a pas de boule dans \(A\)) ni fermé (\(0\notin A\) est adhérent à \(A\)). Dans \(X=[-1,1]\) : ouvert (\(]0,1]=X\cap]0,2[\)) mais pas fermé (le complémentaire \([-1,0]\) n''est pas ouvert dans \(X\) : \(0\) n''a pas de boule). Ouvert et fermé ne sont pas des contraires, et dépendent de l''espace ambiant \(X\).'
   source: 'topo-td1-ex04, cas 2 et 5 ; séance 2026-11-04'
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1

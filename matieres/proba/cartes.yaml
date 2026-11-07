@@ -81,7 +81,7 @@
 - id: proba-a-003-3
   notion: proba-n-0010
   recto: 'Preuve : Prop. 1.9, égalité p.s. implique même loi'
-  verso: 'Soit \(N=\{\omega\in\Omega\mid X(\omega)\neq Y(\omega)\}\), négligeable par hypothèse, et \(B\) un événement quelconque de \(E\).<br>\(P_X(B)=P(X\in B,\ Y\in B)+P(X\in B,\ Y\notin B)\) et \(\{X\in B,\ Y\notin B\}\subset N\) est négligeable, donc \(P_X(B)=P(X\in B,\ Y\in B)\). De même \(P_Y(B)=P(X\in B,\ Y\in B)\). D''où \(P_X(B)=P_Y(B)\) pour tout \(B\).'
+  verso: 'Soient \(X\) et \(Y\) deux variables aléatoires définies sur un même espace de probabilité \((\Omega,P)\) et à valeurs dans un même espace \(E\), égales presque sûrement ; \(P_X\) et \(P_Y\) désignent leurs lois. Soit \(N=\{\omega\in\Omega\mid X(\omega)\neq Y(\omega)\}\), négligeable par hypothèse, et \(B\) un événement quelconque de \(E\).<br>\(P_X(B)=P(X\in B,\ Y\in B)+P(X\in B,\ Y\notin B)\) et \(\{X\in B,\ Y\notin B\}\subset N\) est négligeable, donc \(P_X(B)=P(X\in B,\ Y\in B)\). De même \(P_Y(B)=P(X\in B,\ Y\in B)\). D''où \(P_X(B)=P_Y(B)\) pour tout \(B\).'
   source: 'Poly Probabilités 5, ch. 1, p. 9 (PDF)'
   chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
   priorite: 3
@@ -113,15 +113,15 @@
 - id: proba-a-005-2
   notion: proba-n-0024
   recto: 'Exemple : probabilité d''un événement pour une loi à densité'
-  verso: 'Par définition de la densité, pour tout intervalle \(A\) de la forme \(]a,b]\) : \(P(A)=\int_A f(x)\,dx=\int_{\mathbb R}\mathbf 1_A(x)f(x)\,dx\). On peut montrer que cette formule reste vraie pour tout événement \(A\) de \(\mathbb R\). Cela implique en particulier que la densité d''une probabilité caractérise cette probabilité.'
+  verso: 'Soit \(P\) une loi sur \(\mathbb R\) de densité \(f\). Par définition de la densité, pour tout intervalle \(A\) de la forme \(]a,b]\) : \(P(A)=\int_A f(x)\,dx=\int_{\mathbb R}\mathbf 1_A(x)f(x)\,dx\). On peut montrer que cette formule reste vraie pour tout événement \(A\) de \(\mathbb R\). Cela implique en particulier que la densité d''une probabilité caractérise cette probabilité.'
   source: 'Poly Probabilités 5, ch. 2, p. 16 (PDF)'
   chapitre: 'Chapitre 2 - Variables aléatoires réelles'
   priorite: 1
   tags: [definition]
 - id: proba-a-005-3
   notion: proba-n-0024
-  recto: 'Exemple : correspondance formelle discret / densité'
-  verso: 'Pour une loi discrète de support \(S\) : \(P(A)=\sum_{s\in A\cap S}p_s=\sum_{s\in S}\mathbf 1_A(s)P(\{s\})\). Pour une loi de densité \(f\) : \(P(A)=\int_{\mathbb R}\mathbf 1_A(x)f(x)\,dx\).<br>Correspondance formelle : \(\mathbf 1_A(s)\leftrightarrow\mathbf 1_A(x)\), \(P(\{s\})\leftrightarrow f(x)\), \(\sum_{s\in S}\leftrightarrow\int_{\mathbb R}dx\).'
+  recto: 'Rem. : calcul de \(P(A)\), correspondance formelle entre loi discrète et loi à densité'
+  verso: 'Soit \(P\) une loi sur \(\mathbb R\) et \(A\) un événement (borélien) quelconque de \(\mathbb R\).<br>Si \(P\) est discrète, de support \(S\) et de poids \(p_s=P(\{s\})\) : \(P(A)=\sum_{s\in A\cap S}p_s=\sum_{s\in S}\mathbf 1_A(s)P(\{s\})\).<br>Si \(P\) a pour densité \(f\) : \(P(A)=\int_A f(x)\,dx=\int_{\mathbb R}\mathbf 1_A(x)f(x)\,dx\).<br>Correspondance formelle : \(\mathbf 1_A(s)\leftrightarrow\mathbf 1_A(x)\), \(P(\{s\})\leftrightarrow f(x)\), \(\sum_{s\in S}\leftrightarrow\int_{\mathbb R}dx\) ; la famille \((P(\{s\}))_{s\in S}\) joue le rôle d''une « densité discrète ».'
   source: 'Poly Probabilités 5, ch. 2, p. 16 (PDF)'
   chapitre: 'Chapitre 2 - Variables aléatoires réelles'
   priorite: 1
@@ -161,7 +161,7 @@
 - id: proba-a-007-2
   notion: proba-n-0026
   recto: 'Déf 2.17 : pourquoi pas \(\{x : P(\{x\})\gt 0\}\)'
-  verso: 'Pour définir le support d''une loi admettant une densité, on s''inspire de la définition donnée pour une loi discrète. Si très naïvement on pose \(S=\{x\in\mathbb R\mid P(\{x\})\gt 0\}\), alors \(S=\emptyset\) d''après la Prop. 2.15 (\(P(\{x\})=0\) pour tout \(x\)).'
+  verso: 'Soit \(P\) une loi à densité sur \(\mathbb R\). Pour définir le support d''une loi admettant une densité, on s''inspire de la définition donnée pour une loi discrète. Si très naïvement on pose \(S=\{x\in\mathbb R\mid P(\{x\})\gt 0\}\), alors \(S=\emptyset\) d''après la Prop. 2.15 (\(P(\{x\})=0\) pour tout \(x\)).'
   source: 'Poly Probabilités 5, ch. 2, p. 17 (PDF)'
   chapitre: 'Chapitre 2 - Variables aléatoires réelles'
   priorite: 2
@@ -353,7 +353,7 @@
 - id: proba-a-017-2
   notion: proba-n-0046
   recto: 'Preuve : Prop. 3.5, critère pour des lois distinctes'
-  verso: 'Soient \(X,Y\) variables aléatoires réelles de densités \(f_X,f_Y\), et \(x_0\in\mathbb R\) tel que \(f_X\) et \(f_Y\) soient continues en \(x_0\) et \(f_X(x_0)\neq f_Y(x_0)\).<br>Alors \(F_X\) et \(F_Y\) sont dérivables en \(x_0\) et \(F_X^{\prime}(x_0)=f_X(x_0)\neq f_Y(x_0)=F_Y^{\prime}(x_0)\) d''après la Prop. 3.11. Les fonctions de répartition de \(X\) et \(Y\) sont donc distinctes. Comme elles caractérisent les lois de \(X\) et \(Y\), ces lois sont différentes.'
+  verso: 'Soient \(X,Y\) variables aléatoires réelles de densités \(f_X,f_Y\) et de fonctions de répartition \(F_X,F_Y\), et \(x_0\in\mathbb R\) tel que \(f_X\) et \(f_Y\) soient continues en \(x_0\) et \(f_X(x_0)\neq f_Y(x_0)\).<br>Alors \(F_X\) et \(F_Y\) sont dérivables en \(x_0\) et \(F_X^{\prime}(x_0)=f_X(x_0)\neq f_Y(x_0)=F_Y^{\prime}(x_0)\) d''après la Prop. 3.11. Les fonctions de répartition de \(X\) et \(Y\) sont donc distinctes. Comme elles caractérisent les lois de \(X\) et \(Y\), ces lois sont différentes.'
   source: 'Poly Probabilités 5, ch. 3, p. 31 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 3
@@ -369,7 +369,7 @@
 - id: proba-a-018-2
   notion: proba-n-0047
   recto: 'Prop. : famille de tests paramétrée'
-  verso: 'Soit \(X,Y\) deux variables aléatoires réelles. Si l''on paramètre les fonctions de \(\mathcal F=\{\psi_\lambda,\lambda\in\Lambda\}\) et que l''on définit \(H_X(\lambda)=E[\psi_\lambda(X)]\) (et de même \(H_Y\)), alors \(P_X=P_Y\iff\forall\psi\in\mathcal F,\ E[\psi(X)]=E[\psi(Y)]\iff\forall\lambda\in\Lambda,\ E[\psi_\lambda(X)]=E[\psi_\lambda(Y)]\iff\forall\lambda\in\Lambda,\ H_X(\lambda)=H_Y(\lambda)\). Les fonctions \(H_X\) et \(H_Y\), définies sur \(\Lambda\), caractérisent les lois de \(X\) et \(Y\).'
+  verso: 'Soit \(X,Y\) deux variables aléatoires réelles de lois respectives \(P_X\) et \(P_Y\). Si l''on paramètre les fonctions de \(\mathcal F=\{\psi_\lambda,\lambda\in\Lambda\}\) et que l''on définit \(H_X(\lambda)=E[\psi_\lambda(X)]\) (et de même \(H_Y\)), alors \(P_X=P_Y\iff\forall\psi\in\mathcal F,\ E[\psi(X)]=E[\psi(Y)]\iff\forall\lambda\in\Lambda,\ E[\psi_\lambda(X)]=E[\psi_\lambda(Y)]\iff\forall\lambda\in\Lambda,\ H_X(\lambda)=H_Y(\lambda)\). Les fonctions \(H_X\) et \(H_Y\), définies sur \(\Lambda\), caractérisent les lois de \(X\) et \(Y\).'
   source: 'Poly Probabilités 5, ch. 3, p. 26 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -377,7 +377,7 @@
 - id: proba-a-018-3
   notion: proba-n-0047
   recto: 'Prop. : fonctions tests \(\mathbf 1_{]-\infty,x]}\) et fonction de répartition'
-  verso: 'Dans le schéma général des fonctions tests, l''ensemble \(\mathcal F=\{\mathbf 1_{]-\infty,x]},x\in\mathbb R\}\) conduira à l''étude des fonctions de répartition : \(H_X(x)=E[\mathbf 1_{]-\infty,x]}(X)]=F_X(x)\).'
+  verso: 'Soit \(X\) une variable aléatoire réelle de fonction de répartition \(F_X\). Dans le schéma général des fonctions tests, l''ensemble \(\mathcal F=\{\mathbf 1_{]-\infty,x]},x\in\mathbb R\}\) conduira à l''étude des fonctions de répartition : \(H_X(x)=E[\mathbf 1_{]-\infty,x]}(X)]=F_X(x)\).'
   source: 'Poly Probabilités 5, ch. 3, p. 26-27 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -393,7 +393,7 @@
 - id: proba-a-018-5
   notion: proba-n-0047
   recto: 'Prop. : fonctions tests \(x\mapsto e^{itx}\) et fonction caractéristique'
-  verso: 'Dans le schéma général des fonctions tests, l''ensemble \(\mathcal F=\{x\mapsto e^{itx},t\in\mathbb R\}\) conduira à l''étude de la fonction caractéristique : \(H_X(t)=E[e^{itX}]\).'
+  verso: 'Soit \(X\) une variable aléatoire réelle. Dans le schéma général des fonctions tests, l''ensemble \(\mathcal F=\{x\mapsto e^{itx},t\in\mathbb R\}\) conduira à l''étude de la fonction caractéristique : \(H_X(t)=E[e^{itX}]\).'
   source: 'Poly Probabilités 5, ch. 3, p. 27 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -401,7 +401,7 @@
 - id: proba-a-019-1
   notion: proba-n-0050
   recto: 'Cor. 3.8 : \(P(]a,b])\) et \(P(]a,+\infty[)\)'
-  verso: 'Soit \(X\) une variable aléatoire réelle de fonction de répartition \(F_X\) et \(a,b\in\mathbb R\) avec \(a\lt b\). Alors, avec les notations précédentes : \(P_X(]a,b])=F_X(b)-F_X(a)\) et \(P_X(]a,+\infty[)=1-F_X(a)\).'
+  verso: 'Soit \(X\) une variable aléatoire réelle de loi \(P_X\) et de fonction de répartition \(F_X\) et \(a,b\in\mathbb R\) avec \(a\lt b\). Alors, avec les notations précédentes : \(P_X(]a,b])=F_X(b)-F_X(a)\) et \(P_X(]a,+\infty[)=1-F_X(a)\).'
   source: 'Poly Probabilités 5, ch. 3, p. 28 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -409,7 +409,7 @@
 - id: proba-a-019-2
   notion: proba-n-0050
   recto: 'Cor. 3.8 : \(P(]-\infty,a[)\) et \(P([a,+\infty[)\)'
-  verso: 'Soit \(X\) une variable aléatoire réelle de fonction de répartition \(F_X\) et \(a\in\mathbb R\). Alors, avec les notations précédentes : \(P_X(]-\infty,a[)=\lim_{x\to a^-}F_X(x)\) et \(P_X([a,+\infty[)=1-\lim_{x\to a^-}F_X(x)\).'
+  verso: 'Soit \(X\) une variable aléatoire réelle de loi \(P_X\) et de fonction de répartition \(F_X\) et \(a\in\mathbb R\). Alors, avec les notations précédentes : \(P_X(]-\infty,a[)=\lim_{x\to a^-}F_X(x)\) et \(P_X([a,+\infty[)=1-\lim_{x\to a^-}F_X(x)\).'
   source: 'Poly Probabilités 5, ch. 3, p. 28 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -417,7 +417,7 @@
 - id: proba-a-019-3
   notion: proba-n-0050
   recto: 'Cor. 3.8 : \(P([a,b])\)'
-  verso: 'Soit \(X\) une variable aléatoire réelle de fonction de répartition \(F_X\) et \(a,b\in\mathbb R\) avec \(a\lt b\). Alors, avec les notations précédentes : \(P_X([a,b])=F_X(b)-\lim_{x\to a^-}F_X(x)\).'
+  verso: 'Soit \(X\) une variable aléatoire réelle de loi \(P_X\) et de fonction de répartition \(F_X\) et \(a,b\in\mathbb R\) avec \(a\lt b\). Alors, avec les notations précédentes : \(P_X([a,b])=F_X(b)-\lim_{x\to a^-}F_X(x)\).'
   source: 'Poly Probabilités 5, ch. 3, p. 28 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -425,7 +425,7 @@
 - id: proba-a-019-4
   notion: proba-n-0050
   recto: 'Cor. 3.8 : \(P(]a,b[)\) et \(P([a,b[)\)'
-  verso: 'Soit \(X\) une variable aléatoire réelle de fonction de répartition \(F_X\) et \(a,b\in\mathbb R\) avec \(a\lt b\). Alors, avec les notations précédentes : \(P_X(]a,b[)=\lim_{x\to b^-}F_X(x)-F_X(a)\) et \(P_X([a,b[)=\lim_{x\to b^-}F_X(x)-\lim_{x\to a^-}F_X(x)\).'
+  verso: 'Soit \(X\) une variable aléatoire réelle de loi \(P_X\) et de fonction de répartition \(F_X\) et \(a,b\in\mathbb R\) avec \(a\lt b\). Alors, avec les notations précédentes : \(P_X(]a,b[)=\lim_{x\to b^-}F_X(x)-F_X(a)\) et \(P_X([a,b[)=\lim_{x\to b^-}F_X(x)-\lim_{x\to a^-}F_X(x)\).'
   source: 'Poly Probabilités 5, ch. 3, p. 28 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -441,7 +441,7 @@
 - id: proba-a-020-1
   notion: proba-n-0051
   recto: 'Cor. 3.9 : discontinuités de la fonction de répartition'
-  verso: 'Avec les notations précédentes, la fonction de répartition \(F_X\) admet au plus un nombre dénombrable de discontinuités. C''est d''ailleurs le cas de toutes les fonctions croissantes sur \(\mathbb R\).'
+  verso: 'Soit \(X\) une variable aléatoire réelle de fonction de répartition \(F_X\). Avec les notations précédentes, la fonction de répartition \(F_X\) admet au plus un nombre dénombrable de discontinuités. C''est d''ailleurs le cas de toutes les fonctions croissantes sur \(\mathbb R\).'
   source: 'Poly Probabilités 5, ch. 3, p. 28 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 2
@@ -465,7 +465,7 @@
 - id: proba-a-021-1
   notion: proba-n-0052
   recto: 'Prop. 3.11 (1) : fonction de répartition continue et \(C^1\) par morceaux'
-  verso: 'Soit \(X\) une variable aléatoire réelle. Si sa fonction de répartition est continue sur \(\mathbb R\), et continûment dérivable par morceaux, alors \(X\) est une variable aléatoire à densité et \(F_X^{\prime}\) est une densité de la loi de \(X\).'
+  verso: 'Soit \(X\) une variable aléatoire réelle. Si sa fonction de répartition \(F_X\) est continue sur \(\mathbb R\), et continûment dérivable par morceaux, alors \(X\) est une variable aléatoire à densité et \(F_X^{\prime}\) est une densité de la loi de \(X\).'
   source: 'Poly Probabilités 5, ch. 3, p. 29 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -473,7 +473,7 @@
 - id: proba-a-021-2
   notion: proba-n-0052
   recto: 'Prop. 3.11 (2) : dérivée de la fonction de répartition'
-  verso: 'Soit \(X\) une variable aléatoire réelle. Si \(X\) est une variable aléatoire à densité, et si la densité \(f_X\) est continue en \(x_0\), alors \(F_X\) est dérivable en \(x_0\) et \(F_X^{\prime}(x_0)=f_X(x_0)\).'
+  verso: 'Soit \(X\) une variable aléatoire réelle de fonction de répartition \(F_X\). Si \(X\) est une variable aléatoire à densité, et si la densité \(f_X\) est continue en \(x_0\), alors \(F_X\) est dérivable en \(x_0\) et \(F_X^{\prime}(x_0)=f_X(x_0)\).'
   source: 'Poly Probabilités 5, ch. 3, p. 29 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -481,7 +481,7 @@
 - id: proba-a-021-3
   notion: proba-n-0052
   recto: 'Prop. : fonction de répartition en fonction de la densité'
-  verso: 'Soit \(X\) une variable aléatoire réelle de densité \(f_X\). Alors \(F_X(x)=\int_{-\infty}^x f_X(y)\,dy\) (relation utilisée pour la Prop. 3.11).'
+  verso: 'Soit \(X\) une variable aléatoire réelle de densité \(f_X\). Alors la fonction de répartition \(F_X\) de \(X\) vérifie \(F_X(x)=\int_{-\infty}^x f_X(y)\,dy\) (relation utilisée pour la Prop. 3.11).'
   source: 'Poly Probabilités 5, ch. 3, p. 29 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -505,7 +505,7 @@
 - id: proba-a-023-2
   notion: proba-n-0054
   recto: 'Preuve : Thm 3.13, condition suffisante (schéma)'
-  verso: 'Soient \(X,Y\) deux variables aléatoires réelles avec \(F_X=F_Y\). D''après le Cor. 3.8, \(P_X\) et \(P_Y\) coïncident sur tous les intervalles de \(\mathbb R\), fermés, ouverts ou non, bornés ou non. Grâce aux propriétés de \(P_X\) et \(P_Y\), cette coïncidence s''étend aux événements obtenus par réunion finie ou dénombrable d''intervalles disjoints, par passage au complémentaire et par réunion d''une suite croissante. Cet ensemble d''événements n''est pas exhaustif, mais il suffit à établir que les deux probabilités coïncident sur tous les événements. (Schéma de preuve seulement.)'
+  verso: 'Soient \(X,Y\) deux variables aléatoires réelles, de lois \(P_X,P_Y\) et de fonctions de répartition \(F_X,F_Y\), avec \(F_X=F_Y\). D''après le Cor. 3.8, \(P_X\) et \(P_Y\) coïncident sur tous les intervalles de \(\mathbb R\), fermés, ouverts ou non, bornés ou non. Grâce aux propriétés de \(P_X\) et \(P_Y\), cette coïncidence s''étend aux événements obtenus par réunion finie ou dénombrable d''intervalles disjoints, par passage au complémentaire et par réunion d''une suite croissante. Cet ensemble d''événements n''est pas exhaustif, mais il suffit à établir que les deux probabilités coïncident sur tous les événements. (Schéma de preuve seulement.)'
   source: 'Poly Probabilités 5, ch. 3, p. 31 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -545,7 +545,7 @@
 - id: proba-a-025-3
   notion: proba-n-0057
   recto: 'Cor. 3.17 : moment de \(aX+b\)'
-  verso: 'Si \(X\) possède un moment d''ordre \(n\), alors \(aX+b\) aussi pour tous \(a,b\in\mathbb R\).'
+  verso: 'Soit \(X\) une variable aléatoire réelle et \(n\in\mathbb N^*\). Si \(X\) possède un moment d''ordre \(n\), alors \(aX+b\) aussi pour tous \(a,b\in\mathbb R\).'
   source: 'Poly Probabilités 5, ch. 3, p. 32 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -617,7 +617,7 @@
 - id: proba-a-029-2
   notion: proba-n-0064
   recto: 'Déf 3.25 : existence de \(E[e^{itX}]\)'
-  verso: 'Les fonctions \(x\mapsto e^{itx}\) sont à valeurs complexes et bornées ; pour toute variable aléatoire réelle \(X\), \(E\big[|e^{itX}|\big]=E[1]=1\) et donc \(E[e^{itX}]\) est bien définie.'
+  verso: 'Soit \(t\in\mathbb R\). Les fonctions \(x\mapsto e^{itx}\) sont à valeurs complexes et bornées ; pour toute variable aléatoire réelle \(X\), \(E\big[|e^{itX}|\big]=E[1]=1\) et donc \(E[e^{itX}]\) est bien définie.'
   source: 'Poly Probabilités 5, ch. 3, p. 34 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -625,7 +625,7 @@
 - id: proba-a-029-3
   notion: proba-n-0064
   recto: 'Prop. : calcul de la fonction caractéristique par la formule de transfert'
-  verso: 'Soit \(X\) une variable aléatoire réelle. Si \(X\) est discrète et que l''on connaît les probabilités des singletons \(\{X=x\}\) pour tout \(x\) dans le support \(S_X\), ou si elle est à densité \(f_X\), on peut calculer sa fonction caractéristique à l''aide de la formule de transfert : \(\varphi_X(t)=\sum_{x\in S_X}e^{itx}P(X=x)\) dans le cas discret, \(\varphi_X(t)=\int_{\mathbb R}e^{itx}f_X(x)\,dx\) dans le cas à densité.'
+  verso: 'Soit \(X\) une variable aléatoire réelle, de fonction caractéristique \(\varphi_X\) (\(\forall t\in\mathbb R,\ \varphi_X(t)=E[e^{itX}]\)). Si \(X\) est discrète et que l''on connaît les probabilités des singletons \(\{X=x\}\) pour tout \(x\) dans le support \(S_X\), ou si elle est à densité \(f_X\), on peut calculer sa fonction caractéristique à l''aide de la formule de transfert : \(\varphi_X(t)=\sum_{x\in S_X}e^{itx}P(X=x)\) dans le cas discret, \(\varphi_X(t)=\int_{\mathbb R}e^{itx}f_X(x)\,dx\) dans le cas à densité.'
   source: 'Poly Probabilités 5, ch. 3, p. 35-36 et 38 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -737,7 +737,7 @@
 - id: proba-a-034-4
   notion: proba-n-0069
   recto: 'Preuve : fonction caractéristique de la loi gamma, \(p\) entier'
-  verso: 'Soit \(X\) suivant une loi gamma de paramètres \(\theta\gt0\) et \(p\), entier strictement supérieur à \(1\). Par une intégration par parties, sachant que \(\Gamma(p)=(p-1)!=(p-1)\Gamma(p-1)\), on vérifie que \(\varphi_X(t)=\dfrac{\theta}{\theta-it}\int_0^{+\infty}e^{itx}f_{\theta,p-1}(x)dx\). Par une récurrence immédiate, \(\varphi_X(t)=\left(\frac{\theta}{\theta-it}\right)^{p-1}\int_0^{+\infty}e^{itx}f_{\theta,1}(x)dx=\left(\frac{\theta}{\theta-it}\right)^p\).'
+  verso: 'Pour tout \(q\gt0\), \(f_{\theta,q}(x)=\frac{\theta^q}{\Gamma(q)}x^{q-1}e^{-\theta x}\mathbf 1_{x\gt0}\) désigne la densité de la loi gamma de paramètres \(\theta\) et \(q\). Soit \(X\) suivant une loi gamma de paramètres \(\theta\gt0\) et \(p\), entier strictement supérieur à \(1\). Par une intégration par parties, sachant que \(\Gamma(p)=(p-1)!=(p-1)\Gamma(p-1)\), on vérifie que \(\varphi_X(t)=\dfrac{\theta}{\theta-it}\int_0^{+\infty}e^{itx}f_{\theta,p-1}(x)dx\). Par une récurrence immédiate, \(\varphi_X(t)=\left(\frac{\theta}{\theta-it}\right)^{p-1}\int_0^{+\infty}e^{itx}f_{\theta,1}(x)dx=\left(\frac{\theta}{\theta-it}\right)^p\).'
   source: 'Poly Probabilités 5, ch. 3, p. 36 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
@@ -785,7 +785,7 @@
 - id: proba-a-038-2
   notion: proba-n-0073
   recto: 'Preuve : Prop. 3.29, formule d''inversion'
-  verso: 'Notons \(p_n=P(X=n)\) pour tout \(n\in\mathbb Z\). Alors \(\varphi_X\) est continue bornée sur \([0,2\pi]\) et \(\int_0^{2\pi}\varphi_X(t)e^{-ikt}dt=\int_0^{2\pi}\Big(\sum_{n\in\mathbb Z}e^{itn}p_n\Big)e^{-ikt}dt\). Comme \(\int_0^{2\pi}\sum_{n\in\mathbb Z}|e^{it(n-k)}p_n|dt=\int_0^{2\pi}dt\lt+\infty\), on peut intervertir somme et intégrale : on obtient \(\sum_{n\in\mathbb Z}\int_0^{2\pi}e^{it(n-k)}p_ndt\). Si \(n\neq k\), cette intégrale vaut \(0\) ; si \(n=k\), elle vaut \(2\pi p_k\). D''où \(\int_0^{2\pi}\varphi_X(t)e^{-ikt}dt=2\pi p_k\).'
+  verso: 'Soit \(X\) une variable aléatoire à valeurs dans \(\mathbb Z\), de fonction caractéristique \(\varphi_X\), et \(k\in\mathbb Z\). Notons \(p_n=P(X=n)\) pour tout \(n\in\mathbb Z\). Alors \(\varphi_X\) est continue bornée sur \([0,2\pi]\) et \(\int_0^{2\pi}\varphi_X(t)e^{-ikt}dt=\int_0^{2\pi}\Big(\sum_{n\in\mathbb Z}e^{itn}p_n\Big)e^{-ikt}dt\). Comme \(\int_0^{2\pi}\sum_{n\in\mathbb Z}|e^{it(n-k)}p_n|dt=\int_0^{2\pi}dt\lt+\infty\), on peut intervertir somme et intégrale : on obtient \(\sum_{n\in\mathbb Z}\int_0^{2\pi}e^{it(n-k)}p_ndt\). Si \(n\neq k\), cette intégrale vaut \(0\) ; si \(n=k\), elle vaut \(2\pi p_k\). D''où \(\int_0^{2\pi}\varphi_X(t)e^{-ikt}dt=2\pi p_k\).'
   source: 'Poly Probabilités 5, ch. 3, p. 38 (PDF)'
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 3
@@ -905,7 +905,7 @@
 - id: proba-a-044-2
   notion: proba-n-0080
   recto: 'Rem. 4.6 : formule de transfert pour une indicatrice'
-  verso: 'Si \(\varphi=\mathbf 1_B\), avec \(B\) un événement de \(\mathbb R^n\), alors \(E[\varphi(X)]=\int_Bf(x_1,\dots,x_n)\,dx_1\cdots dx_n=P(X\in B)\).'
+  verso: 'Soit \(X\) un vecteur aléatoire à valeurs dans \(\mathbb R^n\) de loi de densité \(f\), et \(\varphi\) une fonction réelle définie sur \(\mathbb R^n\). Si \(\varphi=\mathbf 1_B\), avec \(B\) un événement de \(\mathbb R^n\), alors \(E[\varphi(X)]=\int_Bf(x_1,\dots,x_n)\,dx_1\cdots dx_n=P(X\in B)\).'
   source: 'Poly Probabilités 5, ch. 4, p. 43 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -953,7 +953,7 @@
 - id: proba-a-047-2
   notion: proba-n-0083
   recto: 'Exemple : étapes du changement \((u,v)=(x+y,x-y)\)'
-  verso: 'Pour \(E[\varphi(U,V)]=\int_D\varphi(x+y,x-y)\times3(x+y)\,dx\,dy\), avec \(\varphi\) continue bornée sur \(\mathbb R^2\), on pose \((u,v)=\psi(x,y)=(x+y,x-y)\).<br>Première étape, inverser : \(\left\{\begin{array}{l}u=x+y\\v=x-y\end{array}\right.\iff\left\{\begin{array}{l}x=\frac{u+v}{2}\\y=\frac{u-v}{2}\end{array}\right.\) ; on remplace \(\varphi(x+y,x-y)\times3(x+y)\) par \(\varphi(u,v)\times3u\).<br>Deuxième étape, exprimer \(dx\,dy\) : \(dx\,dy=|J_{\psi^{-1}}(u,v)|\,du\,dv=\left|\det\begin{pmatrix}\frac12&amp;\frac12\\\frac12&amp;-\frac12\end{pmatrix}\right|du\,dv=\frac12du\,dv\).<br>Troisième étape, nouveau domaine : \((x,y)\in D\iff0\le\frac{u+v}{2},\ 0\le\frac{u-v}{2},\ u\le1\iff-v\le u,\ v\le u,\ u\le1\), donc \(D^{\prime}=\{|v|\le u\le1\}\).'
+  verso: 'Soit \((X,Y)\) de densité \(3(x+y)\mathbf 1_{(x,y)\in D}\), avec \(D=\{(x,y)\in\mathbb R^2\mid x\ge0,y\ge0,x+y\le1\}\), et \((U,V)=(X+Y,X-Y)\). Pour \(E[\varphi(U,V)]=\int_D\varphi(x+y,x-y)\times3(x+y)\,dx\,dy\), avec \(\varphi\) continue bornée sur \(\mathbb R^2\), on pose \((u,v)=\psi(x,y)=(x+y,x-y)\).<br>Première étape, inverser : \(\left\{\begin{array}{l}u=x+y\\v=x-y\end{array}\right.\iff\left\{\begin{array}{l}x=\frac{u+v}{2}\\y=\frac{u-v}{2}\end{array}\right.\) ; on remplace \(\varphi(x+y,x-y)\times3(x+y)\) par \(\varphi(u,v)\times3u\).<br>Deuxième étape, exprimer \(dx\,dy\) : \(dx\,dy=|J_{\psi^{-1}}(u,v)|\,du\,dv=\left|\det\begin{pmatrix}\frac12&amp;\frac12\\\frac12&amp;-\frac12\end{pmatrix}\right|du\,dv=\frac12du\,dv\).<br>Troisième étape, nouveau domaine : \((x,y)\in D\iff0\le\frac{u+v}{2},\ 0\le\frac{u-v}{2},\ u\le1\iff-v\le u,\ v\le u,\ u\le1\), donc \(D^{\prime}=\{|v|\le u\le1\}\).'
   source: 'Poly Probabilités 5, ch. 4, p. 44-45 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -961,7 +961,7 @@
 - id: proba-a-047-3
   notion: proba-n-0083
   recto: 'Exemple : précautions pour le nouveau domaine \(\psi(D)\)'
-  verso: 'Reste à calculer \(D^{\prime}=\psi(D)\), sans doute le point le plus délicat dans ce genre d''exercices. Il faut prendre garde à procéder par équivalence et non par implication (erreur tellement fréquente !). En particulier, lorsque le domaine \(D\) est défini par des inégalités, il importe de vérifier qu''elles trouvent toutes leur traduction dans le nouveau domaine \(\psi(D)\).'
+  verso: 'Soit \(\psi\) un changement de variables défini sur un domaine \(D\subset\mathbb R^n\) et \(D^{\prime}=\psi(D)\). Reste à calculer \(D^{\prime}=\psi(D)\), sans doute le point le plus délicat dans ce genre d''exercices. Il faut prendre garde à procéder par équivalence et non par implication (erreur tellement fréquente !). En particulier, lorsque le domaine \(D\) est défini par des inégalités, il importe de vérifier qu''elles trouvent toutes leur traduction dans le nouveau domaine \(\psi(D)\).'
   source: 'Poly Probabilités 5, ch. 4, p. 45 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1009,7 +1009,7 @@
 - id: proba-a-049-2
   notion: proba-n-0087
   recto: 'Preuve : Prop. 4.12, densité produit'
-  verso: 'Il est clair que \(f\) est positive. Le théorème de Fubini-Tonelli donne \(\int_{\mathbb R^n}f(x_1,\dots,x_n)\,dx_1\cdots dx_n=\prod_{i=1}^n\int_{\mathbb R}f_i(x_i)\,dx_i=1\) : \(f\) est une densité de probabilité. Pour les marginales, si \((X_1,\dots,X_n)\) est de densité \(f\), \(f_{X_1}(x_1)=\int_{\mathbb R^{n-1}}f\,dx_2\cdots dx_n=f_1(x_1)\prod_{i=2}^n\int_{\mathbb R}f_i(x_i)\,dx_i=f_1(x_1)\). De même, \(f_{X_i}=f_i\) pour tout \(i\).'
+  verso: 'Soient \(f_1,\dots,f_n\) des densités de lois réelles et \(f(x_1,\dots,x_n)=f_1(x_1)\cdots f_n(x_n)\) pour tout \((x_1,\dots,x_n)\in\mathbb R^n\). Il est clair que \(f\) est positive. Le théorème de Fubini-Tonelli donne \(\int_{\mathbb R^n}f(x_1,\dots,x_n)\,dx_1\cdots dx_n=\prod_{i=1}^n\int_{\mathbb R}f_i(x_i)\,dx_i=1\) : \(f\) est une densité de probabilité. Pour les marginales, si \((X_1,\dots,X_n)\) est de densité \(f\), \(f_{X_1}(x_1)=\int_{\mathbb R^{n-1}}f\,dx_2\cdots dx_n=f_1(x_1)\prod_{i=2}^n\int_{\mathbb R}f_i(x_i)\,dx_i=f_1(x_1)\). De même, \(f_{X_i}=f_i\) pour tout \(i\).'
   source: 'Poly Probabilités 5, ch. 4, p. 48 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1049,7 +1049,7 @@
 - id: proba-a-050-5
   notion: proba-n-0088
   recto: 'Prop. (Remarque 4.16) : indépendance de deux sous-vecteurs'
-  verso: 'Le Thm 4.14 se généralise sans difficulté si l''on considère des marginales de dimension supérieure à \(1\). En particulier, supposons que \((X_1,\dots,X_p)\) ait \(f_1\) pour densité, et \((X_{p+1},\dots,X_n)\) ait \(f_2\) pour densité. Alors les vecteurs aléatoires \((X_1,\dots,X_p)\) et \((X_{p+1},\dots,X_n)\) sont indépendants si et seulement si la loi du vecteur aléatoire \((X_1,\dots,X_n)\) admet \(f_1\otimes f_2\) pour densité.'
+  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur aléatoire et \(p\in\{1,\dots,n-1\}\). Le Thm 4.14 se généralise sans difficulté si l''on considère des marginales de dimension supérieure à \(1\). En particulier, supposons que \((X_1,\dots,X_p)\) ait \(f_1\) pour densité, et \((X_{p+1},\dots,X_n)\) ait \(f_2\) pour densité. Alors les vecteurs aléatoires \((X_1,\dots,X_p)\) et \((X_{p+1},\dots,X_n)\) sont indépendants si et seulement si la loi du vecteur aléatoire \((X_1,\dots,X_n)\) admet \(f_1\otimes f_2\) pour densité.'
   source: 'Poly Probabilités 5, ch. 4, p. 50 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1073,7 +1073,7 @@
 - id: proba-a-051-2
   notion: proba-n-0093
   recto: 'Thm 4.25 : la fonction de répartition caractérise la loi (vecteurs)'
-  verso: 'Soient \(X\) et \(Y\) deux vecteurs aléatoires à valeurs dans \(\mathbb R^n\). Alors \(X\) et \(Y\) ont même loi \(\iff F_X=F_Y\).'
+  verso: 'Soient \(X\) et \(Y\) deux vecteurs aléatoires à valeurs dans \(\mathbb R^n\), de fonctions de répartition \(F_X\) et \(F_Y\). Alors \(X\) et \(Y\) ont même loi \(\iff F_X=F_Y\).'
   source: 'Poly Probabilités 5, ch. 4, p. 52 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 3
@@ -1081,7 +1081,7 @@
 - id: proba-a-051-3
   notion: proba-n-0093
   recto: 'Prop. 4.26 : densité à partir de la fonction de répartition'
-  verso: 'Soit \(X\) un vecteur aléatoire à valeurs dans \(\mathbb R^n\) ayant une densité \(f_X\). Si \(f_X\) est continue et suffisamment régulière pour que les dérivations successives soient permises, alors \(\dfrac{\partial}{\partial x_1}\cdots\dfrac{\partial}{\partial x_n}F_X(x)=f_X(x)\).'
+  verso: 'Soit \(X\) un vecteur aléatoire à valeurs dans \(\mathbb R^n\) ayant une densité \(f_X\) et une fonction de répartition \(F_X\). Si \(f_X\) est continue et suffisamment régulière pour que les dérivations successives soient permises, alors \(\dfrac{\partial}{\partial x_1}\cdots\dfrac{\partial}{\partial x_n}F_X(x)=f_X(x)\).'
   source: 'Poly Probabilités 5, ch. 4, p. 52 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 3
@@ -1113,7 +1113,7 @@
 - id: proba-a-053-1
   notion: proba-n-0095
   recto: 'Cor. 4.30 : indépendance et fonction caractéristique'
-  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur aléatoire à valeurs dans \(\mathbb R^n\). Les variables \(X_1,\dots,X_n\) sont indépendantes si et seulement si \(\forall(t_1,\dots,t_n)\in\mathbb R^n,\ \varphi_X(t_1,\dots,t_n)=\varphi_{X_1}(t_1)\cdots\varphi_{X_n}(t_n)\), autrement dit si et seulement si \(\varphi_X=\varphi_{X_1}\otimes\cdots\otimes\varphi_{X_n}\). Ce corollaire reste vrai si \(X_1,\dots,X_n\) sont eux-mêmes des vecteurs aléatoires.'
+  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur aléatoire à valeurs dans \(\mathbb R^n\), de fonction caractéristique \(\varphi_X\) ; \(\varphi_{X_k}\) désigne la fonction caractéristique de \(X_k\). Les variables \(X_1,\dots,X_n\) sont indépendantes si et seulement si \(\forall(t_1,\dots,t_n)\in\mathbb R^n,\ \varphi_X(t_1,\dots,t_n)=\varphi_{X_1}(t_1)\cdots\varphi_{X_n}(t_n)\), autrement dit si et seulement si \(\varphi_X=\varphi_{X_1}\otimes\cdots\otimes\varphi_{X_n}\). Ce corollaire reste vrai si \(X_1,\dots,X_n\) sont eux-mêmes des vecteurs aléatoires.'
   source: 'Poly Probabilités 5, ch. 4, p. 53 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1121,7 +1121,7 @@
 - id: proba-a-053-2
   notion: proba-n-0095
   recto: 'Cor. 4.32 : fonction caractéristique d''une somme'
-  verso: 'Soient \(X\) et \(Y\) deux vecteurs aléatoires indépendants et à valeurs dans \(\mathbb R^n\). Alors \(\forall t\in\mathbb R^n,\ \varphi_{X+Y}(t)=\varphi_X(t)\varphi_Y(t)\).<br>Preuve : \(\varphi_{X+Y}(t)=E\left[e^{i\langle t,X+Y\rangle}\right]=E\left[e^{i(\langle t,X\rangle+\langle t,Y\rangle)}\right]=\varphi_{(X,Y)}(t,t)=\varphi_X(t)\varphi_Y(t)\).'
+  verso: 'Soient \(X\) et \(Y\) deux vecteurs aléatoires indépendants et à valeurs dans \(\mathbb R^n\), de fonctions caractéristiques \(\varphi_X,\varphi_Y\) (\(\varphi_{X+Y}\) : celle de \(X+Y\)). Alors \(\forall t\in\mathbb R^n,\ \varphi_{X+Y}(t)=\varphi_X(t)\varphi_Y(t)\).<br>Preuve : \(\varphi_{X+Y}(t)=E\left[e^{i\langle t,X+Y\rangle}\right]=E\left[e^{i(\langle t,X\rangle+\langle t,Y\rangle)}\right]=\varphi_{(X,Y)}(t,t)=\varphi_X(t)\varphi_Y(t)\).'
   source: 'Poly Probabilités 5, ch. 4, p. 53 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1161,7 +1161,7 @@
 - id: proba-a-055-2
   notion: proba-n-0100
   recto: 'Prop. 4.39 (1) : symétrie et positivité de \(\Gamma_X\)'
-  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur aléatoire à valeurs dans \(\mathbb R^n\) tel que \(E[X_i^2]\lt+\infty\) pour tout \(i\). Alors \(\Gamma_X\) est une matrice symétrique et positive.'
+  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur aléatoire à valeurs dans \(\mathbb R^n\) tel que \(E[X_i^2]\lt+\infty\) pour tout \(i\), de matrice de covariance \(\Gamma_X=(\mathrm{cov}(X_i,X_j))_{i,j}\). Alors \(\Gamma_X\) est une matrice symétrique et positive.'
   source: 'Poly Probabilités 5, ch. 4, p. 56-57 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1169,7 +1169,7 @@
 - id: proba-a-055-3
   notion: proba-n-0100
   recto: 'Prop. 4.39 (2) : formules de variance et de covariance'
-  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur aléatoire à valeurs dans \(\mathbb R^n\) tel que \(E[X_i^2]\lt+\infty\) pour tout \(i\). Pour tous \((\alpha_1,\dots,\alpha_n),(\beta_1,\dots,\beta_n)\in\mathbb R^n\) :<br>\(\mathrm{var}\left(\sum_{i=1}^n\alpha_iX_i\right)=\sum_{i=1}^n\alpha_i^2\mathrm{var}(X_i)+2\sum_{i,j=1,\dots,n;\ i\lt j}\alpha_i\alpha_j\mathrm{cov}(X_i,X_j)\) ;<br>\(\mathrm{cov}\left(\sum_{i=1}^n\alpha_iX_i,\sum_{i=1}^n\beta_iX_i\right)=\sum_{i,j=1,\dots,n}\alpha_i\beta_j\mathrm{cov}(X_i,X_j)=(\alpha_1\ \cdots\ \alpha_n)\,\Gamma_X\,(\beta_1\ \cdots\ \beta_n)^T\).'
+  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur aléatoire à valeurs dans \(\mathbb R^n\) tel que \(E[X_i^2]\lt+\infty\) pour tout \(i\), de matrice de covariance \(\Gamma_X\). Pour tous \((\alpha_1,\dots,\alpha_n),(\beta_1,\dots,\beta_n)\in\mathbb R^n\) :<br>\(\mathrm{var}\left(\sum_{i=1}^n\alpha_iX_i\right)=\sum_{i=1}^n\alpha_i^2\mathrm{var}(X_i)+2\sum_{i,j=1,\dots,n;\ i\lt j}\alpha_i\alpha_j\mathrm{cov}(X_i,X_j)\) ;<br>\(\mathrm{cov}\left(\sum_{i=1}^n\alpha_iX_i,\sum_{i=1}^n\beta_iX_i\right)=\sum_{i,j=1,\dots,n}\alpha_i\beta_j\mathrm{cov}(X_i,X_j)=(\alpha_1\ \cdots\ \alpha_n)\,\Gamma_X\,(\beta_1\ \cdots\ \beta_n)^T\).'
   source: 'Poly Probabilités 5, ch. 4, p. 56 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1177,7 +1177,7 @@
 - id: proba-a-056-1
   notion: proba-n-0101
   recto: 'Prop. (Remarque 4.40) : matrice de covariance non définie positive'
-  verso: 'La matrice de covariance de \((X_1,\dots,X_n)\) est positive, mais pas nécessairement définie positive. Si elle n''est pas définie positive, cela signifie qu''elle est de rang strictement inférieur à \(n\), que son noyau n''est pas trivial, et qu''il existe donc \((a_1,\dots,a_n)\in\mathbb R^n\setminus\{(0,\dots,0)\}\) tel que \(\Gamma_X(a_1,\dots,a_n)^T=0\). La matrice de covariance \(\Gamma_X\) n''est donc pas définie positive si et seulement s''il existe une liaison affine non triviale entre \(X_1,\dots,X_n\).'
+  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur aléatoire de carré intégrable, de matrice de covariance \(\Gamma_X\). La matrice de covariance de \((X_1,\dots,X_n)\) est positive, mais pas nécessairement définie positive. Si elle n''est pas définie positive, cela signifie qu''elle est de rang strictement inférieur à \(n\), que son noyau n''est pas trivial, et qu''il existe donc \((a_1,\dots,a_n)\in\mathbb R^n\setminus\{(0,\dots,0)\}\) tel que \(\Gamma_X(a_1,\dots,a_n)^T=0\). La matrice de covariance \(\Gamma_X\) n''est donc pas définie positive si et seulement s''il existe une liaison affine non triviale entre \(X_1,\dots,X_n\).'
   source: 'Poly Probabilités 5, ch. 4, p. 57 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1185,7 +1185,7 @@
 - id: proba-a-056-2
   notion: proba-n-0101
   recto: 'Preuve : Remarque 4.40, liaison affine'
-  verso: 'Soit \(a=(a_1,\dots,a_n)\neq0\) tel que \(\Gamma_Xa=0\). Alors \(\mathrm{var}\left(\sum_{i=1}^na_iX_i\right)=(a_1\ \cdots\ a_n)\,\Gamma_X\,(a_1\ \cdots\ a_n)^T=0\). La variable aléatoire \(\sum_{i=1}^na_iX_i\) est donc constante presque sûrement : il existe \(b\in\mathbb R\) tel que \(a_1X_1+\cdots+a_nX_n=b\) p.s.'
+  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur aléatoire de carré intégrable, de matrice de covariance \(\Gamma_X\). Soit \(a=(a_1,\dots,a_n)\neq0\) tel que \(\Gamma_Xa=0\). Alors \(\mathrm{var}\left(\sum_{i=1}^na_iX_i\right)=(a_1\ \cdots\ a_n)\,\Gamma_X\,(a_1\ \cdots\ a_n)^T=0\). La variable aléatoire \(\sum_{i=1}^na_iX_i\) est donc constante presque sûrement : il existe \(b\in\mathbb R\) tel que \(a_1X_1+\cdots+a_nX_n=b\) p.s.'
   source: 'Poly Probabilités 5, ch. 4, p. 57 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1201,7 +1201,7 @@
 - id: proba-a-057-2
   notion: proba-n-0102
   recto: 'Preuve : Cor. 4.41, \(\Gamma_Y=A\Gamma_XA^T\)'
-  verso: 'Soit \(i,j\in\{1,\dots,m\}\) et \((a_{p,q})\) les coefficients de \(A\). Alors \(\Gamma_Y(i,j)=\mathrm{cov}((AX)_i,(AX)_j)=\mathrm{cov}\left(\sum_{k=1}^na_{i,k}X_k,\sum_{l=1}^na_{j,l}X_l\right)=\sum_{k,l=1}^na_{i,k}a_{j,l}\mathrm{cov}(X_k,X_l)=\sum_{k,l=1}^na_{i,k}\Gamma_X(k,l)a_{j,l}=(A\Gamma_XA^T)(i,j)\). D''où le résultat attendu \(\Gamma_Y=A\Gamma_XA^T\).'
+  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur aléatoire de carré intégrable, de matrice de covariance \(\Gamma_X\), \(A\) une matrice \(m\times n\) de coefficients \((a_{p,q})\) et \(Y=AX\). Soit \(i,j\in\{1,\dots,m\}\) et \((a_{p,q})\) les coefficients de \(A\). Alors \(\Gamma_Y(i,j)=\mathrm{cov}((AX)_i,(AX)_j)=\mathrm{cov}\left(\sum_{k=1}^na_{i,k}X_k,\sum_{l=1}^na_{j,l}X_l\right)=\sum_{k,l=1}^na_{i,k}a_{j,l}\mathrm{cov}(X_k,X_l)=\sum_{k,l=1}^na_{i,k}\Gamma_X(k,l)a_{j,l}=(A\Gamma_XA^T)(i,j)\). D''où le résultat attendu \(\Gamma_Y=A\Gamma_XA^T\).'
   source: 'Poly Probabilités 5, ch. 4, p. 58 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1225,7 +1225,7 @@
 - id: proba-a-058-3
   notion: proba-n-0104
   recto: 'Preuve : Prop. 4.46, récurrence sur \(E[X^{2k}]\)'
-  verso: 'Soit \(k\ge1\) et \(X\) de densité \(f(x)=\frac{e^{-x^2/2}}{\sqrt{2\pi}}\). Comme \(X^{2k}\) est positive, elle admet une espérance finie ou infinie, calculée par récurrence grâce à une intégration par parties : \(E[X^{2k}]=\lim_{A\to+\infty}\frac{1}{\sqrt{2\pi}}\int_{-A}^Ax^{2k-1}\times xe^{-x^2/2}dx\). Le terme de bord s''annule et il reste \(E[X^{2k}]=(2k-1)\times E[X^{2k-2}]=(2k-1)(2k-3)\cdots3\times1\times E[X^0]=\frac{(2k)!}{2^kk!}\lt+\infty\). Comme \(X\) admet un moment d''ordre \(n\), elle en admet à tous les ordres inférieurs : elle admet des moments de tous ordres.'
+  verso: 'Soit \(k\ge1\) et \(X\) de densité \(f(x)=\frac{e^{-x^2/2}}{\sqrt{2\pi}}\). Comme \(X^{2k}\) est positive, elle admet une espérance finie ou infinie, calculée par récurrence grâce à une intégration par parties : \(E[X^{2k}]=\lim_{A\to+\infty}\frac{1}{\sqrt{2\pi}}\int_{-A}^Ax^{2k-1}\times xe^{-x^2/2}dx\). Le terme de bord s''annule et il reste \(E[X^{2k}]=(2k-1)\times E[X^{2k-2}]=(2k-1)(2k-3)\cdots3\times1\times E[X^0]=\frac{(2k)!}{2^kk!}\lt+\infty\). Comme \(X\) admet un moment d''ordre \(2k\) pour tout \(k\ge1\), elle en admet à tous les ordres inférieurs : elle admet des moments de tous ordres.'
   source: 'Poly Probabilités 5, ch. 4, p. 59 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 3
@@ -1273,7 +1273,7 @@
 - id: proba-a-061-2
   notion: proba-n-0107
   recto: 'Déf 4.48 : moment exponentiel de \(\mathcal N(m,\sigma^2)\)'
-  verso: 'Soit \(Y=m+\sigma X\) de loi \(\mathcal N(m,\sigma^2)\). Pour tout \(\lambda\in\mathbb C\), \(e^{\lambda Y}\) admet une espérance finie égale à \(e^{\lambda m+\lambda^2\sigma^2/2}\). En particulier, la fonction caractéristique vaut \(\forall t\in\mathbb R,\ \varphi_Y(t)=e^{imt-\sigma^2t^2/2}\).<br>Preuve : \(E[e^{\lambda Y}]=E\left[e^{\lambda m}e^{(\lambda\sigma)X}\right]=e^{\lambda m}e^{(\lambda\sigma)^2/2}=e^{\lambda m+\lambda^2\sigma^2/2}\).'
+  verso: 'Soient \(X\) de densité \(f(x)=\frac{e^{-x^2/2}}{\sqrt{2\pi}}\), \(m\in\mathbb R\) et \(\sigma\ge0\). Soit \(Y=m+\sigma X\) de loi \(\mathcal N(m,\sigma^2)\). Pour tout \(\lambda\in\mathbb C\), \(e^{\lambda Y}\) admet une espérance finie égale à \(e^{\lambda m+\lambda^2\sigma^2/2}\). En particulier, la fonction caractéristique vaut \(\forall t\in\mathbb R,\ \varphi_Y(t)=e^{imt-\sigma^2t^2/2}\).<br>Preuve : \(E[e^{\lambda Y}]=E\left[e^{\lambda m}e^{(\lambda\sigma)X}\right]=e^{\lambda m}e^{(\lambda\sigma)^2/2}=e^{\lambda m+\lambda^2\sigma^2/2}\).'
   source: 'Poly Probabilités 5, ch. 4, p. 60 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 3
@@ -1289,7 +1289,7 @@
 - id: proba-a-062-1
   notion: proba-n-0108
   recto: 'Prop. 4.49 : densité de \(\mathcal N(m,\sigma^2)\)'
-  verso: 'Soit \(Y=m+\sigma X\) de loi \(\mathcal N(m,\sigma^2)\), où \(X\) a pour densité \(f(x)=\frac{e^{-x^2/2}}{\sqrt{2\pi}}\). Si \(\sigma\) est strictement positive, alors la loi de \(Y\) admet la densité \(f_Y\) définie par : \(\forall y\in\mathbb R,\ f_Y(y)=\dfrac{e^{-\frac{(y-m)^2}{2\sigma^2}}}{\sqrt{2\pi\sigma^2}}\).'
+  verso: 'Soient \(m\in\mathbb R\) et \(\sigma\ge0\). Soit \(Y=m+\sigma X\) de loi \(\mathcal N(m,\sigma^2)\), où \(X\) a pour densité \(f(x)=\frac{e^{-x^2/2}}{\sqrt{2\pi}}\). Si \(\sigma\) est strictement positive, alors la loi de \(Y\) admet la densité \(f_Y\) définie par : \(\forall y\in\mathbb R,\ f_Y(y)=\dfrac{e^{-\frac{(y-m)^2}{2\sigma^2}}}{\sqrt{2\pi\sigma^2}}\).'
   source: 'Poly Probabilités 5, ch. 4, p. 61 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 3
@@ -1297,7 +1297,7 @@
 - id: proba-a-062-2
   notion: proba-n-0108
   recto: 'Preuve : Prop. 4.49, densité par la fonction de répartition'
-  verso: 'Soit \(Y=m+\sigma X\), \(\sigma\gt0\), \(X\) de densité \(f\) et de fonction de répartition \(F_X\). Pour tout \(y\in\mathbb R\), \(F_Y(y)=P(Y\le y)=P(m+\sigma X\le y)=P\left(X\le\frac{y-m}{\sigma}\right)=F_X\left(\frac{y-m}{\sigma}\right)\) car \(\sigma\gt0\). \(F_X\) est \(C^1\) sur \(\mathbb R\) car la densité \(f\) est continue sur \(\mathbb R\). On en déduit que \(F_Y\) est \(C^1\) sur \(\mathbb R\), donc que la loi de \(Y\) admet la densité \(f_Y(y)=F_Y^{\prime}(y)=\frac1\sigma F_X^{\prime}\left(\frac{y-m}{\sigma}\right)=\frac1\sigma f\left(\frac{y-m}{\sigma}\right)=\frac{e^{-(y-m)^2/(2\sigma^2)}}{\sqrt{2\pi\sigma^2}}\).'
+  verso: 'Soit \(m\in\mathbb R\). Soit \(Y=m+\sigma X\), \(\sigma\gt0\), \(X\) de densité \(f\) et de fonction de répartition \(F_X\). Pour tout \(y\in\mathbb R\), \(F_Y(y)=P(Y\le y)=P(m+\sigma X\le y)=P\left(X\le\frac{y-m}{\sigma}\right)=F_X\left(\frac{y-m}{\sigma}\right)\) car \(\sigma\gt0\). \(F_X\) est \(C^1\) sur \(\mathbb R\) car la densité \(f\) est continue sur \(\mathbb R\). On en déduit que \(F_Y\) est \(C^1\) sur \(\mathbb R\), donc que la loi de \(Y\) admet la densité \(f_Y(y)=F_Y^{\prime}(y)=\frac1\sigma F_X^{\prime}\left(\frac{y-m}{\sigma}\right)=\frac1\sigma f\left(\frac{y-m}{\sigma}\right)=\frac{e^{-(y-m)^2/(2\sigma^2)}}{\sqrt{2\pi\sigma^2}}\).'
   source: 'Poly Probabilités 5, ch. 4, p. 61 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 3
@@ -1313,7 +1313,7 @@
 - id: proba-a-063-2
   notion: proba-n-0109
   recto: 'Preuve : Prop. 4.50 par fonctions caractéristiques'
-  verso: 'Soit \(t\in\mathbb R\). Comme les variables sont indépendantes, \(\varphi_{\sum_{k=1}^n\alpha_kX_k}(t)=\prod_{k=1}^n\varphi_{\alpha_kX_k}(t)=\prod_{k=1}^ne^{i\alpha_k\mu_kt-\frac{\alpha_k^2\sigma_k^2t^2}{2}}=e^{i\left(\sum_k\alpha_k\mu_k\right)t-\frac12\left(\sum_k\alpha_k^2\sigma_k^2\right)t^2}\). On reconnaît la fonction caractéristique d''une loi gaussienne de moyenne \(\sum_k\alpha_k\mu_k\) et de variance \(\sum_k\alpha_k^2\sigma_k^2\).'
+  verso: 'Soient \(X_1,\dots,X_n\) des variables gaussiennes indépendantes, \(X_k\sim\mathcal N(\mu_k,\sigma_k^2)\), et \(\alpha_1,\dots,\alpha_n\in\mathbb R\). Soit \(t\in\mathbb R\). Comme les variables sont indépendantes, \(\varphi_{\sum_{k=1}^n\alpha_kX_k}(t)=\prod_{k=1}^n\varphi_{\alpha_kX_k}(t)=\prod_{k=1}^ne^{i\alpha_k\mu_kt-\frac{\alpha_k^2\sigma_k^2t^2}{2}}=e^{i\left(\sum_k\alpha_k\mu_k\right)t-\frac12\left(\sum_k\alpha_k^2\sigma_k^2\right)t^2}\). On reconnaît la fonction caractéristique d''une loi gaussienne de moyenne \(\sum_k\alpha_k\mu_k\) et de variance \(\sum_k\alpha_k^2\sigma_k^2\).'
   source: 'Poly Probabilités 5, ch. 4, p. 61 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 3
@@ -1377,7 +1377,7 @@
 - id: proba-a-066-3
   notion: proba-n-0112
   recto: 'Preuve : Prop. 4.55, fonction caractéristique d''un vecteur gaussien'
-  verso: 'Soit \(t\in\mathbb R^n\). \(\langle t,X\rangle=\sum_{k=1}^nt_kX_k\) est une variable gaussienne, d''après la définition d''un vecteur gaussien. Elle est de moyenne \(E\left[\sum_kt_kX_k\right]=\sum_kt_kE[X_k]=\langle t,\mu_X\rangle\) et de variance \(\mathrm{var}\left(\sum_kt_kX_k\right)=(t_1\ \cdots\ t_n)\,\Gamma_X\,(t_1\ \cdots\ t_n)^T=\langle t,\Gamma_Xt\rangle\). On en déduit : \(\varphi_X(t)=E\left[e^{i\langle t,X\rangle}\right]=\varphi_{\langle t,X\rangle}(1)=e^{i\langle t,\mu_X\rangle-\frac12\langle t,\Gamma_Xt\rangle}\).'
+  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur gaussien, de vecteur moyenne \(\mu_X\) et de matrice de covariance \(\Gamma_X\). Soit \(t\in\mathbb R^n\). \(\langle t,X\rangle=\sum_{k=1}^nt_kX_k\) est une variable gaussienne, d''après la définition d''un vecteur gaussien. Elle est de moyenne \(E\left[\sum_kt_kX_k\right]=\sum_kt_kE[X_k]=\langle t,\mu_X\rangle\) et de variance \(\mathrm{var}\left(\sum_kt_kX_k\right)=(t_1\ \cdots\ t_n)\,\Gamma_X\,(t_1\ \cdots\ t_n)^T=\langle t,\Gamma_Xt\rangle\). On en déduit : \(\varphi_X(t)=E\left[e^{i\langle t,X\rangle}\right]=\varphi_{\langle t,X\rangle}(1)=e^{i\langle t,\mu_X\rangle-\frac12\langle t,\Gamma_Xt\rangle}\).'
   source: 'Poly Probabilités 5, ch. 4, p. 63 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1393,7 +1393,7 @@
 - id: proba-a-067-2
   notion: proba-n-0113
   recto: 'Preuve : Prop. 4.57, image affine d''un vecteur gaussien'
-  verso: 'Toute combinaison linéaire de \(AX+b\) est la somme d''une combinaison linéaire de \(X\) (qui est une gaussienne car \(X\) est un vecteur gaussien) et d''une constante : c''est donc une gaussienne, ce qui montre que \(AX+b\) est un vecteur gaussien. Ne reste qu''à déterminer sa moyenne et sa matrice de covariance pour finir de caractériser sa loi : leur calcul découle directement du Cor. 4.41.'
+  verso: 'Soient \(X=(X_1,\dots,X_n)\) un vecteur gaussien, \(A\) une matrice \(p\times n\) et \(b\in\mathbb R^p\). Toute combinaison linéaire de \(AX+b\) est la somme d''une combinaison linéaire de \(X\) (qui est une gaussienne car \(X\) est un vecteur gaussien) et d''une constante : c''est donc une gaussienne, ce qui montre que \(AX+b\) est un vecteur gaussien. Ne reste qu''à déterminer sa moyenne et sa matrice de covariance pour finir de caractériser sa loi : leur calcul découle directement du Cor. 4.41.'
   source: 'Poly Probabilités 5, ch. 4, p. 63 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1409,7 +1409,7 @@
 - id: proba-a-068-2
   notion: proba-n-0114
   recto: 'Preuve : Prop. 4.58, construction d''un vecteur gaussien'
-  verso: '\(\Gamma\) est symétrique, donc diagonalisable : \(D=\mathrm{diag}(\lambda_1,\dots,\lambda_n)\) la matrice diagonale des valeurs propres et \(O\) orthogonale telle que \(\Gamma=ODO^{-1}\). Comme \(\Gamma\) est positive, ses valeurs propres sont positives. On définit \(X_1,\dots,X_n\) gaussiennes centrées indépendantes de variances \(\lambda_1,\dots,\lambda_n\) : le vecteur \(X\) est de moyenne nulle et de matrice de covariance \(D\) car les variables sont décorrélées. Posons \(Y=OX+\mu\) : d''après la Prop. 4.57, \(Y\) est un vecteur gaussien de vecteur moyenne \(O\times E[X]+\mu=\mu\) et de matrice de covariance \(O\Gamma_XO^T=ODO^{-1}=\Gamma\).'
+  verso: 'Soient \(\mu\in\mathbb R^n\) et \(\Gamma\) une matrice symétrique positive \(n\times n\) ; on construit un vecteur gaussien de moyenne \(\mu\) et de covariance \(\Gamma\). \(\Gamma\) est symétrique, donc diagonalisable : \(D=\mathrm{diag}(\lambda_1,\dots,\lambda_n)\) la matrice diagonale des valeurs propres et \(O\) orthogonale telle que \(\Gamma=ODO^{-1}\). Comme \(\Gamma\) est positive, ses valeurs propres sont positives. On définit \(X_1,\dots,X_n\) gaussiennes centrées indépendantes de variances \(\lambda_1,\dots,\lambda_n\) : le vecteur \(X\) est de moyenne nulle et de matrice de covariance \(D\) car les variables sont décorrélées. Posons \(Y=OX+\mu\) : d''après la Prop. 4.57, \(Y\) est un vecteur gaussien de vecteur moyenne \(O\times E[X]+\mu=\mu\) et de matrice de covariance \(O\Gamma_XO^T=ODO^{-1}=\Gamma\).'
   source: 'Poly Probabilités 5, ch. 4, p. 63 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 3
@@ -1417,7 +1417,7 @@
 - id: proba-a-069-1
   notion: proba-n-0115
   recto: 'Prop. 4.60 : densité d''un vecteur gaussien'
-  verso: 'Soit \(X\sim\mathcal N(\mu_X,\Gamma_X)\). Si \(\Gamma_X\) est définie positive, alors la loi de \(X\) admet la densité : \(\forall x\in\mathbb R^n,\ f_X(x)=\dfrac{1}{\sqrt{(2\pi)^n\det\Gamma_X}}\exp\left(-\frac12\langle x-\mu_X,\Gamma_X^{-1}(x-\mu_X)\rangle\right)\).'
+  verso: 'Soit \(X\sim\mathcal N(\mu_X,\Gamma_X)\) un vecteur gaussien à valeurs dans \(\mathbb R^n\). Si \(\Gamma_X\) est définie positive, alors la loi de \(X\) admet la densité : \(\forall x\in\mathbb R^n,\ f_X(x)=\dfrac{1}{\sqrt{(2\pi)^n\det\Gamma_X}}\exp\left(-\frac12\langle x-\mu_X,\Gamma_X^{-1}(x-\mu_X)\rangle\right)\).'
   source: 'Poly Probabilités 5, ch. 4, p. 64 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1425,7 +1425,7 @@
 - id: proba-a-069-2
   notion: proba-n-0115
   recto: 'Prop. (Remarque 4.59) : rang de \(\Gamma\) strictement inférieur à \(n\)'
-  verso: 'Dans la construction de la Prop. 4.58 (\(Y=OX+\mu\)), si le rang de \(\Gamma\) est strictement inférieur à \(n\), alors \(Y\) est à valeurs dans un sous-ensemble de volume (ou mesure de Lebesgue) nul et sa loi ne peut être à densité. (Le support de \(Y\) est \(OS_X+\mu=\mathrm{Im}(\Gamma)+\mu\), sous-espace affine de dimension \(k\), le rang de \(\Gamma\).)'
+  verso: 'Soient \(\mu\in\mathbb R^n\) et \(\Gamma\) une matrice symétrique positive \(n\times n\) de rang \(k\lt n\), \(\Gamma=ODO^{-1}\) avec \(O\) orthogonale et \(D\) diagonale, \(X\) un vecteur gaussien centré de matrice de covariance \(D\) et de support \(S_X\). Dans la construction de la Prop. 4.58 (\(Y=OX+\mu\)), si le rang de \(\Gamma\) est strictement inférieur à \(n\), alors \(Y\) est à valeurs dans un sous-ensemble de volume (ou mesure de Lebesgue) nul et sa loi ne peut être à densité. (Le support de \(Y\) est \(OS_X+\mu=\mathrm{Im}(\Gamma)+\mu\), sous-espace affine de dimension \(k\), le rang de \(\Gamma\).)'
   source: 'Poly Probabilités 5, ch. 4, p. 64 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1433,7 +1433,7 @@
 - id: proba-a-069-3
   notion: proba-n-0115
   recto: 'Preuve : Prop. 4.60, densité d''un vecteur gaussien'
-  verso: 'On reprend la décomposition \(\Gamma_X=ODO^{-1}\) avec \(\lambda_i\gt0\). Soit \(U_1,\dots,U_n\) gaussiennes centrées indépendantes de variances \(\lambda_1,\dots,\lambda_n\) : \(U\) admet \(f_U=f_{U_1}\otimes\cdots\otimes f_{U_n}\) pour densité (Thm 4.14) et \(X\) est égale en loi à \(OU+\mu_X\). Par la méthode de la fonction muette, \(E[\varphi(X)]=\int_{\mathbb R^n}\varphi(Ou+\mu_X)f_{U_1}(u_1)\cdots f_{U_n}(u_n)\,du_1\cdots du_n\). Changement de variables affine \(x=Ou+\mu_X\iff u=O^{-1}(x-\mu_X)\), \(C^1\)-difféomorphisme de \(\mathbb R^n\) sur \(\mathbb R^n\) : \(du_1\cdots du_n=|\det(O^{-1})|dx_1\cdots dx_n=dx_1\cdots dx_n\). De plus \(\lambda_1\cdots\lambda_n=\det D=\det\Gamma_X\) et \(\frac{u_1^2}{\lambda_1}+\cdots+\frac{u_n^2}{\lambda_n}=\langle x-\mu_X,\Gamma_X^{-1}(x-\mu_X)\rangle\). D''où \(E[\varphi(X)]=\int_{\mathbb R^n}\varphi(x)\frac{e^{-\frac12\langle x-\mu_X,\Gamma_X^{-1}(x-\mu_X)\rangle}}{\sqrt{(2\pi)^n\det\Gamma_X}}dx\) : la loi de \(X\) admet bien la densité annoncée.'
+  verso: 'Soit \(X\sim\mathcal N(\mu_X,\Gamma_X)\) un vecteur gaussien à valeurs dans \(\mathbb R^n\), avec \(\Gamma_X\) définie positive, et \(\varphi\) une fonction continue bornée sur \(\mathbb R^n\). On reprend la décomposition \(\Gamma_X=ODO^{-1}\) (\(O\) orthogonale, \(D=\mathrm{diag}(\lambda_1,\dots,\lambda_n)\)) avec \(\lambda_i\gt0\). Soit \(U_1,\dots,U_n\) gaussiennes centrées indépendantes de variances \(\lambda_1,\dots,\lambda_n\) : \(U\) admet \(f_U=f_{U_1}\otimes\cdots\otimes f_{U_n}\) pour densité (Thm 4.14) et \(X\) est égale en loi à \(OU+\mu_X\). Par la méthode de la fonction muette, \(E[\varphi(X)]=\int_{\mathbb R^n}\varphi(Ou+\mu_X)f_{U_1}(u_1)\cdots f_{U_n}(u_n)\,du_1\cdots du_n\). Changement de variables affine \(x=Ou+\mu_X\iff u=O^{-1}(x-\mu_X)\), \(C^1\)-difféomorphisme de \(\mathbb R^n\) sur \(\mathbb R^n\) : \(du_1\cdots du_n=|\det(O^{-1})|dx_1\cdots dx_n=dx_1\cdots dx_n\). De plus \(\lambda_1\cdots\lambda_n=\det D=\det\Gamma_X\) et \(\frac{u_1^2}{\lambda_1}+\cdots+\frac{u_n^2}{\lambda_n}=\langle x-\mu_X,\Gamma_X^{-1}(x-\mu_X)\rangle\). D''où \(E[\varphi(X)]=\int_{\mathbb R^n}\varphi(x)\frac{e^{-\frac12\langle x-\mu_X,\Gamma_X^{-1}(x-\mu_X)\rangle}}{\sqrt{(2\pi)^n\det\Gamma_X}}dx\) : la loi de \(X\) admet bien la densité annoncée.'
   source: 'Poly Probabilités 5, ch. 4, p. 64-65 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1457,7 +1457,7 @@
 - id: proba-a-070-3
   notion: proba-n-0116
   recto: 'Preuve : Prop. 4.61, décorrélées \(\Rightarrow\) indépendantes'
-  verso: 'Notons \(\mu_i=E[X_i]\) et \(\sigma_i^2=\mathrm{var}(X_i)\). Si \(X_1,\dots,X_n\) sont décorrélées, la matrice de covariance de \(X\) est diagonale : \(\Gamma_X=\mathrm{diag}(\sigma_1^2,\dots,\sigma_n^2)\). La fonction caractéristique de \(X\) s''écrit comme le produit des fonctions caractéristiques de \(X_1,\dots,X_n\) : \(\varphi_X(t)=e^{i\langle t,\mu_X\rangle-\frac12\langle t,\Gamma_Xt\rangle}=e^{i\sum_kt_k\mu_k-\frac12\sum_kt_k^2\sigma_k^2}=\prod_{k=1}^ne^{it_k\mu_k-\frac{t_k^2\sigma_k^2}{2}}=\prod_{k=1}^n\varphi_{X_k}(t_k)\). D''après le Cor. 4.30, \(X_1,\dots,X_n\) sont indépendantes. La réciproque a déjà été établie dans la section sur la covariance.'
+  verso: 'Soit \(X=(X_1,\dots,X_n)\) un vecteur gaussien de vecteur moyenne \(\mu_X\), de matrice de covariance \(\Gamma_X\) et de fonction caractéristique \(\varphi_X\) ; \(t\in\mathbb R^n\). Notons \(\mu_i=E[X_i]\) et \(\sigma_i^2=\mathrm{var}(X_i)\). Si \(X_1,\dots,X_n\) sont décorrélées, la matrice de covariance de \(X\) est diagonale : \(\Gamma_X=\mathrm{diag}(\sigma_1^2,\dots,\sigma_n^2)\). La fonction caractéristique de \(X\) s''écrit comme le produit des fonctions caractéristiques de \(X_1,\dots,X_n\) : \(\varphi_X(t)=e^{i\langle t,\mu_X\rangle-\frac12\langle t,\Gamma_Xt\rangle}=e^{i\sum_kt_k\mu_k-\frac12\sum_kt_k^2\sigma_k^2}=\prod_{k=1}^ne^{it_k\mu_k-\frac{t_k^2\sigma_k^2}{2}}=\prod_{k=1}^n\varphi_{X_k}(t_k)\). D''après le Cor. 4.30, \(X_1,\dots,X_n\) sont indépendantes. La réciproque a déjà été établie dans la section sur la covariance.'
   source: 'Poly Probabilités 5, ch. 4, p. 65 (PDF)'
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   priorite: 1
@@ -1481,7 +1481,7 @@
 - id: proba-a-071-2
   notion: proba-n-0117
   recto: 'Preuve : Prop. 5.1, lemme de Borel-Cantelli'
-  verso: 'Pour tout \(N\ge1\) : \(P\left(\bigcap_{n=0}^{+\infty}\bigcup_{k=n}^{+\infty}A_k\right)\le P\left(\bigcup_{k=N}^{+\infty}A_k\right)\le\sum_{n=N}^{+\infty}P(A_n)\). Si la série \(\sum P(A_n)\) est convergente, alors \(\lim_{N\to+\infty}\sum_{n=N}^{+\infty}P(A_n)=0\), d''où \(P\left(\bigcap_n\bigcup_{k\ge n}A_k\right)=0\).'
+  verso: 'Soit \((A_n)_{n\in\mathbb N}\) une suite d''événements de \((\Omega,P)\). Pour tout \(N\ge1\) : \(P\left(\bigcap_{n=0}^{+\infty}\bigcup_{k=n}^{+\infty}A_k\right)\le P\left(\bigcup_{k=N}^{+\infty}A_k\right)\le\sum_{n=N}^{+\infty}P(A_n)\). Si la série \(\sum P(A_n)\) est convergente, alors \(\lim_{N\to+\infty}\sum_{n=N}^{+\infty}P(A_n)=0\), d''où \(P\left(\bigcap_n\bigcup_{k\ge n}A_k\right)=0\).'
   source: 'Poly Probabilités 5, ch. 5, p. 67 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1
@@ -1497,7 +1497,7 @@
 - id: proba-a-071-4
   notion: proba-n-0117
   recto: 'Prop. 5.2 : contre-exemple sans indépendance (Remarque 5.3)'
-  verso: 'Si les événements ne sont pas indépendants, cette réciproque est fausse. Pour un contre-exemple élémentaire, il suffit de prendre \(A_n=A\) avec \(P(A)\in]0,1[\).'
+  verso: 'Soit \((A_n)_{n\in\mathbb N}\) une suite d''événements de \((\Omega,P)\) telle que \(\sum_nP(A_n)=+\infty\). Si les événements ne sont pas indépendants, cette réciproque est fausse. Pour un contre-exemple élémentaire, il suffit de prendre \(A_n=A\) avec \(P(A)\in]0,1[\).'
   source: 'Poly Probabilités 5, ch. 5, p. 67 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1
@@ -1505,7 +1505,7 @@
 - id: proba-a-072-1
   notion: proba-n-0118
   recto: 'Preuve : Prop. 5.2, majoration de \(\prod(1-P(A_k))\)'
-  verso: 'Supposons les \(A_n\) indépendants avec \(\sum_nP(A_n)=+\infty\). Soit \(n\in\mathbb N\) et \(m\ge n\). Par indépendance, \(P\left(\bigcup_{k=n}^mA_k\right)=1-P\left(\bigcap_{k=n}^mA_k^c\right)=1-\prod_{k=n}^mP(A_k^c)=1-\prod_{k=n}^m(1-P(A_k))\). Étant donné que pour tout \(x\in[0,1]\), \(0\le1-x\le e^{-x}\), alors \(\prod_{k=n}^m(1-P(A_k))\le\exp\left(-\sum_{k=n}^mP(A_k)\right)\).'
+  verso: 'Soit \((A_n)_{n\in\mathbb N}\) une suite d''événements de \((\Omega,P)\). Supposons les \(A_n\) indépendants avec \(\sum_nP(A_n)=+\infty\). Soit \(n\in\mathbb N\) et \(m\ge n\). Par indépendance, \(P\left(\bigcup_{k=n}^mA_k\right)=1-P\left(\bigcap_{k=n}^mA_k^c\right)=1-\prod_{k=n}^mP(A_k^c)=1-\prod_{k=n}^m(1-P(A_k))\). Étant donné que pour tout \(x\in[0,1]\), \(0\le1-x\le e^{-x}\), alors \(\prod_{k=n}^m(1-P(A_k))\le\exp\left(-\sum_{k=n}^mP(A_k)\right)\).'
   source: 'Poly Probabilités 5, ch. 5, p. 68 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 3
@@ -1513,7 +1513,7 @@
 - id: proba-a-072-2
   notion: proba-n-0118
   recto: 'Preuve : Prop. 5.2, conclusion'
-  verso: 'Avec \(P\left(\bigcup_{k=n}^mA_k\right)\ge1-\exp\left(-\sum_{k=n}^mP(A_k)\right)\), en faisant tendre \(m\) vers \(+\infty\), on obtient par continuité monotone de \(P\) : \(\forall n\in\mathbb N,\ P\left(\bigcup_{k=n}^{+\infty}A_k\right)\ge1\), donc \(=1\). Par ailleurs, la suite \(\left(\bigcup_{k=n}^{+\infty}A_k,n\in\mathbb N\right)\) est une suite décroissante d''événements. Donc par continuité monotone (décroissante) de \(P\) : \(P\left(\bigcap_{n=0}^{+\infty}\bigcup_{k=n}^{+\infty}A_k\right)=\lim_{n\to+\infty}P\left(\bigcup_{k=n}^{+\infty}A_k\right)=1\).'
+  verso: 'Soit \((A_n)_{n\in\mathbb N}\) une suite d''événements de \((\Omega,P)\). Avec \(P\left(\bigcup_{k=n}^mA_k\right)\ge1-\exp\left(-\sum_{k=n}^mP(A_k)\right)\), en faisant tendre \(m\) vers \(+\infty\), on obtient par continuité monotone de \(P\) : \(\forall n\in\mathbb N,\ P\left(\bigcup_{k=n}^{+\infty}A_k\right)\ge1\), donc \(=1\). Par ailleurs, la suite \(\left(\bigcup_{k=n}^{+\infty}A_k,n\in\mathbb N\right)\) est une suite décroissante d''événements. Donc par continuité monotone (décroissante) de \(P\) : \(P\left(\bigcap_{n=0}^{+\infty}\bigcup_{k=n}^{+\infty}A_k\right)=\lim_{n\to+\infty}P\left(\bigcup_{k=n}^{+\infty}A_k\right)=1\).'
   source: 'Poly Probabilités 5, ch. 5, p. 68 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 3
@@ -1529,7 +1529,7 @@
 - id: proba-a-073-2
   notion: proba-n-0120
   recto: 'Preuve : Prop. 5.5, unicité presque sûre de la limite'
-  verso: 'Pour tout \(\varepsilon\gt0\), \(P(\|X-Y\|\gt\varepsilon)\le P(\|X_n-X\|\gt\varepsilon/2)+P(\|X_n-Y\|\gt\varepsilon/2)\) car, en raison de l''inégalité triangulaire, \(\{\|X-Y\|\gt\varepsilon\}\subset\{\|X_n-X\|\gt\varepsilon/2\}\cup\{\|X_n-Y\|\gt\varepsilon/2\}\). Vu que \(X_n\xrightarrow{P}X\) et \(X_n\xrightarrow{P}Y\), \(\forall\varepsilon\gt0,\ P(\|X-Y\|\gt\varepsilon)=0\). La continuité de \(P\) appliquée à la suite croissante des ensembles \(A_p=\{\|X-Y\|\gt1/p\}\), \(p\in\mathbb N^*\), implique \(P(\|X-Y\|\gt0)=\lim_{p\to+\infty}P(A_p)=0\) : \(X=Y\) presque sûrement.'
+  verso: 'Soient \((X_n)_{n\in\mathbb N}\), \(X\) et \(Y\) des variables aléatoires à valeurs dans \(\mathbb R^d\) (norme \(\|\cdot\|\)), avec \(X_n\xrightarrow{P}X\) et \(X_n\xrightarrow{P}Y\). Pour tout \(\varepsilon\gt0\), \(P(\|X-Y\|\gt\varepsilon)\le P(\|X_n-X\|\gt\varepsilon/2)+P(\|X_n-Y\|\gt\varepsilon/2)\) car, en raison de l''inégalité triangulaire, \(\{\|X-Y\|\gt\varepsilon\}\subset\{\|X_n-X\|\gt\varepsilon/2\}\cup\{\|X_n-Y\|\gt\varepsilon/2\}\). Vu que \(X_n\xrightarrow{P}X\) et \(X_n\xrightarrow{P}Y\), \(\forall\varepsilon\gt0,\ P(\|X-Y\|\gt\varepsilon)=0\). La continuité de \(P\) appliquée à la suite croissante des ensembles \(A_p=\{\|X-Y\|\gt1/p\}\), \(p\in\mathbb N^*\), implique \(P(\|X-Y\|\gt0)=\lim_{p\to+\infty}P(A_p)=0\) : \(X=Y\) presque sûrement.'
   source: 'Poly Probabilités 5, ch. 5, p. 69 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 3
@@ -1641,7 +1641,7 @@
 - id: proba-a-077-2
   notion: proba-n-0124
   recto: 'Preuve : Prop. 5.12, conséquence de Borel-Cantelli'
-  verso: 'Soit \(p\in\mathbb N^*\). Pour tout \(n\in\mathbb N\), posons \(A_{n,p}=\{\|X_n-X\|\ge\frac1p\}\). D''après le lemme de Borel-Cantelli 5.1 appliqué à la suite \((A_{n,p})_{n\in\mathbb N}\), \(P(A_p)=0\) avec \(A_p=\bigcap_{n=0}^{+\infty}\bigcup_{k=n}^{+\infty}A_{k,p}\). Alors \(P\left(\bigcup_{p\in\mathbb N^*}A_p\right)=0\), autrement dit \(1=P\left(\bigcap_{p\in\mathbb N^*}\bigcup_{n=0}^{+\infty}\bigcap_{k=n}^{+\infty}\{\|X_k-X\|\lt\frac1p\}\right)\). Traduisons : pour presque tout \(\omega\), pour tout \(p\in\mathbb N^*\), il existe \(n\in\mathbb N\) tel que pour tout \(k\ge n\), \(\|X_k(\omega)-X(\omega)\|\lt\frac1p\). Par conséquent, la suite \((X_n)\) converge presque sûrement vers \(X\).'
+  verso: 'Soient \((X_n)_{n\in\mathbb N}\) et \(X\) des variables aléatoires à valeurs dans \(\mathbb R^d\) (norme \(\|\cdot\|\)) telles que, pour tout \(\varepsilon\gt0\), \(\sum_nP(\|X_n-X\|\ge\varepsilon) < +\infty\). Soit \(p\in\mathbb N^*\). Pour tout \(n\in\mathbb N\), posons \(A_{n,p}=\{\|X_n-X\|\ge\frac1p\}\). D''après le lemme de Borel-Cantelli 5.1 appliqué à la suite \((A_{n,p})_{n\in\mathbb N}\), \(P(A_p)=0\) avec \(A_p=\bigcap_{n=0}^{+\infty}\bigcup_{k=n}^{+\infty}A_{k,p}\). Alors \(P\left(\bigcup_{p\in\mathbb N^*}A_p\right)=0\), autrement dit \(1=P\left(\bigcap_{p\in\mathbb N^*}\bigcup_{n=0}^{+\infty}\bigcap_{k=n}^{+\infty}\{\|X_k-X\|\lt\frac1p\}\right)\). Traduisons : pour presque tout \(\omega\), pour tout \(p\in\mathbb N^*\), il existe \(n\in\mathbb N\) tel que pour tout \(k\ge n\), \(\|X_k(\omega)-X(\omega)\|\lt\frac1p\). Par conséquent, la suite \((X_n)\) converge presque sûrement vers \(X\).'
   source: 'Poly Probabilités 5, ch. 5, p. 72 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1
@@ -1657,7 +1657,7 @@
 - id: proba-a-078-2
   notion: proba-n-0125
   recto: 'Déf 5.13 : cas \(p=1\) et \(p=2\)'
-  verso: 'Pour la convergence en moyenne d''ordre \(p\) (\(\lim_nE[\|X_n-X\|^p]=0\)) : si \(p=1\), on parle simplement de convergence en moyenne. Si \(p=2\), on parle de convergence en moyenne quadratique.'
+  verso: 'Soient \((X_n,n\ge1)\) et \(X\) des vecteurs aléatoires à valeurs dans \(\mathbb R^k\) et \(p\ge1\). Pour la convergence en moyenne d''ordre \(p\) (\(\lim_nE[\|X_n-X\|^p]=0\)) : si \(p=1\), on parle simplement de convergence en moyenne. Si \(p=2\), on parle de convergence en moyenne quadratique.'
   source: 'Poly Probabilités 5, ch. 5, p. 72 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1
@@ -1665,7 +1665,7 @@
 - id: proba-a-079-1
   notion: proba-n-0126
   recto: 'Prop. 5.14 : unicité presque sûre de la limite en moyenne'
-  verso: 'Soit \((X_n,n\ge0)\) une suite de vecteurs aléatoires à valeurs dans \(\mathbb R^d\). Si \((X_n,n\ge0)\) converge en moyenne d''ordre \(p\) vers \(X\) et vers \(Y\), alors \(X=Y\) \(P\)-presque sûrement.<br>Preuve : par Minkowski, \(E[\|X-Y\|^p]^{1/p}\le E[\|X-X_n\|^p]^{1/p}+E[\|X_n-Y\|^p]^{1/p}\to0\), donc \(\|X-Y\|=0\) p.s. (espérance nulle d''une variable positive).'
+  verso: 'Soit \(p\ge1\) et \(X,Y\) des vecteurs aléatoires à valeurs dans \(\mathbb R^d\). Soit \((X_n,n\ge0)\) une suite de vecteurs aléatoires à valeurs dans \(\mathbb R^d\). Si \((X_n,n\ge0)\) converge en moyenne d''ordre \(p\) vers \(X\) et vers \(Y\), alors \(X=Y\) \(P\)-presque sûrement.<br>Preuve : par Minkowski, \(E[\|X-Y\|^p]^{1/p}\le E[\|X-X_n\|^p]^{1/p}+E[\|X_n-Y\|^p]^{1/p}\to0\), donc \(\|X-Y\|=0\) p.s. (espérance nulle d''une variable positive).'
   source: 'Poly Probabilités 5, ch. 5, p. 73 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 3
@@ -1673,7 +1673,7 @@
 - id: proba-a-079-2
   notion: proba-n-0126
   recto: 'Prop. 5.15 : image uniformément continue et convergence en moyenne'
-  verso: 'Soit \((X_n,n\ge0)\) une suite de vecteurs aléatoires à valeurs dans \(\mathbb R^d\). Si \((X_n,n\ge0)\) converge en moyenne d''ordre \(p\) vers \(X\), et si \(f\) est une fonction uniformément continue sur \(\mathbb R^d\), alors \((f(X_n),n\ge0)\) converge en moyenne d''ordre \(p\) vers \(f(X)\). Remarquons que c''est faux si l''on suppose \(f\) continue car rien ne garantirait alors que \(\|f(X_n)-f(X)\|\) ait un moment d''ordre \(p\).'
+  verso: 'Soit \(p\ge1\) et \(X\) un vecteur aléatoire à valeurs dans \(\mathbb R^d\). Soit \((X_n,n\ge0)\) une suite de vecteurs aléatoires à valeurs dans \(\mathbb R^d\). Si \((X_n,n\ge0)\) converge en moyenne d''ordre \(p\) vers \(X\), et si \(f\) est une fonction uniformément continue sur \(\mathbb R^d\), alors \((f(X_n),n\ge0)\) converge en moyenne d''ordre \(p\) vers \(f(X)\). Remarquons que c''est faux si l''on suppose \(f\) continue car rien ne garantirait alors que \(\|f(X_n)-f(X)\|\) ait un moment d''ordre \(p\).'
   source: 'Poly Probabilités 5, ch. 5, p. 73 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 3
@@ -1681,7 +1681,7 @@
 - id: proba-a-079-3
   notion: proba-n-0126
   recto: 'Prop. 5.16 (1) : couple et convergence en moyenne'
-  verso: 'Soit \((\Omega,P)\) un espace de probabilité, \((X_n,n\ge0)\), \((Y_n,n\ge0)\) deux suites de vecteurs aléatoires à valeurs dans \(\mathbb R^d\) et \(\mathbb R^l\) respectivement. Si \((X_n)\) et \((Y_n)\) convergent en moyenne d''ordre \(p\) vers \(X\) et vers \(Y\) respectivement, alors \(((X_n,Y_n),n\ge0)\) converge en moyenne d''ordre \(p\) vers \((X,Y)\).'
+  verso: 'Soit \(p\ge1\) et \(X\), \(Y\) des vecteurs aléatoires à valeurs dans \(\mathbb R^d\) et \(\mathbb R^l\). Soit \((\Omega,P)\) un espace de probabilité, \((X_n,n\ge0)\), \((Y_n,n\ge0)\) deux suites de vecteurs aléatoires à valeurs dans \(\mathbb R^d\) et \(\mathbb R^l\) respectivement. Si \((X_n)\) et \((Y_n)\) convergent en moyenne d''ordre \(p\) vers \(X\) et vers \(Y\) respectivement, alors \(((X_n,Y_n),n\ge0)\) converge en moyenne d''ordre \(p\) vers \((X,Y)\).'
   source: 'Poly Probabilités 5, ch. 5, p. 73 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 3
@@ -1689,7 +1689,7 @@
 - id: proba-a-079-4
   notion: proba-n-0126
   recto: 'Prop. 5.16 (2) : combinaison linéaire et convergence en moyenne'
-  verso: 'Soit \((\Omega,P)\) un espace de probabilité, \((X_n,n\ge0)\), \((Y_n,n\ge0)\) deux suites de vecteurs aléatoires à valeurs dans \(\mathbb R^d\) et \(\mathbb R^l\) respectivement, convergeant en moyenne d''ordre \(p\) vers \(X\) et vers \(Y\). Si \(d=l\), alors la suite \((\alpha X_n+\beta Y_n,n\ge0)\) converge en moyenne d''ordre \(p\) vers \(\alpha X+\beta Y\) pour tous \(\alpha,\beta\in\mathbb R\).'
+  verso: 'Soit \(p\ge1\) et \(X\), \(Y\) des vecteurs aléatoires à valeurs dans \(\mathbb R^d\) et \(\mathbb R^l\). Soit \((\Omega,P)\) un espace de probabilité, \((X_n,n\ge0)\), \((Y_n,n\ge0)\) deux suites de vecteurs aléatoires à valeurs dans \(\mathbb R^d\) et \(\mathbb R^l\) respectivement, convergeant en moyenne d''ordre \(p\) vers \(X\) et vers \(Y\). Si \(d=l\), alors la suite \((\alpha X_n+\beta Y_n,n\ge0)\) converge en moyenne d''ordre \(p\) vers \(\alpha X+\beta Y\) pour tous \(\alpha,\beta\in\mathbb R\).'
   source: 'Poly Probabilités 5, ch. 5, p. 73 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 3
@@ -1721,7 +1721,7 @@
 - id: proba-a-081-1
   notion: proba-n-0128
   recto: 'Prop. 5.18 : convergence en moyenne et en probabilité'
-  verso: 'Soit \((X_n,n\ge1)\) une suite de vecteurs aléatoires convergeant en moyenne d''ordre \(p\) vers \(X\). Alors elle converge aussi en probabilité vers \(X\).'
+  verso: 'Soient \(p\ge1\) et \(X\) un vecteur aléatoire. Soit \((X_n,n\ge1)\) une suite de vecteurs aléatoires convergeant en moyenne d''ordre \(p\) vers \(X\). Alors elle converge aussi en probabilité vers \(X\).'
   source: 'Poly Probabilités 5, ch. 5, p. 74 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1
@@ -1729,7 +1729,7 @@
 - id: proba-a-081-2
   notion: proba-n-0128
   recto: 'Preuve : Prop. 5.18, moyenne implique probabilité'
-  verso: 'Soit \(\varepsilon\gt0\). D''après l''inégalité de Markov, \(P(\|X-X_n\|\gt\varepsilon)\le\dfrac{E[\|X-X_n\|^p]}{\varepsilon^p}\). Sous les hypothèses de l''énoncé, cela implique que \(P(\|X-X_n\|\gt\varepsilon)\) tend vers \(0\) quand \(n\) tend vers l''infini, et permet d''établir la convergence en probabilité.'
+  verso: 'Soit \((X_n,n\ge1)\) une suite de vecteurs aléatoires convergeant en moyenne d''ordre \(p\ge1\) vers \(X\) (norme \(\|\cdot\|\)). Soit \(\varepsilon\gt0\). D''après l''inégalité de Markov, \(P(\|X-X_n\|\gt\varepsilon)\le\dfrac{E[\|X-X_n\|^p]}{\varepsilon^p}\). Sous les hypothèses de l''énoncé, cela implique que \(P(\|X-X_n\|\gt\varepsilon)\) tend vers \(0\) quand \(n\) tend vers l''infini, et permet d''établir la convergence en probabilité.'
   source: 'Poly Probabilités 5, ch. 5, p. 74 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1
@@ -1745,7 +1745,7 @@
 - id: proba-a-082-2
   notion: proba-n-0129
   recto: 'Preuve : Prop. 5.19, convergence en moyenne d''ordre \(p\)'
-  verso: '\(X\) est aussi bornée p.s. par \(A\) : \(\|X\|\le\|X-X_n\|+A\) p.s., d''où \(P(\|X\|\ge A+\varepsilon)\le P(\|X-X_n\|\ge\varepsilon)\to0\), et par continuité \(P(\|X\|\gt A)=\lim_kP(\|X\|\ge A+\frac1k)=0\). Les \(X_n\) et \(X\) possèdent donc des moments de tous ordres. Pour \(p\ge1\) et \(\varepsilon\gt0\), on découpe \(\|X_n-X\|=\|X_n-X\|\mathbf 1_{\|X_n-X\|\le\varepsilon}+\|X_n-X\|\mathbf 1_{\|X_n-X\|\gt\varepsilon}\) et l''inégalité de Minkowski donne \(E[\|X_n-X\|^p]^{1/p}\le\varepsilon P(\|X_n-X\|\le\varepsilon)^{1/p}+2A\,P(\|X_n-X\|\gt\varepsilon)^{1/p}\). On en déduit \(\limsup_nE[\|X_n-X\|^p]^{1/p}\le\varepsilon\) pour tout \(\varepsilon\gt0\), donc \(\lim_nE[\|X_n-X\|^p]=0\).'
+  verso: 'Soit \((X_n,n\ge1)\) une suite de vecteurs aléatoires convergeant en probabilité vers \(X\), avec \(A\ge0\) tel que \(\|X_n\|\le A\) p.s. pour tout \(n\). \(X\) est aussi bornée p.s. par \(A\) : \(\|X\|\le\|X-X_n\|+A\) p.s., d''où \(P(\|X\|\ge A+\varepsilon)\le P(\|X-X_n\|\ge\varepsilon)\to0\), et par continuité \(P(\|X\|\gt A)=\lim_kP(\|X\|\ge A+\frac1k)=0\). Les \(X_n\) et \(X\) possèdent donc des moments de tous ordres. Pour \(p\ge1\) et \(\varepsilon\gt0\), on découpe \(\|X_n-X\|=\|X_n-X\|\mathbf 1_{\|X_n-X\|\le\varepsilon}+\|X_n-X\|\mathbf 1_{\|X_n-X\|\gt\varepsilon}\) et l''inégalité de Minkowski donne \(E[\|X_n-X\|^p]^{1/p}\le\varepsilon P(\|X_n-X\|\le\varepsilon)^{1/p}+2A\,P(\|X_n-X\|\gt\varepsilon)^{1/p}\). On en déduit \(\limsup_nE[\|X_n-X\|^p]^{1/p}\le\varepsilon\) pour tout \(\varepsilon\gt0\), donc \(\lim_nE[\|X_n-X\|^p]=0\).'
   source: 'Poly Probabilités 5, ch. 5, p. 74-75 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1
@@ -1785,7 +1785,7 @@
 - id: proba-a-084-4
   notion: proba-n-0132
   recto: 'Preuve : Prop. 5.20, loi faible des grands nombres'
-  verso: 'Soit \(M\gt0\) tel que \(\forall n,\ \mathrm{var}(X_n)\le M\). \(\bar X_n\) est une combinaison linéaire de variables ayant un moment d''ordre \(2\), donc possède un moment d''ordre \(2\), et son espérance est constante : \(E[\bar X_n]=\frac1n\sum_{i=1}^nE[X_i]=\mu\). Les \(X_n\) étant deux à deux décorrélées, \(\mathrm{var}(\bar X_n)=\frac1{n^2}\sum_{i=1}^n\mathrm{var}(X_i)\le\frac{nM}{n^2}=\frac Mn\). Comme par définition \(\mathrm{var}(\bar X_n)=E\left[|\bar X_n-E[\bar X_n]|^2\right]=E\left[|\bar X_n-\mu|^2\right]\), on a bien \(\lim_{n\to+\infty}E\left[|\bar X_n-\mu|^2\right]=0\) : convergence en moyenne quadratique de \(\bar X_n\) vers \(\mu\).'
+  verso: 'Soit \((X_n)_{n\in\mathbb N}\) une suite de variables aléatoires réelles de moment d''ordre \(2\), de même moyenne \(\mu\), deux à deux décorrélées, et \(\bar X_n=\frac1n\sum_{i=1}^nX_i\). Soit \(M\gt0\) tel que \(\forall n,\ \mathrm{var}(X_n)\le M\). \(\bar X_n\) est une combinaison linéaire de variables ayant un moment d''ordre \(2\), donc possède un moment d''ordre \(2\), et son espérance est constante : \(E[\bar X_n]=\frac1n\sum_{i=1}^nE[X_i]=\mu\). Les \(X_n\) étant deux à deux décorrélées, \(\mathrm{var}(\bar X_n)=\frac1{n^2}\sum_{i=1}^n\mathrm{var}(X_i)\le\frac{nM}{n^2}=\frac Mn\). Comme par définition \(\mathrm{var}(\bar X_n)=E\left[|\bar X_n-E[\bar X_n]|^2\right]=E\left[|\bar X_n-\mu|^2\right]\), on a bien \(\lim_{n\to+\infty}E\left[|\bar X_n-\mu|^2\right]=0\) : convergence en moyenne quadratique de \(\bar X_n\) vers \(\mu\).'
   source: 'Poly Probabilités 5, ch. 5, p. 76 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1
@@ -1809,7 +1809,7 @@
 - id: proba-a-085-3
   notion: proba-n-0133
   recto: 'Rem. 5.24 et 5.25 : ce que mesure la convergence en loi'
-  verso: 'Pour la convergence en loi, il n''est plus nécessaire de supposer que toutes les variables aléatoires soient définies sur un même espace de probabilité ; elles restent à valeurs dans un même espace vectoriel \(\mathbb R^d\). La convergence en loi n''affirme pas que \(X\) et \(X_n\) sont proches dans \(E\) mais que la loi de \(X_n\) est proche de celle de \(X\) pour \(n\) grand. Elle est improprement nommée : il s''agit en réalité de la convergence de lois définies sur \(\mathbb R^d\), et non de la convergence des variables aléatoires.'
+  verso: 'Pour la convergence en loi, il n''est plus nécessaire de supposer que toutes les variables aléatoires soient définies sur un même espace de probabilité ; elles restent à valeurs dans un même espace vectoriel \(\mathbb R^d\). La convergence en loi n''affirme pas que \(X\) et \(X_n\) sont proches dans \(\mathbb R^d\) mais que la loi de \(X_n\) est proche de celle de \(X\) pour \(n\) grand. Elle est improprement nommée : il s''agit en réalité de la convergence de lois définies sur \(\mathbb R^d\), et non de la convergence des variables aléatoires.'
   source: 'Poly Probabilités 5, ch. 5, p. 77 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1
@@ -1817,7 +1817,7 @@
 - id: proba-a-085-4
   notion: proba-n-0133
   recto: 'Exemple : convergence en loi vers une Bernoulli'
-  verso: 'Soit \(X_n\) une variable aléatoire de loi \(P_{X_n}=\frac12\delta_{1/n}+\frac12\delta_{n/(n+1)}\). Alors, pour toute fonction \(f\) continue bornée sur \(\mathbb R\), \(E[f(X_n)]=\frac12f\left(\frac1n\right)+\frac12f\left(\frac n{n+1}\right)\). Par conséquent, pour toute fonction \(f\) continue bornée sur \(\mathbb R\), \(\lim_{n\to+\infty}E[f(X_n)]=\frac12f(0)+\frac12f(1)=E[f(X)]\) avec \(X\) de loi de Bernoulli de paramètre \(p=1/2\). Par conséquent, \(X_n\xrightarrow{L}X\).'
+  verso: 'Soit \(\delta_a\) la mesure de Dirac en \(a\). Soit \(X_n\) une variable aléatoire de loi \(P_{X_n}=\frac12\delta_{1/n}+\frac12\delta_{n/(n+1)}\). Alors, pour toute fonction \(f\) continue bornée sur \(\mathbb R\), \(E[f(X_n)]=\frac12f\left(\frac1n\right)+\frac12f\left(\frac n{n+1}\right)\). Par conséquent, pour toute fonction \(f\) continue bornée sur \(\mathbb R\), \(\lim_{n\to+\infty}E[f(X_n)]=\frac12f(0)+\frac12f(1)=E[f(X)]\) avec \(X\) de loi de Bernoulli de paramètre \(p=1/2\). Par conséquent, \(X_n\xrightarrow{L}X\).'
   source: 'Poly Probabilités 5, ch. 5, p. 77 (PDF)'
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1

@@ -10,7 +10,7 @@
 - id: mod-a-001-2
   notion: mod-n-0001
   recto: 'Déf : domaine et valeurs remarquables de \(\varphi_X\)'
-  verso: 'Soit \(X\) à valeurs dans \(\mathbb{N}\). Le rayon de convergence de \(\varphi_X\) est \(\ge1\), puisque \(\sum_{k=0}^{+\infty}|\mathbb{P}(X=k)(\pm1)^k|=\sum_{k=0}^{+\infty}\mathbb{P}(X=k)=1\). La fonction \(\varphi_X\) est donc bien définie sur \([-1,1]\). On adopte la convention \(0^0=1\), de sorte que \(\varphi_X(0)=\mathbb{P}(X=0)\). La série converge uniformément sur \([-1,1]\) (son terme d''indice \(k\) est majoré en valeur absolue par \(\mathbb{P}(X=k)\)) : \(\varphi_X\) est continue sur cet intervalle.'
+  verso: 'Soit \(X\) à valeurs dans \(\mathbb{N}\). Le rayon de convergence de \(\varphi_X(z)=\mathbb{E}[z^X]\) (fonction génératrice de \(X\)) est \(\ge1\), puisque \(\sum_{k=0}^{+\infty}|\mathbb{P}(X=k)(\pm1)^k|=\sum_{k=0}^{+\infty}\mathbb{P}(X=k)=1\). La fonction \(\varphi_X\) est donc bien définie sur \([-1,1]\). On adopte la convention \(0^0=1\), de sorte que \(\varphi_X(0)=\mathbb{P}(X=0)\). La série converge uniformément sur \([-1,1]\) (son terme d''indice \(k\) est majoré en valeur absolue par \(\mathbb{P}(X=k)\)) : \(\varphi_X\) est continue sur cet intervalle.'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 1'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -18,7 +18,7 @@
 - id: mod-a-002-1
   notion: mod-n-0002
   recto: 'Exemple : fonction génératrice d''une loi de Bernoulli'
-  verso: 'Exemple (Bernoulli : \(X\sim\mathcal{B}(p)\)).<br>\(\varphi_X(z)=\mathbb{P}(X=0)z^0+\mathbb{P}(X=1)z^1=1-p+pz\)'
+  verso: 'On note \(\varphi_X(z)=\mathbb{E}[z^X]\) la fonction génératrice d''une variable \(X\) à valeurs dans \(\mathbb{N}\) ; \(p\in[0,1]\). Exemple (Bernoulli : \(X\sim\mathcal{B}(p)\)).<br>\(\varphi_X(z)=\mathbb{P}(X=0)z^0+\mathbb{P}(X=1)z^1=1-p+pz\)'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 2'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -26,7 +26,7 @@
 - id: mod-a-002-2
   notion: mod-n-0002
   recto: 'Exemple : fonction génératrice d''une loi binomiale'
-  verso: 'Exemple (Binomiale : \(X\sim\mathcal{B}(n,p)\)).<br>\(\varphi_X(z)=\sum_{k=0}^n\binom nk p^k(1-p)^{n-k}z^k=\sum_{k=0}^n\binom nk(pz)^k(1-p)^{n-k}=(1-p+pz)^n\)'
+  verso: 'On note \(\varphi_X(z)=\mathbb{E}[z^X]\) la fonction génératrice d''une variable \(X\) à valeurs dans \(\mathbb{N}\) ; \(n\in\mathbb{N}\), \(p\in[0,1]\). Exemple (Binomiale : \(X\sim\mathcal{B}(n,p)\)).<br>\(\varphi_X(z)=\sum_{k=0}^n\binom nk p^k(1-p)^{n-k}z^k=\sum_{k=0}^n\binom nk(pz)^k(1-p)^{n-k}=(1-p+pz)^n\)'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 2'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -34,7 +34,7 @@
 - id: mod-a-002-3
   notion: mod-n-0002
   recto: 'Exemple : fonction génératrice d''une loi de Poisson'
-  verso: 'Exemple (Poisson : \(X\sim\mathcal{P}(\lambda)\)).<br>\(\varphi_X(z)=\sum_{k=0}^{+\infty}e^{-\lambda}\frac{\lambda^k}{k!}z^k=e^{-\lambda}\sum_{k=0}^{+\infty}\frac{(\lambda z)^k}{k!}=e^{\lambda(z-1)}\)'
+  verso: 'On note \(\varphi_X(z)=\mathbb{E}[z^X]\) la fonction génératrice d''une variable \(X\) à valeurs dans \(\mathbb{N}\) ; \(\lambda > 0\). Exemple (Poisson : \(X\sim\mathcal{P}(\lambda)\)).<br>\(\varphi_X(z)=\sum_{k=0}^{+\infty}e^{-\lambda}\frac{\lambda^k}{k!}z^k=e^{-\lambda}\sum_{k=0}^{+\infty}\frac{(\lambda z)^k}{k!}=e^{\lambda(z-1)}\)'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 2'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -42,7 +42,7 @@
 - id: mod-a-002-4
   notion: mod-n-0002
   recto: 'Exemple : fonction génératrice d''une loi géométrique'
-  verso: 'Exemple (Géométrique : \(X\sim\mathcal{G}(p)\), avec \(q=1-p\)). Ici, \(p\in]0,1]\) et la loi géométrique est portée par \(\mathbb{N}^*=\{1,2,\dots\}\).<br>\(\varphi_X(z)=\sum_{k=1}^{+\infty}pq^{k-1}z^k=pz\sum_{l=0}^{+\infty}q^lz^l=\dfrac{pz}{1-qz}\)'
+  verso: 'On note \(\varphi_X(z)=\mathbb{E}[z^X]\) la fonction génératrice d''une variable \(X\) à valeurs dans \(\mathbb{N}\). Exemple (Géométrique : \(X\sim\mathcal{G}(p)\), avec \(q=1-p\)). Ici, \(p\in]0,1]\) et la loi géométrique est portée par \(\mathbb{N}^*=\{1,2,\dots\}\).<br>\(\varphi_X(z)=\sum_{k=1}^{+\infty}pq^{k-1}z^k=pz\sum_{l=0}^{+\infty}q^lz^l=\dfrac{pz}{1-qz}\)'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 2'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -50,7 +50,7 @@
 - id: mod-a-003-1
   notion: mod-n-0003
   recto: 'Prop. 1.1 : caractérisation de la loi par la fonction génératrice'
-  verso: 'Soient \(X\) et \(Y\) deux variables aléatoires à valeurs dans \(\mathbb{N}\). Alors \(\varphi_X\) et \(\varphi_Y\) sont égales si et seulement si \(X\) et \(Y\) sont égales en loi.<br>(Si \(\varphi_X=\varphi_Y\), l''unicité du développement en série entière entraîne \(\mathbb{P}(X=k)=\mathbb{P}(Y=k)\) pour tout \(k\in\mathbb{N}\).)'
+  verso: 'Soient \(X\) et \(Y\) deux variables aléatoires à valeurs dans \(\mathbb{N}\), de fonctions génératrices \(\varphi_X\) et \(\varphi_Y\). Alors \(\varphi_X\) et \(\varphi_Y\) sont égales si et seulement si \(X\) et \(Y\) sont égales en loi.<br>(Si \(\varphi_X=\varphi_Y\), l''unicité du développement en série entière entraîne \(\mathbb{P}(X=k)=\mathbb{P}(Y=k)\) pour tout \(k\in\mathbb{N}\).)'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 2'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -58,7 +58,7 @@
 - id: mod-a-004-1
   notion: mod-n-0004
   recto: 'Prop. 1.2 : fonction génératrice d''une somme de variables indépendantes'
-  verso: 'Soient \(X\) et \(Y\) des v.a. indépendantes à valeurs dans \(\mathbb{N}\). Alors \(\varphi_{X+Y}=\varphi_X\varphi_Y\).<br>En particulier, si \(X_1,\dots,X_n\) sont des v.a. indépendantes et de même loi que \(X\), \(\varphi_{X_1+\cdots+X_n}=\varphi_X^{\,n}\).'
+  verso: 'Soient \(X\) et \(Y\) des v.a. indépendantes à valeurs dans \(\mathbb{N}\), de fonctions génératrices \(\varphi_X,\varphi_Y\) (\(\varphi_{X+Y}\) : celle de \(X+Y\)). Alors \(\varphi_{X+Y}=\varphi_X\varphi_Y\).<br>En particulier, si \(X_1,\dots,X_n\) sont des v.a. indépendantes et de même loi que \(X\), \(\varphi_{X_1+\cdots+X_n}=\varphi_X^{\,n}\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -66,7 +66,7 @@
 - id: mod-a-004-2
   notion: mod-n-0004
   recto: 'Preuve : Prop. 1.2 (\(\varphi_{X+Y}=\varphi_X\varphi_Y\))'
-  verso: 'Soient \(X\) et \(Y\) indépendantes à valeurs dans \(\mathbb{N}\). Deux preuves.<br>Séries entières : \(\mathbb{P}(X+Y=k)=\sum_{l=0}^k\mathbb{P}(X=l,Y=k-l)=\sum_{l=0}^k\mathbb{P}(X=l)\mathbb{P}(Y=k-l)\) par indépendance, le terme général du produit de Cauchy de deux séries entières.<br>Probabilités : pour \(|z|\le1\), \(\varphi_{X+Y}(z)=\mathbb{E}[z^Xz^Y]=\mathbb{E}[z^X]\mathbb{E}[z^Y]=\varphi_X(z)\varphi_Y(z)\), car \(\mathbb{E}[f(X)g(Y)]=\mathbb{E}[f(X)]\mathbb{E}[g(Y)]\).'
+  verso: 'Soient \(X\) et \(Y\) indépendantes à valeurs dans \(\mathbb{N}\), de fonctions génératrices \(\varphi_X,\varphi_Y\). Deux preuves.<br>Séries entières : \(\mathbb{P}(X+Y=k)=\sum_{l=0}^k\mathbb{P}(X=l,Y=k-l)=\sum_{l=0}^k\mathbb{P}(X=l)\mathbb{P}(Y=k-l)\) par indépendance, le terme général du produit de Cauchy de deux séries entières.<br>Probabilités : pour \(|z|\le1\), \(\varphi_{X+Y}(z)=\mathbb{E}[z^Xz^Y]=\mathbb{E}[z^X]\mathbb{E}[z^Y]=\varphi_X(z)\varphi_Y(z)\), car \(\mathbb{E}[f(X)g(Y)]=\mathbb{E}[f(X)]\mathbb{E}[g(Y)]\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -74,7 +74,7 @@
 - id: mod-a-005-1
   notion: mod-n-0005
   recto: 'Prop. 1.3 : moments et dérivées de la fonction génératrice'
-  verso: 'Soit \(X\) une variable aléatoire à valeurs dans \(\mathbb{N}\) et \(p\in\mathbb{N}^*\) ; il y a équivalence entre les deux assertions suivantes :<br>(i) \(\mathbb{E}[X^p]<+\infty\)<br>(ii) \(\varphi_X\) est de classe \(C^p\) sur \([0,1]\).<br>De plus, on a dans ce cas \(\varphi_X^{(p)}(1)=\mathbb{E}[X(X-1)\cdots(X-p+1)]\).'
+  verso: 'Soit \(X\) une variable aléatoire à valeurs dans \(\mathbb{N}\), de fonction génératrice \(\varphi_X\), et \(p\in\mathbb{N}^*\) ; il y a équivalence entre les deux assertions suivantes :<br>(i) \(\mathbb{E}[X^p]<+\infty\)<br>(ii) \(\varphi_X\) est de classe \(C^p\) sur \([0,1]\).<br>De plus, on a dans ce cas \(\varphi_X^{(p)}(1)=\mathbb{E}[X(X-1)\cdots(X-p+1)]\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -82,7 +82,7 @@
 - id: mod-a-005-2
   notion: mod-n-0005
   recto: 'Prop. 1.3 : espérance et variance par les dérivées de \(\varphi_X\)'
-  verso: 'Soit \(X\) une variable aléatoire à valeurs dans \(\mathbb{N}\) (dont les moments considérés sont finis). Pour \(p=1\) et \(p=2\) :<br>\(\mathbb{E}[X]=\varphi_X^{\prime}(1)\) et \(\mathrm{Var}(X)=\varphi_X^{\prime\prime}(1)+\varphi_X^{\prime}(1)-\varphi_X^{\prime}(1)^2\).'
+  verso: 'Soit \(X\) une variable aléatoire à valeurs dans \(\mathbb{N}\), de fonction génératrice \(\varphi_X\) (dont les moments considérés sont finis). Pour \(p=1\) et \(p=2\) :<br>\(\mathbb{E}[X]=\varphi_X^{\prime}(1)\) et \(\mathrm{Var}(X)=\varphi_X^{\prime\prime}(1)+\varphi_X^{\prime}(1)-\varphi_X^{\prime}(1)^2\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 3'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -90,7 +90,7 @@
 - id: mod-a-006-1
   notion: mod-n-0006
   recto: 'Preuve : Prop. 1.3, expression de \(\varphi_X^{(p)}(1^-)\)'
-  verso: 'Pour \(x\in[0,1[\), \(\varphi_X^{(p)}(x)=\sum_{k\ge p}\mathbb{P}(X=k)k(k-1)\cdots(k-p+1)x^{k-p}\) est une série à termes positifs, croissante sur \([0,1[\) : elle admet une limite à gauche en 1, finie ou infinie, notée \(\varphi_X^{(p)}(1^-)\).<br>On vérifie que \(\varphi_X^{(p)}(1^-)=\sum_{k\ge p}\mathbb{P}(X=k)k(k-1)\cdots(k-p+1)=\mathbb{E}[X(X-1)\cdots(X-p+1)]\) : encadrement par les sommes partielles, \(x\to1^-\) puis \(N\to+\infty\), puis formule de transfert.'
+  verso: 'Soit \(X\) à valeurs dans \(\mathbb{N}\), de fonction génératrice \(\varphi_X\), et \(p\in\mathbb{N}^*\). Pour \(x\in[0,1[\), \(\varphi_X^{(p)}(x)=\sum_{k\ge p}\mathbb{P}(X=k)k(k-1)\cdots(k-p+1)x^{k-p}\) est une série à termes positifs, croissante sur \([0,1[\) : elle admet une limite à gauche en 1, finie ou infinie, notée \(\varphi_X^{(p)}(1^-)\).<br>On vérifie que \(\varphi_X^{(p)}(1^-)=\sum_{k\ge p}\mathbb{P}(X=k)k(k-1)\cdots(k-p+1)=\mathbb{E}[X(X-1)\cdots(X-p+1)]\) : encadrement par les sommes partielles, \(x\to1^-\) puis \(N\to+\infty\), puis formule de transfert.'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 4'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 2
@@ -106,7 +106,7 @@
 - id: mod-a-006-3
   notion: mod-n-0006
   recto: 'Preuve : Prop. 1.3, équivalence (i) \(\iff\) (ii)'
-  verso: '(ii)\(\Rightarrow\)(i) : si \(\varphi_X\) est \(C^p\) sur \([0,1]\), \(\varphi_X^{(p)}(1)\) est un réel fini et, par continuité en 1, \(\varphi_X^{(p)}(1)=\varphi_X^{(p)}(1^-)=\mathbb{E}[X(X-1)\cdots(X-p+1)]<+\infty\), ce qui équivaut à \(\mathbb{E}[X^p]<+\infty\).<br>(i)\(\Rightarrow\)(ii) : récurrence sur \(k\in\{0,\dots,p\}\). Pour \(t_n\to1^-\), le théorème des accroissements finis donne \(\frac{\varphi^{(k)}(1)-\varphi^{(k)}(t_n)}{1-t_n}=\varphi^{(k+1)}(s_n)\) avec \(s_n\in]t_n,1[\), qui tend vers \(\varphi^{(k+1)}(1^-)<+\infty\) : \(\varphi^{(k)}\) est dérivable en 1 et \(\varphi^{(k+1)}\) est continue en 1.'
+  verso: 'Soit \(X\) à valeurs dans \(\mathbb{N}\), de fonction génératrice \(\varphi_X\) (notée \(\varphi\) dans la preuve), et \(p\in\mathbb{N}^*\). (ii)\(\Rightarrow\)(i) : si \(\varphi_X\) est \(C^p\) sur \([0,1]\), \(\varphi_X^{(p)}(1)\) est un réel fini et, par continuité en 1, \(\varphi_X^{(p)}(1)=\varphi_X^{(p)}(1^-)=\mathbb{E}[X(X-1)\cdots(X-p+1)]<+\infty\), ce qui équivaut à \(\mathbb{E}[X^p]<+\infty\).<br>(i)\(\Rightarrow\)(ii) : récurrence sur \(k\in\{0,\dots,p\}\). Pour \(t_n\to1^-\), le théorème des accroissements finis donne \(\frac{\varphi^{(k)}(1)-\varphi^{(k)}(t_n)}{1-t_n}=\varphi^{(k+1)}(s_n)\) avec \(s_n\in]t_n,1[\), qui tend vers \(\varphi^{(k+1)}(1^-)<+\infty\) : \(\varphi^{(k)}\) est dérivable en 1 et \(\varphi^{(k+1)}\) est continue en 1.'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 4-5'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 2
@@ -114,7 +114,7 @@
 - id: mod-a-007-1
   notion: mod-n-0007
   recto: 'Exemple : moments de la loi binomiale par \(\varphi_X\)'
-  verso: 'Exemple (Binomiale). Si \(X\sim\mathcal{B}(n,p)\), avec \(n\ge2\),<br>\(\varphi_X(z)=(1-p+pz)^n\), \(\varphi_X^{\prime}(z)=np(1-p+pz)^{n-1}\), \(\varphi_X^{\prime\prime}(z)=n(n-1)p^2(1-p+pz)^{n-2}\).<br>On retrouve \(\mathbb{E}[X]=np\) et \(\mathrm{Var}(X)=np(1-p)\). Pour \(n=0\) ou \(n=1\), la dérivée seconde est identiquement nulle et les mêmes formules pour les moments restent valables.'
+  verso: 'On note \(\varphi_X(z)=\mathbb{E}[z^X]\) la fonction génératrice d''une variable \(X\) à valeurs dans \(\mathbb{N}\) ; \(p\in[0,1]\). Exemple (Binomiale). Si \(X\sim\mathcal{B}(n,p)\), avec \(n\ge2\),<br>\(\varphi_X(z)=(1-p+pz)^n\), \(\varphi_X^{\prime}(z)=np(1-p+pz)^{n-1}\), \(\varphi_X^{\prime\prime}(z)=n(n-1)p^2(1-p+pz)^{n-2}\).<br>On retrouve \(\mathbb{E}[X]=np\) et \(\mathrm{Var}(X)=np(1-p)\). Pour \(n=0\) ou \(n=1\), la dérivée seconde est identiquement nulle et les mêmes formules pour les moments restent valables.'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 5'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -122,7 +122,7 @@
 - id: mod-a-007-2
   notion: mod-n-0007
   recto: 'Exemple : moments de la loi de Poisson par \(\varphi_X\)'
-  verso: 'Exemple (Poisson). Si \(X\sim\mathcal{P}(\lambda)\),<br>\(\varphi_X(z)=e^{\lambda(z-1)}\), \(\varphi_X^{\prime}(z)=\lambda e^{\lambda(z-1)}\), \(\varphi_X^{\prime\prime}(z)=\lambda^2e^{\lambda(z-1)}\).<br>On retrouve \(\mathbb{E}[X]=\lambda\) et \(\mathrm{Var}(X)=\lambda\).'
+  verso: 'On note \(\varphi_X(z)=\mathbb{E}[z^X]\) la fonction génératrice d''une variable \(X\) à valeurs dans \(\mathbb{N}\) ; \(\lambda > 0\). Exemple (Poisson). Si \(X\sim\mathcal{P}(\lambda)\),<br>\(\varphi_X(z)=e^{\lambda(z-1)}\), \(\varphi_X^{\prime}(z)=\lambda e^{\lambda(z-1)}\), \(\varphi_X^{\prime\prime}(z)=\lambda^2e^{\lambda(z-1)}\).<br>On retrouve \(\mathbb{E}[X]=\lambda\) et \(\mathrm{Var}(X)=\lambda\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 5'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -130,7 +130,7 @@
 - id: mod-a-007-3
   notion: mod-n-0007
   recto: 'Exemple : moments de la loi géométrique par \(\varphi_X\)'
-  verso: 'Exemple (Géométrique). Si \(X\sim\mathcal{G}(p)\) (loi portée par \(\mathbb{N}^*\), \(q=1-p\)),<br>\(\varphi_X(z)=\dfrac{pz}{1-qz}\),\(\varphi_X^{\prime}(z)=\dfrac p{(1-qz)^2}\), \(\varphi_X^{\prime\prime}(z)=\dfrac{2pq}{(1-qz)^3}\).<br>On retrouve \(\mathbb{E}[X]=\dfrac1p\) et \(\mathrm{Var}(X)=\dfrac q{p^2}\).'
+  verso: 'On note \(\varphi_X(z)=\mathbb{E}[z^X]\) la fonction génératrice d''une variable \(X\) à valeurs dans \(\mathbb{N}\) ; \(p\in]0,1]\). Exemple (Géométrique). Si \(X\sim\mathcal{G}(p)\) (loi portée par \(\mathbb{N}^*\), \(q=1-p\)),<br>\(\varphi_X(z)=\dfrac{pz}{1-qz}\),\(\varphi_X^{\prime}(z)=\dfrac p{(1-qz)^2}\), \(\varphi_X^{\prime\prime}(z)=\dfrac{2pq}{(1-qz)^3}\).<br>On retrouve \(\mathbb{E}[X]=\dfrac1p\) et \(\mathrm{Var}(X)=\dfrac q{p^2}\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 5-6'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -170,7 +170,7 @@
 - id: mod-a-009-2
   notion: mod-n-0009
   recto: 'Prop. 1.4 (2) : variance de \(Z_n\), forme de somme'
-  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\), \((X_{i,j})\) i.i.d. à valeurs dans \(\mathbb{N}\)). Si \(X_{i,j}\) possède un moment d''ordre 2 et \(\sigma^2=\mathrm{Var}(X_{i,j})\), alors \(\mathrm{Var}(Z_0)=0\) et, pour tout \(n\ge1\), \(\mathrm{Var}(Z_n)=\sigma^2\sum_{k=n-1}^{2n-2}m^k\).<br>On utilise la convention \(m^0=1\), y compris lorsque \(m=0\).'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\), \((X_{i,j})\) i.i.d. à valeurs dans \(\mathbb{N}\)). Si \(X_{i,j}\) possède un moment d''ordre 2, \(m=\mathbb{E}[X_{i,j}]\) et \(\sigma^2=\mathrm{Var}(X_{i,j})\), alors \(\mathrm{Var}(Z_0)=0\) et, pour tout \(n\ge1\), \(\mathrm{Var}(Z_n)=\sigma^2\sum_{k=n-1}^{2n-2}m^k\).<br>On utilise la convention \(m^0=1\), y compris lorsque \(m=0\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 7'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -186,7 +186,7 @@
 - id: mod-a-010-1
   notion: mod-n-0010
   recto: 'Preuve : Prop. 1.4 (1), \(\mathbb{E}[Z_n]=m^n\)'
-  verso: 'On montre \(\mathbb{E}[Z_{n+1}]=m\,\mathbb{E}[Z_n]\) (avec \(\mathbb{E}[Z_0]=1\), une récurrence donne \(m^n\)).<br>On décompose sur le système complet \(\{Z_n=k\}\), \(k\ge0\) : \(\mathbb{E}[Z_{n+1}]=\sum_{k\ge0}\mathbb{E}\big[\big(\sum_{j=1}^kX_{n,j}\big)\mathbf 1_{Z_n=k}\big]\) (échange \(\mathbb{E}\)/\(\sum\) licite, termes \(\ge0\)). Par indépendance de \(Z_n\) et des \(X_{n,j}\) : \(=\sum_kkm\,\mathbb{P}(Z_n=k)=m\,\mathbb{E}[Z_n]\).'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\), \((X_{i,j})\) i.i.d. à valeurs dans \(\mathbb{N}\)), \(m=\mathbb{E}[X_{i,j}]\)). On montre \(\mathbb{E}[Z_{n+1}]=m\,\mathbb{E}[Z_n]\) (avec \(\mathbb{E}[Z_0]=1\), une récurrence donne \(m^n\)).<br>On décompose sur le système complet \(\{Z_n=k\}\), \(k\ge0\) : \(\mathbb{E}[Z_{n+1}]=\sum_{k\ge0}\mathbb{E}\big[\big(\sum_{j=1}^kX_{n,j}\big)\mathbf 1_{Z_n=k}\big]\) (échange \(\mathbb{E}\)/\(\sum\) licite, termes \(\ge0\)). Par indépendance de \(Z_n\) et des \(X_{n,j}\) : \(=\sum_kkm\,\mathbb{P}(Z_n=k)=m\,\mathbb{E}[Z_n]\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 7'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 2
@@ -194,7 +194,7 @@
 - id: mod-a-010-2
   notion: mod-n-0010
   recto: 'Preuve : Prop. 1.4 (2), formule (1.1) sur \(\mathbb{E}[Z_{n+1}^2]\)'
-  verso: 'Il suffit de montrer, pour tout \(n\ge0\), \(\mathbb{E}[Z_{n+1}^2]=\sigma^2\,\mathbb{E}[Z_n]+m^2\,\mathbb{E}[Z_n^2]\) (1.1).<br>Même décomposition sur \(\{Z_n=k\}\) et indépendance : \(\mathbb{E}[Z_{n+1}^2]=\sum_k\mathbb{E}\big[\big(\sum_{j\le k}X_{n,j}\big)^2\big]\mathbb{P}(Z_n=k)\). Comme \(\mathbb{E}[Y^2]=\mathrm{Var}(Y)+\mathbb{E}[Y]^2\), cette espérance vaut \(k\sigma^2+(km)^2\) (variance d''une somme de v.a. indépendantes), d''où (1.1).'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\), \((X_{i,j})\) i.i.d. à valeurs dans \(\mathbb{N}\)), \(m=\mathbb{E}[X_{i,j}]\), \(\sigma^2=\mathrm{Var}(X_{i,j})\)). Il suffit de montrer, pour tout \(n\ge0\), \(\mathbb{E}[Z_{n+1}^2]=\sigma^2\,\mathbb{E}[Z_n]+m^2\,\mathbb{E}[Z_n^2]\) (1.1).<br>Même décomposition sur \(\{Z_n=k\}\) et indépendance : \(\mathbb{E}[Z_{n+1}^2]=\sum_k\mathbb{E}\big[\big(\sum_{j\le k}X_{n,j}\big)^2\big]\mathbb{P}(Z_n=k)\). Comme \(\mathbb{E}[Y^2]=\mathrm{Var}(Y)+\mathbb{E}[Y]^2\), cette espérance vaut \(k\sigma^2+(km)^2\) (variance d''une somme de v.a. indépendantes), d''où (1.1).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 7-8'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 2
@@ -202,7 +202,7 @@
 - id: mod-a-010-3
   notion: mod-n-0010
   recto: 'Preuve : Prop. 1.4 (2), récurrence sur \(\mathrm{Var}(Z_n)\)'
-  verso: 'De (1.1) et de \(\mathbb{E}[Z_n]=m^n\) : \(\mathrm{Var}(Z_{n+1})=\sigma^2m^n+m^2\mathbb{E}[Z_n^2]-m^{2n+2}=\sigma^2m^n+m^2\,\mathrm{Var}(Z_n)\).<br>La formule se vérifie par récurrence : \(\mathrm{Var}(Z_1)=\sigma^2\), et si elle est vraie au rang \(n\ge1\), \(\mathrm{Var}(Z_{n+1})=\sigma^2m^n+m^2\sigma^2\sum_{k=n-1}^{2n-2}m^k=\sigma^2\sum_{k=n}^{2n}m^k\).'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\), \((X_{i,j})\) i.i.d. à valeurs dans \(\mathbb{N}\)), \(m=\mathbb{E}[X_{i,j}]\), \(\sigma^2=\mathrm{Var}(X_{i,j})\)). De (1.1) et de \(\mathbb{E}[Z_n]=m^n\) : \(\mathrm{Var}(Z_{n+1})=\sigma^2m^n+m^2\mathbb{E}[Z_n^2]-m^{2n+2}=\sigma^2m^n+m^2\,\mathrm{Var}(Z_n)\).<br>La formule se vérifie par récurrence : \(\mathrm{Var}(Z_1)=\sigma^2\), et si elle est vraie au rang \(n\ge1\), \(\mathrm{Var}(Z_{n+1})=\sigma^2m^n+m^2\sigma^2\sum_{k=n-1}^{2n-2}m^k=\sigma^2\sum_{k=n}^{2n}m^k\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 8'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 2
@@ -218,7 +218,7 @@
 - id: mod-a-011-2
   notion: mod-n-0011
   recto: 'Preuve : Prop. 1.5, \(G_{n+1}=G_n\circ\varphi\)'
-  verso: 'Récurrence sur \(n\) (\(G_1=\varphi_{Z_1}=\varphi_{X_{0,1}}=\varphi\)). On décompose sur \(\{Z_n=k\}\), \(Z_n\) étant indépendante des \(X_{n,j}\) : \(G_{n+1}(s)=\sum_{k\ge0}\mathbb{E}\big[s^{\sum_{j\le k}X_{n,j}}\big]\mathbb{P}(Z_n=k)=\sum_{k\ge0}\varphi(s)^k\,\mathbb{P}(Z_n=k)\) (v.a. i.i.d.) \(=G_n(\varphi(s))\), puis \(=\varphi^{\circ n}(\varphi(s))=\varphi^{\circ(n+1)}(s)\) par hypothèse de récurrence.'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\), \((X_{i,j})\) i.i.d. à valeurs dans \(\mathbb{N}\)), \(\varphi\) la fonction génératrice des \(X_{i,j}\) et \(G_n\) celle de \(Z_n\). Récurrence sur \(n\) (\(G_1=\varphi_{Z_1}=\varphi_{X_{0,1}}=\varphi\)). On décompose sur \(\{Z_n=k\}\), \(Z_n\) étant indépendante des \(X_{n,j}\) : \(G_{n+1}(s)=\sum_{k\ge0}\mathbb{E}\big[s^{\sum_{j\le k}X_{n,j}}\big]\mathbb{P}(Z_n=k)=\sum_{k\ge0}\varphi(s)^k\,\mathbb{P}(Z_n=k)\) (v.a. i.i.d.) \(=G_n(\varphi(s))\), puis \(=\varphi^{\circ n}(\varphi(s))=\varphi^{\circ(n+1)}(s)\) par hypothèse de récurrence.'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 9'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -274,7 +274,7 @@
 - id: mod-a-014-3
   notion: mod-n-0014
   recto: 'Preuve : Thm 1.1, \(\mathbb{P}(E)\) est solution de \(\varphi(s)=s\)'
-  verso: 'Par ce qui précède, \(\mathbb{P}(E)=\lim_n\mathbb{P}(Z_n=0)=\lim_nG_n(0)\). D''après la Prop. 1.5, \(G_n(0)=\varphi^{\circ n}(0)=\varphi(G_{n-1}(0))\). Comme \(\varphi\) est continue, on passe à la limite : \(\mathbb{P}(E)=\varphi(\mathbb{P}(E))\).'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\)), \(\varphi\) la fonction génératrice des \(X_{i,j}\), \(G_n\) celle de \(Z_n\) et \(E\) l''événement d''extinction. Par ce qui précède, \(\mathbb{P}(E)=\lim_n\mathbb{P}(Z_n=0)=\lim_nG_n(0)\). D''après la Prop. 1.5, \(G_n(0)=\varphi^{\circ n}(0)=\varphi(G_{n-1}(0))\). Comme \(\varphi\) est continue, on passe à la limite : \(\mathbb{P}(E)=\varphi(\mathbb{P}(E))\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 10'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -282,7 +282,7 @@
 - id: mod-a-014-4
   notion: mod-n-0014
   recto: 'Preuve : Thm 1.1, \(\mathbb{P}(E)\) est la plus petite solution'
-  verso: 'Soit \(q\in[0,1]\) une solution quelconque de \(\varphi(s)=s\). Comme \(\varphi\) est croissante, \(\varphi^{\circ n}\) l''est également. Par conséquent \(\mathbb{P}(Z_n=0)=\varphi^{\circ n}(0)\le\varphi^{\circ n}(q)=q\). En passant à la limite, \(\mathbb{P}(E)\le q\) : \(\mathbb{P}(E)\) est bien la plus petite des solutions.'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\)), \(\varphi\) la fonction génératrice des \(X_{i,j}\) et \(E\) l''événement d''extinction. Soit \(q\in[0,1]\) une solution quelconque de \(\varphi(s)=s\). Comme \(\varphi\) est croissante, \(\varphi^{\circ n}\) l''est également. Par conséquent \(\mathbb{P}(Z_n=0)=\varphi^{\circ n}(0)\le\varphi^{\circ n}(q)=q\). En passant à la limite, \(\mathbb{P}(E)\le q\) : \(\mathbb{P}(E)\) est bien la plus petite des solutions.'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 10'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -314,7 +314,7 @@
 - id: mod-a-016-1
   notion: mod-n-0016
   recto: 'Preuve : Cor. 1.1, propriétés de \(\varphi\), \(\varphi^{\prime}\), \(\varphi^{\prime\prime}\)'
-  verso: 'On étudie \(\psi(s)=\varphi(s)-s\) sur \([0,1]\). Les dérivées première et seconde de \(\varphi\) sont positives ou nulles sur \([0,1[\) : \(\varphi^{\prime}(s)=\sum_{k\ge1}k\,\mathbb{P}(X_{i,j}=k)s^{k-1}\) et \(\varphi^{\prime\prime}(s)=\sum_{k\ge2}k(k-1)\mathbb{P}(X_{i,j}=k)s^{k-2}\). En particulier \(\varphi^{\prime}\) est croissante, de \(\varphi^{\prime}(0)=\mathbb{P}(X_{i,j}=1)\) à la limite \(\varphi^{\prime}(1^-)=m\in[0,+\infty]\).'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\), \((X_{i,j})\) i.i.d. à valeurs dans \(\mathbb{N}\)) de fonction génératrice \(\varphi\), \(m=\mathbb{E}[X_{i,j}]\). On étudie \(\psi(s)=\varphi(s)-s\) sur \([0,1]\). Les dérivées première et seconde de \(\varphi\) sont positives ou nulles sur \([0,1[\) : \(\varphi^{\prime}(s)=\sum_{k\ge1}k\,\mathbb{P}(X_{i,j}=k)s^{k-1}\) et \(\varphi^{\prime\prime}(s)=\sum_{k\ge2}k(k-1)\mathbb{P}(X_{i,j}=k)s^{k-2}\). En particulier \(\varphi^{\prime}\) est croissante, de \(\varphi^{\prime}(0)=\mathbb{P}(X_{i,j}=1)\) à la limite \(\varphi^{\prime}(1^-)=m\in[0,+\infty]\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 10'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -322,7 +322,7 @@
 - id: mod-a-016-2
   notion: mod-n-0016
   recto: 'Preuve : Cor. 1.1, cas où \(\varphi\) est strictement convexe'
-  verso: 'Cas 1 : \(\mathbb{P}(Z_1=0)+\mathbb{P}(Z_1=1) < 1\). Il existe donc un \(k\ge2\) tel que \(\mathbb{P}(X_{i,j}=k) > 0\). La fonction \(\varphi^{\prime\prime}\) est alors strictement positive sur \(]0,1[\), \(\varphi^{\prime}\) est strictement croissante sur \([0,1[\) et \(\varphi\) est strictement convexe sur \([0,1]\).<br>Les cas où \(\mathbb{P}(Z_1=0)+\mathbb{P}(Z_1=1)=1\) (\(\varphi\) affine) sont traités à part : cas 2 si \(\mathbb{P}(Z_1=0) > 0\), cas 3 si \(\mathbb{P}(Z_1=1)=1\).'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\), \((X_{i,j})\) i.i.d. à valeurs dans \(\mathbb{N}\)) de fonction génératrice \(\varphi\), \(E\) l''événement d''extinction et \(\psi(s)=\varphi(s)-s\). Cas 1 : \(\mathbb{P}(Z_1=0)+\mathbb{P}(Z_1=1) < 1\). Il existe donc un \(k\ge2\) tel que \(\mathbb{P}(X_{i,j}=k) > 0\). La fonction \(\varphi^{\prime\prime}\) est alors strictement positive sur \(]0,1[\), \(\varphi^{\prime}\) est strictement croissante sur \([0,1[\) et \(\varphi\) est strictement convexe sur \([0,1]\).<br>Les cas où \(\mathbb{P}(Z_1=0)+\mathbb{P}(Z_1=1)=1\) (\(\varphi\) affine) sont traités à part : cas 2 si \(\mathbb{P}(Z_1=0) > 0\), cas 3 si \(\mathbb{P}(Z_1=1)=1\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 11'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -330,7 +330,7 @@
 - id: mod-a-016-3
   notion: mod-n-0016
   recto: 'Preuve : Cor. 1.1, cas 1 avec \(m\le1\)'
-  verso: 'Cas 1 (\(\mathbb{P}(Z_1=0)+\mathbb{P}(Z_1=1) < 1\), donc \(\varphi\) strictement convexe), \(m=\mathbb{E}[X_{i,j}]\le1\). Variations de \(\psi=\varphi-s\) : \(\psi^{\prime}\) est strictement croissante, de \(\psi^{\prime}(0)=\mathbb{P}(X_{i,j}=1)-1 < 0\) à \(\psi^{\prime}(1^-)=m-1\le0\) ; \(\psi\) décroît strictement de \(\psi(0)=\mathbb{P}(X_{i,j}=0) > 0\) à \(\psi(1)=0\). (On a \(\mathbb{P}(X_{i,j}=0) > 0\), sinon \(\mathbb{E}[X_{i,j}]\) serait \(> 1\).) La fonction \(\psi\) est strictement positive sur \([0,1[\) et ne s''annule qu''en 1 : la plus petite racine est 1, donc \(\mathbb{P}(E)=1\).'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\), \((X_{i,j})\) i.i.d. à valeurs dans \(\mathbb{N}\)) de fonction génératrice \(\varphi\), \(E\) l''événement d''extinction et \(\psi(s)=\varphi(s)-s\). Cas 1 (\(\mathbb{P}(Z_1=0)+\mathbb{P}(Z_1=1) < 1\), donc \(\varphi\) strictement convexe), \(m=\mathbb{E}[X_{i,j}]\le1\). Variations de \(\psi=\varphi-s\) : \(\psi^{\prime}\) est strictement croissante, de \(\psi^{\prime}(0)=\mathbb{P}(X_{i,j}=1)-1 < 0\) à \(\psi^{\prime}(1^-)=m-1\le0\) ; \(\psi\) décroît strictement de \(\psi(0)=\mathbb{P}(X_{i,j}=0) > 0\) à \(\psi(1)=0\). (On a \(\mathbb{P}(X_{i,j}=0) > 0\), sinon \(\mathbb{E}[X_{i,j}]\) serait \(> 1\).) La fonction \(\psi\) est strictement positive sur \([0,1[\) et ne s''annule qu''en 1 : la plus petite racine est 1, donc \(\mathbb{P}(E)=1\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 11'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -338,7 +338,7 @@
 - id: mod-a-016-4
   notion: mod-n-0016
   recto: 'Preuve : Cor. 1.1, cas 1 avec \(m > 1\)'
-  verso: 'Cas 1 (\(\mathbb{P}(Z_1=0)+\mathbb{P}(Z_1=1) < 1\), donc \(\varphi\) strictement convexe), \(m=\mathbb{E}[X_{i,j}] > 1\). \(\psi^{\prime}(0) < 0\), \(\psi^{\prime}(1^-)=m-1 > 0\) et \(\psi^{\prime}\) est continue strictement croissante : il existe un unique \(u\in]0,1[\) avec \(\psi^{\prime}(u)=0\). La fonction \(\psi\) est strictement croissante sur \([u,1]\), nulle en 1, donc \(\psi(u) < 0\) ; comme \(\psi(0)\ge0\) et que \(\psi\) décroît strictement sur \([0,u]\), il existe un unique \(v\in[0,u[\) tel que \(\psi(v)=0\) : c''est la plus petite racine de \(\varphi(s)=s\) dans \([0,1]\), d''où \(\mathbb{P}(E)=v\in[0,1[\). Valable aussi si \(m=+\infty\).'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\), \((X_{i,j})\) i.i.d. à valeurs dans \(\mathbb{N}\)) de fonction génératrice \(\varphi\), \(E\) l''événement d''extinction et \(\psi(s)=\varphi(s)-s\). Cas 1 (\(\mathbb{P}(Z_1=0)+\mathbb{P}(Z_1=1) < 1\), donc \(\varphi\) strictement convexe), \(m=\mathbb{E}[X_{i,j}] > 1\). \(\psi^{\prime}(0) < 0\), \(\psi^{\prime}(1^-)=m-1 > 0\) et \(\psi^{\prime}\) est continue strictement croissante : il existe un unique \(u\in]0,1[\) avec \(\psi^{\prime}(u)=0\). La fonction \(\psi\) est strictement croissante sur \([u,1]\), nulle en 1, donc \(\psi(u) < 0\) ; comme \(\psi(0)\ge0\) et que \(\psi\) décroît strictement sur \([0,u]\), il existe un unique \(v\in[0,u[\) tel que \(\psi(v)=0\) : c''est la plus petite racine de \(\varphi(s)=s\) dans \([0,1]\), d''où \(\mathbb{P}(E)=v\in[0,1[\). Valable aussi si \(m=+\infty\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 11'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -346,7 +346,7 @@
 - id: mod-a-016-5
   notion: mod-n-0016
   recto: 'Preuve : Cor. 1.1, cas 2 (\(\varphi\) affine)'
-  verso: 'Cas 2 : \(\mathbb{P}(Z_1=0)+\mathbb{P}(Z_1=1)=1\) et \(\mathbb{P}(Z_1=0) > 0\). Notons \(\alpha=\mathbb{P}(Z_1=0) > 0\). Alors \(\mathbb{E}[X_{i,j}]=1-\alpha < 1\) et \(\varphi(s)=\alpha+(1-\alpha)s\). Donc \(\varphi(s)=s\) entraîne \(\alpha=\alpha s\) puis \(s=1\) : \(\mathbb{P}(E)=1\). Il y a presque sûrement extinction.'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson (\(Z_0=1\), \((X_{i,j})\) i.i.d. à valeurs dans \(\mathbb{N}\)) de fonction génératrice \(\varphi\), \(E\) l''événement d''extinction et \(\psi(s)=\varphi(s)-s\). Cas 2 : \(\mathbb{P}(Z_1=0)+\mathbb{P}(Z_1=1)=1\) et \(\mathbb{P}(Z_1=0) > 0\). Notons \(\alpha=\mathbb{P}(Z_1=0) > 0\). Alors \(\mathbb{E}[X_{i,j}]=1-\alpha < 1\) et \(\varphi(s)=\alpha+(1-\alpha)s\). Donc \(\varphi(s)=s\) entraîne \(\alpha=\alpha s\) puis \(s=1\) : \(\mathbb{P}(E)=1\). Il y a presque sûrement extinction.'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 11'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -370,7 +370,7 @@
 - id: mod-a-017-2
   notion: mod-n-0017
   recto: 'Preuve : Prop. 1.6, étape 1 (récurrence sur \(u_n\))'
-  verso: 'Posons \(p_n=\mathbb{P}(\tau > n)=\mathbb{P}(Z_n > 0)=1-G_n(0)\) et \(u_n=p_n/m^n\). Alors \(0 < p_n\le m^n\) (Markov), donc \(0 < u_n\le1\). Taylor-Lagrange pour \(\varphi\) (de classe \(C^2\) sur \([0,1]\), \(\varphi(1)=1\), \(\varphi^{\prime}(1)=m\)) : \(p_{n+1}=mp_n-\frac{\varphi^{\prime\prime}(c_n)}2p_n^2\), d''où \(u_{n+1}=u_n(1-a_n)\) avec \(a_n=m^{n-1}\frac{\varphi^{\prime\prime}(c_n)}2u_n\ge0\). La suite \((u_n)\) est décroissante et converge vers une constante \(C\ge0\).'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson de fonction génératrice \(\varphi\), \(G_n\) celle de \(Z_n\), \(m=\mathbb{E}[Z_1]\in]0,1[\) et \(\tau=\inf\{n\ge0\mid Z_n=0\}\). Posons \(p_n=\mathbb{P}(\tau > n)=\mathbb{P}(Z_n > 0)=1-G_n(0)\) et \(u_n=p_n/m^n\). Alors \(0 < p_n\le m^n\) (Markov), donc \(0 < u_n\le1\). Taylor-Lagrange pour \(\varphi\) (de classe \(C^2\) sur \([0,1]\), \(\varphi(1)=1\), \(\varphi^{\prime}(1)=m\)) : \(p_{n+1}=mp_n-\frac{\varphi^{\prime\prime}(c_n)}2p_n^2\), d''où \(u_{n+1}=u_n(1-a_n)\) avec \(a_n=m^{n-1}\frac{\varphi^{\prime\prime}(c_n)}2u_n\ge0\). La suite \((u_n)\) est décroissante et converge vers une constante \(C\ge0\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 12-13'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -378,7 +378,7 @@
 - id: mod-a-017-3
   notion: mod-n-0017
   recto: 'Preuve : Prop. 1.6, étape 2 (\(C > 0\))'
-  verso: 'Il reste à montrer que \(C > 0\). On a \(0\le a_n\le\frac{\varphi^{\prime\prime}(1)}2m^{n-1}\) (car \(u_n\le1\) et \(\varphi^{\prime\prime}\) est croissante), donc \(\sum a_n\) converge. Pour \(n\) grand, \(a_n\le\frac12\) et \(0\le-\ln(1-a_n)\le2a_n\) : \(\ln u_n=\sum_{k < n}\ln(1-a_k)\) converge vers un réel \(\ell\). Ainsi \(C=e^{\ell} > 0\) et \(\mathbb{P}(\tau > n)=m^nu_n\sim Cm^n\).'
+  verso: 'Soit \((Z_n)\) un processus de Galton-Watson de fonction génératrice \(\varphi\), \(m=\mathbb{E}[Z_1]\in]0,1[\), \(\tau\) son temps d''extinction, \(u_n=\mathbb{P}(\tau > n)/m^n\) (suite décroissante de limite \(C\ge0\)) et \(a_n\ge0\) tel que \(u_{n+1}=u_n(1-a_n)\). Il reste à montrer que \(C > 0\). On a \(0\le a_n\le\frac{\varphi^{\prime\prime}(1)}2m^{n-1}\) (car \(u_n\le1\) et \(\varphi^{\prime\prime}\) est croissante), donc \(\sum a_n\) converge. Pour \(n\) grand, \(a_n\le\frac12\) et \(0\le-\ln(1-a_n)\le2a_n\) : \(\ln u_n=\sum_{k < n}\ln(1-a_k)\) converge vers un réel \(\ell\). Ainsi \(C=e^{\ell} > 0\) et \(\mathbb{P}(\tau > n)=m^nu_n\sim Cm^n\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 13'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -402,7 +402,7 @@
 - id: mod-a-019-1
   notion: mod-n-0019
   recto: 'Prop. 1.8 : cas sur-critique, limite de \(Z_n/m^n\)'
-  verso: 'Cas sur-critique (\(m > 1\)), pour un processus de Galton-Watson (\(Z_0=1\)) dont les \(X_{i,j}\) possèdent un moment d''ordre 2. Il existe une v.a. \(W\) à valeurs dans \([0,+\infty[\), avec \(\mathbb{E}[W]=1\) et \(\mathrm{Var}(W)=\dfrac{\sigma^2}{m(m-1)}\) telle que \(\lim_{n\to+\infty}\dfrac{Z_n}{m^n}=W\) presque sûrement. La convergence a également lieu dans \(L^2\), c''est-à-dire que \(\mathbb{E}[(Z_n/m^n-W)^2]\to0\). (Démonstration : admise.)'
+  verso: 'Cas sur-critique (\(m > 1\)), pour un processus de Galton-Watson (\(Z_0=1\)) dont les \(X_{i,j}\) possèdent un moment d''ordre 2 (\(m=\mathbb{E}[X_{i,j}]\), \(\sigma^2=\mathrm{Var}(X_{i,j})\)). Il existe une v.a. \(W\) à valeurs dans \([0,+\infty[\), avec \(\mathbb{E}[W]=1\) et \(\mathrm{Var}(W)=\dfrac{\sigma^2}{m(m-1)}\) telle que \(\lim_{n\to+\infty}\dfrac{Z_n}{m^n}=W\) presque sûrement. La convergence a également lieu dans \(L^2\), c''est-à-dire que \(\mathbb{E}[(Z_n/m^n-W)^2]\to0\). (Démonstration : admise.)'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 14'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -418,7 +418,7 @@
 - id: mod-a-019-3
   notion: mod-n-0019
   recto: 'Preuve : Prop. 1.8, moments de \(W\) retrouvés'
-  verso: 'Cas sur-critique (\(m > 1\), \(\sigma^2 < +\infty\), \(Z_0=1\)). La convergence dans \(L^2\) justifie le passage à la limite dans les deux premiers moments : \(\lim\mathbb{E}[Z_n/m^n]=\lim1=1=\mathbb{E}[W]\) et \(\lim\mathrm{Var}(Z_n/m^n)=\lim\frac1{m^{2n}}\cdot\frac{m^{n-1}(m^n-1)}{m-1}\sigma^2=\frac{\sigma^2}{m(m-1)}=\mathrm{Var}(W)\).'
+  verso: 'Cas sur-critique (\(m=\mathbb{E}[X_{i,j}] > 1\), \(\sigma^2=\mathrm{Var}(X_{i,j}) < +\infty\), \(Z_0=1\)), \(W\) la limite de \(Z_n/m^n\). La convergence dans \(L^2\) justifie le passage à la limite dans les deux premiers moments : \(\lim\mathbb{E}[Z_n/m^n]=\lim1=1=\mathbb{E}[W]\) et \(\lim\mathrm{Var}(Z_n/m^n)=\lim\frac1{m^{2n}}\cdot\frac{m^{n-1}(m^n-1)}{m-1}\sigma^2=\frac{\sigma^2}{m(m-1)}=\mathrm{Var}(W)\).'
   source: 'Poly de modélisation Paris Cité, ch. 1, p. 14'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -450,7 +450,7 @@
 - id: mod-a-021-1
   notion: mod-n-0021
   recto: 'Prop. 2.1 : produit de matrices markoviennes'
-  verso: 'Un produit de matrices markoviennes est une matrice markovienne.<br>(Preuve : les coefficients de \(PQ\) sont \(\ge0\) et, pour tout \(x\in E\), \(\sum_{y}PQ(x,y)=\sum_zP(x,z)\sum_yQ(z,y)=\sum_zP(x,z)=1\).)'
+  verso: 'Soient \(P,Q\) deux matrices markoviennes sur un ensemble fini \(E\). Un produit de matrices markoviennes est une matrice markovienne.<br>(Preuve : les coefficients de \(PQ\) sont \(\ge0\) et, pour tout \(x\in E\), \(\sum_{y}PQ(x,y)=\sum_zP(x,z)\sum_yQ(z,y)=\sum_zP(x,z)=1\).)'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 1-2'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -458,7 +458,7 @@
 - id: mod-a-021-2
   notion: mod-n-0021
   recto: 'Prop. 2.1 : puissances de \(P\)'
-  verso: 'En particulier, si \(P\) est une matrice markovienne, alors \(P^n=P\times P\times\cdots\times P\) (\(n\) facteurs) est une matrice markovienne. Elle vérifie, pour tout \(n\ge2\),<br>\(P^n(x,y)=\sum_{a_1,\dots,a_{n-1}}P(x,a_1)\cdots P(a_{n-1},y)\), \(\forall x,y\in E\).'
+  verso: 'Soit \(E\) un ensemble fini. En particulier, si \(P\) est une matrice markovienne, alors \(P^n=P\times P\times\cdots\times P\) (\(n\) facteurs) est une matrice markovienne. Elle vérifie, pour tout \(n\ge2\),<br>\(P^n(x,y)=\sum_{a_1,\dots,a_{n-1}}P(x,a_1)\cdots P(a_{n-1},y)\), \(\forall x,y\in E\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 2'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -506,7 +506,7 @@
 - id: mod-a-025-1
   notion: mod-n-0025
   recto: 'Thm 2.1 : probabilité d''une trajectoire'
-  verso: 'Si \(X=(X_n)_{n\in\mathbb{N}}\) est une chaîne de Markov de matrice de transition \(P\) et de loi initiale \(\mu_0\), alors pour tous \(a_0,a_1,\dots,a_n\in E\),<br>\(\mathbb{P}(X_0=a_0,\dots,X_n=a_n)=\mu_0(a_0)P(a_0,a_1)P(a_1,a_2)\cdots P(a_{n-1},a_n)\). (2.1)'
+  verso: 'Soit \(E\) un ensemble fini. Si \(X=(X_n)_{n\in\mathbb{N}}\) est une chaîne de Markov de matrice de transition \(P\) et de loi initiale \(\mu_0\), alors pour tous \(a_0,a_1,\dots,a_n\in E\),<br>\(\mathbb{P}(X_0=a_0,\dots,X_n=a_n)=\mu_0(a_0)P(a_0,a_1)P(a_1,a_2)\cdots P(a_{n-1},a_n)\). (2.1)'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 3'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -514,7 +514,7 @@
 - id: mod-a-025-2
   notion: mod-n-0025
   recto: 'Thm 2.1 : réciproque'
-  verso: 'Réciproquement, si \(X=(X_n)_{n\in\mathbb{N}}\) est une suite de variables aléatoires à valeurs dans \(E\) vérifiant (2.1), \(\mathbb{P}(X_0=a_0,\dots,X_n=a_n)=\mu_0(a_0)P(a_0,a_1)\cdots P(a_{n-1},a_n)\), pour tout \(n\in\mathbb{N}\) et tous \(a_0,\dots,a_n\in E\), alors \(X\) est une chaîne de Markov de matrice de transition \(P\) et de loi initiale \(\mu_0\).'
+  verso: 'Soit \(E\) un ensemble fini. Réciproquement, si \(X=(X_n)_{n\in\mathbb{N}}\) est une suite de variables aléatoires à valeurs dans \(E\) vérifiant (2.1), \(\mathbb{P}(X_0=a_0,\dots,X_n=a_n)=\mu_0(a_0)P(a_0,a_1)\cdots P(a_{n-1},a_n)\), pour tout \(n\in\mathbb{N}\) et tous \(a_0,\dots,a_n\in E\), alors \(X\) est une chaîne de Markov de matrice de transition \(P\) et de loi initiale \(\mu_0\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 3'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -530,7 +530,7 @@
 - id: mod-a-026-2
   notion: mod-n-0026
   recto: 'Preuve : Thm 2.2'
-  verso: 'La matrice \(P\) définie par (2.3) est bien une matrice markovienne sur \(E\). Pour tous \(a_0,\dots,a_n\in E\), par (2.2) et l''indépendance de \(X_0,U_1,\dots,U_n\) : \(\mathbb{P}(X_0=a_0,\dots,X_n=a_n)=\mathbb{P}(X_0=a_0)\mathbb{P}(\varphi(a_0,U_1)=a_1)\cdots\mathbb{P}(\varphi(a_{n-1},U_n)=a_n)=\mu_0(a_0)P(a_0,a_1)\cdots P(a_{n-1},a_n)\), ce qui prouve que \(X\) est une chaîne de Markov de loi initiale \(\mu_0\) et de matrice de transition \(P\) (Thm 2.1).'
+  verso: 'Dans le cadre du Thm 2.2 (\(E\) fini, \(X_0\sim\mu_0\) indépendante des \(U_i\) i.i.d., \(X_{n+1}=\varphi(X_n,U_{n+1})\)) : La matrice \(P\) définie par (2.3) est bien une matrice markovienne sur \(E\). Pour tous \(a_0,\dots,a_n\in E\), par (2.2) et l''indépendance de \(X_0,U_1,\dots,U_n\) : \(\mathbb{P}(X_0=a_0,\dots,X_n=a_n)=\mathbb{P}(X_0=a_0)\mathbb{P}(\varphi(a_0,U_1)=a_1)\cdots\mathbb{P}(\varphi(a_{n-1},U_n)=a_n)=\mu_0(a_0)P(a_0,a_1)\cdots P(a_{n-1},a_n)\), ce qui prouve que \(X\) est une chaîne de Markov de loi initiale \(\mu_0\) et de matrice de transition \(P\) (Thm 2.1).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 5'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -538,7 +538,7 @@
 - id: mod-a-027-1
   notion: mod-n-0027
   recto: 'Thm 2.3 : toute chaîne se construit par récurrence aléatoire'
-  verso: 'Si \(\mu_0\) est une mesure de probabilité sur \(E\) et \(P\) une matrice markovienne sur \(E\), alors on peut construire une chaîne de Markov \((X_n)_{n\ge0}\) ayant \(\mu_0\) pour loi initiale et \(P\) pour matrice de transition par une équation de récurrence aléatoire.<br>(Preuve : \(E=\{e_1,\dots,e_N\}\), \((U_i)_{i\ge1}\) i.i.d. uniformes sur \(F=[0,1]\). Pour chaque \(i\), des intervalles \((I_{i,j})_j\) deux à deux disjoints, de réunion \([0,1]\), avec \(|I_{i,j}|=P(e_i,e_j)\) ; \(\varphi(e_i,u)=e_j\) si \(u\in I_{i,j}\). Alors \(\mathbb{P}(\varphi(e_i,U_1)=e_j)=|I_{i,j}|=P(e_i,e_j)\).)'
+  verso: 'Soit \(E\) un ensemble fini. Si \(\mu_0\) est une mesure de probabilité sur \(E\) et \(P\) une matrice markovienne sur \(E\), alors on peut construire une chaîne de Markov \((X_n)_{n\ge0}\) ayant \(\mu_0\) pour loi initiale et \(P\) pour matrice de transition par une équation de récurrence aléatoire.<br>(Preuve : \(E=\{e_1,\dots,e_N\}\), \((U_i)_{i\ge1}\) i.i.d. uniformes sur \(F=[0,1]\). Pour chaque \(i\), des intervalles \((I_{i,j})_j\) deux à deux disjoints, de réunion \([0,1]\), avec \(|I_{i,j}|=P(e_i,e_j)\) ; \(\varphi(e_i,u)=e_j\) si \(u\in I_{i,j}\). Alors \(\mathbb{P}(\varphi(e_i,U_1)=e_j)=|I_{i,j}|=P(e_i,e_j)\).)'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 5'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 3
@@ -546,7 +546,7 @@
 - id: mod-a-028-1
   notion: mod-n-0028
   recto: 'Thm 2.4 (1) : loi de \(X_n\)'
-  verso: 'Soit \(X=(X_n)_{n\in\mathbb{N}}\) une chaîne de Markov de matrice de transition \(P\). Pour tout \(n\ge0\), la loi \(\mu_n\) de \(X_n\) vérifie \(\mu_n=\mu_0P^n\).'
+  verso: 'Soit \(X=(X_n)_{n\in\mathbb{N}}\) une chaîne de Markov de matrice de transition \(P\) sur un ensemble fini \(E\) et de loi initiale \(\mu_0\). Pour tout \(n\ge0\), la loi \(\mu_n\) de \(X_n\) vérifie \(\mu_n=\mu_0P^n\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 5'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -554,7 +554,7 @@
 - id: mod-a-028-2
   notion: mod-n-0028
   recto: 'Thm 2.4 (2) : transition à \(k\) pas'
-  verso: 'Soit \(X=(X_n)_{n\in\mathbb{N}}\) une chaîne de Markov de matrice de transition \(P\). Pour tous \(n,k\ge0\), pour tous \(x,y\in E\) (avec \(\mathbb{P}(X_n=x) > 0\) pour que le conditionnement ait un sens), \(\mathbb{P}(X_{n+k}=y\mid X_n=x)=P^k(x,y)\).'
+  verso: 'Soit \(X=(X_n)_{n\in\mathbb{N}}\) une chaîne de Markov de matrice de transition \(P\) sur un ensemble fini \(E\). Pour tous \(n,k\ge0\), pour tous \(x,y\in E\) (avec \(\mathbb{P}(X_n=x) > 0\) pour que le conditionnement ait un sens), \(\mathbb{P}(X_{n+k}=y\mid X_n=x)=P^k(x,y)\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 5-6'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -562,7 +562,7 @@
 - id: mod-a-028-3
   notion: mod-n-0028
   recto: 'Preuve : Thm 2.4 (1), \(\mu_n=\mu_0P^n\)'
-  verso: 'Pour tout \(x\in E\), \(\mu_n(x)=\mathbb{P}(X_n=x)=\sum_{a_0}\cdots\sum_{a_{n-1}}\mathbb{P}(X_0=a_0,\dots,X_{n-1}=a_{n-1},X_n=x)=\sum_{a_0}\cdots\sum_{a_{n-1}}\mu_0(a_0)P(a_0,a_1)\cdots P(a_{n-1},x)=\sum_{a_0}\mu_0(a_0)P^n(a_0,x)=\mu_0P^n(x)\), d''après (2.1).'
+  verso: 'Soit \(X=(X_n)_{n\in\mathbb{N}}\) une chaîne de Markov de matrice de transition \(P\) sur un ensemble fini \(E\), de loi initiale \(\mu_0\), et \(\mu_n\) la loi de \(X_n\). Pour tout \(x\in E\), \(\mu_n(x)=\mathbb{P}(X_n=x)=\sum_{a_0}\cdots\sum_{a_{n-1}}\mathbb{P}(X_0=a_0,\dots,X_{n-1}=a_{n-1},X_n=x)=\sum_{a_0}\cdots\sum_{a_{n-1}}\mu_0(a_0)P(a_0,a_1)\cdots P(a_{n-1},x)=\sum_{a_0}\mu_0(a_0)P^n(a_0,x)=\mu_0P^n(x)\), d''après (2.1).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 5'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -586,7 +586,7 @@
 - id: mod-a-030-2
   notion: mod-n-0030
   recto: 'Avec la définition de l''accessibilité (\(n\ge1\)), que signifie \(x\to x\) ?'
-  verso: 'Il existe un chemin de longueur \(n\ge1\) de \(x\) vers \(x\) (un retour en \(x\) est possible) : cela n''est pas automatique.'
+  verso: 'Soit \(P\) une matrice markovienne sur un ensemble fini \(E\) et \(x\in E\). Il existe un chemin de longueur \(n\ge1\) de \(x\) vers \(x\) (un retour en \(x\) est possible) : cela n''est pas automatique.'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 6'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -594,7 +594,7 @@
 - id: mod-a-031-1
   notion: mod-n-0031
   recto: 'Lemme 2.1 : accessibilité et puissances de \(P\)'
-  verso: 'Soient \(x,y\in E\). L''état \(y\) est accessible depuis \(x\) si et seulement s''il existe \(n\ge1\) tel que \(P^n(x,y) > 0\).<br>(Il suffit d''écrire que \(P^n(x,y)=\sum_{a_1,\dots,a_{n-1}}P(x,a_1)P(a_1,a_2)\cdots P(a_{n-1},y)\).)'
+  verso: 'Soit \(P\) une matrice markovienne sur un ensemble fini \(E\). Soient \(x,y\in E\). L''état \(y\) est accessible depuis \(x\) si et seulement s''il existe \(n\ge1\) tel que \(P^n(x,y) > 0\).<br>(Il suffit d''écrire que \(P^n(x,y)=\sum_{a_1,\dots,a_{n-1}}P(x,a_1)P(a_1,a_2)\cdots P(a_{n-1},y)\).)'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -602,7 +602,7 @@
 - id: mod-a-032-1
   notion: mod-n-0032
   recto: 'Déf 2.5 : chaîne irréductible'
-  verso: 'On dit que \(P\) (ou la chaîne de Markov associée) est irréductible si pour tout \(x,y\in E\), \(x\to y\) et \(y\to x\). Autrement dit \(P\) est irréductible si son graphe de transition est fortement connexe.'
+  verso: 'Soit \(P\) une matrice markovienne sur un ensemble fini \(E\). On dit que \(P\) (ou la chaîne de Markov associée) est irréductible si pour tout \(x,y\in E\), \(x\to y\) et \(y\to x\). Autrement dit \(P\) est irréductible si son graphe de transition est fortement connexe.'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -610,7 +610,7 @@
 - id: mod-a-033-1
   notion: mod-n-0033
   recto: 'Déf 2.6 : état récurrent'
-  verso: 'Soient \(x,y\in E\). Un état \(x\) est récurrent si \(\forall y\in E\), \(x\to y\Longrightarrow y\to x\).'
+  verso: 'Soit \(P\) une matrice markovienne sur un ensemble fini \(E\). Soient \(x,y\in E\). Un état \(x\) est récurrent si \(\forall y\in E\), \(x\to y\Longrightarrow y\to x\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -618,7 +618,7 @@
 - id: mod-a-033-2
   notion: mod-n-0033
   recto: 'Déf 2.6 : état transitoire, ensembles \(\mathcal{T}\) et \(\mathcal{R}\)'
-  verso: 'Soient \(x,y\in E\). Un point \(x\) est transitoire s''il n''est pas récurrent, c''est-à-dire s''il existe \(y\in E\) tel que \(x\to y\) mais \(y\not\to x\). On note \(\mathcal{T}\) l''ensemble des points transitoires et \(\mathcal{R}\) l''ensemble des points récurrents.'
+  verso: 'Soit \(P\) une matrice markovienne sur un ensemble fini \(E\). Soient \(x,y\in E\). Un point \(x\) est transitoire s''il n''est pas récurrent, c''est-à-dire s''il existe \(y\in E\) tel que \(x\to y\) mais \(y\not\to x\). On note \(\mathcal{T}\) l''ensemble des points transitoires et \(\mathcal{R}\) l''ensemble des points récurrents.'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 7'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -626,7 +626,7 @@
 - id: mod-a-034-1
   notion: mod-n-0034
   recto: 'Rem. 2.2 : définition générale de récurrent et transitoire'
-  verso: 'Cette manière de définir les états récurrents et transitoires est propre au cas des espaces d''états \(E\) finis. Dans le cas général (\(E\) fini ou dénombrable), la bonne définition d''un état récurrent est la suivante : \(x\in E\) est récurrent si \(\mathbb{P}_x(\exists n\ge1,\ X_n=x)=1\) (2.4), où \(\mathbb{P}_x\) signifie que la chaîne de Markov est issue de \(x\), c''est-à-dire \(X_0=x\) p.s. Dans le cas général, un état est dit transitoire si \(\mathbb{P}_x(\exists n\ge1,\ X_n=x) < 1\). Dans le cas où \(E\) est fini, on admettra que \(x\) vérifie (2.4) si et seulement si pour tout \(y\in E\), \(x\to y\Rightarrow y\to x\).'
+  verso: 'Soit \(X=(X_n)_{n\in\mathbb{N}}\) une chaîne de Markov de matrice de transition \(P\) à valeurs dans \(E\). Cette manière de définir les états récurrents et transitoires est propre au cas des espaces d''états \(E\) finis. Dans le cas général (\(E\) fini ou dénombrable), la bonne définition d''un état récurrent est la suivante : \(x\in E\) est récurrent si \(\mathbb{P}_x(\exists n\ge1,\ X_n=x)=1\) (2.4), où \(\mathbb{P}_x\) signifie que la chaîne de Markov est issue de \(x\), c''est-à-dire \(X_0=x\) p.s. Dans le cas général, un état est dit transitoire si \(\mathbb{P}_x(\exists n\ge1,\ X_n=x) < 1\). Dans le cas où \(E\) est fini, on admettra que \(x\) vérifie (2.4) si et seulement si pour tout \(y\in E\), \(x\to y\Rightarrow y\to x\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 8'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 3
@@ -666,7 +666,7 @@
 - id: mod-a-036-2
   notion: mod-n-0036
   recto: 'Preuve : Prop. 2.3 (existence d''un état récurrent)'
-  verso: 'On montre que si \(x\) est transitoire, il existe un état récurrent \(y\) tel que \(x\to y\) et \(y\not\to x\). Soit \(N=\mathrm{Card}(E)\), \(x_1\in\mathcal{T}\) : il existe \(x_2\) avec \(x_1\to x_2\) et \(x_2\not\to x_1\). Si \(x_2\) est transitoire, il existe \(x_3\notin\{x_1,x_2\}\) avec \(x_2\to x_3\) et \(x_3\not\to x_2\), etc. Sans état récurrent en \(N\) étapes, on aurait \(x_1,\dots,x_N\) transitoires distincts puis \(x_{N+1}=x_i\) avec \(x_i\to x_N\), ce qui contredit \(x_{N+1}\not\to x_N\).'
+  verso: 'Soit \(P\) une matrice markovienne sur un ensemble fini \(E\). On montre que si \(x\) est transitoire, il existe un état récurrent \(y\) tel que \(x\to y\) et \(y\not\to x\). Soit \(N=\mathrm{Card}(E)\), \(x_1\in\mathcal{T}\) : il existe \(x_2\) avec \(x_1\to x_2\) et \(x_2\not\to x_1\). Si \(x_2\) est transitoire, il existe \(x_3\notin\{x_1,x_2\}\) avec \(x_2\to x_3\) et \(x_3\not\to x_2\), etc. Sans état récurrent en \(N\) étapes, on aurait \(x_1,\dots,x_N\) transitoires distincts puis \(x_{N+1}=x_i\) avec \(x_i\to x_N\), ce qui contredit \(x_{N+1}\not\to x_N\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 8'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 3
@@ -674,7 +674,7 @@
 - id: mod-a-037-1
   notion: mod-n-0037
   recto: 'Déf 2.7 : chaîne irréductible apériodique'
-  verso: 'Une chaîne de Markov irréductible est dite apériodique s''il existe \(n_0\ge1\) tel que pour tout \(n > n_0\) et pour tout \(x,y\in E\), \(P^n(x,y) > 0\).'
+  verso: 'Soit \(P\) une matrice markovienne sur un ensemble fini \(E\). Une chaîne de Markov irréductible est dite apériodique s''il existe \(n_0\ge1\) tel que pour tout \(n > n_0\) et pour tout \(x,y\in E\), \(P^n(x,y) > 0\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 8'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 2
@@ -682,7 +682,7 @@
 - id: mod-a-038-1
   notion: mod-n-0038
   recto: 'Prop. 2.4 : condition suffisante d''apériodicité'
-  verso: 'Une chaîne de Markov irréductible est apériodique s''il existe \(x_0\in E\) tel que \(P(x_0,x_0) > 0\).'
+  verso: 'Soit \(P\) une matrice markovienne sur un ensemble fini \(E\). Une chaîne de Markov irréductible est apériodique s''il existe \(x_0\in E\) tel que \(P(x_0,x_0) > 0\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 9'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 2
@@ -690,7 +690,7 @@
 - id: mod-a-038-2
   notion: mod-n-0038
   recto: 'Preuve : Prop. 2.4'
-  verso: 'Par irréductibilité, pour tout \(x\in E\) il existe \(n_x\) et \(m_x\) tels que \(P^{n_x}(x,x_0) > 0\) et \(P^{m_x}(x_0,x) > 0\). Notons \(N=\max_xn_x+\max_ym_y\), fini car \(E\) est fini (le poly écrit \(N=\max_x(n_x,m_x)\) : erreur). Pour \(x,y\in E\) et \(n\ge N\), on écrit \(n=n_x+k+m_y\) avec \(k\ge0\) : \(P^n(x,y)\ge P^{n_x}(x,x_0)\,P^k(x_0,x_0)\,P^{m_y}(x_0,y) > 0\), car \(P^k(x_0,x_0)\ge P(x_0,x_0)^k > 0\).'
+  verso: 'Soit \(P\) une matrice markovienne sur un ensemble fini \(E\). Par irréductibilité, pour tout \(x\in E\) il existe \(n_x\) et \(m_x\) tels que \(P^{n_x}(x,x_0) > 0\) et \(P^{m_x}(x_0,x) > 0\). Notons \(N=\max_xn_x+\max_ym_y\), fini car \(E\) est fini (le poly écrit \(N=\max_x(n_x,m_x)\) : erreur). Pour \(x,y\in E\) et \(n\ge N\), on écrit \(n=n_x+k+m_y\) avec \(k\ge0\) : \(P^n(x,y)\ge P^{n_x}(x,x_0)\,P^k(x_0,x_0)\,P^{m_y}(x_0,y) > 0\), car \(P^k(x_0,x_0)\ge P(x_0,x_0)^k > 0\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 9'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 2
@@ -698,7 +698,7 @@
 - id: mod-a-039-1
   notion: mod-n-0039
   recto: 'Déf 2.8 : mesure de probabilité invariante'
-  verso: 'Une mesure de probabilité \(\mu\) sur \(E\) est dite invariante si elle vérifie \(\mu P=\mu\). Autrement dit, si \(\mu\) est une mesure de probabilité invariante alors \(\mu\) est un vecteur propre à gauche pour la matrice \(P\) associé à la valeur propre 1.'
+  verso: 'Soit \(P\) une matrice markovienne sur un ensemble fini \(E\). Une mesure de probabilité \(\mu\) sur \(E\) est dite invariante si elle vérifie \(\mu P=\mu\). Autrement dit, si \(\mu\) est une mesure de probabilité invariante alors \(\mu\) est un vecteur propre à gauche pour la matrice \(P\) associé à la valeur propre 1.'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 9'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -722,7 +722,7 @@
 - id: mod-a-042-1
   notion: mod-n-0042
   recto: 'Preuve : Thm 2.5 (existence d''une mesure invariante)'
-  verso: 'Prendre \(\mu_1\in\mathcal{P}(E)\) et poser \(\mu_n=\frac1n(\mu_1+\mu_1P+\cdots+\mu_1P^{n-1})\in\mathcal{P}(E)\) ; on a \(\mu_nP=\mu_n+\frac1n(\mu_1P^n-\mu_1)\). L''ensemble \(\mathcal{P}(E)\), fermé borné de \(\mathbb{R}^N\), est compact : une sous-suite \(\mu_{n_k}\) converge vers \(\pi\in\mathcal{P}(E)\). Le terme \(\frac1{n_k}(\mu_1P^{n_k}-\mu_1)\) tend vers 0 (chaque coefficient est majoré en valeur absolue par \(2/n_k\)) et \(\mu\mapsto\mu P\) est continue : \(\pi P=\pi\).'
+  verso: 'Soit \(P\) une matrice markovienne sur un ensemble fini \(E\) de cardinal \(N\). Prendre \(\mu_1\in\mathcal{P}(E)\) et poser \(\mu_n=\frac1n(\mu_1+\mu_1P+\cdots+\mu_1P^{n-1})\in\mathcal{P}(E)\) ; on a \(\mu_nP=\mu_n+\frac1n(\mu_1P^n-\mu_1)\). L''ensemble \(\mathcal{P}(E)\), fermé borné de \(\mathbb{R}^N\), est compact : une sous-suite \(\mu_{n_k}\) converge vers \(\pi\in\mathcal{P}(E)\). Le terme \(\frac1{n_k}(\mu_1P^{n_k}-\mu_1)\) tend vers 0 (chaque coefficient est majoré en valeur absolue par \(2/n_k\)) et \(\mu\mapsto\mu P\) est continue : \(\pi P=\pi\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 10'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 3
@@ -738,7 +738,7 @@
 - id: mod-a-043-2
   notion: mod-n-0043
   recto: 'Preuve : Thm 2.6 (positivité de \(\pi\))'
-  verso: 'Prenons un point \(x_0\in E\) tel que \(\pi(x_0) > 0\). Comme \(P\) est irréductible, il existe \(k\ge1\) tel que \(P^k(x_0,x) > 0\). Comme \(\pi\) est invariante, \(\pi(x)=\pi P^k(x)=\sum_{z\in E}\pi(z)P^k(z,x)\ge\pi(x_0)P^k(x_0,x) > 0\).'
+  verso: 'Soit \(P\) une matrice markovienne irréductible sur un ensemble fini \(E\), \(\pi\) une mesure de probabilité invariante de \(P\). Prenons un point \(x_0\in E\) tel que \(\pi(x_0) > 0\). Comme \(P\) est irréductible, il existe \(k\ge1\) tel que \(P^k(x_0,x) > 0\). Comme \(\pi\) est invariante, \(\pi(x)=\pi P^k(x)=\sum_{z\in E}\pi(z)P^k(z,x)\ge\pi(x_0)P^k(x_0,x) > 0\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 11'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -746,7 +746,7 @@
 - id: mod-a-044-1
   notion: mod-n-0044
   recto: 'Preuve : Thm 2.6 (unicité, réduction)'
-  verso: 'On suppose \(E=\{1,\dots,N\}\). \(\pi\in\mathcal{P}(E)\) est invariante si et seulement si \(P^T\pi^T=\pi^T\), i.e. \(\pi^T\in\ker(P^T-I_N)\). Il suffit donc de montrer que \(\ker(P^T-I_N)\) est de dimension 1 ou, \(M\) et \(M^T\) ayant même rang, que \(\ker(P-I_N)\) est de dimension 1. Comme \(P\) est stochastique, \(u=(1,\dots,1)^T\) est déjà dans \(\ker(P-I_N)\) : il s''agit de montrer que tout \(v\in\ker(P-I_N)\) est proportionnel à \(u\).'
+  verso: 'Soit \(P\) une matrice markovienne irréductible sur un ensemble fini \(E\), \(\pi\) une mesure de probabilité invariante de \(P\). On suppose \(E=\{1,\dots,N\}\). \(\pi\in\mathcal{P}(E)\) est invariante si et seulement si \(P^T\pi^T=\pi^T\), i.e. \(\pi^T\in\ker(P^T-I_N)\). Il suffit donc de montrer que \(\ker(P^T-I_N)\) est de dimension 1 ou, toute matrice carrée \(M\) ayant même rang que \(M^T\), que \(\ker(P-I_N)\) est de dimension 1. Comme \(P\) est stochastique, \(u=(1,\dots,1)^T\) est déjà dans \(\ker(P-I_N)\) : il s''agit de montrer que tout \(v\in\ker(P-I_N)\) est proportionnel à \(u\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 10-11'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 3
@@ -754,7 +754,7 @@
 - id: mod-a-044-2
   notion: mod-n-0044
   recto: 'Preuve : Thm 2.6 (unicité, principe du maximum)'
-  verso: 'Soit \(v\in\ker(P-I_N)\) : \(v_i=\sum_{j=1}^NP_{i,j}v_j\) pour tout \(i\). Notons \(M=\max_{1\le i\le N}v_i\), \(C=\{i:v_i=M\}\) et prenons \(i\in C\). Comme \(\sum_jP_{i,j}(v_i-v_j)=0\) est une somme de quantités positives ou nulles, \(P(i,j) > 0\Rightarrow v_j=M\) : si \(i\in C\) et \(i\to j\), alors \(j\in C\). La chaîne étant irréductible et \(C\) non vide, \(C=E\) : toutes les coordonnées de \(v\) sont égales.'
+  verso: 'Soit \(P\) une matrice markovienne irréductible sur un ensemble fini \(E\), \(\pi\) une mesure de probabilité invariante de \(P\). Soit \(v\in\ker(P-I_N)\) : \(v_i=\sum_{j=1}^NP_{i,j}v_j\) pour tout \(i\). Notons \(M=\max_{1\le i\le N}v_i\), \(C=\{i:v_i=M\}\) et prenons \(i\in C\). Comme \(\sum_jP_{i,j}(v_i-v_j)=0\) est une somme de quantités positives ou nulles, \(P(i,j) > 0\Rightarrow v_j=M\) : si \(i\in C\) et \(i\to j\), alors \(j\in C\). La chaîne étant irréductible et \(C\) non vide, \(C=E\) : toutes les coordonnées de \(v\) sont égales.'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 11'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 3
@@ -794,7 +794,7 @@
 - id: mod-a-048-1
   notion: mod-n-0048
   recto: 'Thm 2.9 : théorème ergodique'
-  verso: 'On considère une chaîne de Markov irréductible de mesure invariante \(\pi\) et \(f:E\to\mathbb{R}\) une fonction telle que \(\sum_{q\in E}|f(q)|\pi(q) < +\infty\). Alors<br>\(\frac1n\sum_{i=0}^{n-1}f(X_i)\xrightarrow[n\to+\infty]{}\sum_{q\in E}f(q)\pi(q)\) presque sûrement.<br>(Démonstration : admise.)'
+  verso: 'Soit \(E\) un ensemble fini et \(X=(X_n)_{n\in\mathbb{N}}\) une chaîne de Markov à valeurs dans \(E\). On considère une chaîne de Markov irréductible de mesure invariante \(\pi\) et \(f:E\to\mathbb{R}\) une fonction telle que \(\sum_{q\in E}|f(q)|\pi(q) < +\infty\). Alors<br>\(\frac1n\sum_{i=0}^{n-1}f(X_i)\xrightarrow[n\to+\infty]{}\sum_{q\in E}f(q)\pi(q)\) presque sûrement.<br>(Démonstration : admise.)'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 13-14'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 2
@@ -802,7 +802,7 @@
 - id: mod-a-048-2
   notion: mod-n-0048
   recto: 'Cor. : \(\pi(q)\) est la fraction de temps passé en \(q\)'
-  verso: 'En particulier, en prenant \(f=\mathbf 1_{\{q\}}\) où \(q\in E\), dans le Thm 2.9 (chaîne de Markov irréductible de mesure invariante \(\pi\)) on voit que \(\frac1n\sum_{i=0}^{n-1}\mathbf 1_{\{X_i=q\}}\to\pi(q)\) presque sûrement. On voit ainsi que \(\pi(q)\) est la limite de la fraction de temps passé dans l''état \(q\) par la chaîne en temps long.'
+  verso: 'Soit \(E\) un ensemble fini et \(X=(X_n)_{n\in\mathbb{N}}\) une chaîne de Markov à valeurs dans \(E\). En particulier, en prenant \(f=\mathbf 1_{\{q\}}\) où \(q\in E\), dans le Thm 2.9 (chaîne de Markov irréductible de mesure invariante \(\pi\)) on voit que \(\frac1n\sum_{i=0}^{n-1}\mathbf 1_{\{X_i=q\}}\to\pi(q)\) presque sûrement. On voit ainsi que \(\pi(q)\) est la limite de la fraction de temps passé dans l''état \(q\) par la chaîne en temps long.'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 14'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 2
@@ -826,7 +826,7 @@
 - id: mod-a-051-1
   notion: mod-n-0051
   recto: 'Thm 2.10 : \(\pi(a)=1/\mathbb{E}_a[T_a]\)'
-  verso: 'Soit \(X\) une chaîne de Markov irréductible sur un espace \(E\) fini de mesure de probabilité invariante \(\pi\). Pour tout \(a\in E\), \(\mathbb{E}_a[T_a] < +\infty\) et on a \(\pi(a)=\dfrac1{\mathbb{E}_a[T_a]}\).'
+  verso: 'Soit \(X\) une chaîne de Markov irréductible sur un espace \(E\) fini de mesure de probabilité invariante \(\pi\). On note \(\mathbb{P}_a,\mathbb{E}_a\) la probabilité et l''espérance pour la chaîne issue de \(a\) et \(T_a=\inf\{n\ge1:X_n=a\}\) son temps de retour en \(a\). Pour tout \(a\in E\), \(\mathbb{E}_a[T_a] < +\infty\) et on a \(\pi(a)=\dfrac1{\mathbb{E}_a[T_a]}\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 14'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -834,7 +834,7 @@
 - id: mod-a-051-2
   notion: mod-n-0051
   recto: 'Preuve : Thm 2.10 (esquisse)'
-  verso: 'Chaîne issue de \(a\), construite par récurrence aléatoire : les écarts \(I_k=T_a^{(k)}-T_a^{(k-1)}\) entre retours successifs en \(a\) sont i.i.d. de même loi que \(T_a\). La loi forte des grands nombres donne \(T_a^{(k)}/k\to\mathbb{E}_a[T_a]\), d''où \(\frac1n\sum_{i=1}^n\mathbf 1_{X_i=a}\to\frac1{\mathbb{E}_a[T_a]}\) p.s. En passant à l''espérance (convergence dominée), \(\frac1n\sum_{i=1}^nP^i(a,a)\to\frac1{\mathbb{E}_a[T_a]}\). Or cette moyenne de Cesàro tend vers \(\pi(a)\) (Prop. 2.6).'
+  verso: 'Soit \(X\) une chaîne de Markov irréductible sur un espace fini \(E\), de mesure invariante \(\pi\), issue de \(a\in E\) ; \(T_a^{(k)}\) est l''instant du \(k\)-ième retour en \(a\) (\(T_a^{(0)}=0\), \(T_a=T_a^{(1)}\)). Chaîne issue de \(a\), construite par récurrence aléatoire : les écarts \(I_k=T_a^{(k)}-T_a^{(k-1)}\) entre retours successifs en \(a\) sont i.i.d. de même loi que \(T_a\). La loi forte des grands nombres donne \(T_a^{(k)}/k\to\mathbb{E}_a[T_a]\), d''où \(\frac1n\sum_{i=1}^n\mathbf 1_{X_i=a}\to\frac1{\mathbb{E}_a[T_a]}\) p.s. En passant à l''espérance (convergence dominée), \(\frac1n\sum_{i=1}^nP^i(a,a)\to\frac1{\mathbb{E}_a[T_a]}\). Or cette moyenne de Cesàro tend vers \(\pi(a)\) (Prop. 2.6).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 14-16'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -858,7 +858,7 @@
 - id: mod-a-054-1
   notion: mod-n-0054
   recto: 'Déf 2.11 : probabilité d''absorption'
-  verso: 'Pour tout état absorbant \(a\) et tout \(x\in E\), on note \(p_x(a)\) la probabilité que la chaîne issue de \(x\) soit absorbée par l''état \(a\) :<br>\(p_x(a)=\mathbb{P}_x(\exists n\ge0:\ X_n=a)\).'
+  verso: 'Soit \(X=(X_n)_{n\in\mathbb{N}}\) une chaîne de Markov de matrice de transition \(P\) sur un ensemble fini \(E\). Pour tout état absorbant \(a\) et tout \(x\in E\), on note \(p_x(a)\) la probabilité que la chaîne issue de \(x\) soit absorbée par l''état \(a\) :<br>\(p_x(a)=\mathbb{P}_x(\exists n\ge0:\ X_n=a)\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 17'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -866,7 +866,7 @@
 - id: mod-a-054-2
   notion: mod-n-0054
   recto: 'Rem. : valeurs évidentes de \(p_x(a)\)'
-  verso: 'Pour un état absorbant \(a\), la famille de nombres \((p_x(a))_{x\in E}\) vérifie deux propriétés évidentes :<br>- \(p_a(a)=1\) ;<br>- si \(b\) est absorbant et \(b\ne a\), alors \(p_b(a)=0\).'
+  verso: 'Soit \(X\) une chaîne de Markov sur un ensemble fini \(E\) ; \(p_x(a)\) est la probabilité que la chaîne issue de \(x\) soit absorbée par l''état \(a\). Pour un état absorbant \(a\), la famille de nombres \((p_x(a))_{x\in E}\) vérifie deux propriétés évidentes :<br>- \(p_a(a)=1\) ;<br>- si \(b\) est absorbant et \(b\ne a\), alors \(p_b(a)=0\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 17'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -874,7 +874,7 @@
 - id: mod-a-055-1
   notion: mod-n-0055
   recto: 'Thm 2.12 : système linéaire des probabilités d''absorption'
-  verso: 'Pour tout état absorbant \(a\in E\), on a<br>\(p_x(a)=\sum_{y\in E}P(x,y)\,p_y(a)\), pour tout \(x\in E\).'
+  verso: 'Soit \(X\) une chaîne de Markov de matrice de transition \(P\) sur un ensemble fini \(E\) ; \(p_x(a)=\mathbb{P}_x(\exists n\ge0:\ X_n=a)\) est la probabilité que la chaîne issue de \(x\) soit absorbée par \(a\). Pour tout état absorbant \(a\in E\), on a<br>\(p_x(a)=\sum_{y\in E}P(x,y)\,p_y(a)\), pour tout \(x\in E\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 17'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -882,7 +882,7 @@
 - id: mod-a-055-2
   notion: mod-n-0055
   recto: 'Preuve : Thm 2.12'
-  verso: 'Pour \(x=a\) c''est évident ; soit \(x\ne a\). Posons \(N_n(X)=\sum_{i=0}^n\mathbf 1_a(X_i)\). Probabilités totales sur \(\{X_1=y\}\) puis chaîne décalée en temps (Thm 2.11) : \(\mathbb{P}_x(N_n(X)\ge1)=\sum_{y}P(x,y)\mathbb{P}_y(N_{n-1}(X)\ge1)\). Les événements \(\{N_n(X)\ge1\}\) croissent vers \(\{\exists k\in\mathbb{N}:X_k=a\}\) : on passe à la limite quand \(n\to+\infty\).'
+  verso: 'Soit \(X\) une chaîne de Markov de matrice de transition \(P\) sur un ensemble fini \(E\) ; \(p_x(a)=\mathbb{P}_x(\exists n\ge0:\ X_n=a)\) est la probabilité que la chaîne issue de \(x\) soit absorbée par \(a\). Pour \(x=a\) c''est évident ; soit \(x\ne a\). Posons \(N_n(X)=\sum_{i=0}^n\mathbf 1_a(X_i)\). Probabilités totales sur \(\{X_1=y\}\) puis chaîne décalée en temps (Thm 2.11) : \(\mathbb{P}_x(N_n(X)\ge1)=\sum_{y}P(x,y)\mathbb{P}_y(N_{n-1}(X)\ge1)\). Les événements \(\{N_n(X)\ge1\}\) croissent vers \(\{\exists k\in\mathbb{N}:X_k=a\}\) : on passe à la limite quand \(n\to+\infty\).'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 17'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 1
@@ -954,7 +954,7 @@
 - id: mod-a-060-2
   notion: mod-n-0060
   recto: 'Prop. : calcul itératif de PageRank'
-  verso: 'Avec \(P_\beta=(1-\beta)P+\beta Q\) (\(\beta\in]0,1]\), \(Q(i,j)=\frac1N\)), PageRank consiste à déterminer la loi \(\mu_n\) de \(X_n\) au bout de \(n\) pas par \(\mu_{n+1}=\mu_nP_\beta\). En raison de la structure de \(Q\), le calcul se simplifie : \(\mu_{n+1}=(1-\beta)\mu_nP+\beta\mu_nQ=(1-\beta)\mu_nP+\frac{\beta}{N}(1,\dots,1)\), car \(\mu_n\) est une probabilité. Le produit \(\mu_nP\) est rapide car \(P\) est creuse. Pour \(n\) assez grand, \(\mu_n\) est une bonne approximation de \(m\).<br>(le poly écrit \(\mu_{n+1}=(1-\beta)\mu_nP+\beta\mu_n\) : il manque \(Q\), et \(\mu_nQ\) est la loi uniforme)'
+  verso: 'Avec \(P_\beta=(1-\beta)P+\beta Q\) (\(\beta\in]0,1]\), \(Q(i,j)=\frac1N\)), PageRank consiste à déterminer la loi \(\mu_n\) de \(X_n\) au bout de \(n\) pas par \(\mu_{n+1}=\mu_nP_\beta\). En raison de la structure de \(Q\), le calcul se simplifie : \(\mu_{n+1}=(1-\beta)\mu_nP+\beta\mu_nQ=(1-\beta)\mu_nP+\frac{\beta}{N}(1,\dots,1)\), car \(\mu_n\) est une probabilité. Le produit \(\mu_nP\) est rapide car \(P\) est creuse. Pour \(n\) assez grand, \(\mu_n\) est une bonne approximation de \(m\) (le vecteur d''importance des pages).<br>(le poly écrit \(\mu_{n+1}=(1-\beta)\mu_nP+\beta\mu_n\) : il manque \(Q\), et \(\mu_nQ\) est la loi uniforme)'
   source: 'Poly de modélisation Paris Cité, ch. 2, p. 21-22'
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 3
@@ -1002,7 +1002,7 @@
 - id: mod-a-063-2
   notion: mod-n-0063
   recto: 'Preuve : Prop. 3.1'
-  verso: 'Loi forte des grands nombres : \(\lim\frac{T_n}n=\lim\frac{\tau_1+\cdots+\tau_n}n=\mathbb{E}[\tau_1]\) p.s. ; en particulier \(T_n\to+\infty\) p.s. Comme \(\{N_t=n\}=\{T_n\le t < T_{n+1}\}\), on a \(T_{N_t}\le t < T_{N_t+1}\), donc \(\frac{T_{N_t}}{N_t}\le\frac t{N_t} < \frac{T_{N_t+1}}{N_t+1}\cdot\frac{N_t+1}{N_t}\). Avec probabilité 1, \(N_t\to+\infty\), donc les deux bornes tendent vers \(\mathbb{E}[\tau_1]\).'
+  verso: 'Soit \((\tau_k)_{k\ge1}\) la suite des durées d''un processus de renouvellement, \(T_n=\sum_{k=1}^n\tau_k\), \((N_t)_{t\ge0}\) son processus de comptage, avec \(\mathbb{E}[\tau_1] < +\infty\). Loi forte des grands nombres : \(\lim\frac{T_n}n=\lim\frac{\tau_1+\cdots+\tau_n}n=\mathbb{E}[\tau_1]\) p.s. ; en particulier \(T_n\to+\infty\) p.s. Comme \(\{N_t=n\}=\{T_n\le t < T_{n+1}\}\), on a \(T_{N_t}\le t < T_{N_t+1}\), donc \(\frac{T_{N_t}}{N_t}\le\frac t{N_t} < \frac{T_{N_t+1}}{N_t+1}\cdot\frac{N_t+1}{N_t}\). Avec probabilité 1, \(N_t\to+\infty\), donc les deux bornes tendent vers \(\mathbb{E}[\tau_1]\).'
   source: 'Poly de modélisation Paris Cité, ch. 3, p. 2'
   chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
   priorite: 3
@@ -1050,7 +1050,7 @@
 - id: mod-a-066-2
   notion: mod-n-0066
   recto: 'Preuve : Prop. 3.2 (\(\mathbb{P}(N_t=n)\) via \(T_n\), \(T_{n+1}\))'
-  verso: 'On a \(\{N_t=n\}=\{T_n\le t < T_{n+1}\}=\{T_n\le t\}\cap\{T_{n+1}\le t\}^c\), en posant \(T_0=0\), d''où \(\mathbb{P}(N_t=n)=\mathbb{P}(T_n\le t)-\mathbb{P}(T_{n+1}\le t)\), car \(\{T_{n+1}\le t\}\subset\{T_n\le t\}\). Il faut donc connaître la loi de \(T_n\).'
+  verso: 'Soit \((N_t)_{t\ge0}\) un processus de Poisson et \((T_n)_{n\ge1}\) le processus ponctuel associé. On a \(\{N_t=n\}=\{T_n\le t < T_{n+1}\}=\{T_n\le t\}\cap\{T_{n+1}\le t\}^c\), en posant \(T_0=0\), d''où \(\mathbb{P}(N_t=n)=\mathbb{P}(T_n\le t)-\mathbb{P}(T_{n+1}\le t)\), car \(\{T_{n+1}\le t\}\subset\{T_n\le t\}\). Il faut donc connaître la loi de \(T_n\).'
   source: 'Poly de modélisation Paris Cité, ch. 3, p. 3'
   chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
   priorite: 1
@@ -1058,7 +1058,7 @@
 - id: mod-a-066-3
   notion: mod-n-0066
   recto: 'Preuve : Prop. 3.2 (calcul de \(\mathbb{P}(N_t=n)\))'
-  verso: 'Pour \(n\ge1\) : \(\mathbb{P}(N_t=n)=\int_0^t\frac{\lambda^nx^{n-1}}{(n-1)!}e^{-\lambda x}dx-\int_0^t\frac{\lambda^{n+1}x^n}{n!}e^{-\lambda x}dx=\int_0^t\frac{\lambda^n}{n!}\big(nx^{n-1}-\lambda x^n\big)e^{-\lambda x}dx=\Big[\frac{\lambda^n}{n!}x^ne^{-\lambda x}\Big]_0^t=\frac{(\lambda t)^n}{n!}e^{-\lambda t}\). Pour \(n=0\) : \(\mathbb{P}(N_t=0)=\mathbb{P}(T_1 > t)=\int_t^{+\infty}\lambda e^{-\lambda x}dx=e^{-\lambda t}\). Ainsi \(N_t\sim\mathcal{P}(\lambda t)\).'
+  verso: 'Soit \((N_t)_{t\ge0}\) un processus de Poisson d''intensité \(\lambda > 0\) et \((T_n)_{n\ge1}\) le processus ponctuel associé. Pour \(n\ge1\) : \(\mathbb{P}(N_t=n)=\int_0^t\frac{\lambda^nx^{n-1}}{(n-1)!}e^{-\lambda x}dx-\int_0^t\frac{\lambda^{n+1}x^n}{n!}e^{-\lambda x}dx=\int_0^t\frac{\lambda^n}{n!}\big(nx^{n-1}-\lambda x^n\big)e^{-\lambda x}dx=\Big[\frac{\lambda^n}{n!}x^ne^{-\lambda x}\Big]_0^t=\frac{(\lambda t)^n}{n!}e^{-\lambda t}\). Pour \(n=0\) : \(\mathbb{P}(N_t=0)=\mathbb{P}(T_1 > t)=\int_t^{+\infty}\lambda e^{-\lambda x}dx=e^{-\lambda t}\). Ainsi \(N_t\sim\mathcal{P}(\lambda t)\).'
   source: 'Poly de modélisation Paris Cité, ch. 3, p. 3-4'
   chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
   priorite: 1
@@ -1074,7 +1074,7 @@
 - id: mod-a-067-2
   notion: mod-n-0067
   recto: 'Preuve : Prop. 3.3 (densité)'
-  verso: 'Méthode de la fonction muette : pour \(\varphi\) continue bornée, \(\mathbb{E}[\varphi(T_1,\dots,T_n)\mathbf 1_{N_t=n}]=\mathbb{E}[\varphi(T_1,\dots,T_n)(\mathbf 1_{N_t\ge n}-\mathbf 1_{N_t\ge n+1})]\). Changement de variables linéaire \(u_k=t_1+\cdots+t_k\) (jacobien 1) et Fubini donnent \(\lambda^ne^{-\lambda t}\int_{0 < u_1 < \cdots < u_n < t}\varphi(u_1,\dots,u_n)du_1\cdots du_n\). En divisant par \(\mathbb{P}(N_t=n)\), la loi conditionnelle de \((T_1,\dots,T_n)\) sachant \(N_t=n\) a pour densité \((u_1,\dots,u_n)\mapsto\dfrac{n!}{t^n}\mathbf 1_{0 < u_1 < \cdots < u_n < t}\), qui est celle de \((U_{(1)},\dots,U_{(n)})\).'
+  verso: 'Soit \((N_t)_{t\ge0}\) un processus de Poisson d''intensité \(\lambda > 0\) et \((T_n)_{n\ge1}\) le processus ponctuel associé. Méthode de la fonction muette : pour \(\varphi\) continue bornée, \(\mathbb{E}[\varphi(T_1,\dots,T_n)\mathbf 1_{N_t=n}]=\mathbb{E}[\varphi(T_1,\dots,T_n)(\mathbf 1_{N_t\ge n}-\mathbf 1_{N_t\ge n+1})]\). Changement de variables linéaire \(u_k=t_1+\cdots+t_k\) (jacobien 1) et Fubini donnent \(\lambda^ne^{-\lambda t}\int_{0 < u_1 < \cdots < u_n < t}\varphi(u_1,\dots,u_n)du_1\cdots du_n\). En divisant par \(\mathbb{P}(N_t=n)\), la loi conditionnelle de \((T_1,\dots,T_n)\) sachant \(N_t=n\) a pour densité \((u_1,\dots,u_n)\mapsto\dfrac{n!}{t^n}\mathbf 1_{0 < u_1 < \cdots < u_n < t}\), qui est celle de \((U_{(1)},\dots,U_{(n)})\).'
   source: 'Poly de modélisation Paris Cité, ch. 3, p. 5'
   chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
   priorite: 1
@@ -1098,7 +1098,7 @@
 - id: mod-a-069-1
   notion: mod-n-0069
   recto: 'Preuve : Thm 3.1'
-  verso: 'Pour \(k_1,\dots,k_n\in\mathbb{N}\), on conditionne sur \(N_{t_n}=k_1+\cdots+k_n\) : les points sont des uniformes sur \([0,t_n]\) (Prop. 3.3), donc les nombres de points dans \([0,t_1],]t_1,t_2],\dots,]t_{n-1},t_n]\) suivent une loi multinomiale de paramètres \(k_1+\cdots+k_n\) et \((\frac{t_1}{t_n},\frac{t_2-t_1}{t_n},\dots,\frac{t_n-t_{n-1}}{t_n})\). En multipliant par \(\mathbb{P}(N_{t_n}=k_1+\cdots+k_n)=\frac{(\lambda t_n)^{k_1+\cdots+k_n}}{(k_1+\cdots+k_n)!}e^{-\lambda t_n}\), on obtient \(\prod_{j=1}^n\frac{(\lambda(t_j-t_{j-1}))^{k_j}}{k_j!}e^{-\lambda(t_j-t_{j-1})}\) : des Poisson indépendantes.'
+  verso: 'Soit \((N_t)_{t\ge0}\) un processus de Poisson d''intensité \(\lambda > 0\) et \((T_n)_{n\ge1}\) le processus ponctuel associé. Soient \(0=t_0 < t_1 < \cdots < t_n\). Pour \(k_1,\dots,k_n\in\mathbb{N}\), on conditionne sur \(N_{t_n}=k_1+\cdots+k_n\) : les points sont des uniformes sur \([0,t_n]\) (Prop. 3.3), donc les nombres de points dans \([0,t_1],]t_1,t_2],\dots,]t_{n-1},t_n]\) suivent une loi multinomiale de paramètres \(k_1+\cdots+k_n\) et \((\frac{t_1}{t_n},\frac{t_2-t_1}{t_n},\dots,\frac{t_n-t_{n-1}}{t_n})\). En multipliant par \(\mathbb{P}(N_{t_n}=k_1+\cdots+k_n)=\frac{(\lambda t_n)^{k_1+\cdots+k_n}}{(k_1+\cdots+k_n)!}e^{-\lambda t_n}\), on obtient \(\prod_{j=1}^n\frac{(\lambda(t_j-t_{j-1}))^{k_j}}{k_j!}e^{-\lambda(t_j-t_{j-1})}\) : des Poisson indépendantes.'
   source: 'Poly de modélisation Paris Cité, ch. 3, p. 6-7'
   chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
   priorite: 3
@@ -1154,7 +1154,7 @@
 - id: mod-a-073-2
   notion: mod-n-0073
   recto: 'Preuve : Prop. 3.5 (décomposition de \(N_t\))'
-  verso: 'Pour tout \(t\ge0\), la variable \(\sum_{i=1}^{n_0}\mathbf 1_{t\le R_i}\) suit une loi binomiale de paramètres \(n_0\) et \(p_t=\mathbb{P}(t\le R_i)=e^{-\mu t}\) (somme d''indicateurs indépendants) et est indépendante de la variable \(Y_t:=\sum_{i=1}^{A_t}\mathbf 1_{t\le T_i+S_i}\). Il reste à déterminer la loi de \(Y_t\).'
+  verso: 'Dans le modèle M/M/\(\infty\) (arrivées de Poisson \((T_i)\) d''intensité \(\lambda > 0\), services \(S_i\) i.i.d. exponentiels de paramètre \(\mu > 0\), \(n_0\) clients initiaux de temps de service \(R_i\)), \(N_t\) est le nombre de clients au temps \(t\) et \(A_t\) le nombre d''arrivées jusqu''au temps \(t\). Pour tout \(t\ge0\), la variable \(\sum_{i=1}^{n_0}\mathbf 1_{t\le R_i}\) suit une loi binomiale de paramètres \(n_0\) et \(p_t=\mathbb{P}(t\le R_i)=e^{-\mu t}\) (somme d''indicateurs indépendants) et est indépendante de la variable \(Y_t:=\sum_{i=1}^{A_t}\mathbf 1_{t\le T_i+S_i}\). Il reste à déterminer la loi de \(Y_t\).'
   source: 'Poly de modélisation Paris Cité, ch. 3, p. 9'
   chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
   priorite: 3
@@ -1162,7 +1162,7 @@
 - id: mod-a-074-1
   notion: mod-n-0074
   recto: 'Preuve : Prop. 3.5 (loi de \(Y_t\) sachant \(A_t=n\))'
-  verso: 'Conditionnellement à \(A_t=n\), le vecteur \((T_1,\dots,T_n)\) est distribué comme le réarrangement croissant de \(n\) uniformes i.i.d. \(U_i\) sur \([0,t]\). Par indépendance des \(U_i\) et des \(S_i\) et invariance par permutation de la loi de \((S_1,\dots,S_n)\) : \(\mathrm{Loi}(Y_t\mid A_t=n)=\mathrm{Loi}\big(\sum_{i=1}^n\mathbf 1_{t-U_i\le S_i}\big)=\mathcal{B}(n,q_t)\), avec \(q_t=\mathbb{P}(S_i\ge t-U_i)=\mathbb{P}(S_i\ge U_i)=\frac1t\int_0^te^{-\mu u}du=\dfrac{1-e^{-\mu t}}{\mu t}\).'
+  verso: 'Dans le modèle M/M/\(\infty\) (arrivées de Poisson \((T_i)\) d''intensité \(\lambda > 0\), services \(S_i\) i.i.d. exponentiels de paramètre \(\mu > 0\), \(n_0\) clients initiaux de temps de service \(R_i\)), \(N_t\) est le nombre de clients au temps \(t\) et \(A_t\) le nombre d''arrivées jusqu''au temps \(t\). Conditionnellement à \(A_t=n\), le vecteur \((T_1,\dots,T_n)\) est distribué comme le réarrangement croissant de \(n\) uniformes i.i.d. \(U_i\) sur \([0,t]\). Par indépendance des \(U_i\) et des \(S_i\) et invariance par permutation de la loi de \((S_1,\dots,S_n)\) : \(\mathrm{Loi}(Y_t\mid A_t=n)=\mathrm{Loi}\big(\sum_{i=1}^n\mathbf 1_{t-U_i\le S_i}\big)=\mathcal{B}(n,q_t)\), avec \(q_t=\mathbb{P}(S_i\ge t-U_i)=\mathbb{P}(S_i\ge U_i)=\frac1t\int_0^te^{-\mu u}du=\dfrac{1-e^{-\mu t}}{\mu t}\).'
   source: 'Poly de modélisation Paris Cité, ch. 3, p. 9-10'
   chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
   priorite: 3
@@ -1170,7 +1170,7 @@
 - id: mod-a-074-2
   notion: mod-n-0074
   recto: 'Preuve : Prop. 3.5 (loi de \(Y_t\))'
-  verso: '\(\mathbb{P}(Y_t=k)=e^{-\lambda t}\sum_{n\ge k}\binom nkq_t^k(1-q_t)^{n-k}\frac{(\lambda t)^n}{n!}=e^{-\lambda tq_t}\frac{(\lambda tq_t)^k}{k!}\). Finalement \(Y_t\) suit une loi de Poisson de paramètre \(\alpha_t=\lambda tq_t=\frac\lambda\mu(1-e^{-\mu t})\).'
+  verso: 'Dans le modèle M/M/\(\infty\) (arrivées de Poisson \((T_i)\) d''intensité \(\lambda > 0\), services \(S_i\) i.i.d. exponentiels de paramètre \(\mu > 0\), \(n_0\) clients initiaux de temps de service \(R_i\)), \(N_t\) est le nombre de clients au temps \(t\) et \(A_t\) le nombre d''arrivées jusqu''au temps \(t\). \(\mathbb{P}(Y_t=k)=e^{-\lambda t}\sum_{n\ge k}\binom nkq_t^k(1-q_t)^{n-k}\frac{(\lambda t)^n}{n!}=e^{-\lambda tq_t}\frac{(\lambda tq_t)^k}{k!}\). Finalement \(Y_t\) suit une loi de Poisson de paramètre \(\alpha_t=\lambda tq_t=\frac\lambda\mu(1-e^{-\mu t})\).'
   source: 'Poly de modélisation Paris Cité, ch. 3, p. 10'
   chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
   priorite: 3
@@ -1178,7 +1178,7 @@
 - id: mod-a-075-1
   notion: mod-n-0075
   recto: 'Cor. 3.3 : convergence en loi de \(N_t\)'
-  verso: 'Avec les notations précédentes (file M/M/\(\infty\)), \(N_t\) converge en loi vers une variable de Poisson de paramètre \(\lambda/\mu\) quand \(t\to+\infty\), c''est-à-dire que<br>\(\mathbb{P}(N_t=n)\to\dfrac{(\lambda/\mu)^n}{n!}e^{-\lambda/\mu}\), \(n\ge0\).<br>(Preuve : \(\mathbb{P}(N_t=n)=\sum_{k=0}^{n_0}\binom{n_0}kp_t^k(1-p_t)^{n_0-k}\frac{\alpha_t^{n-k}}{(n-k)!}e^{-\alpha_t}\) ; quand \(t\to+\infty\), \(p_t\to0\) et \(\alpha_t\to\lambda/\mu\).)'
+  verso: 'Dans le modèle M/M/\(\infty\) (arrivées de Poisson \((T_i)\) d''intensité \(\lambda > 0\), services \(S_i\) i.i.d. exponentiels de paramètre \(\mu > 0\), \(n_0\) clients initiaux de temps de service \(R_i\)), \(N_t\) est le nombre de clients au temps \(t\) et \(A_t\) le nombre d''arrivées jusqu''au temps \(t\). Soient \(p_t=e^{-\mu t}\) et \(\alpha_t=\frac\lambda\mu(1-e^{-\mu t})\). Avec les notations précédentes (file M/M/\(\infty\)), \(N_t\) converge en loi vers une variable de Poisson de paramètre \(\lambda/\mu\) quand \(t\to+\infty\), c''est-à-dire que<br>\(\mathbb{P}(N_t=n)\to\dfrac{(\lambda/\mu)^n}{n!}e^{-\lambda/\mu}\), \(n\ge0\).<br>(Preuve : \(\mathbb{P}(N_t=n)=\sum_{k=0}^{n_0}\binom{n_0}kp_t^k(1-p_t)^{n_0-k}\frac{\alpha_t^{n-k}}{(n-k)!}e^{-\alpha_t}\) ; quand \(t\to+\infty\), \(p_t\to0\) et \(\alpha_t\to\lambda/\mu\).)'
   source: 'Poly de modélisation Paris Cité, ch. 3, p. 10'
   chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
   priorite: 3
@@ -1186,7 +1186,7 @@
 - id: mod-a-075-2
   notion: mod-n-0075
   recto: 'Cor. 3.3 : limite de \(\mathbb{E}[N_t]\)'
-  verso: 'Dans le modèle M/M/\(\infty\) (avec les notations précédentes), la loi du nombre de clients dans le service se stabilise autour d''une distribution d''équilibre (loi de Poisson de paramètre \(\lambda/\mu\)). On peut voir aussi par exemple que \(\mathbb{E}[N_t]\to\dfrac\lambda\mu\) quand \(t\to+\infty\).'
+  verso: 'Dans le modèle M/M/\(\infty\) (arrivées de Poisson \((T_i)\) d''intensité \(\lambda > 0\), services \(S_i\) i.i.d. exponentiels de paramètre \(\mu > 0\), \(n_0\) clients initiaux de temps de service \(R_i\)), \(N_t\) est le nombre de clients au temps \(t\) et \(A_t\) le nombre d''arrivées jusqu''au temps \(t\). Dans le modèle M/M/\(\infty\) (avec les notations précédentes), la loi du nombre de clients dans le service se stabilise autour d''une distribution d''équilibre (loi de Poisson de paramètre \(\lambda/\mu\)). On peut voir aussi par exemple que \(\mathbb{E}[N_t]\to\dfrac\lambda\mu\) quand \(t\to+\infty\).'
   source: 'Poly de modélisation Paris Cité, ch. 3, p. 10'
   chapitre: 'Chapitre 3 - Processus de Poisson et files d''attente'
   priorite: 3
@@ -1209,7 +1209,7 @@
   tags: [prerequis-l1l2, theoreme]
 - id: mod-a-077-2
   notion: null
-  recto: 'Cas critique de Galton-Watson (\(m=1\), \(\sigma^2<+\infty\), \(\phi\) fonction génératrice de la reproduction) : \(u_n=P(\tau>n)>0\) vérifie \(\frac1{u_{n+1}}-\frac1{u_n}\sim\frac{\phi^{\prime\prime}(1^-)}2\) avec \(\phi^{\prime\prime}(1^-)>0\). Comment en déduit-on un équivalent de \(u_n\) ?'
+  recto: 'Cas critique de Galton-Watson (\(m=1\), \(\sigma^2<+\infty\), \(\phi\) fonction génératrice de la reproduction) : \(u_n=P(\tau>n)>0\) (\(\tau\) étant le temps d''extinction) vérifie \(\frac1{u_{n+1}}-\frac1{u_n}\sim\frac{\phi^{\prime\prime}(1^-)}2\) avec \(\phi^{\prime\prime}(1^-)>0\). Comment en déduit-on un équivalent de \(u_n\) ?'
   verso: 'Avec \(v_n=\frac1{u_n}\) et \(c=\frac{\phi^{\prime\prime}(1^-)}2>0\), la sommation des équivalents donne \(v_n\sim\frac{\phi^{\prime\prime}(1^-)}2\,n\). Puis, les termes étant non nuls, on passe à l''inverse : \(u_n=\frac1{v_n}\sim\frac2{\phi^{\prime\prime}(1^-)\,n}\).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-td1-ex09'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'

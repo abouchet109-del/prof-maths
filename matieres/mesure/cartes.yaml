@@ -18,7 +18,7 @@
 - id: mesure-a-001-3
   notion: mesure-n-0002
   recto: 'Prop. 0.1 (point 2) : monotonie de l''image réciproque'
-  verso: 'Soit \(f:\Omega\to E\) une application de \(\Omega\) dans un ensemble \(E\).<br>Si \(A\subseteq B\), alors \(f^{-1}(A)\subseteq f^{-1}(B)\).'
+  verso: 'Soit \(f:\Omega\to E\) une application de \(\Omega\) dans un ensemble \(E\).<br>Si \(A\subseteq B\) sont des parties de \(E\), alors \(f^{-1}(A)\subseteq f^{-1}(B)\).'
   source: 'Poly de mesure Paris Cité, ch. 0, Prop. 0.1, p. 3'
   chapitre: 'Chapitre 0 - Préliminaires'
   priorite: 2
@@ -231,7 +231,7 @@
 - id: mesure-a-014-1
   notion: mesure-n-0037
   recto: 'Exemple : contre-exemple à la continuité séquentielle décroissante si l''hypothèse (P) est fausse'
-  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré.<br>Hypothèse (P) de la Prop. (iv) : il existe \(n_0\in\mathbb N\) avec \(\mu(A_{n_0}) < +\infty\).<br>Contre-exemple si (P) est fausse : \(X=\mathbb N\), \(\mathcal A=\mathcal P(\mathbb N)\), \(\mu\) la mesure de comptage. Soit \(A_n=[n,+\infty[\cap\mathbb N\) : \(\mu(A_n)=+\infty\) pour tout \(n\) et \(A_{n+1}\subset A_n\). Mais \(\bigcap_nA_n=\emptyset\) et \(\mu(\emptyset)=0\), donc \(\mu(\bigcap A_n)\neq\lim\mu(A_n)\).'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré et \((A_n)\) une suite décroissante d''éléments de \(\mathcal A\).<br>Hypothèse (P) de la Prop. (iv) : il existe \(n_0\in\mathbb N\) avec \(\mu(A_{n_0}) < +\infty\).<br>Contre-exemple si (P) est fausse : \(X=\mathbb N\), \(\mathcal A=\mathcal P(\mathbb N)\), \(\mu\) la mesure de comptage. Soit \(A_n=[n,+\infty[\cap\mathbb N\) : \(\mu(A_n)=+\infty\) pour tout \(n\) et \(A_{n+1}\subset A_n\). Mais \(\bigcap_nA_n=\emptyset\) et \(\mu(\emptyset)=0\), donc \(\mu(\bigcap A_n)\neq\lim\mu(A_n)\).'
   source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 2'
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 3
