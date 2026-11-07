@@ -24,7 +24,7 @@ def annale(id, annee, matiere="topologie", t=10):
               annale={"nature": "exam", "annee": annee}, type_source="annale")
 
 
-def ctx(exos, resultats=(), dispo=None):
+def ctx(exos, resultats=(), dispo=None, **extra):
     for i, e in enumerate(exos):
         e["ordre"] = i
     base = {"debut": "2026-11-03", "fin": "2027-01-10", "examens": "2027-01-11",
@@ -32,8 +32,10 @@ def ctx(exos, resultats=(), dispo=None):
             "exceptions": [{"type": "off", "du": "2026-11-07", "au": "2026-11-08"},
                            {"type": "quota", "du": "2026-12-21", "au": "2027-01-03", "minutes_exercices_jour": 240}]}
     base.update(dispo or {})
-    return {"exercices": exos, "resultats": list(resultats), "dispo": base,
-            "notions": {}, "cartes": [], "anki_plan": {}}
+    c = {"exercices": exos, "resultats": list(resultats), "dispo": base,
+         "notions": {}, "cartes": [], "anki_plan": {}, "a_revoir": [], "blocs": {}, "avancement": {}}
+    c.update(extra)
+    return c
 
 
 def res(d, id, r="reussi"):
@@ -85,9 +87,17 @@ def test_categorie_suivante_seulement_si_tout_acquis():
     assert E.categorie_ouverte(exos, etats) == "important"
 
 
-def test_plan_ne_propose_pas_important_tant_que_vital_ouvert():
-    c = ctx([ex("v1"), ex("i1", imp="important")], dispo={"minutes_exercices_jour": 100})
-    assert ids(P.plan_jour(c, D(2026, 11, 4))) == ["v1"]
+def test_bloc_vital_puis_important_puis_secondaire_seulement_ligne_epuisee():
+    exos = [ex("i1", imp="important"), ex("v1"), ex("s1", imp="secondaire")]
+    c = ctx(exos, dispo={"minutes_exercices_jour": 100})
+    assert ids(P.plan_jour(c, D(2026, 11, 4))) == ["v1", "i1"]      # vital avant important, pas de secondaire
+    # v1 et i1 acquis (reprise pas encore due) : la ligne principale est épuisée, le secondaire arrive
+    c = ctx(exos, [res("2026-11-04", "v1"), res("2026-11-04", "i1")], dispo={"minutes_exercices_jour": 100})
+    assert ids(P.plan_jour(c, D(2026, 11, 5))) == ["s1"]
+    # important seulement « à revoir » : le passage de catégorie bloque encore le secondaire
+    c = ctx(exos, [res("2026-11-04", "v1"), res("2026-11-04", "i1", "presque")], dispo={"minutes_exercices_jour": 100})
+    assert ids(P.plan_jour(c, D(2026, 11, 5))) == []
+    assert ids(P.plan_jour(c, D(2026, 11, 6))) == ["i1"]            # reprise due
 
 
 # ------------------------------------------------------------------ reprises
@@ -142,20 +152,20 @@ def test_jour_off_et_hors_periode():
     assert ids(P.plan_jour(c, D(2026, 11, 2))) == []
 
 
-def test_alternance_des_matieres():
-    exos = [ex("t1", "topologie", sc="A"), ex("t2", "topologie", sc="A"), ex("t3", "topologie", sc="A"),
+def test_un_seul_bloc_par_jour_une_matiere():
+    exos = [ex("t1", "topologie", sc="A"), ex("t2", "topologie", sc="A"),
             ex("p1", "proba", sc="B", t=10), ex("p2", "proba", sc="B", t=10)]
     p = P.plan_jour(ctx(exos, dispo={"minutes_exercices_jour": 50}), D(2026, 11, 4))
-    m = [e["matiere"] for e, _ in p["items"]]
-    assert m == ["topologie", "proba", "topologie", "proba", "topologie"]
+    assert {e["matiere"] for e, _ in p["items"]} == {"topologie"}      # première du cycle
+    assert p["matiere"] == "topologie" and all(g == "bloc" for _, g in p["items"])
 
 
-def test_sous_chapitre_au_score_le_plus_faible():
+def test_bloc_dans_l_ordre_du_poly():
     exos = [ex("a1", sc="A"), ex("a2", sc="A"), ex("b1", sc="B"), ex("b2", sc="B")]
     c = ctx(exos, [res("2026-11-03", "a1", "non_fait"), res("2026-11-03", "b1")])
     p = P.plan_jour(c, D(2026, 11, 4))
-    nouveaux = [e["id"] for e, g in p["items"] if g == "nouveau"]
-    assert nouveaux[0] == "a2"                # A (score 0) avant B (score 1)
+    nouveaux = [e["id"] for e, g in p["items"] if g == "bloc"]
+    assert nouveaux[0] == "a2"                # le sous-chapitre A (ordre du poly) avant B
 
 
 def test_recherche_sujet():
@@ -173,3 +183,255 @@ def test_recherche_a_revoir():
     assert P.recherche_a_revoir(entrees, "2026-11-05") == '(nid:10,30 or "Id:topo-a-001-1")'
     assert P.recherche_a_revoir(entrees, "2026-11-07") == ""
     assert P.recherche_a_revoir(None, "2026-11-05") == ""
+
+
+# ================================================= blocs de sous-chapitre
+def sc(n, chap=1):
+    return f"Chapitre {chap} - X > {n}"
+
+
+def test_cle_naturelle_des_sous_chapitres():
+    scs = [sc("2.10 b", 2), sc("2.9 a", 2), sc("1.2.3 c"), sc("10.1 z", 10), sc("1.10 d"), sc("1.9 e"),
+           "Hors cours actuel > Connexité"]
+    assert sorted(scs, key=E.cle_sc) == [sc("1.2.3 c"), sc("1.9 e"), sc("1.10 d"), sc("2.9 a", 2),
+                                          sc("2.10 b", 2), sc("10.1 z", 10), "Hors cours actuel > Connexité"]
+
+
+def test_sous_chapitre_courant_et_avancee():
+    exos = [ex("a1", sc=sc("1.9")), ex("a2", sc=sc("1.9"), imp="important"),
+            ex("b1", sc=sc("1.10")), ex("c1", sc=sc("2.1", 2)),
+            ex("an", sc=sc("1.9"), annale_prioritaire=True, annale={"nature": "exam", "annee": "2020-21"}),
+            ex("dbl", sc=sc("1.2"), doublon_de="a1"), ex("ind", sc=sc("1.2"), disponible=False)]
+
+    def plan(resultats, d):
+        pl = P.plan_jour(ctx(exos, resultats), d)
+        return pl["courants"]["topologie"], pl
+
+    cour, pl = plan([], D(2026, 11, 4))
+    assert cour == sc("1.9")                 # 1.9 avant 1.10 ; doublon, indisponible et annale exclus
+    assert pl["sous_chapitre"] == sc("1.9") and pl["vitaux"] == (0, 1)
+    assert ids(pl)[:2] == ["a1", "a2"]       # vital puis important, puis suite sur les sous-chapitres suivants
+    # a1 acquis mais a2 (important) jamais tenté : 1.9 reste courant
+    assert plan([res("2026-11-04", "a1")], D(2026, 11, 5))[0] == sc("1.9")
+    # a1 acquis et a2 tenté : on passe à 1.10
+    cour, pl = plan([res("2026-11-04", "a1"), res("2026-11-04", "a2", "aide")], D(2026, 11, 5))
+    assert cour == sc("1.10") and pl["vitaux"] == (0, 1)
+    # a1 raté : 1.9 reste courant (vital pas acquis), mais a1 revient en reprise, pas dans le bloc
+    cour, pl = plan([res("2026-11-04", "a1", "presque"), res("2026-11-04", "a2")], D(2026, 11, 5))
+    assert cour == sc("1.9") and ids(pl) == ["b1", "c1"]
+
+
+def test_le_bloc_continue_sur_le_sous_chapitre_suivant_si_du_temps():
+    exos = [ex("a1", sc=sc("1.1"), t=20), ex("b1", sc=sc("1.2"), t=20), ex("c1", sc=sc("1.3"), t=100)]
+    p = P.plan_jour(ctx(exos, dispo={"minutes_exercices_jour": 60}), D(2026, 11, 4))
+    assert ids(p) == ["a1", "b1"] and p["sous_chapitre"] == sc("1.1")
+
+
+def test_le_bloc_ne_saute_pas_a_un_sous_chapitre_plus_loin_pour_boucher_un_trou():
+    exos = [ex("a1", sc=sc("1.1"), t=30), ex("a2", sc=sc("1.1"), t=40), ex("a3", sc=sc("1.1"), t=10),
+            ex("b1", sc=sc("1.2"), t=5)]
+    p = P.plan_jour(ctx(exos, dispo={"minutes_exercices_jour": 50}), D(2026, 11, 4))
+    assert ids(p) == ["a1", "a3"]            # a2 est sauté ; b1 (5 min) tiendrait mais est dans un sous-chapitre plus loin
+
+
+def test_avancement_du_cours_limite_les_sous_chapitres():
+    exos = [ex("a1", sc=sc("1.1")), ex("b1", sc=sc("1.2")), ex("c1", sc=sc("1.3"))]
+    c = ctx(exos, avancement={"topologie": sc("1.2")})
+    assert ids(P.plan_jour(c, D(2026, 11, 4))) == ["a1", "b1"]
+    c = ctx(exos, [res("2026-11-03", "a1"), res("2026-11-03", "b1")], avancement={"topologie": sc("1.2")})
+    p = P.plan_jour(c, D(2026, 11, 4))
+    assert ids(p) == [] and p["matiere"] is None       # tout est acquis dans la limite : c1 n'est pas planifié
+    c["avancement"] = {"topologie": None}
+    assert ids(P.plan_jour(c, D(2026, 11, 4))) == ["c1"]
+
+
+# ------------------------------------------------------------ rotation
+def test_rotation_des_matieres():
+    exos = [ex("t1", "topologie"), ex("m1", "mesure"), ex("p1", "proba"), ex("o1", "modelisation"),
+            ex("t2", "topologie"), ex("m2", "mesure"), ex("p2", "proba"), ex("o2", "modelisation")]
+    blocs = {"2026-11-09": {"matiere": "topologie", "sous_chapitre": "S1"}}
+
+    def matiere(resultats, d, blocs=blocs, e=exos):
+        return P.plan_jour(ctx(e, resultats, blocs=blocs), d)["matiere"]
+
+    assert matiere([], D(2026, 11, 9), blocs={}) == "topologie"          # aucun bloc travaillé : le premier
+    assert matiere([res("2026-11-09", "t1")], D(2026, 11, 10)) == "mesure"
+    blocs2 = {**blocs, "2026-11-10": {"matiere": "mesure", "sous_chapitre": "S1"}}
+    assert matiere([res("2026-11-09", "t1"), res("2026-11-10", "m1")], D(2026, 11, 11), blocs2) == "proba"
+    blocs3 = {**blocs2, "2026-11-11": {"matiere": "proba", "sous_chapitre": "S1"},
+              "2026-11-12": {"matiere": "modelisation", "sous_chapitre": "S1"}}
+    r = [res("2026-11-09", "t1"), res("2026-11-10", "m1"), res("2026-11-11", "p1"), res("2026-11-12", "o1")]
+    assert matiere(r, D(2026, 11, 13), blocs3) == "topologie"          # le cycle reboucle
+    assert matiere(r[:3], D(2026, 11, 12), blocs3) == "modelisation"
+    # on saute une matière qui n'a plus rien à planifier (mesure vide)
+    sans_mesure = [e for e in exos if e["matiere"] != "mesure"]
+    assert matiere([res("2026-11-09", "t1")], D(2026, 11, 10), e=sans_mesure) == "proba"
+
+
+def test_rotation_jour_planifie_mais_non_travaille():
+    exos = [ex("t1", "topologie"), ex("m1", "mesure"), ex("p1", "proba")]
+    blocs = {"2026-11-09": {"matiere": "topologie", "sous_chapitre": "S1"},
+             "2026-11-10": {"matiere": "mesure", "sous_chapitre": "S1"}}
+    # le 10/11 était planifié (mesure) mais aucun résultat ce jour-là : le dernier bloc travaillé est celui du 09/11
+    p = P.plan_jour(ctx(exos, [res("2026-11-09", "t1")], blocs=blocs), D(2026, 11, 11))
+    assert p["matiere"] == "mesure"
+    # un résultat du jour même ou d'un jour postérieur ne compte pas
+    p = P.plan_jour(ctx(exos, [res("2026-11-10", "m1")], blocs=blocs), D(2026, 11, 10))
+    assert p["matiere"] == "topologie"
+
+
+# ------------------------------------------------------- plafond des reprises
+def test_plafond_des_reprises():
+    exos = [ex(f"r{i}", "topologie", sc=sc("1.1"), t=20) for i in range(3)] + [ex("n1", sc=sc("1.2"), t=20)]
+    r = [res("2026-11-03", f"r{i}", "non_fait") for i in range(3)]
+    p = P.plan_jour(ctx(exos, r), D(2026, 11, 4))
+    reprises = [e["id"] for e, g in p["items"] if g == "reprise"]
+    assert reprises == ["r0"] and ids(p)[1] == "n1"          # 30 min au plus : une seule de 20 min
+    p = P.plan_jour(ctx(exos, r, dispo={"minutes_reprises_max": 45}), D(2026, 11, 4))
+    assert [e["id"] for e, g in p["items"] if g == "reprise"] == ["r0", "r1"]
+    p = P.plan_jour(ctx(exos, r, dispo={"minutes_reprises_max": 60}), D(2026, 11, 4))
+    assert len([1 for _, g in p["items"] if g == "reprise"]) == 3
+
+
+def test_reprise_plus_longue_que_le_plafond_passe_quand_meme_seule():
+    exos = [ex("long", t=50), ex("court", t=10)]
+    r = [res("2026-11-03", "long", "non_fait"), res("2026-11-03", "court", "non_fait")]
+    p = P.plan_jour(ctx(exos, r), D(2026, 11, 4))
+    assert [e["id"] for e, g in p["items"] if g == "reprise"] == ["long"]       # 50 > 30 : seule, plus de court
+
+
+def test_reprises_toutes_matieres_les_plus_en_retard_d_abord():
+    exos = [ex("t", "topologie", t=20), ex("p", "proba", t=20)]
+    r = [res("2026-11-04", "t", "aide"), res("2026-11-03", "p", "aide")]       # p dû le 06, t le 07
+    p = P.plan_jour(ctx(exos, r, dispo={"minutes_reprises_max": 20}), D(2026, 11, 9))
+    assert ids(p)[0] == "p" and p["items"][0][1] == "reprise"
+
+
+# ---------------------------------------------------------------- annales
+def annale_sc(id, annee, scx, matiere="topologie", t=10):
+    e = annale(id, annee, matiere, t)
+    e["sous_chapitre"] = scx
+    return e
+
+
+def genres_annale(p):
+    return [e["id"] for e, g in p["items"] if g.startswith("annale")]
+
+
+def test_annale_eligible_seulement_si_sous_chapitre_passe():
+    exos = [ex("a1", sc=sc("1.1")), ex("a2", sc=sc("1.2")), ex("a3", sc=sc("1.3")),
+            annale_sc("an12", "2021-22", sc("1.2")), annale_sc("an13", "2022-23", sc("1.3")),
+            annale_sc("blanc", "2024-25", sc("1.1"))]
+    # courant = 1.1 : aucune annale (ni 1.2 ni 1.3 ne sont passés)
+    assert genres_annale(P.plan_jour(ctx(exos), D(2026, 11, 4))) == []
+    # courant = 1.2 : toujours aucune annale de 1.1 ou avant (l'examen blanc est de toute façon réservé)
+    assert genres_annale(P.plan_jour(ctx(exos, [res("2026-11-03", "a1")]), D(2026, 11, 4))) == []
+    # 1.2 acquis, courant = 1.3 : l'annale de 1.2 est éligible, pas celle de 1.3
+    r = [res("2026-11-03", "a1"), res("2026-11-03", "a2")]
+    assert genres_annale(P.plan_jour(ctx(exos, r), D(2026, 11, 4))) == ["an12"]
+
+
+def test_annales_libres_des_et_marge_negative():
+    exos = [ex("a1", sc=sc("1.1")), annale_sc("an13", "2022-23", sc("1.3")), annale_sc("fin", "2024-25", sc("1.3"))]
+    dispo = {"annales_libres_des": "2026-12-07"}
+    assert genres_annale(P.plan_jour(ctx(exos, dispo=dispo), D(2026, 12, 4))) == []
+    assert genres_annale(P.plan_jour(ctx(exos, dispo=dispo), D(2026, 12, 7))) == ["an13"]
+    # marge négative : capacité (fin proche) < minutes restantes
+    court = {"fin": "2026-11-04", "examens": "2026-11-05", "minutes_exercices_jour": 15}
+    p = P.plan_jour(ctx(exos, dispo=court), D(2026, 11, 4))
+    assert p["bilan"]["marge"] < 0 and genres_annale(p) == ["an13"]
+    # sans la pression : la même annale n'est pas éligible
+    assert genres_annale(P.plan_jour(ctx(exos), D(2026, 11, 4))) == []
+
+
+def test_annale_quand_la_ligne_principale_est_epuisee_et_limite_du_cours():
+    exos = [ex("a1", sc=sc("1.1")), annale_sc("an12", "2022-23", sc("1.2")), annale_sc("an14", "2021-22", sc("1.4")),
+            annale_sc("blanc", "2024-25", sc("1.1"))]
+    r = [res("2026-11-03", "a1")]       # ligne principale épuisée : toutes les annales sont passées
+    assert genres_annale(P.plan_jour(ctx(exos, r), D(2026, 11, 4))) == ["an12"]
+    # cours vu jusqu'à 1.2 seulement : l'annale de 1.4 n'est pas éligible
+    c = ctx(exos, r + [res("2026-11-03", "an12")], avancement={"topologie": sc("1.2")})
+    assert genres_annale(P.plan_jour(c, D(2026, 11, 5))) == []
+
+
+def test_examen_blanc_reserve_reste_hors_quota():
+    exos = [ex("a1", sc=sc("1.1")), annale_sc("old", "2022-23", sc("1.1")), annale_sc("new", "2024-25", sc("1.1"))]
+    r = [res("2026-11-03", "a1")]
+    assert genres_annale(P.plan_jour(ctx(exos, r), D(2026, 11, 4))) == ["old"]
+    assert genres_annale(P.plan_jour(ctx(exos, r), D(2026, 12, 22))) == ["old", "new"]
+
+
+# ----------------------------------------------------------------- cartes
+def carte(id, notion, tags=()):
+    return {"id": id, "notion": notion, "recto": "r", "verso": "v", "tags": list(tags)}
+
+
+def notion(id, chap, sous, m="topologie"):
+    return {"id": id, "titre": id, "matiere": m, "chapitre": chap, "sous_chapitre": sous,
+            "source": {"fichier": "f.pdf", "page": 1}}
+
+
+def ctx_cartes(**kw):
+    exos = [ex("a1", sc=sc("1.1"), notions=["n-a"]), ex("b1", sc=sc("1.2"), notions=["n-b"]),
+            ex("c1", sc=sc("1.3"), notions=["n-c"])]
+    notions = {"n-a": notion("n-a", "Chapitre 1 - X", "1.1"), "n-b": notion("n-b", "Chapitre 1 - X", "1.2"),
+               "n-c": notion("n-c", "Chapitre 1 - X", "1.3"), "n-a2": notion("n-a2", "Chapitre 1 - X", "1.1"),
+               "n-d": notion("n-d", "Chapitre 1 - X", "1.4")}
+    cartes = [carte("cD", "n-d"), carte("cC1", "n-c"), carte("cB1", "n-b"), carte("cB2", "n-b"),
+              carte("cA1", "n-a"), carte("cA2", "n-a2"), carte("cA3", "n-a"),
+              carte("eT", "n-d", ["erreur"]), carte("eM", "n-c", ["erreur"]),
+              carte("rev", "n-d")]
+    return ctx(exos, notions=notions, cartes=cartes, a_revoir=[{"pour": "2026-11-03", "id": "rev"}], **kw)
+
+
+def anki_ids(c, p):
+    return P.anki(c, p)["nouvelles"]
+
+
+def test_cartes_ordre_erreurs_arevoir_bloc_puis_suivant():
+    c = ctx_cartes(dispo={"cartes_par_jour": 100})
+    p = P.plan_jour(c, D(2026, 11, 4))
+    # sous-chapitre du bloc : 1.1 (n-a, et n-a2 rattachée par notions.yaml), puis 1.2, 1.3, 1.4
+    assert anki_ids(c, p) == ["eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2", "cC1", "cD"]
+    c["dispo"]["cartes_par_jour"] = 5
+    assert anki_ids(c, p) == ["eT", "eM", "rev", "cA1", "cA2"]
+    assert anki_ids(c, P.plan_jour(c, D(2026, 11, 7))) == []     # jour off
+
+
+def test_cartes_jamais_donnees_deux_fois_et_replanification_stable():
+    c = ctx_cartes(dispo={"cartes_par_jour": 4})
+    p = P.plan_jour(c, D(2026, 11, 4))
+    jour1 = anki_ids(c, p)
+    assert jour1 == ["eT", "eM", "rev", "cA1"]
+    c["anki_plan"] = {"2026-11-04": jour1}
+    assert anki_ids(c, p) == jour1                                  # même date : identique
+    jour2 = anki_ids(c, P.plan_jour(c, D(2026, 11, 5)))
+    assert not set(jour1) & set(jour2) and jour2 == ["cA2", "cA3", "cB1", "cB2"]
+
+
+def test_cartes_limitees_a_l_avancement_du_cours():
+    c = ctx_cartes(dispo={"cartes_par_jour": 100}, avancement={"topologie": sc("1.2")})
+    assert anki_ids(c, P.plan_jour(c, D(2026, 11, 4))) == ["eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2"]
+
+
+# ------------------------------------------- stabilité de bout en bout
+def test_replanifier_la_meme_date_redonne_le_meme_bloc(tmp_path):
+    import yaml
+    (tmp_path / "state").mkdir()
+    for m in E.MATIERES:
+        (tmp_path / "matieres" / m).mkdir(parents=True)
+        with open(tmp_path / "matieres" / m / "exercices.yaml", "w", encoding="utf-8") as f:
+            yaml.safe_dump([ex(f"{m}-1", m, sc=sc("1.1")), ex(f"{m}-2", m, sc=sc("1.2"))], f)
+    donnees = {"dispo.yaml": ctx([])["dispo"],
+               "resultats.yaml": [{"date": "2026-11-09", "exercice": "topologie-1", "resultat": "reussi", "palier_aide": 0}],
+               "blocs.yaml": {"2026-11-09": {"matiere": "topologie", "sous_chapitre": sc("1.1")}}}
+    for nom, d in donnees.items():
+        with open(tmp_path / "state" / nom, "w", encoding="utf-8") as f:
+            yaml.safe_dump(d, f)
+    l1 = P.jour(D(2026, 11, 10), tmp_path)
+    blocs1 = (tmp_path / "state" / "blocs.yaml").read_text(encoding="utf-8")
+    l2 = P.jour(D(2026, 11, 10), tmp_path)
+    assert l1 == l2 and (tmp_path / "state" / "blocs.yaml").read_text(encoding="utf-8") == blocs1
+    assert l1[2].startswith("Bloc du jour : Mesure — ") and "(vitaux acquis 0/1)" in l1[2]
+    assert len(l1) <= P.MAX_LIGNES
+    assert E.charger_yaml(tmp_path / "state" / "blocs.yaml")["2026-11-10"]["matiere"] == "mesure"

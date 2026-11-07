@@ -46,9 +46,11 @@ def verifier(racine=E.RACINE) -> list[str]:
         try:
             for c in ["debut", "examens", "minutes_exercices_jour", "minutes_cours_jour"]:
                 assert c in dispo, f"champ {c} manquant"
-            for c in ["debut", "fin", "examens"]:
+            for c in ["debut", "fin", "examens", "annales_libres_des"]:
                 if c in dispo:
                     E.en_date(dispo[c])
+            for c in ["minutes_reprises_max", "cartes_par_jour"]:
+                assert c not in dispo or (isinstance(dispo[c], int) and dispo[c] >= 0), f"{c} : entier positif attendu"
             for x in dispo.get("exceptions", []):
                 assert E.type_exception(x) in ("off", "quota"), f"type d'exception inconnu ({x['type']})"
                 assert E.en_date(x["du"]) <= E.en_date(x["au"]), f"période inversée ({x['du']}..{x['au']})"
@@ -84,6 +86,24 @@ def verifier(racine=E.RACINE) -> list[str]:
                 if i in vus:
                     erreurs.append(f"anki_plan {jour} : carte {i} donnée plusieurs fois")
                 vus.add(i)
+
+    # 6. blocs.yaml et avancement_cours.yaml
+    blocs = charges.get(racine / "state" / "blocs.yaml")
+    if blocs:
+        for jour, b in blocs.items():
+            try:
+                E.en_date(jour)
+            except (ValueError, TypeError):
+                erreurs.append(f"blocs {jour} : date invalide")
+            if not isinstance(b, dict) or b.get("matiere") not in E.MATIERES:
+                erreurs.append(f"blocs {jour} : matière inconnue ({b})")
+    av = charges.get(racine / "state" / "avancement_cours.yaml")
+    if av:
+        for m, sc in av.items():
+            if m not in E.MATIERES:
+                erreurs.append(f"avancement_cours : matière inconnue ({m})")
+            elif sc is not None and not any(e.get("sous_chapitre") == sc for e in exos.values()):
+                erreurs.append(f"avancement_cours : sous-chapitre inconnu pour {m} ({sc})")
     return erreurs
 
 

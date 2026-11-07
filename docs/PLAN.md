@@ -64,12 +64,17 @@ Limite : sans accès direct à Anki, le système ne voit pas les cartes dues ni 
 | 11 Règles de session | fait en partie : `CLAUDE.md` et skill `debrief`. Pas encore de check-in hebdomadaire ni de skill imprévu (à faire si le besoin apparaît) |
 | 12 Contrôle | fait : tests et `check.py` passent sur les vraies données |
 
-**Choix du planificateur** :
-- **Examens blancs :** la dernière année d'annales de Paris Cité de chaque matière est réservée aux examens blancs de la période à 28 h. Pour la topologie, c'est 2023-24.
-- **Annales :** les annales prioritaires ont leur propre filière, à une nouvelle annale par jour au plus hors de cette période. Elles ne bloquent pas le passage de catégorie.
-- **Nouveaux exercices :** les vitaux passent avant les importants. La matière qui a le plus de minutes vitales restantes commence, puis on alterne.
-- **Cours :** 10 min par notion, tirées des exercices du jour.
-- **Cartes :** les 12 cartes du jour couvrent les exercices des 3 jours suivants. Elles sont suivies dans `state/anki_plan.yaml`.
+**Choix du planificateur** (progression par blocs de sous-chapitre, 07/11/2026) :
+- **Matière du jour :** rotation topologie, mesure, proba, modélisation. Chaque bloc planifié est mémorisé dans `state/blocs.yaml`. La matière du jour est la suivante dans le cycle après celle du dernier bloc **effectivement travaillé** (date antérieure ayant au moins un résultat dans `resultats.yaml`) ; un jour planifié mais non travaillé ne fait pas avancer la rotation. Sans bloc travaillé, on prend la première. Une matière qui n'a plus rien à planifier est sautée. Replanifier une date redonne le même bloc.
+- **Sous-chapitre courant :** le premier, dans l'ordre du poly (tri naturel, « 2.10 » après « 2.9 »), qui a encore une ligne principale. Ligne principale = ses `vital` pas encore acquis, puis ses `important` jamais tentés ; les annales prioritaires, doublons et exercices indisponibles sont exclus. `state/avancement_cours.yaml` (`{matiere: dernier sous-chapitre vu en CM | null}`) interdit de planifier au-delà, pour les exercices comme pour les cartes.
+- **Budget des exercices**, dans cet ordre :
+  1. les **reprises** dues, toutes matières, les plus en retard d'abord, plafonnées à `minutes_reprises_max` (30 min). La plus urgente passe même si elle dépasse seule le plafond, sinon un exercice de plus de 30 min ne serait jamais repris ;
+  2. au plus **une annale prioritaire** nouvelle hors période quota. Elle n'est éligible que si son sous-chapitre est passé dans sa matière (avant le courant), ou à partir de `annales_libres_des` (07/12/2026), ou si la marge à l'échéance devient négative. Les examens blancs (dernière année de chaque matière) restent réservés à la période à 28 h, où plusieurs annales par jour sont possibles ;
+  3. le **bloc** : la ligne principale du sous-chapitre courant (vital puis important, dans l'ordre du fichier), qui continue sur le sous-chapitre suivant s'il reste du temps. Un exercice trop long est sauté, mais le bloc ne saute pas à un sous-chapitre plus loin pour combler un trou.
+- **Secondaire et exotique :** seulement quand toute la ligne principale de la matière est épuisée, avec le passage de catégorie par sous-chapitre (la catégorie suivante s'ouvre quand tous les exercices de la précédente sont au moins acquis).
+- **Cours :** 10 min par notion, tirées du sous-chapitre du bloc (notions de ses exercices, puis notions de `notions.yaml` qui lui sont rattachées).
+- **Cartes :** 20 par jour au plus (`cartes_par_jour`). D'abord les cartes d'erreurs et les cartes `a_revoir` dues, puis les cartes pas encore données des notions du sous-chapitre du bloc, puis celles des sous-chapitres suivants de la même matière. Une carte n'est jamais donnée deux fois (`state/anki_plan.yaml`).
+- **`NOW.md` :** `Bloc du jour : <Matière> — <sous-chapitre> (vitaux acquis x/y)` en tête, exercices groupés en Reprises, Annale, Bloc, échéance avec une ligne par matière (minutes restantes). Une matière est signalée quand son reste dépasse sa part de la capacité restante (capacité ÷ 4 × 1,25). 60 lignes au plus.
 
 **Bilan du classement** (heures estimées par les agents, doublons exclus) :
 

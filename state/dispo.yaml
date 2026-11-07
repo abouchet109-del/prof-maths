@@ -5,7 +5,9 @@ examens: 2027-01-04              # « semaine du 9 janvier » (un samedi) : on v
 examens_a_confirmer: true        # dates exactes à confirmer
 minutes_exercices_jour: 120
 minutes_cours_jour: 30
-cartes_par_jour: 12              # plafond de cartes Anki nouvelles par jour
+cartes_par_jour: 20              # plafond de cartes Anki nouvelles par jour
+minutes_reprises_max: 30         # plafond de minutes de reprises par jour (toutes matières)
+annales_libres_des: 2026-12-07   # à partir de cette date, toutes les annales prioritaires sont éligibles
 exceptions:
   - {type: "off", du: 2026-11-07, au: 2026-11-08}
   - {type: "off", du: 2026-11-21, au: 2026-11-22}

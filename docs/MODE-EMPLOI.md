@@ -2,7 +2,7 @@
 
 ## Ce que fait le système
 - **Exercices :** 667 exercices (TD, DM et annales de Paris Cité, complétés par l'UVSQ), classés par sous-chapitre en vital, important, secondaire et exotique.
-  - Les annales de Paris Cité passent toujours en premier.
+  - Les annales de Paris Cité passent avant le bloc, une par jour, dès que leur sous-chapitre est passé dans sa matière (toutes à partir du 07/12).
   - La plus récente de chaque matière est gardée pour les examens blancs des deux semaines à 28 h (21/12 au 03/01).
   - Une catégorie ne s'ouvre qu'une fois la précédente maîtrisée dans le sous-chapitre.
 - **Suivi :** chaque résultat est enregistré (`reussi`, `aide`, `presque`, `non_fait`) et le calcul est automatique.
@@ -14,10 +14,10 @@
 - **Planning :** chaque jour, 2 h d'exercices et 30 min de cours. Il s'arrête le 03/01, avec les examens visés au 04/01 par prudence, et une marge d'environ 26 h.
 
 ## Une journée
-1. **Ouvrir `NOW.md`.**
+1. **Ouvrir `NOW.md`.** La première ligne donne le bloc du jour : une matière et un sous-chapitre (les matières tournent : topologie, mesure, probabilités, modélisation). Les exercices sont groupés en reprises, annale et bloc.
 2. **Anki** (hors des 2 h 30) :
    - Révisions : étudier `tg::Maths`. Anki présente toutes les cartes dues, anciennes et nouvelles, où qu'elles soient rangées.
-   - Nouvelles cartes : coller la recherche « à apprendre » dans **Outils → Créer un paquet filtré**, puis étudier ce paquet (12 cartes).
+   - Nouvelles cartes : coller la recherche « à apprendre » dans **Outils → Créer un paquet filtré**, puis étudier ce paquet (jusqu'à 20 cartes : tes cartes d'erreurs, puis celles du sous-chapitre du bloc du jour, puis celles du sous-chapitre suivant de la même matière).
 3. **Cours (30 min) :** relire les notions indiquées, aux pages données, pour approfondir. Pour réviser tout un sujet, coller la recherche « tout le sujet du jour » dans un paquet filtré, en décochant « replanifier les cartes selon mes réponses ». Elle réunit tes anciennes cartes `AoutLicenceMath` et les nouvelles.
 4. **Exercices (2 h) :** les faire dans l'ordre de la liste ; le PDF et la page sont indiqués. En cas de blocage, ouvrir une conversation Claude dans `D:\Projets\prof-maths` (Sonnet, effort high). L'aide est graduée : une question qui oriente, puis la méthode, puis l'étape clé, puis la solution. Dès le premier indice, l'exercice compte comme `aide`.
 5. **Le soir (10-15 min) :** dans la même conversation que la séance, dire « debrief » et donner les temps. Une conversation par jour : cours, exercices, puis debrief.

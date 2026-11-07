@@ -1,0 +1,8 @@
+# Dernier sous-chapitre vu en CM, par matière (lu par tools/plan.py) : rien n'est planifié au-delà.
+# Écrire le sous-chapitre tel qu'il figure dans exercices.yaml, par exemple
+#   topologie: "Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière"
+# null = pas de limite.
+topologie: null
+mesure: null
+proba: null
+modelisation: null

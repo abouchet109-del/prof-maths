@@ -5,12 +5,15 @@ Utilisé par plan.py, resultat.py et check.py.
 from __future__ import annotations
 
 import datetime as dt
+import re
 from pathlib import Path
 
 import yaml
 
 RACINE = Path(__file__).resolve().parent.parent
 MATIERES = ["topologie", "mesure", "modelisation", "proba"]
+# Ordre de rotation des matières pour le bloc du jour.
+CYCLE = ["topologie", "mesure", "proba", "modelisation"]
 CATEGORIES = ["vital", "important", "secondaire", "exotique"]
 RESULTATS = ["reussi", "aide", "presque", "non_fait"]
 SCORE = {"reussi": 1.0, "aide": 0.6, "presque": 0.3, "non_fait": 0.0}
@@ -70,6 +73,13 @@ def charger_cartes(racine=RACINE) -> list[dict]:
             c["matiere"] = m
             cartes.append(c)
     return cartes
+
+
+def cle_sc(sc) -> list:
+    """Clé de tri « naturel » d'un sous-chapitre : les nombres sont comparés comme des nombres
+    (« 2.10 » après « 2.9 », « Chapitre 10 » après « Chapitre 2 »). None se classe en premier."""
+    morceaux = re.split(r"(\d+)", str(sc or ""))
+    return [int(m) if i % 2 else m for i, m in enumerate(morceaux)]
 
 
 def charger_resultats(racine=RACINE) -> list[dict]:
