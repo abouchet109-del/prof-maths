@@ -398,6 +398,10 @@ def test_cartes_ordre_erreurs_arevoir_bloc_puis_suivant():
     c["dispo"]["cartes_par_jour"] = 5
     assert anki_ids(c, p) == ["eT", "eM", "rev", "cA1", "cA2"]
     assert anki_ids(c, P.plan_jour(c, D(2026, 11, 7))) == []     # jour off
+    # progression linéaire : bloc en 1.3, les cartes restantes de 1.1 et 1.2 passent d'abord, dans l'ordre
+    c["dispo"]["cartes_par_jour"] = 100
+    p3 = {**p, "sous_chapitre": sc("1.3")}
+    assert anki_ids(c, p3) == ["eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2", "cC1", "cD"]
 
 
 def test_cartes_jamais_donnees_deux_fois_et_replanification_stable():
@@ -473,8 +477,11 @@ def test_anciennes_notes_du_bloc_hors_plafond_et_sans_repetition():
     assert 300 not in a["anciennes"]
     lignes = P.rediger(c, p, a)
     requete = lignes[lignes.index("```", lignes.index(next(l for l in lignes if l.startswith("## Anki — à apprendre")))) + 1]
-    assert requete.endswith("(nid:100,101,102,103,104,105,106,107,200,201 is:new)")
-    assert requete.startswith('"Id:eT" or "Id:eM" or ')                  # cartes du système d'abord
+    assert requete == '("Id:eT" or "Id:eM" or nid:100,101,102,103,104,105,106,107,200,201) is:new'
+    # une entrée d'un jour futur (plan régénéré depuis) ne bloque rien
+    c["anki_plan"] = {"2026-11-09": a["nouvelles"]}
+    assert P.anki(c, p)["nouvelles"] == a["nouvelles"]
+    c["anki_plan"] = {}
     # le lendemain : les notes déjà données ne reviennent pas, les suivantes prennent leur place
     c["anciennes_donnees"] = {"2026-11-04": a["anciennes"]}
     assert P.anki(c, p)["anciennes"] == a["anciennes"]                       # même date : identique

@@ -305,14 +305,24 @@ def recherche_a_revoir(entrees, d) -> str:
     return f"({' or '.join(parts)})" if parts else ""
 
 
-def sc_suivants(ctx, plan) -> list[str]:
-    """Sous-chapitres de la matière du bloc après celui du bloc (exercices et notions), dans la limite du cours."""
-    m, sc = plan["matiere"], plan["sous_chapitre"]
+def _sc_matiere(ctx, plan) -> list[str]:
+    """Tous les sous-chapitres de la matière du bloc (exercices et notions), triés, dans la limite du cours."""
+    m = plan["matiere"]
     tous = set(exercices_par_sc(plan["exos"], m))
     tous |= {f"{n.get('chapitre')} > {n['sous_chapitre']}" for n in ctx["notions"].values()
              if n.get("matiere") == m and n.get("sous_chapitre") and n.get("chapitre")}
     limite = (ctx.get("avancement") or {}).get(m)
-    return sorted((s for s in tous if E.cle_sc(s) > E.cle_sc(sc) and _dans_limite(s, limite)), key=E.cle_sc)
+    return sorted((s for s in tous if _dans_limite(s, limite)), key=E.cle_sc)
+
+
+def sc_suivants(ctx, plan) -> list[str]:
+    """Sous-chapitres de la matière du bloc après celui du bloc."""
+    return [s for s in _sc_matiere(ctx, plan) if E.cle_sc(s) > E.cle_sc(plan["sous_chapitre"])]
+
+
+def sc_precedents(ctx, plan) -> list[str]:
+    """Sous-chapitres de la matière du bloc avant celui du bloc."""
+    return [s for s in _sc_matiere(ctx, plan) if E.cle_sc(s) < E.cle_sc(plan["sous_chapitre"])]
 
 
 def anciennes_notes(ctx, plan) -> list[int]:
@@ -323,7 +333,7 @@ def anciennes_notes(ctx, plan) -> list[int]:
     if not plan["sous_chapitre"]:
         return []
     d = str(plan["date"])
-    avant = {int(n) for k, ns in (ctx.get("anciennes_donnees") or {}).items() if str(k) != d for n in ns}
+    avant = {int(n) for k, ns in (ctx.get("anciennes_donnees") or {}).items() if str(k) < d for n in ns}
     bloc = {e["id"] for e, g in plan["items"] if g == "bloc"}
     cou = ctx.get("couverture") or {}
     res: list[int] = []
@@ -341,17 +351,24 @@ def anki(ctx, plan) -> dict:
     cartes `a_revoir` dues, cartes des notions du sous-chapitre du bloc, puis celles des sous-chapitres
     suivants de la même matière ; plafond `cartes_par_jour`."""
     d = str(plan["date"])
+    # Seuls les jours passés comptent : une entrée d'un jour futur vient d'un plan régénéré depuis, elle est caduque.
     avant = {i for k, ids in ctx["anki_plan"].items() if str(k) < d for i in ids}
-    donnees = {i for k, ids in ctx["anki_plan"].items() if str(k) != d for i in ids}
     notions_jour = {n for e, _ in plan["items"] for n in e.get("notions") or []}
-    libres = [c for c in ctx["cartes"] if c["id"] not in donnees]
+    libres = [c for c in ctx["cartes"] if c["id"] not in avant]
     ordre = [c for c in libres if TAGS_PRIORITAIRES & set(c.get("tags") or [])]
     dues = {e["id"] for e in ctx.get("a_revoir") or [] if e.get("id") and str(e.get("pour")) <= d}
     ordre += [c for c in libres if c["id"] in dues]
     if plan["sous_chapitre"]:
-        bloc = {e["id"] for e, g in plan["items"] if g == "bloc"}
-        for sc in [plan["sous_chapitre"]] + sc_suivants(ctx, plan):
-            notions = set(notions_sc(ctx, plan["exos"], plan["matiere"], sc, bloc))
+        # Progression linéaire : d'abord les cartes restantes des sous-chapitres déjà passés de la matière,
+        # dans l'ordre du poly, puis le bloc, puis la suite.
+        # Une carte suit le sous-chapitre de SA notion (notions.yaml), pas celui des exercices qui la citent :
+        # sinon une notion du chapitre 2 citée par un exercice du 1.3 passerait avant le 1.4.
+        m = plan["matiere"]
+        # Cartes de prérequis (sans notion) de la matière du bloc : avant le cours, puisqu'il s'appuie dessus.
+        ordre += [c for c in libres if not c.get("notion") and c.get("matiere") == m]
+        for sc in sc_precedents(ctx, plan) + [plan["sous_chapitre"]] + sc_suivants(ctx, plan):
+            notions = {n["id"] for n in ctx["notions"].values() if n.get("matiere") == m
+                       and sc in (n.get("sous_chapitre"), f"{n.get('chapitre')} > {n.get('sous_chapitre')}")}
             ordre += [c for c in libres if c.get("notion") in notions]
     ordre = list({c["id"]: c for c in ordre}.values())
     limite = 0 if plan["info"]["off"] else ctx["dispo"].get("cartes_par_jour", CARTES_DEFAUT)
@@ -370,7 +387,7 @@ def _ecrire(chemin, donnees, entete=""):
 
 def enregistrer_anki(racine, ctx, d, ids):
     """Mémorise les cartes données ce jour dans state/anki_plan.yaml (une carte n'est donnée qu'une fois)."""
-    ap = {str(k): v for k, v in ctx["anki_plan"].items()}
+    ap = {str(k): v for k, v in ctx["anki_plan"].items() if str(k) < str(d)}     # les jours futurs sont caducs
     if ids:
         ap[str(d)] = ids
     else:
@@ -380,7 +397,7 @@ def enregistrer_anki(racine, ctx, d, ids):
 
 def enregistrer_anciennes(racine, ctx, d, nids):
     """Mémorise les anciennes notes données ce jour dans state/anki_anciennes.yaml."""
-    ap = {str(k): v for k, v in (ctx.get("anciennes_donnees") or {}).items()}
+    ap = {str(k): v for k, v in (ctx.get("anciennes_donnees") or {}).items() if str(k) < str(d)}
     if nids:
         ap[str(d)] = nids
     else:
@@ -478,7 +495,8 @@ def rediger(ctx, plan, cartes) -> list[str]:
     L += ["", f"## Anki — à apprendre ({len(cartes['nouvelles'])} nouvelles"
               + (f" + {len(anciennes)} anciennes" if anciennes else "") + ")"]
     requete = " or ".join(([_requete(cartes["nouvelles"])] if cartes["nouvelles"] else [])
-                          + ([f"(nid:{','.join(map(str, anciennes))} is:new)"] if anciennes else []))
+                          + ([f"nid:{','.join(map(str, anciennes))}"] if anciennes else []))
+    requete = f"({requete}) is:new" if requete else ""     # jamais une carte déjà apprise
     L += ["```", requete, "```"] if requete else ["- (aucune)"]
     L += ["", "## Anki — à réviser", "- Toutes les cartes dues : `is:due`"]
     if cartes["revoir"]:
