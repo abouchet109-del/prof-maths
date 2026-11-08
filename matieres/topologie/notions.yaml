@@ -777,7 +777,7 @@
   enonce: '$E$ est au plus dénombrable s''il est fini ou en bijection avec $\mathbb N$, c''est-à-dire s''il existe une injection $E\to\mathbb N$. Toute partie d''un ensemble au plus dénombrable l''est ; $\mathbb N^2$, $\mathbb Z$, $\mathbb Q$ sont dénombrables, $\mathbb R$ ne l''est pas.'
   source: {etab: l1-l2}
   essentiel: true
-  requis_par: [topo-n-0029, topo-n-0070, topo-td3-ex09, topo-partiel2022-23-ex04, mes-td2-ex03, proba-n-0014]
+  requis_par: [topo-n-0029, topo-n-0070, topo-td3-ex09, topo-partiel2022-23-ex04, mes-td2-ex03, proba-n-0014, proba-n-0051]
 - id: topo-p-0004
   titre: Caractérisations de la borne supérieure et de la borne inférieure
   type: prerequis
@@ -792,7 +792,7 @@
   type: prerequis
   chapitre: Chapitre 2 - Espace complet
   sous_chapitre: 2.3 Application à valeurs dans un espace métrique complet
-  enonce: '$f_n\to f$ simplement sur $D$ si $\forall x\in D,\ f_n(x)\to f(x)$ ; uniformément si $\sup_{x\in D}\delta(f_n(x),f(x))\to0$. Uniforme implique simple, réciproque fausse ($x^n$ sur $[0,1]$).'
+  enonce: '$f_n\to f$ simplement sur $D$ si $\forall x\in D,\ f_n(x)\to f(x)$ ; uniformément si $\sup_{x\in D}\delta(f_n(x),f(x))\to0$. Uniforme implique simple, réciproque fausse ($x^n$ sur $[0,1]$). Critère de Cauchy uniforme ($Y$ complet) ; interversion limite-intégrale pour des $f_n$ continues CU sur $[a,b]$.'
   source: {etab: l1-l2}
   essentiel: true
-  requis_par: [topo-n-0063, mesure-n-0022, mesure-n-0025]
+  requis_par: [topo-n-0063, mesure-n-0022, mesure-n-0025, mes-td5-ex03, mes-cc1-2324-ex05]

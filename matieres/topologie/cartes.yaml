@@ -751,6 +751,14 @@
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
   tags: [prerequis-l1l2, definition]
+- id: topo-a-039-2
+  notion: topo-p-0003
+  recto: 'Preuve : \(\mathbb R\) n''est pas dénombrable (segments emboîtés)'
+  verso: 'Soit \((x_n)_{n\ge0}\) une suite de réels. On pose \(I_0=[0,1]\) ; \(I_n\) étant construit, on le coupe en trois segments de même longueur et on prend pour \(I_{n+1}\) le premier ou le dernier tiers (ils sont disjoints), celui qui ne contient pas \(x_n\). Les \(I_n=[a_n,b_n]\) sont emboîtés, de longueur \(3^{-n}\) : \((a_n)\) et \((b_n)\) sont adjacentes, de limite commune \(c\in\bigcap_nI_n\), et \(c\neq x_n\) pour tout \(n\) car \(c\in I_{n+1}\not\ni x_n\). Aucune suite ne prend toutes les valeurs réelles : pas de surjection \(\mathbb N\to\mathbb R\), donc \(\mathbb R\) n''est pas au plus dénombrable. (topo-td3-ex09 le redémontre par Baire.)'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-td3-ex09, topo-n-0070'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [prerequis-l1l2, theoreme]
 - id: topo-a-040-1
   notion: topo-p-0004
   recto: 'Prop. : caractérisation de la borne inférieure'
@@ -783,6 +791,38 @@
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 2
   tags: [prerequis-l1l2, exemple]
+- id: topo-a-041-3
+  notion: topo-p-0005
+  recto: 'Déf : convergence simple, écrite avec quantificateurs'
+  verso: 'Soient \(D\) un ensemble, \((Y,\delta)\) un espace métrique et \(f_n,f:D\to Y\). La suite \((f_n)\) converge simplement vers \(f\) sur \(D\) si \[\forall x\in D,\ \forall\varepsilon>0,\ \exists N\in\mathbb N,\ \forall n\ge N,\ \delta(f_n(x),f(x))<\varepsilon.\] Le rang \(N\) dépend de \(x\) et de \(\varepsilon\). Pour la convergence uniforme, \(N\) ne dépend que de \(\varepsilon\) : \(\forall\varepsilon>0,\ \exists N\in\mathbb N,\ \forall n\ge N,\ \forall x\in D,\ \delta(f_n(x),f(x))<\varepsilon\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mesure-n-0022, mesure-n-0025, mes-td5-ex03, mes-cc1-2324-ex05'
+  chapitre: 'Chapitre 2 - Espace complet'
+  priorite: 2
+  tags: [prerequis-l1l2, definition]
+- id: topo-a-041-4
+  notion: topo-p-0005
+  recto: 'Thm : critère de Cauchy uniforme'
+  verso: 'Soient \(D\) un ensemble, \((Y,\delta)\) un espace métrique <b>complet</b> et \(f_n:D\to Y\). La suite \((f_n)\) converge uniformément sur \(D\) vers une fonction \(f:D\to Y\) si et seulement si \[\forall\varepsilon>0,\ \exists N\in\mathbb N,\ \forall p,q\ge N,\ \forall x\in D,\ \delta(f_p(x),f_q(x))\le\varepsilon.\] Preuve de \(\Leftarrow\) : pour chaque \(x\), \((f_n(x))\) est de Cauchy dans \(Y\) complet, donc converge vers un \(f(x)\) ; en faisant \(q\to\infty\), \(\delta(f_p(x),f(x))\le\varepsilon\) pour tous \(p\ge N\) et \(x\in D\). (\(\Rightarrow\) : inégalité triangulaire.)'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-n-0063'
+  chapitre: 'Chapitre 2 - Espace complet'
+  priorite: 2
+  tags: [prerequis-l1l2, theoreme]
+- id: topo-a-041-5
+  notion: topo-p-0005
+  recto: 'Thm : interversion limite et intégrale sur un segment'
+  verso: 'Soient \(a<b\) deux réels et \(f_n:[a,b]\to\mathbb R\) (ou \(\mathbb C\)) des fonctions continues. Si \((f_n)\) converge uniformément vers \(f\) sur \([a,b]\), alors \(f\) est continue et \[\int_a^bf_n(t)\,dt\to\int_a^bf(t)\,dt\quad(n\to\infty).\] Preuve : \(\left|\int_a^bf_n-\int_a^bf\right|\le(b-a)\sup_{t\in[a,b]}|f_n(t)-f(t)|\to0\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mes-td5-ex03'
+  chapitre: 'Chapitre 2 - Espace complet'
+  priorite: 2
+  tags: [prerequis-l1l2, theoreme]
+- id: topo-a-041-6
+  notion: topo-p-0005
+  recto: 'Prop. : prouver une convergence uniforme par une majoration indépendante de \(x\)'
+  verso: 'Soient \(D\) un ensemble, \((Y,\delta)\) un espace métrique et \(f_n,f:D\to Y\). S''il existe une suite réelle \((\varepsilon_n)\) de limite \(0\) et un rang \(n_0\) tels que \(\forall n\ge n_0,\ \forall x\in D,\ \delta(f_n(x),f(x))\le\varepsilon_n\), alors \((f_n)\) converge uniformément vers \(f\) sur \(D\), car \(\sup_{x\in D}\delta(f_n(x),f(x))\le\varepsilon_n\). Usage (Th. 1.17 du poly de mesure) : si \(f:X\to\mathbb R\) est mesurable avec \(0\le f\le M\), \(f_n=\min\big(n,2^{-n}\lfloor2^nf\rfloor\big)\) vérifie \(0\le f-f_n<2^{-n}\) sur \(X\) pour tout \(n>M\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mesure-n-0025'
+  chapitre: 'Chapitre 2 - Espace complet'
+  priorite: 2
+  tags: [prerequis-l1l2, propriete]
 - id: ex-topo-td1-ex05
   exercice: topo-td1-ex05
   notion: topo-n-0014
