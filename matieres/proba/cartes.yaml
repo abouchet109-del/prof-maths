@@ -1927,7 +1927,7 @@
   priorite: 3
   tags: [theoreme]
 - id: proba-a-094-1
-  notion: null
+  notion: proba-p-0001
   recto: 'Définir \(\limsup A_n\) pour une suite d''événements \((A_n)_{n\ge1}\), par réunions et intersections puis en mots.'
   verso: '\(\limsup A_n=\bigcap_{n\ge1}\bigcup_{j\ge n}A_j=\{\omega:\ \forall n\ge1,\ \exists j\ge n,\ \omega\in A_j\}\) : l''ensemble des \(\omega\) qui appartiennent à une infinité de \(A_j\).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans pro-td1-ex05, pro-td1-ex10'
@@ -1935,7 +1935,7 @@
   priorite: 2
   tags: [prerequis-l1l2, definition]
 - id: proba-a-094-2
-  notion: null
+  notion: proba-p-0001
   recto: 'Définir \(\liminf A_n\) pour une suite d''événements \((A_n)_{n\ge1}\), par réunions et intersections puis en mots.'
   verso: '\(\liminf A_n=\bigcup_{n\ge1}\bigcap_{j\ge n}A_j=\{\omega:\ \exists n\ge1,\ \forall j\ge n,\ \omega\in A_j\}\) : l''ensemble des \(\omega\) qui appartiennent à tous les \(A_j\) sauf un nombre fini.'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans pro-td1-ex05, pro-td1-ex10'
@@ -1943,7 +1943,7 @@
   priorite: 2
   tags: [prerequis-l1l2, definition]
 - id: proba-a-094-3
-  notion: null
+  notion: proba-p-0001
   recto: 'Pour une suite d''événements \((A_n)\) : quelle inclusion entre \(\liminf A_n\) et \(\limsup A_n\), et que valent \((\limsup A_n)^c\) et \((\liminf A_n)^c\) ?'
   verso: '\(\liminf A_n\subset\limsup A_n\). De plus \((\limsup A_n)^c=\liminf A_n^c\) et \((\liminf A_n)^c=\limsup A_n^c\) (lois de De Morgan).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans pro-td1-ex05, pro-td1-ex10'
@@ -1951,7 +1951,7 @@
   priorite: 2
   tags: [prerequis-l1l2, propriete]
 - id: proba-a-095-1
-  notion: null
+  notion: proba-p-0002
   recto: 'Théorème de Cesàro pour les suites réelles : énoncer avec ses hypothèses.'
   verso: 'Si \((u_k)_{k\ge1}\) est une suite de réels qui converge vers \(\ell\in\mathbb R\), alors \(\frac1n\sum_{k=1}^nu_k\to\ell\) quand \(n\to+\infty\). (Reste vrai pour \(\ell=\pm\infty\) ; la réciproque est fausse : \(u_k=(-1)^k\).)'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans pro-exa2526-ex04'
@@ -1959,7 +1959,7 @@
   priorite: 1
   tags: [prerequis-l1l2, theoreme]
 - id: proba-a-095-2
-  notion: null
+  notion: proba-p-0002
   recto: 'Soit \((X_k)_{k\ge1}\) une suite de variables aléatoires réelles sur \((\Omega,P)\). Sachant que \(X_k\to0\) presque sûrement, comment utilise-t-on Cesàro pour montrer que \(\frac1n\sum_{k=1}^nX_k\to0\) presque sûrement ?'
   verso: 'Il existe un événement \(\Omega_0\) de probabilité \(1\) tel que, pour tout \(\omega\in\Omega_0\), la suite réelle \((X_k(\omega))_k\) tend vers \(0\). Pour chaque tel \(\omega\) fixé, Cesàro (suite réelle) donne \(\frac1n\sum_{k=1}^nX_k(\omega)\to0\) : la convergence a lieu sur \(\Omega_0\), donc presque sûrement.'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans pro-exa2526-ex04'
@@ -1967,7 +1967,7 @@
   priorite: 1
   tags: [prerequis-l1l2, methode]
 - id: proba-a-096-1
-  notion: null
+  notion: proba-p-0003
   recto: 'Épreuves de Bernoulli indépendantes de paramètre \(p\in]0,1[\) ; \(T_k\) est le rang du \(k\)-ième succès (\(k\in\mathbb N^*\)). Donner la loi de \(T_k\), puis le cas \(k=1\).'
   verso: '\(T_k\) est à valeurs dans \(\{k,k+1,\dots\}\) et \(P(T_k=n)=\binom{n-1}{k-1}p^k(1-p)^{n-k}\) pour \(n\ge k\) (\(k-1\) succès parmi les \(n-1\) premières épreuves, puis un succès à l''épreuve \(n\)) : loi binomiale négative. Pour \(k=1\) : \(P(T_1=n)=p(1-p)^{n-1}\), loi géométrique \(\mathcal G(p)\) sur \(\mathbb N^*\).<br>Attention : <code>rnbinom</code> de R compte les échecs avant le \(k\)-ième succès, soit \(T_k-k\).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans pro-exa2425-ex01'
@@ -1975,7 +1975,7 @@
   priorite: 1
   tags: [prerequis-l1l2, definition]
 - id: proba-a-096-2
-  notion: null
+  notion: proba-p-0003
   recto: 'Avec \(T_k\) le rang du \(k\)-ième succès (\(k\in\mathbb N^*\)) dans des épreuves de Bernoulli(\(p\)) indépendantes, \(p\in]0,1[\) : écrire \(T_k\) comme somme de variables simples, puis donner \(E[T_k]\) et \(\mathrm{Var}(T_k)\).'
   verso: '\(T_k=G_1+\dots+G_k\), où \(G_i=T_i-T_{i-1}\) (avec \(T_0=0\)) est le nombre d''épreuves nécessaires, après le \((i-1)\)-ième succès, pour obtenir le \(i\)-ième ; les \(G_i\) sont indépendantes de loi géométrique \(\mathcal G(p)\). Donc \(E[T_k]=\frac kp\) et \(\mathrm{Var}(T_k)=\frac{k(1-p)}{p^2}\).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans pro-exa2425-ex01'
@@ -1983,7 +1983,7 @@
   priorite: 1
   tags: [prerequis-l1l2, propriete]
 - id: proba-a-097-1
-  notion: null
+  notion: proba-p-0004
   recto: 'En R, que renvoie <code>rbinom(n, size, prob)</code> ? Comment simuler une variable de Bernoulli de paramètre \(p\) ?'
   verso: 'Un vecteur de <code>n</code> réalisations indépendantes de la loi binomiale \(\mathcal B(\texttt{size},\texttt{prob})\). Bernoulli(\(p\)) : <code>rbinom(1, 1, p)</code> (une valeur, une seule épreuve).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans pro-exa2425-ex01'
@@ -1991,7 +1991,7 @@
   priorite: 1
   tags: [prerequis-l1l2, R]
 - id: proba-a-097-2
-  notion: null
+  notion: proba-p-0005
   recto: 'En R, quelle est la signature de <code>rpois</code> ? Écrire une fonction <code>S(N, lambda)</code> qui simule la somme de \(N\) variables de Poisson indépendantes de paramètre \(\lambda\).'
   verso: '<code>rpois(n, lambda)</code> renvoie un vecteur de <code>n</code> réalisations indépendantes de \(\mathcal P(\texttt{lambda})\). Donc :<br><code>S <- function(N, lambda) { sum(rpois(N, lambda)) }</code><br>(Cette somme suit \(\mathcal P(N\lambda)\), donc <code>rpois(1, N*lambda)</code> donne la même loi.)'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans pro-exa2526-ex01'
@@ -1999,7 +1999,7 @@
   priorite: 1
   tags: [prerequis-l1l2, R]
 - id: proba-a-097-3
-  notion: null
+  notion: proba-p-0004
   recto: 'Pour \(p\in]0,1[\) et \(k\in\mathbb N^*\) fixés, que simule ce code R, et quelle est la loi de <code>n</code> pour \(k=1\) ?<br><code>x <- rbinom(1, 1, p); n <- 1; while (sum(x) < k) { n <- n + 1; x <- c(x, rbinom(1, 1, p)) }</code>'
   verso: 'On répète des épreuves de Bernoulli(\(p\)) tant que le nombre de succès <code>sum(x)</code> est inférieur à \(k\) ; à la sortie de la boucle, <code>n</code> est le rang du \(k\)-ième succès : une réalisation de la loi binomiale négative. Pour \(k=1\) : loi géométrique \(\mathcal G(p)\).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans pro-exa2425-ex01'

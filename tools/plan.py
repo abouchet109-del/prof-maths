@@ -292,9 +292,18 @@ def plan_jour(ctx, d: dt.date, resultats=None, seance=False) -> dict:
 
 
 # ------------------------------------------------------------------ cours
+def est_prerequis(n) -> bool:
+    """Notion `type: prerequis` (L1-L2) : servie avant les notions du poly de son sous-chapitre."""
+    return (n or {}).get("type") == "prerequis"
+
+
+def _dans_sc(n, sc) -> bool:
+    return sc in (n.get("sous_chapitre"), f"{n.get('chapitre')} > {n.get('sous_chapitre')}")
+
+
 def notions_sc(ctx, exos, m, sc, prioritaires=()) -> list[str]:
-    """Notions d'un sous-chapitre : celles de ses exercices (les `prioritaires` d'abord, puis vital,
-    important…), puis celles de notions.yaml rattachées à ce sous-chapitre."""
+    """Notions d'un sous-chapitre : les prérequis L1-L2 d'abord, puis celles de ses exercices (les
+    `prioritaires` d'abord, puis vital, important…), puis celles de notions.yaml rattachées au sous-chapitre."""
     es = [e for e in exos if e["matiere"] == m and e.get("sous_chapitre") == sc and not e.get("annale_prioritaire")]
     es.sort(key=lambda e: (e["id"] not in prioritaires, E.CATEGORIES.index(E.categorie(e)), e["ordre"]))
     vues = []
@@ -305,9 +314,16 @@ def notions_sc(ctx, exos, m, sc, prioritaires=()) -> list[str]:
     for n in ctx["notions"].values():
         if n.get("matiere") != m or n["id"] in vues:
             continue
-        if sc in (n.get("sous_chapitre"), f"{n.get('chapitre')} > {n.get('sous_chapitre')}"):
+        if _dans_sc(n, sc):
             vues.append(n["id"])
-    return vues
+    return sorted(vues, key=lambda i: not est_prerequis(ctx["notions"].get(i)))   # tri stable : prérequis en tête
+
+
+def notions_des_exercices(ctx, plan) -> set[str]:
+    """Notions des exercices du jour, plus les prérequis L1-L2 qu'ils utilisent (`requis_par`)."""
+    ids = {e["id"] for e, _ in plan["items"]}
+    res = {n for e, _ in plan["items"] for n in e.get("notions") or []}
+    return res | {n["id"] for n in ctx["notions"].values() if est_prerequis(n) and ids & set(n.get("requis_par") or [])}
 
 
 def cours_du_jour(ctx, plan) -> list[dict]:
@@ -403,8 +419,8 @@ def anciennes_notes(ctx, plan, client=None) -> list[int]:
 
 
 def ordre_cartes(ctx, plan, libres) -> list[dict]:
-    """Cartes candidates dans l'ordre : erreurs et exercices, `a_revoir` dues, prérequis de la matière, puis
-    les sous-chapitres de la matière du bloc (passés, bloc, suivants), chacun selon la notion de la carte."""
+    """Cartes candidates dans l'ordre : erreurs et exercices, `a_revoir` dues, puis les sous-chapitres de la
+    matière du bloc (passés, bloc, suivants), chacun selon la notion de la carte, prérequis L1-L2 d'abord."""
     d = str(plan["date"])
     ordre = [c for c in libres if TAGS_PRIORITAIRES & set(c.get("tags") or [])]
     dues = {e["id"] for e in a_revoir_dus(ctx.get("a_revoir"), d, jours_travailles(ctx)) if e.get("id")}
@@ -415,12 +431,13 @@ def ordre_cartes(ctx, plan, libres) -> list[dict]:
         # Une carte suit le sous-chapitre de SA notion (notions.yaml), pas celui des exercices qui la citent :
         # sinon une notion du chapitre 2 citée par un exercice du 1.3 passerait avant le 1.4.
         m = plan["matiere"]
-        # Cartes de prérequis (sans notion) de la matière du bloc : avant le cours, puisqu'il s'appuie dessus.
-        ordre += [c for c in libres if not c.get("notion") and c.get("matiere") == m]
         for sc in sc_precedents(ctx, plan) + [plan["sous_chapitre"]] + sc_suivants(ctx, plan):
-            notions = {n["id"] for n in ctx["notions"].values() if n.get("matiere") == m
-                       and sc in (n.get("sous_chapitre"), f"{n.get('chapitre')} > {n.get('sous_chapitre')}")}
-            ordre += [c for c in libres if c.get("notion") in notions]
+            # Dans un sous-chapitre, les prérequis L1-L2 (notions `type: prerequis`) passent avant le poly.
+            dedans = [n for n in ctx["notions"].values() if n.get("matiere") == m and _dans_sc(n, sc)]
+            prereq = {n["id"] for n in dedans if est_prerequis(n)}
+            poly = {n["id"] for n in dedans} - prereq
+            ordre += [c for c in libres if c.get("notion") in prereq]
+            ordre += [c for c in libres if c.get("notion") in poly]
     return list({c["id"]: c for c in ordre}.values())
 
 
@@ -447,7 +464,7 @@ def anki(ctx, plan, client=None) -> dict:
     # … et seulement les jours travaillés (un résultat enregistré) : les cartes d'un jour sauté reviennent.
     faits = jours_travailles(ctx)
     avant = {i for k, ids in ctx["anki_plan"].items() if str(k) < d and str(k) in faits for i in ids}
-    notions_jour = {n for e, _ in plan["items"] for n in e.get("notions") or []}
+    notions_jour = notions_des_exercices(ctx, plan)
     exportees = ctx.get("exportees")
     if client:
         # une carte jamais exportée ne peut pas être apprise : on la signale au lieu de la proposer
@@ -580,7 +597,7 @@ def rediger(ctx, plan, cartes) -> list[str]:
         if not plan["items"]:
             L.append("- (rien à planifier)")
         notions = cours_du_jour(ctx, plan)
-        sujet = {n["id"] for n in notions} | {n for e, _ in plan["items"] for n in e.get("notions") or []}
+        sujet = {n["id"] for n in notions} | notions_des_exercices(ctx, plan)
         L += ["", f"## Cours ({info['minutes_cours']} min)"]
         for n in notions:
             s = n.get("source") or {}

@@ -750,3 +750,22 @@
   enonce: 'Une bijection continue $f:X\to Y$ entre espaces métriques avec $X$ compact est un homéomorphisme (l''image d''un fermé est un compact donc un fermé).'
   source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 11}
   essentiel: true
+# Prérequis L1-L2 : notions `type: prerequis` servies avant les notions du poly de leur sous-chapitre
+- id: topo-p-0001
+  titre: Extraction diagonale (procédé diagonal de Cantor)
+  type: prerequis
+  chapitre: Chapitre 3 - Espace compact
+  sous_chapitre: 3.2 Suites dans un espace métrique compact
+  enonce: 'Si $X$ est compact et $(x^p)_p$ une suite de suites d''éléments de $X$, on construit des extractrices $\varphi_0,\varphi_1,\dots$ successives puis $\psi(p)=\theta_p(p)$ avec $\theta_n=\varphi_0\circ\dots\circ\varphi_n$ : pour tout $n$, $(x^{\psi(p)}_n)_p$ converge.'
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [topo-td4-ex08]
+- id: topo-p-0002
+  titre: Identité du parallélogramme
+  type: prerequis
+  chapitre: Chapitre 3 - Espace compact
+  sous_chapitre: 3.3 Compacts de $\mathbb R^d$
+  enonce: 'Dans un espace préhilbertien réel : $\|x+y\|^2+\|x-y\|^2=2\|x\|^2+2\|y\|^2$. Pour $m=\frac{x+x''}2$ : $\|b-m\|^2=\frac{\|b-x\|^2+\|b-x''\|^2}2-\frac{\|x-x''\|^2}4$.'
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [topo-dm2022-23-ex02]

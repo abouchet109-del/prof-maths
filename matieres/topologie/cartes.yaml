@@ -627,7 +627,7 @@
   priorite: 3
   tags: [propriete]
 - id: topo-a-037-1
-  notion: null
+  notion: topo-p-0001
   recto: 'Extraction diagonale : \(X\) est un espace métrique compact et \((x^p)_{p\in\mathbb N}\) une suite d''éléments de \(X^{\mathbb N}\), \(x^p=(x^p_n)_{n}\). Quel est le but et comment construit-on la sous-suite ?'
   verso: 'But : une extractrice \(\psi\) telle que, pour tout \(n\), \((x^{\psi(p)}_n)_p\) converge. Construction : \(X\) compact donc séquentiellement compact ; on prend \(\varphi_0\) avec \((x^{\varphi_0(p)}_0)_p\) convergente, puis \(\varphi_1\) avec \((x^{\varphi_0\circ\varphi_1(p)}_1)_p\) convergente, etc. Avec \(\theta_n=\varphi_0\circ\dots\circ\varphi_n\), on pose \(\psi(p)=\theta_p(p)\).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-td4-ex08'
@@ -635,7 +635,7 @@
   priorite: 2
   tags: [prerequis-l1l2, methode]
 - id: topo-a-037-2
-  notion: null
+  notion: topo-p-0001
   recto: 'Extraction diagonale \(\psi(p)=\theta_p(p)\) (avec \(\theta_n=\varphi_0\circ\dots\circ\varphi_n\)) : pourquoi \(\psi\) est-elle strictement croissante et pourquoi la coordonnée \(n\) converge-t-elle ?'
   verso: 'Les \(\varphi_n\) sont des extractrices (applications strictement croissantes de \(\mathbb N\) dans \(\mathbb N\)). \(\psi(p+1)=\theta_p(\varphi_{p+1}(p+1))\ge\theta_p(p+1)>\theta_p(p)=\psi(p)\) (car \(\varphi(k)\ge k\) et \(\theta_p\) strictement croissante). Pour \(p\ge n\), \(\psi(p)\) est un indice de la suite extraite par \(\theta_n\) : \((x^{\psi(p)}_n)_{p\ge n}\) est une sous-suite de \((x^{\theta_n(q)}_n)_q\), qui converge ; donc elle converge aussi.'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-td4-ex08'
@@ -643,7 +643,7 @@
   priorite: 2
   tags: [prerequis-l1l2, demonstration]
 - id: topo-a-038-1
-  notion: null
+  notion: topo-p-0002
   recto: 'Identité du parallélogramme : énoncer dans un espace préhilbertien réel (\(\|x\|^2=\langle x,x\rangle\)).'
   verso: 'Pour tous \(x,y\) : \(\|x+y\|^2+\|x-y\|^2=2\left(\|x\|^2+\|y\|^2\right)\). Preuve : on développe les deux carrés, les termes croisés \(\pm2\langle x,y\rangle\) s''annulent.'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-dm2022-23-ex02'
@@ -651,7 +651,7 @@
   priorite: 2
   tags: [prerequis-l1l2, propriete]
 - id: topo-a-038-2
-  notion: null
+  notion: topo-p-0002
   recto: 'Norme euclidienne sur \(\mathbb R^d\) : \(\|b-x\|\le r\) et \(\|b-x''\|\le r\). Majorer \(\|b-m\|\), où \(m=\frac{x+x''}2\), à l''aide de l''identité du parallélogramme.'
   verso: 'Avec \(u=b-x\), \(v=b-x''\) (\(u+v=2(b-m)\), \(u-v=x''-x\)) : \(\|b-m\|^2=\tfrac12\|b-x\|^2+\tfrac12\|b-x''\|^2-\tfrac14\|x-x''\|^2\le r^2-\tfrac14\|x-x''\|^2\). Si \(x\ne x''\), c''est strictement inférieur à \(r^2\) : un borné contenu dans deux boules fermées distinctes de rayon minimal \(r_0\) tiendrait dans une boule de rayon \(< r_0\), absurde.'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-dm2022-23-ex02'

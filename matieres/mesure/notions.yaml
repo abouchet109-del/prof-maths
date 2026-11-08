@@ -550,3 +550,22 @@
   enonce: 'Sur un espace de mesure finie, $p\le q\Rightarrow L^q\subset L^p$ ; faux en général sur $\mathbb R$ (mesure infinie).'
   source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 2}
   essentiel: true
+# Prérequis L1-L2 : notions `type: prerequis` servies avant les notions du poly de leur sous-chapitre
+- id: mesure-p-0001
+  titre: Relation d'équivalence, classes et partition
+  type: prerequis
+  chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables
+  sous_chapitre: 1.2 Tribu engendrée et tribu borélienne
+  enonce: 'Une relation d''équivalence $\sim$ sur $E$ est réflexive, symétrique et transitive ; la classe de $x$ est $\{y\in E: y\sim x\}$ et les classes forment une partition de $E$.'
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [mes-td2-ex10, mes-td4-ex08]
+- id: mesure-p-0002
+  titre: Axiome du choix (représentants) et classes de Vitali
+  type: prerequis
+  chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables
+  sous_chapitre: Mesure de Lebesgue sur $\mathbb R$ (CM du 13/10 et du 20/10)
+  enonce: 'Pour toute partition de $E$, il existe un ensemble contenant exactement un élément de chaque classe. Sur $\mathbb R$ avec $x\sim y\iff x-y\in\mathbb Q$ : la classe de $x$ est $x+\mathbb Q$ et chaque classe rencontre $[0,1[$.'
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [mes-td4-ex08]

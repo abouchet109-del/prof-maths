@@ -20,6 +20,7 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 - **Format d'une carte de cours :**
   - recto `Déf : <nom>` ou `Prop. <n°> : <nom>` (de même pour `Thm`, `Lemme`, `Cor.`, `Preuve`) ;
   - verso = l'énoncé du poly recopié fidèlement, avec cadre et hypothèses.
+- **Prérequis L1-L2 :** une notion `type: prerequis` (id `<préfixe>-p-NNNN`, `requis_par` obligatoire) placée au sous-chapitre où elle sert, jamais une carte sans notion. Le référentiel de ce que l'utilisateur sait = ses paquets ECG `tg::Maths::1ere année` et `tg::Maths::Cours deuxième année`, jamais modifiés. Détail : `docs/FORMATS.md`.
 - **Cartes d'erreurs :** une question précise. Détail : `docs/FORMATS.md`.
 - **Cartes d'exercices :** une par exercice non réussi seul (tag `exercice`, champ `exercice`), créée au debrief à partir du corrigé officiel. Détail : `docs/FORMATS.md`.
 - **Corriger une carte déjà importée :** la modifier dans `cartes.yaml`, puis lancer `python -I tools/anki.py --reexporter <ids>`. Même GUID, donc Anki met la note à jour sans toucher à la progression.

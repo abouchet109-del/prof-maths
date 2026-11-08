@@ -79,6 +79,7 @@ Demander, en un seul message, pour chaque exercice du plan : le niveau, le temps
    - `id: <m>-eNNN` (numéro libre suivant), `notion`, `chapitre`, `priorite: 1`, `tags: [erreur]` ;
    - recto : une question qui vise précisément la confusion ; verso : la réponse juste en 1 à 3 lignes ; source : poly et page, ou l'exercice ;
    - maths en `\( … \)`, texte YAML entre apostrophes ou en bloc `|`.
+   - Un **prérequis L1-L2** révélé (point d'ECG ou de L1-L2 que l'utilisateur ignore) ne s'ajoute jamais comme carte sans notion : créer une notion `type: prerequis` (`<préfixe>-p-NNNN`, `requis_par: [exercice]`, au sous-chapitre où elle sert) puis la carte (tag `prerequis-l1l2`, `notion:` = cette notion). Format : `docs/FORMATS.md`.
 4. **Cartes d'exercices** (une par exercice non réussi seul). Format et exemple : `docs/FORMATS.md`, « Cartes d'exercices ».
    - **Lesquels :** résultat du jour `aide` ou `presque` ; `non_fait` seulement si l'exercice a été travaillé et le corrigé vu pendant la séance. Rien pour `reussi`, ni pour un `non_fait` jamais ouvert.
    - **Doublon :** chercher dans `matieres/<m>/cartes.yaml` une carte avec `exercice: <id>`. Une seule carte par exercice.

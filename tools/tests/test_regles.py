@@ -453,6 +453,8 @@ def test_check_cartes_exercice(tmp_path):
     ecrire("state/dispo.yaml", ctx([])["dispo"])
     ecrire("state/resultats.yaml", [])
     ecrire("matieres/topologie/exercices.yaml", [e])
+    ecrire("matieres/topologie/notions.yaml", [{"id": "n", "type": "definition", "chapitre": "Chapitre 1 - X",
+                                                "sous_chapitre": "1.1"}])
     ok = {**carte("ex-topologie-1", "n", ["exercice"]), "exercice": "topologie-1", "chapitre": "Chapitre 1 - X"}
     cours = {**carte("cours-1", "n", ["definition"]), "chapitre": "Chapitre 1 - X"}
     ecrire("matieres/topologie/cartes.yaml", [cours, ok])
@@ -471,6 +473,76 @@ def test_check_cartes_exercice(tmp_path):
     ecrire("matieres/topologie/cartes.yaml", [])
     ecrire("matieres/mesure/cartes.yaml", [cours, ok])
     assert any("est en topologie" in x for x in C.verifier(tmp_path))
+
+
+# ----------------------------------------------------------- notions de prérequis L1-L2
+def ctx_prerequis(**kw):
+    exos = [ex("c1", sc=sc("1.3"), notions=["n-c"]), ex("d1", sc=sc("3.2", 3), notions=["n-d"])]
+    notions = {"n-c": notion("n-c", "Chapitre 1 - X", "1.3"), "n-d": notion("n-d", "Chapitre 3 - X", "3.2"),
+               "p-d": {**notion("p-d", "Chapitre 3 - X", "3.2"), "type": "prerequis", "requis_par": ["d1"]}}
+    cartes = [carte("cC1", "n-c"), carte("cC2", "n-c"), carte("cD1", "n-d"), carte("pD", "p-d")]
+    return ctx(exos, notions=notions, cartes=cartes, **kw)
+
+
+def test_carte_prerequis_du_chapitre_3_ne_sort_pas_pendant_le_1_3():
+    c = ctx_prerequis(dispo={"cartes_par_jour": 2})
+    p = {**P.plan_jour(c, D(2026, 11, 4)), "sous_chapitre": sc("1.3")}
+    assert anki_ids(c, p) == ["cC1", "cC2"]                          # ni pD ni cD1 en tête de matière
+    c["dispo"]["cartes_par_jour"] = 100
+    assert anki_ids(c, p) == ["cC1", "cC2", "pD", "cD1"]            # elle vient avec le 3.2, prérequis d'abord
+
+
+def test_au_3_2_la_carte_prerequis_passe_avant_les_cartes_du_poly():
+    c = ctx_prerequis(dispo={"cartes_par_jour": 100})
+    c["cartes"] = [x for x in c["cartes"] if x["notion"] != "n-c"]   # cD1 est listée avant pD dans les données
+    p = {**P.plan_jour(c, D(2026, 11, 4)), "sous_chapitre": sc("3.2", 3)}
+    assert anki_ids(c, p) == ["pD", "cD1"]
+    # cours du jour et anciennes notes : le prérequis en premier
+    assert P.notions_sc(c, c["exercices"], "topologie", sc("3.2", 3)) == ["p-d", "n-d"]
+    c["couverture"] = {"p-d": {"statut": "couverte", "notes": [1]}, "n-d": {"statut": "couverte", "notes": [2]}}
+    assert P.anciennes_notes(c, p) == [1, 2]
+    # les prérequis qu'utilisent les exercices du jour sont des sujets du jour
+    assert P.notions_des_exercices(c, {"items": [(c["exercices"][1], "bloc")]}) == {"n-d", "p-d"}
+    assert P.notions_des_exercices(c, {"items": [(c["exercices"][0], "bloc")]}) == {"n-c"}
+
+
+def test_check_notions_prerequis(tmp_path):
+    import yaml
+    import check as C
+    (tmp_path / "state").mkdir()
+    for m in E.MATIERES:
+        (tmp_path / "matieres" / m).mkdir(parents=True)
+    ecrire = lambda chemin, d: (tmp_path / chemin).write_text(yaml.safe_dump(d, allow_unicode=True), encoding="utf-8")  # noqa: E731
+    e = {**ex("topologie-1", sc=sc("1.1")), "sources": [{}]}
+    e.pop("matiere")
+    ecrire("state/dispo.yaml", ctx([])["dispo"])
+    ecrire("state/resultats.yaml", [])
+    ecrire("matieres/topologie/exercices.yaml", [e])
+    poly = {"id": "topo-n-0001", "type": "definition", "titre": "t", "chapitre": "Chapitre 1 - X",
+            "sous_chapitre": "1.1", "enonce": "e"}
+    pre = {**poly, "id": "topo-p-0001", "type": "prerequis", "requis_par": ["topologie-1"]}
+    cours = {**carte("c1", "topo-n-0001", ["definition"]), "chapitre": "Chapitre 1 - X"}
+    cp = {**carte("c2", "topo-p-0001", ["prerequis-l1l2"]), "chapitre": "Chapitre 1 - X"}
+    ecrire("matieres/topologie/cartes.yaml", [cours, cp])
+    ecrire("matieres/topologie/notions.yaml", [poly, pre])
+    assert C.verifier(tmp_path) == []
+    cas = [([poly, {**pre, "requis_par": []}], [cours, cp], "requis_par"),
+           ([poly, {k: v for k, v in pre.items() if k != "requis_par"}], [cours, cp], "requis_par"),
+           ([poly, {**pre, "requis_par": ["inconnu"]}], [cours, cp], "requis_par inconnu"),
+           ([poly, {**pre, "sous_chapitre": "9.9"}], [cours, cp], "sous-chapitre inconnu"),
+           ([poly, {**pre, "id": "topo-n-0002"}], [cours, {**cp, "notion": "topo-n-0002"}], "id attendu"),
+           ([poly, pre, {**pre}], [cours, cp], "en double"),
+           ([poly, pre], [cours, {**cp, "notion": None}], "sans notion"),
+           ([poly, pre], [cours, {**cp, "notion": "topo-p-0009"}], "notion inconnue"),
+           ([poly, pre], [cours, {**cp, "chapitre": "Chapitre 2 - Y"}], "chapitre")]
+    for notions, cartes, attendu in cas:
+        ecrire("matieres/topologie/notions.yaml", notions)
+        ecrire("matieres/topologie/cartes.yaml", cartes)
+        assert any(attendu in x for x in C.verifier(tmp_path)), attendu
+    # une carte d'erreur peut ne pas avoir de notion
+    ecrire("matieres/topologie/notions.yaml", [poly, pre])
+    ecrire("matieres/topologie/cartes.yaml", [cours, cp, {**carte("e1", None, ["erreur"]), "chapitre": "Chapitre 1 - X"}])
+    assert C.verifier(tmp_path) == []
 
 
 def test_anciennes_notes_du_bloc_hors_plafond_et_sans_repetition():
@@ -565,6 +637,22 @@ def test_index_notes_via_couverture_et_notions(tmp_path):
     with pytest.raises(SystemExit):
         AC.charger_ancien(tmp_path)
     assert AC.charger_ancien(tmp_path / "vide") == {}
+
+
+def test_fusion_range_une_ancienne_note_couvrant_un_prerequis_dans_le_paquet_du_chapitre(tmp_path):
+    import yaml
+    import anki_connect as AC
+    for m in E.MATIERES:
+        (tmp_path / "matieres" / m).mkdir(parents=True)
+    ecrire = lambda chemin, d: (tmp_path / chemin).write_text(yaml.safe_dump(d, allow_unicode=True), encoding="utf-8")  # noqa: E731
+    ecrire("matieres/topologie/notions.yaml", [
+        {"id": "topo-p-0001", "type": "prerequis", "chapitre": "Chapitre 3 - Espace compact", "sous_chapitre": "3.2 S",
+         "requis_par": ["topo-td4-ex08"]}])
+    ecrire("matieres/topologie/couverture.yaml", {"topo-p-0001": {"statut": "couverte", "notes": [7]}})
+    idx = AC.index_notes(tmp_path)
+    assert idx[7] == [("topologie", "Chapitre 3 - Espace compact")]
+    deck = "tg::Maths::AoutLicenceMath::Topologie::Compacité"
+    assert AC.cible(deck, idx[7]) == ("tg::Maths::L3 Paris Cité::Topologie::Chapitre 3 - Espace compact", "rattache")
 
 
 def test_nom_de_chapitre_des_cartes_de_cours_prime_sur_les_notions(tmp_path):

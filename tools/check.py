@@ -1,6 +1,7 @@
 """Valide les YAML de state/ et matieres/ ; code de sortie 1 en cas d'erreur."""
 from __future__ import annotations
 
+import re
 import sys
 
 import yaml
@@ -129,6 +130,52 @@ def verifier(racine=E.RACINE) -> list[str]:
             for c in data or []:
                 if c.get("exercice") and c.get("chapitre") not in cours:
                     erreurs.append(f"{nom(f)} : carte {c.get('id')} : chapitre inconnu des cartes de cours ({c.get('chapitre')})")
+
+    # 5 ter. notions : ids uniques ; une notion `type: prerequis` (L1-L2) porte un sous-chapitre existant du poly
+    # (d'une notion du poly ou d'un exercice de la même matière) et `requis_par` (exercices ou notions qui l'utilisent) ;
+    # toute carte (hors erreur) a une notion connue, et celle d'un prérequis est du même chapitre que la carte
+    notions = {}
+    for f, data in charges.items():
+        if f.name == "notions.yaml" and f.parent.parent.name == "matieres":
+            for n in data or []:
+                if n.get("id") in notions:
+                    erreurs.append(f"{nom(f)} : id de notion en double {n['id']}")
+                notions[n.get("id")] = {**n, "matiere": f.parent.name}
+    sc_poly = {}
+    for e in exos.values():
+        sc_poly.setdefault(matiere_exo.get(e.get("id")), set()).add(e.get("sous_chapitre"))
+    for n in notions.values():
+        if n.get("type") != "prerequis":
+            sc_poly.setdefault(n["matiere"], set()).add(f"{n.get('chapitre')} > {n.get('sous_chapitre')}")
+    for n in notions.values():
+        if n.get("type") != "prerequis":
+            continue
+        i = n.get("id")
+        if not re.fullmatch(r"[a-z]+-p-\d{4}", str(i)):
+            erreurs.append(f"notion prérequis {i} : id attendu `<préfixe>-p-NNNN`")
+        for c in ("titre", "chapitre", "sous_chapitre", "enonce"):
+            if not n.get(c):
+                erreurs.append(f"notion prérequis {i} : champ {c} manquant")
+        if f"{n.get('chapitre')} > {n.get('sous_chapitre')}" not in sc_poly.get(n["matiere"], set()):
+            erreurs.append(f"notion prérequis {i} : sous-chapitre inconnu du poly ({n.get('chapitre')} > {n.get('sous_chapitre')})")
+        if not n.get("requis_par"):
+            erreurs.append(f"notion prérequis {i} : `requis_par` vide (exercices ou notions qui l'utilisent)")
+        for x in n.get("requis_par") or []:
+            if x not in exos and x not in notions:
+                erreurs.append(f"notion prérequis {i} : requis_par inconnu ({x})")
+    for f, data in charges.items():
+        if f.name != "cartes.yaml":
+            continue
+        for c in data or []:
+            k = c.get("notion")
+            if not k and "erreur" not in (c.get("tags") or []) and not c.get("exercice"):
+                erreurs.append(f"{nom(f)} : carte {c.get('id')} sans notion (un prérequis L1-L2 est une notion `type: prerequis`)")
+            elif k and k not in notions:
+                erreurs.append(f"{nom(f)} : carte {c.get('id')} : notion inconnue ({k})")
+            elif k and notions[k].get("type") == "prerequis":
+                neutre = lambda t: re.sub(r"[\$\^{}]", "", str(t))  # noqa: E731
+                if neutre(notions[k].get("chapitre")) != neutre(c.get("chapitre")):
+                    erreurs.append(f"{nom(f)} : carte {c.get('id')} : chapitre {c.get('chapitre')!r} différent de celui de la notion {k}")
 
     # 6. blocs.yaml et avancement_cours.yaml
     blocs = charges.get(racine / "state" / "blocs.yaml")

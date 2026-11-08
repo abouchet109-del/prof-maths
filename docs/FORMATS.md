@@ -91,13 +91,31 @@ Inventaire de ce qu'il faut savoir, relevé dans le cours.
 ```yaml
 - id: topo-n-0012                  # <matiere courte>-n-<nnnn>, dans l'ordre du cours
   titre: 'Théorème de Bolzano-Weierstrass'
-  type: theoreme                   # definition|theoreme|propriete|methode|demonstration|exemple
+  type: theoreme                   # definition|theoreme|propriete|methode|demonstration|exemple|prerequis (voir plus bas)
   chapitre: 'Chapitre 3 - Espace compact'
   sous_chapitre: '3.1 Définitions et propriétés'   # section telle que dans le poly
   enonce: 'Énoncé bref et fidèle, en LaTeX, 2 lignes au plus.'
   source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 3}
   essentiel: true                  # false pour un point marginal
 ```
+
+### Notions de prérequis L1-L2 (`type: prerequis`)
+
+Un prérequis L1-L2 (ni au programme d'ECG, ni dans le paquet, ni dans le poly) est une **notion** de `notions.yaml`, placée au sous-chapitre du poly où elle sert la première fois. Il n'y a plus de carte sans notion (hors cartes d'erreurs).
+
+```yaml
+- id: topo-p-0001                  # <préfixe>-p-NNNN (topo, mesure, mod, proba), numéro libre suivant
+  titre: 'Extraction diagonale (procédé diagonal de Cantor)'
+  type: prerequis
+  chapitre: 'Chapitre 3 - Espace compact'          # le même que le champ `chapitre` de ses cartes (contrôlé par check.py)
+  sous_chapitre: '3.2 Suites dans un espace métrique compact'   # existe dans le poly ou chez un exercice
+  enonce: 'Énoncé bref, en LaTeX.'
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [topo-td4-ex08]      # obligatoire, non vide : exercices (ou notions) qui l'utilisent
+```
+
+Dans un sous-chapitre, `plan.py` sert les prérequis avant les notions du poly : cartes (`ordre_cartes`), cours du jour, anciennes notes. Une carte prérequis ne sort donc ni avant son sous-chapitre ni en tête de matière. Les exercices du jour qui figurent dans `requis_par` ajoutent la notion aux sujets du jour (cartes à revoir). Un prérequis n'entre dans aucun calcul d'exercices, de marge ou de feuille de route. Pour ajouter un prérequis : l'entrée à la fin de `notions.yaml`, `notion: <id>` sur ses cartes (tag `prerequis-l1l2`), éventuellement `couverture.yaml` pour les anciennes notes qui le couvrent (`anki_connect.py fusionner` les range dans le paquet du chapitre, comme une notion du poly). Le référentiel de ce que l'utilisateur sait : ses paquets ECG `tg::Maths::1ere année` et `tg::Maths::Cours deuxième année`, jamais modifiés.
 
 Règles : une entrée par résultat ou définition nommable. Pas de texte recopié au-delà du nécessaire. Démonstration : une entrée seulement si le cours la présente comme importante ou si la technique est réutilisable. Une page incertaine vaut `page: null`.
 
@@ -116,7 +134,7 @@ Le jugement porte sur le recto (les réponses sont souvent en image) : un recto 
 ```yaml
 - id: topo-a-001
   origine: cours_l3                # cours_l3|prerequis_l1l2
-  notion: topo-n-0012              # null pour un prérequis
+  notion: topo-n-0012              # historique : les prérequis y gardent null, leur notion est `<préfixe>-p-NNNN` (voir « Notions de prérequis »)
   titre: 'Théorème de Bolzano-Weierstrass'
   raison: 'absente du paquet'      # absente|partielle : préciser ce qui manque ; prérequis : pourquoi il manque
   programme_ecg: false             # true si c'est au programme d'ECG maths approfondies, donc supposé connu

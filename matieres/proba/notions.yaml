@@ -1150,3 +1150,49 @@
   enonce: 'Pour $X^{(n)}$ i.i.d. dans $\mathbb R^d$ de moyenne $\mu$ et covariance $\Gamma$ : $\sqrt n\left(\frac1n\sum X^{(i)}-\mu\right)\xrightarrow{L}Z\sim\mathcal N(0,\Gamma)$.'
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 82}
   essentiel: true
+# Prérequis L1-L2 : notions `type: prerequis` servies avant les notions du poly de leur sous-chapitre
+- id: proba-p-0001
+  titre: Limsup et liminf d'une suite d'événements
+  type: prerequis
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  sous_chapitre: 1.3 Probabilité
+  enonce: $\limsup A_n=\bigcap_n\bigcup_{k\ge n}A_k$ (infiniment souvent) et $\liminf A_n=\bigcup_n\bigcap_{k\ge n}A_k$ (à partir d'un certain rang) ; $\liminf A_n\subset\limsup A_n$ et $(\limsup A_n)^c=\liminf A_n^c$.
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [pro-td1-ex05, pro-td1-ex10]
+- id: proba-p-0002
+  titre: Théorème de Cesàro (suites réelles)
+  type: prerequis
+  chapitre: Chapitre 5 - Convergences
+  sous_chapitre: 5.2.1 Convergence en probabilité
+  enonce: Si $u_n\to\ell$ alors $\frac1n\sum_{k=1}^nu_k\to\ell$. On l'applique $\omega$ par $\omega$ à $X_k(\omega)$ pour passer de $X_k\to0$ p.s. à $\frac1n\sum_{k\le n}X_k\to0$ p.s.
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [pro-exa2526-ex04]
+- id: proba-p-0003
+  titre: Loi du rang du k-ième succès (binomiale négative)
+  type: prerequis
+  chapitre: Chapitre 5 - Convergences
+  sous_chapitre: 5.3.3 Le théorème central limite
+  enonce: Dans des épreuves de Bernoulli($p$) indépendantes, $T_k$ le rang du $k$-ième succès vérifie $P(T_k=n)=\binom{n-1}{k-1}p^k(1-p)^{n-k}$ ($n\ge k$) ; $T_k$ est une somme de $k$ géométriques indépendantes, $E[T_k]=\frac kp$, $\mathrm{Var}(T_k)=\frac{k(1-p)}{p^2}$.
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [pro-exa2425-ex01]
+- id: proba-p-0004
+  titre: 'Simulation en R : rbinom et temps du k-ième succès'
+  type: prerequis
+  chapitre: Chapitre 5 - Convergences
+  sous_chapitre: 5.3.3 Le théorème central limite
+  enonce: '`rbinom(n, size, prob)` simule $n$ variables $\mathcal B(\text{size},\text{prob})$ ; `rbinom(1, 1, p)` est une Bernoulli($p$). Une boucle `while (sum(x) < k)` simule le rang du $k$-ième succès.'
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [pro-exa2425-ex01]
+- id: proba-p-0005
+  titre: 'Simulation en R : rpois et somme de Poisson'
+  type: prerequis
+  chapitre: Chapitre 3 - Caractériser une loi
+  sous_chapitre: 3.5.2 Fonctions caractéristiques de lois classiques
+  enonce: '`rpois(n, lambda)` simule $n$ variables de Poisson de paramètre $\lambda$ ; la somme de $N$ Poisson indépendantes se simule par `sum(rpois(N, lambda))`.'
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [pro-exa2526-ex01]
