@@ -7,7 +7,8 @@ Il reprend les principes de [archi-ml-ai-researcher](https://github.com/abouchet
 ## Ce que fait le système
 - **Exercices :** tous les exercices de TD, DM et annales (Paris Cité, plus l'UVSQ en complément) sont extraits, classés par sous-chapitre et de vital à exotique. On ne passe à la catégorie suivante d'un sous-chapitre qu'une fois la précédente maîtrisée. Les annales de Paris Cité sont prioritaires et toujours planifiées.
 - **Cours :** les notions manquantes du paquet Anki, y compris les prérequis de L1-L2, sont fichées par le système. L'utilisateur apprend par Anki ; les 30 min de cours quotidiennes servent à approfondir.
-- **Planning :** `python tools/plan.py jour` écrit `NOW.md`. Chaque jour, il donne 2 h d'exercices et d'annales, 30 min de cours, les cartes à apprendre et à réviser. Un debrief suit (dire « debrief » à Claude) : il enregistre les résultats avec `tools/resultat.py` et met à jour le profil de maîtrise. Règles pour Claude : `CLAUDE.md`.
+- **Planning :** au début de chaque séance (dire « on commence » à Claude), `python tools/plan.py seance` écrit `NOW.md` pour maintenant, d'après ce qui a réellement été fait : 2 h d'exercices et d'annales, 30 min de cours, les cartes à apprendre (lues dans Anki par AnkiConnect). Ce qui n'a pas été fait revient seul.
+- **Compréhension :** pendant la séance, Claude écoute comment l'utilisateur raisonne à voix haute. Après chaque exercice non réussi seul, il explique où ça a bloqué, cherche la cause par une ou deux questions et lui fait dire ce qu'il en retient. Le debrief (« debrief », dans la même conversation) enregistre les résultats (`tools/resultat.py`) et fixe sur preuve le niveau de chaque notion travaillée dans `state/comprehension.yaml` ; le plan suivant en tire les cartes à revoir, les exercices prioritaires et la section « À consolider ». Règles pour Claude : `CLAUDE.md`.
 
 ## Où sont les choses
 | Chemin | Contenu |

@@ -18,14 +18,14 @@ Dépôt indépendant de `archi-ml-ai-researcher`. On copie ce qui sert ; l'archi
 - **Tableurs UVSQ :** les statuts et remarques sont ceux d'un ami, jamais une preuve de maîtrise de l'utilisateur. Ils servent seulement de modèle de présentation et d'indice de classement.
 
 ## Programme quotidien (`NOW.md`)
-Chaque jour, sans que l'utilisateur ait à décider quoi que ce soit :
+À chaque séance (`plan.py seance`, calculé au moment où l'on commence), sans que l'utilisateur ait à décider quoi que ce soit :
 1. **Exercices et annales (2 h) :** liste précise, nouveaux exercices et exercices à revoir, avec le nombre attendu.
-2. **Cours (30 min) :** ce qu'il faut approfondir, avec les pages du poly.
+2. **Cours (30 min) :** ce qu'il faut approfondir, avec les pages du poly, plus la section « À consolider » (notions faibles de `state/comprehension.yaml`, 5 lignes au plus).
 3. **Anki, à apprendre :** les nouvelles cartes du jour, par paquet et étiquette, avec leur nombre, en priorité celles des exercices à venir et les prérequis de L1-L2.
 4. **Anki, à réviser :** toutes les cartes dues, plus les paquets anciens à reprendre parce qu'ils servent aux exercices du jour.
-5. **Debrief** en fin de session, qui met à jour le profil et le plan du lendemain.
+5. **Debrief** en fin de séance, dans la même conversation : résultats, niveau de compréhension de chaque notion travaillée (sur preuve), cartes d'exercices, bilan réel et commit. Il ne prépare pas la séance suivante.
 
-Limite : sans accès direct à Anki, le système ne voit pas les cartes dues ni les statistiques ; il indique quoi réviser et demande l'état au check-in. L'add-on AnkiConnect lèverait cette limite si l'utilisateur l'installe.
+Anki est lu en lecture seule par AnkiConnect (cartes apprises) ; Anki fermé, le plan estime les cartes et le signale.
 
 ## Annales de Paris Cité dans le planning
 - **Volume :** 16 annales (topologie 8, modélisation 4, probabilités 4), soit environ 26 h de composition : les examens de topologie durent 2 h, ceux de modélisation et de probabilités 1 h 30. Aucune en mesure, confirmé par l'utilisateur : la référence est le programme de Paris Cité (poly, TD, DM), et les annales de l'UVSQ servent d'entraînement et d'examens blancs, limitées à ce programme.
@@ -71,10 +71,11 @@ Limite : sans accès direct à Anki, le système ne voit pas les cartes dues ni 
   1. les **reprises** dues, toutes matières, les plus en retard d'abord, plafonnées à `minutes_reprises_max` (30 min). La plus urgente passe même si elle dépasse seule le plafond, sinon un exercice de plus de 30 min ne serait jamais repris ;
   2. au plus **une annale prioritaire** nouvelle hors période quota. Elle n'est éligible que si son sous-chapitre est passé dans sa matière (avant le courant), ou à partir de `annales_libres_des` (07/12/2026), ou si la marge à l'échéance devient négative. Les examens blancs (dernière année de chaque matière) restent réservés à la période à 28 h, où plusieurs annales par jour sont possibles ;
   3. le **bloc** : la ligne principale du sous-chapitre courant (vital puis important, dans l'ordre du fichier), qui continue sur le sous-chapitre suivant s'il reste du temps. Un exercice trop long est sauté, mais le bloc ne saute pas à un sous-chapitre plus loin pour combler un trou.
+  - Dans les reprises et le bloc, les exercices d'une notion faible de `state/comprehension.yaml` (niveau `recitee` ou moins, ou `fragile`, ou confusion ouverte) passent en premier, jamais au détriment de l'annale.
 - **Secondaire et exotique :** seulement quand toute la ligne principale de la matière est épuisée, avec le passage de catégorie par sous-chapitre (la catégorie suivante s'ouvre quand tous les exercices de la précédente sont au moins acquis).
 - **Cours :** 10 min par notion, tirées du sous-chapitre du bloc (notions de ses exercices, puis notions de `notions.yaml` qui lui sont rattachées).
-- **Cartes :** 20 par jour au plus (`cartes_par_jour`). D'abord les cartes d'erreurs et les cartes `a_revoir` dues, puis les cartes pas encore données des notions du sous-chapitre du bloc, puis celles des sous-chapitres suivants de la même matière. Une carte n'est jamais donnée deux fois (`state/anki_plan.yaml`).
-- **`NOW.md` :** `Bloc du jour : <Matière> — <sous-chapitre> (vitaux acquis x/y)` en tête, exercices groupés en Reprises, Annale, Bloc, échéance avec une ligne par matière (minutes restantes). Une matière est signalée quand son reste dépasse sa part de la capacité restante (capacité ÷ 4 × 1,25). 60 lignes au plus.
+- **Cartes :** 20 par jour au plus (`cartes_par_jour`). D'abord les cartes d'erreurs et d'exercices et les cartes `a_revoir` dues, puis les prérequis L1-L2 encore `inconnue`, puis les cartes des notions faibles qui repassent une fois, puis les cartes pas encore données du sous-chapitre du bloc (ses prérequis L1-L2 avant les cartes du poly), puis celles des sous-chapitres suivants de la même matière. Une carte n'est jamais donnée deux fois, sauf ce repassage (`state/anki_plan.yaml`).
+- **`NOW.md` :** `Bloc du jour : <Matière> — <sous-chapitre> (vitaux acquis x/y)` en tête, section « À consolider » avant « Cours », exercices dans l'ordre de travail Annale, Bloc, puis Reprises en fin de séance (faites seul sur papier ; le choix des exercices réserve toujours les reprises en premier), échéance avec une ligne par matière (minutes restantes). Une matière est signalée quand son reste dépasse sa part de la capacité restante (capacité ÷ 4 × 1,25). 60 lignes au plus.
 
 **Bilan du classement** (heures estimées par les agents, doublons exclus) :
 
