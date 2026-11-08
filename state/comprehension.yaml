@@ -20,6 +20,7 @@ notions:
       - {date: 2026-11-08, source: cours, extrait: 'max et sup demandent un ordre (pas une distance) ; sup peut être hors de A ; confond d''abord max => sup avec sup => max', verdict: partiel}
       - {date: 2026-11-08, source: cours, extrait: 'avec le milieu (c+1)/2, montre que c < 1 n''est pas un majorant de ]0,1[', verdict: juste}
       - {date: 2026-11-08, source: cours, extrait: 'écrit l''encadrement M - 1/n < x_n <= M, mais voit la convergence comme une condition et non comme conséquence des gendarmes', verdict: partiel}
+      - {date: 2026-11-08, source: question, extrait: 'A={1-1/k^2} : sup=1, pas de max, suite 1-1/k^2 ; 1-1/2 hors de A seulement après avoir précisé k entier', verdict: juste}
     maj: 2026-11-08
   topo-n-0008:
     niveau: fragile
@@ -58,6 +59,7 @@ notions:
       - {date: 2026-11-08, texte: 'confond ouvert et boule ouverte : écrit que les ouverts de la métrique discrète sont {{a},{X},vide} au lieu de toutes les parties', statut: ouverte}
     preuves:
       - {date: 2026-11-08, source: exercice, exercice: topo-td1-ex08, extrait: 'ouverts de (X, d discrète) : liste fausse ; fermés non traités', verdict: faux}
+      - {date: 2026-11-08, source: question, extrait: 'à froid : décrit les boules au lieu des ouverts, puis redit « les ouverts sont les boules ouvertes »', verdict: faux}
     maj: 2026-11-08
   topo-n-0015:
     niveau: fragile
@@ -82,6 +84,7 @@ notions:
       - {date: 2026-11-08, texte: 'croit que 1/n -> 0 montre 1/n dans l''adhérence de A = R\{1/n} (cela montre 0 adhérent à {1/n}) ; écrit « adhérence incluse dans A » (A est inclus dans son adhérence)', statut: ouverte}
     preuves:
       - {date: 2026-11-08, source: exercice, exercice: topo-td1-ex07, extrait: 'cas 1 juste ; cas 2 faux (strict/large) ; cas 3 bonne conclusion, argument à l''envers', verdict: partiel}
+      - {date: 2026-11-08, source: question, extrait: 'A=]0,1[ u {2} : Ā et int justes d''abord, puis retire 2 de Ā avec des suites de ]0,1[ au lieu de suites de A', verdict: partiel}
     maj: 2026-11-08
   topo-n-0043:
     niveau: fragile
