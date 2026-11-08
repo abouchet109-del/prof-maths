@@ -1,6 +1,7 @@
 """Valide les YAML de state/ et matieres/ ; code de sortie 1 en cas d'erreur."""
 from __future__ import annotations
 
+import datetime as dt
 import re
 import sys
 
@@ -9,6 +10,88 @@ import yaml
 import etat as E
 
 CHAMPS_EXERCICE = ["id", "titre", "sources", "annale_prioritaire", "temps_min", "importance", "sous_chapitre"]
+
+
+NIVEAUX_COMPREHENSION = ["inconnue", "recitee", "fragile", "tenue", "reliee"]
+
+
+def _date_valide(x) -> bool:
+    """Date AAAA-MM-JJ valide (objet date YAML ou chaîne), pas un datetime."""
+    if type(x) is dt.date:
+        return True
+    if isinstance(x, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", x):
+        try:
+            dt.date.fromisoformat(x)
+            return True
+        except ValueError:
+            return False
+    return False
+
+
+def verifier_comprehension(data, notions, exos, aujourdhui=None) -> list[str]:
+    """Contrôle de state/comprehension.yaml (format : docs/FORMATS.md, « Modèle de compréhension »)."""
+    if data is None:
+        return []     # fichier absent
+    aujourdhui = aujourdhui or dt.date.today()
+    erreurs = []
+    if not isinstance(data, dict) or set(data) != {"notions", "style"}:
+        return ["comprehension.yaml : la racine doit avoir exactement `notions` et `style`"]
+    if not isinstance(data["notions"], dict):
+        return ["comprehension.yaml : `notions` doit être un dictionnaire"]
+    st = data["style"]
+    if not isinstance(st, list) or len(st) > 6 or not all(isinstance(x, str) for x in st):
+        erreurs.append("comprehension.yaml : `style` doit être une liste de 6 chaînes au plus")
+
+    def date(x, ou):
+        if not _date_valide(x):
+            erreurs.append(f"{ou} : date invalide ({x!r}, AAAA-MM-JJ attendu)")
+        elif E.en_date(x) > aujourdhui:
+            erreurs.append(f"{ou} : date dans le futur ({x})")
+
+    for k, c in data["notions"].items():
+        ou = f"comprehension {k}"
+        if k not in notions:
+            erreurs.append(f"{ou} : notion inconnue")
+        if not isinstance(c, dict):
+            erreurs.append(f"{ou} : entrée invalide")
+            continue
+        if c.get("niveau") not in NIVEAUX_COMPREHENSION:
+            erreurs.append(f"{ou} : niveau invalide ({c.get('niveau')})")
+        date(c.get("maj"), f"{ou} maj")
+        for cle in ("liens", "liens_manquants"):
+            for x in c.get(cle) or []:
+                v = x.get("vers") if isinstance(x, dict) else None
+                if v not in notions:
+                    erreurs.append(f"{ou} {cle} : notion inconnue ({v})")
+                elif v == k:
+                    erreurs.append(f"{ou} {cle} : `vers` égal à la notion elle-même")
+        confusions, preuves = c.get("confusions") or [], c.get("preuves") or []
+        if len(confusions) > 8:
+            erreurs.append(f"{ou} : plus de 8 confusions ({len(confusions)})")
+        if len(preuves) > 6:
+            erreurs.append(f"{ou} : plus de 6 preuves ({len(preuves)})")
+        if not all(isinstance(x, dict) for x in confusions + preuves):
+            erreurs.append(f"{ou} : confusions et preuves doivent être des dictionnaires")
+            continue
+        for x in confusions:
+            date(x.get("date"), f"{ou} confusion")
+            if x.get("statut") not in ("ouverte", "reparee"):
+                erreurs.append(f"{ou} confusion : statut invalide ({x.get('statut')})")
+        for x in preuves:
+            date(x.get("date"), f"{ou} preuve")
+            if x.get("source") not in ("cours", "exercice", "question"):
+                erreurs.append(f"{ou} preuve : source invalide ({x.get('source')})")
+            if x.get("verdict") not in ("juste", "partiel", "faux"):
+                erreurs.append(f"{ou} preuve : verdict invalide ({x.get('verdict')})")
+            if x.get("exercice") is not None and x["exercice"] not in exos:
+                erreurs.append(f"{ou} preuve : exercice inconnu ({x['exercice']})")
+            if len(str(x.get("extrait") or "")) > 160:
+                erreurs.append(f"{ou} preuve : extrait de plus de 160 caractères")
+        if c.get("niveau") in ("tenue", "reliee") and any(x.get("statut") == "ouverte" for x in confusions):
+            erreurs.append(f"{ou} : niveau {c['niveau']} avec une confusion ouverte")
+        if c.get("niveau") == "reliee" and not c.get("liens"):
+            erreurs.append(f"{ou} : niveau reliee sans `liens`")
+    return erreurs
 
 
 def verifier(racine=E.RACINE) -> list[str]:
@@ -176,6 +259,9 @@ def verifier(racine=E.RACINE) -> list[str]:
                 neutre = lambda t: re.sub(r"[\$\^{}]", "", str(t))  # noqa: E731
                 if neutre(notions[k].get("chapitre")) != neutre(c.get("chapitre")):
                     erreurs.append(f"{nom(f)} : carte {c.get('id')} : chapitre {c.get('chapitre')!r} différent de celui de la notion {k}")
+
+    # 5 quater. modèle de compréhension (le fichier absent ou `notions: {}` est valide)
+    erreurs += verifier_comprehension(charges.get(racine / "state" / "comprehension.yaml"), notions, exos)
 
     # 6. blocs.yaml et avancement_cours.yaml
     blocs = charges.get(racine / "state" / "blocs.yaml")

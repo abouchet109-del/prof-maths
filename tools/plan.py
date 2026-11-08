@@ -52,6 +52,7 @@ def contexte(racine=E.RACINE) -> dict:
         "avancement": E.charger_yaml(racine / "state" / "avancement_cours.yaml", {}),
         "seances": E.charger_yaml(racine / "state" / "seance.yaml", {}),
         "exportees": charger_exportees(racine),
+        "comprehension": E.charger_yaml(racine / "state" / "comprehension.yaml", {}),
     }
 
 
@@ -89,6 +90,78 @@ def _derniere_annee(exos) -> dict:
     return res
 
 
+# ------------------------------------------------------- modèle de compréhension (state/comprehension.yaml)
+NIVEAUX = ["inconnue", "recitee", "fragile", "tenue", "reliee"]
+A_CONSOLIDER_MAX = 5        # lignes de la section « À consolider » de NOW.md (puis « + k autres »)
+
+
+def _comp(ctx) -> dict:
+    """notion -> entrée de comprehension.yaml ({} si le fichier est absent ou vide)."""
+    return ((ctx.get("comprehension") or {}).get("notions")) or {}
+
+
+def _ouvertes(c) -> list[dict]:
+    return [x for x in c.get("confusions") or [] if x.get("statut") == "ouverte"]
+
+
+def est_faible(c) -> bool:
+    """Niveau `recitee` ou `fragile`, ou une confusion ouverte."""
+    return c.get("niveau") in ("recitee", "fragile") or bool(_ouvertes(c))
+
+
+def est_a_consolider(c) -> bool:
+    """Niveau `inconnue`, `recitee` ou `fragile`, ou une confusion ouverte."""
+    return c.get("niveau") in ("inconnue", "recitee", "fragile") or bool(_ouvertes(c))
+
+
+def notions_faibles(ctx) -> set[str]:
+    return {i for i, c in _comp(ctx).items() if est_faible(c)}
+
+
+def _sc_notion(n) -> str:
+    return f"{n.get('chapitre')} > {n.get('sous_chapitre')}"
+
+
+def _meme_sc(a, b) -> bool:
+    """Deux sous-chapitres identiques (forme « chapitre > sous-chapitre », ou le sous-chapitre seul)."""
+    return a == b or str(a).endswith(" > " + str(b)) or str(b).endswith(" > " + str(a))
+
+
+def prerequis_par_sc(ctx, m) -> dict[str, list[str]]:
+    """Règle (d) : sous-chapitre de la matière `m` -> prérequis L1-L2 qui y sont servis. Un prérequis P est
+    rattaché à son propre sous-chapitre et, pour chaque matière où figure un élément (exercice ou notion)
+    de son `requis_par`, au premier sous-chapitre (ordre du poly) qui contient l'un de ces éléments."""
+    elements = {}
+    for e in ctx["exercices"]:
+        if e.get("sous_chapitre"):
+            elements[e["id"]] = (e["matiere"], e["sous_chapitre"])
+    for n in ctx["notions"].values():
+        if n.get("chapitre") and n.get("sous_chapitre"):
+            elements.setdefault(n["id"], (n["matiere"], _sc_notion(n)))
+    res: dict[str, list[str]] = {}
+    for n in ctx["notions"].values():
+        if not est_prerequis(n):
+            continue
+        rattaches: dict[str, list[str]] = {}      # matière -> sous-chapitres
+        if n.get("sous_chapitre"):
+            rattaches.setdefault(n["matiere"], []).append(_sc_notion(n))
+        premiers: dict[str, str] = {}
+        for x in n.get("requis_par") or []:
+            mat, sc = elements.get(x) or (None, None)
+            if mat and (mat not in premiers or E.cle_sc(sc) < E.cle_sc(premiers[mat])):
+                premiers[mat] = sc
+        for mat, sc in premiers.items():
+            rattaches.setdefault(mat, []).append(sc)
+        for sc in dict.fromkeys(rattaches.get(m, [])):
+            res.setdefault(sc, []).append(n["id"])
+    return res
+
+
+def prerequis_de(rattaches, sc) -> list[str]:
+    """Prérequis servis au sous-chapitre `sc` (voir prerequis_par_sc)."""
+    return list(dict.fromkeys(i for k, ids in rattaches.items() if _meme_sc(k, sc) for i in ids))
+
+
 # ------------------------------------------------------- sous-chapitres et ligne principale
 def exercices_par_sc(exos, m) -> dict:
     """sous-chapitre -> exercices de la matière (hors annales prioritaires), dans l'ordre du poly."""
@@ -119,17 +192,22 @@ def sous_chapitre_courant(par_sc, etats, limite=None):
     return None
 
 
-def candidats_bloc(par_sc, etats, limite=None) -> list[dict]:
+def candidats_bloc(par_sc, etats, limite=None, prioritaires=frozenset()) -> list[dict]:
     """Exercices à faire pour le bloc d'une matière, dans l'ordre : à partir du sous-chapitre courant,
     sa ligne principale (jamais tentés ; les « à revoir » reviennent par les reprises), puis celle du
     suivant, etc. Une fois toute la ligne principale épuisée : secondaire et exotique, avec le
-    passage de catégorie par sous-chapitre."""
+    passage de catégorie par sous-chapitre. Dans un sous-chapitre, les exercices `prioritaires` (une notion
+    faible) passent d'abord : clé (non prioritaire, catégorie, ordre)."""
+    def cle(e):
+        return (e["id"] not in prioritaires, E.CATEGORIES.index(E.categorie(e)), e["ordre"])
+
+
     if sous_chapitre_courant(par_sc, etats, limite) is not None:
         res = []
         for sc, es in par_sc.items():
             if _dans_limite(sc, limite):
                 res += sorted((e for e in ligne_principale(es, etats) if etats[e["id"]]["etat"] == "jamais"),
-                              key=lambda e: (E.CATEGORIES.index(E.categorie(e)), e["ordre"]))
+                              key=cle)
         return res
     res = []
     for sc, es in par_sc.items():
@@ -137,7 +215,7 @@ def candidats_bloc(par_sc, etats, limite=None) -> list[dict]:
             continue
         cat = E.categorie_ouverte(es, etats)
         if cat in ("secondaire", "exotique"):
-            res += [e for e in es if E.categorie(e) == cat and etats[e["id"]]["etat"] == "jamais"]
+            res += sorted((e for e in es if E.categorie(e) == cat and etats[e["id"]]["etat"] == "jamais"), key=cle)
     return res
 
 
@@ -241,14 +319,16 @@ def plan_jour(ctx, d: dt.date, resultats=None, seance=False) -> dict:
     limites = ctx.get("avancement") or {}
     par_sc = {m: exercices_par_sc(exos, m) for m in E.MATIERES}
     courants = {m: sous_chapitre_courant(par_sc[m], etats, limites.get(m)) for m in E.MATIERES}
-    cands = {m: candidats_bloc(par_sc[m], etats, limites.get(m)) for m in E.MATIERES}
+    faibles = notions_faibles(ctx)
+    prio = {e["id"] for e in exos if faibles & set(e.get("notions") or [])}     # règle (c)
+    cands = {m: candidats_bloc(par_sc[m], etats, limites.get(m), prio) for m in E.MATIERES}
     plan["courants"] = courants
 
     # (a) reprises dues, toutes matières : à revoir d'abord, puis les plus en retard ; plafonnées.
     # La plus urgente passe même si elle dépasse seule le plafond (sinon elle ne serait jamais reprise).
     plafond = ctx["dispo"].get("minutes_reprises_max", REPRISES_MAX_DEFAUT)
     dus = [e for e in exos if etats[e["id"]]["est_du"]]
-    dus.sort(key=lambda e: (etats[e["id"]]["etat"] != "a_revoir", etats[e["id"]]["du"], e["ordre"]))
+    dus.sort(key=lambda e: (etats[e["id"]]["etat"] != "a_revoir", e["id"] not in prio, etats[e["id"]]["du"], e["ordre"]))
     reprises = 0
     for e in dus:
         if reprises and reprises + e["temps_min"] > plafond:
@@ -316,14 +396,21 @@ def notions_sc(ctx, exos, m, sc, prioritaires=()) -> list[str]:
             continue
         if _dans_sc(n, sc):
             vues.append(n["id"])
+    for i in prerequis_de(prerequis_par_sc(ctx, m), sc):      # règle (d) : prérequis d'une autre matière aussi
+        if i not in vues:
+            vues.append(i)
     return sorted(vues, key=lambda i: not est_prerequis(ctx["notions"].get(i)))   # tri stable : prérequis en tête
 
 
 def notions_des_exercices(ctx, plan) -> set[str]:
-    """Notions des exercices du jour, plus les prérequis L1-L2 qu'ils utilisent (`requis_par`)."""
+    """Notions des exercices du jour, plus les prérequis L1-L2 qu'ils utilisent (`requis_par` : un exercice du
+    jour, une notion des exercices du jour ou une notion du cours du jour)."""
     ids = {e["id"] for e, _ in plan["items"]}
     res = {n for e, _ in plan["items"] for n in e.get("notions") or []}
-    return res | {n["id"] for n in ctx["notions"].values() if est_prerequis(n) and ids & set(n.get("requis_par") or [])}
+    utiles = ids | res
+    if plan.get("sous_chapitre") and plan.get("exos") is not None:
+        utiles |= {n["id"] for n in cours_du_jour(ctx, plan)}
+    return res | {n["id"] for n in ctx["notions"].values() if est_prerequis(n) and utiles & set(n.get("requis_par") or [])}
 
 
 def cours_du_jour(ctx, plan) -> list[dict]:
@@ -367,12 +454,27 @@ def recherche_a_revoir(entrees, d, faits=()) -> str:
     return f"({' or '.join(parts)})" if parts else ""
 
 
+def entrees_faibles(ctx) -> list[dict]:
+    """Règle (b) : entrées du type `a_revoir` pour les cartes des notions faibles (`pour` = lendemain de `maj`) ;
+    elles se consomment comme celles de a_revoir.yaml (a_revoir_dus)."""
+    res = []
+    cou = ctx.get("couverture") or {}
+    for i, c in _comp(ctx).items():
+        if not est_faible(c) or not c.get("maj"):
+            continue
+        pour = str(E.en_date(c["maj"]) + dt.timedelta(1))
+        res += [{"pour": pour, "nid": int(n)} for n in (cou.get(i) or {}).get("notes") or []]
+        res += [{"pour": pour, "id": k["id"]} for k in ctx["cartes"] if k.get("notion") == i]
+    return res
+
+
 def _sc_matiere(ctx, plan) -> list[str]:
     """Tous les sous-chapitres de la matière du bloc (exercices et notions), triés, dans la limite du cours."""
     m = plan["matiere"]
     tous = set(exercices_par_sc(plan["exos"], m))
     tous |= {f"{n.get('chapitre')} > {n['sous_chapitre']}" for n in ctx["notions"].values()
              if n.get("matiere") == m and n.get("sous_chapitre") and n.get("chapitre")}
+    tous |= set(prerequis_par_sc(ctx, m))       # règle (d) : sous-chapitre d'un prérequis rattaché
     limite = (ctx.get("avancement") or {}).get(m)
     return sorted((s for s in tous if _dans_limite(s, limite)), key=E.cle_sc)
 
@@ -423,6 +525,9 @@ def ordre_cartes(ctx, plan, libres) -> list[dict]:
     matière du bloc (passés, bloc, suivants), chacun selon la notion de la carte, prérequis L1-L2 d'abord."""
     d = str(plan["date"])
     ordre = [c for c in libres if TAGS_PRIORITAIRES & set(c.get("tags") or [])]
+    # règle (b) : cartes nouvelles d'un prérequis L1-L2 `inconnue`, toutes matières, juste après les prioritaires
+    inconnus = {i for i, c in _comp(ctx).items() if c.get("niveau") == "inconnue" and est_prerequis(ctx["notions"].get(i))}
+    ordre += [c for c in libres if c.get("notion") in inconnus]
     dues = {e["id"] for e in a_revoir_dus(ctx.get("a_revoir"), d, jours_travailles(ctx)) if e.get("id")}
     ordre += [c for c in libres if c["id"] in dues]
     if plan["sous_chapitre"]:
@@ -431,11 +536,13 @@ def ordre_cartes(ctx, plan, libres) -> list[dict]:
         # Une carte suit le sous-chapitre de SA notion (notions.yaml), pas celui des exercices qui la citent :
         # sinon une notion du chapitre 2 citée par un exercice du 1.3 passerait avant le 1.4.
         m = plan["matiere"]
+        rattaches = prerequis_par_sc(ctx, m)
         for sc in sc_precedents(ctx, plan) + [plan["sous_chapitre"]] + sc_suivants(ctx, plan):
-            # Dans un sous-chapitre, les prérequis L1-L2 (notions `type: prerequis`) passent avant le poly.
-            dedans = [n for n in ctx["notions"].values() if n.get("matiere") == m and _dans_sc(n, sc)]
-            prereq = {n["id"] for n in dedans if est_prerequis(n)}
-            poly = {n["id"] for n in dedans} - prereq
+            # Dans un sous-chapitre, les prérequis L1-L2 (règle (d) : y compris ceux d'une autre matière que
+            # requiert un élément du sous-chapitre) passent avant le poly.
+            prereq = set(prerequis_de(rattaches, sc))
+            poly = {n["id"] for n in ctx["notions"].values()
+                    if n.get("matiere") == m and _dans_sc(n, sc) and not est_prerequis(n)}
             ordre += [c for c in libres if c.get("notion") in prereq]
             ordre += [c for c in libres if c.get("notion") in poly]
     return list({c["id"]: c for c in ordre}.values())
@@ -564,6 +671,38 @@ def _court(txt, n=60) -> str:
     return txt if len(txt) <= n else txt[: n - 1] + "…"
 
 
+def a_consolider(ctx, plan) -> list[str]:
+    """Règle (a) : lignes de la section « À consolider » (liste vide s'il n'y a rien)."""
+    comp, m = _comp(ctx), plan.get("matiere")
+    if not comp or not m or not plan.get("sous_chapitre"):
+        return []
+    cles = [E.cle_sc(s) for s in sc_precedents(ctx, plan) + [plan["sous_chapitre"]]]
+    attaches = {i for k, ids in prerequis_par_sc(ctx, m).items() if E.cle_sc(k) in cles for i in ids}
+    choisies = []
+    for i, c in comp.items():
+        n = ctx["notions"].get(i)
+        if not n or not est_a_consolider(c):
+            continue
+        dans = n.get("matiere") == m and E.cle_sc(_sc_notion(n)) in cles
+        inconnu_rattache = est_prerequis(n) and c.get("niveau") == "inconnue" and i in attaches
+        if dans or inconnu_rattache:
+            choisies.append((i, n, c))
+    choisies.sort(key=lambda t: (not _ouvertes(t[2]), NIVEAUX.index(t[2]["niveau"]) if t[2].get("niveau") in NIVEAUX else 9,
+                                 E.cle_sc(_sc_notion(t[1])), t[0]))
+    lignes = []
+    for i, n, c in choisies[:A_CONSOLIDER_MAX]:
+        ouv = _ouvertes(c)
+        dire = (max(ouv, key=lambda x: str(x.get("date")))["texte"] if ouv else c.get("vision")) or ""
+        s = n.get("source") or {}
+        morceaux = [f"`{i}` {_court(n['titre'], 50)}", c.get("niveau"), " ".join(str(dire).split())]
+        if s.get("fichier"):
+            morceaux.append(f"{s['fichier']} p.{s.get('page')}")
+        lignes.append(_court("- " + " · ".join(x for x in morceaux if x), 160))
+    if len(choisies) > A_CONSOLIDER_MAX:
+        lignes.append(f"- + {len(choisies) - A_CONSOLIDER_MAX} autres")
+    return lignes
+
+
 def rediger(ctx, plan, cartes) -> list[str]:
     d, info = plan["date"], plan["info"]
     nature = info["raison"] if info["off"] else ("quota" if info["quota"] else "normal")
@@ -596,6 +735,9 @@ def rediger(ctx, plan, cartes) -> list[str]:
                 L.append(ligne)
         if not plan["items"]:
             L.append("- (rien à planifier)")
+        consolider = a_consolider(ctx, plan)
+        if consolider:
+            L += ["", "## À consolider"] + consolider
         notions = cours_du_jour(ctx, plan)
         sujet = {n["id"] for n in notions} | notions_des_exercices(ctx, plan)
         L += ["", f"## Cours ({info['minutes_cours']} min)"]
@@ -623,7 +765,7 @@ def rediger(ctx, plan, cartes) -> list[str]:
     L += ["", "## Anki — à réviser", "- Toutes les cartes dues : `is:due`"]
     if cartes["revoir"]:
         L.append(f"- Déjà données, liées aux exercices du jour ({len(cartes['revoir'])}) : `{_requete(cartes['revoir'])}`")
-    rech = recherche_a_revoir(ctx.get("a_revoir"), plan["date"], jours_travailles(ctx))
+    rech = recherche_a_revoir(list(ctx.get("a_revoir") or []) + entrees_faibles(ctx), plan["date"], jours_travailles(ctx))
     if rech:
         L += ["- Cartes existantes à revoir, signalées au debrief (paquet filtré, “replanifier” **coché**) :",
               "```", rech, "```"]

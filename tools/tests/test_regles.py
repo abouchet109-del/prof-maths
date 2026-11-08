@@ -896,3 +896,285 @@ def test_marge_negative_annales_jamais_coupees_et_ouvertes_plus_tot():
     # le reste à faire ne contient que annales, vital et important : secondaire et exotique sont hors périmètre
     assert set(p2["bilan"]["par"]["topologie"]) == {"annales", "vital", "important"}
     assert p2["bilan"]["par"]["topologie"]["annales"] == 80                  # les deux annales, y compris l examen blanc
+
+
+# ================================================= modèle de compréhension (comprehension.yaml)
+def comp(**entrees):
+    """comprehension.yaml minimal : nom -> niveau, ou dict d'entrée complet."""
+    return {"notions": {k: ({"niveau": v, "maj": "2026-11-04"} if isinstance(v, str) else {"maj": "2026-11-04", **v})
+                        for k, v in entrees.items()}, "style": []}
+
+
+def ctx_comp(comprehension, **kw):
+    """Topologie 1.1 / 1.2 / 1.3 (bloc : 1.3 après 1.1 et 1.2 acquis) + une notion par sous-chapitre."""
+    exos = [ex("a1", sc=sc("1.1"), notions=["n-a"]), ex("b1", sc=sc("1.2"), notions=["n-b"]),
+            ex("c1", sc=sc("1.3"), notions=["n-c"]), ex("d1", sc=sc("1.4"), notions=["n-d"])]
+    notions = {k: notion(k, "Chapitre 1 - X", s) for k, s in
+               (("n-a", "1.1"), ("n-b", "1.2"), ("n-c", "1.3"), ("n-d", "1.4"), ("n-c2", "1.3"))}
+    for n in notions.values():
+        n["titre"] = "Titre " + n["id"]
+    return ctx(exos, [res("2026-11-04", "a1"), res("2026-11-04", "b1")], notions=notions,
+               cartes=[carte("cA", "n-a"), carte("cC", "n-c")], comprehension=comprehension, **kw)
+
+
+def now(c, d=D(2026, 11, 5)):
+    p = P.plan_jour(c, d)
+    return P.rediger(c, p, P.anki(c, p)), p
+
+
+def section(L, titre="## À consolider"):
+    """Lignes de la section `titre`, jusqu'au titre suivant (sans la ligne vide finale)."""
+    i = L.index(titre) + 1      # le titre suivant est « ## Cours (30 min) » etc.
+    j = next(k for k in range(i, len(L)) if L[k].startswith("## "))
+    return L[i:j - 1]
+
+
+# ---- (a) section « À consolider »
+def test_a_consolider_absente_si_vide_et_comportement_inchange():
+    L0, p0 = now(ctx_comp(None))
+    assert p0["sous_chapitre"] == sc("1.3") and "## À consolider" not in L0
+    for vide in ({"notions": {}, "style": []}, comp(**{"n-a": "tenue", "n-c": "reliee"})):
+        L, _ = now(ctx_comp(vide))
+        assert L == L0
+
+
+def test_a_consolider_juste_avant_le_cours_et_filtre_par_sous_chapitre():
+    c = ctx_comp(comp(**{"n-a": {"niveau": "fragile", "vision": "ses mots"}, "n-c": "recitee",
+                         "n-d": "fragile",                        # 1.4 : après le bloc
+                         "n-b": "tenue"}))                        # ni faible ni à consolider
+    L, _ = now(c)
+    cours = next(i for i, x in enumerate(L) if x.startswith("## Cours"))
+    assert L.index("## À consolider") + len(section(L)) + 2 == cours                 # juste avant le cours
+    bloc = "\n".join(section(L))
+    assert "`n-a`" in bloc and "`n-c`" in bloc and "n-d" not in bloc and "n-b" not in bloc
+    assert "· fragile · ses mots ·" in bloc and "f.pdf p.1" in bloc
+
+
+def test_a_consolider_ordre_plafond_et_vision_ou_confusion():
+    ouverte = [{"date": "2026-11-01", "texte": "vieille", "statut": "ouverte"},
+               {"date": "2026-11-03", "texte": "récente", "statut": "ouverte"}]
+    extra = {f"x{i}": {**notion(f"x{i}", "Chapitre 1 - X", "1.1"), "titre": f"x{i}"} for i in range(5)}
+    c = ctx_comp(comp(**{"n-a": {"niveau": "fragile", "vision": "ses mots"},
+                         "n-b": {"niveau": "tenue", "confusions": ouverte, "vision": "ignorée"},   # confusion ouverte : en tête
+                         "n-c": "recitee"}, **{k: "fragile" for k in extra}))
+    c["notions"].update(extra)
+    bloc = section(now(c)[0])
+    assert len(bloc) == 6 and bloc[0].startswith("- `n-b`") and "récente" in bloc[0]
+    assert "vieille" not in bloc[0] and "ignorée" not in bloc[0]
+    assert bloc[1].startswith("- `n-c`")                         # recitee avant fragile
+    assert bloc[-1] == "- + 3 autres"                           # 8 notions à consolider, 5 lignes
+    c["notions"]["n-b"]["titre"] = "T" * 300
+    assert all(len(x) <= 162 for x in section(now(c)[0]))        # "- " + 160
+
+
+def test_a_consolider_prerequis_inconnu_rattache_d_une_autre_matiere():
+    c = ctx_comp(comp(**{"m-p": "inconnue", "m-p2": "fragile"}))
+    for k in ("m-p", "m-p2"):         # prérequis de mesure, requis par une notion du 1.3 de topologie
+        c["notions"][k] = {**notion(k, "Chapitre 5 - Y", "5.1", "mesure"), "type": "prerequis", "requis_par": ["n-c"]}
+    bloc = "\n".join(section(now(c)[0]))
+    assert "`m-p`" in bloc and "m-p2" not in bloc                # seul l'inconnue est rattaché hors matière
+
+
+# ---- (b) cartes
+def test_b_cartes_des_notions_faibles_reviennent_une_fois():
+    c = ctx_comp(comp(**{"n-a": "fragile", "n-b": "tenue", "n-c": "inconnue"}))
+    c["cartes"] += [carte("cB", "n-b")]
+    c["couverture"] = {"n-a": {"statut": "couverte", "notes": [42]}}
+    faits = P.jours_travailles(c)
+
+    def rech(d, faits=faits):
+        return P.recherche_a_revoir(c["a_revoir"] + P.entrees_faibles(c), d, faits)
+    assert rech("2026-11-04") == ""                              # maj < d exigé
+    assert rech("2026-11-05") == '(nid:42 or "Id:cA")'          # faible : oui ; tenue, inconnue : non
+    c["a_revoir"] = [{"pour": "2026-11-05", "id": "cB", "nid": 42}]
+    assert rech("2026-11-05") == '(nid:42 or "Id:cB" or "Id:cA")'   # fusion sans doublon
+    c["a_revoir"] = []
+    assert rech("2026-11-09", {"2026-11-05"}) == ""              # un jour travaillé entre maj et d consomme l'entrée
+    assert rech("2026-11-05", {"2026-11-05"}) != ""              # le jour travaillé n'est pas avant d
+    def revoir(L):
+        return "\n".join(section(L, "## Anki — à réviser"))
+    assert '"Id:cA"' in revoir(now(c)[0])
+    c["resultats"].append(res("2026-11-05", "zz", "aide"))
+    assert '"Id:cA"' not in revoir(now(c, D(2026, 11, 6))[0])
+    # une notion faible non retravaillée ne repasse qu'une fois mais reste listée dans « À consolider »
+    assert "`n-a`" in "\n".join(section(now(c, D(2026, 11, 6))[0]))
+    # une confusion ouverte rend faible une notion tenue
+    c["comprehension"]["notions"]["n-b"]["confusions"] = [{"date": "2026-11-04", "texte": "t", "statut": "ouverte"}]
+    assert any(e.get("id") == "cB" for e in P.entrees_faibles(c))
+
+
+def test_b_cartes_nouvelles_d_un_prerequis_inconnu_apres_les_prioritaires_avant_les_dues():
+    c = ctx_cartes(dispo={"cartes_par_jour": 100})
+    for k in ("m-p", "m-q"):
+        c["notions"][k] = {**notion(k, "Chapitre 9 - Y", "9.1", "mesure"), "type": "prerequis", "requis_par": ["n-d"]}
+    c["cartes"] += [carte("pM", "m-p"), carte("pQ", "m-q")]
+    c["comprehension"] = comp(**{"m-p": "inconnue", "m-q": "fragile"})
+    p = P.plan_jour(c, D(2026, 11, 4))
+    sortie = anki_ids(c, p)
+    assert sortie[:4] == ["eT", "eM", "pM", "rev"]               # erreurs, prérequis inconnue, puis a_revoir
+    assert "pQ" not in sortie[:5]                                # fragile : pas de priorité
+    c["dispo"]["cartes_par_jour"] = 3
+    assert anki_ids(c, p) == ["eT", "eM", "pM"]                  # plafond inchangé
+
+
+# ---- (c) exercices
+def test_c_exercices_sur_notion_faible_prioritaires_dans_reprises_et_bloc():
+    exos = [ex("e1", sc=sc("1.1"), notions=["n-a"]), ex("e2", sc=sc("1.1"), notions=["n-b"]),
+            ex("e3", sc=sc("1.1"), imp="important", notions=["n-c"]),
+            ex("e4", sc=sc("1.2"), notions=["n-a"]), ex("e5", sc=sc("1.2"), notions=[])]
+    dispo = {"minutes_exercices_jour": 100}
+    assert ids(P.plan_jour(ctx(exos, dispo=dispo), D(2026, 11, 4))) == ["e1", "e2", "e3", "e4", "e5"]
+    for niveau in ("recitee", "fragile"):         # recitee compte comme faible aussi pour les exercices
+        c = ctx(exos, dispo=dispo, comprehension=comp(**{"n-b": niveau}))
+        assert ids(P.plan_jour(c, D(2026, 11, 4))) == ["e2", "e1", "e3", "e4", "e5"]   # dans le sous-chapitre seulement
+    c = ctx(exos, dispo=dispo, comprehension=comp(**{"n-b": "tenue", "n-a": "inconnue"}))
+    assert ids(P.plan_jour(c, D(2026, 11, 4))) == ["e1", "e2", "e3", "e4", "e5"]
+    # catégorie : la prioritaire important passe avant les non prioritaires vitales du même sous-chapitre
+    # (confusion ouverte sur une notion tenue = faible)
+    ouv = {"niveau": "tenue", "confusions": [{"date": "2026-11-01", "texte": "t", "statut": "ouverte"}]}
+    c = ctx(exos, dispo=dispo, comprehension=comp(**{"n-c": ouv}))
+    assert ids(P.plan_jour(c, D(2026, 11, 4))) == ["e3", "e1", "e2", "e4", "e5"]
+    # reprises : à revoir d'abord, puis prioritaires, puis la plus en retard ; plafond inchangé
+    r = [res("2026-11-01", "e1", "aide"), res("2026-11-02", "e2", "aide"), res("2026-11-03", "e4", "aide")]
+    c = ctx(exos, r, dispo={**dispo, "minutes_reprises_max": 20}, comprehension=comp(**{"n-a": "fragile"}))
+    reprises = lambda c: [e["id"] for e, g in P.plan_jour(c, D(2026, 11, 20))["items"] if g == "reprise"]  # noqa: E731
+    assert reprises(c) == ["e1", "e4"]                           # e4 prioritaire passe avant e2, plus en retard
+    c["comprehension"] = None
+    assert reprises(c) == ["e1", "e2"]
+
+
+def test_c_annale_jamais_deplacee_par_la_priorite():
+    def plan(comprehension):
+        exos = [ex("e1", sc=sc("1.1"), notions=["n-a"]), annale_sc("an24", "2024", sc("1.1")),
+                annale_sc("an23", "2023", sc("1.1"))]
+        for e in exos[1:]:
+            e["notions"] = ["n-a"]
+        c = ctx(exos, comprehension=comprehension, dispo={"annales_libres_des": "2026-11-01"})
+        return [(e["id"], g.split()[0]) for e, g in P.plan_jour(c, D(2026, 11, 4))["items"]]
+    assert plan(None) == [("an23", "annale"), ("e1", "bloc")]
+    assert plan(comp(**{"n-a": "fragile"})) == plan(None)       # annale ni retirée ni déplacée
+
+
+# ---- (d) prérequis multi-matières
+def ctx_multi(**kw):
+    exos = [ex("t1", sc=sc("2.3", 2), notions=["t-n"]),
+            ex("m1", "mesure", sc=sc("1.2"), notions=["m-n1"]), ex("m2", "mesure", sc=sc("1.3"), notions=["m-n2"]),
+            ex("m3", "mesure", sc=sc("1.4"), notions=["m-n3"])]
+    pre = {**notion("topo-p", "Chapitre 2 - X", "2.3"), "type": "prerequis", "requis_par": ["m-n2", "m3", "m-n3"]}
+    notions = {"t-n": notion("t-n", "Chapitre 2 - X", "2.3"), "topo-p": pre,
+               "m-n1": notion("m-n1", "Chapitre 1 - X", "1.2", "mesure"),
+               "m-n2": notion("m-n2", "Chapitre 1 - X", "1.3", "mesure"),
+               "m-n3": notion("m-n3", "Chapitre 1 - X", "1.4", "mesure")}
+    cartes = [carte("cm1", "m-n1"), carte("cm2", "m-n2"), carte("cm3", "m-n3"), carte("ct", "t-n"), carte("cp", "topo-p")]
+    return ctx(exos, notions=notions, cartes=cartes, dispo={"cartes_par_jour": 100}, **kw)
+
+
+def test_d_prerequis_servi_aussi_au_premier_sous_chapitre_de_chaque_matiere_qui_l_exige():
+    c = ctx_multi()
+    # m-n2 (1.3) avant m3 et m-n3 (1.4) : un seul rattachement dans mesure
+    assert P.prerequis_par_sc(c, "mesure") == {sc("1.3"): ["topo-p"]}
+    assert P.prerequis_par_sc(c, "topologie") == {sc("2.3", 2): ["topo-p"]}
+    assert P.prerequis_par_sc(c, "proba") == {}
+    # notions_sc : avant les notions du poly, dans la matière qui l'exige
+    assert P.notions_sc(c, c["exercices"], "mesure", sc("1.3")) == ["topo-p", "m-n2"]
+    assert P.notions_sc(c, c["exercices"], "mesure", sc("1.4")) == ["m-n3"]
+    assert P.notions_sc(c, c["exercices"], "topologie", sc("2.3", 2)) == ["topo-p", "t-n"]
+    # ordre_cartes : en bloc mesure, la carte du prérequis sort avant celles du poly du 1.3, mais après le 1.2
+    c["exercices"] = [e for e in c["exercices"] if e["matiere"] == "mesure"]
+    p = P.plan_jour(c, D(2026, 11, 4))
+    assert p["matiere"] == "mesure" and p["sous_chapitre"] == sc("1.2")
+    assert anki_ids(c, p) == ["cm1", "cp", "cm2", "cm3"]         # pas de doublon, pas en tête de matière
+    # anciennes notes
+    c["couverture"] = {"topo-p": {"statut": "couverte", "notes": [7]}, "m-n2": {"statut": "couverte", "notes": [8]},
+                       "m-n1": {"statut": "couverte", "notes": [6]}}
+    assert P.anciennes_notes(c, {**p, "sous_chapitre": sc("1.3")}) == [7, 8]
+    # notions_des_exercices : une notion du cours du jour requise (même sans exercice du jour qui la cite)
+    p13 = {**p, "sous_chapitre": sc("1.3"), "items": [], "info": {"minutes_cours": 30}}
+    assert P.notions_des_exercices(c, p13) == {"topo-p"}
+    assert P.notions_des_exercices(c, {**p13, "sous_chapitre": sc("1.2")}) == set()
+    # ... ou une notion des exercices du jour
+    assert P.notions_des_exercices(c, {"items": [(c["exercices"][1], "bloc")]}) == {"m-n2", "topo-p"}
+
+
+# ---- (e) check.py
+def depot_comp(tmp_path, comprehension):
+    import yaml
+    for m in E.MATIERES:
+        (tmp_path / "matieres" / m).mkdir(parents=True, exist_ok=True)
+    (tmp_path / "state").mkdir(exist_ok=True)
+
+    def ecrire(chemin, d):
+        (tmp_path / chemin).write_text(yaml.safe_dump(d, allow_unicode=True), encoding="utf-8")
+    e = {**ex("topologie-1", sc=sc("1.1")), "sources": [{}]}
+    e.pop("matiere")
+    ecrire("state/dispo.yaml", ctx([])["dispo"])
+    ecrire("state/resultats.yaml", [])
+    ecrire("matieres/topologie/exercices.yaml", [e])
+    ecrire("matieres/topologie/notions.yaml", [{"id": f"topo-n-000{i}", "type": "definition", "titre": "t", "enonce": "e",
+                                                "chapitre": "Chapitre 1 - X", "sous_chapitre": "1.1"} for i in (1, 2)])
+    if comprehension is not None:
+        ecrire("state/comprehension.yaml", comprehension)
+    elif (tmp_path / "state" / "comprehension.yaml").exists():
+        (tmp_path / "state" / "comprehension.yaml").unlink()
+
+
+def comp_valide():
+    return {"notions": {"topo-n-0001": {
+        "niveau": "reliee", "vision": "v", "maj": "2026-11-08",
+        "liens": [{"vers": "topo-n-0002", "texte": "t"}], "liens_manquants": [{"vers": "topo-n-0002", "texte": "t"}],
+        "confusions": [{"date": "2026-11-08", "texte": "t", "statut": "reparee"}],
+        "preuves": [{"date": "2026-11-08", "source": "exercice", "exercice": "topologie-1", "extrait": "x",
+                     "verdict": "juste"}]}},
+        "style": ["a"]}
+
+
+def test_e_check_comprehension(tmp_path):
+    import copy
+    import check as C
+    depot_comp(tmp_path, None)
+    assert C.verifier(tmp_path) == []                            # fichier absent
+    depot_comp(tmp_path, {"notions": {}, "style": []})
+    assert C.verifier(tmp_path) == []
+    depot_comp(tmp_path, comp_valide())
+    assert C.verifier(tmp_path) == []
+
+    def modif(f):
+        d = copy.deepcopy(comp_valide())
+        f(d, d["notions"]["topo-n-0001"])
+        return d
+    cas = [(lambda d, n: d.pop("style"), "racine"),
+           (lambda d, n: d.update(autre=1), "racine"),
+           (lambda d, n: d.update(notions=[]), "dictionnaire"),
+           (lambda d, n: d.update(style=["x"] * 7), "style"),
+           (lambda d, n: d.update(style=[1]), "style"),
+           (lambda d, n: d["notions"].update({"inconnue-id": dict(n)}), "notion inconnue"),
+           (lambda d, n: n["liens"].append({"vers": "nope"}), "notion inconnue (nope)"),
+           (lambda d, n: n["liens_manquants"].append({"vers": "topo-n-0001"}), "elle-même"),
+           (lambda d, n: n.update(niveau="parfait"), "niveau invalide"),
+           (lambda d, n: n["confusions"][0].update(statut="fermee"), "statut invalide"),
+           (lambda d, n: n["preuves"][0].update(source="reve"), "source invalide"),
+           (lambda d, n: n["preuves"][0].update(verdict="bof"), "verdict invalide"),
+           (lambda d, n: n["preuves"][0].update(exercice="zzz"), "exercice inconnu"),
+           (lambda d, n: n.update(maj="08/11/2026"), "date invalide"),
+           (lambda d, n: n.update(maj="2026-13-45"), "date invalide"),
+           (lambda d, n: n["confusions"][0].update(date="hier"), "date invalide"),
+           (lambda d, n: n["preuves"][0].update(date="2026-11-8"), "date invalide"),
+           (lambda d, n: n.update(maj="2999-01-01"), "futur"),
+           (lambda d, n: n["preuves"][0].update(date="2999-01-01"), "futur"),
+           (lambda d, n: n.update(preuves=n["preuves"] * 7), "plus de 6 preuves"),
+           (lambda d, n: n.update(confusions=n["confusions"] * 9), "plus de 8 confusions"),
+           (lambda d, n: n["preuves"][0].update(extrait="x" * 161), "160"),
+           (lambda d, n: n["confusions"][0].update(statut="ouverte"), "confusion ouverte"),
+           (lambda d, n: (n.update(niveau="tenue"), n["confusions"][0].update(statut="ouverte")), "confusion ouverte"),
+           (lambda d, n: n.update(liens=[]), "sans `liens`")]
+    for f, attendu in cas:
+        depot_comp(tmp_path, modif(f))
+        assert any(attendu in x for x in C.verifier(tmp_path)), attendu
+    # limites acceptées : 6 preuves, 8 confusions, extrait de 160 caractères, tenue sans liens
+    depot_comp(tmp_path, modif(lambda d, n: (
+        n.update(preuves=n["preuves"] * 6, confusions=n["confusions"] * 8, niveau="tenue", liens=[]),
+        n["preuves"][0].update(extrait="x" * 160))))
+    assert C.verifier(tmp_path) == []
+    # fragile avec confusion ouverte : valide
+    depot_comp(tmp_path, modif(lambda d, n: (n.update(niveau="fragile"), n["confusions"][0].update(statut="ouverte"))))
+    assert C.verifier(tmp_path) == []
