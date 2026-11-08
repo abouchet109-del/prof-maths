@@ -27,12 +27,11 @@ Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes
 
 ## Anki — à apprendre (20 nouvelles + 10 anciennes)
 ```
-("Id:topo-e001" or "Id:topo-e002" or "Id:topo-e004" or "Id:ex-topo-td1-ex04" or "Id:ex-topo-td1-ex06" or "Id:mesure-e001" or "Id:mesure-e003" or "Id:ex-mes-cc1-2324-ex02" or "Id:ex-pro-par2425-ex02" or "Id:topo-a-037-1" or "Id:topo-a-037-2" or "Id:topo-a-038-1" or "Id:topo-a-038-2" or "Id:topo-a-001-1" or "Id:topo-a-001-2" or "Id:topo-a-001-3" or "Id:topo-a-001-4" or "Id:topo-a-003-1" or "Id:topo-a-003-2" or "Id:topo-a-003-3" or nid:1786448736462,1786448354098,1786448903783,1786448927718,1786466066522,1772647483015,1770140867658,1786448444687,1786448433279,1786441932447) is:new
+("Id:topo-e001" or "Id:topo-e002" or "Id:topo-e003" or "Id:topo-e004" or "Id:ex-topo-td1-ex04" or "Id:ex-topo-td1-ex06" or "Id:mesure-e001" or "Id:mesure-e002" or "Id:mesure-e003" or "Id:ex-mes-cc1-2324-ex02" or "Id:ex-pro-par2425-ex02" or "Id:topo-a-037-1" or "Id:topo-a-037-2" or "Id:topo-a-038-1" or "Id:topo-a-038-2" or "Id:topo-a-001-1" or "Id:topo-a-001-2" or "Id:topo-a-001-3" or "Id:topo-a-001-4" or "Id:topo-a-002-1" or nid:1786448736462,1786448354098,1786448903783,1786448927718,1786466066522,1772647483015,1770140867658,1786448444687,1786448433279,1786441932447) is:new
 ```
 
 ## Anki — à réviser
 - Toutes les cartes dues : `is:due`
-- Déjà données, liées aux exercices du jour (1) : `"Id:mesure-e002"`
 
 ## Échéance
 - Restant : 6975 min ; capacité jusqu'au 2027-01-03 : 8280 min ; marge : 1305 min.

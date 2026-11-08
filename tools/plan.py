@@ -325,6 +325,11 @@ def sc_precedents(ctx, plan) -> list[str]:
     return [s for s in _sc_matiere(ctx, plan) if E.cle_sc(s) < E.cle_sc(plan["sous_chapitre"])]
 
 
+def jours_travailles(ctx) -> set[str]:
+    """Dates (AAAA-MM-JJ) où au moins un résultat d'exercice est enregistré."""
+    return {str(E.en_date(r["date"])) for r in ctx.get("resultats") or []}
+
+
 def anciennes_notes(ctx, plan) -> list[int]:
     """Anciennes notes de l'utilisateur (couverture.yaml) des notions du sous-chapitre du bloc, au plus
     ANCIENNES_MAX, hors plafond `cartes_par_jour`. Le paquet L3 n'a aucune nouvelle carte par jour : sans
@@ -333,7 +338,9 @@ def anciennes_notes(ctx, plan) -> list[int]:
     if not plan["sous_chapitre"]:
         return []
     d = str(plan["date"])
-    avant = {int(n) for k, ns in (ctx.get("anciennes_donnees") or {}).items() if str(k) < d for n in ns}
+    faits = jours_travailles(ctx)
+    avant = {int(n) for k, ns in (ctx.get("anciennes_donnees") or {}).items() if str(k) < d and str(k) in faits
+             for n in ns}
     bloc = {e["id"] for e, g in plan["items"] if g == "bloc"}
     cou = ctx.get("couverture") or {}
     res: list[int] = []
@@ -352,7 +359,9 @@ def anki(ctx, plan) -> dict:
     suivants de la même matière ; plafond `cartes_par_jour`."""
     d = str(plan["date"])
     # Seuls les jours passés comptent : une entrée d'un jour futur vient d'un plan régénéré depuis, elle est caduque.
-    avant = {i for k, ids in ctx["anki_plan"].items() if str(k) < d for i in ids}
+    # … et seulement les jours travaillés (un résultat enregistré) : les cartes d'un jour sauté reviennent.
+    faits = jours_travailles(ctx)
+    avant = {i for k, ids in ctx["anki_plan"].items() if str(k) < d and str(k) in faits for i in ids}
     notions_jour = {n for e, _ in plan["items"] for n in e.get("notions") or []}
     libres = [c for c in ctx["cartes"] if c["id"] not in avant]
     ordre = [c for c in libres if TAGS_PRIORITAIRES & set(c.get("tags") or [])]

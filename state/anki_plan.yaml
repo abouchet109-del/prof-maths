@@ -27,10 +27,12 @@
 '2026-11-08':
 - topo-e001
 - topo-e002
+- topo-e003
 - topo-e004
 - ex-topo-td1-ex04
 - ex-topo-td1-ex06
 - mesure-e001
+- mesure-e002
 - mesure-e003
 - ex-mes-cc1-2324-ex02
 - ex-pro-par2425-ex02
@@ -42,6 +44,4 @@
 - topo-a-001-2
 - topo-a-001-3
 - topo-a-001-4
-- topo-a-003-1
-- topo-a-003-2
-- topo-a-003-3
+- topo-a-002-1

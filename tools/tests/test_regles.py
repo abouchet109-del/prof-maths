@@ -411,6 +411,9 @@ def test_cartes_jamais_donnees_deux_fois_et_replanification_stable():
     assert jour1 == ["eT", "eM", "rev", "cA1"]
     c["anki_plan"] = {"2026-11-04": jour1}
     assert anki_ids(c, p) == jour1                                  # même date : identique
+    # jour non travaillé (aucun résultat le 04) : ses cartes reviennent le lendemain
+    assert anki_ids(c, P.plan_jour(c, D(2026, 11, 5))) == jour1
+    c["resultats"] = [res("2026-11-04", "zz", "aide")]
     jour2 = anki_ids(c, P.plan_jour(c, D(2026, 11, 5)))
     assert not set(jour1) & set(jour2) and jour2 == ["cA2", "cA3", "cB1", "cB2"]
 
@@ -428,6 +431,7 @@ def test_cartes_exercice_passent_avec_les_erreurs_avant_le_bloc():
     c["dispo"]["cartes_par_jour"] = 3
     assert anki_ids(c, p) == ["eT", "eM", "xT"]                     # plafond : le bloc passe après
     c["anki_plan"] = {"2026-11-04": ["eT", "eM", "xT"]}
+    c["resultats"] = [res("2026-11-04", "zz", "aide")]
     assert "xT" not in anki_ids(c, P.plan_jour(c, D(2026, 11, 5)))  # donnée une seule fois
 
 
@@ -484,6 +488,7 @@ def test_anciennes_notes_du_bloc_hors_plafond_et_sans_repetition():
     c["anki_plan"] = {}
     # le lendemain : les notes déjà données ne reviennent pas, les suivantes prennent leur place
     c["anciennes_donnees"] = {"2026-11-04": a["anciennes"]}
+    c["resultats"] = [res("2026-11-04", "zz", "aide")]
     assert P.anki(c, p)["anciennes"] == a["anciennes"]                       # même date : identique
     assert P.anki(c, P.plan_jour(c, D(2026, 11, 5)))["anciennes"] == [202, 203]
     # jour off ou sans couverture : rien
