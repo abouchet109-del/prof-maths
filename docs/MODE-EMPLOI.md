@@ -23,8 +23,8 @@
 4. **Cours (30 min) :** les notions indiquées, aux pages données. Pour réviser tout un sujet, coller la recherche « tout le sujet du jour » dans un paquet filtré, en décochant « replanifier les cartes selon mes réponses ».
 5. **Exercices (2 h) :** dans l'ordre de la liste ; le PDF et la page sont indiqués. En cas de blocage, demande à Claude : aide graduée (une question qui oriente, la méthode, l'étape clé, la solution). Dès le premier indice, l'exercice compte comme `aide`.
 6. **Pour finir (10-15 min) :** dire « debrief » (ou « log rapide : … » les soirs de fatigue, 2 fois par semaine au plus), dans la même conversation.
-   - Donner le résultat de chaque exercice et répondre à 3 à 5 questions de compréhension.
-   - Le debrief crée des cartes sur tes erreurs (et une carte d'exercice pour chaque exercice non réussi seul), écrit le **bilan réel** dans le journal (prévu contre fait, cartes apprises, marge) et fait le commit.
+   - Donner le résultat de chaque exercice ; Claude évalue ta compréhension de chaque notion travaillée d'après ce que tu as dit en séance (au plus 3 questions là où il lui manque de quoi juger) et met à jour `state/comprehension.yaml`, qui oriente les cartes, les exercices et ses explications des jours suivants.
+   - Le debrief crée une carte d'exercice pour chaque exercice non réussi seul (et une carte de prérequis si un point de L1-L2 te manque), écrit le **bilan réel** dans le journal (prévu contre fait, cartes apprises, marge) et fait le commit.
    - Il ne prépare pas la suite : le plan suivant se calcule au prochain « on commence ».
 7. **Synchronise Anki** avant de fermer.
 

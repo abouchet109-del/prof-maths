@@ -446,3 +446,71 @@
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [exercice]
+- id: ex-mes-td2-ex01
+  exercice: mes-td2-ex01
+  notion: mesure-n-0011
+  recto: |-
+    <b>Exo mes-td2-ex01 : Tribu engendrée par une partie</b><br>
+    Soit \(E\) un ensemble et \(B\subset E\) une partie de \(E\).<br>
+    1. Déterminer \(\sigma(\{B\})\).<br>
+    2. Montrer que \(\mathcal A:=\{A\subset E : B\subset A \text{ ou } B\cap A=\emptyset\}\) est une tribu sur \(E\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(\sigma(\{B\})\) est la plus petite tribu contenant \(B\) : \(\{\emptyset,B,B^c,E\}\). Pour \(\mathcal A\), on vérifie les trois axiomes (\(\emptyset\), complémentaire, réunion dénombrable) en disjoignant les cas « \(B\subset A\) » et « \(B\cap A=\emptyset\) ».<br>
+    <b>Correction :</b><br>
+    1. \(\sigma(\{B\})=\{\emptyset,B,B^c,E\}\). Justification (le corrigé donne seulement le résultat) : toute tribu contenant \(B\) contient \(B^c\), \(\emptyset\) et \(E\) ; et \(\{\emptyset,B,B^c,E\}\) est bien une tribu (stable par complémentaire, et toute réunion de ses éléments est l'un d'eux, car \(B\cup B^c=E\)). C'est donc la plus petite.<br>
+    2. Montrons que \(\mathcal A\) est une tribu sur \(E\).<br>
+    (i) \(\emptyset\in\mathcal A\) car \(B\cap\emptyset=\emptyset\).<br>
+    (ii) Soit \(A\in\mathcal A\). Si \(B\subset A\), alors \(B\cap A^c=\emptyset\), donc \(A^c\in\mathcal A\). Sinon, \(B\cap A=\emptyset\) (car \(A\in\mathcal A\)), donc \(B\subset A^c\), et \(A^c\in\mathcal A\). Dans tous les cas, \(A^c\in\mathcal A\).<br>
+    (iii) Soit \((A_n)_{n\in\mathbb N}\) une suite d'éléments de \(\mathcal A\). S'il existe \(n_0\) tel que \(B\subset A_{n_0}\), alors \(B\subset\bigcup_n A_n\), donc \(\bigcup_n A_n\in\mathcal A\). Sinon, pour tout \(n\), \(B\not\subset A_n\), donc \(B\cap A_n=\emptyset\) (car \(A_n\in\mathcal A\)), et \(B\cap\bigcup_n A_n=\bigcup_n(B\cap A_n)=\emptyset\) : \(\bigcup_n A_n\in\mathcal A\). Dans tous les cas, \(\bigcup_n A_n\in\mathcal A\).<br>
+    Ainsi \(\mathcal A\) est une tribu sur \(E\). Comme \(B\in\mathcal A\) (\(B\subset B\)), on a \(\sigma(\{B\})\subset\mathcal A\).<br>
+    <b>Piège :</b> l'inclusion est \(\sigma(\{B\})\subset\mathcal A\), jamais \(\mathcal A\subset\sigma(\{B\})\) : pour \(E=\{1,2,3\}\) et \(B=\{1\}\), on trouve \(\mathcal A=\mathcal P(E)\), strictement plus grande que \(\sigma(\{B\})\) (8 éléments contre 4). Rédiger aussi la conclusion de la question 1 (la phrase « c'est la plus petite tribu contenant \(B\) »). Pour (iii), le cas « sinon » repose sur \(A_n\in\mathcal A\) pour tout \(n\) : c'est ce qui donne \(B\cap A_n=\emptyset\).
+  source: 'Énoncé : mesure/td/td2-corrige.pdf p.1 (Ex 1). Corrigé officiel : mesure/td/td2-corrige.pdf p.1 (justification de la question 1 ajoutée). Erreurs de la séance du 2026-11-04.'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exercice]
+- id: ex-mes-td3-ex04
+  exercice: mes-td3-ex04
+  notion: mesure-n-0022
+  recto: |-
+    <b>Exo mes-td3-ex04 : Ensembles de convergence d'une suite de fonctions mesurables</b><br>
+    Soient \((E,\mathcal E)\) un espace mesurable et \((f_n)_{n\in\mathbb N}\) une suite de fonctions mesurables de \((E,\mathcal E)\) dans \((\mathbb R,\mathcal B(\mathbb R))\). Montrer que les ensembles suivants sont dans \(\mathcal E\) :<br>
+    1. \(C_1:=\{x\in E : \text{la suite } (f_n(x))_{n\in\mathbb N} \text{ converge}\}\)<br>
+    2. \(C_2:=\{x\in E : \lim_{n\to+\infty}f_n(x)=+\infty\}\)<br>
+    3. \(C_3:=\{x\in E : \text{la suite } (f_n(x))_{n\in\mathbb N} \text{ est bornée}\}\)<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> écrire la propriété avec des quantificateurs, puis traduire dans l'ordre : \(\forall\to\bigcap\), \(\exists\to\bigcup\), à condition que tous les indices soient dénombrables (donc \(\varepsilon>0\) devient \(1/m\), \(m\in\mathbb N^*\)). Chaque ensemble de base est une image réciproque d'un borélien par une fonction mesurable.<br>
+    <b>Correction :</b><br>
+    1. Comme \(\mathbb R\) est complet, \((f_n(x))\) converge si et seulement si elle est de Cauchy : \(\forall m\ge1,\ \exists N\in\mathbb N,\ \forall p,q\ge N,\ |f_p(x)-f_q(x)|\le\frac1m\). (On remplace \(\varepsilon>0\) par \(1/m\) : tout \(\varepsilon>0\) majore un \(1/m\).) Donc
+    \(C_1=\bigcap_{m\ge1}\bigcup_{N\in\mathbb N}\bigcap_{p,q\ge N}\{x\in E : |f_p(x)-f_q(x)|\le\tfrac1m\}\), avec \(\{|f_p-f_q|\le\tfrac1m\}=(f_p-f_q)^{-1}([-\tfrac1m,\tfrac1m])\in\mathcal E\) : \(f_p-f_q\) est mesurable (Prop. 1.14) et \([-\tfrac1m,\tfrac1m]\) est un borélien. Les intersections et la réunion sont dénombrables (\(m\), \(N\), \((p,q)\in\mathbb N^2\)) et \(\mathcal E\) est une tribu : \(C_1\in\mathcal E\).<br>
+    <i>Variante (notes de TD) :</i> \(C_1=\{\limsup f_n=\liminf f_n\}\cap\{\limsup f_n\in\mathbb R\}\), où \(\limsup f_n\) et \(\liminf f_n\) sont mesurables (Prop. 1.14).<br>
+    2. \(f_n(x)\to+\infty\iff\forall K\in\mathbb N,\ \exists N\in\mathbb N,\ \forall n\ge N,\ f_n(x)>K\) (il suffit de prendre \(K\) entier : un réel \(K'\) est majoré par un entier). Donc
+    \(C_2=\bigcap_{K\in\mathbb N}\bigcup_{N\in\mathbb N}\bigcap_{n\ge N}f_n^{-1}(]K,+\infty[)\in\mathcal E\), car \(f_n\) est mesurable et \(]K,+\infty[\) est un borélien (ouvert).<br>
+    3. \((f_n(x))\) est bornée \(\iff\exists M\in\mathbb N,\ \forall n\in\mathbb N,\ |f_n(x)|\le M\). Donc
+    \(C_3=\bigcup_{M\in\mathbb N}\bigcap_{n\in\mathbb N}f_n^{-1}([-M,M])\in\mathcal E\), car \([-M,M]\) est un borélien et les opérations sont dénombrables.<br>
+    <b>Piège :</b> respecter l'ordre des quantificateurs (\(\forall\exists\forall\to\bigcap\bigcup\bigcap\)) ; ne jamais garder un \(\varepsilon\) réel quelconque, car une tribu n'est stable que par réunion et intersection <i>dénombrables</i> (carte d'erreur mesure-e001). Ne pas laisser la question 3 : elle suit le même schéma (\(\exists M\,\forall n\)).
+  source: 'Énoncé : mesure/td/td3.pdf p.1 (Ex 4). Pas de corrigé officiel : questions 1 et 2 d''après les notes de TD du 20/10/2026 (mesure/notes/td3-2026-10-20.pdf p.1), question 3 (laissée en exercice) rédigée par Claude : vérifiée par Claude, à confirmer ; aucune étape douteuse. Erreurs de la séance du 2026-11-04.'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exercice]
+- id: ex-mes-cc1-2425-ex03
+  exercice: mes-cc1-2425-ex03
+  notion: mesure-n-0008
+  recto: |-
+    <b>Exo mes-cc1-2425-ex03 : Intersection dénombrable de tribus (CC1 2024-25)</b><br>
+    Sur un ensemble \(X\), on considère une famille dénombrable de tribus \((\mathcal T_n)_{n\in\mathbb N}\). Montrer que \(\bigcap_{n\in\mathbb N}\mathcal T_n\) est une tribu. Est-ce que l'hypothèse de dénombrabilité est nécessaire ?<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> vérifier les trois axiomes (\(\emptyset\), complémentaire, réunion dénombrable) pour \(\mathcal T=\bigcap_n\mathcal T_n\), en les vérifiant dans chaque \(\mathcal T_n\) à \(n\) fixé, puis en concluant « pour tout \(n\) ».<br>
+    <b>Correction :</b> soit \(\mathcal T=\bigcap_{n\in\mathbb N}\mathcal T_n\).<br>
+    • \(\emptyset\in\mathcal T_n\) pour tout \(n\) (c'est une tribu), donc \(\emptyset\in\mathcal T\).<br>
+    • Soit \(A\in\mathcal T\). Pour tout \(n\), \(A\in\mathcal T_n\) donc, \(\mathcal T_n\) étant une tribu, \(A^c\in\mathcal T_n\). Comme c'est vrai pour tout \(n\), \(A^c\in\mathcal T\).<br>
+    • Soit \((A_p)_{p\in\mathbb N}\) une famille d'éléments de \(\mathcal T\). Pour tout \(n\) et tout \(p\), \(A_p\in\mathcal T_n\) donc, \(\mathcal T_n\) étant une tribu, \(\bigcup_{p\in\mathbb N}A_p\in\mathcal T_n\). Comme c'est vrai pour tout \(n\), \(\bigcup_pA_p\in\mathcal T\).<br>
+    Donc \(\mathcal T\) est une tribu.<br>
+    Dénombrabilité : l'hypothèse n'est pas nécessaire, car elle n'a servi nulle part. La preuve se fait tribu par tribu (« pour tout \(n\) ») et n'utilise jamais le cardinal de l'ensemble des indices : on pourrait considérer \((\mathcal T_\alpha)_{\alpha\in I}\) avec \(I\) quelconque (par exemple \(I=\mathbb R\)). C'est ce qui permet de définir \(\sigma(\mathcal E)\) comme l'intersection de toutes les tribus contenant \(\mathcal E\).<br>
+    <b>Piège :</b> il y a deux « dénombrable » différents : l'indice \(n\) des tribus et l'indice \(p\) des ensembles \(A_p\) de la réunion (axiome de stabilité par réunion dénombrable). Seul le second compte dans la preuve. Rédiger complètement le troisième axiome (réunion) : \(A_p\in\mathcal T_n\) pour tous \(p\) et \(n\), puis \(\bigcup_pA_p\in\mathcal T_n\) pour chaque \(n\).
+  source: 'Énoncé : uvsq/mesure/Théorie de la mesure/Annales/CC1-2024-2025.pdf p.2 (Ex 3). Corrigé officiel : uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2024-2025.pdf p.3. Erreurs de la séance du 2026-11-04.'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exercice]

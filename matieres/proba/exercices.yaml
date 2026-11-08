@@ -1137,10 +1137,8 @@
   temps_min: 20
   indice_tableur: null
   corrige:
-    statut: officiel
-    ref:
-      fichier: proba/annales/partiel-2024-25-corrige.pdf
-      page: null
+    statut: absent  # le corrigé du partiel 2024-25 ne traite que les ex. 2 et 3 (vérifié le 08/11/2026)
+    ref: null
   qualite_extraction: ok
 - id: pro-par2425-ex02
   titre: Densité 3x^2, A=-log X et polynôme aléatoire

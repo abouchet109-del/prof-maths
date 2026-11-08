@@ -2061,3 +2061,28 @@
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 2
   tags: [prerequis-l1l2, propriete]
+- id: ex-pro-par2425-ex01
+  exercice: pro-par2425-ex01
+  notion: proba-n-0068
+  recto: |-
+    <b>Exo pro-par2425-ex01 : Loi de Poisson, moments et fonction caractéristique (partiel 2024-25, question de cours)</b><br>
+    Soit \(X\) une variable aléatoire suivant une loi de Poisson de paramètre \(\lambda>0\).<br>
+    1. Donner \(\mathbb P(X=k)\) pour tout \(k\in\mathbb N\).<br>
+    2. Justifier que \(X\) admet des moments de tous ordres et calculer \(\mathbb E(X)\) (détailler le calcul).<br>
+    3. Calculer explicitement la fonction caractéristique de \(X\), \(\varphi_X(t)\) (détailler le calcul).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> pour une variable discrète, \(\mathbb E[g(X)]=\sum_{k\ge0}g(k)\,\mathbb P(X=k)\) (formule de transfert). Pour \(\mathbb E(X)\), on simplifie \(k/k!=1/(k-1)!\) puis on reconnaît la série de \(e^\lambda\) ; pour \(\varphi_X\), on regroupe \(e^{itk}\lambda^k=(\lambda e^{it})^k\) et on reconnaît la série de \(e^{z}\) avec \(z=\lambda e^{it}\).<br>
+    <b>Correction :</b><br>
+    1. \(\mathbb P(X=k)=e^{-\lambda}\dfrac{\lambda^k}{k!}\) pour tout \(k\in\mathbb N\).<br>
+    2. <u>Moments.</u> \(X\ge0\) et, pour \(p\in\mathbb N\), \(\mathbb E[X^p]=\sum_{k\ge0}k^p e^{-\lambda}\dfrac{\lambda^k}{k!}\). Pour \(k\ge1\), le terme \(a_k=k^p\lambda^k/k!\) vérifie \(\dfrac{a_{k+1}}{a_k}=\left(\dfrac{k+1}{k}\right)^p\dfrac{\lambda}{k+1}\xrightarrow[k\to+\infty]{}0<1\). Par la règle de d'Alembert, la série converge : \(\mathbb E[X^p]<+\infty\) pour tout \(p\), donc \(X\) admet des moments de tous ordres.<br>
+    <u>Espérance.</u> Le terme \(k=0\) est nul, et pour \(k\ge1\), \(\dfrac{k}{k!}=\dfrac1{(k-1)!}\). Donc
+    \(\mathbb E(X)=\sum_{k\ge1}k\,e^{-\lambda}\dfrac{\lambda^k}{k!}=e^{-\lambda}\sum_{k\ge1}\dfrac{\lambda^k}{(k-1)!}=\lambda e^{-\lambda}\sum_{j\ge0}\dfrac{\lambda^{j}}{j!}=\lambda e^{-\lambda}e^{\lambda}=\lambda\) (changement d'indice \(j=k-1\)).<br>
+    3. Pour \(t\in\mathbb R\), par la formule de transfert (la série converge absolument car \(|e^{itk}|=1\)) :
+    \(\varphi_X(t)=\mathbb E[e^{itX}]=\sum_{k\ge0}e^{itk}e^{-\lambda}\dfrac{\lambda^k}{k!}=e^{-\lambda}\sum_{k\ge0}\dfrac{(\lambda e^{it})^k}{k!}=e^{-\lambda}e^{\lambda e^{it}}=e^{\lambda(e^{it}-1)}\),
+    car \(\sum_{k\ge0}z^k/k!=e^z\) pour tout \(z\in\mathbb C\) (ici \(z=\lambda e^{it}\)).<br>
+    <b>Piège :</b> le moment d'ordre \(p\) est \(\sum k^p\,\mathbb P(X=k)\) (la variable \(k\) est élevée à la puissance \(p\), pas \(x^k\)) ; ne pas oublier que le terme \(k=0\) est nul avant de simplifier \(k/k!\) (la simplification n'est valable que pour \(k\ge1\), d'où le changement d'indice). La définition \(\varphi_X(t)=\mathbb E[e^{itX}]\) et le résultat \(e^{\lambda(e^{it}-1)}\) sont à connaître (carte de cours : Prop. fonction caractéristique de la loi de Poisson).
+  source: 'Énoncé : proba/annales/partiel-2024-25.pdf p.1 (Ex 1). Pas de corrigé officiel pour cet exercice (le corrigé proba/annales/partiel-2024-25-corrige.pdf p.1 commence à l''exercice 2) : solution vérifiée par Claude, à confirmer ; le résultat de la question 3 coïncide avec le poly (proba/cours/poly-probabilites-5.pdf p.36). Erreurs de la séance du 2026-11-04.'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [exercice]

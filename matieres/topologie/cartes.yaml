@@ -783,3 +783,24 @@
   chapitre: 'Chapitre 2 - Espace complet'
   priorite: 2
   tags: [prerequis-l1l2, exemple]
+- id: ex-topo-td1-ex05
+  exercice: topo-td1-ex05
+  notion: topo-n-0014
+  recto: |-
+    <b>Exo topo-td1-ex05 : Complémentaire d'un point ouvert ; tout ensemble est intersection d'ouverts</b><br>
+    Soient \((X,d)\) un espace métrique et \(a\in X\). Montrer que \(X\setminus\{a\}\) est un ouvert et que \(\{a\}\) est un fermé. En déduire que tout ensemble \(A\in\mathcal P(X)\) est une intersection d'ouverts.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> pour \(x\ne a\), la boule \(B(x,d(x,a))\) est dans \(X\setminus\{a\}\) (inégalité stricte). Ensuite, \(A=\bigcap_{a\notin A}(X\setminus\{a\})\) : on retire un à un les points qui ne sont pas dans \(A\).<br>
+    <b>Correction :</b><br>
+    1. <u>\(X\setminus\{a\}\) est ouvert.</u> Soit \(x\in X\setminus\{a\}\) et \(r=d(x,a)\). Comme \(x\ne a\), \(r>0\). Montrons \(B(x,r)\subset X\setminus\{a\}\) : si \(y\in B(x,r)\), alors \(d(x,y)<r=d(x,a)\), donc \(y\ne a\) (sinon on aurait \(d(x,a)<d(x,a)\)). Chaque point de \(X\setminus\{a\}\) a donc une boule ouverte incluse dans \(X\setminus\{a\}\) : c'est un ouvert.<br>
+    2. <u>\(\{a\}\) est fermé</u> car son complémentaire \(X\setminus\{a\}\) est ouvert.<br>
+    3. <u>Tout \(A\subset X\) est une intersection d'ouverts.</u> Posons \(I=X\setminus A\) et montrons \(A=\bigcap_{a\in I}\left(X\setminus\{a\}\right)\) (chaque \(X\setminus\{a\}\) est ouvert par 1).<br>
+    \(\subset\) : soit \(x\in A\) et \(a\in I\). Alors \(x\ne a\) (car \(x\in A\), \(a\notin A\)), donc \(x\in X\setminus\{a\}\). Ainsi \(x\) est dans tous les \(X\setminus\{a\}\), \(a\in I\).<br>
+    \(\supset\) : soit \(x\) dans l'intersection. Si \(x\notin A\), alors \(x\in I\) et \(x\in X\setminus\{x\}\), ce qui est absurde. Donc \(x\in A\).<br>
+    Cas \(A=X\) : alors \(I=\emptyset\) et l'intersection vide vaut \(X\) par convention ; de toute façon \(X\) est un ouvert, donc c'est l'intersection de la famille \(\{X\}\). Le résultat reste vrai.<br>
+    <b>Piège :</b> ne pas oublier le cas \(A=X\) (famille d'indices vide), ni l'inclusion \(\bigcap\subset A\) (c'est elle qui utilise que \(x\) lui-même est exclu quand \(x\notin A\)). Une intersection <i>infinie</i> d'ouverts n'est pas ouverte en général : par exemple \(\{a\}=\bigcap_{b\ne a}(X\setminus\{b\})\) n'est pas ouvert dans \(\mathbb R\).
+  source: 'Énoncé : topologie/td/td1.pdf p.1 (Ex 5). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer (aucune étape douteuse). Erreurs de la séance du 2026-11-04.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]

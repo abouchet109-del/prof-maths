@@ -115,7 +115,7 @@ Un prérequis L1-L2 (ni au programme d'ECG, ni dans le paquet, ni dans le poly) 
   requis_par: [topo-td4-ex08]      # obligatoire, non vide : exercices (ou notions) qui l'utilisent
 ```
 
-Dans un sous-chapitre, `plan.py` sert les prérequis avant les notions du poly : cartes (`ordre_cartes`), cours du jour, anciennes notes. Une carte prérequis ne sort donc ni avant son sous-chapitre ni en tête de matière. Les exercices du jour qui figurent dans `requis_par` ajoutent la notion aux sujets du jour (cartes à revoir). Un prérequis n'entre dans aucun calcul d'exercices, de marge ou de feuille de route. Pour ajouter un prérequis : l'entrée à la fin de `notions.yaml`, `notion: <id>` sur ses cartes (tag `prerequis-l1l2`), éventuellement `couverture.yaml` pour les anciennes notes qui le couvrent (`anki_connect.py fusionner` les range dans le paquet du chapitre, comme une notion du poly). Le référentiel de ce que l'utilisateur sait : ses paquets ECG `tg::Maths::1ere année` et `tg::Maths::Cours deuxième année`, jamais modifiés.
+Dans un sous-chapitre, `plan.py` sert les prérequis avant les notions du poly : cartes (`ordre_cartes`), cours du jour, anciennes notes. Une carte prérequis ne sort donc ni avant son sous-chapitre ni en tête de matière. Les exercices du jour qui figurent dans `requis_par` ajoutent la notion aux sujets du jour (cartes à revoir) ; une notion de `requis_par`, même d'une autre matière, rattache aussi le prérequis à son sous-chapitre (règle (d) de « Modèle de compréhension »). Un prérequis n'entre dans aucun calcul d'exercices, de marge ou de feuille de route. Pour ajouter un prérequis : l'entrée à la fin de `notions.yaml`, `notion: <id>` sur ses cartes (tag `prerequis-l1l2`), éventuellement `couverture.yaml` pour les anciennes notes qui le couvrent (`anki_connect.py fusionner` les range dans le paquet du chapitre, comme une notion du poly). Le référentiel de ce que l'utilisateur sait : ses paquets ECG `tg::Maths::1ere année` et `tg::Maths::Cours deuxième année`, jamais modifiés.
 
 Règles : une entrée par résultat ou définition nommable. Pas de texte recopié au-delà du nécessaire. Démonstration : une entrée seulement si le cours la présente comme importante ou si la technique est réutilisable. Une page incertaine vaut `page: null`.
 
@@ -165,7 +165,7 @@ Règles de rédaction (format demandé par l'utilisateur le 07/11/2026, celui de
   - verso = l'énoncé du poly recopié fidèlement, avec son cadre et toutes ses hypothèses ;
   - si l'énoncé a plusieurs points, une carte par point, chacune recopiée fidèlement avec son cadre ;
   - une carte `Preuve :` donne l'idée de la preuve du poly en 2 à 5 lignes ;
-- **cartes d'erreurs** (`*-eNNN`, tag `erreur`) et **prérequis** (tag `prerequis-l1l2`) : une question précise au recto, un verso court ;
+- **cartes d'erreurs** (`*-eNNN`, tag `erreur`) et **prérequis** (tag `prerequis-l1l2`) : une question précise au recto, un verso court. Depuis le 08/11/2026, le debrief ne crée plus de carte d'erreur : une confusion va dans `state/comprehension.yaml` et les cartes existantes de la notion repassent ; les cartes d'erreurs déjà créées restent ;
 - maths en MathJax : `\( ... \)` en ligne, `\[ ... \]` en bloc ; pas de liste à apprendre en bloc, la découper ;
 - un théorème : hypothèses complètes et conclusion ; une carte à part pour un contre-exemple ou un piège utile ;
 - rédigée en lisant la source réelle à la page indiquée, jamais de mémoire ; `source` non vide sur chaque carte ;
@@ -199,6 +199,59 @@ Règles :
 - **Rangement :** sous-paquet `tg::Maths::L3 Paris Cité::<matière>::<chapitre>::Exercices` (le nom du chapitre est celui des cartes de cours). Le tag `exercice` reste sur la carte. `check.py` refuse un chapitre que les cartes de cours n'utilisent pas.
 - **Déjà une carte ?** Ne pas en créer une seconde. Si l'erreur du jour est nouvelle, compléter le verso, puis `python -I tools/anki.py --reexporter <id>`. Dans tous les cas, ajouter `{pour: <lendemain>, id: <id>, raison: ...}` à `state/a_revoir.yaml`.
 - **Plan :** `tools/plan.py` donne ces cartes en tête des « à apprendre », avec les cartes d'erreurs (tags `erreur` et `exercice`), avant celles du sous-chapitre du bloc.
+
+## Modèle de compréhension (`state/comprehension.yaml`)
+
+Ce que le système pense que l'utilisateur comprend, notion par notion, d'après ce qu'il **dit** (explications à voix haute, questions, raisonnements en exercice) : c'est la donnée principale, la réponse seule n'en est qu'une partie. Écrit au debrief seulement (jamais pendant la séance), lu par la séance et par `plan.py`. Une entrée n'existe que pour une notion travaillée.
+
+```yaml
+notions:
+  topo-n-0012:                     # id de notions.yaml (notion du poly ou prérequis `-p-`)
+    niveau: fragile                # inconnue|recitee|fragile|tenue|reliee (table ci-dessous)
+    vision: 'Ses mots : « compact = on peut toujours extraire une sous-suite qui converge »'   # 1-2 lignes
+    liens:                         # liens qu'il fait correctement
+      - {vers: topo-n-0010, texte: 'compact ⇒ fermé borné, et il sait pourquoi'}
+    liens_manquants:               # liens utiles qu'il ne fait pas
+      - {vers: topo-n-0015, texte: 'ne voit pas que la réciproque exige la dimension finie'}
+    confusions:
+      - {date: 2026-11-08, texte: 'croit fermé borné ⇒ compact dans tout espace métrique', statut: ouverte}   # ouverte|reparee
+    preuves:                       # 6 au plus, les plus récentes
+      - {date: 2026-11-08, source: cours, extrait: 'a expliqué B-W sans les hypothèses', verdict: partiel}
+      # source : cours|exercice|question (question du debrief) ; verdict : juste|partiel|faux
+      # source exercice : ajouter `exercice: <id>`
+    maj: 2026-11-08
+style:                             # sa façon de raisonner, ce qui marche pour lui : 6 lignes au plus
+  - 'comprend mieux par un contre-exemple que par la preuve'
+```
+
+| Niveau | Preuve qu'il faut (ce qu'il a dit ou fait) |
+|---|---|
+| `inconnue` | il ne sait pas dire ce que c'est ni à quoi ça sert, ou ce qu'il en dit est faux sur le fond |
+| `recitee` | il l'énonce juste (hypothèses comprises), mais ne sait pas dire d'où elle vient ni l'utiliser seul sur un cas nouveau |
+| `fragile` | il l'explique avec ses mots et s'en sert, mais hésite, oublie une hypothèse, a besoin d'une relance, ou une confusion ouverte la touche ; une bonne réponse sur un raisonnement confus est classée ici |
+| `tenue` | « évident, et je sais pourquoi » : il l'explique sans aide, dit d'où elle vient (idée de preuve ou problème qu'elle résout), sait ce qui casse si on retire une hypothèse, et l'applique seul à un cas nouveau ; aucune confusion ouverte |
+| `reliee` | `tenue`, et il la relie correctement à au moins une autre notion (en quoi l'une sert ou entraîne l'autre) ; au moins une entrée dans `liens` |
+
+Règles :
+- **Un niveau ne monte que sur preuve**, comme un exercice. Une explication juste donnée juste après qu'on la lui a enseignée prouve au plus `fragile` : `tenue` exige une preuve **à froid** (explication donnée avant l'enseignement, exercice `reussi` où il l'a mobilisée seul, question du debrief, séance ultérieure).
+- **Un niveau descend dès qu'une preuve le contredit** : une confusion révélée met la notion au plus à `fragile`.
+- Confusion `reparee` seulement sur preuve à froid qu'il raisonne juste sur ce point ; on la garde (historique), 8 confusions au plus par notion (supprimer d'abord les plus anciennes réparées).
+- `vision` : ses mots, pas ceux du poly. `extrait` : une ligne, 160 caractères au plus.
+- Les ids de `liens` et `liens_manquants` (`vers`) sont des notions connues, autres que la notion elle-même.
+
+### Règles pour `plan.py` et `check.py`
+
+Ensembles : **à consolider** = niveau `inconnue`, `recitee` ou `fragile`, ou au moins une confusion `ouverte` ; **faible** = niveau `recitee` ou `fragile`, ou une confusion `ouverte`. Une notion absente de `comprehension.yaml` n'est ni l'un ni l'autre. Sous-chapitre d'une notion : `f"{chapitre} > {sous_chapitre}"` ; d'un exercice : son `sous_chapitre` ; comparaison par `etat.cle_sc`.
+
+**(a) NOW.md, section « À consolider »** (après « Cours », comptée dans les 60 lignes ; omise si vide ou sans matière du bloc). Notions *à consolider* de la matière du bloc dont le sous-chapitre est dans `sc_precedents(ctx, plan) + [plan["sous_chapitre"]]`, plus les prérequis `inconnue` rattachés (règle d) à ces sous-chapitres, quelle que soit leur matière. Ordre : confusion ouverte d'abord, puis niveau (`inconnue`, `recitee`, `fragile`), puis sous-chapitre, puis id. Au plus **5** lignes ; au-delà, une ligne « + k autres ». Une ligne : `` - `<id>` <titre court> · <niveau> · <vision, sinon dernière confusion ouverte> · <fichier> p.<page> ``, ramenée à 160 caractères (`_court`). Pour la séance, la confusion ouverte la plus récente prime sur la vision.
+
+**(b) Cartes.** 1) Les cartes déjà apprises des notions *faibles* reviennent dans « à réviser », comme `a_revoir` (recherche Anki : `"Id:<id>"` des cartes de `cartes.yaml` de `notion:` = la notion, et `nid:` de ses notes dans `couverture.yaml`), **à la première séance après `maj`** : séance du jour `d` telle que `maj < d` et aucun jour travaillé `f` avec `maj < f < d` (même consommation que `a_revoir_dus`, avec `pour` = lendemain de `maj`). Une seule recherche, fusionnée avec celle de `a_revoir`, sans doublon. 2) Dans `ordre_cartes`, les cartes nouvelles (`libres`) d'un prérequis `inconnue` passent juste après les cartes à tags prioritaires (`erreur`, `exercice`), avant les `a_revoir` dues, quelle que soit la matière du bloc ; le plafond `cartes_par_jour` est inchangé.
+
+**(c) Exercices.** Un exercice est *prioritaire* si l'une de ses `notions` est *faible*. Reprises : clé de tri `(etat != "a_revoir", non prioritaire, du, ordre)`, plafond `minutes_reprises_max` inchangé. Bloc (`candidats_bloc`) : à l'intérieur de chaque sous-chapitre seulement, clé `(non prioritaire, catégorie, ordre)` ; l'ordre des sous-chapitres et la butée de `plan_jour` ne changent pas. L'étape annale (b) de `plan_jour` est inchangée : une annale n'est jamais retirée ni déplacée par cette règle.
+
+**(d) Prérequis multi-matières.** `requis_par` contient des ids d'exercices ou de notions, de n'importe quelle matière. Rattachements d'un prérequis P : son propre sous-chapitre, et, pour chaque matière où figure un élément de `requis_par`, le **premier** sous-chapitre (min `cle_sc`) qui contient l'un de ces éléments. Partout où le code sert les prérequis d'un sous-chapitre (`notions_sc`, `ordre_cartes`, `anciennes_notes`), il sert P à chacun de ses rattachements, avant les notions du poly ; les doublons de cartes restent éliminés. `notions_des_exercices` ajoute aussi P quand une notion de son `requis_par` figure au cours du jour ou parmi les notions des exercices du jour.
+
+**(e) `check.py`** refuse : un fichier dont la racine n'a pas exactement `notions` (dict) et `style` (liste de 6 chaînes au plus) ; un id de notion inconnu (clé ou `vers`), ou `vers` égal à la clé ; un `niveau` hors des cinq ; un `statut` hors `ouverte|reparee` ; une `source` hors `cours|exercice|question`, un `verdict` hors `juste|partiel|faux` ; un `exercice` inconnu ; une date (`maj`, confusions, preuves) qui n'est pas AAAA-MM-JJ valide ou qui est postérieure à aujourd'hui ; plus de 6 preuves ou 8 confusions ; un `extrait` de plus de 160 caractères ; `tenue` ou `reliee` avec une confusion ouverte ; `reliee` sans `liens`. Le fichier absent ou `notions: {}` est valide.
 
 ## Résultat d'un exercice (`state/resultats.yaml`, à venir)
 `reussi` (seul), `aide` (réussi avec un indice), `presque` (pas loin avec l'aide), `non_fait` (pas réussi). Correspondance avec les tableurs : Réussi → `reussi`, Pas loin → `presque`, Loin et Non fait → `non_fait`.

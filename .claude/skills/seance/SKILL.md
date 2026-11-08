@@ -24,8 +24,13 @@ description: "Début de séance de maths (L3). Calcule le plan de maintenant d'a
 ## 3. Dérouler la séance
 
 1. **Anki d'abord** (hors du temps de travail) : donner la recherche « à apprendre » de `NOW.md` (à coller dans Outils → Créer un paquet filtré) et rappeler `is:due` pour les révisions.
-2. **Cours (30 min)** : les notions listées, aux pages données. Poser des questions de compréhension si l'utilisateur le demande.
-3. **Exercices** : dans l'ordre de `NOW.md`. Aide graduée seulement sur demande (règles de `CLAUDE.md`). Noter pour chaque exercice le palier d'aide atteint et ce qui a bloqué, pour le debrief.
+2. **Cours (30 min)** : les notions de « Cours » et de « À consolider » de `NOW.md`. Lire seulement leurs entrées de `state/comprehension.yaml` (`python -I -c "import yaml,sys; d=(yaml.safe_load(open('state/comprehension.yaml',encoding='utf-8')) or {}).get('notions') or {}; [print(i, d.get(i)) for i in sys.argv[1:]]" <ids>`) et ses lignes `style`. Ce que l'utilisateur dit à voix haute est la donnée principale : une bonne réponse sur un raisonnement confus est une alerte. Pour chaque notion :
+   - **Mesurer d'abord** : il explique ce qu'il en comprend, avec ses mots. Encadrer où ça s'arrête par une question à la fois : ce qu'il tient (plancher), ce qui casse (plafond). Ne pas réenseigner ce qu'il tient.
+   - **Enseigner** à partir de ce qu'il tient, une étape de raisonnement à la fois, chacune motivée (pourquoi on en a besoin, comment on aurait pu la trouver). Après chaque étape, une question de contrôle qui fait appliquer, pas répéter. Une confusion se répare avant d'aller plus loin. Le but : que la notion lui paraisse évidente et qu'il sache d'où elle vient.
+   - **Répondre à ses questions** en partant de sa `vision`, de ses confusions et liens manquants connus, et dans son `style`. Une question est aussi une donnée : elle montre où sa compréhension s'arrête.
+   - Toujours appuyé sur le poly (fichier, page) : jamais un énoncé de mémoire seule.
+   - Ne rien écrire pendant la séance : le debrief, dans cette conversation, relit les échanges.
+3. **Exercices** : dans l'ordre de `NOW.md`. Aide graduée seulement sur demande (règles de `CLAUDE.md`). Noter pour chaque exercice le palier d'aide atteint et ce qui a bloqué, pour le debrief. Une aide part de ce qu'il a dit de son raisonnement et de sa `vision` des notions en jeu.
 4. **Fin de séance** : proposer le debrief (« debrief » ou « log rapide : … »), dans cette même conversation.
 
 ## 4. Cas particuliers

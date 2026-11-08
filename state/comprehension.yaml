@@ -1,0 +1,9 @@
+# Modèle de compréhension de l'utilisateur, notion par notion (format : docs/FORMATS.md,
+# « Modèle de compréhension »). Écrit au debrief seulement, d'après ce qu'il a dit en séance ;
+# lu par le skill seance et par tools/plan.py ; validé par tools/check.py.
+# Une entrée : <id notion>: {niveau: inconnue|recitee|fragile|tenue|reliee, vision, liens: [{vers, texte}],
+#   liens_manquants: [{vers, texte}], confusions: [{date, texte, statut: ouverte|reparee}],
+#   preuves: [{date, source: cours|exercice|question, extrait, verdict: juste|partiel|faux}], maj}
+# Un niveau ne monte que sur preuve.
+notions: {}
+style: []
