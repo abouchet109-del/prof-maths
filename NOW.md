@@ -1,4 +1,4 @@
-# NOW — séance dim. 2026-11-08 12:10 (normal)
+# NOW — séance dim. 2026-11-08 14:35 (normal)
 
 Bloc du jour : Topologie — Chapitre 1 - Espace métrique > 1.3 Espace métrique (vitaux acquis 0/1)
 Dernier jour travaillé : 2026-11-07 (sam.)
@@ -16,20 +16,21 @@ Dernier jour travaillé : 2026-11-07 (sam.)
 - [ ] `topo-td1-ex13` A ∪ int(A^c) est dense · 15 min · topologie/td/td1.pdf p.2 (Ex 13)
 
 ## Cours (30 min)
+- `topo-p-0004` Caractérisations de la borne supérieure et de la … · None p.None
 - `topo-n-0008` Distance, espace métrique · topologie/cours/chap1-espaces-metriques.pdf p.3
 - `topo-n-0011` Boule ouverte, boule fermée, sphère · topologie/cours/chap1-espaces-metriques.pdf p.4
-- `topo-n-0007` Topologies grossière et discrète (séparé ou non) · topologie/cours/chap1-espaces-metriques.pdf p.3
 
 ## Anki — tout le sujet du jour
 ```
-(nid:1770140867658,1770141239338,1772647483015,1786372853926,1786372952836,1786448354098,1786448482473,1786448736462,1786448903783,1786448927718,1786458087545,1786466066522,1786467336208,1786467355412,1786526255846 or "Id:topo-a-001-1" or "Id:topo-a-001-2" or "Id:topo-a-001-3" or "Id:topo-a-001-4" or "Id:topo-a-005-1" or "Id:mesure-e002")
+(nid:1770140867658,1770141239338,1772647483015,1786372853926,1786372952836,1786448354098,1786448482473,1786448736462,1786448903783,1786448927718,1786458087545,1786466066522,1786467336208,1786467355412,1786526255846,1787239458792 or "Id:topo-a-001-1" or "Id:topo-a-001-2" or "Id:topo-a-001-3" or "Id:topo-a-001-4" or "Id:topo-a-005-1" or "Id:topo-a-040-1" or "Id:topo-a-040-2" or "Id:mesure-e002" or "Id:ex-mes-td2-ex01" or "Id:ex-mes-cc1-2425-ex03")
 ```
 Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes selon mes réponses” pour réviser sans perturber le planning Anki.
 
-## Anki — à apprendre (20 nouvelles + 5 anciennes)
+## Anki — à apprendre (20 nouvelles)
 ```
-("Id:topo-e001" or "Id:topo-e002" or "Id:topo-e004" or "Id:ex-topo-td1-ex04" or "Id:ex-topo-td1-ex06" or "Id:mesure-e001" or "Id:mesure-e003" or "Id:ex-mes-cc1-2324-ex02" or "Id:ex-pro-par2425-ex02" or "Id:topo-a-037-1" or "Id:topo-a-037-2" or "Id:topo-a-038-1" or "Id:topo-a-038-2" or "Id:topo-a-003-1" or "Id:topo-a-003-2" or "Id:topo-a-003-3" or "Id:topo-a-007-1" or "Id:topo-a-007-2" or "Id:topo-a-010-1" or "Id:topo-a-014-1" or nid:1765020913909,1786441612419,1772186584289,1786441479984,1770141171624) is:new
+("Id:ex-topo-td1-ex05" or "Id:ex-mes-td2-ex01" or "Id:ex-mes-td3-ex04" or "Id:ex-mes-cc1-2425-ex03" or "Id:ex-pro-par2425-ex01" or "Id:topo-a-040-1" or "Id:topo-a-040-2" or "Id:topo-a-039-1" or "Id:topo-a-014-2" or "Id:topo-a-015-1" or "Id:topo-a-015-2" or "Id:topo-a-015-3" or "Id:topo-a-016-1" or "Id:topo-a-016-2" or "Id:topo-a-016-3" or "Id:topo-a-016-4" or "Id:topo-a-017-1" or "Id:topo-a-041-1" or "Id:topo-a-041-2" or "Id:topo-a-018-1") is:new
 ```
+5 cartes pas encore exportées vers Anki (`python tools/anki.py`).
 
 ## Anki — à réviser
 - Toutes les cartes dues : `is:due`

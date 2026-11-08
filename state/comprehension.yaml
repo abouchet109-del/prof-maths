@@ -5,5 +5,120 @@
 #   liens_manquants: [{vers, texte}], confusions: [{date, texte, statut: ouverte|reparee}],
 #   preuves: [{date, source: cours|exercice|question, extrait, verdict: juste|partiel|faux}], maj}
 # Un niveau ne monte que sur preuve.
-notions: {}
-style: []
+notions:
+  topo-p-0004:
+    niveau: fragile
+    vision: 'sup A = « borne supérieure », pas forcément dans A ; il ne disait pas « le plus petit majorant » avant qu''on le lui apprenne'
+    liens:
+      - {vers: topo-n-0022, texte: 'a vu seul que le sup est dans l''adhérence de A (suite qui tend vers M)'}
+    liens_manquants: []
+    confusions:
+      - {date: 2026-11-08, texte: 'pour une suite d''éléments de A qui tend vers M = sup A, propose M - 1/n au lieu de x_n dans A avec M - 1/n < x_n <= M', statut: ouverte}
+      - {date: 2026-11-08, texte: 'résolvant 1 - 1/n > 1 - eps : renverse mal l''inégalité (n < 1/99 au lieu de n > 100) et mélange eps avec la borne M - eps', statut: ouverte}
+      - {date: 2026-11-08, texte: 'justifie sup ]0,1[ = 1 par « 1 < 2 » (plus petit que UN majorant) au lieu de « plus petit de TOUS les majorants »', statut: ouverte}
+    preuves:
+      - {date: 2026-11-08, source: cours, extrait: 'max et sup demandent un ordre (pas une distance) ; sup peut être hors de A ; confond d''abord max => sup avec sup => max', verdict: partiel}
+      - {date: 2026-11-08, source: cours, extrait: 'avec le milieu (c+1)/2, montre que c < 1 n''est pas un majorant de ]0,1[', verdict: juste}
+      - {date: 2026-11-08, source: cours, extrait: 'écrit l''encadrement M - 1/n < x_n <= M, mais voit la convergence comme une condition et non comme conséquence des gendarmes', verdict: partiel}
+    maj: 2026-11-08
+  topo-n-0008:
+    niveau: fragile
+    vision: 'distance = application de X dans R+ avec positivité, séparation, symétrie, inégalité triangulaire ; la triangulaire, il la voit comme une « égalité des pentes »'
+    liens:
+      - {vers: topo-n-0011, texte: 'voit que les boules ouvertes/fermées se cassent sans l''inégalité triangulaire'}
+    liens_manquants: []
+    confusions:
+      - {date: 2026-11-08, texte: 'ne sait pas dire ce que garantit l''inégalité triangulaire ni ce qui casse sans elle (parle de pentes)', statut: ouverte}
+      - {date: 2026-11-08, texte: 'séparation : ne pense qu''à d=0 => x=y (oublie d(x,x)=0) ; et prouve f=0 => N(f)=0 au lieu de N(f)=0 => f=0', statut: ouverte}
+    preuves:
+      - {date: 2026-11-08, source: question, extrait: 'd(x,y)=|x-y|^2 : calcule d(0,2)=4 > 2=d(0,1)+d(1,2), conclut que ce n''est pas une distance', verdict: juste}
+      - {date: 2026-11-08, source: exercice, exercice: topo-td1-ex08, extrait: 'distance discrète : disjonction de cas correcte pour la triangulaire', verdict: juste}
+      - {date: 2026-11-08, source: exercice, exercice: topo-uvsq-td1-ex03q1, extrait: 'séparation prouvée dans le mauvais sens, pas de condition sur g', verdict: faux}
+    maj: 2026-11-08
+  topo-n-0011:
+    niveau: fragile
+    vision: 'boule ouverte = disque sans le bord ; sphère = le contour ; pense en cercle euclidien'
+    liens: []
+    liens_manquants:
+      - {vers: topo-n-0010, texte: 'les boules ne sont pas rondes en général (carré pour d_infini) ni vides : a une boule non vide par centre'}
+    confusions:
+      - {date: 2026-11-08, texte: 'boule fermée = « juste le cercle » (c''est la sphère) ; la boule fermée contient l''aire et le bord', statut: ouverte}
+      - {date: 2026-11-08, texte: 'distance discrète : dit B(a,1) = vide (oublie que le centre est dans sa boule, d(a,a)=0<r) puis se contredit', statut: ouverte}
+    preuves:
+      - {date: 2026-11-08, source: question, extrait: 'redonne B(a,1)={a}, S(a,1)=X\{a}, B-bar(a,1)=X, B(a,2)=X, après relance', verdict: partiel}
+      - {date: 2026-11-08, source: exercice, exercice: topo-td1-ex08, extrait: 'cas r<1, r=1, r>1 bien séparés ; B(a,r) donné sans montrer a dans la boule', verdict: partiel}
+    maj: 2026-11-08
+  topo-n-0012:
+    niveau: fragile
+    vision: 'les ouverts d''une distance = les boules ouvertes ({a}, X, vide pour la distance discrète)'
+    liens: []
+    liens_manquants:
+      - {vers: topo-n-0014, texte: 'une boule est un ouvert, mais un ouvert est une réunion de boules, pas une boule'}
+    confusions:
+      - {date: 2026-11-08, texte: 'confond ouvert et boule ouverte : écrit que les ouverts de la métrique discrète sont {{a},{X},vide} au lieu de toutes les parties', statut: ouverte}
+    preuves:
+      - {date: 2026-11-08, source: exercice, exercice: topo-td1-ex08, extrait: 'ouverts de (X, d discrète) : liste fausse ; fermés non traités', verdict: faux}
+    maj: 2026-11-08
+  topo-n-0015:
+    niveau: fragile
+    vision: 'd(A,B) = inf des d(a,b) ; pense qu''il faut calculer l''inf exactement, pas qu''il suffit d''une suite de couples'
+    liens: []
+    liens_manquants:
+      - {vers: topo-p-0004, texte: 'ne relie pas « inf = 0 » à la caractérisation de l''inf vue en début de séance (pour tout eps, une distance < eps)'}
+    confusions:
+      - {date: 2026-11-08, texte: 'pour montrer inf d(a,b)=0, cherche à minimiser une racine au lieu d''exhiber des couples (n,1/n),(n,0) à distance 1/n -> 0', statut: ouverte}
+      - {date: 2026-11-08, texte: 'fermés disjoints à distance nulle : {1/n} (non fermé) puis (x,1/x) fermé affirmé sans preuve', statut: ouverte}
+    preuves:
+      - {date: 2026-11-08, source: exercice, exercice: topo-td1-ex09, extrait: 'voit seul que {(1/n,0)} n''est pas fermé (0 dans l''adhérence, hors de A)', verdict: partiel}
+    maj: 2026-11-08
+  topo-n-0022:
+    niveau: fragile
+    vision: 'adhérence = plus petit fermé ; il connaît 5 caractérisations mais ne sait pas laquelle utiliser'
+    liens:
+      - {vers: topo-n-0028, texte: 'ℚ dense dans ℝ donc adhérence ℝ'}
+    liens_manquants: []
+    confusions:
+      - {date: 2026-11-08, texte: 'lit « 0 < |z| » comme « |z| >= 0 » : prend le disque fermé privé de 0 pour un fermé', statut: ouverte}
+      - {date: 2026-11-08, texte: 'croit que 1/n -> 0 montre 1/n dans l''adhérence de A = R\{1/n} (cela montre 0 adhérent à {1/n}) ; écrit « adhérence incluse dans A » (A est inclus dans son adhérence)', statut: ouverte}
+    preuves:
+      - {date: 2026-11-08, source: exercice, exercice: topo-td1-ex07, extrait: 'cas 1 juste ; cas 2 faux (strict/large) ; cas 3 bonne conclusion, argument à l''envers', verdict: partiel}
+    maj: 2026-11-08
+  topo-n-0043:
+    niveau: fragile
+    vision: 'x est dans l''adhérence de U s''il est limite d''éléments de U ; avec f continue nulle sur U, f est nulle sur l''adhérence'
+    liens: []
+    liens_manquants:
+      - {vers: topo-n-0022, texte: 'utilise la continuité par suites f(lim t_n)=lim f(t_n) seulement après qu''on la lui a rappelée'}
+    confusions: []
+    preuves:
+      - {date: 2026-11-08, source: cours, extrait: 'a refait seul l''argument t_n -> x, f(t_n)=0, donc f(x)=0, après explication (exemple g(t)=t)', verdict: juste}
+    maj: 2026-11-08
+  topo-n-0028:
+    niveau: fragile
+    vision: 'dense = adhérence égale à tout l''espace ; il a l''intuition du « mince filet » du bord qui se rattrape par l''adhérence'
+    liens:
+      - {vers: topo-n-0023, texte: 'a trouvé seul int(A^c) = X \ adhérence(A)'}
+    liens_manquants: []
+    confusions:
+      - {date: 2026-11-08, texte: 'test des boules : écrit adhérence(S) inter B(x,r) non vide au lieu de S inter B(x,r) non vide ; et « y dans un ouvert donc y intérieur à A » (faux)', statut: ouverte}
+      - {date: 2026-11-08, texte: 'densité de {g != 0} <=> g non nulle sur aucun intervalle : lit « ne s''annule sur aucun intervalle » comme « ne s''annule jamais »', statut: ouverte}
+    preuves:
+      - {date: 2026-11-08, source: exercice, exercice: topo-td1-ex13, extrait: 'retrouve int(A^c)=X\adh(A) seul ; la suite de la preuve est confuse, preuve en 2 lignes donnée', verdict: partiel}
+    maj: 2026-11-08
+  topo-n-0023:
+    niveau: fragile
+    vision: 'int(A^c) = X \ adhérence(A) : complémentaire de l''adhérence = intérieur du complémentaire'
+    liens:
+      - {vers: topo-n-0028, texte: 'l''identité sert à montrer que A union int(A^c) est dense'}
+    liens_manquants: []
+    confusions: []
+    preuves:
+      - {date: 2026-11-08, source: exercice, exercice: topo-td1-ex13, extrait: 'écrit lui-même int(A^c) = X\A-bar sur sa copie', verdict: juste}
+    maj: 2026-11-08
+style:
+  - 'pense à voix haute et mélange parfois l''exemple et le cas général : lui redonner le fil'
+  - 'comprend par un chiffre concret (n=1000, eps=0,01) puis généralise'
+  - 'confond inégalité stricte/large et le sens des implications : lui faire tester sur un chiffre'
+  - 'bloque plus sur la rédaction écrite que sur l''idée ; dit quand il passe trop de temps'
+  - 'dit « inattention » pour des confusions de fond (ouvert/boule ouverte) : trancher cas par cas'
+  - 'bon réflexe : retrouve seul des identités et fait des liens (sup dans l''adhérence)'

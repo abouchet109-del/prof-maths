@@ -53,3 +53,33 @@
   resultat: non_fait
   palier_aide: 0
   note: non commence (fatigue)
+- date: 2026-11-08
+  exercice: topo-td1-ex08
+  resultat: presque
+  palier_aide: 1
+  note: '~25 min. Q1 et Q3 (r<1, r=1, r>1) justes ; Q2 : ouverts pris pour boules ouvertes ({a},X,vide au lieu de P(X)), B(a,r) sans a dedans, fermes non traites'
+- date: 2026-11-08
+  exercice: topo-td1-ex09
+  resultat: presque
+  palier_aide: 4
+  note: ~20 min. {1/n} non ferme vu seul ; A=(x,1/x) ferme affirme sans preuve, d(A,B) calculee au lieu d'exhiber une suite, Q2 (dans R) absente. Solution donnee
+- date: 2026-11-08
+  exercice: topo-uvsq-td1-ex03q1
+  resultat: presque
+  palier_aide: 4
+  note: ~20 min. Separation prouvee dans le mauvais sens (f=0 => N(f)=0), pas de CNS (densite de {g!=0}). Solution donnee
+- date: 2026-11-08
+  exercice: topo-td1-ex07
+  resultat: presque
+  palier_aide: 2
+  note: '~20 min. Q1 juste ; Q2 : 0<|z| lu comme >=0 donc A suppose ferme ; Q3 : bonne conclusion, mauvais argument (1/n->0 ne montre pas 1/n dans l''adherence)'
+- date: 2026-11-08
+  exercice: topo-td1-ex13
+  resultat: presque
+  palier_aide: 1
+  note: ~20 min. Identite int(A^c)=X\adh(A) trouvee seul ; test des boules mal pose (barre sur S), y dans un ouvert => y interieur a A (faux). Preuve en 2 lignes donnee apres
+- date: 2026-11-08
+  exercice: topo-uvsq-td2-ex01q1
+  resultat: non_fait
+  palier_aide: 4
+  note: ~10 min. Rien ecrit, solution donnee (union de translates ouverts)

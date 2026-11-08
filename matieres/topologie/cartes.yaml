@@ -844,3 +844,98 @@
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
   tags: [exercice]
+- id: ex-topo-td1-ex08
+  exercice: topo-td1-ex08
+  notion: topo-n-0011
+  recto: |-
+    <b>Exo topo-td1-ex08 : Métrique discrète</b><br>
+    Soit \(X\) un ensemble non vide et \(d(x,y)=0\) si \(x=y\), \(1\) si \(x\neq y\).<br>
+    1. Montrer que \(d\) est une distance sur \(X\).<br>
+    2. Décrire les boules ouvertes, les boules fermées, les ouverts et les fermés de \((X,d)\).<br>
+    3. A-t-on \(\bar B(a,r)=\overline{B(a,r)}\) pour tous \(a\in X\), \(r>0\) ?<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> les seules distances sont 0 et 1, donc tout se joue sur \(r<1\), \(r=1\), \(r>1\). Le singleton \(\{a\}=B(a,1)\) est ouvert, donc toute partie est ouverte et fermée.<br>
+    <b>Correction :</b><br>
+    1. Positivité, séparation (\(d(x,y)=0\Leftrightarrow x=y\) par définition) et symétrie sont immédiates. Triangulaire \(d(x,y)\le d(x,z)+d(z,y)\) : si \(x=y\), le membre de gauche vaut 0. Si \(x\ne y\) : soit \(z\ne x\), alors \(d(x,z)=1\ge d(x,y)\) ; soit \(z=x\), alors \(d(x,z)+d(z,y)=0+d(x,y)\).<br>
+    2. <u>Boules ouvertes.</u> Le centre est toujours dans sa boule : \(d(a,a)=0<r\). Si \(y\ne a\), \(d(a,y)=1\). Donc \(B(a,r)=\{a\}\) si \(0<r\le1\) et \(B(a,r)=X\) si \(r>1\). <u>Boules fermées</u> : \(\bar B(a,r)=\{a\}\) si \(r<1\) et \(\bar B(a,r)=X\) si \(r\ge1\) (en particulier \(\bar B(a,1)=X\)). <u>Ouverts</u> : \(\{x\}=B(x,1)\) est ouvert, et toute partie \(A=\bigcup_{x\in A}\{x\}\) est ouverte (réunion d'ouverts). <u>Fermés</u> : le complémentaire d'une partie est une partie, donc toute partie est fermée.<br>
+    3. Une partie étant fermée, \(\overline{B(a,r)}=B(a,r)\). Si \(r<1\) : \(B=\{a\}=\bar B\), égalité. Si \(r>1\) : \(B=\bar B=X\), égalité. Si \(r=1\) : \(\overline{B(a,1)}=\{a\}\) et \(\bar B(a,1)=X\) : égalité si et seulement si \(X=\{a\}\) ; si \(b\ne a\), \(b\in\bar B(a,1)\) mais \(b\notin\{a\}\).<br>
+    <b>Piège :</b> un ouvert n'est pas une boule ouverte (c'est une réunion de boules) : les ouverts sont toutes les parties, pas \(\{\{a\},X,\emptyset\}\). Le centre est toujours dans sa boule, donc une boule n'est jamais vide. \(\bar B(a,1)=X\), pas \(\{a\}\).
+  source: 'Énoncé : topologie/td/td1.pdf p.2 (Ex 8). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer (aucune étape douteuse). Erreurs de la séance du 2026-11-08.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
+- id: ex-topo-td1-ex09
+  exercice: topo-td1-ex09
+  notion: topo-n-0015
+  recto: |-
+    <b>Exo topo-td1-ex09 : Deux fermés disjoints à distance nulle</b><br>
+    Avec \(d(A,B)=\inf_{a\in A}\inf_{b\in B}d(a,b)\) :<br>
+    1. Construire dans \(\mathbb R^2\) deux fermés disjoints \(A\) et \(B\) tels que \(d(A,B)=0\).<br>
+    2. Même question dans \(\mathbb R\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> une courbe et son asymptote (ou deux suites qui partent à l'infini sans s'accumuler). Pour \(\inf=0\), on n'a pas besoin de calculer l'inf : \(d\ge0\) donne \(\inf\ge0\), et on exhibe des couples à distance \(1/n\to0\).<br>
+    <b>Correction :</b><br>
+    1. \(A=\{(x,y):xy=1\}\), \(B=\{(x,0):x\in\mathbb R\}\). <u>Fermés :</u> \(A\) est l'image réciproque de \(\{1\}\) par \((x,y)\mapsto xy\) continue, \(B\) celle de \(\{0\}\) par \((x,y)\mapsto y\). <u>Disjoints :</u> \(xy=1\) impose \(y\ne0\). <u>Distance :</u> \((n,1/n)\in A\), \((n,0)\in B\), à distance \(1/n\), donc \(0\le d(A,B)\le1/n\) pour tout \(n\) : \(d(A,B)=0\).<br>
+    2. \(A=\mathbb N^*\), \(B=\{n+1/n:n\ge2\}\). <u>Disjoints :</u> \(0<1/n<1\), donc \(n+1/n\in\,]n,n+1[\) n'est pas entier. <u>Fermés :</u> deux points distincts de \(A\) sont à distance \(\ge1\), deux points de \(B\) à distance \(\ge5/6\) (car \((n+1)+\frac1{n+1}-n-\frac1n=1-\frac1{n(n+1)}\ge\frac56\)). Soit \(\delta\) cet écart et \(x_k\to\ell\) dans l'ensemble : pour \(k\ge N\), \(|x_k-\ell|<\delta/2\), donc \(|x_k-x_m|<\delta\), donc \(x_k=x_m\). La suite est stationnaire et \(\ell\) est dans l'ensemble : il est fermé. <u>Distance :</u> \(d(n,n+1/n)=1/n\to0\).<br>
+    <b>Piège :</b> \(\{(1/n,0)\}\) n'est pas fermé (\(0\) est dans l'adhérence mais pas dans l'ensemble) : les points qui se rapprochent ne doivent pas s'accumuler. Un fermé se prouve par image réciproque d'un fermé par une application continue, ou par suites. L'écart minimal \(\delta>0\) fait défaut pour \(\{1/n\}\).
+  source: 'Énoncé : topologie/td/td1.pdf p.2 (Ex 9). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer (aucune étape douteuse). Erreurs de la séance du 2026-11-08.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
+- id: ex-topo-uvsq-td1-ex03q1
+  exercice: topo-uvsq-td1-ex03q1
+  notion: topo-n-0008
+  recto: |-
+    <b>Exo topo-uvsq-td1-ex03q1 : N(f)=||fg|| est une norme : CNS sur g</b><br>
+    Soit \(E=\mathcal C([0,1],\mathbb R)\) et \(g\in E\). Pour \(f\in E\), \(N(f)=\|fg\|_\infty\). Donner une condition nécessaire et suffisante sur \(g\) pour que \(N\) soit une norme sur \(E\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> homogénéité et inégalité triangulaire sont vraies pour tout \(g\) ; seule la séparation (\(N(f)=0\Rightarrow f=0\)) impose une condition : \(\{g\ne0\}\) dense dans \([0,1]\), c'est-à-dire \(g\) n'est identiquement nulle sur aucun intervalle \(]a,b[\) (\(a<b\)).<br>
+    <b>Correction :</b><br>
+    1. \(N(\lambda f)=|\lambda|N(f)\) et \(N(f+h)\le N(f)+N(h)\) car \(\|\cdot\|_\infty\) est une norme.<br>
+    2. Posons \(U=\{g\ne0\}\). \(N(f)=0\Leftrightarrow fg=0\Leftrightarrow f=0\) sur \(U\). <u>Si \(U\) est dense :</u> pour \(t_0\in[0,1]\), il existe \(t_n\in U\), \(t_n\to t_0\) ; \(f(t_n)=0\) et \(f\) est continue, donc \(f(t_0)=0\) : \(f=0\).<br>
+    3. <u>Si \(g=0\) sur \(]a,b[\)</u> : \(f(t)=\max(0,\min(t-a,b-t))\) est continue, non nulle, et \(fg=0\). Alors \(N(f)=0\) avec \(f\ne0\) : séparation en échec.<br>
+    Exemples : \(g(t)=t\), \((t-\frac12)^2\), \(\sin(2\pi t)\) donnent des normes ; \(g(t)=\max(0,t-\frac12)\) non.<br>
+    <b>Piège :</b> la séparation est \(N(f)=0\Rightarrow f=0\) (pas \(f=0\Rightarrow N(f)=0\), vrai pour tout \(g\)). « \(g\) non nulle » ne suffit pas ; « \(g\) ne s'annule jamais » n'est pas nécessaire. La continuité de \(f\) sert à rattraper les points de l'adhérence de \(U\) où \(g=0\).
+  source: 'Énoncé : uvsq/topologie/Topologie/TD1_Topologie.pdf p.2 (Ex 3.1). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer (aucune étape douteuse). Erreurs de la séance du 2026-11-08.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
+- id: ex-topo-td1-ex07
+  exercice: topo-td1-ex07
+  notion: topo-n-0022
+  recto: |-
+    <b>Exo topo-td1-ex07 : Adhérence dans les trois premiers exemples de l'exercice 6</b><br>
+    Déterminer l'adhérence \(\bar A\) de \(A\) : 1. \(X=\mathbb R\), \(A=\mathbb Q\). 2. \(X=\mathbb C\), \(A=\{z:0<|z|\le1\}\). 3. \(X=\mathbb R\), \(A=\mathbb R\setminus\{1/n:n\in\mathbb N^*\}\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> pour montrer \(x\in\bar A\), construire une suite d'éléments de \(A\) qui tend vers \(x\) (ou tester les boules : \(B(x,r)\cap A\ne\emptyset\) pour tout \(r\)).<br>
+    <b>Correction :</b><br>
+    1. \(\mathbb Q\) est dense dans \(\mathbb R\) : \(\bar A=\mathbb R\).<br>
+    2. \(A\subset D=\{|z|\le1\}\), fermé, donc \(\bar A\subset D\). Et \(0=\lim 1/n\) avec \(1/n\in A\), donc \(0\in\bar A\). Comme \(D=A\cup\{0\}\), \(\bar A=D\).<br>
+    3. \(A\subset\bar A\) (dont \(0\), car \(0\ne1/n\)). Pour \(x=1/n\notin A\) : \(x_k=\frac1n+\frac{\sqrt2}{k}\) est irrationnel (rationnel + irrationnel), donc différent de tous les \(1/m\), donc dans \(A\), et \(x_k\to1/n\). Donc \(1/n\in\bar A\) et \(\bar A=\mathbb R\). Raccourci : \(A\) contient tous les irrationnels, qui sont denses.<br>
+    <b>Piège :</b> \(0<|z|\) est une inégalité <i>stricte</i> : \(A\) est le disque fermé privé de \(0\), il n'est pas fermé. \(1/n\to0\) montre que \(0\) est adhérent à \(\{1/n\}\), pas que \(1/n\in\bar A\). On a \(A\subset\bar A\), jamais l'inverse en général.
+  source: 'Énoncé : topologie/td/td1.pdf p.2 (Ex 7, exemples de l''Ex 6). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer (aucune étape douteuse). Erreurs de la séance du 2026-11-08.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
+- id: ex-topo-td1-ex13
+  exercice: topo-td1-ex13
+  notion: topo-n-0028
+  recto: |-
+    <b>Exo topo-td1-ex13 : A ∪ int(A^c) est dense</b><br>
+    Soient \((X,d)\) un espace métrique et \(A\in\mathcal P(X)\). Montrer que \(A\cup\mathring{(A^c)}\) est dense dans \(X\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(\mathring{(A^c)}=X\setminus\bar A\), donc \(S=A\cup(X\setminus\bar A)\) et \(\bar S\supset\bar A\cup(X\setminus\bar A)=X\).<br>
+    <b>Correction :</b><br>
+    1. \(x\in\mathring{(A^c)}\Leftrightarrow\exists r>0,\ B(x,r)\subset A^c\Leftrightarrow\exists r>0,\ B(x,r)\cap A=\emptyset\Leftrightarrow x\notin\bar A\). Donc \(\mathring{(A^c)}=X\setminus\bar A\).<br>
+    2. Posons \(S=A\cup(X\setminus\bar A)\). \(A\subset S\) donne \(\bar A\subset\bar S\) (croissance de l'adhérence). \(X\setminus\bar A\subset S\subset\bar S\). Donc \(\bar S\supset\bar A\cup(X\setminus\bar A)=X\).<br>
+    Variante par les boules : soit \(x\in X\), \(r>0\). Si \(B(x,r)\cap A\ne\emptyset\), c'est fini. Sinon \(B(x,r)\subset A^c\) ; la boule étant ouverte, \(B(x,r)\subset\mathring{(A^c)}\), et \(x\in B(x,r)\) (car \(d(x,x)=0<r\)), donc \(B(x,r)\cap S\ne\emptyset\).<br>
+    <b>Piège :</b> le test de densité est \(B(x,r)\cap S\ne\emptyset\) (pas \(B(x,r)\cap\bar S\)). \(A\subset\bar A\) (jamais l'inverse). Un point d'une boule ouverte n'est pas intérieur à \(A\) pour autant : la boule n'est pas incluse dans \(A\).
+  source: 'Énoncé : topologie/td/td1.pdf p.2 (Ex 13). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer (aucune étape douteuse). Erreurs de la séance du 2026-11-08.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
