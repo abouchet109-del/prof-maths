@@ -142,3 +142,4 @@ proba-n-0141: {statut: absente, notes: []}
 proba-n-0142: {statut: couverte, notes: [1736269027087, 1737128332157]}
 proba-n-0143: {statut: absente, notes: []}
 proba-n-0144: {statut: absente, notes: []}
+proba-p-0006: {statut: partielle, notes: [1765019029275, 1765019065127, 1773324173805]}   # déf. (conjugué, module), |z|^2 = z zbarre et |zw| = |z||w|, e^{x+iy} ; manque : inégalités triangulaires, |e^{iθ}| = 1, e^{z+w} = e^z e^w. 1765019107278 (Euler) non retenue : indice de départ de la série du sinus douteux

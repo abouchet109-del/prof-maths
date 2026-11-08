@@ -743,3 +743,43 @@
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
   tags: [exercice]
+- id: topo-a-039-1
+  notion: topo-p-0003
+  recto: 'Déf : ensemble au plus dénombrable'
+  verso: 'Un ensemble \(E\) est au plus dénombrable s''il est fini ou dénombrable (en bijection avec \(\mathbb N\)). De façon équivalente, il existe une injection de \(E\) dans \(\mathbb N\) ; si \(E\neq\emptyset\), cela équivaut aussi à l''existence d''une surjection de \(\mathbb N\) sur \(E\). Attention : certains cours appellent « dénombrable » ce qui est ici « au plus dénombrable » (injection dans \(\mathbb N\)).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-n-0029, topo-td3-ex09, topo-partiel2022-23-ex04, mes-td2-ex03'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [prerequis-l1l2, definition]
+- id: topo-a-040-1
+  notion: topo-p-0004
+  recto: 'Prop. : caractérisation de la borne inférieure'
+  verso: 'Soient \(A\) une partie non vide et minorée de \(\mathbb R\) et \(m\in\mathbb R\). Alors \(m=\inf A\) si et seulement si : (i) \(\forall x\in A,\ m\le x\) et (ii) \(\forall\varepsilon>0,\ \exists x\in A,\ m\le x<m+\varepsilon\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-n-0015, topo-n-0058, topo-td4-ex09'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: topo-a-040-2
+  notion: topo-p-0004
+  recto: 'Prop. : caractérisation séquentielle de la borne supérieure et de la borne inférieure'
+  verso: 'Soient \(A\) une partie non vide et majorée de \(\mathbb R\) et \(M\) un majorant de \(A\). Alors \(M=\sup A\) si et seulement s''il existe une suite \((a_n)\) d''éléments de \(A\) qui converge vers \(M\). De même, si \(A\) est non vide et minorée et \(m\) un minorant de \(A\) : \(m=\inf A\) si et seulement si \(m\) est limite d''une suite d''éléments de \(A\). Usage : \(d(x,B)=\inf_{b\in B}d(x,b)\) est la limite de \(d(x,b_n)\) pour une suite \((b_n)\) de \(B\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-n-0015, topo-n-0058, topo-td4-ex09'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: topo-a-041-1
+  notion: topo-p-0005
+  recto: 'Prop. : convergence uniforme et convergence simple'
+  verso: 'Soient \(D\) un ensemble, \((Y,\delta)\) un espace métrique et \(f_n,f:D\to Y\). Si \((f_n)\) converge uniformément vers \(f\) sur \(D\) (\(\sup_{x\in D}\delta(f_n(x),f(x))\to0\)), alors \((f_n)\) converge simplement vers \(f\) sur \(D\) (\(\forall x\in D,\ f_n(x)\to f(x)\)). La réciproque est fausse en général.'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-n-0063, mesure-n-0022, mesure-n-0025'
+  chapitre: 'Chapitre 2 - Espace complet'
+  priorite: 2
+  tags: [prerequis-l1l2, propriete]
+- id: topo-a-041-2
+  notion: topo-p-0005
+  recto: 'Exemple : convergence simple mais non uniforme de \(f_n(x)=x^n\) sur \([0,1]\)'
+  verso: 'Sur \([0,1]\), \(f_n(x)=x^n\) converge simplement vers \(f=\mathbf 1_{\{1\}}\) (\(x^n\to0\) si \(0\le x<1\), et \(1^n=1\)). La convergence n''est pas uniforme : \(\sup_{x\in[0,1]}|f_n(x)-f(x)|=\sup_{x\in[0,1[}x^n=1\) ne tend pas vers \(0\). Cohérent avec le cours : les \(f_n\) sont continues mais la limite \(f\) ne l''est pas.'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans topo-n-0063, mesure-n-0022, mesure-n-0025'
+  chapitre: 'Chapitre 2 - Espace complet'
+  priorite: 2
+  tags: [prerequis-l1l2, exemple]

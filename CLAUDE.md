@@ -8,6 +8,7 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 - **Le plan se calcule au début de chaque séance**, pour maintenant, d'après l'état réel : skill `seance` (« on commence »), commande `plan.py seance`. L'utilisateur travaille n'importe quel jour : un jour `off` de `dispo.yaml` ne bloque rien, il ne sert qu'à la capacité et à la marge. Ce qui n'a pas été fait revient seul. Les cartes apprises se lisent dans Anki (lecture seule), pas dans une réservation à l'avance.
 - **Debrief après chaque séance** : skill `debrief`, **dans la même conversation que la séance**, qui connaît déjà les exercices et les aides données. Ne jamais renvoyer l'utilisateur vers une autre conversation. Il enregistre les résultats, les questions et les cartes, puis recopie le **bilan réel** calculé par `plan.py bilan` dans le journal, et fait le commit. Il ne prépare pas la séance suivante.
 - **Une conversation par séance** : cours, exercices, puis debrief. Une nouvelle séance, une nouvelle conversation.
+- **Économe en tokens, sans rien céder sur la justesse** : lectures ciblées (grep, extraits, page du PDF utile plutôt que le poly entier), scripts plutôt que lecture à la main, réponses courtes, modèle le moins cher qui garantit un résultat juste. Jamais d'économie sur la vérification d'une carte, d'un corrigé ou d'un calcul.
 - **Annales de Paris Cité prioritaires** : si le temps manque, on coupe d'abord l'exotique, puis le secondaire, jamais une annale.
 
 ## Pendant une séance d'exercices

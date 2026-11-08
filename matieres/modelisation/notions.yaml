@@ -617,3 +617,21 @@
   source: {etab: l1-l2}
   essentiel: true
   requis_par: [mod-td1-ex09]
+- id: mod-p-0003
+  titre: 'Séries entières : rayon de convergence, continuité, dérivation terme à terme'
+  type: prerequis
+  chapitre: Chapitre 1 - Modèle de Galton-Watson et séries génératrices
+  sous_chapitre: 1.2.1 Définition
+  enonce: '$R=\sup\{r\ge0:(a_nr^n)\text{ bornée}\}$ : convergence absolue pour $|z|<R$, divergence grossière pour $|z|>R$. Si $\sum|a_n|r^n<\infty$, convergence normale et somme continue sur $|z|\le r$. Sur $]-R,R[$, la somme est $C^\infty$, dérivable terme à terme, et $a_n=f^{(n)}(0)/n!$ (unicité des coefficients).'
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [mod-n-0001, mod-n-0003, mod-n-0005, mod-exa2324-ex01, mod-exa2526-ex01, mod-par2526-ex02, proba-n-0076]
+- id: mod-p-0004
+  titre: Théorème de Bolzano-Weierstrass dans $\mathbb R^N$
+  type: prerequis
+  chapitre: Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank
+  sous_chapitre: 2.3.2 Existence et unicité d'une mesure invariante
+  enonce: 'Toute suite bornée de $\mathbb R^N$ admet une suite extraite convergente ; si la suite est à valeurs dans un fermé (par exemple $\mathcal P(E)$), la limite y reste.'
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [mod-n-0042]

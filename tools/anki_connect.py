@@ -2,7 +2,7 @@
 
 Usage (depuis la racine du projet, Anki ouvert avec AnkiConnect pour tout sauf --dry-run) :
     python tools/anki_connect.py importer PAQUET.apkg [PAQUET.apkg ...]
-    python tools/anki_connect.py fusionner [--dry-run]
+    python tools/anki_connect.py fusionner [--dry-run] [--prerequis]
     python tools/anki_connect.py annuler anki/export/fusion-AAAA-MM-JJ.csv
 
 `fusionner` range les notes des paquets `tg::Maths::AoutLicenceMath::*` dans le paquet L3, selon les
@@ -20,6 +20,12 @@ Rattachement d'une note (fonction pure `cible`) :
     d'après leur recto) : `nid: chapitre`, ou `nid: {chapitre: ..., exercices: true}` pour un paquet TD ;
   - sinon (valeur `null` : hors de tous les chapitres de la matière) :
     `tg::Maths::L3 Paris Cité::<Matière>::Autres (AoutLicenceMath)`.
+
+`--prerequis` (fonction pure `cible_fusion`) : traite aussi les notes citées dans `couverture.yaml` par une
+notion `type: prerequis`, quel que soit leur paquet source (Mathématiques DD centrale, AoutLicenceMath d'une
+autre matière…) : elles vont dans le paquet du chapitre du prérequis, sauf si la couverture les rattache déjà
+à un chapitre de la matière de leur ancien paquet AoutLicenceMath. Une note des paquets ECG
+(`tg::Maths::1ere année`, `tg::Maths::Cours deuxième année`) ne bouge jamais.
 """
 from __future__ import annotations
 
@@ -46,6 +52,7 @@ PREFIXE = "tg::Maths::AoutLicenceMath"
 ETIQUETTE = "AoutLicenceMath"
 AUTRES = "Autres (AoutLicenceMath)"
 MATIERE_ANCIEN = {"TH mesure": "mesure", "Topologie": "topologie"}   # 2e segment après le préfixe
+ECG = ("tg::Maths::1ere année", "tg::Maths::Cours deuxième année")   # référentiel de l'utilisateur : jamais déplacé
 EN_TETE = ["carte", "ancien", "nouveau"]
 RATTACHEMENT = Path("inventaire") / "anki" / "rattachement_ancien.yaml"
 
@@ -134,6 +141,35 @@ def cible(deck: str, rattaches, ancien=None) -> tuple[str | None, str]:
     return paquet, ("ambigu" if len({r[1] for r in memes}) > 1 else "rattache")
 
 
+def est_ecg(deck: str) -> bool:
+    """Paquets ECG (1ère et 2e année) : ce que l'utilisateur sait ; aucune de leurs notes ne bouge."""
+    return any(deck == p or deck.startswith(p + "::") for p in ECG)
+
+
+def cible_prerequis(deck: str, prereq) -> tuple[str | None, str]:
+    """(paquet cible, motif) d'une note citée par des notions prérequis, quel que soit son paquet source.
+    `prereq` : [(matière, chapitre)] de ces notions ; plusieurs : la première matière puis l'ordre du poly.
+    Motifs : ecg (jamais déplacée), sans_prerequis (cible None), prerequis."""
+    if est_ecg(deck):
+        return None, "ecg"
+    if not prereq:
+        return None, "sans_prerequis"
+    m, chapitre = sorted(set(prereq), key=lambda r: (E.MATIERES.index(r[0]), E.cle_sc(r[1])))[0]
+    return A.nom_paquet(m, chapitre), "prerequis"
+
+
+def cible_fusion(deck: str, rattaches, ancien=None, prereq=None) -> tuple[str | None, str]:
+    """`cible`, plus l'option --prerequis : une note ECG ne bouge jamais ; une note citée par un prérequis
+    (`prereq` non vide) va dans le chapitre du prérequis, sauf si la couverture la rattache déjà à un chapitre
+    de la matière de son ancien paquet AoutLicenceMath (motifs rattache, ambigu)."""
+    if est_ecg(deck):
+        return None, "ecg"
+    paquet, motif = cible(deck, rattaches, ancien)
+    if prereq and motif not in ("rattache", "ambigu"):
+        return cible_prerequis(deck, prereq)
+    return paquet, motif
+
+
 def _cle_nom(chapitre: str) -> str:
     return re.sub(r"[\$\^\{}]", "", chapitre)
 
@@ -152,8 +188,9 @@ def noms_chapitres(racine=RACINE) -> dict[str, tuple[str, str]]:
     return res
 
 
-def index_notes(racine=RACINE) -> dict[int, list[tuple[str, str]]]:
-    """nid -> [(matière, chapitre)] : couverture.yaml (nid -> notion) puis notions.yaml (notion -> chapitre)."""
+def index_notes(racine=RACINE, prerequis_seuls: bool = False) -> dict[int, list[tuple[str, str]]]:
+    """nid -> [(matière, chapitre)] : couverture.yaml (nid -> notion) puis notions.yaml (notion -> chapitre).
+    `prerequis_seuls` : seulement les notions `type: prerequis`."""
     racine = Path(racine)
     notions = E.charger_notions(racine)
     noms = noms_chapitres(racine)
@@ -162,6 +199,8 @@ def index_notes(racine=RACINE) -> dict[int, list[tuple[str, str]]]:
         for k, v in (E.charger_yaml(racine / "matieres" / m / "couverture.yaml", {}) or {}).items():
             n = notions.get(k)
             if not n or not n.get("chapitre"):
+                continue
+            if prerequis_seuls and n.get("type") != "prerequis":
                 continue
             chapitre = noms[_cle_nom(n["chapitre"])][1]
             for nid in (v or {}).get("notes") or []:
@@ -187,32 +226,42 @@ def charger_ancien(racine=RACINE) -> dict[int, tuple[str, str, bool]]:
 
 
 # ------------------------------------------------------------------ fusion
-def notes_hors_ligne(racine=RACINE) -> list[tuple[int, str, str]]:
-    """(nid, ancien paquet, premier champ) lus dans l'instantané inventaire/anki/notes.jsonl."""
+def notes_hors_ligne(racine=RACINE, prereq=None) -> list[tuple[int, str, str]]:
+    """(nid, ancien paquet, premier champ) lus dans l'instantané inventaire/anki/notes.jsonl : les notes
+    AoutLicenceMath, plus (option --prerequis) celles citées par un prérequis (`prereq` : nid -> ...)."""
     res = []
     for ligne in (Path(racine) / "inventaire" / "anki" / "notes.jsonl").read_text(encoding="utf-8").splitlines():
         n = json.loads(ligne)
-        if n["deck"].startswith(PREFIXE):
+        if n["deck"].startswith(PREFIXE) or int(n["id"]) in (prereq or {}):
             res.append((int(n["id"]), n["deck"], (n.get("champs") or [""])[0]))
     return res
 
 
-def plan_fusion(notes, index, ancien=None) -> dict[int, tuple[str | None, str]]:
-    ancien = ancien or {}
-    return {nid: cible(deck, index.get(nid, []), ancien.get(nid)) for nid, deck, _ in notes}
+def plan_fusion(notes, index, ancien=None, prereq=None) -> dict[int, tuple[str | None, str]]:
+    ancien, prereq = ancien or {}, prereq or {}
+    return {nid: cible_fusion(deck, index.get(nid, []), ancien.get(nid), prereq.get(nid)) for nid, deck, _ in notes}
+
+
+def bougent(plan) -> int:
+    """Notes réellement déplacées par `fusionner` (les « hors poly » restent dans leur ancien paquet)."""
+    return sum(1 for c, m in plan.values() if c and m != "sans_rattachement")
 
 
 def resume(notes, plan, index) -> list[str]:
     L = []
     par_cible = Counter(c for c, _ in plan.values() if c)
-    L.append(f"{len(notes)} notes dans {PREFIXE}")
+    L.append(f"{len(notes)} notes examinées ({sum(d.startswith(PREFIXE) for _, d, _ in notes)} dans {PREFIXE})")
+    L.append(f"Notes qui bougeraient : {bougent(plan)}, dont {sum(m == 'prerequis' for _, m in plan.values())} "
+             f"par --prerequis ; notes ECG laissées en place : {sum(m == 'ecg' for _, m in plan.values())}")
     for paquet, n in sorted(par_cible.items()):
         L.append(f"  {n:4} {paquet}")
     motifs = Counter(m for _, m in plan.values())
     L.append("Motifs : " + ", ".join(f"{m} {n}" for m, n in sorted(motifs.items())))
     for motif, titre in (("ambigu", "Rattachements ambigus (plusieurs chapitres, le premier du poly est retenu)"),
                          ("autre_matiere", "Notions d'une autre matière seulement (rangées dans « Autres »)"),
-                         ("matiere_inconnue", "Matière de l'ancien paquet inconnue (note non déplacée)")):
+                         ("matiere_inconnue", "Matière de l'ancien paquet inconnue (note non déplacée)"),
+                         ("prerequis", "Notes citées par un prérequis (--prerequis)"),
+                         ("ecg", "Notes des paquets ECG (jamais déplacées)")):
         lignes = [(nid, d, f) for nid, d, f in notes if plan[nid][1] == motif]
         if lignes:
             L.append(f"{titre} : {len(lignes)}")
@@ -244,36 +293,45 @@ def chemin_annulation(racine=RACINE) -> Path:
     return p
 
 
-def fusionner(dry_run: bool, racine=RACINE) -> int:
+def fusionner(dry_run: bool, racine=RACINE, prerequis: bool = False) -> int:
     index = index_notes(racine)
     ancien = charger_ancien(racine)
+    prereq = index_notes(racine, prerequis_seuls=True) if prerequis else {}
     if dry_run:
-        notes = notes_hors_ligne(racine)
-        plan = plan_fusion(notes, index, ancien)
+        notes = notes_hors_ligne(racine, prereq)
+        plan = plan_fusion(notes, index, ancien, prereq)
         print("\n".join(resume(notes, plan, index)))
         print("[dry-run] hors ligne depuis notes.jsonl, rien n'a été modifié")
         return 0
 
     nids = appel("findNotes", query=f'"deck:{PREFIXE}"')
+    if prereq:
+        nids = sorted(set(nids) | set(appel("findNotes", query="nid:" + ",".join(map(str, sorted(prereq))))))
     infos = appel("notesInfo", notes=nids)
     cartes = {c["cardId"]: c for c in appel("cardsInfo", cards=[c for i in infos for c in i["cards"]])}
     deplacements = []     # (carte, ancien, nouveau)
     notes_ciblees: dict[str, list[int]] = defaultdict(list)
     notes = []
     for i in infos:
-        anciens = [cartes[c] for c in i["cards"] if cartes[c]["deckName"].startswith(PREFIXE)]
+        toutes = [cartes[c] for c in i["cards"]]
+        if any(est_ecg(c["deckName"]) for c in toutes):
+            continue                                  # une note ECG ne bouge jamais, même citée par un prérequis
+        anciens = [c for c in toutes if c["deckName"].startswith(PREFIXE)]
+        if not anciens and i["noteId"] in prereq:
+            anciens = [c for c in toutes if not c["deckName"].startswith("tg::Maths::L3 Paris Cité")]
         if not anciens:
             continue
         deck = anciens[0]["deckName"]
         premier = next(iter(i["fields"].values()))["value"] if i.get("fields") else ""
         notes.append((i["noteId"], deck, premier))
-        paquet, motif = cible(deck, index.get(i["noteId"], []), ancien.get(i["noteId"]))
+        paquet, motif = cible_fusion(deck, index.get(i["noteId"], []), ancien.get(i["noteId"]), prereq.get(i["noteId"]))
         # Hors poly (chapitres pas encore vus) : l'utilisateur veut les laisser dans l'ancien paquet (08/11/2026).
         if paquet is None or motif == "sans_rattachement":
             continue
-        notes_ciblees[paquet].append(i["noteId"])
+        if deck.startswith(PREFIXE):
+            notes_ciblees[paquet].append(i["noteId"])     # étiquette AoutLicenceMath : seulement ses notes
         deplacements += [(c["cardId"], c["deckName"], paquet) for c in anciens]
-    plan = plan_fusion(notes, index)
+    plan = plan_fusion(notes, index, ancien, prereq)
     print("\n".join(resume(notes, plan, index)))
     if not deplacements:
         print("Rien à déplacer.")
@@ -292,7 +350,8 @@ def fusionner(dry_run: bool, racine=RACINE) -> int:
     for paquet, ids in sorted(par_paquet.items()):
         appel("createDeck", deck=paquet)
         appel("changeDeck", cards=ids, deck=paquet)
-    appel("addTags", notes=[n for ids in notes_ciblees.values() for n in ids], tags=ETIQUETTE)
+    if notes_ciblees:
+        appel("addTags", notes=[n for ids in notes_ciblees.values() for n in ids], tags=ETIQUETTE)
     print(f"{len(deplacements)} cartes déplacées dans {len(par_paquet)} paquets, étiquette « {ETIQUETTE} » ajoutée. "
           f"Aucun paquet supprimé.")
     return 0
@@ -329,13 +388,15 @@ def main() -> int:
     sp.add_parser("importer").add_argument("paquets", nargs="+")
     f = sp.add_parser("fusionner")
     f.add_argument("--dry-run", action="store_true")
+    f.add_argument("--prerequis", action="store_true",
+                   help="ranger aussi les notes citées par un prérequis L1-L2 (jamais une note ECG)")
     sp.add_parser("annuler").add_argument("fichier")
     a = p.parse_args()
     try:
         if a.cmd == "importer":
             return importer(a.paquets)
         if a.cmd == "fusionner":
-            return fusionner(a.dry_run)
+            return fusionner(a.dry_run, prerequis=a.prerequis)
         return annuler(a.fichier)
     except ErreurAnki as ex:
         raise SystemExit(str(ex))

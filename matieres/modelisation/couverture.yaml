@@ -78,3 +78,4 @@ mod-n-0072: {statut: absente, notes: []}
 mod-n-0073: {statut: absente, notes: []}
 mod-n-0074: {statut: absente, notes: []}
 mod-n-0075: {statut: absente, notes: []}
+mod-p-0003: {statut: partielle, notes: [1765287739820]}   # définition d'une série entière ; 1765287843911 (rayon) non retenue : y écrit R dans [0,+inf[ (exclut R = +inf)

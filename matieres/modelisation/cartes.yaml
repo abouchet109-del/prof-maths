@@ -1215,3 +1215,43 @@
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 2
   tags: [prerequis-l1l2, methode]
+- id: mod-a-078-1
+  notion: mod-p-0003
+  recto: 'Déf : rayon de convergence d''une série entière'
+  verso: 'Soit \((a_n)_{n\ge0}\) une suite de nombres complexes. Le rayon de convergence de la série entière \(\sum a_nz^n\) est \(R=\sup\{r\ge0 : (a_nr^n)_{n}\text{ est bornée}\}\in[0,+\infty]\). Pour \(|z|<R\), la série \(\sum a_nz^n\) converge absolument ; pour \(|z|>R\), la suite \((a_nz^n)\) n''est pas bornée et la série diverge grossièrement. Pour \(|z|=R\), on ne peut rien dire en général.'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-n-0001, mod-n-0003, mod-n-0005, proba-n-0076'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, definition]
+- id: mod-a-078-2
+  notion: mod-p-0003
+  recto: 'Prop. : convergence normale d''une série entière sur un disque fermé'
+  verso: 'Soient \(\sum a_nz^n\) une série entière et \(r\ge0\) tel que \(\sum_n|a_n|r^n<+\infty\) (c''est le cas pour tout \(r<R\), rayon de convergence). Pour \(|z|\le r\), \(|a_nz^n|\le|a_n|r^n\) : la série converge normalement, donc uniformément, sur le disque fermé \(\{|z|\le r\}\), et sa somme y est continue. Exemple : pour \(X\) à valeurs dans \(\mathbb N\), \(\sum_kP(X=k)=1<+\infty\), donc \(G_X(z)=\sum_kP(X=k)z^k\) est définie et continue sur \(\{|z|\le1\}\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: mod-a-078-3
+  notion: mod-p-0003
+  recto: 'Thm : dérivation terme à terme d''une série entière'
+  verso: 'Soit \(f(x)=\sum_{n\ge0}a_nx^n\) une série entière de rayon de convergence \(R>0\), avec \(x\) réel. Alors \(f\) est de classe \(C^\infty\) sur \(]-R,R[\) et, pour tout \(p\ge1\) et tout \(x\in]-R,R[\), \(f^{(p)}(x)=\sum_{n\ge p}n(n-1)\cdots(n-p+1)a_nx^{n-p}\), série entière de même rayon \(R\). En particulier \(a_n=\frac{f^{(n)}(0)}{n!}\) pour tout \(n\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-n-0003, mod-n-0005, proba-n-0076'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, theoreme]
+- id: mod-a-078-4
+  notion: mod-p-0003
+  recto: 'Cor. : unicité du développement en série entière'
+  verso: 'Si deux séries entières \(\sum a_nx^n\) et \(\sum b_nx^n\), de rayons de convergence \(>0\), ont la même somme sur \(]-r,r[\) pour un \(r>0\), alors \(a_n=b_n\) pour tout \(n\) (car \(a_n=\frac{f^{(n)}(0)}{n!}=b_n\)). Usage : si \(G_X=G_Y\) sur \([-1,1]\), alors \(P(X=k)=P(Y=k)\) pour tout \(k\in\mathbb N\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-n-0003'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: mod-a-079-1
+  notion: mod-p-0004
+  recto: 'Thm : Bolzano-Weierstrass dans \(\mathbb R^N\)'
+  verso: 'Toute suite bornée \((x_n)\) de \(\mathbb R^N\) (par exemple pour \(\|x\|_\infty=\max_i|x_i|\)) admet une suite extraite convergente : il existe \(\varphi:\mathbb N\to\mathbb N\) strictement croissante (une extractrice) et \(\ell\in\mathbb R^N\) tels que \(x_{\varphi(n)}\to\ell\). Si de plus tous les \(x_n\) sont dans un fermé \(F\) de \(\mathbb R^N\), alors \(\ell\in F\). Usage : \(\mathcal P(E)\) (vecteurs positifs de somme 1) est fermé et borné dans \(\mathbb R^N\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-n-0042'
+  chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
+  priorite: 2
+  tags: [prerequis-l1l2, theoreme]

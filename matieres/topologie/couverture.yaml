@@ -92,3 +92,6 @@ topo-n-0091: {statut: couverte, notes: [1786531967279]}
 topo-n-0092: {statut: couverte, notes: [1786488214838, 1770198404684]}
 topo-n-0093: {statut: couverte, notes: [1786544302569]}
 topo-n-0094: {statut: absente, notes: []}
+topo-p-0003: {statut: partielle, notes: [1786372872827, 1769024494580]}   # injection dans N, exemples, R non dénombrable, sous-ensemble ; manque : lien avec la déf. ECG (bijection avec N)
+topo-p-0004: {statut: partielle, notes: [1787239458792]}   # caractérisation epsilon du sup ; manque : inf, version séquentielle
+topo-p-0005: {statut: partielle, notes: [1786960375538, 1786960389772]}   # définitions CS et CU ; manque : CU implique CS et contre-exemple

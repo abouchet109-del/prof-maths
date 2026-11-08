@@ -2029,3 +2029,35 @@
   chapitre: 'Chapitre 2 - Variables aléatoires réelles'
   priorite: 1
   tags: [exercice]
+- id: proba-a-098-1
+  notion: proba-p-0006
+  recto: 'Prop. : inégalités triangulaires et module dans \(\mathbb C\)'
+  verso: 'Pour tous \(z,w\in\mathbb C\) : \(|z+w|\le|z|+|w|\) et \(\big||z|-|w|\big|\le|z-w|\). De plus \(|z|^2=z\bar z=(\mathrm{Re}\,z)^2+(\mathrm{Im}\,z)^2\), donc \(|\mathrm{Re}\,z|\le|z|\) et \(|\mathrm{Im}\,z|\le|z|\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans proba-n-0064, proba-n-0065, mes-td6-ex04'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: proba-a-098-2
+  notion: proba-p-0006
+  recto: 'Prop. : module et conjugué de \(e^{i\theta}\) (\(\theta\) réel)'
+  verso: 'Pour tout \(\theta\in\mathbb R\) : \(e^{i\theta}=\cos\theta+i\sin\theta\) (formule d''Euler), donc \(|e^{i\theta}|=1\) et \(\overline{e^{i\theta}}=e^{-i\theta}\). Ainsi \(\cos\theta=\mathrm{Re}(e^{i\theta})=\frac{e^{i\theta}+e^{-i\theta}}2\) et \(\sin\theta=\mathrm{Im}(e^{i\theta})=\frac{e^{i\theta}-e^{-i\theta}}{2i}\). Usage : \(|e^{itX}|=1\) pour \(t\) et \(X\) réels, d''où \(|\varphi_X(t)|\le1\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans proba-n-0064, proba-n-0065, proba-n-0073'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: proba-a-098-3
+  notion: proba-p-0006
+  recto: 'Prop. : exponentielle complexe d''une somme'
+  verso: 'Pour tous \(z,w\in\mathbb C\) : \(e^{z+w}=e^ze^w\). De plus \(|e^z|=e^{\mathrm{Re}\,z}\), donc \(e^z\neq0\). En particulier \(e^{i(s+t)}=e^{is}e^{it}\) et \(e^{itX}e^{itY}=e^{it(X+Y)}\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans proba-n-0064, proba-n-0065'
+  chapitre: 'Chapitre 3 - Caractériser une loi'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: proba-a-099-1
+  notion: proba-p-0007
+  recto: 'Prop. : limite de \(\left(1+\frac{z_n}n\right)^n\) pour une suite complexe \(z_n\to z\)'
+  verso: 'Soit \((z_n)\) une suite de nombres complexes qui converge vers \(z\in\mathbb C\). Alors \(\left(1+\frac{z_n}n\right)^n\to e^z\) quand \(n\to+\infty\). Usage (TCL) : \(\varphi_{Z_1}(s)=1-\frac{\sigma^2}2s^2+o(s^2)\) donne, à \(t\) fixé, \(\varphi_{Z_1}(t/\sqrt n)=1+\frac{z_n}n\) avec \(z_n\to-\frac{\sigma^2t^2}2\), d''où \(\varphi_{Z_1}(t/\sqrt n)^n\to e^{-\sigma^2t^2/2}\). Dans \(\mathbb C\), on ne peut pas écrire directement \(\exp\big(n\ln(1+\frac{z_n}n)\big)\) avec le logarithme réel.'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans proba-n-0143'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 2
+  tags: [prerequis-l1l2, propriete]

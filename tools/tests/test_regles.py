@@ -655,6 +655,50 @@ def test_fusion_range_une_ancienne_note_couvrant_un_prerequis_dans_le_paquet_du_
     assert AC.cible(deck, idx[7]) == ("tg::Maths::L3 Paris Cité::Topologie::Chapitre 3 - Espace compact", "rattache")
 
 
+def test_fusion_prerequis_range_toute_source_sauf_les_paquets_ecg(tmp_path):
+    import json
+    import yaml
+    import anki_connect as AC
+    for m in E.MATIERES:
+        (tmp_path / "matieres" / m).mkdir(parents=True)
+    ecrire = lambda chemin, d: (tmp_path / chemin).write_text(yaml.safe_dump(d, allow_unicode=True), encoding="utf-8")  # noqa: E731
+    ecrire("matieres/proba/notions.yaml", [
+        {"id": "proba-p-0006", "type": "prerequis", "chapitre": "Chapitre 3 - C", "sous_chapitre": "3.5.1 D",
+         "requis_par": ["x"]},
+        {"id": "proba-n-0001", "chapitre": "Chapitre 1 - R", "sous_chapitre": "1.3 P"}])
+    ecrire("matieres/proba/couverture.yaml", {"proba-p-0006": {"statut": "partielle", "notes": [1, 2, 3]},
+                                              "proba-n-0001": {"statut": "couverte", "notes": [4]}})
+    prereq = AC.index_notes(tmp_path, prerequis_seuls=True)
+    assert set(prereq) == {1, 2, 3}                       # la notion du poly n'entre pas
+    cible = "tg::Maths::L3 Paris Cité::Probabilités 5::Chapitre 3 - C"
+    centrale = "tg::Maths::Mathématiques DD centrale::Séance 1 :Nombres complexes::Cours"
+    ecg1 = "tg::Maths::1ere année::01 - Logique et Théorie des Ensembles"
+    ecg2 = "tg::Maths::Cours deuxième année::Chapitre 06 Algèbre linéaire et produits scalaires"
+    topo = "tg::Maths::AoutLicenceMath::Topologie::Chapitre 2"
+    assert AC.est_ecg(ecg1) and AC.est_ecg(ecg2) and AC.est_ecg("tg::Maths::1ere année")
+    assert not AC.est_ecg(centrale) and not AC.est_ecg("tg::Maths::1ere années bis")
+    # Paquet ECG : jamais déplacé, même cité par un prérequis, avec ou sans rattachement par ailleurs.
+    assert AC.cible_prerequis(ecg1, prereq[1]) == (None, "ecg")
+    assert AC.cible_fusion(ecg2, [("proba", "Chapitre 3 - C")], None, prereq[1]) == (None, "ecg")
+    # Autre paquet (Centrale) : rangé dans le chapitre du prérequis.
+    assert AC.cible_fusion(centrale, prereq[1], None, prereq[1]) == (cible, "prerequis")
+    # Ancienne note AoutLicenceMath d'une autre matière : le prérequis prime sur « Autres » et sur le lot.
+    assert AC.cible_fusion(topo, prereq[1], ("topologie", "Chapitre 2 - Y", False), prereq[1]) == (cible, "prerequis")
+    # Sans --prerequis : comportement inchangé.
+    assert AC.cible_fusion(centrale, [], None, None) == (None, "matiere_inconnue")
+    # Bout en bout hors ligne : seules les notes non ECG bougeraient.
+    (tmp_path / "inventaire" / "anki").mkdir(parents=True)
+    lignes = [{"id": 1, "deck": centrale, "champs": ["a"]}, {"id": 2, "deck": ecg1, "champs": ["b"]},
+              {"id": 3, "deck": ecg2, "champs": ["c"]}, {"id": 5, "deck": ecg1, "champs": ["d"]}]
+    (tmp_path / "inventaire" / "anki" / "notes.jsonl").write_text(
+        "\n".join(json.dumps(x, ensure_ascii=False) for x in lignes), encoding="utf-8")
+    notes = AC.notes_hors_ligne(tmp_path, prereq)
+    assert [n[0] for n in notes] == [1, 2, 3]             # la note 5 (ECG, non citée) n'est même pas lue
+    plan = AC.plan_fusion(notes, AC.index_notes(tmp_path), {}, prereq)
+    assert plan == {1: (cible, "prerequis"), 2: (None, "ecg"), 3: (None, "ecg")}
+    assert AC.bougent(plan) == 1
+
+
 def test_nom_de_chapitre_des_cartes_de_cours_prime_sur_les_notions(tmp_path):
     import yaml
     import anki_connect as AC
