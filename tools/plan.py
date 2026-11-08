@@ -19,6 +19,7 @@ MAX_LIGNES = 60
 MIN_PAR_NOTION = 10         # durée estimée d'une notion de cours
 REPRISES_MAX_DEFAUT = 30    # minutes de reprises par jour au plus (dispo.yaml : minutes_reprises_max)
 CARTES_DEFAUT = 20          # cartes nouvelles par jour au plus (dispo.yaml : cartes_par_jour)
+ANCIENNES_MAX = 10          # anciennes notes (couverture.yaml) ajoutées par jour aux « à apprendre », hors plafond
 TAGS_PRIORITAIRES = {"erreur", "exercice"}   # cartes d'erreurs et d'exercices : toujours en tête des « à apprendre »
 NOMS = {"topologie": "Topologie", "mesure": "Mesure", "proba": "Probabilités", "modelisation": "Modélisation"}
 PART_CAPACITE = 1.25 / len(E.MATIERES)   # part de la capacité restante au-delà de laquelle on alerte
@@ -36,6 +37,7 @@ def contexte(racine=E.RACINE) -> dict:
         "anki_plan": E.charger_yaml(racine / "state" / "anki_plan.yaml", {}),
         "a_revoir": E.charger_yaml(racine / "state" / "a_revoir.yaml", []),
         "couverture": charger_couverture(racine),
+        "anciennes_donnees": E.charger_yaml(racine / "state" / "anki_anciennes.yaml", {}),
         "blocs": E.charger_yaml(racine / "state" / "blocs.yaml", {}),
         "avancement": E.charger_yaml(racine / "state" / "avancement_cours.yaml", {}),
     }
@@ -313,6 +315,25 @@ def sc_suivants(ctx, plan) -> list[str]:
     return sorted((s for s in tous if E.cle_sc(s) > E.cle_sc(sc) and _dans_limite(s, limite)), key=E.cle_sc)
 
 
+def anciennes_notes(ctx, plan) -> list[int]:
+    """Anciennes notes de l'utilisateur (couverture.yaml) des notions du sous-chapitre du bloc, au plus
+    ANCIENNES_MAX, hors plafond `cartes_par_jour`. Le paquet L3 n'a aucune nouvelle carte par jour : sans
+    cela, une ancienne carte jamais apprise ne sortirait plus. Une note n'est donnée qu'un jour
+    (state/anki_anciennes.yaml) pour que les dix suivantes prennent la place de celles déjà vues."""
+    if not plan["sous_chapitre"]:
+        return []
+    d = str(plan["date"])
+    avant = {int(n) for k, ns in (ctx.get("anciennes_donnees") or {}).items() if str(k) != d for n in ns}
+    bloc = {e["id"] for e, g in plan["items"] if g == "bloc"}
+    cou = ctx.get("couverture") or {}
+    res: list[int] = []
+    for n in notions_sc(ctx, plan["exos"], plan["matiere"], plan["sous_chapitre"], bloc):
+        for nid in (cou.get(n) or {}).get("notes") or []:
+            if int(nid) not in avant and int(nid) not in res:
+                res.append(int(nid))
+    return res[:ANCIENNES_MAX]
+
+
 def anki(ctx, plan) -> dict:
     """Cartes nouvelles du jour (sans jamais redonner une carte) et cartes déjà données à réviser.
 
@@ -336,6 +357,7 @@ def anki(ctx, plan) -> dict:
     limite = 0 if plan["info"]["off"] else ctx["dispo"].get("cartes_par_jour", CARTES_DEFAUT)
     return {
         "nouvelles": [c["id"] for c in ordre[:limite]],
+        "anciennes": [] if plan["info"]["off"] else anciennes_notes(ctx, plan),
         "revoir": [c["id"] for c in ctx["cartes"] if c["id"] in avant and c["notion"] in notions_jour],
     }
 
@@ -354,6 +376,17 @@ def enregistrer_anki(racine, ctx, d, ids):
     else:
         ap.pop(str(d), None)
     _ecrire(Path(racine) / "state" / "anki_plan.yaml", dict(sorted(ap.items())))
+
+
+def enregistrer_anciennes(racine, ctx, d, nids):
+    """Mémorise les anciennes notes données ce jour dans state/anki_anciennes.yaml."""
+    ap = {str(k): v for k, v in (ctx.get("anciennes_donnees") or {}).items()}
+    if nids:
+        ap[str(d)] = nids
+    else:
+        ap.pop(str(d), None)
+    _ecrire(Path(racine) / "state" / "anki_anciennes.yaml", dict(sorted(ap.items())),
+            "# Anciennes notes (nid) données dans « à apprendre », par jour (lu par tools/plan.py).\n")
 
 
 def enregistrer_bloc(racine, ctx, plan):
@@ -441,8 +474,12 @@ def rediger(ctx, plan, cartes) -> list[str]:
         L += ["```", rech, "```"] if rech else ["- (aucune carte pour ces notions)"]
         L.append("Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes selon mes réponses” "
                  "pour réviser sans perturber le planning Anki.")
-    L += ["", f"## Anki — à apprendre ({len(cartes['nouvelles'])} nouvelles)"]
-    L += ["```", _requete(cartes["nouvelles"]), "```"] if cartes["nouvelles"] else ["- (aucune)"]
+    anciennes = cartes.get("anciennes") or []
+    L += ["", f"## Anki — à apprendre ({len(cartes['nouvelles'])} nouvelles"
+              + (f" + {len(anciennes)} anciennes" if anciennes else "") + ")"]
+    requete = " or ".join(([_requete(cartes["nouvelles"])] if cartes["nouvelles"] else [])
+                          + ([f"(nid:{','.join(map(str, anciennes))} is:new)"] if anciennes else []))
+    L += ["```", requete, "```"] if requete else ["- (aucune)"]
     L += ["", "## Anki — à réviser", "- Toutes les cartes dues : `is:due`"]
     if cartes["revoir"]:
         L.append(f"- Déjà données, liées aux exercices du jour ({len(cartes['revoir'])}) : `{_requete(cartes['revoir'])}`")
@@ -462,6 +499,7 @@ def jour(date: dt.date, racine=E.RACINE) -> list[str]:
     cartes = anki(ctx, plan)
     lignes = rediger(ctx, plan, cartes)
     enregistrer_anki(racine, ctx, date, cartes["nouvelles"])
+    enregistrer_anciennes(racine, ctx, date, cartes["anciennes"])
     enregistrer_bloc(racine, ctx, plan)
     (racine / "NOW.md").write_text("\n".join(lignes) + "\n", encoding="utf-8")
     return lignes

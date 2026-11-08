@@ -3,6 +3,8 @@ import datetime as dt
 import sys
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import etat as E  # noqa: E402
@@ -458,11 +460,107 @@ def test_check_cartes_exercice(tmp_path):
     assert any("est en topologie" in x for x in C.verifier(tmp_path))
 
 
+def test_anciennes_notes_du_bloc_hors_plafond_et_sans_repetition():
+    cou = {"n-a": {"statut": "couverte", "notes": list(range(100, 108))},
+           "n-a2": {"statut": "partielle", "notes": [105, 200, 201, 202, 203]},
+           "n-b": {"statut": "couverte", "notes": [300]}}
+    c = ctx_cartes(dispo={"cartes_par_jour": 2}, couverture=cou)
+    p = P.plan_jour(c, D(2026, 11, 4))
+    a = P.anki(c, p)
+    # plafond de 2 cartes du système respecté ; anciennes : celles du sous-chapitre du bloc (1.1), 10 au plus
+    assert len(a["nouvelles"]) == 2
+    assert a["anciennes"] == [100, 101, 102, 103, 104, 105, 106, 107, 200, 201]
+    assert 300 not in a["anciennes"]
+    lignes = P.rediger(c, p, a)
+    requete = lignes[lignes.index("```", lignes.index(next(l for l in lignes if l.startswith("## Anki — à apprendre")))) + 1]
+    assert requete.endswith("(nid:100,101,102,103,104,105,106,107,200,201 is:new)")
+    assert requete.startswith('"Id:eT" or "Id:eM" or ')                  # cartes du système d'abord
+    # le lendemain : les notes déjà données ne reviennent pas, les suivantes prennent leur place
+    c["anciennes_donnees"] = {"2026-11-04": a["anciennes"]}
+    assert P.anki(c, p)["anciennes"] == a["anciennes"]                       # même date : identique
+    assert P.anki(c, P.plan_jour(c, D(2026, 11, 5)))["anciennes"] == [202, 203]
+    # jour off ou sans couverture : rien
+    assert P.anki(c, P.plan_jour(c, D(2026, 11, 7)))["anciennes"] == []
+    c2 = ctx_cartes(dispo={"cartes_par_jour": 2})
+    assert P.anki(c2, P.plan_jour(c2, D(2026, 11, 4)))["anciennes"] == []
+
+
 def test_paquet_anki_des_cartes_d_exercices():
     import anki as A
     cours = A.nom_paquet("topologie", "Chapitre 1 - Espace métrique")
     assert cours == "tg::Maths::L3 Paris Cité::Topologie::Chapitre 1 - Espace métrique"
     assert A.nom_paquet("topologie", "Chapitre 1 - Espace métrique", exercice=True) == cours + "::Exercices"
+
+
+# ------------------------------------------- fusion AoutLicenceMath (anki_connect, sans réseau)
+def test_cible_fusion_aoutlicence():
+    import anki_connect as AC
+    ch1, ch2 = "Chapitre 1 - Espace métrique", "Chapitre 2 - Espace complet"
+    base = "tg::Maths::L3 Paris Cité::Topologie::"
+    cours = "tg::Maths::AoutLicenceMath::Topologie::Chapitre 3"
+    td = "tg::Maths::AoutLicenceMath::Topologie::TD2"
+    assert AC.cible(cours, [("topologie", ch1)]) == (base + ch1, "rattache")
+    # plusieurs chapitres : le premier du poly (Chapitre 2 avant Chapitre 10)
+    assert AC.cible(cours, [("topologie", "Chapitre 10 - Z"), ("topologie", ch2)]) == (base + ch2, "ambigu")
+    assert AC.cible(cours, [("topologie", ch1), ("topologie", ch1)])[1] == "rattache"
+    # paquet TD rattachable : sous-paquet Exercices
+    assert AC.cible(td, [("topologie", ch2)]) == (base + ch2 + "::Exercices", "rattache")
+    # sans rattachement, ou seulement une autre matière : « Autres » de la matière de l'ancien paquet
+    autres = base + "Autres (AoutLicenceMath)"
+    assert AC.cible(cours, []) == (autres, "sans_rattachement")
+    assert AC.cible(td, []) == (autres, "sans_rattachement")
+    assert AC.cible(cours, [("proba", "Chapitre 2 - V")]) == (autres, "autre_matiere")
+    mesure = AC.cible("tg::Maths::AoutLicenceMath::TH mesure::Chapitre 1", [("mesure", "Chapitre 1 - T")])
+    assert mesure[0] == "tg::Maths::L3 Paris Cité::Mesure et intégration::Chapitre 1 - T"
+    # rattachement par lot (rattachement_ancien.yaml), seulement si la couverture ne donne rien dans la matière
+    lot = ("topologie", ch2, False)
+    assert AC.cible(cours, [], lot) == (base + ch2, "classe")
+    assert AC.cible(cours, [("proba", "Chapitre 2 - V")], lot) == (base + ch2, "classe")
+    assert AC.cible(cours, [("topologie", ch1)], lot) == (base + ch1, "rattache")     # la couverture prime
+    assert AC.cible(td, [], lot) == (base + ch2 + "::Exercices", "classe")
+    assert AC.cible(cours, [], ("topologie", ch2, True)) == (base + ch2 + "::Exercices", "classe")
+    assert AC.cible(cours, [], ("mesure", "Chapitre 1 - T", False)) == (autres, "sans_rattachement")   # autre matière
+    # ancien paquet inconnu : la note ne bouge pas
+    assert AC.cible("tg::Maths::AoutLicenceMath::Autre::X", [("topologie", ch1)]) == (None, "matiere_inconnue")
+
+
+def test_index_notes_via_couverture_et_notions(tmp_path):
+    import yaml
+    import anki_connect as AC
+    for m in E.MATIERES:
+        (tmp_path / "matieres" / m).mkdir(parents=True)
+    ecrire = lambda chemin, d: (tmp_path / chemin).write_text(yaml.safe_dump(d, allow_unicode=True), encoding="utf-8")  # noqa: E731
+    ecrire("matieres/topologie/notions.yaml", [{"id": "t1", "chapitre": "Chapitre 1 - X", "sous_chapitre": "1.1"},
+                                              {"id": "t2", "chapitre": "Chapitre 2 - Y", "sous_chapitre": "2.1"}])
+    ecrire("matieres/topologie/couverture.yaml", {"t1": {"statut": "couverte", "notes": [1, 2]},
+                                                  "t2": {"statut": "partielle", "notes": [2]},
+                                                  "t3": {"statut": "absente", "notes": []}})
+    idx = AC.index_notes(tmp_path)
+    assert idx[1] == [("topologie", "Chapitre 1 - X")]
+    assert idx[2] == [("topologie", "Chapitre 1 - X"), ("topologie", "Chapitre 2 - Y")]
+    # rattachement_ancien.yaml : chapitre simple, TD (exercices), null ignoré ; chapitre inconnu refusé
+    (tmp_path / "inventaire" / "anki").mkdir(parents=True)
+    ecrire("inventaire/anki/rattachement_ancien.yaml",
+           {10: "Chapitre 2 - Y", 11: {"chapitre": "Chapitre 1 - X", "exercices": True}, 12: None})
+    assert AC.charger_ancien(tmp_path) == {10: ("topologie", "Chapitre 2 - Y", False),
+                                            11: ("topologie", "Chapitre 1 - X", True)}
+    ecrire("inventaire/anki/rattachement_ancien.yaml", {10: "Chapitre 9 - ?"})
+    with pytest.raises(SystemExit):
+        AC.charger_ancien(tmp_path)
+    assert AC.charger_ancien(tmp_path / "vide") == {}
+
+
+def test_nom_de_chapitre_des_cartes_de_cours_prime_sur_les_notions(tmp_path):
+    import yaml
+    import anki_connect as AC
+    (tmp_path / "matieres" / "mesure").mkdir(parents=True)
+    for m in E.MATIERES[:1] + E.MATIERES[2:]:
+        (tmp_path / "matieres" / m).mkdir(parents=True)
+    ecrire = lambda chemin, d: (tmp_path / chemin).write_text(yaml.safe_dump(d, allow_unicode=True), encoding="utf-8")  # noqa: E731
+    ecrire("matieres/mesure/notions.yaml", [{"id": "m1", "chapitre": "Chapitre 5 - Espaces $L^p$ (UVSQ)", "sous_chapitre": "x"}])
+    ecrire("matieres/mesure/cartes.yaml", [{"id": "c", "notion": "m1", "chapitre": "Chapitre 5 - Espaces Lp (UVSQ)"}])
+    ecrire("matieres/mesure/couverture.yaml", {"m1": {"statut": "couverte", "notes": [5]}})
+    assert AC.index_notes(tmp_path)[5] == [("mesure", "Chapitre 5 - Espaces Lp (UVSQ)")]
 
 
 # ------------------------------------------- stabilité de bout en bout

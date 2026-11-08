@@ -25,9 +25,9 @@ Bloc du jour : Topologie — Chapitre 1 - Espace métrique > 1.3 Espace métriqu
 ```
 Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes selon mes réponses” pour réviser sans perturber le planning Anki.
 
-## Anki — à apprendre (20 nouvelles)
+## Anki — à apprendre (20 nouvelles + 10 anciennes)
 ```
-"Id:ex-topo-td1-ex04" or "Id:ex-topo-td1-ex06" or "Id:ex-mes-cc1-2324-ex02" or "Id:ex-pro-par2425-ex02" or "Id:topo-a-010-2" or "Id:topo-a-011-1" or "Id:topo-a-012-1" or "Id:topo-a-013-1" or "Id:topo-a-014-1" or "Id:topo-a-014-2" or "Id:topo-a-015-1" or "Id:topo-a-015-2" or "Id:topo-a-015-3" or "Id:topo-a-017-1" or "Id:topo-a-018-1" or "Id:topo-a-018-2" or "Id:topo-a-019-1" or "Id:topo-a-019-2" or "Id:topo-a-020-1" or "Id:topo-a-020-2"
+"Id:ex-topo-td1-ex04" or "Id:ex-topo-td1-ex06" or "Id:ex-mes-cc1-2324-ex02" or "Id:ex-pro-par2425-ex02" or "Id:topo-a-010-2" or "Id:topo-a-011-1" or "Id:topo-a-012-1" or "Id:topo-a-013-1" or "Id:topo-a-014-1" or "Id:topo-a-014-2" or "Id:topo-a-015-1" or "Id:topo-a-015-2" or "Id:topo-a-015-3" or "Id:topo-a-017-1" or "Id:topo-a-018-1" or "Id:topo-a-018-2" or "Id:topo-a-019-1" or "Id:topo-a-019-2" or "Id:topo-a-020-1" or "Id:topo-a-020-2" or (nid:1786448736462,1786448354098,1786448903783,1786448927718,1786466066522,1772647483015,1770140867658,1786448444687,1786448433279,1786441932447 is:new)
 ```
 
 ## Anki — à réviser

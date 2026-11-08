@@ -17,7 +17,7 @@
 1. **Ouvrir `NOW.md`.** La première ligne donne le bloc du jour : une matière et un sous-chapitre (les matières tournent : topologie, mesure, probabilités, modélisation). Les exercices sont groupés en reprises, annale et bloc.
 2. **Anki** (hors des 2 h 30) :
    - Révisions : étudier `tg::Maths`. Anki présente toutes les cartes dues, anciennes et nouvelles, où qu'elles soient rangées.
-   - Nouvelles cartes : coller la recherche « à apprendre » dans **Outils → Créer un paquet filtré**, puis étudier ce paquet (jusqu'à 20 cartes : tes cartes d'erreurs et d'exercices, puis celles du sous-chapitre du bloc du jour, puis celles du sous-chapitre suivant de la même matière).
+   - Nouvelles cartes : coller la recherche « à apprendre » dans **Outils → Créer un paquet filtré**, puis étudier ce paquet (jusqu'à 20 cartes : tes cartes d'erreurs et d'exercices, puis celles du sous-chapitre du bloc du jour, puis celles du sous-chapitre suivant de la même matière ; s'y ajoutent jusqu'à 10 de tes anciennes cartes jamais apprises du sous-chapitre).
    - **Cartes d'exercices :** le lendemain, elles arrivent en tête des cartes à apprendre, avec les cartes d'erreurs. Le recto donne l'énoncé : cherche d'abord par où l'attaquer, puis retourne la carte (idée clé, correction complète, piège, référence du corrigé). Elles sont rangées dans le sous-paquet `Exercices` de chaque chapitre.
    - Ces cartes ne remplacent pas le papier. L'exercice revient ensuite dans les reprises (30 min par jour au plus) : refais-le sur papier, et envoie ta photo en séance pour qu'elle soit vérifiée.
 3. **Cours (30 min) :** relire les notions indiquées, aux pages données, pour approfondir. Pour réviser tout un sujet, coller la recherche « tout le sujet du jour » dans un paquet filtré, en décochant « replanifier les cartes selon mes réponses ». Elle réunit tes anciennes cartes `AoutLicenceMath` et les nouvelles.
@@ -32,7 +32,12 @@
 ## Réglages Anki à faire une fois
 - Importer les deux paquets `anki/paquets/prof-maths-2026-11-03.apkg` et `prof-maths-2026-11-03-2.apkg`, par double-clic.
 - Sur le paquet `L3 Paris Cité`, ouvrir Options et mettre « nouvelles cartes par jour » à 0.
-- AnkiConnect est facultatif. Il permettrait d'étiqueter tes anciennes cartes par chapitre : `tag:` retrouverait alors tout un chapitre sans recherche à coller.
+- Importer aussi le paquet des cartes d'exercices, `anki/paquets/prof-maths-2026-11-08.apkg` (sous-paquets `Exercices` de chaque chapitre).
+- **Fusion de tes paquets `AoutLicenceMath` dans le paquet L3** (environ 420 notes), rangés par chapitre de Paris Cité. Changer de paquet garde l'historique de révision. Elle demande AnkiConnect (extension Anki, à installer) et Anki ouvert. Deux commandes, depuis `D:\Projets\prof-maths` :
+  - `python tools/anki_connect.py fusionner --dry-run` : montre combien de notes iront dans chaque paquet, sans rien toucher (marche Anki fermé).
+  - `python tools/anki_connect.py fusionner` : fait la fusion. Un fichier d'annulation est écrit avant dans `anki/export/fusion-<date>.csv` ; pour revenir en arrière : `python tools/anki_connect.py annuler anki/export/fusion-<date>.csv`. Aucun paquet n'est supprimé. Les notes absentes de la couverture sont rangées d'après leur recto (`inventaire/anki/rattachement_ancien.yaml`, modifiable). Seules les notes hors de tous les chapitres de Paris Cité (connexité, calcul différentiel, interversion limite-intégrale) vont dans `Autres (AoutLicenceMath)` de leur matière.
+- Avec le paquet L3 à 0 nouvelle carte par jour, une ancienne carte jamais apprise ne sortirait plus. `NOW.md` ajoute donc à la recherche « à apprendre » jusqu'à 10 anciennes notes du sous-chapitre du jour (`(nid:… is:new)`), en plus des 20 cartes du système.
+- AnkiConnect permet aussi d'importer en une commande : `python tools/anki_connect.py importer anki/paquets/<fichier>.apkg`.
 
 ## Fiabilité
 - **Corrigés :** le corrigé officiel passe d'abord. Sinon, la solution porte la mention « vérifiée par Claude, à confirmer ». Un corrigé officiel peut lui-même être faux.

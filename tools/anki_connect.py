@@ -1,0 +1,303 @@
+"""Pilote Anki par AnkiConnect (http://127.0.0.1:8765, version 6) ; bibliothèque standard seulement.
+
+Usage (depuis la racine du projet, Anki ouvert avec AnkiConnect pour tout sauf --dry-run) :
+    python tools/anki_connect.py importer PAQUET.apkg [PAQUET.apkg ...]
+    python tools/anki_connect.py fusionner [--dry-run]
+    python tools/anki_connect.py annuler anki/export/fusion-AAAA-MM-JJ.csv
+
+`fusionner` range les notes des paquets `tg::Maths::AoutLicenceMath::*` dans le paquet L3, selon les
+chapitres de Paris Cité. Changer une carte de paquet garde son historique de révision. Aucun paquet n'est
+supprimé, même vide. Avant toute modification, un fichier d'annulation (carte ; ancien paquet ; nouveau
+paquet) est écrit dans `anki/export/` ; `annuler` remet chaque carte dans son ancien paquet.
+
+Rattachement d'une note (fonction pure `cible`) :
+  - ses notions sont celles de `matieres/*/couverture.yaml` qui la citent ; leur chapitre est celui de
+    `notions.yaml`, donc le même que celui des cartes de cours ;
+  - on garde les notions de la matière de l'ancien paquet (TH mesure -> mesure, Topologie -> topologie) ;
+    plusieurs chapitres : le premier dans l'ordre du poly ;
+  - une note d'un paquet TD rattachable va dans le sous-paquet `::Exercices` du chapitre ;
+  - sinon, `inventaire/anki/rattachement_ancien.yaml` (rangement par lot des notes absentes de la couverture,
+    d'après leur recto) : `nid: chapitre`, ou `nid: {chapitre: ..., exercices: true}` pour un paquet TD ;
+  - sinon (valeur `null` : hors de tous les chapitres de la matière) :
+    `tg::Maths::L3 Paris Cité::<Matière>::Autres (AoutLicenceMath)`.
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import datetime as dt
+import html
+import json
+import re
+import sys
+import urllib.request
+from collections import Counter, defaultdict
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import anki as A  # noqa: E402
+import etat as E  # noqa: E402
+
+RACINE = E.RACINE
+URL = "http://127.0.0.1:8765"
+VERSION = 6
+PREFIXE = "tg::Maths::AoutLicenceMath"
+ETIQUETTE = "AoutLicenceMath"
+AUTRES = "Autres (AoutLicenceMath)"
+MATIERE_ANCIEN = {"TH mesure": "mesure", "Topologie": "topologie"}   # 2e segment après le préfixe
+EN_TETE = ["carte", "ancien", "nouveau"]
+RATTACHEMENT = Path("inventaire") / "anki" / "rattachement_ancien.yaml"
+
+
+# ------------------------------------------------------------------ AnkiConnect
+def appel(action: str, **params):
+    requete = json.dumps({"action": action, "version": VERSION, "params": params}).encode("utf-8")
+    try:
+        with urllib.request.urlopen(urllib.request.Request(URL, requete), timeout=60) as r:
+            reponse = json.loads(r.read().decode("utf-8"))
+    except OSError as ex:
+        raise SystemExit(f"AnkiConnect injoignable sur {URL} (Anki ouvert ? extension installée ?) : {ex}")
+    if reponse.get("error"):
+        raise SystemExit(f"AnkiConnect, {action} : {reponse['error']}")
+    return reponse["result"]
+
+
+# ------------------------------------------------------------------ rattachement (pur)
+def matiere_ancien(deck: str) -> str | None:
+    """Matière d'un ancien paquet `tg::Maths::AoutLicenceMath::<TH mesure|Topologie>::...`."""
+    morceaux = deck.split("::")
+    return MATIERE_ANCIEN.get(morceaux[3]) if deck.startswith(PREFIXE + "::") and len(morceaux) > 3 else None
+
+
+def est_td(deck: str) -> bool:
+    return bool(re.fullmatch(r"TD\d+", deck.split("::")[-1]))
+
+
+def cible(deck: str, rattaches, ancien=None) -> tuple[str | None, str]:
+    """(paquet cible, motif) d'une note de l'ancien paquet `deck`.
+
+    `rattaches` : [(matière, chapitre)] des notions qui citent la note (couverture.yaml).
+    `ancien` : (matière, chapitre, exercices) lu dans rattachement_ancien.yaml, ou None ; utilisé seulement
+    si la couverture ne donne aucun chapitre dans la matière de l'ancien paquet.
+    Motifs : rattache, ambigu (plusieurs chapitres, on prend le premier du poly), classe (rattachement par
+    lot), autre_matiere (seules des notions d'une autre matière : va dans « Autres »), sans_rattachement,
+    matiere_inconnue (cible None : la note ne bouge pas)."""
+    m = matiere_ancien(deck)
+    if m is None:
+        return None, "matiere_inconnue"
+    memes = sorted({r for r in rattaches if r[0] == m}, key=lambda r: E.cle_sc(r[1]))
+    if not memes and ancien and ancien[0] == m:
+        return A.nom_paquet(m, ancien[1], exercice=est_td(deck) or bool(ancien[2])), "classe"
+    autres = f"tg::Maths::L3 Paris Cité::{A.MATIERES[m]}::{AUTRES}"
+    if not memes:
+        return autres, ("autre_matiere" if rattaches else "sans_rattachement")
+    paquet = A.nom_paquet(m, memes[0][1], exercice=est_td(deck))
+    return paquet, ("ambigu" if len({r[1] for r in memes}) > 1 else "rattache")
+
+
+def _cle_nom(chapitre: str) -> str:
+    return re.sub(r"[\$\^\{}]", "", chapitre)
+
+
+def noms_chapitres(racine=RACINE) -> dict[str, tuple[str, str]]:
+    """nom normalisé -> (matière, nom de chapitre) ; les noms des cartes de cours priment sur ceux de
+    notions.yaml (« Espaces Lp » et non « Espaces $L^p$ »), car c'est leur paquet qui existe."""
+    racine = Path(racine)
+    res: dict[str, tuple[str, str]] = {}
+    for n in E.charger_notions(racine).values():
+        if n.get("chapitre"):
+            res[_cle_nom(n["chapitre"])] = (n["matiere"], n["chapitre"])
+    for c in E.charger_cartes(racine):
+        if c.get("chapitre"):
+            res[_cle_nom(c["chapitre"])] = (c["matiere"], c["chapitre"])
+    return res
+
+
+def index_notes(racine=RACINE) -> dict[int, list[tuple[str, str]]]:
+    """nid -> [(matière, chapitre)] : couverture.yaml (nid -> notion) puis notions.yaml (notion -> chapitre)."""
+    racine = Path(racine)
+    notions = E.charger_notions(racine)
+    noms = noms_chapitres(racine)
+    res: dict[int, list] = defaultdict(list)
+    for m in E.MATIERES:
+        for k, v in (E.charger_yaml(racine / "matieres" / m / "couverture.yaml", {}) or {}).items():
+            n = notions.get(k)
+            if not n or not n.get("chapitre"):
+                continue
+            chapitre = noms[_cle_nom(n["chapitre"])][1]
+            for nid in (v or {}).get("notes") or []:
+                res[int(nid)].append((n["matiere"], chapitre))
+    return res
+
+
+def charger_ancien(racine=RACINE) -> dict[int, tuple[str, str, bool]]:
+    """nid -> (matière, chapitre, exercices) lu dans inventaire/anki/rattachement_ancien.yaml (absent : {}).
+    Les valeurs null (hors poly) sont ignorées ; un chapitre inconnu des cours est une erreur."""
+    donnees = E.charger_yaml(Path(racine) / RATTACHEMENT, {}) or {}
+    noms = noms_chapitres(racine)
+    res = {}
+    for nid, v in donnees.items():
+        if v is None:
+            continue
+        chapitre, exo = (v, False) if isinstance(v, str) else (v["chapitre"], bool(v.get("exercices")))
+        if _cle_nom(chapitre) not in noms:
+            raise SystemExit(f"{RATTACHEMENT} : chapitre inconnu pour {nid} ({chapitre})")
+        matiere, nom = noms[_cle_nom(chapitre)]
+        res[int(nid)] = (matiere, nom, exo)
+    return res
+
+
+# ------------------------------------------------------------------ fusion
+def notes_hors_ligne(racine=RACINE) -> list[tuple[int, str, str]]:
+    """(nid, ancien paquet, premier champ) lus dans l'instantané inventaire/anki/notes.jsonl."""
+    res = []
+    for ligne in (Path(racine) / "inventaire" / "anki" / "notes.jsonl").read_text(encoding="utf-8").splitlines():
+        n = json.loads(ligne)
+        if n["deck"].startswith(PREFIXE):
+            res.append((int(n["id"]), n["deck"], (n.get("champs") or [""])[0]))
+    return res
+
+
+def plan_fusion(notes, index, ancien=None) -> dict[int, tuple[str | None, str]]:
+    ancien = ancien or {}
+    return {nid: cible(deck, index.get(nid, []), ancien.get(nid)) for nid, deck, _ in notes}
+
+
+def resume(notes, plan, index) -> list[str]:
+    L = []
+    par_cible = Counter(c for c, _ in plan.values() if c)
+    L.append(f"{len(notes)} notes dans {PREFIXE}")
+    for paquet, n in sorted(par_cible.items()):
+        L.append(f"  {n:4} {paquet}")
+    motifs = Counter(m for _, m in plan.values())
+    L.append("Motifs : " + ", ".join(f"{m} {n}" for m, n in sorted(motifs.items())))
+    for motif, titre in (("ambigu", "Rattachements ambigus (plusieurs chapitres, le premier du poly est retenu)"),
+                         ("autre_matiere", "Notions d'une autre matière seulement (rangées dans « Autres »)"),
+                         ("matiere_inconnue", "Matière de l'ancien paquet inconnue (note non déplacée)")):
+        lignes = [(nid, d, f) for nid, d, f in notes if plan[nid][1] == motif]
+        if lignes:
+            L.append(f"{titre} : {len(lignes)}")
+            for nid, d, f in lignes:
+                chap = sorted({c for _, c in index.get(nid, [])}, key=E.cle_sc)
+                L.append(f"  {nid} [{d.split('::', 3)[-1]}] {_propre(f)} -> {', '.join(chap) or '-'}")
+    sans = [(nid, d, f) for nid, d, f in notes if plan[nid][1] == "sans_rattachement"]
+    par_ancien = Counter(d.split("::", 3)[-1] for _, d, _ in sans)
+    L.append(f"Hors de tous les chapitres (rangées dans « Autres ») : {len(sans)}")
+    for d, n in sorted(par_ancien.items()):
+        L.append(f"  {n:4} {d}")
+    return L
+
+
+def _propre(texte: str, n: int = 70) -> str:
+    texte = html.unescape(re.sub(r"<[^>]+>", " ", texte or ""))
+    texte = re.sub(r"\s+", " ", texte).strip()
+    return texte if len(texte) <= n else texte[: n - 1] + "…"
+
+
+def chemin_annulation(racine=RACINE) -> Path:
+    dossier = Path(racine) / "anki" / "export"
+    dossier.mkdir(parents=True, exist_ok=True)
+    jour = dt.date.today().isoformat()
+    p, k = dossier / f"fusion-{jour}.csv", 1
+    while p.exists():
+        k += 1
+        p = dossier / f"fusion-{jour}-{k}.csv"
+    return p
+
+
+def fusionner(dry_run: bool, racine=RACINE) -> int:
+    index = index_notes(racine)
+    ancien = charger_ancien(racine)
+    if dry_run:
+        notes = notes_hors_ligne(racine)
+        plan = plan_fusion(notes, index, ancien)
+        print("\n".join(resume(notes, plan, index)))
+        print("[dry-run] hors ligne depuis notes.jsonl, rien n'a été modifié")
+        return 0
+
+    nids = appel("findNotes", query=f'"deck:{PREFIXE}"')
+    infos = appel("notesInfo", notes=nids)
+    cartes = {c["cardId"]: c for c in appel("cardsInfo", cards=[c for i in infos for c in i["cards"]])}
+    deplacements = []     # (carte, ancien, nouveau)
+    notes_ciblees: dict[str, list[int]] = defaultdict(list)
+    notes = []
+    for i in infos:
+        anciens = [cartes[c] for c in i["cards"] if cartes[c]["deckName"].startswith(PREFIXE)]
+        if not anciens:
+            continue
+        deck = anciens[0]["deckName"]
+        premier = next(iter(i["fields"].values()))["value"] if i.get("fields") else ""
+        notes.append((i["noteId"], deck, premier))
+        paquet, _ = cible(deck, index.get(i["noteId"], []), ancien.get(i["noteId"]))
+        if paquet is None:
+            continue
+        notes_ciblees[paquet].append(i["noteId"])
+        deplacements += [(c["cardId"], c["deckName"], paquet) for c in anciens]
+    plan = plan_fusion(notes, index)
+    print("\n".join(resume(notes, plan, index)))
+    if not deplacements:
+        print("Rien à déplacer.")
+        return 0
+
+    annulation = chemin_annulation(racine)
+    with annulation.open("w", encoding="utf-8", newline="") as f:      # écrit AVANT toute modification
+        w = csv.writer(f, delimiter=";", lineterminator="\n")
+        w.writerow(EN_TETE)
+        w.writerows(deplacements)
+    print(f"Fichier d'annulation : {annulation.as_posix()}")
+
+    par_paquet: dict[str, list[int]] = defaultdict(list)
+    for carte, _, nouveau in deplacements:
+        par_paquet[nouveau].append(carte)
+    for paquet, ids in sorted(par_paquet.items()):
+        appel("createDeck", deck=paquet)
+        appel("changeDeck", cards=ids, deck=paquet)
+    appel("addTags", notes=[n for ids in notes_ciblees.values() for n in ids], tags=ETIQUETTE)
+    print(f"{len(deplacements)} cartes déplacées dans {len(par_paquet)} paquets, étiquette « {ETIQUETTE} » ajoutée. "
+          f"Aucun paquet supprimé.")
+    return 0
+
+
+def annuler(fichier: str) -> int:
+    with open(fichier, encoding="utf-8", newline="") as f:
+        lignes = list(csv.DictReader(f, delimiter=";"))
+    par_ancien: dict[str, list[int]] = defaultdict(list)
+    for r in lignes:
+        par_ancien[r["ancien"]].append(int(r["carte"]))
+    for paquet, ids in sorted(par_ancien.items()):
+        appel("createDeck", deck=paquet)          # sans effet si le paquet existe
+        appel("changeDeck", cards=ids, deck=paquet)
+    print(f"{len(lignes)} cartes remises dans {len(par_ancien)} anciens paquets. "
+          f"L'étiquette « {ETIQUETTE} » reste sur les notes (à retirer à la main si besoin).")
+    return 0
+
+
+def importer(paquets: list[str]) -> int:
+    for p in paquets:
+        chemin = Path(p).resolve()
+        if not chemin.exists():
+            raise SystemExit(f"Introuvable : {chemin}")
+        ok = appel("importPackage", path=str(chemin))
+        print(f"{'importé' if ok else 'ÉCHEC'} : {chemin.as_posix()}")
+    return 0
+
+
+def main() -> int:
+    sys.stdout.reconfigure(encoding="utf-8")
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    sp = p.add_subparsers(dest="cmd", required=True)
+    sp.add_parser("importer").add_argument("paquets", nargs="+")
+    f = sp.add_parser("fusionner")
+    f.add_argument("--dry-run", action="store_true")
+    sp.add_parser("annuler").add_argument("fichier")
+    a = p.parse_args()
+    if a.cmd == "importer":
+        return importer(a.paquets)
+    if a.cmd == "fusionner":
+        return fusionner(a.dry_run)
+    return annuler(a.fichier)
+
+
+if __name__ == "__main__":
+    sys.exit(main())
