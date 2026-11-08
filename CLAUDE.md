@@ -5,8 +5,9 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 ## Principes
 - **Le code calcule, Claude juge.** États des exercices, reprises, déverrouillage des catégories et plan du jour viennent des scripts (`tools/etat.py`, `tools/plan.py`). Ne jamais les recalculer de tête ni éditer `NOW.md` ou `state/resultats.yaml` à la main.
 - **Un niveau ne monte que sur preuve** : un exercice fait seul et vérifié. Ce que l'utilisateur déclare sans le montrer compte, mais au moindre doute sur « seul », c'est `aide`.
-- **Debrief après chaque journée** : skill `debrief`, **dans la même conversation que la séance**, qui connaît déjà les exercices et les aides données. Ne jamais renvoyer l'utilisateur vers une autre conversation. C'est la séance qui remplit le suivi : `resultat.py`, journal, cartes d'erreurs, `plan.py`, commit.
-- **Une conversation par jour** : cours, exercices, puis debrief. Le lendemain, nouvelle conversation.
+- **Le plan se calcule au début de chaque séance**, pour maintenant, d'après l'état réel : skill `seance` (« on commence »), commande `plan.py seance`. L'utilisateur travaille n'importe quel jour : un jour `off` de `dispo.yaml` ne bloque rien, il ne sert qu'à la capacité et à la marge. Ce qui n'a pas été fait revient seul. Les cartes apprises se lisent dans Anki (lecture seule), pas dans une réservation à l'avance.
+- **Debrief après chaque séance** : skill `debrief`, **dans la même conversation que la séance**, qui connaît déjà les exercices et les aides données. Ne jamais renvoyer l'utilisateur vers une autre conversation. Il enregistre les résultats, les questions et les cartes, puis recopie le **bilan réel** calculé par `plan.py bilan` dans le journal, et fait le commit. Il ne prépare pas la séance suivante.
+- **Une conversation par séance** : cours, exercices, puis debrief. Une nouvelle séance, une nouvelle conversation.
 - **Annales de Paris Cité prioritaires** : si le temps manque, on coupe d'abord l'exotique, puis le secondaire, jamais une annale.
 
 ## Pendant une séance d'exercices
@@ -31,11 +32,13 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 - Anki : une carte déjà exportée (`anki/registre.csv`) peut être corrigée ; l'utilisateur l'a demandé le 07/11/2026. Pour cela : `cartes.yaml`, puis `--reexporter`, voir « Cartes Anki ». Ne jamais changer `MODEL_ID`, `MODEL_NAME` ni `GUID_NAMESPACE` d'`anki.py`, ni l'`id` d'une carte : la mise à jour dans Anki repose sur eux.
 
 ## Commandes
-- Plan du jour : `python tools/plan.py jour [--date AAAA-MM-JJ]` → `NOW.md`.
+- Début de séance : `python tools/plan.py seance` → `NOW.md` (Anki ouvert ; `--sans-anki` pour estimer).
+- Fin de séance : `python tools/plan.py bilan [--date AAAA-MM-JJ]` → bilan réel à recopier dans le journal.
+- Simulation d'une date du calendrier (hors workflow) : `python tools/plan.py jour --date AAAA-MM-JJ`.
 - Résultat d'un exercice : `python tools/resultat.py ajouter …` ; profil : `python tools/resultat.py profil`.
 - Cohérence : `python tools/check.py` (avant chaque commit).
 - Cartes : `python tools/anki.py [--dry-run]`.
-- Anki en ligne (AnkiConnect, pas encore installé) : `python tools/anki_connect.py importer|fusionner [--dry-run]|annuler`.
+- Anki en ligne (AnkiConnect) : `python tools/anki_connect.py importer|fusionner [--dry-run]|annuler`.
 - Tests : `python -m pytest -q`.
 
 ## Modèles

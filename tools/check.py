@@ -74,21 +74,26 @@ def verifier(racine=E.RACINE) -> list[str]:
             if r.get("palier_aide") not in range(5):
                 erreurs.append(f"resultats #{i} : palier_aide hors 0..4 ({r.get('palier_aide')})")
 
-    # 5. anki_plan : cartes existantes et jamais données deux fois
+    # 5. anki_plan et seance : simples journaux de ce qui a été proposé. Une carte proposée mais pas apprise
+    # est proposée de nouveau (lecture d'Anki) : plus de contrôle de doublon, seulement des ids connus.
+    cartes = {c["id"] for f, d in charges.items() if f.name == "cartes.yaml" for c in d or []}
     ap = charges.get(racine / "state" / "anki_plan.yaml")
-    if ap:
-        cartes = {c["id"] for f, d in charges.items() if f.name == "cartes.yaml" for c in d or []}
-        vus = set()
-        faits = {str(r.get("date")) for r in (res if isinstance(res, list) else [])}
-        for jour, ids in ap.items():
-            for i in ids:
-                if i not in cartes:
-                    erreurs.append(f"anki_plan {jour} : carte inconnue {i}")
-                if i in vus:
-                    erreurs.append(f"anki_plan {jour} : carte {i} donnée plusieurs fois")
-                # un jour sans résultat n'a pas été travaillé : ses cartes peuvent être redonnées (plan.py)
-                if str(jour) in faits:
-                    vus.add(i)
+    for jour, ids in (ap or {}).items():
+        for i in ids:
+            if i not in cartes:
+                erreurs.append(f"anki_plan {jour} : carte inconnue {i}")
+    seances = charges.get(racine / "state" / "seance.yaml")
+    for jour, e in (seances or {}).items():
+        try:
+            E.en_date(jour)
+        except (ValueError, TypeError):
+            erreurs.append(f"seance {jour} : date invalide")
+        for i in (e or {}).get("exercices") or []:
+            if i not in exos:
+                erreurs.append(f"seance {jour} : exercice inconnu {i}")
+        for i in (e or {}).get("cartes") or []:
+            if i not in cartes:
+                erreurs.append(f"seance {jour} : carte inconnue {i}")
 
     # 5 bis. cartes d'exercices : tag `exercice` <=> champ `exercice` ; exercice connu, de la même matière,
     # une seule carte par exercice, notion renseignée (lue par plan.py)

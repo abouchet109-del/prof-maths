@@ -1,6 +1,7 @@
-# NOW — dim. 2026-11-08 (normal)
+# NOW — séance dim. 2026-11-08 12:10 (normal)
 
 Bloc du jour : Topologie — Chapitre 1 - Espace métrique > 1.3 Espace métrique (vitaux acquis 0/1)
+Dernier jour travaillé : 2026-11-07 (sam.)
 
 ## Exercices (115/120 min)
 ### Reprises (25 min)
@@ -25,13 +26,14 @@ Bloc du jour : Topologie — Chapitre 1 - Espace métrique > 1.3 Espace métriqu
 ```
 Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes selon mes réponses” pour réviser sans perturber le planning Anki.
 
-## Anki — à apprendre (20 nouvelles + 10 anciennes)
+## Anki — à apprendre (20 nouvelles + 5 anciennes)
 ```
-("Id:topo-e001" or "Id:topo-e002" or "Id:topo-e003" or "Id:topo-e004" or "Id:ex-topo-td1-ex04" or "Id:ex-topo-td1-ex06" or "Id:mesure-e001" or "Id:mesure-e002" or "Id:mesure-e003" or "Id:ex-mes-cc1-2324-ex02" or "Id:ex-pro-par2425-ex02" or "Id:topo-a-037-1" or "Id:topo-a-037-2" or "Id:topo-a-038-1" or "Id:topo-a-038-2" or "Id:topo-a-001-1" or "Id:topo-a-001-2" or "Id:topo-a-001-3" or "Id:topo-a-001-4" or "Id:topo-a-002-1" or nid:1786448736462,1786448354098,1786448903783,1786448927718,1786466066522,1772647483015,1770140867658,1786448444687,1786448433279,1786441932447) is:new
+("Id:topo-e001" or "Id:topo-e002" or "Id:topo-e004" or "Id:ex-topo-td1-ex04" or "Id:ex-topo-td1-ex06" or "Id:mesure-e001" or "Id:mesure-e003" or "Id:ex-mes-cc1-2324-ex02" or "Id:ex-pro-par2425-ex02" or "Id:topo-a-037-1" or "Id:topo-a-037-2" or "Id:topo-a-038-1" or "Id:topo-a-038-2" or "Id:topo-a-003-1" or "Id:topo-a-003-2" or "Id:topo-a-003-3" or "Id:topo-a-007-1" or "Id:topo-a-007-2" or "Id:topo-a-010-1" or "Id:topo-a-014-1" or nid:1765020913909,1786441612419,1772186584289,1786441479984,1770141171624) is:new
 ```
 
 ## Anki — à réviser
 - Toutes les cartes dues : `is:due`
+- Déjà données, liées aux exercices du jour (6) : `"Id:topo-a-001-1" or "Id:topo-a-001-2" or "Id:topo-a-001-3" or "Id:topo-a-001-4" or "Id:topo-a-005-1" or "Id:mesure-e002"`
 
 ## Échéance
 - Restant : 6975 min ; capacité jusqu'au 2027-01-03 : 8280 min ; marge : 1305 min.

@@ -1,6 +1,6 @@
 ---
 name: debrief
-description: "Debrief de fin de journée de maths (L3). On enregistre le résultat de chaque exercice du plan (reussi, aide, presque, non_fait), on pose 3 à 5 questions de compréhension, 2 par message, avec correction immédiate, on ajoute les cartes d'erreurs, puis on régénère le plan du lendemain et on fait un seul commit. À utiliser quand l'utilisateur dit « debrief », « on débriefe », « fin de séance », « j'ai fini », ou colle ses résultats d'exercices. Variante sans questions : « log rapide : … »."
+description: "Debrief de fin de journée de maths (L3). On enregistre le résultat de chaque exercice du plan (reussi, aide, presque, non_fait), on pose 3 à 5 questions de compréhension, 2 par message, avec correction immédiate, on ajoute les cartes d'erreurs ou d'exercices, puis on écrit le bilan réel de la séance dans le journal (calculé par `plan.py bilan`) et on fait un seul commit. Le debrief ne prépare pas la suite : le prochain plan se calcule au début de la prochaine séance. À utiliser quand l'utilisateur dit « debrief », « on débriefe », « fin de séance », « j'ai fini », ou colle ses résultats d'exercices. Variante sans questions : « log rapide : … »."
 ---
 
 # Debrief de fin de journée
@@ -12,11 +12,11 @@ description: "Debrief de fin de journée de maths (L3). On enregistre le résult
 
 ## 0. Log rapide (pas de questions)
 
-Au plus 2 par semaine. Enregistrer seulement les résultats déclarés (§2), sans cartes ni questions, puis §5. Commit `debrief: <date> (log rapide)`. Le prochain debrief commence par une question de rappel sur ce jour-là.
+Au plus 2 par semaine. Enregistrer seulement les résultats déclarés (§2), sans cartes ni questions, puis le bilan réel (§5) et le commit. Commit `debrief: <date> (log rapide)`. Le prochain debrief commence par une question de rappel sur ce jour-là.
 
 ## 1. Rassembler (lecture minimale)
 
-1. `NOW.md` : les exercices prévus, le cours du jour, les cartes du jour.
+1. `NOW.md` (écrit par `plan.py seance` au début de la séance) : les exercices prévus, le cours, les cartes.
 2. Pour chaque exercice fait : son entrée dans `matieres/<m>/exercices.yaml` (recherche par `id`, pas le fichier entier), champs `enonce`, `methodes`, `notions`, `corrige`.
 3. Les résultats récents de la même méthode : `python tools/resultat.py profil` (au besoin, filtrer).
 
@@ -71,7 +71,7 @@ Demander, en un seul message, pour chaque exercice du plan : le niveau, le temps
    - **les nouvelles cartes** : dans `matieres/<m>/cartes.yaml`, chercher par `notion:` et par mot-clé dans le recto ;
    - **les anciennes cartes de l'utilisateur** (prépa, `AoutLicenceMath`…) : dans `matieres/<m>/couverture.yaml`, relever les `notes` de la notion, puis lire leur recto dans `inventaire/anki/notes.jsonl` (recherche par `"id": <nid>`). Ajouter une recherche par mot-clé dans ce fichier, car une carte peut couvrir le point sans être rattachée à la notion. Le verso de beaucoup d'anciennes cartes est une image : on ne compare que le recto.
    - **La règle :**
-     - si une carte existante couvre déjà exactement le point, n'en créer aucune. La **mettre à réviser pour le lendemain** : ajouter à `state/a_revoir.yaml` l'entrée `{pour: <date du prochain NOW>, nid: <nid>, raison: "<confusion>"}`, ou `id: <id>` pour une carte de `cartes.yaml`. Le faire avant `plan.py` (§5) : `NOW.md` en tire une recherche Anki. Le noter aussi dans `## Mises à jour` ;
+     - si une carte existante couvre déjà exactement le point, n'en créer aucune. La **mettre à réviser à la prochaine séance** : ajouter à `state/a_revoir.yaml` l'entrée `{pour: <demain>, nid: <nid>, raison: "<confusion>"}`, ou `id: <id>` pour une carte de `cartes.yaml`. `plan.py seance` en tire une recherche Anki le jour de la prochaine séance (à partir de `pour`, qu'elle ait lieu demain ou plus tard). Le noter aussi dans `## Mises à jour` ;
      - une carte d'erreur ne se crée que si elle vise une confusion que les cartes existantes ne traitent pas.
 
    `inventaire/anki/notes.jsonl` est l'instantané du paquet au 03/11/2026. Les cartes créées par le système depuis cette date sont toutes dans `cartes.yaml`.
@@ -88,21 +88,25 @@ Demander, en un seul message, pour chaque exercice du plan : le niveau, le temps
    - **Verso :** l'idée clé en une ligne ; la **correction complète** (toutes les étapes rédigées, fidèle au corrigé officiel) ; le piège éventuel (l'erreur faite en séance, si on la connaît) ; la référence du corrigé (fichier, page) dans `source`.
    - **Justesse à 100 % :** le verso se rédige à partir du **corrigé officiel**, page du PDF ouverte (texte dans `bibliotheque/_texte/`, ou image avec `tools/rendre_page.py`). Un corrigé officiel peut être faux : le vérifier. Sans corrigé officiel (`corrige.statut: absent`), résoudre l'exercice soi-même, vérifier chaque étape, et écrire dans `source` « Pas de corrigé officiel : vérifiée par Claude, à confirmer ». Ne jamais écrire un verso de mémoire.
    - La carte ne remplace pas la reprise sur papier : le planificateur la programme déjà (J+1 à J+3).
-5. **Notion de cours mal comprise** (note 0 sur Q4) : l'indiquer dans `## Mises à jour` ; le planificateur la reprend au cours du lendemain si elle figure dans `NOW.md`.
+5. **Notion de cours mal comprise** (note 0 sur Q4) : l'indiquer dans `## Mises à jour` ; le planificateur la reprend au cours de la prochaine séance si elle figure dans `NOW.md`.
 6. **Ne jamais** réorganiser le planning à la main : c'est le rôle de `plan.py`.
 
-## 5. Commandes (une par une, depuis la racine)
+## 5. Bilan réel et commit (une commande à la fois, depuis la racine)
 
-1. Cartes nouvelles (cartes d'erreurs et d'exercices comprises, s'il y en a) : `python tools/anki.py` (pour une carte déjà exportée et corrigée : `python -I tools/anki.py --reexporter <ids>`), puis ouvrir le paquet indiqué par la sortie (`Start-Process "anki\paquets\<fichier>.apkg"`).
-2. Plan du lendemain : `python tools/plan.py jour --date <demain>`.
+Le debrief ne régénère aucun plan. Il écrit ce qui s'est réellement passé.
+
+1. Cartes nouvelles (cartes d'erreurs et d'exercices comprises, s'il y en a) : `python tools/anki.py` (pour une carte déjà exportée et corrigée : `python -I tools/anki.py --reexporter <ids>`), puis ouvrir le paquet indiqué par la sortie (`Start-Process "anki\paquets\<fichier>.apkg"`). Demander à l'utilisateur de synchroniser Anki (pour que le bilan lise les cartes apprises).
+2. Bilan réel : `python tools/plan.py bilan`. **Recopier la sortie telle quelle** dans `journal/<date>.md`, sous `## Bilan réel` (ne rien recalculer de tête). Elle donne :
+   - les exercices prévus contre faits (les non faits sont reportés automatiquement : ils reviennent au prochain plan) ;
+   - les cartes apprises dans la séance, lues dans Anki (ou « Anki fermé » : non relevées) ;
+   - la marge recalculée.
 3. `python tools/check.py`. **Pas de commit tant qu'il échoue.**
-4. `git add` avec des chemins explicites : `journal/<date>.md`, `state/` (dont `a_revoir.yaml`), `matieres/*/cartes.yaml` touchés, `anki/registre.csv`, `NOW.md`.
+4. `git add` avec des chemins explicites : `journal/<date>.md`, `state/` (dont `a_revoir.yaml`, `seance.yaml`), `matieres/*/cartes.yaml` touchés, `anki/registre.csv`, `NOW.md`.
 5. `git commit -m "debrief: <date>"`, un seul commit, puis `git push`.
 
 ## 6. Clore (3 à 5 lignes)
 
 - Les résultats du jour et le score des questions.
 - Ce qui est passé `acquis` ou `maitrise`, et la catégorie qui s'est ouverte, s'il y en a une.
-- Ce qui revient en reprise.
-- Le programme de demain (`NOW.md`).
-- Rappel : importer le paquet Anki s'il y en a un, puis faire les révisions.
+- Le bilan réel : exercices reportés, cartes apprises, marge.
+- Rappel : importer le paquet Anki s'il y en a un, synchroniser Anki. La prochaine séance commence par « on commence » : le plan se calcule à ce moment-là.

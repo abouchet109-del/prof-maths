@@ -183,7 +183,12 @@ def test_recherche_a_revoir():
     entrees = [{"pour": "2026-11-05", "nid": 30, "raison": "x"}, {"pour": "2026-11-05", "nid": 10},
                {"pour": "2026-11-05", "id": "topo-a-001-1"}, {"pour": "2026-11-06", "nid": 99}]
     assert P.recherche_a_revoir(entrees, "2026-11-05") == '(nid:10,30 or "Id:topo-a-001-1")'
-    assert P.recherche_a_revoir(entrees, "2026-11-07") == ""
+    # échu mais pas consommé : toujours montré tant qu'aucun jour travaillé ne l'a consommé
+    assert P.recherche_a_revoir(entrees, "2026-11-07") == '(nid:10,30,99 or "Id:topo-a-001-1")'
+    # un résultat enregistré le 05 (jour de `pour`) consomme les entrées du 05, pas celle du 06
+    assert P.recherche_a_revoir(entrees, "2026-11-07", ["2026-11-05"]) == "(nid:99)"
+    assert P.recherche_a_revoir(entrees, "2026-11-07", ["2026-11-06"]) == ""
+    assert P.recherche_a_revoir(entrees, "2026-11-04") == ""            # pas encore échu
     assert P.recherche_a_revoir(None, "2026-11-05") == ""
 
 
@@ -596,3 +601,166 @@ def test_replanifier_la_meme_date_redonne_le_meme_bloc(tmp_path):
     assert l1[2].startswith("Bloc du jour : Mesure — ") and "(vitaux acquis 0/1)" in l1[2]
     assert len(l1) <= P.MAX_LIGNES
     assert E.charger_yaml(tmp_path / "state" / "blocs.yaml")["2026-11-10"]["matiere"] == "mesure"
+
+
+# ======================================================= séance (état réel, Anki lu)
+class FauxAnki:
+    """Faux client Anki : `nouvelles` = ids de cartes encore is:new, `nids` = anciennes notes encore is:new."""
+    def __init__(self, nouvelles=(), nids=()):
+        self.nouvelles, self.nids, self.appels = set(nouvelles), set(nids), 0
+
+    def disponible(self):
+        return True
+
+    def ids_nouveaux(self, ids):
+        self.appels += 1
+        return {i for i in ids if i in self.nouvelles}
+
+    def nids_nouveaux(self, nids):
+        return {n for n in nids if n in self.nids}
+
+
+TOUTES = {"eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2", "cC1", "cD"}
+
+
+def test_seance_un_jour_off_donne_un_plan_complet_alors_que_jour_ne_donne_rien():
+    c = ctx_cartes(dispo={"cartes_par_jour": 100})
+    off = D(2026, 11, 7)                                       # off dans la dispo de test
+    assert ids(P.plan_jour(c, off)) == []
+    p = P.plan_jour(c, off, seance=True)
+    assert ids(p) == ["a1", "b1", "c1"] and not p["info"]["off"] and p["info"]["minutes_exercices"] == 120
+    assert anki_ids(c, p)[:3] == ["eT", "eM", "rev"]           # cartes aussi
+    # la séance du jour off compte dans la capacité (le 08 reste off)
+    assert p["bilan"]["capacite"] == P.plan_jour(c, D(2026, 11, 9))["bilan"]["capacite"] + 120
+
+
+def test_cartes_vues_si_et_seulement_si_plus_nouvelles_dans_anki():
+    c = ctx_cartes(dispo={"cartes_par_jour": 4})
+    p = P.plan_jour(c, D(2026, 11, 4), seance=True)
+    tout_nouveau = FauxAnki(TOUTES)
+    assert P.anki(c, p, tout_nouveau)["nouvelles"] == ["eT", "eM", "rev", "cA1"]
+    # eT et cA1 apprises dans Anki : les 4 premières non vues sont décalées, sans aucune réservation à l'avance
+    vu = FauxAnki(TOUTES - {"eT", "cA1"})
+    assert P.anki(c, p, vu)["nouvelles"] == ["eM", "rev", "cA2", "cA3"]
+    # même si le journal anki_plan dit autre chose : seul Anki fait foi
+    c["anki_plan"] = {"2026-11-03": ["eM"]}
+    c["resultats"] = [res("2026-11-02", "zz", "aide")]
+    assert P.anki(c, p, vu)["nouvelles"] == ["eM", "rev", "cA2", "cA3"]
+    # deux séances de suite sans rien apprendre : même proposition
+    assert P.anki(c, p, tout_nouveau)["nouvelles"] == P.anki(c, p, tout_nouveau)["nouvelles"]
+    # lecture par lots de 40 : on s'arrête dès que le plafond est atteint
+    petit = FauxAnki({"x0", "x41", "x80"})
+    assert P.premieres_nouvelles(petit, ["x%d" % k for k in range(200)], 2) == ["x0", "x41"]
+    assert petit.appels == 2
+
+
+def test_anciennes_notes_lues_dans_anki():
+    cou = {"n-a": {"statut": "couverte", "notes": [100, 101, 102]}, "n-a2": {"statut": "couverte", "notes": [103]}}
+    c = ctx_cartes(couverture=cou)
+    p = P.plan_jour(c, D(2026, 11, 4), seance=True)
+    a = P.anki(c, p, FauxAnki(TOUTES, nids={101, 103, 999}))
+    assert a["anciennes"] == [101, 103]                                  # seules les is:new, dans l'ordre
+    # sans Anki : règle estimée (journal) ; un jour travaillé avec ces notes proposées les écarte
+    c["anciennes_donnees"] = {"2026-11-03": [100, 101]}
+    c["resultats"] = [res("2026-11-03", "zz", "aide")]
+    assert P.anki(c, p)["anciennes"] == [102, 103]
+
+
+def test_cartes_non_exportees_ne_sont_pas_proposees_et_sont_signalees():
+    c = ctx_cartes(dispo={"cartes_par_jour": 4}, exportees=TOUTES - {"eM"})
+    p = P.plan_jour(c, D(2026, 11, 4), seance=True)
+    a = P.anki(c, p, FauxAnki(TOUTES))
+    assert a["nouvelles"] == ["eT", "rev", "cA1", "cA2"] and a["non_exportees"] == 1
+    assert "1 cartes pas encore exportées" in "\n".join(P.rediger(c, p, a))
+
+
+def test_anki_ferme_repli_sur_l_estimation_et_le_dit():
+    c = ctx_cartes(dispo={"cartes_par_jour": 3})
+    p = P.plan_jour(c, D(2026, 11, 4), seance=True)
+    a = P.anki(c, p)
+    assert a["source"] == "estimee" and a["nouvelles"] == ["eT", "eM", "rev"]
+    assert "Anki fermé : cartes estimées." in "\n".join(P.rediger(c, p, a))
+    assert "Anki fermé" not in "\n".join(P.rediger(c, p, P.anki(c, p, FauxAnki(TOUTES))))
+
+
+def monter_depot(tmp_path):
+    """Dépôt minimal : un exercice par matière, deux cartes en topologie."""
+    import yaml
+    (tmp_path / "state").mkdir()
+    for m in E.MATIERES:
+        (tmp_path / "matieres" / m).mkdir(parents=True)
+        with open(tmp_path / "matieres" / m / "exercices.yaml", "w", encoding="utf-8") as f:
+            yaml.safe_dump([ex(f"{m}-1", m, sc=sc("1.1"), notions=["n1"] if m == "topologie" else [])], f)
+    with open(tmp_path / "matieres" / "topologie" / "notions.yaml", "w", encoding="utf-8") as f:
+        yaml.safe_dump([notion("n1", "Chapitre 1 - X", "1.1")], f)
+    with open(tmp_path / "matieres" / "topologie" / "cartes.yaml", "w", encoding="utf-8") as f:
+        yaml.safe_dump([carte("c1", "n1"), carte("c2", "n1")], f)
+    for nom, d in {"dispo.yaml": ctx([])["dispo"], "resultats.yaml": []}.items():
+        with open(tmp_path / "state" / nom, "w", encoding="utf-8") as f:
+            yaml.safe_dump(d, f)
+
+
+def test_seance_bout_en_bout_journal_et_bilan_reel(tmp_path):
+    import yaml
+    monter_depot(tmp_path)
+    maintenant = dt.datetime(2026, 11, 7, 14, 30)                  # jour off du calendrier : on travaille quand même
+    anki_ = FauxAnki({"c1", "c2"})
+    l1 = P.seance(tmp_path, maintenant, anki_)
+    assert l1[0].startswith("# NOW — séance sam. 2026-11-07 14:30") and l1[2].startswith("Bloc du jour : Topologie")
+    assert "Dernier jour travaillé : aucun" in l1[3] and len(l1) <= P.MAX_LIGNES
+    assert '"Id:c1" or "Id:c2"' in "\n".join(l1)
+    journal = E.charger_yaml(tmp_path / "state" / "seance.yaml")["2026-11-07"]
+    assert journal["exercices"] == ["topologie-1"] and journal["cartes"] == ["c1", "c2"] and journal["heure"] == "14:30"
+    assert P.seance(tmp_path, maintenant, anki_) == l1             # relancer ne change rien
+
+    # la séance : un exercice prévu fait, un autre hors plan, une carte apprise (plus is:new dans Anki)
+    with open(tmp_path / "state" / "resultats.yaml", "w", encoding="utf-8") as f:
+        yaml.safe_dump([{"date": "2026-11-07", "exercice": "topologie-1", "resultat": "presque", "palier_aide": 2},
+                        {"date": "2026-11-07", "exercice": "mesure-1", "resultat": "reussi", "palier_aide": 0}], f)
+    anki_.nouvelles = {"c2"}
+    b = "\n".join(P.bilan_seance(P.contexte(tmp_path), D(2026, 11, 7), anki_))
+    assert "1 prévus, 1 faits, 0 non faits, 1 hors plan" in b
+    assert "`topologie-1` · presque (aide 2)" in b and "hors plan : `mesure-1`" in b
+    assert "(lu dans Anki) : 1 sur 2 proposées" in b and "pas encore apprises : `c2`" in b
+    assert "Marge recalculée" in b and "au début de la séance" in b
+    assert "Anki fermé, apprises non relevées" in "\n".join(P.bilan_seance(P.contexte(tmp_path), D(2026, 11, 7)))
+
+    # un exercice prévu et non fait est reporté automatiquement : il revient au plan suivant
+    with open(tmp_path / "state" / "resultats.yaml", "w", encoding="utf-8") as f:
+        yaml.safe_dump([], f)
+    assert "non fait : `topologie-1` · reporté automatiquement" in "\n".join(
+        P.bilan_seance(P.contexte(tmp_path), D(2026, 11, 7), anki_))
+    l2 = P.seance(tmp_path, dt.datetime(2026, 11, 9, 9, 0), anki_)
+    assert "`topologie-1`" in "\n".join(l2)
+
+
+# ============================================ roadmap : reste à faire, capacité, marge
+def test_marge_recalculee_a_chaque_seance_d_apres_les_resultats_et_la_date():
+    exos = [ex("v1", t=30), ex("v2", t=30), ex("i1", imp="important", t=20), ex("s1", imp="secondaire", t=500),
+            ex("x1", imp="exotique", t=500), annale_sc("an", "2022-23", sc("1.1"), t=40)]
+    dispo = {"fin": "2026-11-12", "examens": "2026-11-13"}              # 5 jours de 120 min du 08 au 12
+    b0 = P.plan_jour(ctx(exos, dispo=dispo), D(2026, 11, 8), seance=True)["bilan"]
+    assert b0["total"] == 120 and b0["capacite"] == 120 * 5       # secondaire et exotique ne comptent pas
+    b1 = P.plan_jour(ctx(exos, dispo=dispo), D(2026, 11, 10), seance=True)["bilan"]
+    assert b1["capacite"] == 120 * 3 and b1["marge"] == b0["marge"] - 240        # le temps passe, la marge fond
+    # deux réussites espacées de 7 jours : maîtrisé, il sort du reste à faire
+    r = [res("2026-11-01", "v1"), res("2026-11-08", "v1")]
+    b2 = P.plan_jour(ctx(exos, r, dispo=dispo), D(2026, 11, 10), seance=True)["bilan"]
+    assert b2["total"] == b1["total"] - 30 and b2["marge"] == b1["marge"] + 30
+    # un exercice seulement acquis reste à faire (calcul prudent)
+    b3 = P.plan_jour(ctx(exos, [res("2026-11-08", "v1")], dispo=dispo), D(2026, 11, 10), seance=True)["bilan"]
+    assert b3["total"] == b1["total"]
+
+
+def test_marge_negative_annales_jamais_coupees_et_ouvertes_plus_tot():
+    exos = [ex("v1", sc=sc("1.1"), t=100), ex("s1", sc=sc("1.1"), imp="secondaire", t=10),
+            annale_sc("an", "2022-23", sc("1.3"), t=40), annale_sc("blanc", "2024-25", sc("1.3"), t=40)]
+    court = {"fin": "2026-11-09", "examens": "2026-11-10"}             # 2 jours = 240 min pour 140 min : marge > 0
+    p = P.plan_jour(ctx(exos, dispo=court), D(2026, 11, 8), seance=True)
+    assert p["bilan"]["marge"] > 0 and genres_annale(p) == []         # annale de 1.3 pas encore éligible
+    exos2 = exos + [ex("v2", sc=sc("1.1"), t=200)]                                   # +200 min : marge négative
+    p2 = P.plan_jour(ctx(exos2, dispo=court), D(2026, 11, 8), seance=True)
+    assert p2["bilan"]["marge"] < 0 and genres_annale(p2) == ["an"]    # l'annale s'ouvre plus tôt
+    # le reste à faire ne contient que annales, vital et important : secondaire et exotique sont hors périmètre
+    assert set(p2["bilan"]["par"]["topologie"]) == {"annales", "vital", "important"}
+    assert p2["bilan"]["par"]["topologie"]["annales"] == 80                  # les deux annales, y compris l examen blanc

@@ -51,16 +51,54 @@ RATTACHEMENT = Path("inventaire") / "anki" / "rattachement_ancien.yaml"
 
 
 # ------------------------------------------------------------------ AnkiConnect
-def appel(action: str, **params):
+class ErreurAnki(Exception):
+    """AnkiConnect injoignable ou en erreur (la ligne de commande la transforme en message d'arrêt)."""
+
+
+def appel(action: str, *, delai: float = 60, **params):
     requete = json.dumps({"action": action, "version": VERSION, "params": params}).encode("utf-8")
     try:
-        with urllib.request.urlopen(urllib.request.Request(URL, requete), timeout=60) as r:
+        with urllib.request.urlopen(urllib.request.Request(URL, requete), timeout=delai) as r:
             reponse = json.loads(r.read().decode("utf-8"))
-    except OSError as ex:
-        raise SystemExit(f"AnkiConnect injoignable sur {URL} (Anki ouvert ? extension installée ?) : {ex}")
+    except (OSError, ValueError) as ex:
+        raise ErreurAnki(f"AnkiConnect injoignable sur {URL} (Anki ouvert ? extension installée ?) : {ex}")
     if reponse.get("error"):
-        raise SystemExit(f"AnkiConnect, {action} : {reponse['error']}")
+        raise ErreurAnki(f"AnkiConnect, {action} : {reponse['error']}")
     return reponse["result"]
+
+
+class ClientAnki:
+    """Lecture seule dans Anki, pour le plan : quelles cartes sont encore « nouvelles » (`is:new`).
+
+    Même interface que le faux client des tests : disponible(), ids_nouveaux(ids), nids_nouveaux(nids).
+    Ne modifie jamais Anki."""
+    LOT = 40
+
+    def disponible(self) -> bool:
+        try:
+            appel("version", delai=1.5)
+            return True
+        except ErreurAnki:
+            return False
+
+    def ids_nouveaux(self, ids) -> set[str]:
+        """Parmi les ids de cartes du système, ceux dont la carte est encore nouvelle dans Anki."""
+        res: set[str] = set()
+        ids = list(ids)
+        for k in range(0, len(ids), self.LOT):
+            requete = " or ".join(f'"Id:{i}"' for i in ids[k:k + self.LOT])
+            notes = appel("findNotes", query=f"({requete}) is:new", delai=20)
+            if notes:
+                res |= {n["fields"]["Id"]["value"] for n in appel("notesInfo", notes=notes, delai=20)}
+        return res
+
+    def nids_nouveaux(self, nids) -> set[int]:
+        """Parmi ces notes (anciennes cartes), celles qui ont encore une carte nouvelle."""
+        res: set[int] = set()
+        nids = list(nids)
+        for k in range(0, len(nids), 200):
+            res |= set(appel("findNotes", query=f"nid:{','.join(map(str, nids[k:k + 200]))} is:new", delai=20))
+        return res
 
 
 # ------------------------------------------------------------------ rattachement (pur)
@@ -293,11 +331,14 @@ def main() -> int:
     f.add_argument("--dry-run", action="store_true")
     sp.add_parser("annuler").add_argument("fichier")
     a = p.parse_args()
-    if a.cmd == "importer":
-        return importer(a.paquets)
-    if a.cmd == "fusionner":
-        return fusionner(a.dry_run)
-    return annuler(a.fichier)
+    try:
+        if a.cmd == "importer":
+            return importer(a.paquets)
+        if a.cmd == "fusionner":
+            return fusionner(a.dry_run)
+        return annuler(a.fichier)
+    except ErreurAnki as ex:
+        raise SystemExit(str(ex))
 
 
 if __name__ == "__main__":
