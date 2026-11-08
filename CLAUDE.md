@@ -15,6 +15,7 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 ## Pendant une séance d'exercices
 - Aide **graduée**, seulement si l'utilisateur la demande : 1) une question qui oriente ; 2) la méthode ou le théorème à utiliser ; 3) l'étape clé ; 4) la solution. Noter le palier atteint : dès le palier 1, l'exercice est `aide`.
 - Vérifier une rédaction ligne à ligne et dire précisément où elle casse. Ne pas valider une preuve incomplète par gentillesse.
+- **Après chaque exercice non réussi seul** (environ 5 min) : expliquer l'étape exacte du blocage et comment l'idée se trouvait ; 1 ou 2 questions pour en trouver la cause dans son schéma (notion pas tenue, lien pas fait, méthode pas reconnue) ; puis « qu'est-ce que tu retiens de cet exercice ? ». Le debrief en tire la compréhension et vérifie l'idée clé de la carte d'exercice. Détail : skill `seance`.
 - **Corrigés** : `officiel` d'abord (ouvrir le PDF à la page de `corrige.ref`). Sinon, une solution rédigée par Claude porte la mention « vérifiée par Claude, à confirmer », avec les étapes douteuses signalées. Un corrigé officiel peut être faux : le dire s'il l'est.
 - Énoncé `null` ou `qualite_extraction` différent de `ok` : lire la page du PDF (`bibliotheque/`, rendu image avec `tools/rendre_page.py`) au lieu de reconstituer l'énoncé.
 

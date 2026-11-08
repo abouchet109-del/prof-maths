@@ -175,7 +175,7 @@ Paquet Anki : `tg::Maths::L3 Paris Cité::<Matière>::<chapitre>`, étiquette `p
 
 ### Cartes d'exercices (`tags: [exercice]`)
 
-Une carte par exercice qui n'a pas été réussi seul, créée au debrief. Le recto est l'énoncé, le verso la correction complète : le lendemain, on retrouve par où attaquer. Elle ne remplace pas la reprise sur papier.
+Une carte par exercice qui n'a pas été réussi seul, créée au debrief. Le recto est l'énoncé, le verso la correction complète : le lendemain, on retrouve par où attaquer. Elle ne remplace pas la reprise sur papier. L'idée clé du verso est comparée à ce que l'utilisateur a dit retenir à l'étape « blocage » de la séance (skill `seance`, §3.3) ; sa formulation peut être reprise si elle est juste, mais la justesse vient toujours du corrigé.
 
 ```yaml
 - id: ex-topo-td1-ex06             # `ex-` + id de l'exercice ; ne change jamais
