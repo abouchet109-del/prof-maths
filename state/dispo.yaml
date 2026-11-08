@@ -9,6 +9,5 @@ cartes_par_jour: 20              # plafond de cartes Anki nouvelles par jour
 minutes_reprises_max: 30         # plafond de minutes de reprises par jour (toutes matières)
 annales_libres_des: 2026-12-07   # à partir de cette date, toutes les annales prioritaires sont éligibles
 exceptions:
-  - {type: "off", du: 2026-11-07, au: 2026-11-08}
   - {type: "off", du: 2026-11-21, au: 2026-11-22}
   - {type: quota, du: 2026-12-21, au: 2027-01-03, minutes_exercices_jour: 240}

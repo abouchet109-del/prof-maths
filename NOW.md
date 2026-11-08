@@ -1,4 +1,4 @@
-# NOW — lun. 2026-11-09 (normal)
+# NOW — dim. 2026-11-08 (normal)
 
 Bloc du jour : Topologie — Chapitre 1 - Espace métrique > 1.3 Espace métrique (vitaux acquis 0/1)
 
@@ -27,19 +27,15 @@ Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes
 
 ## Anki — à apprendre (20 nouvelles)
 ```
-"Id:topo-e001" or "Id:topo-e002" or "Id:topo-e004" or "Id:mesure-e001" or "Id:mesure-e003" or "Id:topo-a-001-1" or "Id:topo-a-001-2" or "Id:topo-a-001-3" or "Id:topo-a-001-4" or "Id:topo-a-003-1" or "Id:topo-a-003-2" or "Id:topo-a-003-3" or "Id:topo-a-005-1" or "Id:topo-a-016-1" or "Id:topo-a-016-2" or "Id:topo-a-016-3" or "Id:topo-a-016-4" or "Id:topo-a-007-1" or "Id:topo-a-007-2" or "Id:topo-a-010-1"
+"Id:ex-topo-td1-ex04" or "Id:ex-topo-td1-ex06" or "Id:ex-mes-cc1-2324-ex02" or "Id:ex-pro-par2425-ex02" or "Id:topo-a-010-2" or "Id:topo-a-011-1" or "Id:topo-a-012-1" or "Id:topo-a-013-1" or "Id:topo-a-014-1" or "Id:topo-a-014-2" or "Id:topo-a-015-1" or "Id:topo-a-015-2" or "Id:topo-a-015-3" or "Id:topo-a-017-1" or "Id:topo-a-018-1" or "Id:topo-a-018-2" or "Id:topo-a-019-1" or "Id:topo-a-019-2" or "Id:topo-a-020-1" or "Id:topo-a-020-2"
 ```
 
 ## Anki — à réviser
 - Toutes les cartes dues : `is:due`
 - Déjà données, liées aux exercices du jour (1) : `"Id:mesure-e002"`
-- Cartes existantes à revoir, signalées au debrief (paquet filtré, “replanifier” **coché**) :
-```
-("Id:topo-e001" or "Id:topo-e003")
-```
 
 ## Échéance
-- Restant : 6975 min ; capacité jusqu'au 2027-01-03 : 8160 min ; marge : 1185 min.
+- Restant : 6975 min ; capacité jusqu'au 2027-01-03 : 8280 min ; marge : 1305 min.
 - topologie : 2410 min (annales 965, vital 830, important 615)
 - mesure : 1625 min (annales 0, vital 910, important 715)
 - modelisation : 1020 min (annales 490, vital 355, important 175)

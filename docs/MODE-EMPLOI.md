@@ -17,13 +17,16 @@
 1. **Ouvrir `NOW.md`.** La première ligne donne le bloc du jour : une matière et un sous-chapitre (les matières tournent : topologie, mesure, probabilités, modélisation). Les exercices sont groupés en reprises, annale et bloc.
 2. **Anki** (hors des 2 h 30) :
    - Révisions : étudier `tg::Maths`. Anki présente toutes les cartes dues, anciennes et nouvelles, où qu'elles soient rangées.
-   - Nouvelles cartes : coller la recherche « à apprendre » dans **Outils → Créer un paquet filtré**, puis étudier ce paquet (jusqu'à 20 cartes : tes cartes d'erreurs, puis celles du sous-chapitre du bloc du jour, puis celles du sous-chapitre suivant de la même matière).
+   - Nouvelles cartes : coller la recherche « à apprendre » dans **Outils → Créer un paquet filtré**, puis étudier ce paquet (jusqu'à 20 cartes : tes cartes d'erreurs et d'exercices, puis celles du sous-chapitre du bloc du jour, puis celles du sous-chapitre suivant de la même matière).
+   - **Cartes d'exercices :** le lendemain, elles arrivent en tête des cartes à apprendre, avec les cartes d'erreurs. Le recto donne l'énoncé : cherche d'abord par où l'attaquer, puis retourne la carte (idée clé, correction complète, piège, référence du corrigé). Elles sont rangées dans le sous-paquet `Exercices` de chaque chapitre.
+   - Ces cartes ne remplacent pas le papier. L'exercice revient ensuite dans les reprises (30 min par jour au plus) : refais-le sur papier, et envoie ta photo en séance pour qu'elle soit vérifiée.
 3. **Cours (30 min) :** relire les notions indiquées, aux pages données, pour approfondir. Pour réviser tout un sujet, coller la recherche « tout le sujet du jour » dans un paquet filtré, en décochant « replanifier les cartes selon mes réponses ». Elle réunit tes anciennes cartes `AoutLicenceMath` et les nouvelles.
 4. **Exercices (2 h) :** les faire dans l'ordre de la liste ; le PDF et la page sont indiqués. En cas de blocage, ouvrir une conversation Claude dans `D:\Projets\prof-maths` (Sonnet, effort high). L'aide est graduée : une question qui oriente, puis la méthode, puis l'étape clé, puis la solution. Dès le premier indice, l'exercice compte comme `aide`.
 5. **Le soir (10-15 min) :** dans la même conversation que la séance, dire « debrief » et donner les temps. Une conversation par jour : cours, exercices, puis debrief.
    - Donner le résultat de chaque exercice.
    - Répondre à 3 à 5 questions de compréhension, qui sont notées et corrigées.
    - Le debrief crée des cartes sur tes erreurs, écrit `NOW.md` pour le lendemain et fait le commit.
+   - Pour chaque exercice que tu n'as pas réussi seul, il crée une **carte d'exercice** (tag `exercice`).
    - Les soirs de fatigue : « log rapide : … », au plus 2 fois par semaine.
 
 ## Réglages Anki à faire une fois

@@ -19,6 +19,7 @@ MAX_LIGNES = 60
 MIN_PAR_NOTION = 10         # durée estimée d'une notion de cours
 REPRISES_MAX_DEFAUT = 30    # minutes de reprises par jour au plus (dispo.yaml : minutes_reprises_max)
 CARTES_DEFAUT = 20          # cartes nouvelles par jour au plus (dispo.yaml : cartes_par_jour)
+TAGS_PRIORITAIRES = {"erreur", "exercice"}   # cartes d'erreurs et d'exercices : toujours en tête des « à apprendre »
 NOMS = {"topologie": "Topologie", "mesure": "Mesure", "proba": "Probabilités", "modelisation": "Modélisation"}
 PART_CAPACITE = 1.25 / len(E.MATIERES)   # part de la capacité restante au-delà de laquelle on alerte
 
@@ -315,14 +316,15 @@ def sc_suivants(ctx, plan) -> list[str]:
 def anki(ctx, plan) -> dict:
     """Cartes nouvelles du jour (sans jamais redonner une carte) et cartes déjà données à réviser.
 
-    Ordre : cartes d'erreurs, cartes `a_revoir` dues, cartes des notions du sous-chapitre du bloc,
-    puis celles des sous-chapitres suivants de la même matière ; plafond `cartes_par_jour`."""
+    Ordre : cartes d'erreurs et d'exercices (tags `erreur` et `exercice`, dans l'ordre des fichiers),
+    cartes `a_revoir` dues, cartes des notions du sous-chapitre du bloc, puis celles des sous-chapitres
+    suivants de la même matière ; plafond `cartes_par_jour`."""
     d = str(plan["date"])
     avant = {i for k, ids in ctx["anki_plan"].items() if str(k) < d for i in ids}
     donnees = {i for k, ids in ctx["anki_plan"].items() if str(k) != d for i in ids}
     notions_jour = {n for e, _ in plan["items"] for n in e.get("notions") or []}
     libres = [c for c in ctx["cartes"] if c["id"] not in donnees]
-    ordre = [c for c in libres if "erreur" in (c.get("tags") or [])]
+    ordre = [c for c in libres if TAGS_PRIORITAIRES & set(c.get("tags") or [])]
     dues = {e["id"] for e in ctx.get("a_revoir") or [] if e.get("id") and str(e.get("pour")) <= d}
     ordre += [c for c in libres if c["id"] in dues]
     if plan["sous_chapitre"]:

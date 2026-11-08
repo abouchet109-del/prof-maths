@@ -155,6 +155,33 @@ Règles de rédaction (format demandé par l'utilisateur le 07/11/2026, celui de
 
 Paquet Anki : `tg::Maths::L3 Paris Cité::<Matière>::<chapitre>`, étiquette `prof-maths` sur chaque carte.
 
+### Cartes d'exercices (`tags: [exercice]`)
+
+Une carte par exercice qui n'a pas été réussi seul, créée au debrief. Le recto est l'énoncé, le verso la correction complète : le lendemain, on retrouve par où attaquer. Elle ne remplace pas la reprise sur papier.
+
+```yaml
+- id: ex-topo-td1-ex06             # `ex-` + id de l'exercice ; ne change jamais
+  exercice: topo-td1-ex06          # obligatoire, un seul exemplaire par exercice (contrôlé par check.py)
+  notion: topo-n-0018              # notion principale de l'exercice (lue par plan.py)
+  recto: |-
+    <b>Exo topo-td1-ex06 : <titre></b><br> énoncé condensé, avec toutes les hypothèses et tous les symboles<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> une ligne<br> <b>Correction :</b> toutes les étapes rédigées<br> <b>Piège :</b> l'erreur faite en séance
+  source: 'Énoncé : fichier p.N (Ex k). Corrigé officiel : fichier p.N.'   # ou « Pas de corrigé officiel : vérifiée par Claude, à confirmer »
+  chapitre: 'Chapitre 1 - Espace métrique'     # exactement le chapitre des cartes de cours ; l'export ajoute `::Exercices`
+  priorite: 1
+  tags: [exercice]                 # tag et champ `exercice` vont ensemble
+```
+
+Règles :
+- **Quand :** résultat du jour `aide` ou `presque` ; `non_fait` seulement si l'exercice a été travaillé et le corrigé vu pendant la séance. Rien pour `reussi`, ni pour un `non_fait` jamais ouvert.
+- **Verso :** l'idée clé en une ligne, puis la correction complète (toutes les étapes rédigées, fidèle au corrigé officiel), puis le piège éventuel. La référence du corrigé (fichier, page) est dans `source`.
+- **Justesse à 100 % :** le verso vient du corrigé officiel (page du PDF ouverte), sinon d'une solution résolue et vérifiée étape par étape, avec la mention « vérifiée par Claude, à confirmer ».
+- **Rangement :** sous-paquet `tg::Maths::L3 Paris Cité::<matière>::<chapitre>::Exercices` (le nom du chapitre est celui des cartes de cours). Le tag `exercice` reste sur la carte. `check.py` refuse un chapitre que les cartes de cours n'utilisent pas.
+- **Déjà une carte ?** Ne pas en créer une seconde. Si l'erreur du jour est nouvelle, compléter le verso, puis `python -I tools/anki.py --reexporter <id>`. Dans tous les cas, ajouter `{pour: <lendemain>, id: <id>, raison: ...}` à `state/a_revoir.yaml`.
+- **Plan :** `tools/plan.py` donne ces cartes en tête des « à apprendre », avec les cartes d'erreurs (tags `erreur` et `exercice`), avant celles du sous-chapitre du bloc.
+
 ## Résultat d'un exercice (`state/resultats.yaml`, à venir)
 `reussi` (seul), `aide` (réussi avec un indice), `presque` (pas loin avec l'aide), `non_fait` (pas réussi). Correspondance avec les tableurs : Réussi → `reussi`, Pas loin → `presque`, Loin et Non fait → `non_fait`.
 

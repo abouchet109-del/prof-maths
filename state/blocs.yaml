@@ -1,5 +1,8 @@
 # Blocs planifiés par tools/plan.py : {AAAA-MM-JJ: {matiere, sous_chapitre}}.
 # La rotation des matières part du dernier bloc effectivement travaillé (résultat ce jour-là).
+'2026-11-08':
+  matiere: topologie
+  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
 '2026-11-09':
   matiere: topologie
   sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique

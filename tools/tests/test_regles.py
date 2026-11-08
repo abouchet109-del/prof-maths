@@ -414,6 +414,57 @@ def test_cartes_limitees_a_l_avancement_du_cours():
     assert anki_ids(c, P.plan_jour(c, D(2026, 11, 4))) == ["eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2"]
 
 
+def test_cartes_exercice_passent_avec_les_erreurs_avant_le_bloc():
+    c = ctx_cartes(dispo={"cartes_par_jour": 100})
+    c["cartes"].append({**carte("xT", "n-d", ["exercice"]), "exercice": "a1"})
+    p = P.plan_jour(c, D(2026, 11, 4))
+    assert anki_ids(c, p) == ["eT", "eM", "xT", "rev", "cA1", "cA2", "cA3", "cB1", "cB2", "cC1", "cD"]
+    c["dispo"]["cartes_par_jour"] = 3
+    assert anki_ids(c, p) == ["eT", "eM", "xT"]                     # plafond : le bloc passe après
+    c["anki_plan"] = {"2026-11-04": ["eT", "eM", "xT"]}
+    assert "xT" not in anki_ids(c, P.plan_jour(c, D(2026, 11, 5)))  # donnée une seule fois
+
+
+# ----------------------------------------------------------- check.py
+def test_check_cartes_exercice(tmp_path):
+    import yaml
+    import check as C
+    (tmp_path / "state").mkdir()
+    for m in E.MATIERES:
+        (tmp_path / "matieres" / m).mkdir(parents=True)
+    ecrire = lambda chemin, d: (tmp_path / chemin).write_text(yaml.safe_dump(d, allow_unicode=True), encoding="utf-8")  # noqa: E731
+    e = {**ex("topologie-1"), "sources": [{}]}
+    e.pop("matiere")
+    ecrire("state/dispo.yaml", ctx([])["dispo"])
+    ecrire("state/resultats.yaml", [])
+    ecrire("matieres/topologie/exercices.yaml", [e])
+    ok = {**carte("ex-topologie-1", "n", ["exercice"]), "exercice": "topologie-1", "chapitre": "Chapitre 1 - X"}
+    cours = {**carte("cours-1", "n", ["definition"]), "chapitre": "Chapitre 1 - X"}
+    ecrire("matieres/topologie/cartes.yaml", [cours, ok])
+    assert C.verifier(tmp_path) == []
+    # tag sans champ, champ sans tag, exercice inconnu, mauvaise matière, doublon, notion absente
+    cas = [({**ok, "tags": []}, "vont ensemble"),
+           ({**ok, "tags": ["exercice"], "exercice": None}, "vont ensemble"),
+           ({**ok, "exercice": "inconnu"}, "exercice inconnu"),
+           ({k: v for k, v in ok.items() if k != "notion"}, "sans champ notion"),
+           ({**ok, "chapitre": "Chapitre 9 - Y"}, "chapitre inconnu")]
+    for carte_mauvaise, attendu in cas:
+        ecrire("matieres/topologie/cartes.yaml", [cours, carte_mauvaise])
+        assert any(attendu in x for x in C.verifier(tmp_path)), attendu
+    ecrire("matieres/topologie/cartes.yaml", [cours, ok, {**ok, "id": "autre"}])
+    assert any("deux cartes pour l'exercice" in x for x in C.verifier(tmp_path))
+    ecrire("matieres/topologie/cartes.yaml", [])
+    ecrire("matieres/mesure/cartes.yaml", [cours, ok])
+    assert any("est en topologie" in x for x in C.verifier(tmp_path))
+
+
+def test_paquet_anki_des_cartes_d_exercices():
+    import anki as A
+    cours = A.nom_paquet("topologie", "Chapitre 1 - Espace métrique")
+    assert cours == "tg::Maths::L3 Paris Cité::Topologie::Chapitre 1 - Espace métrique"
+    assert A.nom_paquet("topologie", "Chapitre 1 - Espace métrique", exercice=True) == cours + "::Exercices"
+
+
 # ------------------------------------------- stabilité de bout en bout
 def test_replanifier_la_meme_date_redonne_le_meme_bloc(tmp_path):
     import yaml

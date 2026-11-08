@@ -2006,3 +2006,26 @@
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1
   tags: [prerequis-l1l2, R]
+- id: ex-pro-par2425-ex02
+  exercice: pro-par2425-ex02
+  notion: proba-n-0048
+  recto: |-
+    <b>Exo pro-par2425-ex02 : Densité 3x², A = -log X et polynôme aléatoire (partiel 2024-25)</b><br>
+    \(X\) est une variable aléatoire de densité \(f_X(x)=3x^2\mathbf 1_{[0,1]}(x)\), \(x\in\mathbb R\).<br>
+    1. Calculer \(\mathbb P(X\in]0,1])\).<br>
+    2. On pose \(A=-\log X\). Justifier qu'avec probabilité 1, \(A\) est bien définie et positive.<br>
+    3. Calculer la fonction de répartition de \(A\). Quelle est la loi de \(A\) ?<br>
+    4. Soit \(P(t)=t^2+3At+2A^2+4\), \(t\in\mathbb R\). Calculer la probabilité que \(P\) n'admette aucune racine réelle.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> loi de \(g(X)\) par la fonction de répartition : \(\{A\le t\}=\{X\ge e^{-t}\}\), puis on intègre la densité. Pour la question 4, le discriminant ramène tout à un événement sur \(A\) seul.<br>
+    <b>Correction :</b><br>
+    1. \(\mathbb P(X\in]0,1])=\int_0^1 3x^2\,dx=\left[x^3\right]_0^1=1\).<br>
+    2. D'après 1, avec probabilité 1, \(0<X\le1\) (\(\mathbb P(X=0)=0\)). Donc avec probabilité 1, \(A=-\log X\) est bien définie et \(A\ge0\) (car \(\log X\le0\)).<br>
+    3. Pour \(t<0\), \(F_A(t)=0\) (car \(A\ge0\) presque sûrement). Pour \(t>0\), \(\{A\le t\}=\{X\ge e^{-t}\}\), donc \(F_A(t)=\mathbb P(X\ge e^{-t})=\int_{e^{-t}}^1 3x^2\,dx=\left[x^3\right]_{e^{-t}}^1=1-e^{-3t}\). On reconnaît la fonction de répartition de la loi exponentielle de paramètre \(3\).<br>
+    4. \(P\) est de degré 2 : il n'a aucune racine réelle si et seulement si son discriminant est strictement négatif. \(\Delta=(3A)^2-4(2A^2+4)=9A^2-8A^2-16=A^2-16<0\iff A\in]-4,4[\). Comme \(A\ge0\) presque sûrement et que \(A\) a une densité, \(\mathbb P(A\in]-4,4[)=\mathbb P(A\le4)=F_A(4)=1-e^{-12}\).<br>
+    <b>Piège :</b> ne pas oublier \(X=0\) (probabilité nulle, mais à dire) ; \(9A^2-8A^2=A^2\), pas \(-5A^2\) ; écrire le calcul de \(F_A\) avant d'annoncer « exponentielle de paramètre 3 » ; la question 4 va jusqu'au nombre \(1-e^{-12}\).
+  source: 'Énoncé : proba/annales/partiel-2024-25.pdf p.1 (Ex 2). Corrigé officiel : proba/annales/partiel-2024-25-corrige.pdf p.1. Erreurs de la séance du 2026-11-07.'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [exercice]

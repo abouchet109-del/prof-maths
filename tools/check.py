@@ -87,6 +87,41 @@ def verifier(racine=E.RACINE) -> list[str]:
                     erreurs.append(f"anki_plan {jour} : carte {i} donnée plusieurs fois")
                 vus.add(i)
 
+    # 5 bis. cartes d'exercices : tag `exercice` <=> champ `exercice` ; exercice connu, de la même matière,
+    # une seule carte par exercice, notion renseignée (lue par plan.py)
+    matiere_exo = {}
+    for f, data in charges.items():
+        if f.name.startswith("exercices") and f.parent.parent.name == "matieres":
+            matiere_exo.update({e.get("id"): f.parent.name for e in data or []})
+    cartes_exo = {}
+    for f, data in charges.items():
+        if f.name != "cartes.yaml":
+            continue
+        for c in data or []:
+            marque = "exercice" in (c.get("tags") or [])
+            if marque != bool(c.get("exercice")):
+                erreurs.append(f"{nom(f)} : carte {c.get('id')} : tag `exercice` et champ `exercice` vont ensemble")
+            if not c.get("exercice"):
+                continue
+            x = c["exercice"]
+            if x not in exos:
+                erreurs.append(f"{nom(f)} : carte {c.get('id')} : exercice inconnu ({x})")
+            elif matiere_exo.get(x) != f.parent.name:
+                erreurs.append(f"{nom(f)} : carte {c.get('id')} : l'exercice {x} est en {matiere_exo.get(x)}")
+            if x in cartes_exo:
+                erreurs.append(f"{nom(f)} : deux cartes pour l'exercice {x} ({cartes_exo[x]}, {c.get('id')})")
+            cartes_exo[x] = c.get("id")
+            if "notion" not in c:
+                erreurs.append(f"{nom(f)} : carte {c.get('id')} sans champ notion")
+
+    # une carte d'exercice va dans le sous-paquet `Exercices` d'un chapitre où les cartes de cours existent déjà
+    for f, data in charges.items():
+        if f.name == "cartes.yaml":
+            cours = {c.get("chapitre") for c in data or [] if "exercice" not in (c.get("tags") or [])}
+            for c in data or []:
+                if c.get("exercice") and c.get("chapitre") not in cours:
+                    erreurs.append(f"{nom(f)} : carte {c.get('id')} : chapitre inconnu des cartes de cours ({c.get('chapitre')})")
+
     # 6. blocs.yaml et avancement_cours.yaml
     blocs = charges.get(racine / "state" / "blocs.yaml")
     if blocs:

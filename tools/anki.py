@@ -13,6 +13,7 @@ Règles figées (ne jamais les modifier, sinon Anki ignore les mises à jour) :
     distinct de celui de l'archi ML (1730000001) ;
   - GUID = genanki.guid_for("prof-maths", <id de la carte>) ;
   - paquet `tg::Maths::L3 Paris Cité::<Matière>::<chapitre>`, identifiant dérivé d'un hash du nom ;
+    les cartes d'exercices (tag `exercice`) vont dans le sous-paquet `...::<chapitre>::Exercices` ;
   - étiquettes : prof-maths, matière, priorite-N, puis les tags de la carte.
 """
 from __future__ import annotations
@@ -51,9 +52,10 @@ def modele() -> genanki.Model:
                          css=CSS, sort_field_index=1)
 
 
-def nom_paquet(matiere: str, chapitre: str) -> str:
+def nom_paquet(matiere: str, chapitre: str, exercice: bool = False) -> str:
     chapitre = re.sub(r"[:$]", "", chapitre or "Divers").strip()
-    return f"tg::Maths::L3 Paris Cité::{MATIERES[matiere]}::{chapitre}"
+    nom = f"tg::Maths::L3 Paris Cité::{MATIERES[matiere]}::{chapitre}"
+    return nom + "::Exercices" if exercice else nom
 
 
 def deck_id(nom: str) -> int:
@@ -117,7 +119,7 @@ def main() -> int:
     decks: dict[str, genanki.Deck] = {}
     m = modele()
     for c in selection:
-        nom = nom_paquet(c["matiere"], c.get("chapitre"))
+        nom = nom_paquet(c["matiere"], c.get("chapitre"), "exercice" in (c.get("tags") or []))
         decks.setdefault(nom, genanki.Deck(deck_id(nom), nom))
         tags = ["prof-maths", c["matiere"], f"priorite-{c.get('priorite') or 3}",
                 *[etiquette(t) for t in c.get("tags") or []]]

@@ -427,3 +427,22 @@
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [erreur]
+- id: ex-mes-cc1-2324-ex02
+  exercice: mes-cc1-2324-ex02
+  notion: mesure-n-0014
+  recto: |-
+    <b>Exo mes-cc1-2324-ex02 : Mesurabilité d'une fonction définie par morceaux</b><br>
+    Soit \((X,\mathcal T)\) un espace mesurable et \(f,g:X\to\mathbb R\) deux fonctions mesurables. Pour \(A\in\mathcal T\) donné, on pose \(h(x)=f(x)\) si \(x\in A\) et \(h(x)=g(x)\) si \(x\in A^\complement=X\setminus A\).<br>
+    Montrer que \(h\) est mesurable.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(h\) est mesurable si \(h^{-1}(B)\in\mathcal T\) pour tout borélien \(B\) de \(\mathbb R\). On découpe \(h^{-1}(B)\) selon \(A\) et \(A^\complement\).<br>
+    <b>Correction :</b> soit \(B\in\mathcal B(\mathbb R)\). Alors<br>
+    \(h^{-1}(B)=\{x\in X\mid h(x)\in B\}=\{x\in A\mid f(x)\in B\}\cup\{x\in A^\complement\mid g(x)\in B\}\),<br>
+    c'est-à-dire \(h^{-1}(B)=(A\cap f^{-1}(B))\cup(A^\complement\cap g^{-1}(B))\).<br>
+    Comme \(f\) et \(g\) sont mesurables, \(f^{-1}(B)\) et \(g^{-1}(B)\) sont dans \(\mathcal T\). Comme \(A\in\mathcal T\), \(A^\complement\in\mathcal T\). Une tribu est stable par réunion finie, intersection finie et passage au complémentaire : donc \(h^{-1}(B)\in\mathcal T\). Ceci vaut pour tout borélien \(B\), donc \(h\) est mesurable.<br>
+    <b>Piège :</b> tester \(h^{-1}(\mathbb R)=X\) ne prouve rien : c'est vrai pour toute fonction. Voir la carte d'erreur mesure-e003.
+  source: 'Énoncé : uvsq/mesure/Théorie de la mesure/Annales/CC1-2023-2024.pdf p.1 (Ex 2). Corrigé officiel : uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2023-2024.pdf p.2. Erreur de la séance du 2026-11-07.'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exercice]

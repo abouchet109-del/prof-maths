@@ -690,3 +690,56 @@
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
   tags: [erreur]
+- id: ex-topo-td1-ex04
+  exercice: topo-td1-ex04
+  notion: topo-n-0004
+  recto: |-
+    <b>Exo topo-td1-ex04 : Ouvert et/ou fermé : onze exemples</b><br>
+    Déterminer si \(A\) est ouvert et/ou fermé <b>dans \(X\)</b> (distance usuelle de \(\mathbb R\), distance euclidienne sur \(\mathbb R^2\)) :<br>
+    1. \(A=\emptyset\), \(X=\mathbb R\) ; 2. \(A=]0,1]\), \(X=\mathbb R\) ; 3. \(A=]-\infty,1]\), \(X=\mathbb R\) ; 4. \(A=[0,2[\,\cup\,]1,3]\), \(X=\mathbb R\) ; 5. \(A=]0,1]\), \(X=[-1,1]\) ;<br>
+    6. \(A=[1,2]\cup\bigcup_{n\ge1}\{1/n\}\), \(X=\mathbb R\) ; 7. \(A=[-1,0]\cup\bigcup_{n\ge1}\{1/n\}\), \(X=\mathbb R\) ;<br>
+    8. \(A=]0,+\infty[\times\{0\}\), \(X=\mathbb R^2\) ; 9. \(A=[0,+\infty[\times\{0\}\), \(X=\mathbb R^2\) ;<br>
+    10. \(A=\{(x,y)\mid x>0,\ y>0,\ xy<1\}\), \(X=\mathbb R^2\) ; 11. \(A=\{(x,y)\mid x>0,\ y\ge0,\ xy<1/2\}\), \(X=\mathbb R^2\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> « ouvert » et « fermé » se testent dans l'espace \(X\), et ne sont pas des contraires. Ouvert : chaque point de \(A\) a une boule de \(X\) incluse dans \(A\). Fermé : \(X\setminus A\) est ouvert, ou toute suite de \(A\) qui converge a sa limite dans \(A\).<br>
+    <b>Correction :</b> dans \(X\), la boule est \(B_X(x,r)=B(x,r)\cap X\).<br>
+    1. \(\emptyset\) est ouvert (condition vide) et fermé (\(\mathbb R\setminus\emptyset=\mathbb R\) est ouvert).<br>
+    2. \(A=]0,1]\) dans \(\mathbb R\). Pas ouvert : \(1\in A\) et, pour tout \(r>0\), \(1+r/2\in B(1,r)\) n'est pas dans \(A\). Pas fermé : \(1/n\in A\) et \(1/n\to0\notin A\).<br>
+    3. \(A=]-\infty,1]\). Fermé : \(\mathbb R\setminus A=]1,+\infty[\) est ouvert (pour \(x>1\), \(B(x,x-1)\subset\,]1,+\infty[\)). Pas ouvert : \(1\in A\) et \(1+r/2\notin A\).<br>
+    4. \(A=[0,2[\,\cup\,]1,3]=[0,3]\) (les deux intervalles se recouvrent car \(1<2\)). Fermé : \(\mathbb R\setminus A=]-\infty,0[\,\cup\,]3,+\infty[\) est ouvert. Pas ouvert : \(0\in A\) et \(-r/2\notin A\).<br>
+    5. \(A=]0,1]\) dans \(X=[-1,1]\). Ouvert dans \(X\) : pour \(x\in A\), \(B_X(x,x)=\,]0,2x[\,\cap[-1,1]\subset A\) (c'est aussi \(A=X\cap\,]0,2[\)). Pas fermé dans \(X\) : \(X\setminus A=[-1,0]\) n'est pas ouvert dans \(X\), car pour tout \(r>0\), \(B_X(0,r)\) contient des points de \(]0,1]\) (par exemple \(\min(r,1)/2\)).<br>
+    6. \(A=[1,2]\cup\bigcup_n\{1/n\}\). Pas ouvert : \(2\in A\) et \(2+r/2\notin A\). Pas fermé : \(1/n\in A\), \(1/n\to0\), et \(0\notin A\) (\(0\notin[1,2]\) et \(0\ne1/n\)).<br>
+    7. \(A=[-1,0]\cup\bigcup_n\{1/n\}\). Pas ouvert : \(-1\in A\) et \(-1-r/2\notin A\). Fermé : \(\mathbb R\setminus A=\,]-\infty,-1[\,\cup\,]1,+\infty[\,\cup\bigcup_{n\ge1}\left]\frac1{n+1},\frac1n\right[\), réunion d'ouverts, donc ouvert (un \(x\in]0,1[\) qui n'est pas de la forme \(1/n\) est dans l'intervalle \(\left]\frac1{n+1},\frac1n\right[\) avec \(n=\lfloor1/x\rfloor\)). La différence avec le cas 6 : ici \(0\in A\).<br>
+    8. \(A=]0,+\infty[\times\{0\}\). Pas ouvert : \((1,0)\in A\) et \((1,r/2)\in B((1,0),r)\) n'est pas dans \(A\). Pas fermé : \((1/n,0)\in A\) et \((1/n,0)\to(0,0)\notin A\).<br>
+    9. \(A=[0,+\infty[\times\{0\}\). Fermé : \(\mathbb R^2\setminus A=\{y\ne0\}\cup\{x<0\}\), réunion de deux ouverts (images réciproques d'ouverts de \(\mathbb R\) par les projections, continues). Pas ouvert : \((0,0)\in A\) et \((0,r/2)\notin A\).<br>
+    10. \(A=\{x>0\}\cap\{y>0\}\cap\{xy<1\}\) : intersection finie d'ouverts (images réciproques d'ouverts par \((x,y)\mapsto x\), \(y\), \(xy\), continues), donc ouvert. Pas fermé : \(\left(\frac1{n+1},1\right)\in A\) et converge vers \((0,1)\notin A\) (car \(x=0\)).<br>
+    11. \(A=\{x>0,\ y\ge0,\ xy<1/2\}\). Pas ouvert : \((1,0)\in A\) et \((1,-r/2)\in B((1,0),r)\) n'est pas dans \(A\) (\(y<0\)). Pas fermé : \((1/n,0)\in A\) et converge vers \((0,0)\notin A\) (\(x=0\)).<br>
+    <b>Piège :</b> cas 3 : \(]-\infty,1]\) est fermé, pas ouvert. Cas 5 : l'ambiant est \([-1,1]\), pas \(\mathbb R\). Cas 6 contre 7 : tout tient à \(0\in A\) ou non. Cas 8-9 : une boule de \(\mathbb R^2\) sort toujours de l'axe \(y=0\).
+  source: 'Énoncé : topologie/td/td1.pdf p.1 (Ex 4). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer. Erreurs de la séance du 2026-11-07 (cas 3, 5, 8-9).'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
+- id: ex-topo-td1-ex06
+  exercice: topo-td1-ex06
+  notion: topo-n-0018
+  recto: |-
+    <b>Exo topo-td1-ex06 : Intérieur : ℚ, disque pointé, graphe</b><br>
+    Déterminer l'intérieur \(\mathring A\) de la partie \(A\) de l'espace métrique \((X,d)\) :<br>
+    1. \(X=\mathbb R\), \(d(x,y)=|x-y|\), \(A=\mathbb Q\) ;<br>
+    2. \(X=\mathbb C\), \(d(z_1,z_2)=|z_1-z_2|\), \(A=\{z\in\mathbb C\mid 0<|z|\le1\}\) ;<br>
+    3. \(X=\mathbb R\), \(d(x,y)=|x-y|\), \(A=\mathbb R\setminus\{1/n\mid n\in\mathbb N^*\}\) ;<br>
+    4. \(X=\mathbb R^2\), distance euclidienne, \(A=\{x\in\mathbb R^2\mid x_2=f(x_1)\}\), où \(f:\mathbb R\to\mathbb R\) est quelconque.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(x\in\mathring A\iff\exists r>0,\ B(x,r)\subset A\). C'est la boule entière qui doit être dans \(A\), pas seulement son centre. Pour exclure un point : trouver, dans toute boule autour de lui, un point hors de \(A\).<br>
+    <b>Correction :</b><br>
+    1. Soit \(x\in\mathbb R\) et \(r>0\). L'intervalle \(]x-r,x+r[\) contient un irrationnel (\(\mathbb R\setminus\mathbb Q\) est dense), donc n'est pas inclus dans \(\mathbb Q\). Aucun point n'est intérieur : \(\mathring{\mathbb Q}=\emptyset\).<br>
+    2. Posons \(B=\{z\mid0<|z|<1\}\). \(B\subset\mathring A\) : pour \(z\in B\), soit \(r=\min(|z|,1-|z|)>0\) ; si \(|w-z|<r\), alors \(|w|\ge|z|-|w-z|>0\) et \(|w|\le|z|+|w-z|<1\), donc \(w\in B\subset A\). Réciproquement, \(0\notin A\), et si \(|z|=1\) : pour tout \(r>0\), \(w=(1+r/2)z\) vérifie \(|w-z|=r/2<r\) et \(|w|=1+r/2>1\), donc \(w\in B(z,r)\setminus A\) et \(z\) n'est pas intérieur. Donc \(\mathring A=B\).<br>
+    3. Posons \(F=\{1/n\mid n\ge1\}\), \(A=\mathbb R\setminus F\). Un point \(x\) est intérieur à \(A\) si et seulement si une boule autour de \(x\) ne rencontre pas \(F\), c'est-à-dire si \(x\notin\overline F\). Or \(\overline F=F\cup\{0\}\) : \(0\) est limite de \(1/n\) (toute boule \(]-r,r[\) contient \(1/n\) dès que \(n>1/r\)), et tout autre \(x\notin F\) a un voisinage sans point de \(F\) (si \(x<0\) ou \(x>1\), évident ; si \(0<x<1\) et \(x\ne1/n\), l'intervalle \(\left]\frac1{n+1},\frac1n\right[\ni x\) ne rencontre pas \(F\)). Donc \(\mathring A=\mathbb R\setminus(\{0\}\cup F)\) : le point \(0\) est dans \(A\) mais n'est pas intérieur.<br>
+    4. Soit \(x=(x_1,f(x_1))\in A\) et \(r>0\). Le point \(y=(x_1,f(x_1)+r/2)\) vérifie \(d(x,y)=r/2<r\), donc \(y\in B(x,r)\), mais \(y_2\ne f(y_1)=f(x_1)\), donc \(y\notin A\). Aucun point n'est intérieur : \(\mathring A=\emptyset\), quelle que soit \(f\).<br>
+    <b>Piège :</b> conclure « \(\mathbb Q\) est ouvert » en ne regardant que les rationnels. Il faut penser à \(\mathbb R\setminus\mathbb Q\), dense.
+  source: 'Énoncé : topologie/td/td1.pdf p.1 (Ex 6). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer. Erreur de la séance du 2026-11-07 (Q1) ; Q3 et Q4 non faites.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]

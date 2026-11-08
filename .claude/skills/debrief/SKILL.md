@@ -79,12 +79,21 @@ Demander, en un seul message, pour chaque exercice du plan : le niveau, le temps
    - `id: <m>-eNNN` (numéro libre suivant), `notion`, `chapitre`, `priorite: 1`, `tags: [erreur]` ;
    - recto : une question qui vise précisément la confusion ; verso : la réponse juste en 1 à 3 lignes ; source : poly et page, ou l'exercice ;
    - maths en `\( … \)`, texte YAML entre apostrophes ou en bloc `|`.
-4. **Notion de cours mal comprise** (note 0 sur Q4) : l'indiquer dans `## Mises à jour` ; le planificateur la reprend au cours du lendemain si elle figure dans `NOW.md`.
-5. **Ne jamais** réorganiser le planning à la main : c'est le rôle de `plan.py`.
+4. **Cartes d'exercices** (une par exercice non réussi seul). Format et exemple : `docs/FORMATS.md`, « Cartes d'exercices ».
+   - **Lesquels :** résultat du jour `aide` ou `presque` ; `non_fait` seulement si l'exercice a été travaillé et le corrigé vu pendant la séance. Rien pour `reussi`, ni pour un `non_fait` jamais ouvert.
+   - **Doublon :** chercher dans `matieres/<m>/cartes.yaml` une carte avec `exercice: <id>`. Une seule carte par exercice.
+     - Elle existe : si l'erreur du jour est nouvelle, compléter son verso (ligne « Piège », ou la correction si elle était incomplète), puis `python -I tools/anki.py --reexporter <id>` (§5). Dans tous les cas, ajouter `{pour: <date du prochain NOW>, id: <id de la carte>, raison: "<erreur du jour>"}` à `state/a_revoir.yaml`, et le noter dans `## Mises à jour`.
+     - Elle n'existe pas : la créer en fin de `cartes.yaml` avec `id: ex-<id exercice>`, `exercice`, `notion` (notion principale de l'exercice), `chapitre` (exactement celui des cartes de cours : l'export la range dans le sous-paquet `<chapitre>::Exercices`), `priorite: 1`, `tags: [exercice]`.
+   - **Recto :** `Exo <id> : <titre>`, l'énoncé (condensé s'il est long, mais avec toutes les hypothèses et tous les symboles introduits), puis « Méthode ? Étape clé ? ».
+   - **Verso :** l'idée clé en une ligne ; la **correction complète** (toutes les étapes rédigées, fidèle au corrigé officiel) ; le piège éventuel (l'erreur faite en séance, si on la connaît) ; la référence du corrigé (fichier, page) dans `source`.
+   - **Justesse à 100 % :** le verso se rédige à partir du **corrigé officiel**, page du PDF ouverte (texte dans `bibliotheque/_texte/`, ou image avec `tools/rendre_page.py`). Un corrigé officiel peut être faux : le vérifier. Sans corrigé officiel (`corrige.statut: absent`), résoudre l'exercice soi-même, vérifier chaque étape, et écrire dans `source` « Pas de corrigé officiel : vérifiée par Claude, à confirmer ». Ne jamais écrire un verso de mémoire.
+   - La carte ne remplace pas la reprise sur papier : le planificateur la programme déjà (J+1 à J+3).
+5. **Notion de cours mal comprise** (note 0 sur Q4) : l'indiquer dans `## Mises à jour` ; le planificateur la reprend au cours du lendemain si elle figure dans `NOW.md`.
+6. **Ne jamais** réorganiser le planning à la main : c'est le rôle de `plan.py`.
 
 ## 5. Commandes (une par une, depuis la racine)
 
-1. Cartes nouvelles (s'il y en a) : `python tools/anki.py`, puis ouvrir le paquet indiqué par la sortie (`Start-Process "anki\paquets\<fichier>.apkg"`).
+1. Cartes nouvelles (cartes d'erreurs et d'exercices comprises, s'il y en a) : `python tools/anki.py` (pour une carte déjà exportée et corrigée : `python -I tools/anki.py --reexporter <ids>`), puis ouvrir le paquet indiqué par la sortie (`Start-Process "anki\paquets\<fichier>.apkg"`).
 2. Plan du lendemain : `python tools/plan.py jour --date <demain>`.
 3. `python tools/check.py`. **Pas de commit tant qu'il échoue.**
 4. `git add` avec des chemins explicites : `journal/<date>.md`, `state/` (dont `a_revoir.yaml`), `matieres/*/cartes.yaml` touchés, `anki/registre.csv`, `NOW.md`.
