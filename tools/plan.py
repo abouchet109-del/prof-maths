@@ -722,7 +722,9 @@ def rediger(ctx, plan, cartes) -> list[str]:
         dj = plan.get("dernier_jour")
         L.append(f"Dernier jour travaillé : {dj} ({JOURS[dj.weekday()]})" if dj else "Dernier jour travaillé : aucun")
         L += ["", f"## Exercices ({plan['minutes']}/{info['minutes_exercices']} min)"]
-        for titre, genre in (("Reprises", "reprise"), ("Annale", "annale"), ("Bloc", "bloc")):
+        # Ordre de travail : annale, bloc, puis les reprises en fin de séance (seul, sur papier ; demande du 08/11/2026).
+        # Le choix des exercices ne change pas : les reprises dues restent réservées en premier dans le temps.
+        for titre, genre in (("Annale", "annale"), ("Bloc", "bloc"), ("Reprises (en fin de séance)", "reprise")):
             groupe = [(e, g) for e, g in plan["items"] if g.split(" ")[0] == genre]
             if not groupe:
                 continue

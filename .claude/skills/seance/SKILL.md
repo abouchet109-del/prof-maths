@@ -30,7 +30,7 @@ description: "Début de séance de maths (L3). Calcule le plan de maintenant d'a
    - **Répondre à ses questions** en partant de sa `vision`, de ses confusions et liens manquants connus, et dans son `style`. Une question est aussi une donnée : elle montre où sa compréhension s'arrête.
    - Toujours appuyé sur le poly (fichier, page) : jamais un énoncé de mémoire seule.
    - Ne rien écrire pendant la séance : le debrief, dans cette conversation, relit les échanges.
-3. **Exercices** : dans l'ordre de `NOW.md`. Aide graduée seulement sur demande (règles de `CLAUDE.md`). Noter pour chaque exercice le palier d'aide atteint et ce qui a bloqué, pour le debrief. Une aide part de ce qu'il a dit de son raisonnement et de sa `vision` des notions en jeu.
+3. **Exercices** : dans l'ordre de `NOW.md` (annale, bloc, puis les **reprises en fin de séance**, faites seul sur papier : on vérifie seulement la rédaction finale). Aide graduée seulement sur demande (règles de `CLAUDE.md`). Noter pour chaque exercice le palier d'aide atteint et ce qui a bloqué, pour le debrief. Une aide part de ce qu'il a dit de son raisonnement et de sa `vision` des notions en jeu.
 4. **Fin de séance** : proposer le debrief (« debrief » ou « log rapide : … »), dans cette même conversation.
 
 ## 4. Cas particuliers
