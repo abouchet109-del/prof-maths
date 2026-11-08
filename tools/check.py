@@ -79,13 +79,16 @@ def verifier(racine=E.RACINE) -> list[str]:
     if ap:
         cartes = {c["id"] for f, d in charges.items() if f.name == "cartes.yaml" for c in d or []}
         vus = set()
+        faits = {str(r.get("date")) for r in (res if isinstance(res, list) else [])}
         for jour, ids in ap.items():
             for i in ids:
                 if i not in cartes:
                     erreurs.append(f"anki_plan {jour} : carte inconnue {i}")
                 if i in vus:
                     erreurs.append(f"anki_plan {jour} : carte {i} donnée plusieurs fois")
-                vus.add(i)
+                # un jour sans résultat n'a pas été travaillé : ses cartes peuvent être redonnées (plan.py)
+                if str(jour) in faits:
+                    vus.add(i)
 
     # 5 bis. cartes d'exercices : tag `exercice` <=> champ `exercice` ; exercice connu, de la même matière,
     # une seule carte par exercice, notion renseignée (lue par plan.py)
