@@ -229,8 +229,9 @@ def fusionner(dry_run: bool, racine=RACINE) -> int:
         deck = anciens[0]["deckName"]
         premier = next(iter(i["fields"].values()))["value"] if i.get("fields") else ""
         notes.append((i["noteId"], deck, premier))
-        paquet, _ = cible(deck, index.get(i["noteId"], []), ancien.get(i["noteId"]))
-        if paquet is None:
+        paquet, motif = cible(deck, index.get(i["noteId"], []), ancien.get(i["noteId"]))
+        # Hors poly (chapitres pas encore vus) : l'utilisateur veut les laisser dans l'ancien paquet (08/11/2026).
+        if paquet is None or motif == "sans_rattachement":
             continue
         notes_ciblees[paquet].append(i["noteId"])
         deplacements += [(c["cardId"], c["deckName"], paquet) for c in anciens]
