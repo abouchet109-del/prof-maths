@@ -1209,3 +1209,58 @@ def test_ranger_cours_dans_sous_paquet():
     deplacements, filtrees = AC.plan_rangement(cartes)
     assert deplacements == [(1, ch, ch + "::Cours")]       # seule la carte posée dans le chapitre bouge
     assert filtrees == 1
+
+
+# ------------------------------------------------ suivi par sous-question (09/11/2026)
+def resq(d, id, **qs):
+    return {"date": D.fromisoformat(d), "exercice": id, "resultat": E.pire(qs.values()), "questions": qs}
+
+
+def test_reprise_seulement_des_questions_manquees():
+    exos = [ex("e1", t=40)]
+    r = [resq("2026-11-04", "e1", Q1="reussi", Q2="presque", Q3="reussi", Q4="reussi")]
+    p = P.plan_jour(ctx(exos, r), D(2026, 11, 6))
+    (e, genre), = [it for it in p["items"] if it[1] == "reprise"]
+    assert e["a_refaire"] == ["Q2"] and e["questions_justes"] == ["Q1", "Q3", "Q4"]
+    assert e["temps_min"] == 10                       # 40 × 1/4, 10 min au moins
+    assert exos[0]["temps_min"] == 40                 # l'exercice lui-même n'est pas modifié
+
+
+def test_reprise_partielle_reussie_rend_l_exercice_acquis_seulement_si_tout_est_juste():
+    r = [resq("2026-11-04", "e1", Q1="reussi", Q2="presque", Q3="non_fait"),
+         resq("2026-11-06", "e1", Q2="reussi")]
+    h = E.historique(r)["e1"]
+    assert [x[1] for x in h] == ["non_fait", "non_fait"]      # Q3 manque encore
+    assert E.questions(r, D(2026, 11, 6))["e1"] == {"Q1": "reussi", "Q2": "reussi", "Q3": "non_fait"}
+    r.append(resq("2026-11-08", "e1", Q3="reussi"))
+    assert E.etat_exercice(E.historique(r)["e1"], D(2026, 11, 8))["etat"] == "acquis"
+    # la reprise d'entretien (acquis) porte sur l'exercice entier
+    p = P.plan_jour(ctx([ex("e1", t=40)], r), D(2026, 11, 15))
+    (e, _), = p["items"]
+    assert "a_refaire" not in e and e["temps_min"] == 40
+
+
+def test_tentative_entiere_et_decoupage_d_une_question():
+    r = [resq("2026-11-04", "e1", Q1="presque", Q2="reussi"),
+         {"date": D(2026, 11, 6), "exercice": "e1", "resultat": "aide"}]       # exercice entier refait
+    assert E.questions(r, D(2026, 11, 6))["e1"] == {"Q1": "aide", "Q2": "aide"}
+    r = [resq("2026-11-04", "e1", Q1="presque", Q2="reussi"),
+         resq("2026-11-06", "e1", **{"Q1-directe": "reussi", "Q1-reciproque": "presque"})]
+    assert E.questions(r, D(2026, 11, 6))["e1"] == {"Q2": "reussi", "Q1-directe": "reussi", "Q1-reciproque": "presque"}
+    # sans détail des questions : comportement d'avant, exercice entier
+    assert P.reprise_partielle(ex("e2", t=30), None)["temps_min"] == 30
+
+
+def test_resultat_ajouter_questions():
+    import resultat as R
+    assert R.lire_questions("Q1=reussi, Q2 = presque") == {"Q1": "reussi", "Q2": "presque"}
+    with pytest.raises(ValueError):
+        R.lire_questions("Q1=bof")
+
+
+def test_now_affiche_seulement_les_questions_a_refaire():
+    exos = [ex("e1", t=40)]
+    c = ctx(exos, [resq("2026-11-04", "e1", Q1="reussi", Q2="presque")])
+    p = P.plan_jour(c, D(2026, 11, 6))
+    texte = "\n".join(P.rediger(c, p, P.anki(c, p)))
+    assert "`e1` e1 · 20 min" in texte and "**seulement Q2** (Q1 déjà juste)" in texte

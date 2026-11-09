@@ -86,14 +86,62 @@ def charger_resultats(racine=RACINE) -> list[dict]:
     return charger_yaml(Path(racine) / "state" / "resultats.yaml", [])
 
 
-def historique(resultats) -> dict[str, list[tuple[dt.date, str]]]:
-    """id d'exercice -> tentatives [(date, résultat)] triées par date (ordre du fichier à égalité)."""
+def pire(resultats) -> str:
+    """Le moins bon résultat (ordre de RESULTATS : reussi < aide < presque < non_fait)."""
+    return max(resultats, key=RESULTATS.index)
+
+
+def maj_questions(etat_q: dict, r) -> dict:
+    """État des questions après la tentative `r` (sans effet de bord sur `etat_q`).
+
+    Sans `questions`, la tentative porte sur l'exercice entier : toutes les questions connues prennent son
+    résultat. Avec `questions`, seules les questions citées changent ; « Q1-reciproque » découpe « Q1 »,
+    qui disparaît (le debrief écrit alors toutes ses parties)."""
+    qs = r.get("questions") or {}
+    if not qs:
+        return {q: r["resultat"] for q in etat_q}
+    nouveau = {q: v for q, v in etat_q.items() if not any(str(k).startswith(f"{q}-") for k in qs)}
+    nouveau.update({str(k): v for k, v in qs.items()})
+    return nouveau
+
+
+def _par_exercice(resultats) -> dict[str, list[dict]]:
+    """id d'exercice -> tentatives brutes triées par date (ordre du fichier à égalité)."""
     h: dict[str, list] = {}
     for r in resultats:
-        h.setdefault(r["exercice"], []).append((en_date(r["date"]), r["resultat"]))
+        h.setdefault(r["exercice"], []).append(r)
     for liste in h.values():
-        liste.sort(key=lambda t: t[0])
+        liste.sort(key=lambda r: en_date(r["date"]))
     return h
+
+
+def historique(resultats) -> dict[str, list[tuple[dt.date, str]]]:
+    """id d'exercice -> tentatives [(date, résultat effectif)] triées par date (ordre du fichier à égalité).
+
+    Résultat effectif : le moins bon des questions connues après la tentative (suivi par sous-question,
+    09/11/2026), sinon le résultat déclaré. Une reprise de Q2 seule, réussie, ne rend donc l'exercice
+    `reussi` que si toutes les autres questions l'étaient déjà."""
+    h: dict[str, list] = {}
+    for ex, liste in _par_exercice(resultats).items():
+        etat_q: dict = {}
+        for r in liste:
+            etat_q = maj_questions(etat_q, r)
+            h.setdefault(ex, []).append((en_date(r["date"]), pire(etat_q.values()) if etat_q else r["resultat"]))
+    return h
+
+
+def questions(resultats, aujourdhui: dt.date) -> dict[str, dict[str, str]]:
+    """id d'exercice -> {question: dernier résultat} d'après les tentatives jusqu'à `aujourdhui`
+    (absent si aucune tentative ne détaille ses questions)."""
+    res = {}
+    for ex, liste in _par_exercice(resultats).items():
+        etat_q: dict = {}
+        for r in liste:
+            if en_date(r["date"]) <= aujourdhui:
+                etat_q = maj_questions(etat_q, r)
+        if etat_q:
+            res[ex] = etat_q
+    return res
 
 
 # ------------------------------------------------------------------ exercices

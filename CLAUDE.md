@@ -39,7 +39,7 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 - Début de séance : `python tools/plan.py seance` → `NOW.md` (Anki ouvert ; `--sans-anki` pour estimer).
 - Fin de séance : `python tools/plan.py bilan [--date AAAA-MM-JJ]` → bilan réel à recopier dans le journal.
 - Simulation d'une date du calendrier (hors workflow) : `python tools/plan.py jour --date AAAA-MM-JJ`.
-- Résultat d'un exercice : `python tools/resultat.py ajouter …` ; profil : `python tools/resultat.py profil`.
+- Résultat d'un exercice : `python tools/resultat.py ajouter …` (`--questions "Q1=reussi,Q2=presque"` : suivi par sous-question, la reprise ne redemande que ce qui manque) ; profil : `python tools/resultat.py profil`.
 - Cohérence : `python tools/check.py` (avant chaque commit).
 - Cartes : `python tools/anki.py [--dry-run]`.
 - Anki en ligne (AnkiConnect) : `python tools/anki_connect.py importer|fusionner [--dry-run]|ranger [--dry-run]|annuler`. Chaque chapitre a ses sous-paquets `::Cours` et `::Exercices`.

@@ -15,6 +15,7 @@ proposées) et les jours travaillés.
 from __future__ import annotations
 
 import argparse
+import math
 import datetime as dt
 import sys
 from pathlib import Path
@@ -26,6 +27,7 @@ import etat as E
 JOURS = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."]
 MAX_LIGNES = 60
 MIN_PAR_NOTION = 10         # durée estimée d'une notion de cours
+REPRISE_MIN = 10            # minutes au moins pour une reprise partielle (seulement les questions manquées)
 REPRISES_MAX_DEFAUT = 30    # minutes de reprises par jour au plus (dispo.yaml : minutes_reprises_max)
 CARTES_DEFAUT = 20          # cartes nouvelles par jour au plus (dispo.yaml : cartes_par_jour)
 EXERCICES_DEFAUT = 10       # cartes d'exercices nouvelles par jour au plus, à part des cartes de cours (dispo.yaml : exercices_par_jour)
@@ -291,6 +293,18 @@ def info_seance(dispo, d: dt.date) -> dict:
     return info
 
 
+def reprise_partielle(e, etat_q) -> dict:
+    """Reprise d'un exercice à revoir dont des questions sont déjà justes : seulement les autres
+    (09/11/2026). Copie de l'exercice avec `a_refaire` et un temps au prorata, 10 min au moins."""
+    if not etat_q:
+        return e
+    refaire = [q for q, v in etat_q.items() if v != "reussi"]
+    if not refaire or len(refaire) == len(etat_q):
+        return e
+    temps = min(e["temps_min"], max(REPRISE_MIN, math.ceil(e["temps_min"] * len(refaire) / len(etat_q))))
+    return {**e, "temps_min": temps, "a_refaire": refaire, "questions_justes": [q for q in etat_q if q not in refaire]}
+
+
 def plan_jour(ctx, d: dt.date, resultats=None, seance=False) -> dict:
     """Plan : reprises, au plus une annale prioritaire, puis le bloc de la matière du jour.
     `seance=True` : plan complet même un jour off du calendrier."""
@@ -331,7 +345,10 @@ def plan_jour(ctx, d: dt.date, resultats=None, seance=False) -> dict:
     dus = [e for e in exos if etats[e["id"]]["est_du"]]
     dus.sort(key=lambda e: (etats[e["id"]]["etat"] != "a_revoir", e["id"] not in prio, etats[e["id"]]["du"], e["ordre"]))
     reprises = 0
+    qmap = E.questions(resultats, d)
     for e in dus:
+        if etats[e["id"]]["etat"] == "a_revoir":
+            e = reprise_partielle(e, qmap.get(e["id"]))
         if reprises and reprises + e["temps_min"] > plafond:
             continue
         if ajouter(e, "reprise"):
@@ -747,6 +764,9 @@ def rediger(ctx, plan, cartes) -> list[str]:
             for e, g in groupe:
                 etiquette = g if genre == "annale" else ""
                 ligne = f"- [ ] `{e['id']}` {etiquette + ' · ' if etiquette else ''}{_court(e['titre'])} · {e['temps_min']} min · {_source(e)}"
+                if e.get("a_refaire"):
+                    ligne += (f" · **seulement {', '.join(e['a_refaire'])}**"
+                              f" ({', '.join(e['questions_justes'])} déjà juste{'s' if len(e['questions_justes']) > 1 else ''})")
                 if e.get("enonce") is None:
                     ligne += " · **énoncé à extraire**"
                 L.append(ligne)

@@ -157,6 +157,13 @@ def verifier(racine=E.RACINE) -> list[str]:
                 erreurs.append(f"resultats #{i} : résultat invalide ({r.get('resultat')})")
             if r.get("palier_aide") not in range(5):
                 erreurs.append(f"resultats #{i} : palier_aide hors 0..4 ({r.get('palier_aide')})")
+            qs = r.get("questions")
+            if qs is not None:
+                if not isinstance(qs, dict) or not qs or any(v not in E.RESULTATS for v in qs.values()):
+                    erreurs.append(f"resultats #{i} : questions invalides ({qs})")
+                elif r.get("resultat") != E.pire(qs.values()):
+                    erreurs.append(f"resultats #{i} : résultat {r.get('resultat')} contraire aux questions "
+                                   f"(le moins bon : {E.pire(qs.values())})")
 
     # 5. anki_plan et seance : simples journaux de ce qui a été proposé. Une carte proposée mais pas apprise
     # est proposée de nouveau (lecture d'Anki) : plus de contrôle de doublon, seulement des ids connus.

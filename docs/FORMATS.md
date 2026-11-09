@@ -253,8 +253,24 @@ Ensembles : **à consolider** = niveau `inconnue`, `recitee` ou `fragile`, ou au
 
 **(e) `check.py`** refuse : un fichier dont la racine n'a pas exactement `notions` (dict) et `style` (liste de 6 chaînes au plus) ; un id de notion inconnu (clé ou `vers`), ou `vers` égal à la clé ; un `niveau` hors des cinq ; un `statut` hors `ouverte|reparee` ; une `source` hors `cours|exercice|question`, un `verdict` hors `juste|partiel|faux` ; un `exercice` inconnu ; une date (`maj`, confusions, preuves) qui n'est pas AAAA-MM-JJ valide ou qui est postérieure à aujourd'hui ; plus de 6 preuves ou 8 confusions ; un `extrait` de plus de 160 caractères ; `tenue` ou `reliee` avec une confusion ouverte ; `reliee` sans `liens`. Le fichier absent ou `notions: {}` est valide.
 
-## Résultat d'un exercice (`state/resultats.yaml`, à venir)
+## Résultat d'un exercice (`state/resultats.yaml`)
 `reussi` (seul), `aide` (réussi avec un indice), `presque` (pas loin avec l'aide), `non_fait` (pas réussi). Correspondance avec les tableurs : Réussi → `reussi`, Pas loin → `presque`, Loin et Non fait → `non_fait`.
+
+```yaml
+- date: 2026-11-09
+  exercice: topo-td1-ex09
+  resultat: presque            # calculé : le moins bon des questions de cette tentative
+  palier_aide: 1
+  note: 'Q2 : ...'
+  questions: {Q1: reussi, Q2: presque, Q3: reussi}     # facultatif (depuis le 09/11/2026)
+```
+
+**Suivi par sous-question** (`resultat.py ajouter <id> --questions "Q1=reussi,Q2=presque"`) :
+- Chaque question a son niveau, avec les règles d'un exercice. Une tentative sans `questions` porte sur l'exercice entier : toutes les questions connues prennent son résultat.
+- Une reprise partielle ne cite que les questions refaites ; les autres gardent leur niveau. `Q1-directe`, `Q1-reciproque` découpent `Q1`, qui disparaît.
+- **Niveau effectif de l'exercice** (`etat.historique`) : le moins bon des questions connues après chaque tentative. L'exercice n'est donc `acquis` que quand chaque question a été réussie seule. La reprise d'entretien (acquis, maîtrisé) porte sur l'exercice entier.
+- **Reprise d'un exercice à revoir** (`plan.reprise_partielle`) : seulement les questions non `reussi`, au prorata de `temps_min` (10 min au moins). `NOW.md` l'écrit « **seulement Q2** (Q1, Q3 déjà justes) ». La marge à l'échéance compte toujours l'exercice entier, qui reviendra en entretien.
+- La première tentative détaillée liste toutes les questions. `check.py` refuse un `resultat` différent du moins bon de `questions`, ou une question au résultat invalide.
 
 ## Corrigés
 Un corrigé officiel peut contenir une erreur (constaté sur le corrigé de `mes-td1-ex05`, où lim sup et lim inf sont inversées) : en cas de désaccord au debrief, on vérifie plutôt que de trancher par autorité.

@@ -1,6 +1,8 @@
 """Résultats d'exercices.
 
   resultat.py ajouter <id_exercice> <resultat> [--aide N] [--note "..."] [--date D]
+  resultat.py ajouter <id_exercice> --questions "Q1=reussi,Q2=presque" [--aide N] [--note "..."] [--date D]
+      (résultat global calculé : le moins bon des questions faites)
   resultat.py profil [--matiere M]
 """
 from __future__ import annotations
@@ -26,19 +28,47 @@ def ajouter(args) -> int:
         print(f"{args.exercice} est un doublon de {e['doublon_de']} : enregistrer le résultat sur celui-ci.",
               file=sys.stderr)
         return 1
+    try:
+        questions = lire_questions(args.questions) if args.questions else None
+    except ValueError as ex:
+        print(f"--questions : {ex}", file=sys.stderr)
+        return 1
+    resultat = E.pire(questions.values()) if questions else args.resultat
+    if resultat is None:
+        print("Donner le résultat ou --questions.", file=sys.stderr)
+        return 1
+    if questions and args.resultat and args.resultat != resultat:
+        print(f"Résultat {args.resultat} contraire aux questions (le moins bon : {resultat}).", file=sys.stderr)
+        return 1
     chemin = E.RACINE / "state" / "resultats.yaml"
     resultats = E.charger_yaml(chemin, [])
-    resultats.append({
+    entree = {
         "date": E.en_date(args.date) if args.date else dt.date.today(),
         "exercice": args.exercice,
-        "resultat": args.resultat,
+        "resultat": resultat,
         "palier_aide": args.aide,
         "note": args.note,
-    })
+    }
+    if questions:
+        entree["questions"] = questions
+    resultats.append(entree)
     with open(chemin, "w", encoding="utf-8") as f:
         yaml.safe_dump(resultats, f, allow_unicode=True, sort_keys=False, width=200)
-    print(f"Ajouté : {args.exercice} {args.resultat} ({resultats[-1]['date']}).")
+    print(f"Ajouté : {args.exercice} {resultat} ({resultats[-1]['date']}).")
     return 0
+
+
+def lire_questions(texte: str) -> dict[str, str]:
+    """« Q1=reussi,Q2=presque » -> {"Q1": "reussi", "Q2": "presque"}."""
+    res = {}
+    for morceau in filter(None, (m.strip() for m in texte.split(","))):
+        q, _, r = (x.strip() for x in morceau.partition("="))
+        if not q or r not in E.RESULTATS:
+            raise ValueError(f"« {morceau} » : attendu Question=resultat, resultat parmi {', '.join(E.RESULTATS)}")
+        res[q] = r
+    if not res:
+        raise ValueError("aucune question")
+    return res
 
 
 def _moyennes(groupes: dict) -> list[tuple]:
@@ -99,7 +129,8 @@ def main():
     sp = p.add_subparsers(dest="cmd", required=True)
     a = sp.add_parser("ajouter", help="enregistre un résultat")
     a.add_argument("exercice")
-    a.add_argument("resultat", choices=E.RESULTATS)
+    a.add_argument("resultat", nargs="?", choices=E.RESULTATS)
+    a.add_argument("--questions", default=None, help="résultat par sous-question : « Q1=reussi,Q2=presque »")
     a.add_argument("--aide", type=int, default=0, choices=range(5), help="palier d'aide 0..4")
     a.add_argument("--note", default=None)
     a.add_argument("--date", default=None, help="AAAA-MM-JJ (défaut : aujourd'hui)")

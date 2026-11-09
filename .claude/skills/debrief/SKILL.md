@@ -33,7 +33,11 @@ Demander, en un seul message, pour chaque exercice du plan : le niveau, le temps
 
 - **Si l'utilisateur colle sa rédaction** (ou une photo), la vérifier soi-même : une preuve fausse ou incomplète n'est pas `reussi`, même s'il le pense. Dire précisément où ça casse.
 - **Corrigés** : ne jamais présenter une solution comme sûre si `corrige.statut` vaut `absent` ou si on l'a reconstituée. La donner avec la mention « vérifiée par Claude, à confirmer », et toute étape douteuse signalée comme telle. Un corrigé officiel peut être faux : en cas de désaccord, le dire.
-- **Enregistrer** chaque résultat, une commande par exercice : `python tools/resultat.py ajouter <id> <reussi|aide|presque|non_fait> --aide <0-4> [--note "<ce qui a bloqué>"] [--date AAAA-MM-JJ]`. Le palier `--aide` suit `CLAUDE.md` (0 = seul ; 1 question qui oriente ; 2 méthode ; 3 étape clé ; 4 solution). Le script refuse un doublon et donne l'id d'origine. Ne jamais éditer `state/resultats.yaml` à la main, ni réécrire une ancienne ligne.
+- **Enregistrer** chaque résultat, une commande par exercice : `python tools/resultat.py ajouter <id> <reussi|aide|presque|non_fait> --aide <0-4> [--note "<ce qui a bloqué>"] [--date AAAA-MM-JJ]`. Le palier `--aide` suit `CLAUDE.md` (0 = seul ; 1 question qui oriente ; 2 méthode ; 3 étape clé ; 4 solution). Le script refuse un doublon et donne l'id d'origine.
+  - **Exercice à plusieurs questions** : `--questions "Q1=reussi,Q2=presque,Q3=non_fait"` à la place du résultat, qui est alors calculé (le moins bon). Le niveau de chaque question suit les mêmes règles que celui d'un exercice. La reprise ne redemandera que les questions non `reussi`.
+  - La **première** tentative détaillée liste **toutes** les questions de l'exercice, réussies comprises. Une reprise partielle ne liste que les questions refaites ; les autres gardent leur niveau.
+  - Étiquettes : celles de l'énoncé (`Q1`, `Q2a`…), réutilisées à l'identique d'une séance à l'autre. Pour une partie de question qu'on peut refaire seule, `Q1-directe`, `Q1-reciproque` : écrire alors toutes ses parties ; elles remplacent `Q1`.
+  - Ne jamais éditer `state/resultats.yaml` à la main, ni réécrire une ancienne ligne.
 
 ## 3. Évaluer la compréhension
 
