@@ -25,7 +25,7 @@ Il reprend les principes de [archi-ml-ai-researcher](https://github.com/abouchet
 | `bibliotheque/`, `anki/paquets/`, `anki/export/` | PDF, paquets et données Anki : **jamais versionnés** |
 
 ## Importer les cartes
-Double-cliquer sur `anki/paquets/prof-maths-<date>.apkg`. Les cartes arrivent dans `tg::Maths::L3 Paris Cité::<matière>::<chapitre>`, avec l'étiquette `prof-maths`. Un nouvel export ne contient que les cartes jamais exportées (`anki/registre.csv`) : Anki reste maître des cartes importées.
+Double-cliquer sur `anki/paquets/prof-maths-<date>.apkg`. Les cartes arrivent dans `tg::Maths::L3 Paris Cité::<matière>::<chapitre>::Cours` (exercices : `::Exercices`), avec l'étiquette `prof-maths`. Un nouvel export ne contient que les cartes jamais exportées (`anki/registre.csv`) : Anki reste maître des cartes importées.
 
 ## Installation
 Python 3.12, puis dans le dossier du projet :

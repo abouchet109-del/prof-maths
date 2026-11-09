@@ -10,7 +10,7 @@
   - Un exercice réussi seul est **acquis** ; il revient à J+7 puis à J+21.
   - Une 2e réussite seule, au moins 7 jours après, le rend **maîtrisé**.
   - Le profil est suivi par matière, par sous-chapitre et par méthode.
-- **Cours et Anki :** 529 cartes ont été rédigées pour ce qui manquait à ton paquet, prérequis de L1-L2 compris. Elles sont rangées dans `tg::Maths::L3 Paris Cité::<matière>::<chapitre>`. Tes anciens paquets ne sont pas modifiés.
+- **Cours et Anki :** 529 cartes ont été rédigées pour ce qui manquait à ton paquet, prérequis de L1-L2 compris. Elles sont rangées dans `tg::Maths::L3 Paris Cité::<matière>::<chapitre>::Cours`. Tes anciens paquets ne sont pas modifiés.
 - **Planning :** chaque jour, 2 h d'exercices et 30 min de cours. Il s'arrête le 03/01, avec les examens visés au 04/01 par prudence, et une marge d'environ 26 h.
 
 ## Une séance (n'importe quel jour, à n'importe quelle heure)
@@ -39,6 +39,7 @@
   - `python tools/anki_connect.py fusionner --dry-run` : montre combien de notes iront dans chaque paquet, sans rien toucher (marche Anki fermé).
   - `python tools/anki_connect.py fusionner` : fait la fusion. Un fichier d'annulation est écrit avant dans `anki/export/fusion-<date>.csv` ; pour revenir en arrière : `python tools/anki_connect.py annuler anki/export/fusion-<date>.csv`. Aucun paquet n'est supprimé. Les notes absentes de la couverture sont rangées d'après leur recto (`inventaire/anki/rattachement_ancien.yaml`, modifiable). Seules les notes hors de tous les chapitres de Paris Cité (connexité, calcul différentiel, interversion limite-intégrale) vont dans `Autres (AoutLicenceMath)` de leur matière.
 - Avec le paquet L3 à 0 nouvelle carte par jour, une ancienne carte jamais apprise ne sortirait plus. `NOW.md` ajoute donc à la recherche « à apprendre » jusqu'à 10 anciennes notes du sous-chapitre du bloc (`nid:…`, toujours avec `is:new`), en plus des 20 cartes du système.
+- **Chaque chapitre a deux sous-paquets** (depuis le 09/11/2026) : `Cours` (définitions, propositions, preuves) et `Exercices`. Pour réviser seulement ton cours, clique sur `<chapitre>::Cours`. Les cartes déjà posées dans un chapitre se rangent avec `python tools/anki_connect.py ranger` (`--dry-run` pour voir, annulation dans `anki/export/ranger-<date>.csv`) ; une carte prêtée à un paquet filtré est laissée : relance après avoir vidé le paquet filtré.
 - AnkiConnect permet aussi d'importer en une commande : `python tools/anki_connect.py importer anki/paquets/<fichier>.apkg`.
 
 ## Fiabilité

@@ -12,8 +12,9 @@ Règles figées (ne jamais les modifier, sinon Anki ignore les mises à jour) :
   - type de note `Prof-maths (v1)`, identifiant 1830000001, champs Id/Recto/Verso/Source ;
     distinct de celui de l'archi ML (1730000001) ;
   - GUID = genanki.guid_for("prof-maths", <id de la carte>) ;
-  - paquet `tg::Maths::L3 Paris Cité::<Matière>::<chapitre>`, identifiant dérivé d'un hash du nom ;
-    les cartes d'exercices (tag `exercice`) vont dans le sous-paquet `...::<chapitre>::Exercices` ;
+  - paquet `tg::Maths::L3 Paris Cité::<Matière>::<chapitre>::Cours`, identifiant dérivé d'un hash du nom ;
+    les cartes d'exercices (tag `exercice`) vont dans le sous-paquet `...::<chapitre>::Exercices`
+    (sous-paquets séparés depuis le 09/11/2026 : réviser le cours seul, sans exercices) ;
   - étiquettes : prof-maths, matière, priorite-N, puis les tags de la carte.
 """
 from __future__ import annotations
@@ -52,10 +53,14 @@ def modele() -> genanki.Model:
                          css=CSS, sort_field_index=1)
 
 
-def nom_paquet(matiere: str, chapitre: str, exercice: bool = False) -> str:
+def nom_chapitre(matiere: str, chapitre: str) -> str:
     chapitre = re.sub(r"[:$]", "", chapitre or "Divers").strip()
-    nom = f"tg::Maths::L3 Paris Cité::{MATIERES[matiere]}::{chapitre}"
-    return nom + "::Exercices" if exercice else nom
+    return f"tg::Maths::L3 Paris Cité::{MATIERES[matiere]}::{chapitre}"
+
+
+def nom_paquet(matiere: str, chapitre: str, exercice: bool = False) -> str:
+    """Sous-paquet `::Cours` ou `::Exercices` du chapitre : jamais le paquet du chapitre lui-même."""
+    return nom_chapitre(matiere, chapitre) + ("::Exercices" if exercice else "::Cours")
 
 
 def deck_id(nom: str) -> int:

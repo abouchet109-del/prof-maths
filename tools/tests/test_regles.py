@@ -579,8 +579,9 @@ def test_anciennes_notes_du_bloc_hors_plafond_et_sans_repetition():
 def test_paquet_anki_des_cartes_d_exercices():
     import anki as A
     cours = A.nom_paquet("topologie", "Chapitre 1 - Espace métrique")
-    assert cours == "tg::Maths::L3 Paris Cité::Topologie::Chapitre 1 - Espace métrique"
-    assert A.nom_paquet("topologie", "Chapitre 1 - Espace métrique", exercice=True) == cours + "::Exercices"
+    chapitre = "tg::Maths::L3 Paris Cité::Topologie::Chapitre 1 - Espace métrique"
+    assert cours == chapitre + "::Cours"
+    assert A.nom_paquet("topologie", "Chapitre 1 - Espace métrique", exercice=True) == chapitre + "::Exercices"
 
 
 # ------------------------------------------- fusion AoutLicenceMath (anki_connect, sans réseau)
@@ -590,9 +591,9 @@ def test_cible_fusion_aoutlicence():
     base = "tg::Maths::L3 Paris Cité::Topologie::"
     cours = "tg::Maths::AoutLicenceMath::Topologie::Chapitre 3"
     td = "tg::Maths::AoutLicenceMath::Topologie::TD2"
-    assert AC.cible(cours, [("topologie", ch1)]) == (base + ch1, "rattache")
+    assert AC.cible(cours, [("topologie", ch1)]) == (base + ch1 + "::Cours", "rattache")
     # plusieurs chapitres : le premier du poly (Chapitre 2 avant Chapitre 10)
-    assert AC.cible(cours, [("topologie", "Chapitre 10 - Z"), ("topologie", ch2)]) == (base + ch2, "ambigu")
+    assert AC.cible(cours, [("topologie", "Chapitre 10 - Z"), ("topologie", ch2)]) == (base + ch2 + "::Cours", "ambigu")
     assert AC.cible(cours, [("topologie", ch1), ("topologie", ch1)])[1] == "rattache"
     # paquet TD rattachable : sous-paquet Exercices
     assert AC.cible(td, [("topologie", ch2)]) == (base + ch2 + "::Exercices", "rattache")
@@ -602,12 +603,12 @@ def test_cible_fusion_aoutlicence():
     assert AC.cible(td, []) == (autres, "sans_rattachement")
     assert AC.cible(cours, [("proba", "Chapitre 2 - V")]) == (autres, "autre_matiere")
     mesure = AC.cible("tg::Maths::AoutLicenceMath::TH mesure::Chapitre 1", [("mesure", "Chapitre 1 - T")])
-    assert mesure[0] == "tg::Maths::L3 Paris Cité::Mesure et intégration::Chapitre 1 - T"
+    assert mesure[0] == "tg::Maths::L3 Paris Cité::Mesure et intégration::Chapitre 1 - T::Cours"
     # rattachement par lot (rattachement_ancien.yaml), seulement si la couverture ne donne rien dans la matière
     lot = ("topologie", ch2, False)
-    assert AC.cible(cours, [], lot) == (base + ch2, "classe")
-    assert AC.cible(cours, [("proba", "Chapitre 2 - V")], lot) == (base + ch2, "classe")
-    assert AC.cible(cours, [("topologie", ch1)], lot) == (base + ch1, "rattache")     # la couverture prime
+    assert AC.cible(cours, [], lot) == (base + ch2 + "::Cours", "classe")
+    assert AC.cible(cours, [("proba", "Chapitre 2 - V")], lot) == (base + ch2 + "::Cours", "classe")
+    assert AC.cible(cours, [("topologie", ch1)], lot) == (base + ch1 + "::Cours", "rattache")     # la couverture prime
     assert AC.cible(td, [], lot) == (base + ch2 + "::Exercices", "classe")
     assert AC.cible(cours, [], ("topologie", ch2, True)) == (base + ch2 + "::Exercices", "classe")
     assert AC.cible(cours, [], ("mesure", "Chapitre 1 - T", False)) == (autres, "sans_rattachement")   # autre matière
@@ -654,7 +655,7 @@ def test_fusion_range_une_ancienne_note_couvrant_un_prerequis_dans_le_paquet_du_
     idx = AC.index_notes(tmp_path)
     assert idx[7] == [("topologie", "Chapitre 3 - Espace compact")]
     deck = "tg::Maths::AoutLicenceMath::Topologie::Compacité"
-    assert AC.cible(deck, idx[7]) == ("tg::Maths::L3 Paris Cité::Topologie::Chapitre 3 - Espace compact", "rattache")
+    assert AC.cible(deck, idx[7]) == ("tg::Maths::L3 Paris Cité::Topologie::Chapitre 3 - Espace compact::Cours", "rattache")
 
 
 def test_fusion_prerequis_range_toute_source_sauf_les_paquets_ecg(tmp_path):
@@ -672,7 +673,7 @@ def test_fusion_prerequis_range_toute_source_sauf_les_paquets_ecg(tmp_path):
                                               "proba-n-0001": {"statut": "couverte", "notes": [4]}})
     prereq = AC.index_notes(tmp_path, prerequis_seuls=True)
     assert set(prereq) == {1, 2, 3}                       # la notion du poly n'entre pas
-    cible = "tg::Maths::L3 Paris Cité::Probabilités 5::Chapitre 3 - C"
+    cible = "tg::Maths::L3 Paris Cité::Probabilités 5::Chapitre 3 - C::Cours"
     centrale = "tg::Maths::Mathématiques DD centrale::Séance 1 :Nombres complexes::Cours"
     ecg1 = "tg::Maths::1ere année::01 - Logique et Théorie des Ensembles"
     ecg2 = "tg::Maths::Cours deuxième année::Chapitre 06 Algèbre linéaire et produits scalaires"
@@ -1198,3 +1199,13 @@ def test_cartes_d_exercices_a_part_avec_leur_plafond():
     # avec Anki : une carte d'exercice déjà apprise laisse la place à la suivante
     vu = FauxAnki(TOUTES | {"x2", "x3"})                          # x1 déjà apprise
     assert set(P.anki(c, p, vu)["exercices"]) == {"x2", "x3"}
+
+
+def test_ranger_cours_dans_sous_paquet():
+    import anki_connect as AC
+    ch = "tg::Maths::L3 Paris Cité::Topologie::Chapitre 1 - Espace métrique"
+    cartes = [(1, ch), (2, ch + "::Exercices"), (3, ch + "::Cours"), (4, "Filtré 1"),
+              (5, "tg::Maths::L3 Paris Cité::Topologie"), (6, ch + "::Exercices::Vieux")]
+    deplacements, filtrees = AC.plan_rangement(cartes)
+    assert deplacements == [(1, ch, ch + "::Cours")]       # seule la carte posée dans le chapitre bouge
+    assert filtrees == 1

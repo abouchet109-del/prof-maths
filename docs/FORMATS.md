@@ -115,7 +115,7 @@ Un prérequis L1-L2 (ni au programme d'ECG, ni dans le paquet, ni dans le poly) 
   requis_par: [topo-td4-ex08]      # obligatoire, non vide : exercices (ou notions) qui l'utilisent
 ```
 
-Dans un sous-chapitre, `plan.py` sert les prérequis avant les notions du poly : cartes (`ordre_cartes`), cours du jour, anciennes notes. Une carte prérequis ne sort donc ni avant son sous-chapitre ni en tête de matière. Les exercices du jour qui figurent dans `requis_par` ajoutent la notion aux sujets du jour (cartes à revoir) ; une notion de `requis_par`, même d'une autre matière, rattache aussi le prérequis à son sous-chapitre (règle (d) de « Modèle de compréhension »). Un prérequis n'entre dans aucun calcul d'exercices, de marge ou de feuille de route. Pour ajouter un prérequis : l'entrée à la fin de `notions.yaml`, `notion: <id>` sur ses cartes (tag `prerequis-l1l2`), éventuellement `couverture.yaml` pour les anciennes notes qui le couvrent (`anki_connect.py fusionner` les range dans le paquet du chapitre, comme une notion du poly). Le référentiel de ce que l'utilisateur sait : ses paquets ECG `tg::Maths::1ere année` et `tg::Maths::Cours deuxième année`, jamais modifiés.
+Dans un sous-chapitre, `plan.py` sert les prérequis avant les notions du poly : cartes (`ordre_cartes`), cours du jour, anciennes notes. Une carte prérequis ne sort donc ni avant son sous-chapitre ni en tête de matière. Les exercices du jour qui figurent dans `requis_par` ajoutent la notion aux sujets du jour (cartes à revoir) ; une notion de `requis_par`, même d'une autre matière, rattache aussi le prérequis à son sous-chapitre (règle (d) de « Modèle de compréhension »). Un prérequis n'entre dans aucun calcul d'exercices, de marge ou de feuille de route. Pour ajouter un prérequis : l'entrée à la fin de `notions.yaml`, `notion: <id>` sur ses cartes (tag `prerequis-l1l2`), éventuellement `couverture.yaml` pour les anciennes notes qui le couvrent (`anki_connect.py fusionner` les range dans le sous-paquet `::Cours` du chapitre, comme une notion du poly). Le référentiel de ce que l'utilisateur sait : ses paquets ECG `tg::Maths::1ere année` et `tg::Maths::Cours deuxième année`, jamais modifiés.
 
 Règles : une entrée par résultat ou définition nommable. Pas de texte recopié au-delà du nécessaire. Démonstration : une entrée seulement si le cours la présente comme importante ou si la technique est réutilisable. Une page incertaine vaut `page: null`.
 
@@ -171,7 +171,7 @@ Règles de rédaction (format demandé par l'utilisateur le 07/11/2026, celui de
 - rédigée en lisant la source réelle à la page indiquée, jamais de mémoire ; `source` non vide sur chaque carte ;
 - une notion `partielle` : seulement ce qui manque au paquet (indiqué dans `raison`).
 
-Paquet Anki : `tg::Maths::L3 Paris Cité::<Matière>::<chapitre>`, étiquette `prof-maths` sur chaque carte.
+Paquet Anki : `tg::Maths::L3 Paris Cité::<Matière>::<chapitre>::Cours` (les cartes d'exercices : `::Exercices`), étiquette `prof-maths` sur chaque carte.
 
 ### Cartes d'exercices (`tags: [exercice]`)
 

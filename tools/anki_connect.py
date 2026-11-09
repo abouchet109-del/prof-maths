@@ -3,7 +3,13 @@
 Usage (depuis la racine du projet, Anki ouvert avec AnkiConnect pour tout sauf --dry-run) :
     python tools/anki_connect.py importer PAQUET.apkg [PAQUET.apkg ...]
     python tools/anki_connect.py fusionner [--dry-run] [--prerequis]
+    python tools/anki_connect.py ranger [--dry-run]
     python tools/anki_connect.py annuler anki/export/fusion-AAAA-MM-JJ.csv
+
+`ranger` (09/11/2026) met les cartes posées directement dans un paquet de chapitre L3 dans son sous-paquet
+`::Cours` (les exercices sont déjà dans `::Exercices`), pour réviser le cours seul. Le sous-paquet reprend
+les options du chapitre. Les cartes dans un paquet filtré sont laissées (relancer après l'avoir vidé).
+Même fichier d'annulation que `fusionner` (`anki/export/ranger-AAAA-MM-JJ.csv`), même commande `annuler`.
 
 `fusionner` range les notes des paquets `tg::Maths::AoutLicenceMath::*` dans le paquet L3, selon les
 chapitres de Paris Cité. Changer une carte de paquet garde son historique de révision. Aucun paquet n'est
@@ -282,14 +288,14 @@ def _propre(texte: str, n: int = 70) -> str:
     return texte if len(texte) <= n else texte[: n - 1] + "…"
 
 
-def chemin_annulation(racine=RACINE) -> Path:
+def chemin_annulation(racine=RACINE, prefixe: str = "fusion") -> Path:
     dossier = Path(racine) / "anki" / "export"
     dossier.mkdir(parents=True, exist_ok=True)
     jour = dt.date.today().isoformat()
-    p, k = dossier / f"fusion-{jour}.csv", 1
+    p, k = dossier / f"{prefixe}-{jour}.csv", 1
     while p.exists():
         k += 1
-        p = dossier / f"fusion-{jour}-{k}.csv"
+        p = dossier / f"{prefixe}-{jour}-{k}.csv"
     return p
 
 
@@ -357,6 +363,54 @@ def fusionner(dry_run: bool, racine=RACINE, prerequis: bool = False) -> int:
     return 0
 
 
+L3 = "tg::Maths::L3 Paris Cité"
+SOUS_PAQUETS = ("Cours", "Exercices")
+
+
+def plan_rangement(cartes) -> tuple[list[tuple[int, str, str]], int]:
+    """([(carte, paquet du chapitre, sous-paquet ::Cours)], cartes dans un paquet filtré) pour les cartes
+    `(id, paquet)` trouvées sous L3. Seules bougent celles posées directement dans un paquet de chapitre
+    `L3::<Matière>::<Chapitre>` ; celles d'un sous-paquet (`::Cours`, `::Exercices`) ne bougent pas."""
+    deplacements, filtrees = [], 0
+    for carte, deck in cartes:
+        if not deck.startswith(L3 + "::"):
+            filtrees += 1                       # `deck:` trouve aussi une carte prêtée à un paquet filtré
+            continue
+        morceaux = deck.split("::")
+        if len(morceaux) == len(L3.split("::")) + 2 and morceaux[-1] not in SOUS_PAQUETS:
+            deplacements.append((carte, deck, deck + "::Cours"))
+    return deplacements, filtrees
+
+
+def ranger(dry_run: bool, racine=RACINE) -> int:
+    ids = appel("findCards", query=f'"deck:{L3}"')
+    infos = appel("cardsInfo", cards=ids) if ids else []
+    deplacements, filtrees = plan_rangement((c["cardId"], c["deckName"]) for c in infos)
+    par_chapitre = Counter(ancien for _, ancien, _ in deplacements)
+    for deck, n in sorted(par_chapitre.items()):
+        print(f"  {n:4} {deck[len(L3) + 2:]} -> ::Cours")
+    print(f"{len(deplacements)} cartes de cours dans {len(par_chapitre)} chapitres"
+          + (f" ; {filtrees} cartes dans un paquet filtré, laissées (relancer après l'avoir vidé)" if filtrees else ""))
+    if dry_run or not deplacements:
+        print("[dry-run] rien n'a été modifié" if dry_run else "Rien à déplacer.")
+        return 0
+    annulation = chemin_annulation(racine, "ranger")
+    with annulation.open("w", encoding="utf-8", newline="") as f:      # écrit AVANT toute modification
+        w = csv.writer(f, delimiter=";", lineterminator="\n")
+        w.writerow(EN_TETE)
+        w.writerows(deplacements)
+    print(f"Fichier d'annulation : {annulation.as_posix()}")
+    for deck in sorted(par_chapitre):
+        cours = deck + "::Cours"
+        appel("createDeck", deck=cours)
+        options = appel("getDeckConfig", deck=deck)
+        if options and options.get("id") is not None:
+            appel("setDeckConfigId", decks=[cours], configId=options["id"])     # mêmes options que le chapitre
+        appel("changeDeck", cards=[c for c, ancien, _ in deplacements if ancien == deck], deck=cours)
+    print(f"{len(deplacements)} cartes rangées dans {len(par_chapitre)} sous-paquets « Cours ». Aucun paquet supprimé.")
+    return 0
+
+
 def annuler(fichier: str) -> int:
     with open(fichier, encoding="utf-8", newline="") as f:
         lignes = list(csv.DictReader(f, delimiter=";"))
@@ -390,6 +444,7 @@ def main() -> int:
     f.add_argument("--dry-run", action="store_true")
     f.add_argument("--prerequis", action="store_true",
                    help="ranger aussi les notes citées par un prérequis L1-L2 (jamais une note ECG)")
+    sp.add_parser("ranger").add_argument("--dry-run", action="store_true")
     sp.add_parser("annuler").add_argument("fichier")
     a = p.parse_args()
     try:
@@ -397,6 +452,8 @@ def main() -> int:
             return importer(a.paquets)
         if a.cmd == "fusionner":
             return fusionner(a.dry_run, prerequis=a.prerequis)
+        if a.cmd == "ranger":
+            return ranger(a.dry_run)
         return annuler(a.fichier)
     except ErreurAnki as ex:
         raise SystemExit(str(ex))

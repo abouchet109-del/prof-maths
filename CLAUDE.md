@@ -42,7 +42,7 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 - Résultat d'un exercice : `python tools/resultat.py ajouter …` ; profil : `python tools/resultat.py profil`.
 - Cohérence : `python tools/check.py` (avant chaque commit).
 - Cartes : `python tools/anki.py [--dry-run]`.
-- Anki en ligne (AnkiConnect) : `python tools/anki_connect.py importer|fusionner [--dry-run]|annuler`.
+- Anki en ligne (AnkiConnect) : `python tools/anki_connect.py importer|fusionner [--dry-run]|ranger [--dry-run]|annuler`. Chaque chapitre a ses sous-paquets `::Cours` et `::Exercices`.
 - Tests : `python -m pytest -q`.
 
 ## Modèles
