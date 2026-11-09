@@ -83,3 +83,55 @@
   resultat: non_fait
   palier_aide: 4
   note: ~10 min. Rien ecrit, solution donnee (union de translates ouverts)
+- date: 2026-11-09
+  exercice: mes-td1-ex06
+  resultat: presque
+  palier_aide: 3
+  note: '~35 min, bloque des 25-30 min. Q1 limsup faux (F inter G au lieu de F union G : resultat du liminf reporte sans recalcul), Q2 juste, Q3a non finie (liminf non conclu), 3b 3c non faits, Q4 refaite
+    avec les etapes donnees'
+- date: 2026-11-09
+  exercice: mes-cc1-2324-ex01
+  resultat: presque
+  palier_aide: 1
+  note: 'temps non precise. Q1 juste. Q2 : nu(vide)=0 et nu bien definie oublies ; existence de i : monotonie lue a l''envers (muni de l''intersection nulle ne donne pas un E_i^c nul), corrige par l''absurde
+    avec une aide palier 1'
+- date: 2026-11-09
+  exercice: topo-td1-ex04
+  resultat: non_fait
+  palier_aide: 0
+  note: reprise non faite
+- date: 2026-11-09
+  exercice: topo-td1-ex13
+  resultat: aide
+  palier_aide: 4
+  note: reprise sur papier (carte Anki) ; fin faite avec la correction
+- date: 2026-11-09
+  exercice: topo-td1-ex05
+  resultat: presque
+  palier_aide: 0
+  note: reprise (carte). Q1 Q2 justes ; Q3 (intersection d'ouverts) non ecrite et justifiee a l'oral par la stabilite par intersection (fausse pour une famille infinie), a refaire (petite partie)
+- date: 2026-11-09
+  exercice: topo-td1-ex08
+  resultat: presque
+  palier_aide: 0
+  note: reprise (carte). Boules et Q3 justes ; Q1 non ecrite ; ouverts et fermes (toutes les parties) non decrits, vus au debrief
+- date: 2026-11-09
+  exercice: topo-td1-ex09
+  resultat: presque
+  palier_aide: 0
+  note: reprise (carte). Q1 juste (y=0, xy>=1, (n,0) et (n,1/n)) ; Q2 (dans R) non faite, a refaire seul un autre jour
+- date: 2026-11-09
+  exercice: topo-uvsq-td1-ex03q1
+  resultat: presque
+  palier_aide: 0
+  note: 'reprise (carte). Suffisance (g!=0 dense => norme) juste ; reciproque (non dense => f continue non nulle avec fg=0) manquante ; au debrief, f=2 sur [0,1/2] propose : pas continue'
+- date: 2026-11-09
+  exercice: mes-cc1-2425-ex03
+  resultat: presque
+  palier_aide: 0
+  note: reprise (carte). Preuve des 3 axiomes juste ; question denombrabilite non traitee a l'ecrit (dit non necessaire, a l'oral) ; A inclus dans (au lieu de appartient a) ; vide dans T_n non justifie
+- date: 2026-11-09
+  exercice: pro-par2425-ex01
+  resultat: presque
+  palier_aide: 0
+  note: 'reprise (carte). Q1 juste ; Q2 : k! ecrase tout (intuition, pas preuve), somme de E(X) sur k in N au lieu de k>=1 ; Q3 (fonction caracteristique) non faite'

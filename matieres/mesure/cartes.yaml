@@ -514,3 +514,47 @@
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [exercice]
+- id: ex-mes-td1-ex06
+  exercice: mes-td1-ex06
+  notion: mesure-n-0005
+  recto: |-
+    <b>Exo mes-td1-ex06 : limsup et liminf d'ensembles</b><br>
+    Soit \((A_n)_{n\in\mathbb N}\) une suite de parties de \(\Omega\).<br>
+    1. Déterminer \(\limsup A_n\) et \(\liminf A_n\) quand \(A_{2p}=F\) et \(A_{2p+1}=G\) (\(F,G\subset\Omega\)).<br>
+    2. Calculer \((\limsup A_n)^c\) et montrer que \(\liminf A_n\subset\limsup A_n\).<br>
+    3. Calculer \(\limsup A_n\) et \(\liminf A_n\) : (a) \(A_n=]-\infty,a_n]\), \(a_{2p}=1+\frac1{2p}\) (\(p\ge1\)), \(a_{2p+1}=-1-\frac1{2p+1}\) (\(p\ge0\)) ; (b) \(A_{2p}=]0,3+\frac1{3p}[\), \(A_{2p+1}=]-1-\frac1{3p},2]\) (\(p\ge1\)) ; (c) \(A_k=p_k\mathbb N\), \((p_k)\) suite des nombres premiers.<br>
+    4. Montrer que \(\limsup\mathbf 1_{A_n}=\mathbf 1_{\limsup A_n}\) ; expression analogue pour \(\liminf\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(\limsup A_n=\bigcap_n\bigcup_{k\ge n}A_k\) : « \(\forall n,\exists k\ge n,\ x\in A_k\) », donc \(x\) est dans une <i>infinité</i> de \(A_k\) ; \(\liminf A_n=\bigcup_n\bigcap_{k\ge n}A_k\) : « \(\exists n,\forall k\ge n,\ x\in A_k\) », donc dans tous les \(A_k\) <i>à partir d'un certain rang</i>. Toujours calculer d'abord le bloc intérieur (\(\bigcup_{k\ge n}\) ou \(\bigcap_{k\ge n}\)) pour \(n\) fixé, jamais « par analogie » d'un des deux à l'autre.<br>
+    <b>Correction :</b><br>
+    1. Pour tout \(n\), \(k\ge n\) contient des indices pairs et impairs : \(\bigcap_{k\ge n}A_k=F\cap G\) et \(\bigcup_{k\ge n}A_k=F\cup G\). Donc \(\liminf A_n=F\cap G\) et \(\limsup A_n=F\cup G\).<br>
+    2. De Morgan : \((\limsup A_n)^c=\bigcup_n\bigcap_{k\ge n}A_k^c=\liminf A_n^c\). Inclusion : si \(x\in\liminf A_n\), il existe \(k\) tel que \(x\in A_m\) pour tout \(m\ge k\). Pour \(N\) quelconque, \(K=\max(N,k)\) vérifie \(K\ge N\) et \(K\ge k\), donc \(x\in A_K\) : \(x\in\limsup A_n\).<br>
+    3(a). \(a_{2p+1}<-1<1<a_{2p}\), \(a_{2p}\to1\), \(a_{2p+1}\to-1\). <u>\(\limsup=]-\infty,1]\) :</u> si \(x>1\), \(x\notin A_{2p+1}\) pour tout \(p\), et \(x\notin A_{2p}\) pour \(p\ge p_0\) (car \(a_{2p}\to1\)) : \(x\) est dans un nombre fini de \(A_n\). Si \(x\le1\), \(x\le 1<a_{2p}\), donc \(x\in A_{2p}\) pour tout \(p\) : une infinité. <u>\(\liminf=]-\infty,-1[\) :</u> si \(x\ge-1\), \(x\notin A_{2p+1}\) pour tout \(p\) (car \(a_{2p+1}<-1\le x\)) : une infinité d'absences. Si \(x<-1\) : \(x\in A_{2p}\) (\(x<1<a_{2p}\)) et, comme \(a_{2p+1}\to-1\), \(x\in A_{2p+1}\) pour \(p\ge p_0\) : \(x\) est dans tous les \(A_n\) sauf un nombre fini.<br>
+    3(b). \(B_{2p}=A_{2p}\cup A_{2p+1}=]-1-\frac1{3p},3+\frac1{3p}[\) et \(B_{2p+1}=A_{2p+1}\cup A_{2p+2}=]-1-\frac1{3p},3+\frac1{3(p+1)}[\) forment une suite décroissante, avec \(\bigcup_{n\ge k}A_n=B_k\) ; bornes \(\to-1\) et \(3\), et \(-1,3\in B_k\) pour tout \(k\). Donc \(\limsup A_n=[-1,3]\). Et \(A_{2p}\cap A_{2p+1}=A_{2p+1}\cap A_{2p+2}=]0,2]\), donc \(\bigcap_{n\ge k}A_n=]0,2]\) pour tout \(k\ge2\) et \(\liminf A_n=]0,2]\).<br>
+    3(c). Un entier non nul n'a qu'un nombre fini de diviseurs premiers : il n'est dans \(p_k\mathbb N\) que pour un nombre fini de \(k\). \(0\) est dans tous. Donc \(\limsup A_n=\{0\}\), et \(\bigcap_{n\ge k}p_n\mathbb N=\{0\}\) pour tout \(k\), donc \(\liminf A_n=\{0\}\).<br>
+    4. Fixons \(\omega\) et posons \(M_n=\sup_{k\ge n}\mathbf 1_{A_k}(\omega)\in\{0,1\}\) : \(M_n=1\) si et seulement s'il existe \(k\ge n\) avec \(\omega\in A_k\), et \((M_n)\) décroît. Si \(\omega\in\limsup A_n\), \(M_n=1\) pour tout \(n\), donc \(\lim M_n=1\). Sinon il existe \(n\) tel que \(\omega\notin A_k\) pour tout \(k\ge n\), donc \(M_m=0\) pour \(m\ge n\) et \(\lim M_n=0\). D'où \(\limsup\mathbf 1_{A_n}=\mathbf 1_{\limsup A_n}\). De même, avec \(m_n=\inf_{k\ge n}\mathbf 1_{A_k}(\omega)\) (\(m_n=1\) si et seulement si \(\forall k\ge n,\ \omega\in A_k\), suite croissante), \(\lim m_n=1\) si et seulement si \(\exists n,\ m_n=1\) si et seulement si \(\omega\in\liminf A_n\) : \(\liminf\mathbf 1_{A_n}=\mathbf 1_{\liminf A_n}\).<br>
+    <b>Piège :</b> \(\limsup A_n=F\cup G\), pas \(F\cap G\) (erreur de la séance : le résultat du \(\liminf\) a été reporté sur le \(\limsup\) sans recalcul). \(\limsup\) = « infiniment souvent » (\(\bigcup\) à l'intérieur), \(\liminf\) = « à partir d'un certain rang » (\(\bigcap\) à l'intérieur). En 3(a), \(a_{2p}>1\) strictement donne \(1\in\limsup\) (crochet fermé), \(a_{2p+1}<-1\) donne \(-1\notin\liminf\) (crochet ouvert) ; ne pas confondre avec \(\limsup a_n=1\) de la suite réelle. Pour \(\liminf\subset\limsup\), prendre \(K=\max(N,k)\).
+  source: 'Énoncé et corrigé officiel : mesure/td/td1-corrige.pdf p.5-7 (Ex 6). Erreurs de la séance du 2026-11-09.'
+  chapitre: 'Chapitre 0 - Préliminaires'
+  priorite: 1
+  tags: [exercice]
+- id: ex-mes-cc1-2324-ex01
+  exercice: mes-cc1-2324-ex01
+  notion: mesure-n-0008
+  recto: |-
+    <b>Exo mes-cc1-2324-ex01 : Tribu \(\{E:\mu(E)=0\text{ ou }\mu(X\setminus E)=0\}\) et mesure 0-1 (CC1 2023-24)</b><br>
+    Soit \((X,\mathcal T,\mu)\) un espace mesuré de mesure non nulle et \(\mathcal T'=\{E\in\mathcal T:\mu(E)=0\text{ ou }\mu(X\setminus E)=0\}\).<br>
+    1. Montrer que \(\mathcal T'\) est une tribu.<br>
+    2. Sur \(\mathcal T'\), \(\nu(E)=0\) si \(\mu(E)=0\), \(\nu(E)=1\) si \(\mu(X\setminus E)=0\). Montrer que \(\nu\) est une mesure sur \(\mathcal T'\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> pour une famille \((E_n)\), couper en deux cas <i>sur les \(E_n\)</i> : ou bien tous les \(\mu(E_n)=0\) (sous-additivité), ou bien il existe \(n_0\) avec \(\mu(X\setminus E_{n_0})=0\) (monotonie : \(X\setminus\bigcup E_n\subset X\setminus E_{n_0}\)). La monotonie dit : une <i>partie</i> d'un ensemble de mesure nulle est de mesure nulle.<br>
+    <b>Correction :</b><br>
+    1. \(\emptyset\in\mathcal T\) et \(\mu(\emptyset)=0\), donc \(\emptyset\in\mathcal T'\). Si \(E\in\mathcal T'\), alors \(X\setminus E\in\mathcal T\), et « \(\mu(E)=0\) ou \(\mu(X\setminus E)=0\) » se lit aussi « \(\mu(X\setminus(X\setminus E))=0\) ou \(\mu(X\setminus E)=0\) » : \(X\setminus E\in\mathcal T'\). Soit \((E_n)\) dans \(\mathcal T'\) : \(\bigcup E_n\in\mathcal T\). Cas 1 : tous les \(\mu(E_n)=0\), alors \(\mu(\bigcup E_n)\le\sum\mu(E_n)=0\). Cas 2 : il existe \(n_0\) avec \(\mu(X\setminus E_{n_0})=0\) ; comme \(X\setminus\bigcup E_n\subset X\setminus E_{n_0}\), \(\mu(X\setminus\bigcup E_n)\le0\). Dans les deux cas, \(\bigcup E_n\in\mathcal T'\).<br>
+    2. <u>Bien définie :</u> \(\mu(E)+\mu(X\setminus E)=\mu(X)\ne0\) (mesure non nulle), donc on ne peut avoir à la fois \(\mu(E)=0\) et \(\mu(X\setminus E)=0\). <u>\(\nu(\emptyset)=0\)</u> car \(\mu(\emptyset)=0\). <u>\(\sigma\)-additivité</u> pour \((E_n)\) deux à deux disjoints dans \(\mathcal T'\). Cas 1 : tous les \(\mu(E_n)=0\), donc \(\nu(E_n)=0\) pour tout \(n\) ; de plus \(\mu(\bigcup E_n)=0\) (sous-additivité), donc \(\nu(\bigcup E_n)=0=\sum\nu(E_n)\). Cas 2 : il existe \(n_0\) avec \(\mu(X\setminus E_{n_0})=0\), donc \(\nu(E_{n_0})=1\). Pour \(n\ne n_0\), \(E_n\subset X\setminus E_{n_0}\) (disjoints), donc \(\mu(E_n)=0\) et \(\nu(E_n)=0\) ; donc \(\sum\nu(E_n)=1\). Comme \(E_{n_0}\subset\bigcup E_n\), \(X\setminus\bigcup E_n\subset X\setminus E_{n_0}\), donc \(\mu(X\setminus\bigcup E_n)=0\) et \(\nu(\bigcup E_n)=1\).<br>
+    <b>Piège :</b> la monotonie ne se lit que dans un sens : de \(\mu(\bigcap E_n^c)=0\) et \(\bigcap E_n^c\subset E_i^c\) on ne déduit pas \(\mu(E_i^c)=0\) (erreur de la séance, intuition prise pour une preuve). Pour trouver \(n_0\), raisonner par l'absurde ou couper les cas sur les \(E_n\) (comme ci-dessus). À écrire : \(\nu\) bien définie et \(\nu(\emptyset)=0\). Deux indices \(i\ne j\) avec \(\mu(E_i^c)=\mu(E_j^c)=0\) sont impossibles : \(E_i\subset E_j^c\) donne \(\mu(E_i)=0\), puis \(\mu(X)=\mu(E_i)+\mu(E_i^c)=0\), absurde.
+  source: 'Énoncé : uvsq/mesure/Théorie de la mesure/Annales/CC1-2023-2024.pdf p.1 (Ex 1). Corrigé officiel : uvsq/mesure/Théorie de la mesure/Annales/CC1-corrige-2023-2024.pdf p.1. Erreurs de la séance du 2026-11-09.'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exercice]
