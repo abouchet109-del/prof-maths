@@ -29,7 +29,9 @@ Demander, en un seul message, pour chaque exercice du plan : le niveau, le temps
 | `reussi` | seul, sans indice ni corrigé, rédaction complète |
 | `aide` | réussi après un indice, un coup d'œil au corrigé ou au cours, ou une aide de Claude |
 | `presque` | l'idée est là, mais une erreur ou un trou que l'on n'a pas su combler |
-| `non_fait` | pas commencé, ou bloqué dès le début |
+| `non_fait` | ouvert, mais bloqué dès le début |
+
+**Un exercice du plan pas commencé n'est pas enregistré** (règle du 09/11/2026) : le bilan le marque « non fait, reporté automatiquement » et il revient au prochain plan. L'enregistrer en `non_fait` baisserait son niveau et le compterait comme fait.
 
 - **Si l'utilisateur colle sa rédaction** (ou une photo), la vérifier soi-même : une preuve fausse ou incomplète n'est pas `reussi`, même s'il le pense. Dire précisément où ça casse.
 - **Corrigés** : ne jamais présenter une solution comme sûre si `corrige.statut` vaut `absent` ou si on l'a reconstituée. La donner avec la mention « vérifiée par Claude, à confirmer », et toute étape douteuse signalée comme telle. Un corrigé officiel peut être faux : en cas de désaccord, le dire.
@@ -51,7 +53,7 @@ Demander, en un seul message, pour chaque exercice du plan : le niveau, le temps
 
 1. **Prérequis L1-L2 révélé** (point d'ECG ou de L1-L2 qu'il ignore) : d'abord chercher les cartes existantes (`cartes.yaml` par `notion:` et mot-clé ; anciennes cartes : `couverture.yaml` puis recto dans `inventaire/anki/notes.jsonl`, plus une recherche par mot-clé ; on ne compare que le recto). S'il n'y en a pas : créer une notion `type: prerequis` (`<préfixe>-p-NNNN`, `requis_par: [<exercices ou notions>]`, au sous-chapitre où elle sert) puis sa carte (tag `prerequis-l1l2`, `notion:` = cette notion, question précise au recto, verso court, source). Dans `comprehension.yaml` : niveau `inconnue`. Format : `docs/FORMATS.md`.
 2. **Cartes d'exercices** (une par exercice non réussi seul). Format et exemple : `docs/FORMATS.md`, « Cartes d'exercices ».
-   - **Lesquels :** résultat du jour `aide` ou `presque` ; `non_fait` seulement si l'exercice a été travaillé et le corrigé vu pendant la séance. Rien pour `reussi`, ni pour un `non_fait` jamais ouvert.
+   - **Lesquels :** résultat du jour `aide` ou `presque` ; `non_fait` seulement si l'exercice a été travaillé et le corrigé vu pendant la séance. Rien pour `reussi`.
    - **Doublon :** chercher dans `matieres/<m>/cartes.yaml` une carte avec `exercice: <id>`. Une seule carte par exercice.
      - Elle existe : si l'erreur du jour est nouvelle, compléter son verso (ligne « Piège », ou la correction si elle était incomplète), puis `python -I tools/anki.py --reexporter <id>` (§5). Dans tous les cas, ajouter `{pour: <date du prochain NOW>, id: <id de la carte>, raison: "<erreur du jour>"}` à `state/a_revoir.yaml`, et le noter dans `## Mises à jour`.
      - Elle n'existe pas : la créer en fin de `cartes.yaml` avec `id: ex-<id exercice>`, `exercice`, `notion` (notion principale de l'exercice), `chapitre` (exactement celui des cartes de cours : l'export la range dans le sous-paquet `<chapitre>::Exercices`), `priorite: 1`, `tags: [exercice]`.

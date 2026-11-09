@@ -193,7 +193,7 @@ Une carte par exercice qui n'a pas été réussi seul, créée au debrief. Le re
 ```
 
 Règles :
-- **Quand :** résultat du jour `aide` ou `presque` ; `non_fait` seulement si l'exercice a été travaillé et le corrigé vu pendant la séance. Rien pour `reussi`, ni pour un `non_fait` jamais ouvert.
+- **Quand :** résultat du jour `aide` ou `presque` ; `non_fait` seulement si l'exercice a été travaillé et le corrigé vu pendant la séance. Rien pour `reussi`.
 - **Verso :** l'idée clé en une ligne, puis la correction complète (toutes les étapes rédigées, fidèle au corrigé officiel), puis le piège éventuel. La référence du corrigé (fichier, page) est dans `source`.
 - **Justesse à 100 % :** le verso vient du corrigé officiel (page du PDF ouverte), sinon d'une solution résolue et vérifiée étape par étape, avec la mention « vérifiée par Claude, à confirmer ».
 - **Rangement :** sous-paquet `tg::Maths::L3 Paris Cité::<matière>::<chapitre>::Exercices` (le nom du chapitre est celui des cartes de cours). Le tag `exercice` reste sur la carte. `check.py` refuse un chapitre que les cartes de cours n'utilisent pas.
@@ -254,7 +254,7 @@ Ensembles : **à consolider** = niveau `inconnue`, `recitee` ou `fragile`, ou au
 **(e) `check.py`** refuse : un fichier dont la racine n'a pas exactement `notions` (dict) et `style` (liste de 6 chaînes au plus) ; un id de notion inconnu (clé ou `vers`), ou `vers` égal à la clé ; un `niveau` hors des cinq ; un `statut` hors `ouverte|reparee` ; une `source` hors `cours|exercice|question`, un `verdict` hors `juste|partiel|faux` ; un `exercice` inconnu ; une date (`maj`, confusions, preuves) qui n'est pas AAAA-MM-JJ valide ou qui est postérieure à aujourd'hui ; plus de 6 preuves ou 8 confusions ; un `extrait` de plus de 160 caractères ; `tenue` ou `reliee` avec une confusion ouverte ; `reliee` sans `liens`. Le fichier absent ou `notions: {}` est valide.
 
 ## Résultat d'un exercice (`state/resultats.yaml`)
-`reussi` (seul), `aide` (réussi avec un indice), `presque` (pas loin avec l'aide), `non_fait` (pas réussi). Correspondance avec les tableurs : Réussi → `reussi`, Pas loin → `presque`, Loin et Non fait → `non_fait`.
+`reussi` (seul), `aide` (réussi avec un indice), `presque` (pas loin avec l'aide), `non_fait` (ouvert, mais bloqué dès le début). Un exercice pas commencé n'a pas de ligne : il revient seul au prochain plan. Correspondance avec les tableurs : Réussi → `reussi`, Pas loin → `presque`, Loin et Non fait → `non_fait`.
 
 ```yaml
 - date: 2026-11-09

@@ -96,11 +96,6 @@
   note: 'temps non precise. Q1 juste. Q2 : nu(vide)=0 et nu bien definie oublies ; existence de i : monotonie lue a l''envers (muni de l''intersection nulle ne donne pas un E_i^c nul), corrige par l''absurde
     avec une aide palier 1'
 - date: 2026-11-09
-  exercice: topo-td1-ex04
-  resultat: non_fait
-  palier_aide: 0
-  note: reprise non faite
-- date: 2026-11-09
   exercice: topo-td1-ex13
   resultat: aide
   palier_aide: 4
