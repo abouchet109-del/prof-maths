@@ -18,7 +18,9 @@
 2. **Dis « on commence »** dans une nouvelle conversation Claude (dossier `D:\Projets\prof-maths`, Sonnet, effort high). Claude lance `plan.py seance`, qui écrit `NOW.md` pour maintenant : ce qui est revenu, le bloc, la marge. Un jour `off` du calendrier ne bloque rien. Ce que tu n'as pas fait revient tout seul.
 3. **Anki** (hors du temps de travail) :
    - Révisions : étudier `tg::Maths` (cartes dues).
-   - Nouvelles cartes : coller la recherche « à apprendre » de `NOW.md` dans **Outils → Créer un paquet filtré**, puis étudier (20 cartes du système au plus : erreurs et exercices d'abord, puis le cours en ordre, plus jusqu'à 10 de tes anciennes cartes jamais apprises).
+   - Nouvelles cartes, **deux paquets filtrés** (Outils → Créer un paquet filtré, une recherche de `NOW.md` chacun) :
+     - « cours, à apprendre » : 20 cartes de cours au plus (erreurs, prérequis inconnus, notions faibles, puis le cours en ordre), plus jusqu'à 10 de tes anciennes cartes jamais apprises ;
+     - « exercices à revoir » : les cartes d'exercices nouvelles, 10 au plus (`exercices_par_jour` dans `dispo.yaml`).
    - **Cartes d'exercices :** le recto donne l'énoncé : cherche d'abord par où l'attaquer, puis retourne la carte (idée clé, correction complète, piège, référence). Elles ne remplacent pas le papier : l'exercice revient ensuite dans les reprises (30 min au plus) ; refais-le sur papier et envoie ta photo en séance.
 4. **Cours (30 min) :** les notions indiquées, aux pages données. Pour réviser tout un sujet, coller la recherche « tout le sujet du jour » dans un paquet filtré, en décochant « replanifier les cartes selon mes réponses ».
 5. **Exercices (2 h) :** dans l'ordre de la liste ; le PDF et la page sont indiqués. En cas de blocage, demande à Claude : aide graduée (une question qui oriente, la méthode, l'étape clé, la solution). Dès le premier indice, l'exercice compte comme `aide`. Les reprises viennent en fin de séance : tu les fais seul sur papier, Claude vérifie la rédaction finale.

@@ -432,12 +432,14 @@ def test_cartes_exercice_passent_avec_les_erreurs_avant_le_bloc():
     c = ctx_cartes(dispo={"cartes_par_jour": 100})
     c["cartes"].append({**carte("xT", "n-d", ["exercice"]), "exercice": "a1"})
     p = P.plan_jour(c, D(2026, 11, 4))
-    assert anki_ids(c, p) == ["eT", "eM", "xT", "rev", "cA1", "cA2", "cA3", "cB1", "cB2", "cC1", "cD"]
+    # depuis le 09/11/2026 : les cartes d'exercices sont à part (liste « exercices »), le cours garde son ordre
+    assert anki_ids(c, p) == ["eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2", "cC1", "cD"]
+    assert P.anki(c, p)["exercices"] == ["xT"]
     c["dispo"]["cartes_par_jour"] = 3
-    assert anki_ids(c, p) == ["eT", "eM", "xT"]                     # plafond : le bloc passe après
-    c["anki_plan"] = {"2026-11-04": ["eT", "eM", "xT"]}
+    assert anki_ids(c, p) == ["eT", "eM", "rev"] and P.anki(c, p)["exercices"] == ["xT"]   # plafonds séparés
+    c["anki_plan"] = {"2026-11-04": ["eT", "eM", "rev", "xT"]}
     c["resultats"] = [res("2026-11-04", "zz", "aide")]
-    assert "xT" not in anki_ids(c, P.plan_jour(c, D(2026, 11, 5)))  # donnée une seule fois
+    assert "xT" not in P.anki(c, P.plan_jour(c, D(2026, 11, 5)))["exercices"]  # donnée une seule fois
 
 
 # ----------------------------------------------------------- check.py
@@ -557,7 +559,7 @@ def test_anciennes_notes_du_bloc_hors_plafond_et_sans_repetition():
     assert a["anciennes"] == [100, 101, 102, 103, 104, 105, 106, 107, 200, 201]
     assert 300 not in a["anciennes"]
     lignes = P.rediger(c, p, a)
-    requete = lignes[lignes.index("```", lignes.index(next(l for l in lignes if l.startswith("## Anki — à apprendre")))) + 1]
+    requete = lignes[lignes.index("```", lignes.index(next(l for l in lignes if l.startswith("## Anki — cours, à apprendre")))) + 1]
     assert requete == '("Id:eT" or "Id:eM" or nid:100,101,102,103,104,105,106,107,200,201) is:new'
     # une entrée d'un jour futur (plan régénéré depuis) ne bloque rien
     c["anki_plan"] = {"2026-11-09": a["nouvelles"]}
@@ -1178,3 +1180,21 @@ def test_e_check_comprehension(tmp_path):
     # fragile avec confusion ouverte : valide
     depot_comp(tmp_path, modif(lambda d, n: (n.update(niveau="fragile"), n["confusions"][0].update(statut="ouverte"))))
     assert C.verifier(tmp_path) == []
+
+
+def test_cartes_d_exercices_a_part_avec_leur_plafond():
+    c = ctx_cartes(dispo={"cartes_par_jour": 3, "exercices_par_jour": 2})
+    c["cartes"] += [carte("x1", "n-a", ["exercice"]), carte("x2", "n-c", ["exercice"]), carte("x3", "n-b", ["exercice"])]
+    p = P.plan_jour(c, D(2026, 11, 4), seance=True)
+    a = P.anki(c, p)
+    assert a["nouvelles"] == ["eT", "eM", "rev"]                  # le cours garde tout son plafond
+    assert len(a["exercices"]) == 2 and set(a["exercices"]) <= {"x1", "x2", "x3"}
+    texte = "\n".join(P.rediger(c, p, a))
+    assert "## Anki — exercices à revoir (2 nouvelles)" in texte
+    cours = texte.split("## Anki — cours, à apprendre")[1].split("## Anki — exercices")[0]
+    assert "x1" not in cours and "x2" not in cours and "x3" not in cours
+    # « tout le sujet du jour » : le cours seul
+    assert "x1" not in P.recherche_sujet({"n-a"}, None, c["cartes"])
+    # avec Anki : une carte d'exercice déjà apprise laisse la place à la suivante
+    vu = FauxAnki(TOUTES | {"x2", "x3"})                          # x1 déjà apprise
+    assert set(P.anki(c, p, vu)["exercices"]) == {"x2", "x3"}

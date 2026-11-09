@@ -28,9 +28,10 @@ MAX_LIGNES = 60
 MIN_PAR_NOTION = 10         # durée estimée d'une notion de cours
 REPRISES_MAX_DEFAUT = 30    # minutes de reprises par jour au plus (dispo.yaml : minutes_reprises_max)
 CARTES_DEFAUT = 20          # cartes nouvelles par jour au plus (dispo.yaml : cartes_par_jour)
+EXERCICES_DEFAUT = 10       # cartes d'exercices nouvelles par jour au plus, à part des cartes de cours (dispo.yaml : exercices_par_jour)
 ANCIENNES_MAX = 10          # anciennes notes (couverture.yaml) ajoutées par jour aux « à apprendre », hors plafond
 LOT_ANKI = 40               # cartes interrogées à la fois dans Anki
-TAGS_PRIORITAIRES = {"erreur", "exercice"}   # cartes d'erreurs et d'exercices : toujours en tête des « à apprendre »
+TAGS_PRIORITAIRES = {"erreur", "exercice"}   # cartes d'erreurs et d'exercices : toujours en tête de leur liste « à apprendre »
 NOMS = {"topologie": "Topologie", "mesure": "Mesure", "proba": "Probabilités", "modelisation": "Modélisation"}
 PART_CAPACITE = 1.25 / len(E.MATIERES)   # part de la capacité restante au-delà de laquelle on alerte
 
@@ -429,11 +430,12 @@ def _requete(ids) -> str:
 
 
 def recherche_sujet(notions, couverture, cartes) -> str:
-    """Recherche Anki unique : anciennes notes (nid:...) + nouvelles cartes (\"Id:...\") des notions."""
+    """Recherche Anki unique : anciennes notes (nid:...) + cartes de cours (\"Id:...\") des notions, sans les
+    cartes d'exercices (réviser le cours seul)."""
     notions = set(notions)
     nids = sorted({int(n) for k in notions for n in ((couverture or {}).get(k) or {}).get("notes") or []})
     parts = ([f"nid:{','.join(map(str, nids))}"] if nids else [])
-    parts += [f'"Id:{c["id"]}"' for c in cartes if c.get("notion") in notions]
+    parts += [f'"Id:{c["id"]}"' for c in cartes if c.get("notion") in notions and not est_carte_exercice(c)]
     return f"({' or '.join(parts)})" if parts else ""
 
 
@@ -548,6 +550,11 @@ def ordre_cartes(ctx, plan, libres) -> list[dict]:
     return list({c["id"]: c for c in ordre}.values())
 
 
+def est_carte_exercice(c) -> bool:
+    """Carte d'exercice (tag `exercice`) : donnée à part des cartes de cours."""
+    return "exercice" in (c.get("tags") or [])
+
+
 def premieres_nouvelles(client, ids, n) -> list[str]:
     """Les `n` premiers de `ids` (dans l'ordre) que le client Anki dit encore nouveaux ; lecture par lots."""
     res: list[str] = []
@@ -565,7 +572,9 @@ def anki(ctx, plan, client=None) -> dict:
     Avec `client` (Anki répond) : une carte est vue si et seulement si elle n'est plus `is:new` dans Anki ;
     à apprendre = les N premières non vues dans l'ordre de `ordre_cartes`, sans réservation à l'avance.
     Sans client : estimation d'après state/anki_plan.yaml (cartes proposées un jour passé travaillé).
-    Plafond `cartes_par_jour` ; les anciennes notes s'y ajoutent hors plafond."""
+    Cartes de cours (plafond `cartes_par_jour` ; les anciennes notes s'y ajoutent hors plafond) et cartes
+    d'exercices (tag `exercice`) à part, avec leur propre plafond `exercices_par_jour` (demande du 09/11/2026 :
+    deux paquets filtrés, le cours du jour d'un côté, les exercices à revoir de l'autre)."""
     d = str(plan["date"])
     # Seuls les jours passés comptent : une entrée d'un jour futur vient d'un plan régénéré depuis, elle est caduque.
     # … et seulement les jours travaillés (un résultat enregistré) : les cartes d'un jour sauté reviennent.
@@ -579,18 +588,24 @@ def anki(ctx, plan, client=None) -> dict:
     else:
         libres = [c for c in ctx["cartes"] if c["id"] not in avant]
     ordre = ordre_cartes(ctx, plan, libres)
-    limite = 0 if plan["info"]["off"] else ctx["dispo"].get("cartes_par_jour", CARTES_DEFAUT)
-    ids = [c["id"] for c in ordre]
+    off = plan["info"]["off"]
+    limite = 0 if off else ctx["dispo"].get("cartes_par_jour", CARTES_DEFAUT)
+    limite_exos = 0 if off else ctx["dispo"].get("exercices_par_jour", EXERCICES_DEFAUT)
+    ids = [c["id"] for c in ordre if not est_carte_exercice(c)]
+    ids_exos = [c["id"] for c in ordre if est_carte_exercice(c)]
     if client:
         nouvelles = premieres_nouvelles(client, ids, limite)
+        exercices = premieres_nouvelles(client, ids_exos, limite_exos)
         liees = [c["id"] for c in libres if c.get("notion") in notions_jour]
         encore = client.ids_nouveaux(liees) if liees else set()
         revoir = [i for i in liees if i not in encore]
     else:
         nouvelles = ids[:limite]
+        exercices = ids_exos[:limite_exos]
         revoir = [c["id"] for c in ctx["cartes"] if c["id"] in avant and c.get("notion") in notions_jour]
     return {
         "nouvelles": nouvelles,
+        "exercices": exercices,
         "anciennes": [] if plan["info"]["off"] else anciennes_notes(ctx, plan, client),
         "revoir": revoir,
         "source": "anki" if client else "estimee",
@@ -754,12 +769,16 @@ def rediger(ctx, plan, cartes) -> list[str]:
         L.append("Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes selon mes réponses” "
                  "pour réviser sans perturber le planning Anki.")
     anciennes = cartes.get("anciennes") or []
-    L += ["", f"## Anki — à apprendre ({len(cartes['nouvelles'])} nouvelles"
+    L += ["", f"## Anki — cours, à apprendre ({len(cartes['nouvelles'])} nouvelles"
               + (f" + {len(anciennes)} anciennes" if anciennes else "") + ")"]
     requete = " or ".join(([_requete(cartes["nouvelles"])] if cartes["nouvelles"] else [])
                           + ([f"nid:{','.join(map(str, anciennes))}"] if anciennes else []))
     requete = f"({requete}) is:new" if requete else ""     # jamais une carte déjà apprise
     L += ["```", requete, "```"] if requete else ["- (aucune)"]
+    exos = cartes.get("exercices") or []
+    L += ["", f"## Anki — exercices à revoir ({len(exos)} nouvelles)"]
+    L += ["```", f"({_requete(exos)}) is:new", "```",
+          "Paquet filtré à part : cherche l'attaque avant de retourner la carte."] if exos else ["- (aucune)"]
     if cartes.get("source") == "estimee":
         L.append("Anki fermé : cartes estimées.")
     if cartes.get("non_exportees"):
@@ -783,7 +802,7 @@ def jour(date: dt.date, racine=E.RACINE) -> list[str]:
     cartes = anki(ctx, plan)
     cartes["source"] = "simulation"
     lignes = rediger(ctx, plan, cartes)
-    enregistrer_anki(racine, ctx, date, cartes["nouvelles"])
+    enregistrer_anki(racine, ctx, date, cartes["nouvelles"] + cartes["exercices"])
     enregistrer_anciennes(racine, ctx, date, cartes["anciennes"])
     enregistrer_bloc(racine, ctx, plan)
     (racine / "NOW.md").write_text("\n".join(lignes) + "\n", encoding="utf-8")
@@ -814,7 +833,7 @@ def enregistrer_seance(racine, ctx, plan, cartes, maintenant):
     donnees[d] = {
         "heure": avant.get("heure") or maintenant.strftime("%H:%M"),
         "exercices": union(avant.get("exercices"), [e["id"] for e, _ in plan["items"]]),
-        "cartes": union(avant.get("cartes"), cartes["nouvelles"]),
+        "cartes": union(avant.get("cartes"), cartes["nouvelles"] + (cartes.get("exercices") or [])),
         "anciennes": union(avant.get("anciennes"), cartes["anciennes"]),
         "anki": bool(cartes["source"] == "anki" or avant.get("anki")),
         "marge_debut": avant.get("marge_debut", b["marge"]),
@@ -835,7 +854,7 @@ def seance(racine=E.RACINE, maintenant=None, client=None) -> list[str]:
     plan["heure"] = maintenant.strftime("%H:%M")
     cartes = anki(ctx, plan, client)
     lignes = rediger(ctx, plan, cartes)
-    enregistrer_anki(racine, ctx, d, cartes["nouvelles"])
+    enregistrer_anki(racine, ctx, d, cartes["nouvelles"] + cartes["exercices"])
     enregistrer_anciennes(racine, ctx, d, cartes["anciennes"])
     enregistrer_bloc(racine, ctx, plan)
     enregistrer_seance(racine, ctx, plan, cartes, maintenant)
