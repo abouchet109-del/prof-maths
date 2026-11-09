@@ -11,6 +11,7 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 - **Une conversation par séance** : cours, exercices, puis debrief. Une nouvelle séance, une nouvelle conversation.
 - **Économe en tokens, sans rien céder sur la justesse** : lectures ciblées (grep, extraits, page du PDF utile plutôt que le poly entier), scripts plutôt que lecture à la main, réponses courtes, modèle le moins cher qui garantit un résultat juste. Jamais d'économie sur la vérification d'une carte, d'un corrigé ou d'un calcul.
 - **Annales de Paris Cité prioritaires** : si le temps manque, on coupe d'abord l'exotique, puis le secondaire, jamais une annale.
+- **Objectif de l'échéance** (choix du 10/11/2026) : chaque annale de Paris Cité, exercice vital et important réussi seul une fois. La section « Échéance » de `NOW.md` donne le rythme requis, le rythme observé et la date de fin projetée (`plan.rythme`) : la lire à l'utilisateur en début de séance.
 
 ## Pendant une séance d'exercices
 - Aide **graduée**, seulement si l'utilisateur la demande : 1) une question qui oriente ; 2) la méthode ou le théorème à utiliser ; 3) l'étape clé ; 4) la solution. Noter le palier atteint : dès le palier 1, l'exercice est `aide`.
@@ -38,7 +39,7 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 ## Commandes
 - Début de séance : `python tools/plan.py seance` → `NOW.md` (Anki ouvert ; `--sans-anki` pour estimer).
 - Fin de séance : `python tools/plan.py bilan [--date AAAA-MM-JJ]` → bilan réel à recopier dans le journal.
-- Simulation d'une date du calendrier (hors workflow) : `python tools/plan.py jour --date AAAA-MM-JJ`.
+- Simulation d'une date du calendrier (hors workflow) : `python tools/plan.py jour --date AAAA-MM-JJ` : affiche le plan, n'écrit rien (`--ecrire` pour écrire `NOW.md` et `state/`).
 - Résultat d'un exercice : `python tools/resultat.py ajouter …` (`--questions "Q1=reussi,Q2=presque"` : suivi par sous-question, la reprise ne redemande que ce qui manque) ; profil : `python tools/resultat.py profil`.
 - Cohérence : `python tools/check.py` (avant chaque commit).
 - Cartes : `python tools/anki.py [--dry-run]`.

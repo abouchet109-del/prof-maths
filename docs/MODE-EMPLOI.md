@@ -52,6 +52,6 @@
 |---|---|
 | `python tools/plan.py seance` | plan de maintenant (`NOW.md`), à lancer en début de séance |
 | `python tools/plan.py bilan` | bilan réel de la séance, à recopier dans le journal |
-| `python tools/plan.py jour --date AAAA-MM-JJ` | simulation d'une date (hors workflow) |
+| `python tools/plan.py jour --date AAAA-MM-JJ` | simulation d'une date : affiche, n'écrit rien |
 | `python tools/resultat.py profil` | profil de maîtrise |
 | `python tools/check.py` | cohérence des données |

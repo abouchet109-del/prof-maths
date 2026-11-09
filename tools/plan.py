@@ -27,6 +27,7 @@ import etat as E
 JOURS = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."]
 MAX_LIGNES = 60
 MIN_PAR_NOTION = 10         # durée estimée d'une notion de cours
+RESTE_LISIBLE = {E.RESTE: "tout sauf les questions déjà justes"}
 REPRISE_MIN = 10            # minutes au moins pour une reprise partielle (seulement les questions manquées)
 REPRISES_MAX_DEFAUT = 30    # minutes de reprises par jour au plus (dispo.yaml : minutes_reprises_max)
 CARTES_DEFAUT = 20          # cartes nouvelles par jour au plus (dispo.yaml : cartes_par_jour)
@@ -670,11 +671,70 @@ def enregistrer_bloc(racine, ctx, plan):
 
 
 # ------------------------------------------------------------------ échéance
+def dans_objectif(e) -> bool:
+    """Objectif de l'échéance (choix du 10/11/2026) : annales de Paris Cité, vital et important.
+    Secondaire et exotique passent après, s'il reste du temps."""
+    return bool(e.get("annale_prioritaire")) or E.categorie(e) in ("vital", "important")
+
+
+def rythme(ctx, d: dt.date, exos, etats, resultats=None) -> dict:
+    """Où en est l'objectif « chaque exercice de l'objectif réussi seul une fois » (état acquis ou maîtrisé).
+
+    - charge : minutes au moins pour y arriver, si chaque exercice passe à sa prochaine tentative
+      (jamais tenté : `temps_min` ; à revoir : le temps de sa reprise, partielle si des questions sont justes) ;
+    - requis : exercices à faire passer acquis par semaine, sur les jours de travail restants ;
+    - observe : exercices passés acquis sur les 7 derniers jours ; tentatives et réussites seul sur 7 jours ;
+    - fin_projetee : date à ce rythme (None si aucun acquis sur 7 jours) ;
+    - minutes_jour : minutes d'exercices par jour de travail pour tenir la charge."""
+    resultats = ctx["resultats"] if resultats is None else resultats
+    objectif = [e for e in exos if dans_objectif(e)]
+    reste = [e for e in objectif if etats[e["id"]]["etat"] not in E.ACQUIS]
+    qmap = E.questions(resultats, d)
+    charge = sum(reprise_partielle(e, qmap.get(e["id"]))["temps_min"] if etats[e["id"]]["etat"] == "a_revoir"
+                 else e["temps_min"] for e in reste)
+    dispo = ctx["dispo"]
+    fin = E.en_date(dispo["fin"]) if dispo.get("fin") else E.en_date(dispo["examens"]) - dt.timedelta(1)
+    jours = sum(1 for j in E.jours(d, fin) if E.jour_info(dispo, j)["minutes_exercices"] > 0)
+    avant = _etats(objectif, resultats, d - dt.timedelta(8))
+    hier = _etats(objectif, resultats, d - dt.timedelta(1))
+    observe = sum(1 for e in objectif if hier[e["id"]]["etat"] in E.ACQUIS and avant[e["id"]]["etat"] not in E.ACQUIS)
+    recents = [r for r in resultats if d - dt.timedelta(7) <= E.en_date(r["date"]) < d]
+    projetee = d + dt.timedelta(math.ceil(len(reste) * 7 / observe)) if observe and reste else None
+    return {"objectif": len(objectif), "acquis": len(objectif) - len(reste), "reste": len(reste), "charge": charge,
+            "jours": jours, "fin": fin, "requis": math.ceil(len(reste) * 7 / jours) if jours else None,
+            "observe": observe, "tentatives": len(recents),
+            "seuls": sum(1 for r in recents if r["resultat"] == "reussi"),
+            "fin_projetee": projetee, "minutes_jour": math.ceil(charge / jours) if jours else None}
+
+
+def lignes_rythme(r, capacite: int) -> list[str]:
+    L = [f"- Objectif (annales, vital, important réussis seul une fois) : {r['acquis']}/{r['objectif']} exercices ; "
+         f"au moins {r['charge']} min pour {capacite} min de capacité."]
+    if not r["reste"]:
+        return L + ["- Rythme : objectif atteint."]
+    if not r["jours"]:
+        return L + ["- Rythme : **plus aucun jour de travail avant l'échéance**."]
+    L.append(f"- Rythme : il faut {r['requis']} exercices réussis seul par semaine ({r['jours']} jours de travail "
+             f"restants) ; 7 derniers jours : {r['observe']}, pour {r['tentatives']} tentatives dont {r['seuls']} "
+             f"réussies seul.")
+    if r["fin_projetee"] is None:
+        L.append(f"- Projection : **aucun exercice réussi seul sur 7 jours : à ce rythme, pas fini le {r['fin']}**.")
+    elif r["fin_projetee"] > r["fin"]:
+        L.append(f"- Projection : **fin le {r['fin_projetee']}, après le {r['fin']}**.")
+    else:
+        L.append(f"- Projection : fin le {r['fin_projetee']} (échéance {r['fin']}).")
+    if r["charge"] > capacite:
+        L.append(f"- **ALERTE** : la charge dépasse la capacité. Il faudrait {r['minutes_jour']} min d'exercices "
+                 "par jour, ou réduire l'objectif.")
+    return L
+
+
 def echeance(ctx, plan) -> list[str]:
     """Minutes restantes (annales + vital + important non maîtrisés), par matière, contre la capacité."""
     b = plan["bilan"]
-    lignes = [f"- Restant : {b['total']} min ; capacité jusqu'au {b['fin']} : {b['capacite']} min ; "
-              f"marge : {b['marge']} min."]
+    lignes = lignes_rythme(rythme(ctx, plan["date"], plan["exos"], plan["etats"]), b["capacite"])
+    lignes += [f"- Jusqu'à la maîtrise (2 réussites espacées, chaque exercice compté une fois) : {b['total']} min ; "
+               f"capacité jusqu'au {b['fin']} : {b['capacite']} min ; marge : {b['marge']} min."]
     part = b["capacite"] * PART_CAPACITE
     for m in E.MATIERES:
         v = b["par"][m]
@@ -765,7 +825,7 @@ def rediger(ctx, plan, cartes) -> list[str]:
                 etiquette = g if genre == "annale" else ""
                 ligne = f"- [ ] `{e['id']}` {etiquette + ' · ' if etiquette else ''}{_court(e['titre'])} · {e['temps_min']} min · {_source(e)}"
                 if e.get("a_refaire"):
-                    ligne += (f" · **seulement {', '.join(e['a_refaire'])}**"
+                    ligne += (f" · **seulement {', '.join(RESTE_LISIBLE.get(q, q) for q in e['a_refaire'])}**"
                               f" ({', '.join(e['questions_justes'])} déjà juste{'s' if len(e['questions_justes']) > 1 else ''})")
                 if e.get("enonce") is None:
                     ligne += " · **énoncé à extraire**"
@@ -814,14 +874,17 @@ def rediger(ctx, plan, cartes) -> list[str]:
     return L
 
 
-def jour(date: dt.date, racine=E.RACINE) -> list[str]:
-    """Calcule le plan du jour, écrit NOW.md et mémorise les cartes Anki données et le bloc."""
+def jour(date: dt.date, racine=E.RACINE, ecrire: bool = True) -> list[str]:
+    """Calcule le plan du jour. `ecrire` : écrit NOW.md et mémorise les cartes Anki données et le bloc
+    (la ligne de commande ne le fait qu'avec --ecrire : une simulation ne touche à rien)."""
     racine = Path(racine)
     ctx = contexte(racine)
     plan = plan_jour(ctx, date)
     cartes = anki(ctx, plan)
     cartes["source"] = "simulation"
     lignes = rediger(ctx, plan, cartes)
+    if not ecrire:
+        return lignes
     enregistrer_anki(racine, ctx, date, cartes["nouvelles"] + cartes["exercices"])
     enregistrer_anciennes(racine, ctx, date, cartes["anciennes"])
     enregistrer_bloc(racine, ctx, plan)
@@ -928,6 +991,7 @@ def bilan_seance(ctx, d: dt.date, client=None) -> list[str]:
     debut = entree.get("marge_debut")
     L.append(f"- Marge recalculée : {b['marge']} min (restant {b['total']} min, capacité {b['capacite']} min du {demain} "
              f"au {b['fin']})" + (f" ; au début de la séance : {debut} min." if debut is not None else "."))
+    L += lignes_rythme(rythme(ctx, demain, exos, _etats(exos, ctx["resultats"], demain)), b["capacite"])
     if b["marge"] < 0:
         L.append(f"  - **ALERTE** : il manque {-b['marge']} min (les annales s'ouvrent plus tôt ; on coupe d'abord "
                  "l'exotique, puis le secondaire, jamais une annale).")
@@ -938,7 +1002,8 @@ def main():
     sys.stdout.reconfigure(encoding="utf-8")
     p = argparse.ArgumentParser(description=__doc__)
     sp = p.add_subparsers(dest="cmd", required=True)
-    j = sp.add_parser("jour", help="écrit NOW.md pour une date")
+    j = sp.add_parser("jour", help="simule le plan d'une date (affiche, n'écrit rien sans --ecrire)")
+    j.add_argument("--ecrire", action="store_true", help="écrit NOW.md et state/ (remplace le plan de la séance)")
     j.add_argument("--date", default=None, help="AAAA-MM-JJ (défaut : aujourd'hui)")
     j.add_argument("--racine", default=None, help="racine du dépôt (défaut : celui de l'outil)")
     sc_ = sp.add_parser("seance", help="écrit NOW.md pour la séance qui commence maintenant")
@@ -963,8 +1028,9 @@ def main():
         print("\n".join(bilan_seance(contexte(racine), d, None if a.sans_anki else client_anki())))
         return
     d = E.en_date(a.date) if a.date else dt.date.today()
-    lignes = jour(d, racine)
-    print(f"NOW.md écrit pour le {d} ({len(lignes)} lignes).")
+    lignes = jour(d, racine, ecrire=a.ecrire)
+    print(f"NOW.md écrit pour le {d} ({len(lignes)} lignes)." if a.ecrire
+          else "\n".join(lignes) + "\n[simulation] rien n'a été écrit")
     if len(lignes) > MAX_LIGNES:
         print(f"ATTENTION : plus de {MAX_LIGNES} lignes.", file=sys.stderr)
         sys.exit(1)

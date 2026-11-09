@@ -38,6 +38,8 @@ Demander, en un seul message, pour chaque exercice du plan : le niveau, le temps
 - **Enregistrer** chaque résultat, une commande par exercice : `python tools/resultat.py ajouter <id> <reussi|aide|presque|non_fait> --aide <0-4> [--note "<ce qui a bloqué>"] [--date AAAA-MM-JJ]`. Le palier `--aide` suit `CLAUDE.md` (0 = seul ; 1 question qui oriente ; 2 méthode ; 3 étape clé ; 4 solution). Le script refuse un doublon et donne l'id d'origine.
   - **Exercice à plusieurs questions** : `--questions "Q1=reussi,Q2=presque,Q3=non_fait"` à la place du résultat, qui est alors calculé (le moins bon). Le niveau de chaque question suit les mêmes règles que celui d'un exercice. La reprise ne redemandera que les questions non `reussi`.
   - La **première** tentative détaillée liste **toutes** les questions de l'exercice, réussies comprises. Une reprise partielle ne liste que les questions refaites ; les autres gardent leur niveau.
+  - **Exercice déjà enregistré sans détail** (résultat global) : le code garde un `reste` à l'ancien niveau tant que tout n'est pas détaillé. Si la liste donnée couvre tout l'exercice, chaque question vérifiée sur une rédaction, ajouter `--complet` : le `reste` disparaît. Jamais `--complet` pour une question non vérifiée.
+  - Le script refuse `reussi` avec un palier d'aide, `aide` sans palier, et un deuxième résultat du même exercice le même jour.
   - Étiquettes : celles de l'énoncé (`Q1`, `Q2a`…), réutilisées à l'identique d'une séance à l'autre. Pour une partie de question qu'on peut refaire seule, `Q1-directe`, `Q1-reciproque` : écrire alors toutes ses parties ; elles remplacent `Q1`.
   - Ne jamais éditer `state/resultats.yaml` à la main, ni réécrire une ancienne ligne.
 

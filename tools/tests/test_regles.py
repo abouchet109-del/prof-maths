@@ -1264,3 +1264,44 @@ def test_now_affiche_seulement_les_questions_a_refaire():
     p = P.plan_jour(c, D(2026, 11, 6))
     texte = "\n".join(P.rediger(c, p, P.anki(c, p)))
     assert "`e1` e1 · 20 min" in texte and "**seulement Q2** (Q1 déjà juste)" in texte
+
+
+# ------------------------------------------------ garde-fous de la review du 10/11/2026
+def test_reprise_detaillee_apres_un_resultat_global_ne_rend_pas_acquis():
+    r = [res("2026-11-04", "e1", "presque"), resq("2026-11-12", "e1", Q3="reussi")]
+    assert [x[1] for x in E.historique(r)["e1"]] == ["presque", "presque"]        # le reste garde son niveau
+    assert E.questions(r, D(2026, 11, 12))["e1"] == {"reste": "presque", "Q3": "reussi"}
+    assert E.etat_exercice(E.historique(r)["e1"], D(2026, 11, 12))["etat"] == "a_revoir"
+    # la liste couvre tout l'exercice (`complet`) : le reste disparaît
+    r[1] = dict(resq("2026-11-12", "e1", Q1="reussi", Q2="reussi", Q3="reussi"), complet=True)
+    assert E.etat_exercice(E.historique(r)["e1"], D(2026, 11, 12))["etat"] == "acquis"
+    # exercice entier refait ensuite : tout prend son résultat
+    r.append(res("2026-11-20", "e1", "aide"))
+    assert set(E.questions(r, D(2026, 11, 20))["e1"].values()) == {"aide"}
+
+
+def test_simulation_d_un_jour_n_ecrit_rien(tmp_path):
+    import yaml
+    (tmp_path / "state").mkdir()
+    (tmp_path / "matieres").mkdir()
+    (tmp_path / "state" / "dispo.yaml").write_text(yaml.safe_dump(ctx([])["dispo"]), encoding="utf-8")
+    avant = sorted(p.name for p in tmp_path.rglob("*"))
+    assert P.jour(D(2026, 11, 10), tmp_path, ecrire=False)
+    assert sorted(p.name for p in tmp_path.rglob("*")) == avant
+
+
+def test_rythme_objectif_et_projection():
+    exos = [ex("v1", t=30), ex("v2", t=20), ex("i1", imp="important", t=10), ex("s1", imp="secondaire", t=50)]
+    c = ctx(exos, [res("2026-11-05", "v1"), res("2026-11-05", "v2", "presque")])
+    d = D(2026, 11, 10)
+    r = P.rythme(c, d, exos, P._etats(exos, c["resultats"], d))
+    assert (r["objectif"], r["acquis"], r["reste"]) == (3, 1, 2)       # le secondaire n'est pas dans l'objectif
+    assert r["charge"] == 30                                            # v2 (20) + i1 (10) ; v1 est acquis
+    assert r["observe"] == 1 and r["tentatives"] == 2 and r["seuls"] == 1
+    assert r["fin_projetee"] == D(2026, 11, 24)                         # 2 restants à 1 par semaine
+    texte = "\n".join(P.lignes_rythme(r, 1000))
+    assert "1/3 exercices" in texte and "ALERTE" not in texte
+    assert "ALERTE" in "\n".join(P.lignes_rythme(r, 10))
+    c0 = ctx([ex("v1")])
+    r0 = P.rythme(c0, d, c0["exercices"], P._etats(c0["exercices"], [], d))
+    assert r0["fin_projetee"] is None and "aucun exercice réussi seul" in "\n".join(P.lignes_rythme(r0, 1000))

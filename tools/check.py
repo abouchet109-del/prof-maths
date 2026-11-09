@@ -146,6 +146,7 @@ def verifier(racine=E.RACINE) -> list[str]:
     if not isinstance(res, list):
         erreurs.append("state/resultats.yaml : liste attendue")
     else:
+        vus = set()
         for i, r in enumerate(res, 1):
             try:
                 E.en_date(r["date"])
@@ -157,6 +158,16 @@ def verifier(racine=E.RACINE) -> list[str]:
                 erreurs.append(f"resultats #{i} : résultat invalide ({r.get('resultat')})")
             if r.get("palier_aide") not in range(5):
                 erreurs.append(f"resultats #{i} : palier_aide hors 0..4 ({r.get('palier_aide')})")
+            if not r.get("questions") and ((r.get("resultat") == "reussi" and r.get("palier_aide") != 0)
+                                           or (r.get("resultat") == "aide" and r.get("palier_aide") == 0)):
+                erreurs.append(f"resultats #{i} : {r.get('resultat')} avec palier_aide {r.get('palier_aide')} "
+                               "(`reussi` = palier 0, `aide` = palier 1 à 4)")
+            cle = (r.get("exercice"), str(r.get("date")))
+            if cle in vus:
+                erreurs.append(f"resultats #{i} : deuxième résultat de {cle[0]} le {cle[1]}")
+            vus.add(cle)
+            if r.get("complet") and not r.get("questions"):
+                erreurs.append(f"resultats #{i} : `complet` sans `questions`")
             qs = r.get("questions")
             if qs is not None:
                 if not isinstance(qs, dict) or not qs or any(v not in E.RESULTATS for v in qs.values()):
@@ -188,10 +199,11 @@ def verifier(racine=E.RACINE) -> list[str]:
 
     # 5 bis. cartes d'exercices : tag `exercice` <=> champ `exercice` ; exercice connu, de la même matière,
     # une seule carte par exercice, notion renseignée (lue par plan.py)
-    matiere_exo = {}
+    matiere_exo, sans_corrige = {}, set()
     for f, data in charges.items():
         if f.name.startswith("exercices") and f.parent.parent.name == "matieres":
             matiere_exo.update({e.get("id"): f.parent.name for e in data or []})
+            sans_corrige |= {e.get("id") for e in data or [] if (e.get("corrige") or {}).get("statut") == "absent"}
     cartes_exo = {}
     for f, data in charges.items():
         if f.name != "cartes.yaml":
@@ -212,6 +224,9 @@ def verifier(racine=E.RACINE) -> list[str]:
             cartes_exo[x] = c.get("id")
             if "notion" not in c:
                 erreurs.append(f"{nom(f)} : carte {c.get('id')} sans champ notion")
+            if x in sans_corrige and "Pas de corrigé officiel" not in (c.get("source") or ""):
+                erreurs.append(f"{nom(f)} : carte {c.get('id')} : exercice sans corrigé officiel, la source doit "
+                               "dire « Pas de corrigé officiel : solution vérifiée par Claude, à confirmer »")
 
     # une carte d'exercice va dans le sous-paquet `Exercices` d'un chapitre où les cartes de cours existent déjà
     for f, data in charges.items():

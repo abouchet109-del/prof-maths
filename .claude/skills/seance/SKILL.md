@@ -19,7 +19,7 @@ description: "Début de séance de maths (L3). Calcule le plan de maintenant d'a
 
 1. Le dernier jour travaillé (ligne « Dernier jour travaillé » de `NOW.md`) et ce qui est revenu (reprises, exercices non faits).
 2. Le bloc du jour : matière, sous-chapitre, nombre d'exercices et minutes.
-3. La marge à l'échéance (section « Échéance »), et l'alerte si elle est négative.
+3. Le rythme (section « Échéance ») : exercices réussis seul sur l'objectif, nombre requis par semaine contre nombre observé, date de fin projetée, et l'alerte s'il y en a une.
 
 ## 3. Dérouler la séance
 

@@ -91,18 +91,41 @@ def pire(resultats) -> str:
     return max(resultats, key=RESULTATS.index)
 
 
-def maj_questions(etat_q: dict, r) -> dict:
+RESTE = "reste"      # pseudo-question : la partie de l'exercice jamais détaillée par question
+
+
+def maj_questions(etat_q: dict, r, precedent: str | None = None) -> dict:
     """État des questions après la tentative `r` (sans effet de bord sur `etat_q`).
 
     Sans `questions`, la tentative porte sur l'exercice entier : toutes les questions connues prennent son
     résultat. Avec `questions`, seules les questions citées changent ; « Q1-reciproque » découpe « Q1 »,
-    qui disparaît (le debrief écrit alors toutes ses parties)."""
+    qui disparaît (le debrief écrit alors toutes ses parties).
+    `precedent` : résultat effectif de l'exercice avant `r`. Si aucune question n'était connue, le reste de
+    l'exercice garde ce niveau (pseudo-question `reste`) : une reprise « Q3=reussi » après un `presque`
+    global ne rend pas l'exercice acquis. `complet: true` dans `r` (la liste couvre tout l'exercice)
+    retire ce reste."""
     qs = r.get("questions") or {}
     if not qs:
         return {q: r["resultat"] for q in etat_q}
     nouveau = {q: v for q, v in etat_q.items() if not any(str(k).startswith(f"{q}-") for k in qs)}
+    if not etat_q and precedent is not None:
+        nouveau[RESTE] = precedent
     nouveau.update({str(k): v for k, v in qs.items()})
+    if r.get("complet"):
+        nouveau.pop(RESTE, None)
     return nouveau
+
+
+def _suivre(liste, aujourdhui=None):
+    """Parcourt les tentatives triées d'un exercice : rend [(date, résultat effectif)] et l'état des questions."""
+    etat_q, precedent, h = {}, None, []
+    for r in liste:
+        if aujourdhui is not None and en_date(r["date"]) > aujourdhui:
+            continue
+        etat_q = maj_questions(etat_q, r, precedent)
+        precedent = pire(etat_q.values()) if etat_q else r["resultat"]
+        h.append((en_date(r["date"]), precedent))
+    return h, etat_q
 
 
 def _par_exercice(resultats) -> dict[str, list[dict]]:
@@ -121,13 +144,7 @@ def historique(resultats) -> dict[str, list[tuple[dt.date, str]]]:
     Résultat effectif : le moins bon des questions connues après la tentative (suivi par sous-question,
     09/11/2026), sinon le résultat déclaré. Une reprise de Q2 seule, réussie, ne rend donc l'exercice
     `reussi` que si toutes les autres questions l'étaient déjà."""
-    h: dict[str, list] = {}
-    for ex, liste in _par_exercice(resultats).items():
-        etat_q: dict = {}
-        for r in liste:
-            etat_q = maj_questions(etat_q, r)
-            h.setdefault(ex, []).append((en_date(r["date"]), pire(etat_q.values()) if etat_q else r["resultat"]))
-    return h
+    return {ex: _suivre(liste)[0] for ex, liste in _par_exercice(resultats).items()}
 
 
 def questions(resultats, aujourdhui: dt.date) -> dict[str, dict[str, str]]:
@@ -135,10 +152,7 @@ def questions(resultats, aujourdhui: dt.date) -> dict[str, dict[str, str]]:
     (absent si aucune tentative ne détaille ses questions)."""
     res = {}
     for ex, liste in _par_exercice(resultats).items():
-        etat_q: dict = {}
-        for r in liste:
-            if en_date(r["date"]) <= aujourdhui:
-                etat_q = maj_questions(etat_q, r)
+        etat_q = _suivre(liste, aujourdhui)[1]
         if etat_q:
             res[ex] = etat_q
     return res

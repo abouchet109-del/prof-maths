@@ -40,8 +40,20 @@ def ajouter(args) -> int:
     if questions and args.resultat and args.resultat != resultat:
         print(f"Résultat {args.resultat} contraire aux questions (le moins bon : {resultat}).", file=sys.stderr)
         return 1
+    if args.complet and not questions:
+        print("--complet va avec --questions.", file=sys.stderr)
+        return 1
+    if not questions and (resultat == "reussi") != (args.aide == 0) and resultat in ("reussi", "aide"):
+        print(f"{resultat} avec un palier d'aide {args.aide} : `reussi` = palier 0, `aide` = palier 1 à 4.",
+              file=sys.stderr)
+        return 1
     chemin = E.RACINE / "state" / "resultats.yaml"
     resultats = E.charger_yaml(chemin, [])
+    jour = E.en_date(args.date) if args.date else dt.date.today()
+    if any(r["exercice"] == args.exercice and E.en_date(r["date"]) == jour for r in resultats):
+        print(f"{args.exercice} a déjà un résultat le {jour} : une seule ligne par exercice et par jour.",
+              file=sys.stderr)
+        return 1
     entree = {
         "date": E.en_date(args.date) if args.date else dt.date.today(),
         "exercice": args.exercice,
@@ -51,6 +63,8 @@ def ajouter(args) -> int:
     }
     if questions:
         entree["questions"] = questions
+        if args.complet:
+            entree["complet"] = True
     resultats.append(entree)
     with open(chemin, "w", encoding="utf-8") as f:
         yaml.safe_dump(resultats, f, allow_unicode=True, sort_keys=False, width=200)
@@ -131,6 +145,8 @@ def main():
     a.add_argument("exercice")
     a.add_argument("resultat", nargs="?", choices=E.RESULTATS)
     a.add_argument("--questions", default=None, help="résultat par sous-question : « Q1=reussi,Q2=presque »")
+    a.add_argument("--complet", action="store_true",
+                   help="avec --questions : la liste couvre tout l'exercice (retire le « reste » non détaillé)")
     a.add_argument("--aide", type=int, default=0, choices=range(5), help="palier d'aide 0..4")
     a.add_argument("--note", default=None)
     a.add_argument("--date", default=None, help="AAAA-MM-JJ (défaut : aujourd'hui)")

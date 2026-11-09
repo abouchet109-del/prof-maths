@@ -270,7 +270,8 @@ Ensembles : **à consolider** = niveau `inconnue`, `recitee` ou `fragile`, ou au
 - Une reprise partielle ne cite que les questions refaites ; les autres gardent leur niveau. `Q1-directe`, `Q1-reciproque` découpent `Q1`, qui disparaît.
 - **Niveau effectif de l'exercice** (`etat.historique`) : le moins bon des questions connues après chaque tentative. L'exercice n'est donc `acquis` que quand chaque question a été réussie seule. La reprise d'entretien (acquis, maîtrisé) porte sur l'exercice entier.
 - **Reprise d'un exercice à revoir** (`plan.reprise_partielle`) : seulement les questions non `reussi`, au prorata de `temps_min` (10 min au moins). `NOW.md` l'écrit « **seulement Q2** (Q1, Q3 déjà justes) ». La marge à l'échéance compte toujours l'exercice entier, qui reviendra en entretien.
-- La première tentative détaillée liste toutes les questions. `check.py` refuse un `resultat` différent du moins bon de `questions`, ou une question au résultat invalide.
+- **Reste non détaillé** : si l'exercice n'avait qu'un résultat global, la première tentative détaillée ajoute la pseudo-question `reste` à cet ancien niveau (`etat.maj_questions`). Une reprise « Q3=reussi » ne rend donc pas l'exercice acquis. `complet: true` (`--complet`) dit que la liste couvre tout l'exercice et retire ce reste.
+- La première tentative détaillée liste toutes les questions. `check.py` refuse un `resultat` différent du moins bon de `questions`, une question au résultat invalide, `reussi` avec un palier d'aide, `aide` au palier 0, deux résultats du même exercice le même jour, et une carte d'exercice sans corrigé officiel dont la source ne dit pas « Pas de corrigé officiel ».
 
 ## Corrigés
 Un corrigé officiel peut contenir une erreur (constaté sur le corrigé de `mes-td1-ex05`, où lim sup et lim inf sont inversées) : en cas de désaccord au debrief, on vérifie plutôt que de trancher par autorité.
