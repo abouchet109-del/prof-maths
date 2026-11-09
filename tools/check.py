@@ -172,9 +172,13 @@ def verifier(racine=E.RACINE) -> list[str]:
             if qs is not None:
                 if not isinstance(qs, dict) or not qs or any(v not in E.RESULTATS for v in qs.values()):
                     erreurs.append(f"resultats #{i} : questions invalides ({qs})")
-                elif r.get("resultat") != E.pire(qs.values()):
+                elif (r.get("resultat") == "reussi") != all(v == "reussi" for v in qs.values()):
                     erreurs.append(f"resultats #{i} : résultat {r.get('resultat')} contraire aux questions "
-                                   f"(le moins bon : {E.pire(qs.values())})")
+                                   "(`reussi` si et seulement si toutes le sont)")
+            pts = r.get("points")
+            if pts is not None and (not isinstance(pts, dict) or not isinstance(qs, dict)
+                                    or any(q not in qs or qs[q] == "reussi" or not t for q, t in pts.items())):
+                erreurs.append(f"resultats #{i} : points invalides (une question non réussie de `questions` -> texte)")
 
     # 5. anki_plan et seance : simples journaux de ce qui a été proposé. Une carte proposée mais pas apprise
     # est proposée de nouveau (lecture d'Anki) : plus de contrôle de doublon, seulement des ids connus.

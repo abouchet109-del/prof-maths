@@ -294,16 +294,19 @@ def info_seance(dispo, d: dt.date) -> dict:
     return info
 
 
-def reprise_partielle(e, etat_q) -> dict:
+def reprise_partielle(e, etat_q, pts=None) -> dict:
     """Reprise d'un exercice à revoir dont des questions sont déjà justes : seulement les autres
     (09/11/2026). Copie de l'exercice avec `a_refaire` et un temps au prorata, 10 min au moins."""
     if not etat_q:
         return e
     refaire = [q for q, v in etat_q.items() if v != "reussi"]
-    if not refaire or len(refaire) == len(etat_q):
+    if not refaire:
         return e
+    if len(refaire) == len(etat_q):            # rien de juste : exercice entier, mais on dit où ça a bloqué
+        return {**e, "a_refaire": refaire, "points": pts or {}, "questions_justes": []} if pts else e
     temps = min(e["temps_min"], max(REPRISE_MIN, math.ceil(e["temps_min"] * len(refaire) / len(etat_q))))
-    return {**e, "temps_min": temps, "a_refaire": refaire, "questions_justes": [q for q in etat_q if q not in refaire]}
+    return {**e, "temps_min": temps, "a_refaire": refaire, "points": pts or {},
+            "questions_justes": [q for q in etat_q if q not in refaire]}
 
 
 def plan_jour(ctx, d: dt.date, resultats=None, seance=False) -> dict:
@@ -346,10 +349,10 @@ def plan_jour(ctx, d: dt.date, resultats=None, seance=False) -> dict:
     dus = [e for e in exos if etats[e["id"]]["est_du"]]
     dus.sort(key=lambda e: (etats[e["id"]]["etat"] != "a_revoir", e["id"] not in prio, etats[e["id"]]["du"], e["ordre"]))
     reprises = 0
-    qmap = E.questions(resultats, d)
+    qmap, pmap = E.questions(resultats, d), E.points(resultats, d)
     for e in dus:
         if etats[e["id"]]["etat"] == "a_revoir":
-            e = reprise_partielle(e, qmap.get(e["id"]))
+            e = reprise_partielle(e, qmap.get(e["id"]), pmap.get(e["id"]))
         if reprises and reprises + e["temps_min"] > plafond:
             continue
         if ajouter(e, "reprise"):
@@ -825,8 +828,13 @@ def rediger(ctx, plan, cartes) -> list[str]:
                 etiquette = g if genre == "annale" else ""
                 ligne = f"- [ ] `{e['id']}` {etiquette + ' · ' if etiquette else ''}{_court(e['titre'])} · {e['temps_min']} min · {_source(e)}"
                 if e.get("a_refaire"):
-                    ligne += (f" · **seulement {', '.join(RESTE_LISIBLE.get(q, q) for q in e['a_refaire'])}**"
-                              f" ({', '.join(e['questions_justes'])} déjà juste{'s' if len(e['questions_justes']) > 1 else ''})")
+                    pts = e.get("points") or {}
+                    reste = " ; ".join(RESTE_LISIBLE.get(q, q) + (f" ({pts[q]})" if pts.get(q) else "")
+                                       for q in e["a_refaire"])
+                    justes = e["questions_justes"]
+                    ligne += (f" · **seulement {reste}**" if justes else f" · **à refaire : {reste}**")
+                    if justes:
+                        ligne += f" ({', '.join(justes)} déjà juste{'s' if len(justes) > 1 else ''})"
                 if e.get("enonce") is None:
                     ligne += " · **énoncé à extraire**"
                 L.append(ligne)

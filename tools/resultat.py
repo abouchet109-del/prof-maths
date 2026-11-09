@@ -2,7 +2,8 @@
 
   resultat.py ajouter <id_exercice> <resultat> [--aide N] [--note "..."] [--date D]
   resultat.py ajouter <id_exercice> --questions "Q1=reussi,Q2=presque" [--aide N] [--note "..."] [--date D]
-      (résultat global calculé : le moins bon des questions faites)
+      (résultat global : celui donné, sinon le moins bon des questions ; `reussi` seulement si toutes le sont)
+      --point "Q2=ce qui a bloqué" (répétable) : affiché à la reprise ; --complet : la liste couvre tout l'exercice
   resultat.py profil [--matiere M]
 """
 from __future__ import annotations
@@ -33,13 +34,22 @@ def ajouter(args) -> int:
     except ValueError as ex:
         print(f"--questions : {ex}", file=sys.stderr)
         return 1
-    resultat = E.pire(questions.values()) if questions else args.resultat
+    resultat = args.resultat or (E.pire(questions.values()) if questions else None)
     if resultat is None:
         print("Donner le résultat ou --questions.", file=sys.stderr)
         return 1
-    if questions and args.resultat and args.resultat != resultat:
-        print(f"Résultat {args.resultat} contraire aux questions (le moins bon : {resultat}).", file=sys.stderr)
+    if questions and (resultat == "reussi") != all(v == "reussi" for v in questions.values()):
+        print(f"Résultat {resultat} contraire aux questions : `reussi` si et seulement si toutes le sont.",
+              file=sys.stderr)
         return 1
+    pts = {}
+    for p in args.point or []:
+        q, _, t = (x.strip() for x in p.partition("="))
+        if not questions or q not in questions or not t or questions[q] == "reussi":
+            print(f"--point « {p} » : attendu Question=texte, pour une question non réussie de --questions.",
+                  file=sys.stderr)
+            return 1
+        pts[q] = t
     if args.complet and not questions:
         print("--complet va avec --questions.", file=sys.stderr)
         return 1
@@ -65,6 +75,8 @@ def ajouter(args) -> int:
         entree["questions"] = questions
         if args.complet:
             entree["complet"] = True
+        if pts:
+            entree["points"] = pts
     resultats.append(entree)
     with open(chemin, "w", encoding="utf-8") as f:
         yaml.safe_dump(resultats, f, allow_unicode=True, sort_keys=False, width=200)
@@ -147,6 +159,8 @@ def main():
     a.add_argument("--questions", default=None, help="résultat par sous-question : « Q1=reussi,Q2=presque »")
     a.add_argument("--complet", action="store_true",
                    help="avec --questions : la liste couvre tout l'exercice (retire le « reste » non détaillé)")
+    a.add_argument("--point", action="append", metavar="Q=TEXTE",
+                   help="ce qui a bloqué sur une question non réussie, en quelques mots (répétable)")
     a.add_argument("--aide", type=int, default=0, choices=range(5), help="palier d'aide 0..4")
     a.add_argument("--note", default=None)
     a.add_argument("--date", default=None, help="AAAA-MM-JJ (défaut : aujourd'hui)")

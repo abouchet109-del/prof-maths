@@ -259,16 +259,20 @@ Ensembles : **à consolider** = niveau `inconnue`, `recitee` ou `fragile`, ou au
 ```yaml
 - date: 2026-11-09
   exercice: topo-td1-ex09
-  resultat: presque            # calculé : le moins bon des questions de cette tentative
+  resultat: presque            # jugement d'ensemble ; `reussi` si et seulement si toutes les questions le sont
   palier_aide: 1
   note: 'Q2 : ...'
   questions: {Q1: reussi, Q2: presque, Q3: reussi}     # facultatif (depuis le 09/11/2026)
+  points: {Q2: 'cas k=0 oublié'}                        # ce qui a bloqué, par question non réussie (10/11/2026)
+  complet: true                                         # la liste couvre tout l'exercice
 ```
 
 **Suivi par sous-question** (`resultat.py ajouter <id> --questions "Q1=reussi,Q2=presque"`) :
 - Chaque question a son niveau, avec les règles d'un exercice. Une tentative sans `questions` porte sur l'exercice entier : toutes les questions connues prennent son résultat.
 - Une reprise partielle ne cite que les questions refaites ; les autres gardent leur niveau. `Q1-directe`, `Q1-reciproque` découpent `Q1`, qui disparaît.
-- **Niveau effectif de l'exercice** (`etat.historique`) : le moins bon des questions connues après chaque tentative. L'exercice n'est donc `acquis` que quand chaque question a été réussie seule. La reprise d'entretien (acquis, maîtrisé) porte sur l'exercice entier.
+- **Niveau effectif de l'exercice** (`etat.historique`) : le résultat déclaré ; un `reussi` alors qu'une question connue ne l'est pas devient le moins bon des questions restantes. L'exercice n'est donc `acquis` que quand chaque question a été réussie seule.
+- **Points de blocage** (`--point "Q2=texte"`, `etat.points`) : un texte court par question non réussie, accroc léger compris. `NOW.md` l'écrit à la reprise : « **seulement Q2 (cas k=0 oublié)** (Q1 déjà juste) », ou « **à refaire : Q1 (…)** » si rien n'est encore juste. Le point d'une question disparaît quand elle est réussie.
+- Le 10/11/2026, le détail des 14 exercices déjà tentés à plusieurs questions a été enregistré d'après les notes des debriefs (dernière ligne de chaque exercice, `complet: true`). La reprise d'entretien (acquis, maîtrisé) porte sur l'exercice entier.
 - **Reprise d'un exercice à revoir** (`plan.reprise_partielle`) : seulement les questions non `reussi`, au prorata de `temps_min` (10 min au moins). `NOW.md` l'écrit « **seulement Q2** (Q1, Q3 déjà justes) ». La marge à l'échéance compte toujours l'exercice entier, qui reviendra en entretien.
 - **Reste non détaillé** : si l'exercice n'avait qu'un résultat global, la première tentative détaillée ajoute la pseudo-question `reste` à cet ancien niveau (`etat.maj_questions`). Une reprise « Q3=reussi » ne rend donc pas l'exercice acquis. `complet: true` (`--complet`) dit que la liste couvre tout l'exercice et retire ce reste.
 - La première tentative détaillée liste toutes les questions. `check.py` refuse un `resultat` différent du moins bon de `questions`, une question au résultat invalide, `reussi` avec un palier d'aide, `aide` au palier 0, deux résultats du même exercice le même jour, et une carte d'exercice sans corrigé officiel dont la source ne dit pas « Pas de corrigé officiel ».

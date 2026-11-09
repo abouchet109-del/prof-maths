@@ -8,6 +8,13 @@
   resultat: presque
   palier_aide: 1
   note: Q1 synthese non redigee ; Q2 non terminee (inclusion fausse A dans sigma({B}), plan 3 axiomes par morceau faux)
+  questions:
+    Q1: presque
+    Q2: presque
+  points:
+    Q1: rédiger la synthèse
+    Q2: inclusion fausse, plan des 3 axiomes à refaire
+  complet: true
 - date: 2026-11-04
   exercice: topo-td1-ex05
   resultat: aide
@@ -18,6 +25,15 @@
   resultat: presque
   palier_aide: 2
   note: traduction forall-exists-forall en inter-union-inter ; Q2 non reussie apres palier 1 ; Q3 non traitee
+  questions:
+    Q1: aide
+    Q2: presque
+    Q3: non_fait
+  points:
+    Q1: traduire seul pour tout / il existe en intersections et unions
+    Q2: non réussie après un indice
+    Q3: pas traitée
+  complet: true
 - date: 2026-11-04
   exercice: topo-td1-ex04
   resultat: non_fait
@@ -33,11 +49,37 @@
   resultat: presque
   palier_aide: 2
   note: cas 1,2,4 ok ; 3 faux (ferme) ; 5 ouvert dans [-1,1] mal justifie ; 6-7 idee ok (0 limite de 1/n), redaction non faite ; 8-9 rayon du ferme non trouve ; 10-11 non faits
+  questions:
+    cas1: reussi
+    cas2: reussi
+    cas4: reussi
+    cas3: presque
+    cas5: presque
+    cas6-7: presque
+    cas8-9: presque
+    cas10-11: non_fait
+  points:
+    cas3: 'faux : c''est un fermé'
+    cas5: ouvert de [-1,1] mal justifié
+    cas6-7: idée juste (0 limite de 1/n), rédaction à faire
+    cas8-9: rayon de la boule non trouvé
+    cas10-11: pas faits
+  complet: true
 - date: 2026-11-07
   exercice: pro-par2425-ex02
   resultat: aide
   palier_aide: 1
   note: Q1 ok ; Q2 oubli X=0 (proba nulle) ; discriminant faux puis corrige apres signalement ; Q3 loi exp(3) donnee sans calcul ecrit ; Q4 non redige jusqu'au nombre final
+  questions:
+    Q1: reussi
+    Q2: presque
+    Q3: presque
+    Q4: aide
+  points:
+    Q2: cas X=0 (probabilité nulle) oublié
+    Q3: écrire le calcul de la fonction de répartition
+    Q4: discriminant, puis aller jusqu'au nombre final
+  complet: true
 - date: 2026-11-07
   exercice: mes-cc1-2324-ex02
   resultat: aide
@@ -48,6 +90,16 @@
   resultat: presque
   palier_aide: 1
   note: 'Q1 : n''a pas pense a la densite des irrationnels, a conclu Q ouvert ; Q2 ok (Å = disque pointe ouvert) apres autocorrection ; Q3 Q4 non faits (epuisement)'
+  questions:
+    Q1: presque
+    Q2: reussi
+    Q3: non_fait
+    Q4: non_fait
+  points:
+    Q1: 'densité des irrationnels : Q n''est pas ouvert'
+    Q3: pas fait
+    Q4: pas fait
+  complet: true
 - date: 2026-11-07
   exercice: pro-td1-ex06
   resultat: non_fait
@@ -73,6 +125,14 @@
   resultat: presque
   palier_aide: 2
   note: '~20 min. Q1 juste ; Q2 : 0<|z| lu comme >=0 donc A suppose ferme ; Q3 : bonne conclusion, mauvais argument (1/n->0 ne montre pas 1/n dans l''adherence)'
+  questions:
+    Q1: reussi
+    Q2: presque
+    Q3: presque
+  points:
+    Q2: '0<|z| lu comme >=0 : A n''est pas fermé'
+    Q3: bonne conclusion, argument faux pour l'adhérence
+  complet: true
 - date: 2026-11-08
   exercice: topo-td1-ex13
   resultat: presque
@@ -89,12 +149,32 @@
   palier_aide: 3
   note: '~35 min, bloque des 25-30 min. Q1 limsup faux (F inter G au lieu de F union G : resultat du liminf reporte sans recalcul), Q2 juste, Q3a non finie (liminf non conclu), 3b 3c non faits, Q4 refaite
     avec les etapes donnees'
+  questions:
+    Q1: presque
+    Q2: reussi
+    Q3a: presque
+    Q3b: non_fait
+    Q3c: non_fait
+    Q4: aide
+  points:
+    Q1: 'limsup faux : recalculer (union, pas intersection)'
+    Q3a: liminf à conclure
+    Q3b: pas fait
+    Q3c: pas fait
+    Q4: à refaire sans les étapes données
+  complet: true
 - date: 2026-11-09
   exercice: mes-cc1-2324-ex01
   resultat: presque
   palier_aide: 1
   note: 'temps non precise. Q1 juste. Q2 : nu(vide)=0 et nu bien definie oublies ; existence de i : monotonie lue a l''envers (muni de l''intersection nulle ne donne pas un E_i^c nul), corrige par l''absurde
     avec une aide palier 1'
+  questions:
+    Q1: reussi
+    Q2: presque
+  points:
+    Q2: nu(vide)=0 et nu bien définie oubliés ; existence de l'indice i (monotonie lue à l'envers)
+  complet: true
 - date: 2026-11-09
   exercice: topo-td1-ex13
   resultat: aide
@@ -105,28 +185,71 @@
   resultat: presque
   palier_aide: 0
   note: reprise (carte). Q1 Q2 justes ; Q3 (intersection d'ouverts) non ecrite et justifiee a l'oral par la stabilite par intersection (fausse pour une famille infinie), a refaire (petite partie)
+  questions:
+    Q1: reussi
+    Q2: reussi
+    Q3: presque
+  points:
+    Q3: à écrire ; une intersection infinie d'ouverts n'est pas forcément ouverte
+  complet: true
 - date: 2026-11-09
   exercice: topo-td1-ex08
   resultat: presque
   palier_aide: 0
   note: reprise (carte). Boules et Q3 justes ; Q1 non ecrite ; ouverts et fermes (toutes les parties) non decrits, vus au debrief
+  questions:
+    Q1: non_fait
+    Q2-boules: reussi
+    Q2-ouverts-fermes: presque
+    Q3: reussi
+  points:
+    Q1: à écrire
+    Q2-ouverts-fermes: décrire tous les ouverts et tous les fermés
+  complet: true
 - date: 2026-11-09
   exercice: topo-td1-ex09
   resultat: presque
   palier_aide: 0
   note: reprise (carte). Q1 juste (y=0, xy>=1, (n,0) et (n,1/n)) ; Q2 (dans R) non faite, a refaire seul un autre jour
+  questions:
+    Q1: reussi
+    Q2: non_fait
+  points:
+    Q2: le cas dans R, pas fait
+  complet: true
 - date: 2026-11-09
   exercice: topo-uvsq-td1-ex03q1
   resultat: presque
   palier_aide: 0
   note: 'reprise (carte). Suffisance (g!=0 dense => norme) juste ; reciproque (non dense => f continue non nulle avec fg=0) manquante ; au debrief, f=2 sur [0,1/2] propose : pas continue'
+  questions:
+    suffisance: reussi
+    reciproque: presque
+  points:
+    reciproque: construire f continue non nulle avec fg=0 (f=2 sur [0,1/2] n'est pas continue)
+  complet: true
 - date: 2026-11-09
   exercice: mes-cc1-2425-ex03
   resultat: presque
   palier_aide: 0
   note: reprise (carte). Preuve des 3 axiomes juste ; question denombrabilite non traitee a l'ecrit (dit non necessaire, a l'oral) ; A inclus dans (au lieu de appartient a) ; vide dans T_n non justifie
+  questions:
+    tribu: presque
+    denombrabilite: non_fait
+  points:
+    tribu: 'léger : écrire A appartient à T_n (pas inclus), justifier que le vide est dans T_n'
+    denombrabilite: 'à écrire : l''hypothèse est-elle nécessaire ?'
+  complet: true
 - date: 2026-11-09
   exercice: pro-par2425-ex01
   resultat: presque
   palier_aide: 0
   note: 'reprise (carte). Q1 juste ; Q2 : k! ecrase tout (intuition, pas preuve), somme de E(X) sur k in N au lieu de k>=1 ; Q3 (fonction caracteristique) non faite'
+  questions:
+    Q1: reussi
+    Q2: presque
+    Q3: non_fait
+  points:
+    Q2: prouver la convergence (k! domine), somme de E(X) à partir de k=1
+    Q3: 'fonction caractéristique : définition à connaître'
+  complet: true

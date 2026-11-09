@@ -1305,3 +1305,23 @@ def test_rythme_objectif_et_projection():
     c0 = ctx([ex("v1")])
     r0 = P.rythme(c0, d, c0["exercices"], P._etats(c0["exercices"], [], d))
     assert r0["fin_projetee"] is None and "aucun exercice réussi seul" in "\n".join(P.lignes_rythme(r0, 1000))
+
+
+def test_points_de_blocage_affiches_a_la_reprise():
+    exos = [ex("e1", t=30)]
+    r = [dict(resq("2026-11-04", "e1", Q1="reussi", Q2="presque", Q3="non_fait"), resultat="presque",
+              points={"Q2": "cas k=0 oublié", "Q3": "pas faite"})]
+    c = ctx(exos, r)
+    assert [x[1] for x in E.historique(r)["e1"]] == ["presque"]          # le jugement global reste le niveau
+    p = P.plan_jour(c, D(2026, 11, 6))
+    texte = "\n".join(P.rediger(c, p, P.anki(c, p)))
+    assert "**seulement Q2 (cas k=0 oublié) ; Q3 (pas faite)** (Q1 déjà juste)" in texte
+    # Q2 réussie ensuite : son point disparaît, l'exercice reste à revoir pour Q3
+    r.append(resq("2026-11-06", "e1", Q2="reussi"))
+    assert E.points(r, D(2026, 11, 6))["e1"] == {"Q3": "pas faite"}
+    assert E.historique(r)["e1"][-1][1] == "non_fait"
+    # rien de juste : exercice entier, mais le blocage est affiché
+    r2 = [dict(resq("2026-11-04", "e1", Q1="presque"), points={"Q1": "synthèse"})]
+    c2 = ctx([ex("e1", t=30)], r2)
+    p2 = P.plan_jour(c2, D(2026, 11, 6))
+    assert "· 30 min ·" in "\n".join(P.rediger(c2, p2, P.anki(c2, p2))) and "**à refaire : Q1 (synthèse)**" in "\n".join(P.rediger(c2, p2, P.anki(c2, p2)))

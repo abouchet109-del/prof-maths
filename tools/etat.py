@@ -123,9 +123,28 @@ def _suivre(liste, aujourdhui=None):
         if aujourdhui is not None and en_date(r["date"]) > aujourdhui:
             continue
         etat_q = maj_questions(etat_q, r, precedent)
-        precedent = pire(etat_q.values()) if etat_q else r["resultat"]
+        manquent = [v for v in etat_q.values() if v != "reussi"]
+        # Le jugement global de la tentative reste le niveau de l'exercice ; mais « reussi » exige que
+        # toutes les questions connues le soient (reprise partielle réussie : le moins bon du reste).
+        precedent = pire(manquent) if r["resultat"] == "reussi" and manquent else r["resultat"]
         h.append((en_date(r["date"]), precedent))
     return h, etat_q
+
+
+def points(resultats, aujourdhui: dt.date) -> dict[str, dict[str, str]]:
+    """id d'exercice -> {question: ce qui a bloqué}, d'après le dernier `points` de chaque question encore
+    à refaire (une question réussie perd son point)."""
+    res = {}
+    for ex, liste in _par_exercice(resultats).items():
+        pts: dict = {}
+        for r in liste:
+            if en_date(r["date"]) <= aujourdhui:
+                pts.update({str(k): v for k, v in (r.get("points") or {}).items()})
+        etat_q = _suivre(liste, aujourdhui)[1]
+        pts = {q: t for q, t in pts.items() if etat_q.get(q) not in (None, "reussi")}
+        if pts:
+            res[ex] = pts
+    return res
 
 
 def _par_exercice(resultats) -> dict[str, list[dict]]:
@@ -141,9 +160,9 @@ def _par_exercice(resultats) -> dict[str, list[dict]]:
 def historique(resultats) -> dict[str, list[tuple[dt.date, str]]]:
     """id d'exercice -> tentatives [(date, résultat effectif)] triées par date (ordre du fichier à égalité).
 
-    Résultat effectif : le moins bon des questions connues après la tentative (suivi par sous-question,
-    09/11/2026), sinon le résultat déclaré. Une reprise de Q2 seule, réussie, ne rend donc l'exercice
-    `reussi` que si toutes les autres questions l'étaient déjà."""
+    Résultat effectif : le résultat déclaré, sauf un `reussi` alors qu'une question connue ne l'est pas
+    (reprise de Q2 seule, réussie) : c'est alors le moins bon des questions restantes. L'exercice n'est
+    donc `reussi` que si toutes ses questions le sont (suivi par sous-question, 09/11/2026)."""
     return {ex: _suivre(liste)[0] for ex, liste in _par_exercice(resultats).items()}
 
 
