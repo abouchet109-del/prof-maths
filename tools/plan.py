@@ -32,6 +32,7 @@ REPRISE_MIN = 10            # minutes au moins pour une reprise partielle (seule
 REPRISES_MAX_DEFAUT = 30    # minutes de reprises par jour au plus (dispo.yaml : minutes_reprises_max)
 CARTES_DEFAUT = 20          # cartes nouvelles par jour au plus (dispo.yaml : cartes_par_jour)
 EXERCICES_DEFAUT = 10       # cartes d'exercices nouvelles par jour au plus, à part des cartes de cours (dispo.yaml : exercices_par_jour)
+REQUISES_MAX = 25           # cartes nouvelles ajoutées hors plafond parce que les exercices du jour en ont besoin
 ANCIENNES_MAX = 10          # anciennes notes (couverture.yaml) ajoutées par jour aux « à apprendre », hors plafond
 LOT_ANKI = 40               # cartes interrogées à la fois dans Anki
 TAGS_PRIORITAIRES = {"erreur", "exercice"}   # cartes d'erreurs et d'exercices : toujours en tête de leur liste « à apprendre »
@@ -513,6 +514,52 @@ def _sc_matiere(ctx, plan) -> list[str]:
     return sorted((s for s in tous if _dans_limite(s, limite)), key=E.cle_sc)
 
 
+def sc_max_du_jour(plan):
+    """Le sous-chapitre le plus avancé des exercices du bloc et de l'annale du jour, dans la matière du bloc."""
+    scs = [e.get("sous_chapitre") for e, g in plan["items"]
+           if g.split(" ")[0] in ("bloc", "annale") and e["matiere"] == plan["matiere"] and e.get("sous_chapitre")]
+    return max(scs + [plan["sous_chapitre"]], key=E.cle_sc) if plan.get("sous_chapitre") else None
+
+
+def notions_requises(ctx, plan) -> set[str]:
+    """Notions qu'il faut avoir apprises avant les exercices du jour (demande du 11/11/2026 : jamais un exercice
+    dont une notion préalable n'a pas été vue) : dans la matière du bloc, toutes les notions du poly et tous les
+    prérequis rattachés (règle d) des sous-chapitres jusqu'au plus avancé des exercices du bloc ; plus les notions
+    citées par les exercices du bloc et de l'annale, et leurs prérequis (`requis_par`)."""
+    if not plan.get("sous_chapitre"):
+        return set()
+    m, fin = plan["matiere"], E.cle_sc(sc_max_du_jour(plan))
+    scs = [s for s in _sc_matiere(ctx, plan) if E.cle_sc(s) <= fin]
+    cles = {tuple(E.cle_sc(s)) for s in scs}
+    res = {n["id"] for n in ctx["notions"].values()
+           if n.get("matiere") == m and n.get("sous_chapitre") and tuple(E.cle_sc(_sc_notion(n))) in cles}
+    rattaches = prerequis_par_sc(ctx, m)
+    for s in scs:
+        res |= set(prerequis_de(rattaches, s))
+    items = [(e, g) for e, g in plan["items"] if g.split(" ")[0] in ("bloc", "annale")]
+    cites = {n for e, _ in items for n in e.get("notions") or []}
+    ids = {e["id"] for e, _ in items} | cites
+    res |= cites | {n["id"] for n in ctx["notions"].values() if est_prerequis(n) and ids & set(n.get("requis_par") or [])}
+    return res
+
+
+def notions_sans_exercice(ctx, plan) -> list[dict]:
+    """Notions du poly des sous-chapitres sans aucun exercice situés entre le sous-chapitre du bloc et le plus
+    avancé des exercices du jour (ex. 1.3.1 « Présentation du modèle » avant les exercices du 1.3.2) : jamais au
+    « Cours » sinon. Celles déjà `tenue` ou `reliee` sont omises."""
+    if not plan.get("sous_chapitre"):
+        return []
+    m = plan["matiere"]
+    debut, fin = E.cle_sc(plan["sous_chapitre"]), E.cle_sc(sc_max_du_jour(plan))
+    avec = {tuple(E.cle_sc(e.get("sous_chapitre"))) for e in ctx["exercices"] if e.get("matiere") == m}
+    comp = _comp(ctx)
+    res = [n for n in ctx["notions"].values()
+           if n.get("matiere") == m and n.get("sous_chapitre") and not est_prerequis(n)
+           and debut < E.cle_sc(_sc_notion(n)) <= fin and tuple(E.cle_sc(_sc_notion(n))) not in avec
+           and (comp.get(n["id"]) or {}).get("niveau") not in ("tenue", "reliee")]
+    return sorted(res, key=lambda n: (E.cle_sc(_sc_notion(n)), n["id"]))
+
+
 def sc_suivants(ctx, plan) -> list[str]:
     """Sous-chapitres de la matière du bloc après celui du bloc."""
     return [s for s in _sc_matiere(ctx, plan) if E.cle_sc(s) > E.cle_sc(plan["sous_chapitre"])]
@@ -625,18 +672,24 @@ def anki(ctx, plan, client=None) -> dict:
     limite_exos = 0 if off else ctx["dispo"].get("exercices_par_jour", EXERCICES_DEFAUT)
     ids = [c["id"] for c in ordre if not est_carte_exercice(c)]
     ids_exos = [c["id"] for c in ordre if est_carte_exercice(c)]
+    requis = set() if off else notions_requises(ctx, plan)
+    notion_de = {c["id"]: c.get("notion") for c in ordre}
     if client:
         nouvelles = premieres_nouvelles(client, ids, limite)
+        reste = [i for i in ids if i not in set(nouvelles) and notion_de.get(i) in requis]
+        requises = premieres_nouvelles(client, reste, REQUISES_MAX) if reste else []
         exercices = premieres_nouvelles(client, ids_exos, limite_exos)
         liees = [c["id"] for c in libres if c.get("notion") in notions_jour]
         encore = client.ids_nouveaux(liees) if liees else set()
         revoir = [i for i in liees if i not in encore]
     else:
         nouvelles = ids[:limite]
+        requises = [i for i in ids[limite:] if notion_de.get(i) in requis][:REQUISES_MAX]
         exercices = ids_exos[:limite_exos]
         revoir = [c["id"] for c in ctx["cartes"] if c["id"] in avant and c.get("notion") in notions_jour]
     return {
         "nouvelles": nouvelles,
+        "requises": requises,          # hors plafond : les exercices du jour en ont besoin (11/11/2026)
         "exercices": exercices,
         "anciennes": [] if plan["info"]["off"] else anciennes_notes(ctx, plan, client),
         "revoir": revoir,
@@ -875,7 +928,8 @@ def rediger(ctx, plan, cartes) -> list[str]:
         if consolider:
             L += ["", "## À consolider"] + consolider
         notions = cours_du_jour(ctx, plan)
-        sujet = {n["id"] for n in notions} | notions_des_exercices(ctx, plan)
+        sans_exo = notions_sans_exercice(ctx, plan)
+        sujet = {n["id"] for n in notions} | notions_des_exercices(ctx, plan) | {n["id"] for n in sans_exo}
         L += ["", f"## Cours ({info['minutes_cours']} min)"]
         comp = _comp(ctx)
         for n in notions:
@@ -884,15 +938,22 @@ def rediger(ctx, plan, cartes) -> list[str]:
             L.append(f"- `{n['id']}` {_court(n['titre'], 50)}{deja} · {_ref(n)}")
         if not notions:
             L.append("- (aucune notion liée)")
+        if sans_exo:
+            L.append(_court("- Avant les exercices qui suivent, à voir aussi (sous-chapitre sans exercice) : "
+                            + " ; ".join(f"`{n['id']}` {_court(n['titre'], 35)}" for n in sans_exo[:4])
+                            + (f" ; + {len(sans_exo) - 4}" if len(sans_exo) > 4 else ""), 300))
         rech = recherche_sujet(sujet, ctx.get("couverture"), ctx["cartes"])
         L += ["", "## Anki — tout le sujet du jour"]
         L += ["```", rech, "```"] if rech else ["- (aucune carte pour ces notions)"]
         L.append("Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes selon mes réponses” "
                  "pour réviser sans perturber le planning Anki.")
     anciennes = cartes.get("anciennes") or []
-    L += ["", f"## Anki — cours, à apprendre ({len(cartes['nouvelles'])} nouvelles"
+    req = cartes.get("requises") or []
+    apprendre = cartes["nouvelles"] + req
+    L += ["", f"## Anki — cours, à apprendre ({len(apprendre)} nouvelles"
+              + (f", dont {len(req)} en plus du plafond : les exercices du jour en ont besoin" if req else "")
               + (f" + {len(anciennes)} anciennes" if anciennes else "") + ")"]
-    requete = " or ".join(([_requete(cartes["nouvelles"])] if cartes["nouvelles"] else [])
+    requete = " or ".join(([_requete(apprendre)] if apprendre else [])
                           + ([f"nid:{','.join(map(str, anciennes))}"] if anciennes else []))
     requete = f"({requete}) is:new" if requete else ""     # jamais une carte déjà apprise
     L += ["```", requete, "```"] if requete else ["- (aucune)"]
@@ -931,7 +992,7 @@ def jour(date: dt.date, racine=E.RACINE, ecrire: bool = True) -> list[str]:
     lignes = rediger(ctx, plan, cartes)
     if not ecrire:
         return lignes
-    enregistrer_anki(racine, ctx, date, cartes["nouvelles"] + cartes["exercices"])
+    enregistrer_anki(racine, ctx, date, cartes["nouvelles"] + (cartes.get("requises") or []) + cartes["exercices"])
     enregistrer_anciennes(racine, ctx, date, cartes["anciennes"])
     enregistrer_bloc(racine, ctx, plan)
     (racine / "NOW.md").write_text("\n".join(lignes) + "\n", encoding="utf-8")
@@ -962,7 +1023,7 @@ def enregistrer_seance(racine, ctx, plan, cartes, maintenant):
     donnees[d] = {
         "heure": avant.get("heure") or maintenant.strftime("%H:%M"),
         "exercices": union(avant.get("exercices"), [e["id"] for e, _ in plan["items"]]),
-        "cartes": union(avant.get("cartes"), cartes["nouvelles"] + (cartes.get("exercices") or [])),
+        "cartes": union(avant.get("cartes"), cartes["nouvelles"] + (cartes.get("requises") or []) + (cartes.get("exercices") or [])),
         "anciennes": union(avant.get("anciennes"), cartes["anciennes"]),
         "anki": bool(cartes["source"] == "anki" or avant.get("anki")),
         "marge_debut": avant.get("marge_debut", b["marge"]),
@@ -985,7 +1046,7 @@ def seance(racine=E.RACINE, maintenant=None, client=None, toutes_reprises=False)
         plan["en_plus"] = reprises_en_plus(ctx, plan)
     cartes = anki(ctx, plan, client)
     lignes = rediger(ctx, plan, cartes)
-    enregistrer_anki(racine, ctx, d, cartes["nouvelles"] + cartes["exercices"])
+    enregistrer_anki(racine, ctx, d, cartes["nouvelles"] + (cartes.get("requises") or []) + cartes["exercices"])
     enregistrer_anciennes(racine, ctx, d, cartes["anciennes"])
     enregistrer_bloc(racine, ctx, plan)
     enregistrer_seance(racine, ctx, plan, cartes, maintenant)

@@ -560,7 +560,9 @@ def test_anciennes_notes_du_bloc_hors_plafond_et_sans_repetition():
     assert 300 not in a["anciennes"]
     lignes = P.rediger(c, p, a)
     requete = lignes[lignes.index("```", lignes.index(next(l for l in lignes if l.startswith("## Anki — cours, à apprendre")))) + 1]
-    assert requete == '("Id:eT" or "Id:eM" or nid:100,101,102,103,104,105,106,107,200,201) is:new'
+    # + les cartes des notions requises par les exercices du bloc, hors plafond (11/11/2026)
+    assert a["requises"] and requete == (f'({P._requete(a["nouvelles"] + a["requises"])} '
+                                         'or nid:100,101,102,103,104,105,106,107,200,201) is:new')
     # une entrée d'un jour futur (plan régénéré depuis) ne bloque rien
     c["anki_plan"] = {"2026-11-09": a["nouvelles"]}
     assert P.anki(c, p)["nouvelles"] == a["nouvelles"]
@@ -1390,3 +1392,28 @@ def test_toutes_reprises_ajoute_les_a_revoir_hors_budget():
     assert any("cartes de toutes les reprises" in x for x in L) and any('"Id:ex-v2"' in x for x in L)
     if "v1" in {e["id"] for e in plus}:
         assert any("`v1`" in x and "seulement Q2 (cas 0)" in x for x in L)
+
+
+# ----------------------------------------------------------- notions requises par les exercices (11/11/2026)
+def ctx_requis(**kw):
+    ch = "Chapitre 1 - X"
+    exos = [ex("a1", sc=f"{ch} > 1.1 A", notions=["n-a"]), ex("b1", sc=f"{ch} > 1.3 C", notions=["n-c"])]
+    notions = {"n-a": notion("n-a", ch, "1.1 A"), "n-b": notion("n-b", ch, "1.2 B"),       # 1.2 : aucun exercice
+               "n-c": notion("n-c", ch, "1.3 C"), "n-d": notion("n-d", ch, "1.4 D")}
+    cartes = [carte("cA", "n-a"), carte("cB1", "n-b"), carte("cB2", "n-b"), carte("cC", "n-c"), carte("cD", "n-d")]
+    return ctx(exos, notions=notions, cartes=cartes, **kw)
+
+
+def test_notions_requises_et_sous_chapitre_sans_exercice():
+    c = ctx_requis(dispo={"cartes_par_jour": 1})
+    p = P.plan_jour(c, D(2026, 11, 4))
+    assert ids(p) == ["a1", "b1"] and p["sous_chapitre"].endswith("1.1 A")
+    assert P.notions_requises(c, p) == {"n-a", "n-b", "n-c"}                 # pas n-d (1.4, après le 1.3)
+    assert [n["id"] for n in P.notions_sans_exercice(c, p)] == ["n-b"]
+    k = P.anki(c, p)
+    assert k["nouvelles"] == ["cA"] and k["requises"] == ["cB1", "cB2", "cC"]    # plafond 1, + 3 requises (pas cD)
+    L = P.rediger(c, p, k)
+    assert any("sous-chapitre sans exercice" in x and "`n-b`" in x for x in L)
+    assert any("dont 3 en plus du plafond" in x for x in L)
+    c["comprehension"] = {"notions": {"n-b": {"niveau": "tenue", "maj": "2026-11-03"}}}
+    assert P.notions_sans_exercice(c, p) == []                                # déjà tenue : omise

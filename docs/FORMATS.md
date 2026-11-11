@@ -241,6 +241,8 @@ Règles :
 
 ### Règles pour `plan.py` et `check.py`
 
+**Notions requises par les exercices du jour** (11/11/2026, `plan.notions_requises`) : dans la matière du bloc, les notions et prérequis rattachés de tous les sous-chapitres jusqu'au plus avancé des exercices du bloc, plus les notions des exercices et leurs prérequis. Leurs cartes nouvelles passent hors plafond (au plus `REQUISES_MAX` = 25, ligne « dont k en plus du plafond ») : un exercice n'arrive jamais avant les cartes de ce qu'il suppose. Les notions d'un sous-chapitre **sans exercice** de cet intervalle (`notions_sans_exercice`, hors `tenue`/`reliee`) sont listées à la fin de « Cours » : sinon elles n'y passeraient jamais.
+
 **Notions jumelles** (`meme_que: [ids]` dans `notions.yaml`, depuis le 11/11/2026) : la même notion dans deux matières (limsup d'ensembles en mesure et limsup d'événements en proba, Hölder, Fubini…). Lien dans les deux sens (`check.py`). Le plan (`plan._comp`) donne à chaque notion l'entrée la plus récente (`maj`) entre la sienne et celles de ses jumelles, marquée `via: <id>` si elle vient d'une jumelle : une notion travaillée en mesure n'arrive donc pas comme jamais vue en proba. Le debrief écrit l'entrée de la notion travaillée (celle du plan). Un lien `meme_que` seulement si les énoncés disent la même chose (μ ou P près) ; une notion qui en regroupe deux peut avoir deux jumelles.
 
 Ensembles : **à consolider** = niveau `inconnue`, `recitee` ou `fragile`, ou au moins une confusion `ouverte` ; **faible** = niveau `recitee` ou `fragile`, ou une confusion `ouverte`. Une notion absente de `comprehension.yaml` n'est ni l'un ni l'autre. Sous-chapitre d'une notion : `f"{chapitre} > {sous_chapitre}"` ; d'un exercice : son `sous_chapitre` ; comparaison par `etat.cle_sc`.
