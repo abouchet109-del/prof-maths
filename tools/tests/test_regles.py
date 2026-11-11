@@ -1370,3 +1370,23 @@ def test_check_meme_que(tmp_path):
                         ({**b, "meme_que": "topo-n-0001"}, "doit être une liste")]:
         ecrire("matieres/mesure/notions.yaml", [b2])
         assert any(attendu in x for x in C.verifier(tmp_path)), attendu
+
+
+# ----------------------------------------------------------- --toutes-reprises (11/11/2026)
+def test_toutes_reprises_ajoute_les_a_revoir_hors_budget():
+    exos = [ex("v1"), ex("v2"), ex("v3"), ex("v4")]
+    res = [{**resq("2026-11-04", "v1", Q1="reussi", Q2="presque"), "points": {"Q2": "cas 0"}},
+           {"exercice": "v2", "date": D(2026, 11, 4), "resultat": "presque", "palier_aide": 0},
+           {"exercice": "v4", "date": D(2026, 11, 4), "resultat": "presque", "palier_aide": 0}]
+    c = ctx(exos, res, cartes=[{**carte("ex-v2", None, ["exercice"]), "exercice": "v2"}],
+            dispo={"minutes_reprises_max": 10})
+    p = P.plan_jour(c, D(2026, 11, 7), seance=True)
+    deja = {e["id"] for e, g in p["items"] if g == "reprise"}
+    plus = P.reprises_en_plus(c, p)
+    assert len(deja) == 1 and {e["id"] for e in plus} == {"v1", "v2", "v4"} - deja      # v3 jamais tenté : non
+    p["en_plus"] = plus
+    L = P.rediger(c, p, P.anki(c, p))
+    assert any(x.startswith("### Reprises en plus") for x in L)
+    assert any("cartes de toutes les reprises" in x for x in L) and any('"Id:ex-v2"' in x for x in L)
+    if "v1" in {e["id"] for e in plus}:
+        assert any("`v1`" in x and "seulement Q2 (cas 0)" in x for x in L)

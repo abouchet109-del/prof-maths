@@ -37,7 +37,7 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 - Anki : une carte déjà exportée (`anki/registre.csv`) peut être corrigée ; l'utilisateur l'a demandé le 07/11/2026. Pour cela : `cartes.yaml`, puis `--reexporter`, voir « Cartes Anki ». Ne jamais changer `MODEL_ID`, `MODEL_NAME` ni `GUID_NAMESPACE` d'`anki.py`, ni l'`id` d'une carte : la mise à jour dans Anki repose sur eux.
 
 ## Commandes
-- Début de séance : `python tools/plan.py seance` → `NOW.md` (Anki ouvert ; `--sans-anki` pour estimer).
+- Début de séance : `python tools/plan.py seance` → `NOW.md` (Anki ouvert ; `--sans-anki` pour estimer ; `--toutes-reprises` : ajoute à la toute fin, hors budget, tous les autres exercices à revoir et une recherche Anki de leurs cartes, quand l'utilisateur a du temps en plus).
 - Fin de séance : `python tools/plan.py bilan [--date AAAA-MM-JJ]` → bilan réel à recopier dans le journal.
 - Simulation d'une date du calendrier (hors workflow) : `python tools/plan.py jour --date AAAA-MM-JJ` : affiche le plan, n'écrit rien (`--ecrire` pour écrire `NOW.md` et `state/`).
 - Résultat d'un exercice : `python tools/resultat.py ajouter …` (`--questions "Q1=reussi,Q2=presque"` : suivi par sous-question, la reprise ne redemande que ce qui manque) ; profil : `python tools/resultat.py profil`.

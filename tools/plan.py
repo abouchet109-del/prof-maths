@@ -815,6 +815,18 @@ def a_consolider(ctx, plan) -> list[str]:
     return lignes
 
 
+def reprises_en_plus(ctx, plan) -> list[dict]:
+    """Option `--toutes-reprises` (demande du 11/11/2026) : tous les exercices `a_revoir` qui ne sont pas déjà dans
+    le plan, dus ou non, hors budget, en reprise partielle (seulement les questions manquées). Ordre : date de
+    reprise prévue, puis ordre du fichier."""
+    d, etats = plan["date"], plan["etats"]
+    deja = {e["id"] for e, _ in plan["items"]}
+    qmap, pmap = E.questions(ctx["resultats"], d), E.points(ctx["resultats"], d)
+    es = [e for e in plan["exos"] if etats[e["id"]]["etat"] == "a_revoir" and e["id"] not in deja]
+    es.sort(key=lambda e: (str(etats[e["id"]]["du"]), e["ordre"]))
+    return [reprise_partielle(e, qmap.get(e["id"]), pmap.get(e["id"])) for e in es]
+
+
 def rediger(ctx, plan, cartes) -> list[str]:
     d, info = plan["date"], plan["info"]
     nature = info["raison"] if info["off"] else ("quota" if info["quota"] else "normal")
@@ -836,8 +848,10 @@ def rediger(ctx, plan, cartes) -> list[str]:
         L += ["", f"## Exercices ({plan['minutes']}/{info['minutes_exercices']} min)"]
         # Ordre de travail : annale, bloc, puis les reprises en fin de séance (seul, sur papier ; demande du 08/11/2026).
         # Le choix des exercices ne change pas : les reprises dues restent réservées en premier dans le temps.
-        for titre, genre in (("Annale", "annale"), ("Bloc", "bloc"), ("Reprises (en fin de séance)", "reprise")):
-            groupe = [(e, g) for e, g in plan["items"] if g.split(" ")[0] == genre]
+        affiches = plan["items"] + [(e, "plus") for e in plan.get("en_plus") or []]
+        for titre, genre in (("Annale", "annale"), ("Bloc", "bloc"), ("Reprises (en fin de séance)", "reprise"),
+                             ("Reprises en plus : toutes les autres à revoir, hors budget, à la toute fin", "plus")):
+            groupe = [(e, g) for e, g in affiches if g.split(" ")[0] == genre]
             if not groupe:
                 continue
             L.append(f"### {titre} ({sum(e['temps_min'] for e, _ in groupe)} min)")
@@ -886,6 +900,11 @@ def rediger(ctx, plan, cartes) -> list[str]:
     L += ["", f"## Anki — exercices à revoir ({len(exos)} nouvelles)"]
     L += ["```", f"({_requete(exos)}) is:new", "```",
           "Paquet filtré à part : cherche l'attaque avant de retourner la carte."] if exos else ["- (aucune)"]
+    if plan.get("en_plus"):
+        ar = {e["id"] for e, g in plan["items"] if g == "reprise"} | {e["id"] for e in plan["en_plus"]}
+        ce = [k["id"] for k in ctx["cartes"] if k.get("exercice") in ar and "exercice" in (k.get("tags") or [])]
+        L += ["", f"## Anki — cartes de toutes les reprises ({len(ce)}, apprises ou non)"]
+        L += ["```", _requete(ce), "```", "À regarder après avoir refait l'exercice sur papier."] if ce else ["- (aucune)"]
     if cartes.get("source") == "estimee":
         L.append("Anki fermé : cartes estimées.")
     if cartes.get("non_exportees"):
@@ -953,7 +972,7 @@ def enregistrer_seance(racine, ctx, plan, cartes, maintenant):
             "# Journal des séances lancées par `plan.py seance` : ce qui a été proposé (lu par `plan.py bilan`).\n")
 
 
-def seance(racine=E.RACINE, maintenant=None, client=None) -> list[str]:
+def seance(racine=E.RACINE, maintenant=None, client=None, toutes_reprises=False) -> list[str]:
     """Plan de la séance qui commence maintenant, d'après l'état réel : écrit NOW.md, mémorise le bloc, les
     cartes proposées (journal) et la séance. `client` : lecteur d'Anki (None : cartes estimées)."""
     racine = Path(racine)
@@ -962,6 +981,8 @@ def seance(racine=E.RACINE, maintenant=None, client=None) -> list[str]:
     ctx = contexte(racine)
     plan = plan_jour(ctx, d, seance=True)
     plan["heure"] = maintenant.strftime("%H:%M")
+    if toutes_reprises:
+        plan["en_plus"] = reprises_en_plus(ctx, plan)
     cartes = anki(ctx, plan, client)
     lignes = rediger(ctx, plan, cartes)
     enregistrer_anki(racine, ctx, d, cartes["nouvelles"] + cartes["exercices"])
@@ -1036,6 +1057,8 @@ def main():
     sc_ = sp.add_parser("seance", help="écrit NOW.md pour la séance qui commence maintenant")
     sc_.add_argument("--racine", default=None)
     sc_.add_argument("--sans-anki", action="store_true", help="ne pas lire Anki (cartes estimées)")
+    sc_.add_argument("--toutes-reprises", action="store_true",
+                     help="ajoute en fin de séance tous les autres exercices à revoir, hors budget")
     b = sp.add_parser("bilan", help="bilan réel de la séance du jour (à recopier dans le journal)")
     b.add_argument("--date", default=None, help="AAAA-MM-JJ (défaut : aujourd'hui)")
     b.add_argument("--racine", default=None)
@@ -1044,9 +1067,9 @@ def main():
     racine = Path(a.racine).resolve() if a.racine else E.RACINE
     if a.cmd == "seance":
         client = None if a.sans_anki else client_anki()
-        lignes = seance(racine, client=client)
+        lignes = seance(racine, client=client, toutes_reprises=a.toutes_reprises)
         print(f"NOW.md écrit pour la séance ({len(lignes)} lignes ; Anki {'lu' if client else 'fermé : cartes estimées'}).")
-        if len(lignes) > MAX_LIGNES:
+        if len(lignes) > MAX_LIGNES and not a.toutes_reprises:
             print(f"ATTENTION : plus de {MAX_LIGNES} lignes.", file=sys.stderr)
             sys.exit(1)
         return
