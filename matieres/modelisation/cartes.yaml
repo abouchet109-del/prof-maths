@@ -1215,6 +1215,46 @@
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 2
   tags: [prerequis-l1l2, methode]
+- id: mod-a-080-1
+  notion: mod-p-0005
+  recto: 'Déf : série de fonctions et convergence simple'
+  verso: 'Soient \(D\) un ensemble et \(f_n:D\to\mathbb K\) (\(\mathbb K=\mathbb R\) ou \(\mathbb C\)). La série de fonctions \(\sum f_n\) est la suite des sommes partielles \(S_N=\sum_{n=0}^Nf_n\). Elle converge simplement sur \(D\) si, pour tout \(x\in D\), la série numérique \(\sum f_n(x)\) converge ; sa somme est alors \(S(x)=\sum_{n=0}^{+\infty}f_n(x)\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, definition]
+- id: mod-a-080-2
+  notion: mod-p-0005
+  recto: 'Déf : convergence uniforme d''une série de fonctions'
+  verso: '\(\sum f_n\) converge uniformément sur \(D\) si la suite des sommes partielles \((S_N)\) converge uniformément sur \(D\). De façon équivalente : elle converge simplement et le reste \(R_N(x)=\sum_{n>N}f_n(x)\) vérifie \[\sup_{x\in D}|R_N(x)|\xrightarrow[N\to\infty]{}0.\]'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, definition]
+- id: mod-a-080-3
+  notion: mod-p-0005
+  recto: 'Déf : convergence normale d''une série de fonctions'
+  verso: '\(\sum f_n\) converge normalement sur \(D\) si chaque \(f_n\) est bornée sur \(D\) et si la série numérique \(\sum\|f_n\|_\infty\) converge, où \(\|f_n\|_\infty=\sup_{x\in D}|f_n(x)|\). En pratique : trouver \(a_n\ge0\) indépendant de \(x\) avec \(|f_n(x)|\le a_n\) pour tout \(x\in D\) et \(\sum a_n<+\infty\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, definition]
+- id: mod-a-080-4
+  notion: mod-p-0005
+  recto: 'Prop. : normale, uniforme, simple pour une série de fonctions'
+  verso: 'Normale \(\Rightarrow\) uniforme \(\Rightarrow\) simple. Preuve : \(|f_n(x)|\le\|f_n\|_\infty\), donc \(\sum f_n(x)\) converge absolument pour tout \(x\), et \(|R_N(x)|\le\sum_{n>N}\|f_n\|_\infty\to0\), majorant indépendant de \(x\). Réciproques fausses : \(\sum x^n\) converge simplement sur \(]-1,1[\) mais pas uniformément (\(R_N(x)=\frac{x^{N+1}}{1-x}\), non borné) ; les fonctions constantes \(f_n=\frac{(-1)^n}{n}\) (\(n\ge1\)) donnent une série uniformément convergente sur \(\mathbb R\), pas normalement (\(\sum\frac1n\) diverge).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: mod-a-080-5
+  notion: mod-p-0005
+  recto: 'Thm : continuité de la somme d''une série de fonctions'
+  verso: 'Soient \(D\subset\mathbb R\) (ou \(\mathbb C\)) et \(f_n:D\to\mathbb K\) continues. Si \(\sum f_n\) converge uniformément sur \(D\), sa somme \(S\) est continue sur \(D\) (limite uniforme des \(S_N\), continues). Si \(D\) est un intervalle, la convergence uniforme sur tout segment \([a,b]\subset D\) suffit, car la continuité est locale.'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, theoreme]
 - id: mod-a-078-1
   notion: mod-p-0003
   recto: 'Déf : rayon de convergence d''une série entière'
