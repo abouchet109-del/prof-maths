@@ -253,3 +253,79 @@
     Q2: prouver la convergence (k! domine), somme de E(X) à partir de k=1
     Q3: 'fonction caractéristique : définition à connaître'
   complet: true
+- date: 2026-11-10
+  exercice: pro-td1-ex05
+  resultat: presque
+  palier_aide: 3
+  note: 'Q1 : correction donnee apres ecriture de union-inter a l''envers ; Q3.2 et Q3.3 pas faites ; Q4 sans les exemples'
+  questions:
+    Q1: aide
+    Q2: reussi
+    Q3.1: reussi
+    Q3.2: non_fait
+    Q3.3: non_fait
+    Q4: presque
+  points:
+    Q1: 'limsup/liminf : écrit union-inter à l''envers, correction donnée'
+    Q3.2: pas faite
+    Q3.3: pas faite
+    Q4: donner les exemples, pas seulement l'idée
+- date: 2026-11-10
+  exercice: pro-uvsq-chap-1-exam-24-25-ex1
+  resultat: presque
+  palier_aide: 0
+  note: 'c : integrale de X dP generale non apprise ; e : convergence en probabilite ecrite au lieu de p.s.'
+  questions:
+    a: reussi
+    b: presque
+    c: presque
+    d: reussi
+    e: presque
+  complet: true
+  points:
+    b: 'léger : préciser que ce sont des boréliens'
+    c: définition générale de l'intégrale ∫X dP, pas apprise
+    e: 'convergence p.s. : P(X_n→Y)=1, pas en probabilité'
+- date: 2026-11-10
+  exercice: pro-uvsq-chap-3-ex-14
+  resultat: aide
+  palier_aide: 4
+  note: 'Q3 : methode et resultat donnes ; Q2 : etape binomiale completee apres correction, signe e^{-lx+ly}'
+  questions:
+    Q1: reussi
+    Q2: presque
+    Q3: aide
+  complet: true
+  points:
+    Q2: 'léger : étape binomiale à écrire seul, signe dans l''exponentielle'
+    Q3: 'loi conditionnelle de X sachant X+Y : méthode donnée'
+- date: 2026-11-10
+  exercice: pro-td1-ex07
+  resultat: presque
+  palier_aide: 0
+  note: 'Q1 : variance mal lue ((1-p)/p^2) et support N* ; Q2 : erreur de signe avec ln, mauvais evenement au depart'
+  questions:
+    Q1: presque
+    Q2: presque
+  complet: true
+  points:
+    Q1: 'léger : formule de Var (1-p)/p², support N*'
+    Q2: signe en passant au ln, bon événement de départ
+- date: 2026-11-10
+  exercice: pro-td1-ex08
+  resultat: reussi
+  palier_aide: 0
+  note: null
+  questions:
+    Q1: reussi
+    Q2: reussi
+  complet: true
+- date: 2026-11-10
+  exercice: pro-td2-ex07
+  resultat: reussi
+  palier_aide: 0
+  note: null
+  questions:
+    Q1: reussi
+    Q2: reussi
+  complet: true

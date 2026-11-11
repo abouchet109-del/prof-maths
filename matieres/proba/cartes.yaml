@@ -2086,3 +2086,89 @@
   chapitre: 'Chapitre 3 - Caractériser une loi'
   priorite: 1
   tags: [exercice]
+- id: ex-pro-td1-ex05
+  exercice: pro-td1-ex05
+  notion: proba-n-0002
+  recto: |-
+    <b>Exo pro-td1-ex05 : Limite supérieure d'événements et inégalité de Fatou (TD1)</b><br>
+    Soit \((A_i)_{i\ge1}\) une famille dénombrable d'événements ; \(\limsup A_i\) est l'ensemble des observations contenues dans une infinité de \(A_i\), et \(\liminf B_i:=\bigcup_{i\ge1}\bigcap_{j\ge i}B_j\).<br>
+    1. Montrer \(\limsup A_i=\bigcap_{i\ge1}\bigcup_{j\ge i}A_j\).<br>
+    2. Montrer \((\limsup A_i)^c=\liminf A_i^c\).<br>
+    3. Calculer \(\limsup A_i\) : 3.1 \(A_{2i}=F\), \(A_{2i+1}=G\) ; 3.2 \(A_i=\left]-\infty,\frac{(-1)^i}{i}\right]\) ; 3.3 \(A_i=\left[\frac{(-1)^i}{i},+\infty\right[\).<br>
+    4. Montrer l'inégalité de Fatou \(\lim_{k\to+\infty}\big(\sup_{i\ge k}\mathbb P(A_i)\big)\le\mathbb P(\limsup A_i)\) ; donner un exemple d'égalité et un exemple d'inégalité stricte.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(\omega\in\limsup A_i\) \(\iff\) pour tout \(i\), il existe \(j\ge i\) avec \(\omega\in A_j\) (« infiniment souvent » = \(\bigcap\bigcup\)) ; Fatou vient de la continuité décroissante de \(B_k=\bigcup_{j\ge k}A_j\).<br>
+    <b>Correction :</b><br>
+    1. \(\omega\) est dans un nombre fini de \(A_i\) \(\iff\) à partir d'un rang \(i\), \(\omega\notin A_j\) pour tout \(j\ge i\). Donc \(\omega\in\limsup A_i\) \(\iff\) pour tout \(i\ge1\), il existe \(j\ge i\) tel que \(\omega\in A_j\) \(\iff\) \(\omega\in\bigcap_{i}\bigcup_{j\ge i}A_j\).<br>
+    2. Règles de Boole : \((\bigcap_i\bigcup_{j\ge i}A_j)^c=\bigcup_i\bigcap_{j\ge i}A_j^c=\liminf A_i^c\).<br>
+    3.1 \(\limsup A_i=\bigcap_{i}\big(\bigcup_{2j\ge i}A_{2j}\cup\bigcup_{2j+1\ge i}A_{2j+1}\big)=\bigcap_i(F\cup G)=F\cup G\).<br>
+    3.2 Posons \(a_i=(-1)^i/i\) : \(a_{2i+1}<0<a_{2i}\), \(a_{2i}\to0\). Alors \(\limsup A_i=\left]-\infty,0\right]\). Double inclusion : si \(x>0\), \(x\notin A_{2i+1}\) pour tout \(i\) et \(x\notin A_{2i}\) dès que \(a_{2i}<x\) (car \(a_{2i}\to0\)), donc \(x\) n'est que dans un nombre fini de \(A_i\) ; si \(x\le0\), \(x\le a_{2i}\) pour tout \(i\ge1\), donc \(x\in A_{2i}\) pour une infinité d'indices.<br>
+    3.3 Même méthode (\(x\in A_i\iff x\ge a_i\)) : \(\limsup A_i=\left[0,+\infty\right[\) (si \(x\ge0\), \(x\ge a_{2i+1}\) pour tout \(i\) ; si \(x<0\), \(x\ge a_i\) exige \(i\) impair avec \(1/i\le|x|\), donc seulement pour un nombre fini d'indices).<br>
+    4. \(B_k=\bigcup_{j\ge k}A_j\) est décroissante ; pour \(j\ge k\), \(\mathbb P(A_j)\le\mathbb P(B_k)\), d'où \(\sup_{j\ge k}\mathbb P(A_j)\le\mathbb P(B_k)\). Par continuité décroissante, \(\mathbb P(B_k)\to\mathbb P(\bigcap_kB_k)=\mathbb P(\limsup A_i)\) ; la suite \(\sup_{j\ge k}\mathbb P(A_j)\) est décroissante donc a une limite, d'où l'inégalité.<br>
+    Égalité : \(A_k=A\) pour tout \(k\) (les deux membres valent \(\mathbb P(A)\)). Inégalité stricte : \(A\) avec \(0<\mathbb P(A)<1\), \(A_{2i}=A\), \(A_{2i+1}=A^c\) : \(\limsup A_i=A\cup A^c=\Omega\) (3.1), de proba 1, alors que la limite de gauche vaut \(\max(\mathbb P(A),1-\mathbb P(A))<1\).<br>
+    <b>Piège :</b> \(\limsup=\bigcap\bigcup\) (infiniment souvent) et \(\liminf=\bigcup\bigcap\) (à partir d'un rang) : ne pas inverser (inversé à la séance du 2026-11-10) ; la question 4 demande aussi les deux exemples, pas seulement la preuve.
+  source: 'proba/td/td1-corrige.pdf p.3-4 (Ex 5), corrigé officiel (3.3 et le détail de la double inclusion complétés selon la méthode de 3.2). Erreurs de la séance du 2026-11-10.'
+  chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
+  priorite: 1
+  tags: [exercice]
+- id: ex-pro-td1-ex07
+  exercice: pro-td1-ex07
+  notion: proba-n-0020
+  recto: |-
+    <b>Exo pro-td1-ex07 : Le trousseau de clefs (TD1)</b><br>
+    Un trousseau de 10 clefs comporte une seule clef ouvrant un appartement. Un ivrogne tire une clef ; si elle ne convient pas, il la remet dans le trousseau. \(X\) est le nombre de tirages à effectuer avant d'ouvrir.<br>
+    1. Loi de \(X\), espérance, variance.<br>
+    2. Nombre minimal de tentatives pour ouvrir la porte avec une probabilité supérieure à \(1/2\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> tirages indépendants avec remise, probabilité de succès \(p=1/10\) : \(X\) suit une loi géométrique de paramètre \(p\) à valeurs dans \(\mathbb N^*\) ; pour la question 2, on passe par \(\mathbb P(X>n)=(1-p)^n\).<br>
+    <b>Correction :</b><br>
+    1. \(\mathbb P(X=k)=(1-p)^{k-1}p=0{,}9^{k-1}\times0{,}1\) pour \(k\ge1\) ; \(\mathbb E(X)=1/p=10\) ; \(\mathrm{Var}(X)=\dfrac{1-p}{p^2}=\dfrac{0{,}9}{0{,}01}=90\) (par les séries).<br>
+    2. \(\mathbb P(X>n)=(1-p)^n\), donc \(\mathbb P(X\le n)>\frac12\iff0{,}9^n<\frac12\iff n\ln0{,}9<-\ln2\iff n>\dfrac{-\ln2}{\ln0{,}9}=\dfrac{\ln2}{\ln(10/9)}\approx6{,}58\) (on divise par \(\ln0{,}9<0\) : le sens de l'inégalité change). Le minimum est donc \(n=7\) (vérification : \(0{,}9^6\approx0{,}531>\frac12\), \(0{,}9^7\approx0{,}478<\frac12\)).<br>
+    <b>Piège :</b> variance \((1-p)/p^2\) (et non \((1-p^2)/p^2\)) ; support \(\mathbb N^*\) ; signe de \(\ln(1-p)\) en divisant ; partir du bon événement \(\{X>n\}\). Le corrigé officiel écrit « 6.5 » : la valeur est \(\approx6{,}58\), le minimum entier est 7.
+  source: 'proba/td/td1-corrige.pdf p.5 (Ex 7), corrigé officiel (valeur numérique 6.5 corrigée en 6,58 : vérifié). Erreurs de la séance du 2026-11-10.'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [exercice]
+- id: ex-pro-uvsq-chap-1-exam-24-25-ex1
+  exercice: pro-uvsq-chap-1-exam-24-25-ex1
+  notion: proba-n-0034
+  recto: |-
+    <b>Exo pro-uvsq-chap-1-exam-24-25-ex1 : Définitions de cours (examen UVSQ 2024-25)</b><br>
+    a) Définition d'une variable aléatoire. b) Définition de la loi d'une variable aléatoire. c) Définition de l'espérance d'une variable aléatoire réelle. d) Énoncé du théorème de transfert. e) Définition de la convergence presque sûre.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> chaque définition se donne avec son cadre (espaces mesurables, hypothèses d'intégrabilité) ; la convergence p.s. porte sur l'événement \(\{X_n\to X\}\), pas sur des probabilités d'écart.<br>
+    <b>Correction :</b><br>
+    a) Sur un espace de probabilité \((\Omega,\mathcal A,\mathbb P)\), une variable aléatoire à valeurs dans un espace mesurable \((E,\mathcal E)\) est une application mesurable \(X:\Omega\to E\) : \(X^{-1}(B)\in\mathcal A\) pour tout \(B\in\mathcal E\) (réelle si \(E=\mathbb R\) muni de sa tribu borélienne, vecteur aléatoire si \(E=\mathbb R^d\)).<br>
+    b) La loi de \(X\) est la mesure image \(\mathbb P_X(B)=\mathbb P(X\in B)=\mathbb P(\{\omega:X(\omega)\in B\})\) pour \(B\in\mathcal E\) : une probabilité sur \((E,\mathcal E)\).<br>
+    c) Pour \(X\) réelle, \(X=X^+-X^-\). Si \(X\ge0\), \(\mathbb E[X]=\int X\,d\mathbb P\in[0,+\infty]\) (limite des espérances de variables étagées positives croissant vers \(X\), avec \(\mathbb E[\sum a_i\mathbf 1_{A_i}]=\sum a_i\mathbb P(A_i)\)). En général, \(X\) est intégrable si \(\mathbb E[X^+]<+\infty\) et \(\mathbb E[X^-]<+\infty\) (soit \(\mathbb E|X|<+\infty\)) et \(\mathbb E[X]=\mathbb E[X^+]-\mathbb E[X^-]=\int X\,d\mathbb P\).<br>
+    d) Pour \(\psi\) mesurable à valeurs réelles, avec \(\psi\ge0\) ou \(\mathbb E[|\psi(X)|]<+\infty\) : \(\mathbb E[\psi(X)]=\int\psi\,d\mathbb P_X\) ; cas discret \(\sum_{x}\psi(x)\mathbb P(X=x)\) ; cas à densité \(\int_{\mathbb R}\psi(x)f_X(x)\,dx\).<br>
+    e) \(X_n\to X\) presque sûrement s'il existe un ensemble négligeable \(N\) tel que \(X_n(\omega)\to X(\omega)\) pour tout \(\omega\notin N\), c'est-à-dire \(\mathbb P(\{\omega:X_n(\omega)\to X(\omega)\})=1\).<br>
+    <b>Piège :</b> la convergence presque sûre n'est pas la convergence en probabilité (\(\forall\varepsilon>0,\ \mathbb P(|X_n-X|>\varepsilon)\to0\)), que l'on a écrite à la séance du 2026-11-10 ; en c), l'espérance générale est \(\int X\,d\mathbb P\) (à apprendre), pas seulement le cas discret ou à densité.
+  source: 'Énoncé : uvsq/probas/Probas/Annales/Probas_L3_Examen_Session_1_2425_v4.pdf p.1 (Ex 1). Pas de corrigé officiel : vérifiée par Claude, à confirmer ; définitions d''après proba/cours/poly-probabilites-5.pdf p.8, 15, 18, 20, 70. Erreurs de la séance du 2026-11-10.'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [exercice]
+- id: ex-pro-uvsq-chap-3-ex-14
+  exercice: pro-uvsq-chap-3-ex-14
+  notion: proba-n-0019
+  recto: |-
+    <b>Exo pro-uvsq-chap-3-ex-14 : E et Var de Poisson, loi de \(X+Y\) (TD3 UVSQ)</b><br>
+    \(X\) et \(Y\) sont deux variables aléatoires indépendantes de lois de Poisson de paramètres \(\lambda_X>0\) et \(\lambda_Y>0\).<br>
+    1. Calculer \(\mathbb E(X)\) et \(\mathrm{Var}(X)\) (on pourra commencer par \(\mathbb E(X(X-1))\)).<br>
+    2. Quelle est la loi de \(X+Y\) ?<br>
+    3. Pour \(n\ge0\) fixé, déterminer \(\mathbb P(X=k\mid X+Y=n)\) pour tout \(k\in\mathbb N\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> en sommant sur \(k\), le produit \(\lambda_X^k\lambda_Y^{n-k}/(k!(n-k)!)\) se réécrit avec \(\binom nk/n!\) : c'est la formule du binôme, qui donne à la fois la loi de \(X+Y\) (question 2) et la loi conditionnelle (question 3, binomiale).<br>
+    <b>Correction :</b><br>
+    1. \(\mathbb P(X=k)=e^{-\lambda_X}\lambda_X^k/k!\). \(\mathbb E(X)=\sum_{k\ge1}k\,e^{-\lambda_X}\frac{\lambda_X^k}{k!}=\lambda_Xe^{-\lambda_X}\sum_{j\ge0}\frac{\lambda_X^j}{j!}=\lambda_X\). \(\mathbb E[X(X-1)]=\sum_{k\ge2}e^{-\lambda_X}\frac{\lambda_X^k}{(k-2)!}=\lambda_X^2\). Donc \(\mathrm{Var}(X)=\mathbb E[X(X-1)]+\mathbb E(X)-\mathbb E(X)^2=\lambda_X^2+\lambda_X-\lambda_X^2=\lambda_X\).<br>
+    2. Par indépendance, pour \(n\in\mathbb N\) : \(\mathbb P(X+Y=n)=\sum_{k=0}^n\mathbb P(X=k)\mathbb P(Y=n-k)=e^{-(\lambda_X+\lambda_Y)}\sum_{k=0}^n\frac{\lambda_X^k\lambda_Y^{n-k}}{k!(n-k)!}=\frac{e^{-(\lambda_X+\lambda_Y)}}{n!}\sum_{k=0}^n\binom nk\lambda_X^k\lambda_Y^{n-k}=e^{-(\lambda_X+\lambda_Y)}\frac{(\lambda_X+\lambda_Y)^n}{n!}\). Donc \(X+Y\sim\mathcal P(\lambda_X+\lambda_Y)\).<br>
+    3. Pour \(k>n\), la probabilité est nulle. Pour \(0\le k\le n\) : \(\mathbb P(X=k\mid X+Y=n)=\dfrac{\mathbb P(X=k)\mathbb P(Y=n-k)}{\mathbb P(X+Y=n)}=\dfrac{e^{-\lambda_X}\frac{\lambda_X^k}{k!}\,e^{-\lambda_Y}\frac{\lambda_Y^{n-k}}{(n-k)!}}{e^{-(\lambda_X+\lambda_Y)}\frac{(\lambda_X+\lambda_Y)^n}{n!}}=\binom nk\Big(\dfrac{\lambda_X}{\lambda_X+\lambda_Y}\Big)^k\Big(\dfrac{\lambda_Y}{\lambda_X+\lambda_Y}\Big)^{n-k}\). Donc sachant \(X+Y=n\), \(X\sim\mathcal B\big(n,\frac{\lambda_X}{\lambda_X+\lambda_Y}\big)\).<br>
+    <b>Piège :</b> le facteur \(e^{-(\lambda_X+\lambda_Y)}\) (signe moins pour les deux paramètres) ; la sommation va de \(0\) à \(n\) (indépendance) ; ne pas oublier \(\binom nk\) en multipliant et divisant par \(n!\).
+  source: 'Énoncé : uvsq/probas/Probas/TD/MA631_TD3_2023.pdf (Ex 14). Pas de corrigé officiel : vérifiée par Claude, à confirmer ; calculs revérifiés étape par étape. Erreurs de la séance du 2026-11-10.'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 1
+  tags: [exercice]

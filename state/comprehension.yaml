@@ -391,10 +391,96 @@ notions:
       verdict: partiel
       exercice: pro-par2425-ex01
     maj: *id001
+  proba-p-0001:
+    niveau: fragile
+    vision: 'limsup = infiniment souvent = inter des unions ; liminf = a partir d''un rang = union des inter ; le complementaire de limsup est le liminf des complementaires'
+    liens:
+    - vers: proba-n-0117
+      texte: 'Borel-Cantelli : P(limsup A_n)=0 si la serie converge ; la definition ∩∪ sert a majorer P(∪ k>=n)'
+    liens_manquants: []
+    confusions:
+    - date: 2026-11-10
+      statut: ouverte
+      texte: 'inverse encore inter et union (ex05 Q1 ecrit union-inter pour limsup) ; dit une coquille orale, mais revient ; associe d''abord limsup a a partir d''un rang'
+    preuves:
+    - date: 2026-11-10
+      source: cours
+      extrait: 'confond infinite de n et a partir d''un rang ; exemple pile/face compris, formules ∪∩/∩∪ retrouvees apres relance'
+      verdict: partiel
+    - date: 2026-11-10
+      source: cours
+      extrait: 'complementaire de limsup : retrouve seul par De Morgan apres s''etre corrige'
+      verdict: juste
+    - date: 2026-11-10
+      source: exercice
+      extrait: 'ex05 Q1 : limsup ecrit union-inter, correction donnee ; Q2 (complementaire) et Q3.1 justes'
+      verdict: partiel
+      exercice: pro-td1-ex05
+    maj: 2026-11-10
+  proba-n-0002:
+    niveau: fragile
+    vision: 'la continuite en croissant (reunion) et en decroissant (intersection) equivaut a la sigma-additivite ; passe de l''une a l''autre par complementaire'
+    liens: []
+    liens_manquants: []
+    confusions:
+    - date: 2026-11-10
+      statut: ouverte
+      texte: 'melange les noms continuite croissante/decroissante ; definition ou theoreme selon le point de depart (sa prepa part de la sigma-additivite)'
+    preuves:
+    - date: 2026-11-10
+      source: cours
+      extrait: 'comprend (iii) apres explication ; retrouve la decroissante a partir de la croissante par complementaire'
+      verdict: partiel
+    maj: 2026-11-10
+  proba-n-0117:
+    niveau: fragile
+    vision: 'si la serie des P(A_n) converge, P(limsup A_n)=0 : limsup inclus dans ∪ k>=n A_k, dont la proba est majoree par la queue de serie'
+    liens:
+    - vers: proba-p-0001
+      texte: 'utilise limsup = ∩_n ∪_{k>=n}'
+    liens_manquants: []
+    confusions: []
+    preuves:
+    - date: 2026-11-10
+      source: cours
+      extrait: 'preuve de la 1re partie redonnee apres enseignement ; petit accroc sur la sous-additivite'
+      verdict: partiel
+    maj: 2026-11-10
+  proba-n-0121:
+    niveau: recitee
+    vision: 'convergence p.s. = P(X_n tend vers Y)=1 ; l''avait pas vue avant la correction'
+    liens: []
+    liens_manquants: []
+    confusions:
+    - date: 2026-11-10
+      statut: ouverte
+      texte: 'ex1 e) : ecrit la convergence en probabilite pour la convergence presque sure'
+    preuves:
+    - date: 2026-11-10
+      source: exercice
+      extrait: 'e) convergence en probabilite ecrite ; p.s. non connue avant la correction'
+      verdict: faux
+      exercice: pro-uvsq-chap-1-exam-24-25-ex1
+    maj: 2026-11-10
+  proba-n-0019:
+    niveau: fragile
+    vision: 'Poisson(l) : E=Var=l ; somme de Poisson independantes est Poisson (convolution) ; X sachant X+Y suit une binomiale'
+    liens: []
+    liens_manquants:
+    - vers: proba-n-0018
+      texte: 'ne voit pas seul que X conditionnellement a X+Y est binomiale ; a besoin qu on lui donne la methode'
+    confusions: []
+    preuves:
+    - date: 2026-11-10
+      source: exercice
+      extrait: 'ex14 Q1 juste ; Q2 convolution/binomiale completee apres correction ; Q3 methode et resultat donnes'
+      verdict: partiel
+      exercice: pro-uvsq-chap-3-ex-14
+    maj: 2026-11-10
 style:
-- 'pense à voix haute et mélange parfois l''exemple et le cas général : lui redonner le fil'
-- comprend par un chiffre concret (n=1000, eps=0,01) puis généralise
-- 'confond inégalité stricte/large et le sens des implications : lui faire tester sur un chiffre'
+- 'pense à voix haute, mélange exemple et cas général (lui redonner le fil) ; comprend par un chiffre concret puis généralise'
+- 'confond stricte/large, sens des implications et inter/union (dit coquille orale, mais revient à l''écrit) : lui faire tester sur un chiffre'
+- 'abandonne la méthode quand le résultat paraît absurde au lieu de revérifier la dernière étape ; demande la réponse pour finir un calcul : ne créditer que ce qui est écrit'
 - 'bloque plus sur la redaction ecrite que sur l''idee ; saute les justifications qu''il juge ''immediates'' (vide dans T_n, denombrabilite, bien defini) : lui faire ecrire la sous-partie manquante'
 - 'dit « inattention » pour des confusions de fond (ouvert/boule ouverte) : trancher cas par cas'
 - 'bon réflexe : retrouve seul des identités et fait des liens (sup dans l''adhérence)'
