@@ -1255,6 +1255,54 @@
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
   tags: [prerequis-l1l2, theoreme]
+- id: mod-a-080-6
+  notion: mod-p-0005
+  recto: 'Thm : critère de Cauchy uniforme pour une série de fonctions'
+  verso: 'Soient \(D\) un ensemble et \(f_n:D\to\mathbb K\) (\(\mathbb K=\mathbb R\) ou \(\mathbb C\), complet). La série \(\sum f_n\) converge uniformément sur \(D\) si et seulement si \[\forall\varepsilon>0,\ \exists N,\ \forall q>p\ge N,\ \forall x\in D,\ \Big|\sum_{n=p+1}^{q}f_n(x)\Big|\le\varepsilon.\]'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, theoreme]
+- id: mod-a-080-7
+  notion: mod-p-0005
+  recto: 'Prop. : condition nécessaire de convergence uniforme d''une série de fonctions'
+  verso: 'Si \(\sum f_n\) converge uniformément sur \(D\), alors \(f_n\to0\) uniformément sur \(D\) : \(f_n=R_{n-1}-R_n\), donc \(\sup_D|f_n|\le\sup_D|R_{n-1}|+\sup_D|R_n|\to0\). Usage : \(\sum x^n\) ne converge pas uniformément sur \(]-1,1[\), car \(\sup_{]-1,1[}|x^n|=1\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: mod-a-080-8
+  notion: mod-p-0005
+  recto: 'Thm : interversion limite et somme (double limite)'
+  verso: 'Soient \(D\subset\mathbb R\), \(a\in\overline{\mathbb R}\) adhérent à \(D\) et \(f_n:D\to\mathbb K\). Si \(\sum f_n\) converge uniformément sur \(D\) et si, pour tout \(n\), \(f_n(x)\to\ell_n\) quand \(x\to a\), alors la série \(\sum\ell_n\) converge et \[\lim_{x\to a}\sum_{n=0}^{+\infty}f_n(x)=\sum_{n=0}^{+\infty}\ell_n.\]'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, theoreme]
+- id: mod-a-080-9
+  notion: mod-p-0005
+  recto: 'Thm : intégration terme à terme d''une série de fonctions sur un segment'
+  verso: 'Soient \(a<b\) et \(f_n:[a,b]\to\mathbb K\) continues. Si \(\sum f_n\) converge uniformément sur \([a,b]\), alors la série \(\sum\int_a^bf_n\) converge et \[\int_a^b\sum_{n=0}^{+\infty}f_n(t)\,dt=\sum_{n=0}^{+\infty}\int_a^bf_n(t)\,dt.\] Preuve : \(\big|\int_a^bR_N\big|\le(b-a)\sup_{[a,b]}|R_N|\to0\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, theoreme]
+- id: mod-a-080-10
+  notion: mod-p-0005
+  recto: 'Thm : dérivation terme à terme d''une série de fonctions'
+  verso: 'Soient \(I\) un intervalle et \(f_n:I\to\mathbb K\) de classe \(C^1\). Si \(\sum f_n\) converge simplement sur \(I\) et si \(\sum f_n''\) converge uniformément sur tout segment de \(I\), alors \(S=\sum f_n\) est de classe \(C^1\) sur \(I\) et \(S''=\sum f_n''\). Version \(C^k\) : \(f_n\) de classe \(C^k\), \(\sum f_n^{(j)}\) converge simplement pour \(0\le j\le k-1\) et \(\sum f_n^{(k)}\) uniformément sur tout segment ; alors \(S\) est \(C^k\) et \(S^{(j)}=\sum f_n^{(j)}\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, theoreme]
+- id: mod-a-080-11
+  notion: mod-p-0005
+  recto: 'Prop. : convergence uniforme d''une série alternée de fonctions'
+  verso: 'Si, pour tout \(x\in D\), \(f_n(x)=(-1)^na_n(x)\) avec \((a_n(x))_n\) décroissante de limite \(0\), alors \(\sum f_n\) converge simplement sur \(D\) et \(|R_N(x)|\le a_{N+1}(x)\) (critère des séries alternées). Si de plus \(\sup_{x\in D}a_n(x)\to0\), la convergence est uniforme sur \(D\).'
+  source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
 - id: mod-a-078-1
   notion: mod-p-0003
   recto: 'Déf : rayon de convergence d''une série entière'
