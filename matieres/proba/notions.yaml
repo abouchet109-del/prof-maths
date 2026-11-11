@@ -7,6 +7,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 6}
   essentiel: true
 - id: proba-n-0002
+  meme_que: [mesure-n-0034, mesure-n-0036]
   titre: 'Formulations équivalentes de la continuité (additivité dénombrable, continuité monotone)'
   type: propriete
   chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
@@ -23,6 +24,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 6}
   essentiel: true
 - id: proba-n-0004
+  meme_que: [mesure-n-0032, mesure-n-0038]
   titre: 'Conséquences : monotonie, sous-additivité, $P(A^c)$'
   type: propriete
   chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
@@ -39,6 +41,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 7}
   essentiel: false
 - id: proba-n-0006
+  meme_que: [mesure-n-0042, mesure-n-0044]
   titre: 'Événement négligeable, presque sûr, propriété vraie presque sûrement'
   type: definition
   chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
@@ -79,6 +82,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 8}
   essentiel: true
 - id: proba-n-0011
+  meme_que: [mesure-n-0008]
   titre: 'Tribu'
   type: definition
   chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
@@ -87,6 +91,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 9}
   essentiel: true
 - id: proba-n-0012
+  meme_que: [mesure-n-0011, mesure-n-0012]
   titre: 'Tribu engendrée et tribu borélienne'
   type: definition
   chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
@@ -95,6 +100,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 10}
   essentiel: false
 - id: proba-n-0013
+  meme_que: [mesure-n-0014]
   titre: 'Variable aléatoire (définition rigoureuse, mesurabilité)'
   type: definition
   chapitre: 'Chapitre 1 - Rappels sur le modèle probabiliste'
@@ -247,6 +253,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 18}
   essentiel: false
 - id: proba-n-0032
+  meme_que: [mesure-n-0023]
   titre: 'Variable étagée et son espérance'
   type: definition
   chapitre: 'Chapitre 2 - Variables aléatoires réelles'
@@ -255,6 +262,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 19}
   essentiel: false
 - id: proba-n-0033
+  meme_que: [mesure-n-0025]
   titre: 'Espérance d''une variable positive (approximation par des étagées)'
   type: definition
   chapitre: 'Chapitre 2 - Variables aléatoires réelles'
@@ -279,6 +287,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 20}
   essentiel: true
 - id: proba-n-0036
+  meme_que: [mesure-n-0050, mesure-n-0056]
   titre: 'Théorèmes de convergence monotone et de convergence dominée'
   type: theoreme
   chapitre: 'Chapitre 2 - Variables aléatoires réelles'
@@ -615,6 +624,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 41}
   essentiel: true
 - id: proba-n-0078
+  meme_que: [mesure-n-0060, mesure-n-0061]
   titre: 'Théorèmes de Fubini et Fubini-Tonelli'
   type: theoreme
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
@@ -647,6 +657,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 44}
   essentiel: true
 - id: proba-n-0082
+  meme_que: [mesure-n-0062]
   titre: 'Changement de variables dans une intégrale multiple'
   type: methode
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
@@ -719,6 +730,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 50}
   essentiel: false
 - id: proba-n-0091
+  meme_que: [mesure-n-0066]
   titre: 'Inégalité de Hölder'
   type: theoreme
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
@@ -727,6 +739,7 @@
   source: {etab: paris-cite, fichier: proba/cours/poly-probabilites-5.pdf, page: 51}
   essentiel: true
 - id: proba-n-0092
+  meme_que: [mesure-n-0067]
   titre: 'Inégalité de Minkowski'
   type: theoreme
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
@@ -1152,6 +1165,7 @@
   essentiel: true
 # Prérequis L1-L2 : notions `type: prerequis` servies avant les notions du poly de leur sous-chapitre
 - id: proba-p-0001
+  meme_que: [mesure-n-0005]
   titre: Limsup et liminf d'une suite d'événements
   type: prerequis
   chapitre: Chapitre 1 - Rappels sur le modèle probabiliste

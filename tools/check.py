@@ -256,6 +256,18 @@ def verifier(racine=E.RACINE) -> list[str]:
     for n in notions.values():
         if n.get("type") != "prerequis":
             sc_poly.setdefault(n["matiere"], set()).add(f"{n.get('chapitre')} > {n.get('sous_chapitre')}")
+    for i, n in notions.items():                 # notions jumelles : ids connus, lien dans les deux sens
+        mq = n.get("meme_que")
+        if mq is None:
+            continue
+        if not isinstance(mq, list) or i in mq:
+            erreurs.append(f"notion {i} : `meme_que` doit être une liste d'autres notions")
+            continue
+        for j in mq:
+            if j not in notions:
+                erreurs.append(f"notion {i} : meme_que inconnu ({j})")
+            elif i not in (notions[j].get("meme_que") or []):
+                erreurs.append(f"notion {i} : meme_que {j} sans le lien inverse")
     for n in notions.values():
         if n.get("type") != "prerequis":
             continue

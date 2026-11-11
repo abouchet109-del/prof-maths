@@ -1,4 +1,5 @@
 - id: topo-n-0001
+  meme_que: [mesure-n-0007]
   titre: 'Formules de De Morgan'
   type: propriete
   chapitre: 'Chapitre 1 - Espace métrique'
@@ -770,6 +771,7 @@
   essentiel: true
   requis_par: [topo-dm2022-23-ex02]
 - id: topo-p-0003
+  meme_que: [mesure-n-0001, mesure-n-0047]
   titre: Ensemble au plus dénombrable ; $\mathbb Q$ dénombrable, $\mathbb R$ non dénombrable
   type: prerequis
   chapitre: Chapitre 1 - Espace métrique

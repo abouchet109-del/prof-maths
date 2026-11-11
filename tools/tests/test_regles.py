@@ -938,7 +938,9 @@ def test_a_consolider_absente_si_vide_et_comportement_inchange():
     assert p0["sous_chapitre"] == sc("1.3") and "## À consolider" not in L0
     for vide in ({"notions": {}, "style": []}, comp(**{"n-a": "tenue", "n-c": "reliee"})):
         L, _ = now(ctx_comp(vide))
-        assert L == L0
+        # seule différence : le niveau déjà mesuré sur la ligne de cours (11/11/2026)
+        assert [x.split(" · déjà vu : ")[0] + (" · " + x.rsplit(" · ", 1)[1] if " · déjà vu : " in x else "")
+                for x in L] == L0
 
 
 def test_a_consolider_juste_avant_le_cours_et_filtre_par_sous_chapitre():
@@ -1325,3 +1327,46 @@ def test_points_de_blocage_affiches_a_la_reprise():
     c2 = ctx([ex("e1", t=30)], r2)
     p2 = P.plan_jour(c2, D(2026, 11, 6))
     assert "· 30 min ·" in "\n".join(P.rediger(c2, p2, P.anki(c2, p2))) and "**à refaire : Q1 (synthèse)**" in "\n".join(P.rediger(c2, p2, P.anki(c2, p2)))
+
+
+# ----------------------------------------------------------- notions jumelles (meme_que)
+def test_notions_jumelles_partagent_la_comprehension():
+    notions = {"m-5": {"id": "m-5", "titre": "limsup", "matiere": "mesure", "meme_que": ["p-1"]},
+               "p-1": {"id": "p-1", "titre": "limsup", "matiere": "proba", "type": "prerequis", "meme_que": ["m-5"]},
+               "x": {"id": "x", "titre": "x", "matiere": "proba"}}
+    comp = {"notions": {"m-5": {"niveau": "fragile", "maj": "2026-11-09"}}}
+    c = ctx([], notions=notions, comprehension=comp)
+    r = P._comp(c)
+    assert r["p-1"] == {"niveau": "fragile", "maj": "2026-11-09", "via": "m-5"}    # vue en mesure hier
+    assert "x" not in r and "via" not in r["m-5"]
+    comp["notions"]["p-1"] = {"niveau": "tenue", "maj": "2026-11-10"}             # retravaillée en proba
+    r = P._comp(c)
+    assert r["p-1"]["niveau"] == "tenue" and "via" not in r["p-1"]
+    assert r["m-5"] == {"niveau": "tenue", "maj": "2026-11-10", "via": "p-1"}     # la plus récente gagne
+    comp["notions"]["p-1"]["maj"] = "2026-11-09"
+    assert P._comp(c)["m-5"]["niveau"] == "fragile"                               # à égalité, la sienne
+    assert P._ref(notions["p-1"]) == "prérequis L1-L2"
+    assert P._ref({"source": {"fichier": "a.pdf", "page": 6}}) == "a.pdf p.6"
+    assert P._ref({"source": {"fichier": "a.pdf"}}) == "a.pdf"
+
+
+def test_check_meme_que(tmp_path):
+    import yaml
+    import check as C
+    (tmp_path / "state").mkdir()
+    for m in E.MATIERES:
+        (tmp_path / "matieres" / m).mkdir(parents=True)
+    ecrire = lambda chemin, d: (tmp_path / chemin).write_text(yaml.safe_dump(d, allow_unicode=True), encoding="utf-8")  # noqa: E731
+    ecrire("state/dispo.yaml", ctx([])["dispo"])
+    ecrire("state/resultats.yaml", [])
+    a = {"id": "topo-n-0001", "type": "definition", "titre": "t", "chapitre": "Chapitre 1 - X",
+         "sous_chapitre": "1.1", "enonce": "e", "meme_que": ["mesure-n-0001"]}
+    b = {**a, "id": "mesure-n-0001", "meme_que": ["topo-n-0001"]}
+    ecrire("matieres/topologie/notions.yaml", [a])
+    ecrire("matieres/mesure/notions.yaml", [b])
+    assert not [x for x in C.verifier(tmp_path) if "meme_que" in x]
+    for b2, attendu in [({**b, "meme_que": []}, "sans le lien inverse"),
+                        ({**b, "meme_que": ["topo-n-0001", "mesure-n-0009"]}, "meme_que inconnu"),
+                        ({**b, "meme_que": "topo-n-0001"}, "doit être une liste")]:
+        ecrire("matieres/mesure/notions.yaml", [b2])
+        assert any(attendu in x for x in C.verifier(tmp_path)), attendu

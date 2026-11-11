@@ -100,8 +100,19 @@ A_CONSOLIDER_MAX = 5        # lignes de la section « À consolider » de NOW.md
 
 
 def _comp(ctx) -> dict:
-    """notion -> entrée de comprehension.yaml ({} si le fichier est absent ou vide)."""
-    return ((ctx.get("comprehension") or {}).get("notions")) or {}
+    """notion -> entrée de comprehension.yaml ({} si le fichier est absent ou vide).
+    Notions jumelles (`meme_que` de notions.yaml : la même notion dans deux matières) : chaque notion prend
+    l'entrée la plus récente (`maj`) entre la sienne et celles de ses jumelles ; la sienne à égalité. Une entrée
+    venue d'une jumelle porte `via: <id>`."""
+    brut = ((ctx.get("comprehension") or {}).get("notions")) or {}
+    res = dict(brut)
+    for i, n in (ctx.get("notions") or {}).items():
+        cand = ([(i, brut[i])] if i in brut else []) + [(j, brut[j]) for j in n.get("meme_que") or [] if j in brut]
+        if cand:
+            j, c = max(cand, key=lambda t: str(t[1].get("maj") or ""))     # max garde le premier à égalité
+            if j != i:
+                res[i] = {**c, "via": j}
+    return res
 
 
 def _ouvertes(c) -> list[dict]:
@@ -762,6 +773,14 @@ def _source(e) -> str:
     return f"{s.get('etab', '?')} : {s.get('numero', '?')}"
 
 
+def _ref(n) -> str:
+    """Où lire la notion : le PDF et la page, sinon « prérequis L1-L2 » (pas de poly)."""
+    s = n.get("source") or {}
+    if s.get("fichier"):
+        return f"{s['fichier']} p.{s['page']}" if s.get("page") else s["fichier"]
+    return "prérequis L1-L2" if est_prerequis(n) else "sans source"
+
+
 def _court(txt, n=60) -> str:
     return txt if len(txt) <= n else txt[: n - 1] + "…"
 
@@ -788,10 +807,8 @@ def a_consolider(ctx, plan) -> list[str]:
     for i, n, c in choisies[:A_CONSOLIDER_MAX]:
         ouv = _ouvertes(c)
         dire = (max(ouv, key=lambda x: str(x.get("date")))["texte"] if ouv else c.get("vision")) or ""
-        s = n.get("source") or {}
-        morceaux = [f"`{i}` {_court(n['titre'], 50)}", c.get("niveau"), " ".join(str(dire).split())]
-        if s.get("fichier"):
-            morceaux.append(f"{s['fichier']} p.{s.get('page')}")
+        morceaux = [f"`{i}` {_court(n['titre'], 50)}", c.get("niveau") + (f" (via `{c['via']}`)" if c.get("via") else ""),
+                    " ".join(str(dire).split()), _ref(n)]
         lignes.append(_court("- " + " · ".join(x for x in morceaux if x), 160))
     if len(choisies) > A_CONSOLIDER_MAX:
         lignes.append(f"- + {len(choisies) - A_CONSOLIDER_MAX} autres")
@@ -846,9 +863,11 @@ def rediger(ctx, plan, cartes) -> list[str]:
         notions = cours_du_jour(ctx, plan)
         sujet = {n["id"] for n in notions} | notions_des_exercices(ctx, plan)
         L += ["", f"## Cours ({info['minutes_cours']} min)"]
+        comp = _comp(ctx)
         for n in notions:
-            s = n.get("source") or {}
-            L.append(f"- `{n['id']}` {_court(n['titre'], 50)} · {s.get('fichier')} p.{s.get('page')}")
+            c = comp.get(n["id"]) or {}
+            deja = (f" · déjà vu : {c.get('niveau')}" + (f" (via `{c['via']}`)" if c.get("via") else "")) if c else ""
+            L.append(f"- `{n['id']}` {_court(n['titre'], 50)}{deja} · {_ref(n)}")
         if not notions:
             L.append("- (aucune notion liée)")
         rech = recherche_sujet(sujet, ctx.get("couverture"), ctx["cartes"])
