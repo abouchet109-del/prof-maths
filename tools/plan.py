@@ -940,10 +940,12 @@ def rediger(ctx, plan, cartes) -> list[str]:
                 if e.get("a_refaire"):
                     ligne += " · seulement " + ", ".join(RESTE_LISIBLE.get(q, q) for q in e["a_refaire"])
                 L.append(ligne)
-            ids_seul = {e["id"] for e in seul}
-            ce = [k["id"] for k in ctx["cartes"] if k.get("exercice") in ids_seul and "exercice" in (k.get("tags") or [])]
-            if ce:
-                L += ["```", _requete(ce), "```"]
+        # 12/11/2026 : paquet filtré de TOUTES les cartes d'exercices réussis ou presque ; Anki décide quand les revoir
+        ids_seul = {i for i, st in plan["etats"].items() if st.get("dernier") and st["dernier"][1] in SEUL}
+        ce = [k["id"] for k in ctx["cartes"] if k.get("exercice") in ids_seul and "exercice" in (k.get("tags") or [])]
+        if ce:
+            L += [f"Paquet filtré « Exercices seul » ({len(ce)} cartes d'exercices réussis ou presque ; "
+                  "“replanifier” **coché** : Anki décide quand les revoir) :", "```", f"({_requete(ce)}) (is:due or is:new)", "```"]
         consolider = a_consolider(ctx, plan)
         if consolider:
             L += ["", "## À consolider"] + consolider
