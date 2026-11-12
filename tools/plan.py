@@ -459,7 +459,7 @@ def cours_du_jour(ctx, plan) -> list[dict]:
     """Notions à lire : celles du sous-chapitre du bloc, dans la limite du temps de cours."""
     if not plan["sous_chapitre"]:
         return []
-    n_max = plan["info"]["minutes_cours"] // MIN_PAR_NOTION
+    n_max = ctx["dispo"].get("notions_cours_jour") or plan["info"]["minutes_cours"] // MIN_PAR_NOTION
     bloc = {e["id"] for e, g in plan["items"] if g == "bloc"}
     vues = notions_sc(ctx, plan["exos"], plan["matiere"], plan["sous_chapitre"], bloc)
     return [ctx["notions"][n] for n in vues if n in ctx["notions"]][:n_max]
