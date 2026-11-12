@@ -30,12 +30,14 @@ description: "Début de séance de maths (L3). Calcule le plan de maintenant d'a
    - **Répondre à ses questions** en partant de sa `vision`, de ses confusions et liens manquants connus, et dans son `style`. Une question est aussi une donnée : elle montre où sa compréhension s'arrête.
    - Toujours appuyé sur le poly (fichier, page) : jamais un énoncé de mémoire seule.
    - Ne rien écrire pendant la séance : le debrief, dans cette conversation, relit les échanges.
-3. **Exercices** : dans l'ordre de `NOW.md` (annale, bloc, puis les **reprises en fin de séance**, faites seul sur papier : on vérifie seulement la rédaction finale). Une reprise marquée « **seulement Q2 (…)** » ne porte que sur ces questions : ne pas redemander celles déjà justes, ne vérifier la rédaction que sur elles. La parenthèse dit ce qui avait bloqué : la lui rappeler avant qu'il commence. Aide graduée seulement sur demande (règles de `CLAUDE.md`). Noter pour chaque exercice le palier d'aide atteint et ce qui a bloqué, pour le debrief. Une aide part de ce qu'il a dit de son raisonnement et de sa `vision` des notions en jeu.
-   - **Après la correction d'un exercice non réussi seul** (reprises de fin de séance : seulement s'il a bloqué), environ 5 min, une chose par message :
-     1. **Expliquer le blocage** : l'étape exacte où ça a cassé, pourquoi c'était la bonne idée à cet endroit, et comment il aurait pu la trouver avec ce qu'il savait.
-     2. **Sonder son schéma** : 1 ou 2 questions, parties de ce qu'il a dit pendant l'exercice, pour trouver la cause : notion pas tenue, lien entre deux notions pas fait, ou méthode pas reconnue.
-     3. **Ancrer** : « Qu'est-ce que tu retiens de cet exercice ? ». Il formule l'idée transférable avec ses mots ; corriger si c'est flou ou faux.
-     La cause et sa formulation sont des données pour le debrief : ne rien écrire pendant la séance.
+3. **Exercices** (règle du 12/11/2026 : aller vite), dans l'ordre de `NOW.md` : annale, bloc, puis les **reprises avec Claude** en fin de séance.
+   - **Il travaille seul.** Pas d'échange, pas de photo au fil de l'eau. Bloqué, il lit le corrigé lui-même (page dans `NOW.md`). Répondre seulement à ses questions (aide graduée s'il la demande, `CLAUDE.md`). Une reprise marquée « **seulement Q2 (…)** » ne porte que sur ces questions : lui rappeler la parenthèse avant qu'il commence.
+   - **À la fin**, il envoie en une fois la rédaction des exercices **nouveaux** ; pour une reprise, seulement le résultat.
+   - **Correction rapide**, exercice par exercice : l'endroit précis de chaque erreur, classée **coquille / petite erreur / vraie faute**, puis la catégorie proposée (reussi, presque, aide, non_fait). Ne rien faire refaire, ne pas débattre. Ne jamais valider une erreur par gentillesse.
+   - **Entre `reussi` et `presque`, il tranche** : son verdict est enregistré. `aide` et `non_fait` restent ton jugement.
+   - **Bloqué ou pas compris** seulement : 5 min au plus, l'étape exacte du blocage et comment l'idée se trouvait. Rien pour un exercice réussi ou presque.
+   - Noter pour le debrief : catégorie, temps, coquilles et points d'attention de chaque rédaction (ils vont sur la carte).
+   - **Reprises seul dans Anki** (section de `NOW.md`) : il les fait hors séance, sans Claude. S'il dit « X réussi, Y raté », l'enregistrer au debrief (raté = `aide` palier 4 : la reprise revient alors avec Claude).
 4. **Fin de séance** : proposer le debrief (« debrief » ou « log rapide : … »), dans cette même conversation.
 
 ## 4. Cas particuliers

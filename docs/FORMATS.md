@@ -175,7 +175,7 @@ Paquet Anki : `tg::Maths::L3 Paris Cité::<Matière>::<chapitre>::Cours` (les ca
 
 ### Cartes d'exercices (`tags: [exercice]`)
 
-Une carte par exercice qui n'a pas été réussi seul, créée au debrief. Le recto est l'énoncé, le verso la correction complète : le lendemain, on retrouve par où attaquer. Elle ne remplace pas la reprise sur papier. L'idée clé du verso est comparée à ce que l'utilisateur a dit retenir à l'étape « blocage » de la séance (skill `seance`, §3.3) ; sa formulation peut être reprise si elle est juste, mais la justesse vient toujours du corrigé.
+Une carte par exercice **nouveau** (première tentative), réussi ou pas (règle du 12/11/2026), et pour une reprise ratée sans carte ; créée au debrief. Le recto est l'énoncé, le verso la correction complète : le lendemain, on retrouve par où attaquer. Elle ne remplace pas la reprise sur papier. L'idée clé du verso est comparée à ce que l'utilisateur a dit retenir à l'étape « blocage » de la séance (skill `seance`, §3.3) ; sa formulation peut être reprise si elle est juste, mais la justesse vient toujours du corrigé.
 
 ```yaml
 - id: ex-topo-td1-ex06             # `ex-` + id de l'exercice ; ne change jamais
@@ -185,7 +185,7 @@ Une carte par exercice qui n'a pas été réussi seul, créée au debrief. Le re
     <b>Exo topo-td1-ex06 : <titre></b><br> énoncé condensé, avec toutes les hypothèses et tous les symboles<br>
     <b>Méthode ? Étape clé ?</b>
   verso: |-
-    <b>Idée clé :</b> une ligne<br> <b>Correction :</b> toutes les étapes rédigées<br> <b>Piège :</b> l'erreur faite en séance
+    <b>Idée clé :</b> une ligne<br> <b>Correction :</b> toutes les étapes rédigées<br> <b>Piège :</b> le piège de l'exercice<br> <b>Coquilles / points d'attention :</b> ses erreurs d'inattention et les endroits où sa rédaction prend un risque
   source: 'Énoncé : fichier p.N (Ex k). Corrigé officiel : fichier p.N.'   # ou « Pas de corrigé officiel : vérifiée par Claude, à confirmer »
   chapitre: 'Chapitre 1 - Espace métrique'     # exactement le chapitre des cartes de cours ; l'export ajoute `::Exercices`
   priorite: 1
@@ -193,7 +193,8 @@ Une carte par exercice qui n'a pas été réussi seul, créée au debrief. Le re
 ```
 
 Règles :
-- **Quand :** résultat du jour `aide` ou `presque` ; `non_fait` seulement si l'exercice a été travaillé et le corrigé vu pendant la séance. Rien pour `reussi`.
+- **Quand :** tout exercice fait pour la première fois, `reussi` compris ; `non_fait` seulement s'il a été travaillé et le corrigé vu. Une reprise ratée : compléter la carte existante (ou la créer).
+- **Coquilles / points d'attention :** tiré de la correction rapide de sa rédaction : coquilles, oublis de justification, notations risquées, même quand ce ne sont pas des pièges de l'exercice. « Aucune » si la rédaction était propre.
 - **Verso :** l'idée clé en une ligne, puis la correction complète (toutes les étapes rédigées, fidèle au corrigé officiel), puis le piège éventuel. La référence du corrigé (fichier, page) est dans `source`.
 - **Justesse à 100 % :** le verso vient du corrigé officiel (page du PDF ouverte), sinon d'une solution résolue et vérifiée étape par étape, avec la mention « vérifiée par Claude, à confirmer ».
 - **Rangement :** sous-paquet `tg::Maths::L3 Paris Cité::<matière>::<chapitre>::Exercices` (le nom du chapitre est celui des cartes de cours). Le tag `exercice` reste sur la carte. `check.py` refuse un chapitre que les cartes de cours n'utilisent pas.

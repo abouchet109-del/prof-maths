@@ -28,6 +28,7 @@ JOURS = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."]
 MAX_LIGNES = 60
 MIN_PAR_NOTION = 10         # durée estimée d'une notion de cours
 RESTE_LISIBLE = {E.RESTE: "tout sauf les questions déjà justes"}
+SEUL = ("reussi", "presque")  # dernier résultat -> reprise seul dans Anki, hors séance (12/11/2026)
 REPRISE_MIN = 10            # minutes au moins pour une reprise partielle (seulement les questions manquées)
 REPRISES_MAX_DEFAUT = 30    # minutes de reprises par jour au plus (dispo.yaml : minutes_reprises_max)
 CARTES_DEFAUT = 20          # cartes nouvelles par jour au plus (dispo.yaml : cartes_par_jour)
@@ -362,7 +363,14 @@ def plan_jour(ctx, d: dt.date, resultats=None, seance=False) -> dict:
     dus.sort(key=lambda e: (etats[e["id"]]["etat"] != "a_revoir", e["id"] not in prio, etats[e["id"]]["du"], e["ordre"]))
     reprises = 0
     qmap, pmap = E.questions(resultats, d), E.points(resultats, d)
+    plan["anki_seul"] = []
     for e in dus:
+        dern = etats[e["id"]]["dernier"]
+        if dern and dern[1] in SEUL:        # 12/11/2026 : réussi ou presque -> reprise seul dans Anki, hors séance
+            if etats[e["id"]]["etat"] == "a_revoir":
+                e = reprise_partielle(e, qmap.get(e["id"]), pmap.get(e["id"]))
+            plan["anki_seul"].append(e)
+            continue
         if etats[e["id"]]["etat"] == "a_revoir":
             e = reprise_partielle(e, qmap.get(e["id"]), pmap.get(e["id"]))
         if reprises and reprises + e["temps_min"] > plafond:
@@ -924,6 +932,18 @@ def rediger(ctx, plan, cartes) -> list[str]:
                 L.append(ligne)
         if not plan["items"]:
             L.append("- (rien à planifier)")
+        seul = plan.get("anki_seul") or []
+        if seul:
+            L.append(f"### Reprises seul dans Anki (hors séance, sans Claude : dis juste ce que tu as réussi ou raté)")
+            for e in seul:
+                ligne = f"- [ ] `{e['id']}` {_court(e['titre'])} · {_source(e)}"
+                if e.get("a_refaire"):
+                    ligne += " · seulement " + ", ".join(RESTE_LISIBLE.get(q, q) for q in e["a_refaire"])
+                L.append(ligne)
+            ids_seul = {e["id"] for e in seul}
+            ce = [k["id"] for k in ctx["cartes"] if k.get("exercice") in ids_seul and "exercice" in (k.get("tags") or [])]
+            if ce:
+                L += ["```", _requete(ce), "```"]
         consolider = a_consolider(ctx, plan)
         if consolider:
             L += ["", "## À consolider"] + consolider

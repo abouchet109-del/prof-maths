@@ -99,7 +99,7 @@ def test_bloc_vital_puis_important_puis_secondaire_seulement_ligne_epuisee():
     # important seulement « à revoir » : le passage de catégorie bloque encore le secondaire
     c = ctx(exos, [res("2026-11-04", "v1"), res("2026-11-04", "i1", "presque")], dispo={"minutes_exercices_jour": 100})
     assert ids(P.plan_jour(c, D(2026, 11, 5))) == []
-    assert ids(P.plan_jour(c, D(2026, 11, 6))) == ["i1"]            # reprise due
+    assert ids(P.plan_jour(c, D(2026, 11, 6))) == [] and [e["id"] for e in P.plan_jour(c, D(2026, 11, 6))["anki_seul"]] == ["i1"]   # presque : reprise seul dans Anki
 
 
 # ------------------------------------------------------------------ reprises
@@ -115,7 +115,7 @@ def test_reprise_due_prioritaire_et_exclusions():
 def test_reprise_acquis_a_j_plus_7():
     c = ctx([ex("a1")], [res("2026-11-04", "a1")])
     assert ids(P.plan_jour(c, D(2026, 11, 10))) == []
-    assert ids(P.plan_jour(c, D(2026, 11, 11))) == ["a1"]
+    assert [e["id"] for e in P.plan_jour(c, D(2026, 11, 11))["anki_seul"]] == ["a1"]     # réussi : reprise seul dans Anki
 
 
 # ------------------------------------------------ annales et examens blancs
@@ -1222,8 +1222,8 @@ def resq(d, id, **qs):
 
 def test_reprise_seulement_des_questions_manquees():
     exos = [ex("e1", t=40)]
-    r = [resq("2026-11-04", "e1", Q1="reussi", Q2="presque", Q3="reussi", Q4="reussi")]
-    p = P.plan_jour(ctx(exos, r), D(2026, 11, 6))
+    r = [resq("2026-11-04", "e1", Q1="reussi", Q2="aide", Q3="reussi", Q4="reussi")]
+    p = P.plan_jour(ctx(exos, r), D(2026, 11, 9))
     (e, genre), = [it for it in p["items"] if it[1] == "reprise"]
     assert e["a_refaire"] == ["Q2"] and e["questions_justes"] == ["Q1", "Q3", "Q4"]
     assert e["temps_min"] == 10                       # 40 × 1/4, 10 min au moins
@@ -1240,7 +1240,7 @@ def test_reprise_partielle_reussie_rend_l_exercice_acquis_seulement_si_tout_est_
     assert E.etat_exercice(E.historique(r)["e1"], D(2026, 11, 8))["etat"] == "acquis"
     # la reprise d'entretien (acquis) porte sur l'exercice entier
     p = P.plan_jour(ctx([ex("e1", t=40)], r), D(2026, 11, 15))
-    (e, _), = p["items"]
+    (e,) = p["anki_seul"]
     assert "a_refaire" not in e and e["temps_min"] == 40
 
 
@@ -1264,8 +1264,8 @@ def test_resultat_ajouter_questions():
 
 def test_now_affiche_seulement_les_questions_a_refaire():
     exos = [ex("e1", t=40)]
-    c = ctx(exos, [resq("2026-11-04", "e1", Q1="reussi", Q2="presque")])
-    p = P.plan_jour(c, D(2026, 11, 6))
+    c = ctx(exos, [resq("2026-11-04", "e1", Q1="reussi", Q2="aide")])
+    p = P.plan_jour(c, D(2026, 11, 9))
     texte = "\n".join(P.rediger(c, p, P.anki(c, p)))
     assert "`e1` e1 · 20 min" in texte and "**seulement Q2** (Q1 déjà juste)" in texte
 
@@ -1313,11 +1313,11 @@ def test_rythme_objectif_et_projection():
 
 def test_points_de_blocage_affiches_a_la_reprise():
     exos = [ex("e1", t=30)]
-    r = [dict(resq("2026-11-04", "e1", Q1="reussi", Q2="presque", Q3="non_fait"), resultat="presque",
+    r = [dict(resq("2026-11-04", "e1", Q1="reussi", Q2="aide", Q3="non_fait"), resultat="aide",
               points={"Q2": "cas k=0 oublié", "Q3": "pas faite"})]
     c = ctx(exos, r)
-    assert [x[1] for x in E.historique(r)["e1"]] == ["presque"]          # le jugement global reste le niveau
-    p = P.plan_jour(c, D(2026, 11, 6))
+    assert [x[1] for x in E.historique(r)["e1"]] == ["aide"]          # le jugement global reste le niveau
+    p = P.plan_jour(c, D(2026, 11, 9))
     texte = "\n".join(P.rediger(c, p, P.anki(c, p)))
     assert "**seulement Q2 (cas k=0 oublié) ; Q3 (pas faite)** (Q1 déjà juste)" in texte
     # Q2 réussie ensuite : son point disparaît, l'exercice reste à revoir pour Q3
@@ -1325,7 +1325,7 @@ def test_points_de_blocage_affiches_a_la_reprise():
     assert E.points(r, D(2026, 11, 6))["e1"] == {"Q3": "pas faite"}
     assert E.historique(r)["e1"][-1][1] == "non_fait"
     # rien de juste : exercice entier, mais le blocage est affiché
-    r2 = [dict(resq("2026-11-04", "e1", Q1="presque"), points={"Q1": "synthèse"})]
+    r2 = [dict(resq("2026-11-04", "e1", Q1="non_fait"), points={"Q1": "synthèse"})]
     c2 = ctx([ex("e1", t=30)], r2)
     p2 = P.plan_jour(c2, D(2026, 11, 6))
     assert "· 30 min ·" in "\n".join(P.rediger(c2, p2, P.anki(c2, p2))) and "**à refaire : Q1 (synthèse)**" in "\n".join(P.rediger(c2, p2, P.anki(c2, p2)))
@@ -1377,9 +1377,9 @@ def test_check_meme_que(tmp_path):
 # ----------------------------------------------------------- --toutes-reprises (11/11/2026)
 def test_toutes_reprises_ajoute_les_a_revoir_hors_budget():
     exos = [ex("v1"), ex("v2"), ex("v3"), ex("v4")]
-    res = [{**resq("2026-11-04", "v1", Q1="reussi", Q2="presque"), "points": {"Q2": "cas 0"}},
-           {"exercice": "v2", "date": D(2026, 11, 4), "resultat": "presque", "palier_aide": 0},
-           {"exercice": "v4", "date": D(2026, 11, 4), "resultat": "presque", "palier_aide": 0}]
+    res = [{**resq("2026-11-04", "v1", Q1="reussi", Q2="aide"), "points": {"Q2": "cas 0"}},
+           {"exercice": "v2", "date": D(2026, 11, 4), "resultat": "aide", "palier_aide": 0},
+           {"exercice": "v4", "date": D(2026, 11, 4), "resultat": "aide", "palier_aide": 0}]
     c = ctx(exos, res, cartes=[{**carte("ex-v2", None, ["exercice"]), "exercice": "v2"}],
             dispo={"minutes_reprises_max": 10})
     p = P.plan_jour(c, D(2026, 11, 7), seance=True)
@@ -1417,3 +1417,16 @@ def test_notions_requises_et_sous_chapitre_sans_exercice():
     assert any("dont 3 en plus du plafond" in x for x in L)
     c["comprehension"] = {"notions": {"n-b": {"niveau": "tenue", "maj": "2026-11-03"}}}
     assert P.notions_sans_exercice(c, p) == []                                # déjà tenue : omise
+
+
+# ----------------------------------------------------------- reprises seul dans Anki (12/11/2026)
+def test_reussi_ou_presque_reprise_seul_dans_anki_aide_avec_claude():
+    exos = [ex("r1"), ex("p1"), ex("a1")]
+    rs = [res("2026-11-01", "r1"), res("2026-11-04", "p1", "presque"),
+          {"exercice": "a1", "date": D(2026, 11, 4), "resultat": "aide", "palier_aide": 4}]
+    c = ctx(exos, rs, cartes=[{**carte("ex-p1", None, ["exercice"]), "exercice": "p1"}])
+    p = P.plan_jour(c, D(2026, 11, 9))
+    assert [e["id"] for e, g in p["items"] if g == "reprise"] == ["a1"]          # bloqué : avec Claude, en séance
+    assert {e["id"] for e in p["anki_seul"]} == {"r1", "p1"}                     # hors séance, hors budget
+    L = P.rediger(c, p, P.anki(c, p))
+    assert any(x.startswith("### Reprises seul dans Anki") for x in L) and any('"Id:ex-p1"' in x for x in L)

@@ -4,7 +4,7 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 
 ## Principes
 - **Le code calcule, Claude juge.** États des exercices, reprises, déverrouillage des catégories et plan du jour viennent des scripts (`tools/etat.py`, `tools/plan.py`). Ne jamais les recalculer de tête ni éditer `NOW.md` ou `state/resultats.yaml` à la main.
-- **Un niveau ne monte que sur preuve** : un exercice fait seul et vérifié. Ce que l'utilisateur déclare sans le montrer compte, mais au moindre doute sur « seul », c'est `aide`.
+- **Claude juge, l'utilisateur tranche entre `reussi` et `presque`** (règle du 12/11/2026) : Claude propose la catégorie (reussi, presque, aide = bloqué puis corrigé lu, non_fait) d'après la rédaction. Entre `reussi` et `presque` (coquille, petite erreur), le verdict de l'utilisateur est enregistré, avec la note « tranché par l'utilisateur ». `aide` et `non_fait` restent le jugement de Claude.
 - **Le plan se calcule au début de chaque séance**, pour maintenant, d'après l'état réel : skill `seance` (« on commence »), commande `plan.py seance`. L'utilisateur travaille n'importe quel jour : un jour `off` de `dispo.yaml` ne bloque rien, il ne sert qu'à la capacité et à la marge. Ce qui n'a pas été fait revient seul. Les cartes apprises se lisent dans Anki (lecture seule), pas dans une réservation à l'avance.
 - **Debrief après chaque séance** : skill `debrief`, **dans la même conversation que la séance**, qui connaît déjà les exercices et les aides données. Ne jamais renvoyer l'utilisateur vers une autre conversation. Il enregistre les résultats, la compréhension (`state/comprehension.yaml`) et les cartes, puis recopie le **bilan réel** calculé par `plan.py bilan` dans le journal, et fait le commit. Il ne prépare pas la séance suivante.
 - **Modèle de compréhension** (`state/comprehension.yaml`, format `docs/FORMATS.md`) : ce que l'utilisateur dit à voix haute est la donnée principale. Le cours mesure ce qu'il tient avant d'enseigner, une étape à la fois ; le debrief fixe le niveau de chaque notion travaillée sur preuve, et le plan en tire cartes, exercices et « À consolider ».
@@ -13,10 +13,12 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 - **Annales de Paris Cité prioritaires** : si le temps manque, on coupe d'abord l'exotique, puis le secondaire, jamais une annale.
 - **Objectif de l'échéance** (choix du 10/11/2026) : chaque annale de Paris Cité, exercice vital et important réussi seul une fois. La section « Échéance » de `NOW.md` donne le rythme requis, le rythme observé et la date de fin projetée (`plan.rythme`) : la lire à l'utilisateur en début de séance.
 
-## Pendant une séance d'exercices
-- Aide **graduée**, seulement si l'utilisateur la demande : 1) une question qui oriente ; 2) la méthode ou le théorème à utiliser ; 3) l'étape clé ; 4) la solution. Noter le palier atteint : dès le palier 1, l'exercice est `aide`.
-- Vérifier une rédaction ligne à ligne et dire précisément où elle casse. Ne pas valider une preuve incomplète par gentillesse.
-- **Après chaque exercice non réussi seul** (environ 5 min) : expliquer l'étape exacte du blocage et comment l'idée se trouvait ; 1 ou 2 questions pour en trouver la cause dans son schéma (notion pas tenue, lien pas fait, méthode pas reconnue) ; puis « qu'est-ce que tu retiens de cet exercice ? ». Le debrief en tire la compréhension et vérifie l'idée clé de la carte d'exercice. Détail : skill `seance`.
+## Pendant une séance d'exercices (règle du 12/11/2026 : aller vite)
+- L'utilisateur travaille **seul**, sans échange ni photo au fil de l'eau. Bloqué, il lit le corrigé lui-même. Claude ne répond qu'aux questions qu'il pose (aide graduée s'il la demande : 1) une question qui oriente ; 2) la méthode ; 3) l'étape clé ; 4) la solution ; dès le palier 1, c'est `aide`).
+- **À la fin**, il envoie en une fois la rédaction des exercices **nouveaux** (première fois). Pour une reprise, il ne donne que le résultat.
+- **Correction rapide**, exercice par exercice : seulement l'endroit précis de chaque erreur, classée coquille / petite erreur / vraie faute, puis la catégorie proposée. Ne rien faire refaire, ne pas débattre. Ne jamais valider une erreur par gentillesse.
+- **Bloqué ou pas compris** (`aide`, `non_fait`) : là seulement, on reprend avec Claude (au debrief, 5 min au plus) : l'étape du blocage, comment l'idée se trouvait.
+- **Deux sortes de reprises** (`plan.py`) : dernier résultat `aide`/`non_fait` → reprise avec Claude en fin de séance ; `reussi`/`presque` → « Reprises seul dans Anki », hors séance : l'utilisateur dit seulement ce qu'il a réussi ou raté, et on l'enregistre.
 - **Corrigés** : `officiel` d'abord (ouvrir le PDF à la page de `corrige.ref`). Sinon, une solution rédigée par Claude porte la mention « vérifiée par Claude, à confirmer », avec les étapes douteuses signalées. Un corrigé officiel peut être faux : le dire s'il l'est.
 - Énoncé `null` ou `qualite_extraction` différent de `ok` : lire la page du PDF (`bibliotheque/`, rendu image avec `tools/rendre_page.py`) au lieu de reconstituer l'énoncé.
 
@@ -26,7 +28,7 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
   - verso = l'énoncé du poly recopié fidèlement, avec cadre et hypothèses.
 - **Prérequis L1-L2 :** une notion `type: prerequis` (id `<préfixe>-p-NNNN`, `requis_par` obligatoire) placée au sous-chapitre où elle sert, jamais une carte sans notion. Le référentiel de ce que l'utilisateur sait = ses paquets ECG `tg::Maths::1ere année` et `tg::Maths::Cours deuxième année`, jamais modifiés. Détail : `docs/FORMATS.md`.
 - **Cartes d'erreurs :** plus créées depuis le 08/11/2026 (les existantes restent) : une confusion va dans `state/comprehension.yaml`, et les cartes de la notion repassent.
-- **Cartes d'exercices :** une par exercice non réussi seul (tag `exercice`, champ `exercice`), créée au debrief à partir du corrigé officiel. Détail : `docs/FORMATS.md`.
+- **Cartes d'exercices :** une par exercice **nouveau, réussi ou pas** (règle du 12/11/2026), plus une pour toute reprise ratée qui n'en a pas ; tag `exercice`, champ `exercice`, créée au debrief à partir du corrigé officiel, avec la section « Coquilles / points d'attention ». Détail : `docs/FORMATS.md`.
 - **Corriger une carte déjà importée :** la modifier dans `cartes.yaml`, puis lancer `python -I tools/anki.py --reexporter <ids>`. Même GUID, donc Anki met la note à jour sans toucher à la progression.
 
 ## Données et sécurité
