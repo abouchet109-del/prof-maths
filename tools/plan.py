@@ -881,7 +881,7 @@ def reprises_en_plus(ctx, plan) -> list[dict]:
     le plan, dus ou non, hors budget, en reprise partielle (seulement les questions manquées). Ordre : date de
     reprise prévue, puis ordre du fichier."""
     d, etats = plan["date"], plan["etats"]
-    deja = {e["id"] for e, _ in plan["items"]}
+    deja = {e["id"] for e, _ in plan["items"]} | {e["id"] for e in plan.get("anki_seul") or []}
     qmap, pmap = E.questions(ctx["resultats"], d), E.points(ctx["resultats"], d)
     es = [e for e in plan["exos"] if etats[e["id"]]["etat"] == "a_revoir" and e["id"] not in deja]
     es.sort(key=lambda e: (str(etats[e["id"]]["du"]), e["ordre"]))

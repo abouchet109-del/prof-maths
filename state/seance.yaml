@@ -183,3 +183,49 @@
   anki: true
   marge_debut: 2085
   restant_debut: 6975
+'2026-11-12':
+  heure: '21:05'
+  exercices:
+  - topo-uvsq-td2-ex01q1
+  - topo-td1-ex13
+  - topo-td1-ex14
+  - topo-dm2020-21-ex01
+  - topo-uvsq-td1-ex15q1
+  - topo-uvsq-td1-ex08
+  - topo-uvsq-td1-ex09q2
+  - topo-uvsq-td1-ex15q2
+  - topo-uvsq-cc1-2024-ex03q3
+  cartes:
+  - topo-a-039-1
+  - topo-a-039-2
+  - topo-a-014-2
+  - topo-a-015-1
+  - topo-a-015-2
+  - topo-a-015-3
+  - topo-a-016-1
+  - topo-a-016-2
+  - topo-a-016-3
+  - topo-a-016-4
+  - topo-a-017-1
+  - topo-a-041-1
+  - topo-a-041-2
+  - topo-a-041-3
+  - topo-a-041-4
+  - topo-a-041-5
+  - topo-a-041-6
+  - topo-a-018-1
+  - topo-a-018-2
+  - topo-a-019-1
+  - ex-mes-cc1-2324-ex01
+  - ex-pro-td1-ex05
+  - ex-pro-td1-ex07
+  - ex-pro-uvsq-chap-1-exam-24-25-ex1
+  - ex-pro-uvsq-chap-3-ex-14
+  anciennes:
+  - 1786442325818
+  - 1770140956173
+  - 1737130268084
+  - 1770140975407
+  anki: true
+  marge_debut: 1935
+  restant_debut: 6975
