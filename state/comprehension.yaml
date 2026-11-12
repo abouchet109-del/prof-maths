@@ -477,6 +477,135 @@ notions:
       verdict: partiel
       exercice: pro-uvsq-chap-3-ex-14
     maj: 2026-11-10
+  mod-p-0003:
+    niveau: fragile
+    vision: "R = sup des r tels que (a_n r^n) bornée ; convergence normale sur tout segment fermé de ]-R,R[ mais pas sur l'ouvert entier (contre-exemple sum x^n) ; preuve : choisir rho entre r et R, borner |a_n| rho^n par M, comparer à une géométrique"
+    liens:
+    - vers: mod-n-0001
+      texte: voit que R >= 1 pour une fonction génératrice parce que les coefficients sont des probabilités (avec relance)
+    liens_manquants: []
+    confusions:
+    - date: 2026-11-11
+      texte: "inverse la règle : « si R > 1 ça ne converge pas » (corrigé aussitôt en séance)"
+      statut: ouverte
+    preuves:
+    - {date: 2026-11-11, source: cours, extrait: "a distingué seul normale sur segment fermé / pas sur l'ouvert avec sum x^n", verdict: juste}
+    - {date: 2026-11-11, source: cours, extrait: "preuve de la convergence normale : a eu besoin du palier 2 (multiplier-diviser par rho^n)", verdict: partiel}
+    maj: 2026-11-11
+  mod-p-0005:
+    niveau: fragile
+    vision: "normale = la série des sup |f_n| converge ; ça entraîne uniforme et simple ; n'avait jamais appris ces définitions ni les cartes mod-a-080-*"
+    liens:
+    - vers: mod-p-0003
+      texte: relie la convergence normale d'une série entière au rayon de convergence (sup de |a_n| r^n)
+    liens_manquants: []
+    confusions:
+    - date: 2026-11-11
+      texte: "écrit « simple ⇒ absolue » dans l'enchaînement (la normale entraîne l'absolue et l'uniforme, pas la simple)"
+      statut: ouverte
+    preuves:
+    - {date: 2026-11-11, source: cours, extrait: "sup |x^n/n^2| sur [-1,1] = 1/n^2, série de Riemann : normale, trouvé seul", verdict: juste}
+    maj: 2026-11-11
+  mod-n-0001:
+    niveau: fragile
+    vision: "phi_X(z)=somme P(X=k) z^k ; R >= 1 parce que (a_k * 1^k) est bornée par 1 (a_k est une probabilité)"
+    liens:
+    - vers: mod-p-0003
+      texte: applique la définition de R par sup des r avec (a_n r^n) bornée
+    liens_manquants: []
+    confusions: []
+    preuves:
+    - {date: 2026-11-11, source: cours, extrait: "a conclu R = 1 au lieu de R >= 1 ; r=1 donné en relance", verdict: partiel}
+    maj: 2026-11-11
+  mod-n-0002:
+    niveau: tenue
+    vision: "binomiale (binôme), Poisson (série de l'exponentielle), géométrique (série géométrique, R = 1/(1-p)) calculées seul"
+    liens: []
+    liens_manquants: []
+    confusions: []
+    preuves:
+    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex01, extrait: "4 fonctions génératrices calculées seul, domaines trouvés", verdict: juste}
+    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex02, extrait: "géométrique : domaine écrit ∀z∈R à tort", verdict: partiel}
+    maj: 2026-11-11
+  mod-n-0003:
+    niveau: fragile
+    vision: "mêmes fonctions génératrices sur [-1,1] donnent la même loi (unicité des coefficients)"
+    liens: []
+    liens_manquants: []
+    confusions: []
+    preuves:
+    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex03, extrait: "a conclu S ~ B(2n,1/2) par caractérisation des lois ; interprétation non ressortie", verdict: partiel}
+    maj: 2026-11-11
+  mod-n-0004:
+    niveau: fragile
+    vision: "phi de la somme de variables indépendantes = produit des phi (lemme des coalitions)"
+    liens: []
+    liens_manquants:
+    - vers: mod-n-0003
+      texte: "ex03 : n'a pas reconnu seul que (1+z)^2/4 est la fonction génératrice d'une somme de deux Bernoulli(1/2) (indice donné)"
+    confusions:
+    - date: 2026-11-11
+      texte: "écrit E(somme de z^X_i) au lieu de E(produit) = E(z^(somme X_i)) ; oublie « indépendantes » dans l'hypothèse (corrigé après remarque)"
+      statut: ouverte
+    preuves:
+    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex01, extrait: "Q2 : somme au lieu du produit, indépendance oubliée au départ", verdict: partiel}
+    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex03, extrait: "produit des phi juste ; factorisation donnée en indice", verdict: partiel}
+    maj: 2026-11-11
+  mod-n-0005:
+    niveau: fragile
+    vision: "E[X]=phi'(1) et Var = phi''(1)+phi'(1)-phi'(1)^2 ; moment d'ordre k fini <=> phi de classe C^k sur [0,1]"
+    liens:
+    - vers: mod-p-0003
+      texte: sait que la dérivation terme à terme est la raison de la dérivabilité en 1
+    liens_manquants: []
+    confusions:
+    - date: 2026-11-11
+      texte: "pour évaluer phi'(1) vérifie que la formule est définie en 1, pas que 1 est dans ]-R,R[ (ou R=1 : dérivée à gauche seulement)"
+      statut: ouverte
+    preuves:
+    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex02, extrait: "E et Var des trois lois calculés seul, formules justes", verdict: juste}
+    - {date: 2026-11-11, source: question, extrait: "pourquoi évaluer phi'(1) : a répondu « définie en 1 », puis l'argument des moments", verdict: partiel}
+    maj: 2026-11-11
+  mod-n-0008:
+    niveau: fragile
+    vision: "Z_n = taille de la génération n, X_{n,j} = nombre d'enfants de l'individu j ; Z_{n+1} = somme jusqu'à Z_n (borne aléatoire) ; si Z_n=0 la suite reste nulle (extinction)"
+    liens: []
+    liens_manquants: []
+    confusions:
+    - date: 2026-11-11
+      texte: "compte d'abord la population totale au lieu de la taille de la génération (corrigé seul)"
+      statut: reparee
+    preuves:
+    - {date: 2026-11-11, source: cours, extrait: "calcule Z_0, Z_1, Z_2 sur un exemple et écrit Z_2 = somme des X_{1,j}", verdict: juste}
+    maj: 2026-11-11
+  mod-n-0010:
+    niveau: recitee
+    vision: "conditionner sur {Z_n=k} : E(Z_{n+1} | Z_n=k) = k m puis espérance totale"
+    liens: []
+    liens_manquants:
+    - vers: mod-n-0008
+      texte: "ex05/ex06 : traite Z_n comme un nombre fixé (produit de dérivées jusqu'à Z_n) au lieu de conditionner sur {Z_n=k}"
+    confusions:
+    - date: 2026-11-11
+      texte: "ex06 : ne sait pas comment gérer la borne aléatoire Z_n sans conditionner (bloque dès le début)"
+      statut: ouverte
+    preuves:
+    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex06, extrait: "après palier 1 : écrit E(Z_{n+1} | Z_n=k) et la formule de l'espérance totale (juste), non terminé", verdict: partiel}
+    maj: 2026-11-11
+  mod-n-0011:
+    niveau: recitee
+    vision: "sait que G_n = composée de phi, mais ne l'a pas mobilisée seul pour E[Z_n]"
+    liens: []
+    liens_manquants:
+    - vers: mod-n-0005
+      texte: "ex05 : ne relie pas E[Z_n]=G_n'(1) à la dérivée de la composée G_{n-1}∘phi avec phi(1)=1"
+    confusions:
+    - date: 2026-11-11
+      texte: "écrit phi'(somme) = produit des phi' (dérivée d'un produit prise comme produit des dérivées)"
+      statut: ouverte
+    preuves:
+    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex05, extrait: "hérédité absente ; hérédité rédigée par Claude (palier 4)", verdict: faux}
+    maj: 2026-11-11
 style:
 - 'pense à voix haute, mélange exemple et cas général (lui redonner le fil) ; comprend par un chiffre concret puis généralise'
 - 'confond stricte/large, sens des implications et inter/union (dit coquille orale, mais revient à l''écrit) : lui faire tester sur un chiffre'

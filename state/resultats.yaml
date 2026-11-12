@@ -329,3 +329,28 @@
     Q1: reussi
     Q2: reussi
   complet: true
+- date: 2026-11-11
+  exercice: mod-td1-ex01
+  resultat: reussi
+  palier_aide: 0
+  note: 'tranché par l''utilisateur (Claude : presque) ; Q2 : E(somme) au lieu de E(produit) et indépendance oubliée, corrigés après remarque ; Q4 : z=0 exclu à tort'
+- date: 2026-11-11
+  exercice: mod-td1-ex02
+  resultat: reussi
+  palier_aide: 0
+  note: 'coquilles : domaine de phi pour la géométrique (z dans R), q non défini'
+- date: 2026-11-11
+  exercice: mod-td1-ex03
+  resultat: aide
+  palier_aide: 1
+  note: 'indice : factoriser (1+z)^2/4 ; conclusion (unicité) juste à l''oral ; interprétation non ressortie ; l''utilisateur dit presque (jugement Claude : aide)'
+- date: 2026-11-11
+  exercice: mod-td1-ex05
+  resultat: aide
+  palier_aide: 4
+  note: hérédité absente, produit de dérivées faux, G_{n+1}=G_n∘φ non utilisée ; hérédité rédigée par Claude
+- date: 2026-11-11
+  exercice: mod-td1-ex06
+  resultat: non_fait
+  palier_aide: 0
+  note: bloqué sur E(Z_{n+1}) avec Z_n aléatoire ; palier 1 donné ; espérance totale avec P compté deux fois ; non terminé

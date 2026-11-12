@@ -1343,3 +1343,96 @@
   chapitre: 'Chapitre 2 - Chaînes de Markov, des mouvements de particules à PageRank'
   priorite: 2
   tags: [prerequis-l1l2, theoreme]
+- id: ex-mod-td1-ex01
+  exercice: mod-td1-ex01
+  notion: mod-n-0002
+  recto: |-
+    <b>Exo mod-td1-ex01 : Fonctions génératrices des lois usuelles</b><br>
+    Déterminer la fonction génératrice \(\varphi_X(z)=\mathbb E[z^X]\) d'une variable \(X\) de loi : 1) binomiale \(\mathcal B(n,p)\), à partir de sa loi ; 2) \(\mathcal B(n,p)\), comme somme de \(n\) variables de Bernoulli ; 3) Poisson \(\mathcal P(\lambda)\) ; 4) géométrique \(\mathcal G(p)\) (\(\mathbb P(X=k)=p(1-p)^{k-1}\), \(k\ge1\)). Préciser pour quels \(z\) la formule est valable.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(\varphi_X(z)=\sum_k\mathbb P(X=k)z^k\) : on reconnaît le binôme (binomiale), la série de l'exponentielle (Poisson), la série géométrique (géométrique) ; la somme de variables indépendantes donne le produit des \(\varphi\).<br>
+    <b>Correction :</b><br>
+    1. \(\varphi_X(z)=\sum_{k=0}^n\binom nkp^k(1-p)^{n-k}z^k=\sum_{k=0}^n\binom nk(pz)^k(1-p)^{n-k}=(pz+1-p)^n\), pour tout \(z\in\mathbb R\) (somme finie).<br>
+    2. Soient \(X_1,\dots,X_n\) <b>indépendantes</b> de loi \(\mathcal B(p)\) et \(Y=\sum X_i\sim\mathcal B(n,p)\). Les \(z^{X_i}\) sont indépendantes (lemme des coalitions), donc \(\varphi_Y(z)=\mathbb E\big[\prod z^{X_i}\big]=\prod\mathbb E[z^{X_i}]=\prod(1-p+pz)=(pz+1-p)^n\).<br>
+    3. \(\varphi_X(z)=\sum_{k\ge0}e^{-\lambda}\frac{\lambda^k}{k!}z^k=e^{-\lambda}\sum_{k\ge0}\frac{(\lambda z)^k}{k!}=e^{\lambda(z-1)}\), pour tout \(z\in\mathbb R\) (rayon infini).<br>
+    4. Avec \(q=1-p\) : \(\varphi_X(z)=\sum_{k\ge1}pq^{k-1}z^k=pz\sum_{j\ge0}(qz)^j=\dfrac{pz}{1-qz}\), valable pour \(|qz|<1\), soit \(|z|<\frac1q\) (rayon \(R=\frac1q\ge1\)) ; si \(p=1\), \(\varphi_X(z)=z\) pour tout \(z\).<br>
+    <b>Piège :</b> la loi géométrique est portée par \(\mathbb N^*\) (la somme commence à \(k=1\), d'où le facteur \(z\)) ; la formule de la géométrique n'est valable que sur \(]-\frac1q,\frac1q[\), pas sur \(\mathbb R\) ; en 2, c'est l'indépendance qui donne le produit.<br>
+    <b>Coquilles / points d'attention :</b> Q2 : écrire « indépendantes » dès l'hypothèse ; écrire \(\mathbb E\big(\prod z^{X_i}\big)=\mathbb E\big(z^{\sum X_i}\big)\) (un produit, pas une somme) et conclure sur \(\varphi_Y\), pas \(\varphi_X\). Q4 : \(z=0\) convient (inégalité large \(0\le|z|\,q<1\)). Ne pas écrire « existe \(\iff z\in]-R,R[\) » : au bord, la série peut converger ; la bonne équivalence est la convergence absolue.
+  source: 'Énoncé : modelisation/td/td1-galton-watson.pdf p.1 (Ex 1). Pas de corrigé officiel : vérifiée par Claude, à confirmer ; cohérent avec les cartes mod-a-002-*. Séance du 2026-11-11.'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [exercice]
+- id: ex-mod-td1-ex02
+  exercice: mod-td1-ex02
+  notion: mod-n-0005
+  recto: |-
+    <b>Exo mod-td1-ex02 : Espérance et variance par les fonctions génératrices</b><br>
+    Retrouver l'espérance et la variance des lois de l'exercice mod-td1-ex01 (binomiale \(\mathcal B(n,p)\), Poisson \(\mathcal P(\lambda)\), géométrique \(\mathcal G(p)\) sur \(\mathbb N^*\)) à l'aide de leur fonction génératrice \(\varphi_X\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(\mathbb E[X]=\varphi_X'(1)\) et \(\mathrm{Var}(X)=\varphi_X''(1)+\varphi_X'(1)-\varphi_X'(1)^2\) ; il suffit de dériver deux fois et d'évaluer en 1 (licite car 1 est dans l'intervalle ouvert de convergence, ou, si \(R=1\), par dérivée à gauche).<br>
+    <b>Correction :</b><br>
+    <b>Binomiale :</b> \(\varphi(z)=(pz+1-p)^n\), \(\varphi'(z)=np(pz+1-p)^{n-1}\), \(\varphi''(z)=n(n-1)p^2(pz+1-p)^{n-2}\). En 1 : \(\mathbb E[X]=np\), \(\varphi''(1)=n(n-1)p^2\), \(\mathrm{Var}(X)=n(n-1)p^2+np-n^2p^2=np(1-p)\).<br>
+    <b>Poisson :</b> \(\varphi(z)=e^{\lambda(z-1)}\), \(\varphi'(z)=\lambda e^{\lambda(z-1)}\), \(\varphi''(z)=\lambda^2e^{\lambda(z-1)}\). \(\mathbb E[X]=\lambda\), \(\mathrm{Var}(X)=\lambda^2+\lambda-\lambda^2=\lambda\).<br>
+    <b>Géométrique</b> (\(q=1-p\), \(\varphi(z)=\frac{pz}{1-qz}\) sur \(]-\frac1q,\frac1q[\ni1\)) : \(\varphi'(z)=\frac p{(1-qz)^2}\), \(\varphi''(z)=\frac{2pq}{(1-qz)^3}\). \(\mathbb E[X]=\frac p{p^2}=\frac1p\), \(\varphi''(1)=\frac{2pq}{p^3}=\frac{2q}{p^2}\), \(\mathrm{Var}(X)=\frac{2q}{p^2}+\frac1p-\frac1{p^2}=\frac{2-2p+p-1}{p^2}=\frac{1-p}{p^2}\).<br>
+    <b>Piège :</b> le terme \(-\varphi'(1)^2\) (carré de la dérivée, pas de la fonction) ; pour la géométrique, \(\varphi\) n'est pas définie sur tout \(\mathbb R\), il faut vérifier que 1 est dans \(]-\frac1q,\frac1q[\).<br>
+    <b>Coquilles / points d'attention :</b> écrire le domaine de dérivabilité de \(\varphi\) (pour la géométrique : \(]-\frac1q,\frac1q[\), pas \(\mathbb R\)) ; poser \(q=1-p\) avant de l'employer ; écrire la formule de la variance avec les primes et le carré à leur place ; justifier l'évaluation en 1 par « 1 est dans l'intervalle ouvert de convergence » et non par « la formule est définie en 1 ».
+  source: 'Énoncé : modelisation/td/td1-galton-watson.pdf p.1 (Ex 2). Pas de corrigé officiel : vérifiée par Claude, à confirmer ; cohérent avec les cartes mod-a-007-*. Séance du 2026-11-11.'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [exercice]
+- id: ex-mod-td1-ex03
+  exercice: mod-td1-ex03
+  notion: mod-n-0004
+  recto: |-
+    <b>Exo mod-td1-ex03 : Urne à quatre boules et score total</b><br>
+    Une urne contient 4 boules rapportant respectivement \(0,1,1,2\) points. On effectue \(n\) tirages avec remise et on note \(S\) le score total. Déterminer la fonction génératrice de \(S\), en déduire la loi de \(S\) et interpréter le résultat.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> la fonction génératrice d'un tirage se factorise : \(\frac{1+2z+z^2}4=\left(\frac{1+z}2\right)^2\), qui est le carré de celle d'une Bernoulli de paramètre \(\frac12\) ; la somme de \(n\) tirages indépendants donne la puissance \(n\), donc \(S\sim\mathcal B(2n,\tfrac12)\).<br>
+    <b>Correction :</b><br>
+    Soit \(X_i\) le score du tirage \(i\) : \(\mathbb P(X_i=0)=\frac14\), \(\mathbb P(X_i=1)=\frac12\), \(\mathbb P(X_i=2)=\frac14\), donc \(\varphi_{X_i}(z)=\frac14+\frac z2+\frac{z^2}4=\frac{(1+z)^2}4\) pour tout \(z\in\mathbb R\) (somme finie). Les tirages sont avec remise, donc les \(X_i\) sont indépendantes, et \(S=\sum_{i=1}^nX_i\). Alors \(\varphi_S(z)=\prod_i\varphi_{X_i}(z)=\frac{(1+z)^{2n}}{4^n}=\left(\frac{1+z}2\right)^{2n}=\left(1-\tfrac12+\tfrac12z\right)^{2n}\), qui est la fonction génératrice de \(\mathcal B(2n,\tfrac12)\). Deux variables ayant la même fonction génératrice sur \([-1,1]\) ont la même loi (unicité du développement en série entière) : \(S\sim\mathcal B(2n,\frac12)\), soit \(\mathbb P(S=k)=\binom{2n}k2^{-2n}\).<br>
+    <b>Interprétation :</b> chaque tirage revient à lancer deux pièces équilibrées indépendantes et à compter les « faces » (boule 0 = aucune, deux boules 1 = une face sur les deux, boule 2 = deux faces) ; \(S\) est donc le nombre de faces obtenues en \(2n\) lancers.<br>
+    <b>Piège :</b> reconnaître le carré parfait \(1+2z+z^2=(1+z)^2\) ; \(S\) est exactement la somme des \(X_i\), pas seulement égale en loi.<br>
+    <b>Coquilles / points d'attention :</b> écrire la conclusion « mêmes fonctions génératrices \(\Rightarrow\) mêmes lois » avec son nom (unicité) ; écrire l'interprétation demandée (deux pièces par tirage) ; la factorisation n'a pas été trouvée seul (indice).
+  source: 'Énoncé : modelisation/td/td1-galton-watson.pdf p.1 (Ex 3). Pas de corrigé officiel : vérifiée par Claude, à confirmer ; cohérent avec mod-a-078-4. Séance du 2026-11-11.'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [exercice]
+- id: ex-mod-td1-ex05
+  exercice: mod-td1-ex05
+  notion: mod-n-0011
+  recto: |-
+    <b>Exo mod-td1-ex05 : Espérance de Z_n dans un processus de Galton-Watson</b><br>
+    Soit \((Z_k)_{k\ge0}\) un processus de Galton-Watson (\(Z_0=1\), \(Z_{n+1}=\sum_{j=1}^{Z_n}X_{n,j}\), \(X_{i,j}\) i.i.d. à valeurs dans \(\mathbb N\)) tel que \(\mathbb E[Z_1]<+\infty\). Montrer, <b>en utilisant les fonctions génératrices</b>, que \(\mathbb E[Z_n]=\mathbb E[Z_1]^n\) pour tout \(n\ge1\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(\mathbb E[Z_n]=G_n'(1)\) avec \(G_{n+1}=G_n\circ\varphi\) (\(\varphi\) fonction génératrice commune des \(X_{i,j}\)) : on dérive la composée en 1, avec \(\varphi(1)=1\).<br>
+    <b>Correction :</b> notons \(m=\mathbb E[Z_1]=\varphi'(1)\) (car \(Z_1=X_{0,1}\) et \(G_1=\varphi\)). Récurrence sur \(n\ge1\), \(P(n)\) : \(\mathbb E[Z_n]=G_n'(1)=m^n\). \(P(1)\) : \(\mathbb E[Z_1]=m\). Hérédité : d'après le cours (mod-a-011-1), \(G_{n+1}=G_n\circ\varphi\) sur \([0,1]\) ; \(\varphi\) envoie \([0,1]\) dans \([0,1]\) et \(\varphi(1)=1\), donc \(G_{n+1}'(1)=G_n'(\varphi(1))\,\varphi'(1)=G_n'(1)\cdot m=m^n\cdot m=m^{n+1}\) (dérivées à gauche en 1). Donc \(\mathbb E[Z_{n+1}]=m^{n+1}\).<br>
+    <b>Piège :</b> la dérivée d'une composée n'est pas un produit de dérivées de facteurs, et la somme \(\sum_{j=1}^{Z_n}X_{n,j}\) a un nombre de termes aléatoire : on ne peut pas écrire un produit \(\prod_{i=1}^{Z_n}\varphi'\) ; c'est la composition \(G_n\circ\varphi\) qui gère cette borne aléatoire ; \(\varphi(1)=1\) est indispensable pour que \(G_n'(\varphi(1))=G_n'(1)\).<br>
+    <b>Coquilles / points d'attention :</b> la récurrence était posée mais l'hérédité n'utilisait pas \(G_{n+1}=G_n\circ\varphi\) ; écrire « d'après le cours \(G_{n+1}=G_n\circ\varphi\) » et dériver ; hérédité rédigée par Claude (palier 4).
+  source: 'Énoncé : modelisation/td/td1-galton-watson.pdf p.1 (Ex 5). Pas de corrigé officiel : vérifiée par Claude, à confirmer ; cohérent avec mod-a-009-1 et mod-a-011-1. Séance du 2026-11-11.'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [exercice]
+- id: ex-mod-td1-ex06
+  exercice: mod-td1-ex06
+  notion: mod-n-0012
+  recto: |-
+    <b>Exo mod-td1-ex06 : Galton-Watson issu de N individus</b><br>
+    Soit \((X_{n,k})_{n\ge0,k\ge1}\) des variables indépendantes de même loi, de moment d'ordre 2 (\(m=\mathbb E[X]\), \(\sigma^2=\mathrm{Var}(X)\), fonction génératrice \(\varphi\)). Processus \(Z_0=N\) (entier \(\ge1\)), \(Z_{n+1}=\sum_{k=1}^{Z_n}X_{n,k}\). 1) En reprenant les preuves par récurrence du cours, déterminer \(\mathbb E[Z_n]\), \(\mathrm{Var}(Z_n)\) et \(G_n=\varphi_{Z_n}\). 2) Expliquer de façon probabiliste les formules obtenues.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> on conditionne sur le système complet \(\{Z_n=k\}\), \(k\ge0\) : \(Z_n\) est indépendant des \(X_{n,j}\), donc \(\mathbb E[Z_{n+1}\mid Z_n=k]=km\) ; on obtient \(\mathbb E[Z_{n+1}]=m\,\mathbb E[Z_n]\) et, pour la variance, \(\mathrm{Var}(Z_{n+1})=\sigma^2\mathbb E[Z_n]+m^2\mathrm{Var}(Z_n)\) ; seule la valeur initiale change (\(Z_0=N\) au lieu de 1).<br>
+    <b>Correction :</b><br>
+    <b>Espérance :</b> \(\mathbb E[Z_{n+1}]=\sum_{k\ge0}\mathbb E[Z_{n+1}\mid Z_n=k]\,\mathbb P(Z_n=k)=\sum_kkm\,\mathbb P(Z_n=k)=m\,\mathbb E[Z_n]\) ; avec \(\mathbb E[Z_0]=N\) : \(\mathbb E[Z_n]=Nm^n\).<br>
+    <b>Variance :</b> sur \(\{Z_n=k\}\), la somme de \(k\) variables indépendantes a pour variance \(k\sigma^2\) et pour carré de l'espérance \((km)^2\) : \(\mathbb E[Z_{n+1}^2]=\sigma^2\mathbb E[Z_n]+m^2\mathbb E[Z_n^2]\), d'où \(\mathrm{Var}(Z_{n+1})=\sigma^2Nm^n+m^2\mathrm{Var}(Z_n)\), avec \(\mathrm{Var}(Z_0)=0\). Par récurrence, \(\mathrm{Var}(Z_n)=N\sigma^2\sum_{k=n-1}^{2n-2}m^k\) pour \(n\ge1\) (vrai pour \(n=1\) : \(N\sigma^2\) ; hérédité : \(N\sigma^2m^n+m^2N\sigma^2\sum_{k=n-1}^{2n-2}m^k=N\sigma^2\sum_{k=n}^{2n}m^k\)). Soit \(N\sigma^2\frac{m^{n-1}(m^n-1)}{m-1}\) si \(m\ne1\), et \(Nn\sigma^2\) si \(m=1\).<br>
+    <b>Fonction génératrice :</b> \(G_{n+1}(s)=\sum_k\varphi(s)^k\mathbb P(Z_n=k)=G_n(\varphi(s))\), donc \(G_n=G_0\circ\varphi^{\circ n}\) avec \(G_0(s)=s^N\) : \(G_n(s)=\big(\varphi^{\circ n}(s)\big)^N\).<br>
+    <b>Interprétation :</b> \(Z_n\) est la somme de \(N\) processus de Galton-Watson indépendants issus chacun d'un seul ancêtre : l'espérance et la variance sont multipliées par \(N\) (les variances s'ajoutent par indépendance), et la fonction génératrice est la puissance \(N\) (produit de \(N\) fonctions génératrices identiques).<br>
+    <b>Piège :</b> \(Z_n\) est aléatoire : on ne peut pas écrire un produit ou une somme à \(Z_n\) termes sans conditionner sur \(\{Z_n=k\}\) ; \(\mathbb E[Z_{n+1}\mid Z_n=k]=km\) (indépendance de \(Z_n\) et des \(X_{n,j}\)).<br>
+    <b>Coquilles / points d'attention :</b> exercice non terminé : bloqué dès l'étape « comment gérer la borne aléatoire \(Z_n\) ». La formule de l'espérance totale était juste une fois le conditionnement posé ; l'hérédité en \(n\) avec \(G_n=G_{n-1}\circ\varphi\) et la variance restaient à écrire.
+  source: 'Énoncé : modelisation/td/td1-galton-watson.pdf p.1 (Ex 6). Pas de corrigé officiel : vérifiée par Claude, à confirmer ; variance et fonction génératrice revérifiées par récurrence, cohérentes avec mod-a-009-*, 010-*, 011-*. Séance du 2026-11-11.'
+  chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
+  priorite: 1
+  tags: [exercice]

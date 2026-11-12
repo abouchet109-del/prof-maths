@@ -143,3 +143,43 @@
   anki: false
   marge_debut: 2235
   restant_debut: 6975
+'2026-11-11':
+  heure: '16:19'
+  exercices:
+  - mes-td2-ex01
+  - topo-uvsq-td2-ex01q1
+  - mod-td1-ex01
+  - mod-td1-ex03
+  - mod-td1-ex02
+  - mod-td1-ex05
+  - mod-td1-ex06
+  cartes:
+  - mod-a-078-1
+  - mod-a-078-2
+  - mod-a-078-3
+  - mod-a-078-4
+  - mod-a-001-1
+  - mod-a-001-2
+  - mod-a-002-1
+  - mod-a-002-2
+  - mod-a-002-3
+  - mod-a-002-4
+  - mod-a-003-1
+  - mod-a-004-1
+  - mod-a-004-2
+  - mod-a-005-1
+  - mod-a-005-2
+  - mod-a-006-1
+  - mod-a-006-2
+  - mod-a-006-3
+  - mod-a-007-1
+  - mod-a-007-2
+  - ex-mes-cc1-2324-ex01
+  - ex-pro-td1-ex05
+  - ex-pro-td1-ex07
+  - ex-pro-uvsq-chap-1-exam-24-25-ex1
+  - ex-pro-uvsq-chap-3-ex-14
+  anciennes: []
+  anki: true
+  marge_debut: 2085
+  restant_debut: 6975
