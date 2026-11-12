@@ -562,7 +562,7 @@ def test_anciennes_notes_du_bloc_hors_plafond_et_sans_repetition():
     requete = lignes[lignes.index("```", lignes.index(next(l for l in lignes if l.startswith("## Anki — cours, à apprendre")))) + 1]
     # + les cartes des notions requises par les exercices du bloc, hors plafond (11/11/2026)
     assert a["requises"] and requete == (f'({P._requete(a["nouvelles"] + a["requises"])} '
-                                         'or nid:100,101,102,103,104,105,106,107,200,201) is:new')
+                                         'or nid:100,101,102,103,104,105,106,107,200,201) (is:new or (is:learn -is:review))')
     # une entrée d'un jour futur (plan régénéré depuis) ne bloque rien
     c["anki_plan"] = {"2026-11-09": a["nouvelles"]}
     assert P.anki(c, p)["nouvelles"] == a["nouvelles"]

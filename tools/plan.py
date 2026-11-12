@@ -977,11 +977,11 @@ def rediger(ctx, plan, cartes) -> list[str]:
               + (f" + {len(anciennes)} anciennes" if anciennes else "") + ")"]
     requete = " or ".join(([_requete(apprendre)] if apprendre else [])
                           + ([f"nid:{','.join(map(str, anciennes))}"] if anciennes else []))
-    requete = f"({requete}) is:new" if requete else ""     # jamais une carte déjà apprise
+    requete = f"({requete}) (is:new or (is:learn -is:review))" if requete else ""     # jamais une carte déjà apprise (en apprentissage : pas encore apprise)
     L += ["```", requete, "```"] if requete else ["- (aucune)"]
     exos = cartes.get("exercices") or []
     L += ["", f"## Anki — exercices à revoir ({len(exos)} nouvelles)"]
-    L += ["```", f"({_requete(exos)}) is:new", "```",
+    L += ["```", f"({_requete(exos)}) (is:new or (is:learn -is:review))", "```",
           "Paquet filtré à part : cherche l'attaque avant de retourner la carte."] if exos else ["- (aucune)"]
     if plan.get("en_plus"):
         ar = {e["id"] for e, g in plan["items"] if g == "reprise"} | {e["id"] for e in plan["en_plus"]}

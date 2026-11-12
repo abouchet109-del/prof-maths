@@ -64,6 +64,10 @@ RATTACHEMENT = Path("inventaire") / "anki" / "rattachement_ancien.yaml"
 
 
 # ------------------------------------------------------------------ AnkiConnect
+# 12/11/2026 : une carte vue une fois puis « À revoir » reste en apprentissage (is:learn) : pas encore apprise.
+PAS_APPRISE = "(is:new or (is:learn -is:review))"
+
+
 class ErreurAnki(Exception):
     """AnkiConnect injoignable ou en erreur (la ligne de commande la transforme en message d'arrêt)."""
 
@@ -100,7 +104,7 @@ class ClientAnki:
         ids = list(ids)
         for k in range(0, len(ids), self.LOT):
             requete = " or ".join(f'"Id:{i}"' for i in ids[k:k + self.LOT])
-            notes = appel("findNotes", query=f"({requete}) is:new", delai=20)
+            notes = appel("findNotes", query=f"({requete}) {PAS_APPRISE}", delai=20)
             if notes:
                 res |= {n["fields"]["Id"]["value"] for n in appel("notesInfo", notes=notes, delai=20)}
         return res
@@ -110,7 +114,7 @@ class ClientAnki:
         res: set[int] = set()
         nids = list(nids)
         for k in range(0, len(nids), 200):
-            res |= set(appel("findNotes", query=f"nid:{','.join(map(str, nids[k:k + 200]))} is:new", delai=20))
+            res |= set(appel("findNotes", query=f"nid:{','.join(map(str, nids[k:k + 200]))} {PAS_APPRISE}", delai=20))
         return res
 
 
