@@ -622,7 +622,7 @@
   type: prerequis
   chapitre: Chapitre 1 - Modèle de Galton-Watson et séries génératrices
   sous_chapitre: 1.2.1 Définition
-  enonce: '$\sum f_n$ converge simplement sur $D$ si $\sum f_n(x)$ converge pour tout $x\in D$ ; uniformément si les sommes partielles convergent uniformément ($\sup_D|R_N|\to0$) ; normalement si $\sum\|f_n\|_\infty<\infty$. Normale $\Rightarrow$ uniforme $\Rightarrow$ simple, réciproques fausses. Critère de Cauchy uniforme ; $f_n\to0$ uniformément est nécessaire ; série alternée. Convergence uniforme : continuité de la somme, double limite, intégration terme à terme sur un segment ; dérivation terme à terme si $\sum f_n''$ converge uniformément sur tout segment.'
+  enonce: '$\sum f_n$ converge simplement sur $D$ si $\sum f_n(x)$ converge pour tout $x\in D$ ; uniformément si les sommes partielles convergent uniformément ($\sup_D|R_N|\to0$) ; normalement si $\sum\|f_n\|_\infty<\infty$. Normale $\Rightarrow$ uniforme $\Rightarrow$ simple, réciproques fausses. Critère de Cauchy uniforme ; $f_n\to0$ uniformément est nécessaire ; série alternée. Convergence uniforme : continuité de la somme, double limite, intégration terme à terme sur un segment ; dérivation terme à terme si $\sum f_n''$ converge uniformément sur tout segment et $\sum f_n(x_0)$ converge en un point $x_0$.'
   source: {etab: l1-l2}
   essentiel: true
   requis_par: [mod-p-0003, mod-n-0001]

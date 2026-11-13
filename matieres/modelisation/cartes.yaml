@@ -1234,7 +1234,7 @@
 - id: mod-a-080-3
   notion: mod-p-0005
   recto: 'Déf : convergence normale d''une série de fonctions'
-  verso: '\(\sum f_n\) converge normalement sur \(D\) si chaque \(f_n\) est bornée sur \(D\) et si la série numérique \(\sum\|f_n\|_\infty\) converge, où \(\|f_n\|_\infty=\sup_{x\in D}|f_n(x)|\). En pratique : trouver \(a_n\ge0\) indépendant de \(x\) avec \(|f_n(x)|\le a_n\) pour tout \(x\in D\) et \(\sum a_n<+\infty\).'
+  verso: 'Soit \(\sum f_n\) une série de fonctions \(f_n:D\to\mathbb K\). Elle converge normalement sur \(D\) si chaque \(f_n\) est bornée sur \(D\) et si la série numérique \(\sum_n\|f_n\|_\infty\) converge, où \(\|f_n\|_\infty=\sup_{x\in D}|f_n(x)|\). C''est une propriété de la série elle-même, pas une convergence « vers » une fonction : on dit « \(\sum f_n\) converge normalement sur \(D\) ». Elle entraîne la convergence uniforme sur \(D\) vers la somme \(S=\sum_{n=0}^{+\infty}f_n\). En pratique : trouver \(a_n\ge0\) indépendant de \(x\), avec \(|f_n(x)|\le a_n\) pour tout \(x\in D\) et \(\sum a_n<+\infty\).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -1242,7 +1242,7 @@
 - id: mod-a-080-4
   notion: mod-p-0005
   recto: 'Prop. : normale, uniforme, simple pour une série de fonctions'
-  verso: 'Normale \(\Rightarrow\) uniforme \(\Rightarrow\) simple. Preuve : \(|f_n(x)|\le\|f_n\|_\infty\), donc \(\sum f_n(x)\) converge absolument pour tout \(x\), et \(|R_N(x)|\le\sum_{n>N}\|f_n\|_\infty\to0\), majorant indépendant de \(x\). Réciproques fausses : \(\sum x^n\) converge simplement sur \(]-1,1[\) mais pas uniformément (\(R_N(x)=\frac{x^{N+1}}{1-x}\), non borné) ; les fonctions constantes \(f_n=\frac{(-1)^n}{n}\) (\(n\ge1\)) donnent une série uniformément convergente sur \(\mathbb R\), pas normalement (\(\sum\frac1n\) diverge).'
+  verso: 'Normale \(\Rightarrow\) uniforme \(\Rightarrow\) simple. Notation : \(R_N(x)=\sum_{n>N}f_n(x)\) est le reste de rang \(N\) (la « queue » de la série). Preuve : \(|f_n(x)|\le\|f_n\|_\infty\), donc \(\sum f_n(x)\) converge absolument pour tout \(x\), et \(|R_N(x)|\le\sum_{n>N}\|f_n\|_\infty\to0\), majorant indépendant de \(x\). Réciproques fausses : \(\sum x^n\) converge simplement sur \(]-1,1[\) mais pas uniformément (\(R_N(x)=\frac{x^{N+1}}{1-x}\), non borné) ; les fonctions constantes \(f_n=\frac{(-1)^n}{n}\) (\(n\ge1\)) donnent une série uniformément convergente sur \(\mathbb R\), pas normalement (\(\sum\frac1n\) diverge).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -1266,7 +1266,7 @@
 - id: mod-a-080-7
   notion: mod-p-0005
   recto: 'Prop. : condition nécessaire de convergence uniforme d''une série de fonctions'
-  verso: 'Si \(\sum f_n\) converge uniformément sur \(D\), alors \(f_n\to0\) uniformément sur \(D\) : \(f_n=R_{n-1}-R_n\), donc \(\sup_D|f_n|\le\sup_D|R_{n-1}|+\sup_D|R_n|\to0\). Usage : \(\sum x^n\) ne converge pas uniformément sur \(]-1,1[\), car \(\sup_{]-1,1[}|x^n|=1\).'
+  verso: 'Notation : \(R_N(x)=\sum_{n>N}f_n(x)\) est le reste de rang \(N\) (la « queue » de la série). Si \(\sum f_n\) converge uniformément sur \(D\), alors \(f_n\to0\) uniformément sur \(D\) : \(f_n=R_{n-1}-R_n\), donc \(\sup_D|f_n|\le\sup_D|R_{n-1}|+\sup_D|R_n|\to0\). Usage : \(\sum x^n\) ne converge pas uniformément sur \(]-1,1[\), car \(\sup_{]-1,1[}|x^n|=1\).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -1282,7 +1282,7 @@
 - id: mod-a-080-9
   notion: mod-p-0005
   recto: 'Thm : intégration terme à terme d''une série de fonctions sur un segment'
-  verso: 'Soient \(a<b\) et \(f_n:[a,b]\to\mathbb K\) continues. Si \(\sum f_n\) converge uniformément sur \([a,b]\), alors la série \(\sum\int_a^bf_n\) converge et \[\int_a^b\sum_{n=0}^{+\infty}f_n(t)\,dt=\sum_{n=0}^{+\infty}\int_a^bf_n(t)\,dt.\] Preuve : \(\big|\int_a^bR_N\big|\le(b-a)\sup_{[a,b]}|R_N|\to0\).'
+  verso: 'Soient \(a<b\) et \(f_n:[a,b]\to\mathbb K\) continues. Si \(\sum f_n\) converge uniformément sur \([a,b]\), alors la série \(\sum\int_a^bf_n\) converge et \[\int_a^b\sum_{n=0}^{+\infty}f_n(t)\,dt=\sum_{n=0}^{+\infty}\int_a^bf_n(t)\,dt.\] Preuve, avec \(R_N(x)=\sum_{n>N}f_n(x)\) est le reste de rang \(N\) (la « queue » de la série) : \(\big|\int_a^bR_N\big|\le(b-a)\sup_{[a,b]}|R_N|\to0\). Version théorie de la mesure (sans convergence uniforme ni segment) : sur un espace mesuré \((X,\mu)\), si les \(f_n\) sont intégrables et \(\sum_n\int|f_n|\,d\mu<+\infty\), alors \(\sum f_n\) converge absolument presque partout, sa somme est intégrable et \(\int\sum f_n\,d\mu=\sum\int f_n\,d\mu\). Si les \(f_n\ge0\) sont mesurables, l''égalité vaut toujours, dans \([0,+\infty]\).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -1290,7 +1290,7 @@
 - id: mod-a-080-10
   notion: mod-p-0005
   recto: 'Thm : dérivation terme à terme d''une série de fonctions'
-  verso: 'Soient \(I\) un intervalle et \(f_n:I\to\mathbb K\) de classe \(C^1\). Si \(\sum f_n\) converge simplement sur \(I\) et si \(\sum f_n''\) converge uniformément sur tout segment de \(I\), alors \(S=\sum f_n\) est de classe \(C^1\) sur \(I\) et \(S''=\sum f_n''\). Version \(C^k\) : \(f_n\) de classe \(C^k\), \(\sum f_n^{(j)}\) converge simplement pour \(0\le j\le k-1\) et \(\sum f_n^{(k)}\) uniformément sur tout segment ; alors \(S\) est \(C^k\) et \(S^{(j)}=\sum f_n^{(j)}\).'
+  verso: 'Soient \(I\) un intervalle et \(f_n:I\to\mathbb K\) de classe \(C^1\). Si \(\sum f_n''\) converge uniformément sur tout segment de \(I\) et s''il existe \(x_0\in I\) tel que \(\sum f_n(x_0)\) converge, alors \(\sum f_n\) converge simplement sur \(I\) (uniformément sur tout segment), sa somme \(S\) est de classe \(C^1\) sur \(I\) et \(S''=\sum f_n''\). Idée : \(f_n(x)=f_n(x_0)+\int_{x_0}^xf_n''\), puis intégration terme à terme de \(\sum f_n''\). Version \(C^k\) : \(f_n\) de classe \(C^k\), \(\sum f_n^{(j)}(x_0)\) converge pour \(0\le j\le k-1\) et \(\sum f_n^{(k)}\) converge uniformément sur tout segment de \(I\) ; alors \(S\) est \(C^k\) et \(S^{(j)}=\sum f_n^{(j)}\) pour \(j\le k\). Attention : la convergence uniforme de \(\sum f_n\) seule ne dit rien des dérivées (\(\frac{\sin(n^2x)}{n}\to0\) uniformément, mais pas sa dérivée).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
@@ -1298,7 +1298,7 @@
 - id: mod-a-080-11
   notion: mod-p-0005
   recto: 'Prop. : convergence uniforme d''une série alternée de fonctions'
-  verso: 'Si, pour tout \(x\in D\), \(f_n(x)=(-1)^na_n(x)\) avec \((a_n(x))_n\) décroissante de limite \(0\), alors \(\sum f_n\) converge simplement sur \(D\) et \(|R_N(x)|\le a_{N+1}(x)\) (critère des séries alternées). Si de plus \(\sup_{x\in D}a_n(x)\to0\), la convergence est uniforme sur \(D\).'
+  verso: 'Si, pour tout \(x\in D\), \(f_n(x)=(-1)^na_n(x)\) avec \((a_n(x))_n\) décroissante de limite \(0\), alors \(\sum f_n\) converge simplement sur \(D\) et \(|R_N(x)|\le a_{N+1}(x)\), où \(R_N(x)=\sum_{n>N}f_n(x)\) est le reste de rang \(N\) (la « queue » de la série), (critère des séries alternées). Si de plus \(\sup_{x\in D}a_n(x)\to0\), la convergence est uniforme sur \(D\).'
   source: 'Prérequis L1-L2 (énoncé standard), utilisé dans mod-p-0003, mod-n-0001'
   chapitre: 'Chapitre 1 - Modèle de Galton-Watson et séries génératrices'
   priorite: 1
