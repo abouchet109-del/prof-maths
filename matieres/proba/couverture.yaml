@@ -1,4 +1,4 @@
-proba-n-0001: {statut: couverte, notes: [1665073051008, 1786373146435]}
+proba-n-0001: {statut: couverte, notes: [1665073051008]}
 proba-n-0002: {statut: couverte, notes: [1675961753648, 1683302287382, 1675961911585]}
 proba-n-0003: {statut: couverte, notes: [1665073572156, 1728326854070]}
 proba-n-0004: {statut: partielle, notes: [1728327052704]}   # recto vague "3 propriétés supplémentaires sur les probabilités"
@@ -9,7 +9,7 @@ proba-n-0008: {statut: couverte, notes: [1728327428545]}
 proba-n-0009: {statut: couverte, notes: [1728328662838]}
 proba-n-0010: {statut: absente, notes: []}
 proba-n-0011: {statut: couverte, notes: [1665072376570, 1728326982581]}
-proba-n-0012: {statut: couverte, notes: [1768230269315, 1786372952836, 1786373080196]}
+proba-n-0012: {statut: couverte, notes: []}
 proba-n-0013: {statut: couverte, notes: [1728327428545, 1728328756019]}   # mesurabilité non vue sur le recto, à vérifier si besoin
 proba-n-0014: {statut: absente, notes: []}
 proba-n-0015: {statut: couverte, notes: [1675962391616, 1675962474570, 1728328681006]}
@@ -29,17 +29,17 @@ proba-n-0028: {statut: couverte, notes: [1669918879739]}
 proba-n-0029: {statut: couverte, notes: [1728328926316]}   # recto "Théorème de transfert", cas densité non précisé
 proba-n-0030: {statut: absente, notes: []}
 proba-n-0031: {statut: absente, notes: []}
-proba-n-0032: {statut: partielle, notes: [1786960762189]}   # définition de fonction étagée, espérance non nommée
-proba-n-0033: {statut: couverte, notes: [1786960902514]}
-proba-n-0034: {statut: couverte, notes: [1768230447472, 1771932178310]}
+proba-n-0032: {statut: partielle, notes: []}   # définition de fonction étagée, espérance non nommée
+proba-n-0033: {statut: couverte, notes: []}
+proba-n-0034: {statut: couverte, notes: []}
 proba-n-0035: {statut: couverte, notes: [1669918879739]}
-proba-n-0036: {statut: couverte, notes: [1786961452975, 1786960968731]}
-proba-n-0037: {statut: couverte, notes: [1786961248745]}
+proba-n-0036: {statut: couverte, notes: []}
+proba-n-0037: {statut: couverte, notes: []}
 proba-n-0038: {statut: couverte, notes: [1675963159490, 1675963260601]}
 proba-n-0039: {statut: couverte, notes: [1684254987730, 1670010018623]}
 proba-n-0040: {statut: partielle, notes: [1684254987730]}   # énoncé de Markov présent, démonstration non nommée
 proba-n-0041: {statut: absente, notes: []}
-proba-n-0042: {statut: partielle, notes: [1681486624307, 1786455481763]}   # Jensen déterministe, version espérance non nommée
+proba-n-0042: {statut: partielle, notes: [1681486624307]}   # Jensen déterministe, version espérance non nommée
 proba-n-0043: {statut: absente, notes: []}
 proba-n-0044: {statut: couverte, notes: [1675962474570]}
 proba-n-0045: {statut: absente, notes: []}
@@ -66,7 +66,7 @@ proba-n-0065: {statut: absente, notes: []}
 proba-n-0066: {statut: absente, notes: []}
 proba-n-0067: {statut: absente, notes: []}
 proba-n-0068: {statut: absente, notes: []}
-proba-n-0069: {statut: absente, notes: []}
+proba-n-0069: {statut: partielle, notes: [1728571758321, 1728571812808, 1732636719141, 1732717276071]}
 proba-n-0070: {statut: absente, notes: []}
 proba-n-0071: {statut: absente, notes: []}
 proba-n-0072: {statut: absente, notes: []}
@@ -75,11 +75,11 @@ proba-n-0074: {statut: absente, notes: []}
 proba-n-0075: {statut: absente, notes: []}
 proba-n-0076: {statut: absente, notes: []}
 proba-n-0077: {statut: absente, notes: []}
-proba-n-0078: {statut: couverte, notes: [1786961754171, 1786961767155]}
+proba-n-0078: {statut: couverte, notes: []}
 proba-n-0079: {statut: absente, notes: []}
 proba-n-0080: {statut: partielle, notes: [1680890221339, 1728328926316]}   # transfert à plusieurs variables (discret), cas densité non nommé
 proba-n-0081: {statut: absente, notes: []}
-proba-n-0082: {statut: partielle, notes: [1726929630842, 1786961909203]}   # changement de variable 1D et définition de difféomorphisme, pas la formule multiple
+proba-n-0082: {statut: partielle, notes: [1726929630842]}   # changement de variable 1D et définition de difféomorphisme, pas la formule multiple
 proba-n-0083: {statut: absente, notes: []}
 proba-n-0084: {statut: partielle, notes: [1680889307662, 1680889355872]}   # marginales dans le cas discret seulement
 proba-n-0085: {statut: couverte, notes: [1675962906343, 1670076999110]}
@@ -88,8 +88,8 @@ proba-n-0087: {statut: absente, notes: []}
 proba-n-0088: {statut: absente, notes: []}
 proba-n-0089: {statut: couverte, notes: [1680961037793, 1670010218914, 1768295068507]}
 proba-n-0090: {statut: couverte, notes: [1684412287835]}
-proba-n-0091: {statut: couverte, notes: [1768230564879]}
-proba-n-0092: {statut: couverte, notes: [1771932860001]}
+proba-n-0091: {statut: couverte, notes: []}
+proba-n-0092: {statut: couverte, notes: []}
 proba-n-0093: {statut: absente, notes: []}
 proba-n-0094: {statut: absente, notes: []}
 proba-n-0095: {statut: absente, notes: []}
@@ -101,7 +101,7 @@ proba-n-0100: {statut: absente, notes: []}
 proba-n-0101: {statut: absente, notes: []}
 proba-n-0102: {statut: absente, notes: []}
 proba-n-0103: {statut: couverte, notes: [1680890844761]}
-proba-n-0104: {statut: partielle, notes: [1726930199840]}   # "Valeur de la gaussienne" (intégrale), moments non nommés
+proba-n-0104: {statut: partielle, notes: [1726930199840, 1728482592105, 1728482805611]}   # "Valeur de la gaussienne" (intégrale), moments non nommés
 proba-n-0105: {statut: partielle, notes: [1726930199840]}
 proba-n-0106: {statut: absente, notes: []}
 proba-n-0107: {statut: partielle, notes: [1728572400647, 1728572543907]}   # paramètres de la normale et simulation, définition Y=m+sigma X non nommée

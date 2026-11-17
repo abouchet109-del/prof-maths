@@ -1,0 +1,1497 @@
+# Tri des anciennes cartes du paquet L3 (17/11/2026) : verdict et action, pour pouvoir revenir en arrière.
+1737815026888:
+  verdict: complement
+  action: rattachée à topo-n-0049
+  recto: Proposition sur image réciproque lié à f + demo à ( à laquelle j'ai ri
+1737815063067:
+  verdict: complement
+  action: rattachée à topo-n-0049
+  recto: Corrolaire du fait que image réciproque d'un ouvert par f continue est
+1765020913909:
+  verdict: complement
+  action: rattachée à topo-n-0010
+  recto: 'Exemple : Exemple d''espace métrique sur R / Rn / suite et autre'
+1765021066764:
+  verdict: complement
+  action: rattachée à topo-n-0040
+  recto: 'Def : suite et convergence dans un espace métrique'
+1765021188070:
+  verdict: complement
+  action: rattachée à topo-n-0040
+  recto: 'Prop : particularité des limites dans les espaces métriques + démo'
+1765021312818:
+  verdict: prerequis
+  action: rattachée à topo-n-0040
+  recto: 'Def : Convergence en norme Remarque : Différences entre dimension fini'
+1765021326999:
+  verdict: complement
+  action: rattachée à topo-n-0053
+  recto: 'Def : Suite de Cauchy'
+1765021343166:
+  verdict: complement
+  action: rattachée à topo-n-0054
+  recto: 'Prop : suite convergente et suite de Cauchy'
+1765021366209:
+  verdict: complement
+  action: rattachée à topo-n-0056
+  recto: 'Def: Espace de complet et espace de banach'
+1765021403032:
+  verdict: complement
+  action: rattachée à topo-n-0057
+  recto: 'Exemple : espace complet, espace pas complet et espace qui est complet'
+1765021425081:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'A retenir : pourquoi important complétude'
+1765287268013:
+  verdict: prerequis
+  action: rattachée à topo-p-0005
+  recto: 'Def: Suite de fonction'
+1765287298573:
+  verdict: prerequis
+  action: rattachée à topo-p-0005
+  recto: 'Def : convergence uniforme de suites de fonction'
+1765287402934:
+  verdict: doublon
+  action: suspendre (doublon de topo-a-041-1)
+  recto: 'Prop : lien logique entre convergence uniforme et convergence simple +'
+1765287451888:
+  verdict: complement
+  action: rattachée à topo-n-0063
+  recto: 'Cas particulier : convergence uniforme sur espace fonction bornées'
+1765287472236:
+  verdict: complement
+  action: rattachée à topo-n-0063
+  recto: 'Théorème : limite uniforme des fonctions continues + démo'
+1770140824703:
+  verdict: complement
+  action: rattachée à topo-n-0003
+  recto: 'Def : espace topologique'
+1770140867658:
+  verdict: complement
+  action: rattachée à topo-n-0012
+  recto: 'Prop : lien entre espace métrique et espace topologique'
+1770140956173:
+  verdict: complement
+  action: rattachée à topo-n-0016
+  recto: 'Def : voisinage d''un point dans un espace topologique'
+1770140975407:
+  verdict: complement
+  action: rattachée à topo-n-0017
+  recto: Propriétés du voisinage d'un point (3)
+1770140989236:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Def : base du voisinage d''un point'
+1770141008352:
+  verdict: complement
+  action: rattachée à topo-n-0039
+  recto: 'Def: convergence d''une suite d''élément dans un espace topologique'
+1770141049285:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : autre formulation convergence dans un espace topologique'
+1770141066821:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Def: comparaison de deux topologie sur un ensemble'
+1770141084686:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : convergence selon deux topologies'
+1770141107552:
+  verdict: doute
+  action: inchangée (doute)
+  recto: 'prop : topologie produit'
+1770141171624:
+  verdict: complement
+  action: rattachée à topo-n-0006
+  recto: 'Prop : espace métrique et espaces topologiques séparées / espace topol'
+1770141239338:
+  verdict: complement
+  action: rattachée à topo-n-0022
+  recto: 'def : point adhérent à une partie adhérence d''une partie point isolés '
+1770141260190:
+  verdict: complement
+  action: rattachée à topo-n-0024
+  recto: 'Prop : prop sur ensemble dans un espace topologique'
+1770141280522:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : espace vectoriel normé et sous espace vectoriel'
+1770141348553:
+  verdict: complement
+  action: rattachée à topo-n-0020
+  recto: 'Prop : prop calculatoire et intérieur d''une partie d''un ensemble'
+1770141418217:
+  verdict: complement
+  action: rattachée à topo-n-0054
+  recto: 'Prop : suite de Cuahcy et espace métrique prop (4)'
+1770141449086:
+  verdict: complement
+  action: rattachée à topo-n-0060
+  recto: 'Prop : lien entre partie complète et partie fermée'
+1770141760483:
+  verdict: complement
+  action: rattachée à topo-n-0048
+  recto: 'Def : limite dans un espace métrique continuitié en un point et sur un'
+1770141878445:
+  verdict: complement
+  action: rattachée à topo-n-0048
+  recto: Prop des limites dans espace métrique limite et espaces métrique limit
+1770141912983:
+  verdict: doublon
+  action: suspendre (doublon de topo-a-020-1)
+  recto: 'Prop : Théorème du point fixe'
+1770141939693:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : opération sur les limites dans un espace vectoriel normés ( 6 )'
+1770198218785:
+  verdict: prerequis
+  action: rattachée à topo-p-0005
+  recto: 'def : uniformément Cauchy'
+1770198235469:
+  verdict: doublon
+  action: suspendre (doublon de topo-a-041-4)
+  recto: 'Th : convergence uniforme et uniformément Cauchy'
+1770198304877:
+  verdict: prerequis
+  action: rattachée à topo-p-0005
+  recto: 'Th : interchangement de limite et continuité'
+1770198404684:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Théorème de Weiestrass
+1771251237309:
+  verdict: complement
+  action: rattachée à topo-n-0063
+  recto: 'prop : espace de fonction bornées et type d''espace métrique'
+1771251937434:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'prop : uniformément cauchy et borne'
+1771251973981:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : convergence uniforme et borne'
+1771259222926:
+  verdict: complement
+  action: rattachée à topo-n-0055
+  recto: 'Prop : sous suite extraite et converge'
+1772186584289:
+  verdict: doublon
+  action: suspendre (doublon de topo-a-016-3)
+  recto: 'Def : un sous-ensemble de Rn bornée ( potentiellement à plusieurs dime'
+1772215405816:
+  verdict: complement
+  action: rattachée à topo-n-0028
+  recto: 'Prop : irrationnels et densité'
+1772219007501:
+  verdict: complement
+  action: rattachée à topo-n-0041
+  recto: 'Def : suite extraites'
+1772485252552:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : SEV, espace de hilbert, dimension et fermé'
+1772647483015:
+  verdict: complement
+  action: rattachée à topo-n-0012
+  recto: 'def : topologie métrique'
+1786441421315:
+  verdict: prerequis
+  action: rattachée à topo-n-0008
+  recto: 'Méthode : Comment montrer qu''une application est une norme'
+1786441440087:
+  verdict: prerequis
+  action: rattachée à topo-n-0010
+  recto: 'Def : norme infini'
+1786441456819:
+  verdict: prerequis
+  action: rattachée à topo-n-0010
+  recto: 'Prop : maximum des fonctions positives ( à savoir redémontrer )'
+1786441479984:
+  verdict: prerequis
+  action: rattachée à topo-n-0008
+  recto: 'Prop : inégalité triangulaire'
+1786441536174:
+  verdict: prerequis
+  action: rattachée à topo-n-0034
+  recto: 'Prop : inclusion des boules unités'
+1786441560763:
+  verdict: prerequis
+  action: rattachée à topo-n-0034
+  recto: Formulation géométrique de l'équivalence des normes
+1786441602579:
+  verdict: prerequis
+  action: rattachée à topo-n-0035
+  recto: 'Prop : normes équivalentes et topologie'
+1786441612419:
+  verdict: prerequis
+  action: rattachée à topo-n-0010
+  recto: 'Def : normes Lp sur Rn'
+1786441623382:
+  verdict: prerequis
+  action: rattachée à topo-n-0010
+  recto: 'Prop : inégalité de Young'
+1786441638452:
+  verdict: prerequis
+  action: rattachée à topo-n-0010
+  recto: 'Prop : inégalité de Holer'
+1786441654395:
+  verdict: prerequis
+  action: rattachée à topo-n-0010
+  recto: 'Prop : inégalité de Cauchy Schwarz'
+1786441914114:
+  verdict: complement
+  action: rattachée à topo-n-0003
+  recto: Propriétés des ouverts
+1786441932447:
+  verdict: complement
+  action: rattachée à topo-n-0005
+  recto: Def et propriétés des fermés
+1786441989595:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : réunion localement finie de fermés'
+1786442003253:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : réunion dénombrable de boules'
+1786442034064:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Théorème : lien entre ouvert de R2 et réunion dénombrable'
+1786442067622:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Théorème : caractérisation des fermé dans unn espace normé'
+1786442311898:
+  verdict: doublon
+  action: suspendre (doublon de topo-a-006-2)
+  recto: Intérieur d'un ouvert
+1786442325818:
+  verdict: complement
+  action: rattachée à topo-n-0024
+  recto: 'Prop : adhérence d''un fermé'
+1786442418924:
+  verdict: prerequis
+  action: rattachée à topo-n-0049
+  recto: 'DDef : image réciproque'
+1786442900580:
+  verdict: prerequis
+  action: rattachée à topo-n-0035
+  recto: Normes équivalentes et topologie
+1786448354098:
+  verdict: complement
+  action: rattachée à topo-n-0008
+  recto: 'Def : distance'
+1786448361516:
+  verdict: prerequis
+  action: rattachée à topo-n-0008
+  recto: 'Def : norme'
+1786448382100:
+  verdict: prerequis
+  action: rattachée à topo-n-0008
+  recto: 'Def : lien entre norme et distance'
+1786448393166:
+  verdict: complement
+  action: rattachée à topo-n-0034
+  recto: 'Def: distance équivalente'
+1786448404932:
+  verdict: prerequis
+  action: rattachée à topo-n-0034
+  recto: 'ef : normes équivalentes'
+1786448415251:
+  verdict: complement
+  action: rattachée à topo-n-0012
+  recto: 'Def: ouvert'
+1786448424876:
+  verdict: complement
+  action: rattachée à topo-n-0035
+  recto: 'Prop : ouvert et distances équivalentes'
+1786448433279:
+  verdict: complement
+  action: rattachée à topo-n-0004
+  recto: 'Def : fermé'
+1786448444687:
+  verdict: doublon
+  action: suspendre (doublon de topo-a-004-1)
+  recto: 'prop : boules et fermés'
+1786448462203:
+  verdict: complement
+  action: rattachée à topo-n-0040
+  recto: 'Def topologique : convergence d''une suite'
+1786448482473:
+  verdict: complement
+  action: rattachée à topo-n-0043
+  recto: 'Prop : caractérisation d''un ferm" par des suites'
+1786448496760:
+  verdict: complement
+  action: rattachée à topo-n-0003
+  recto: Propriétés d'un ouvert dans un espace métrique
+1786448507951:
+  verdict: complement
+  action: rattachée à topo-n-0005
+  recto: Propriété des fermé dans un espace métrique
+1786448519325:
+  verdict: complement
+  action: rattachée à topo-n-0030
+  recto: 'Prop : topologie restreinte'
+1786448736462:
+  verdict: complement
+  action: rattachée à topo-n-0008
+  recto: 'Def : espace métrique'
+1786448747719:
+  verdict: prerequis
+  action: rattachée à topo-n-0008
+  recto: 'Def : espace normé'
+1786448903783:
+  verdict: complement
+  action: rattachée à topo-n-0011
+  recto: 'Ddef : boule ouverte et boule fermée'
+1786448927718:
+  verdict: prerequis
+  action: rattachée à topo-n-0011
+  recto: 'def : boule ouverte et fermé dans un espace normé'
+1786450317326:
+  verdict: prerequis
+  action: rattachée à topo-n-0011
+  recto: 'Def : boule unité'
+1786455289160:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: inégalité concavité ln
+1786455425863:
+  verdict: prerequis
+  action: rattachée à topo-n-0010
+  recto: '[image] UVSQ TD1 Ex2 q1 : inégalité de Young'
+1786455481763:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: inégalité de Jensen
+1786455937930:
+  verdict: prerequis
+  action: rattachée à topo-n-0010
+  recto: '[image] UVSQ TD1 Ex2 q1-q2 : Young, Hölder'
+1786457053663:
+  verdict: prerequis
+  action: rattachée à topo-n-0010
+  recto: '[image] UVSQ TD1 Ex2 q1-q3 : Young, Hölder, Minkowski'
+1786457182889:
+  verdict: prerequis
+  action: rattachée à topo-n-0010
+  recto: '[image] UVSQ TD1 Ex2 q1-q4 : + ||.||_p norme sur R^n'
+1786457336313:
+  verdict: complement
+  action: rattachée à topo-n-0063
+  recto: 'Def : norme infini'
+1786458087545:
+  verdict: complement
+  action: rattachée à topo-n-0028
+  recto: 'Def : densité'
+1786459490834:
+  verdict: complement
+  action: rattachée à topo-n-0034
+  recto: '[image] UVSQ TD1 Ex4 : deux normes équivalentes sur {f in C^1, f(0)=0}'
+1786464844402:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: '[image] UVSQ TD1 Ex6 : ouvert de R^2 réunion dénombrable de boules'
+1786466066522:
+  verdict: doublon
+  action: suspendre (doublon de topo-a-005-1)
+  recto: 'Def : distance d''un point à un ensemble'
+1786466092879:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Théorème : Propriété de Lieschitz et distance'
+1786466106845:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Caractérisation d'un fermé par la distance
+1786466147358:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : Ouvert défini par la distance ( plus une def )'
+1786466200180:
+  verdict: complement
+  action: rattachée à topo-n-0050
+  recto: 'De : fonction K lipschitzienne'
+1786466212983:
+  verdict: prerequis
+  action: rattachée à topo-n-0050
+  recto: Fonction Lisschitzienne d'une fonction réelle
+1786466229119:
+  verdict: doublon
+  action: suspendre (doublon de topo-a-014-1)
+  recto: Fonction Lipschitzienne et continuité
+1786466245773:
+  verdict: prerequis
+  action: rattachée à topo-n-0066
+  recto: Caractérisation d'une fonction Lipschitzienne par dérivabilité
+1786466270955:
+  verdict: complement
+  action: rattachée à topo-n-0065
+  recto: 'Def : application dite contractante et isométrie'
+1786466820178:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: '[image] UVSQ TD1 Ex8 : fermé = intersection dénombrable d''ouverts'
+1786467336208:
+  verdict: complement
+  action: rattachée à topo-n-0022
+  recto: 'Ddef : adhérence ( def topo et def par les boules )'
+1786467355412:
+  verdict: complement
+  action: rattachée à topo-n-0043
+  recto: Cractérisation séquentiel de l'adhérence
+1786467377084:
+  verdict: complement
+  action: rattachée à topo-n-0024
+  recto: lien entre adhérence et ensemble fermé
+1786467405624:
+  verdict: complement
+  action: rattachée à topo-n-0024
+  recto: 'Prop: adhérence d''une réunion'
+1786468179968:
+  verdict: complement
+  action: rattachée à topo-n-0022
+  recto: '[image] UVSQ TD1 Ex9 : F_n={1/n}x[0,1], F fermé, adhérence (q2)'
+1786468772705:
+  verdict: complement
+  action: rattachée à topo-n-0022
+  recto: '[image] UVSQ TD1 Ex9 q1-q3 : F_n fermé, F fermé, adhérence'
+1786484059886:
+  verdict: complement
+  action: rattachée à topo-n-0018
+  recto: 'Def : intérieur'
+1786484077090:
+  verdict: complement
+  action: rattachée à topo-n-0020
+  recto: Proposition calculatoire sur l'intérieur (1 rond )
+1786484126572:
+  verdict: complement
+  action: rattachée à topo-n-0020
+  recto: 'Prop : intérieur d''une intersection et intersection'
+1786484150966:
+  verdict: complement
+  action: rattachée à topo-n-0020
+  recto: 'prop : intérieur d''une union et union d''intérieur'
+1786484163414:
+  verdict: complement
+  action: rattachée à topo-n-0025
+  recto: 'Def : frrontière'
+1786484189113:
+  verdict: complement
+  action: rattachée à topo-n-0026
+  recto: Prop calculatoire des frontières
+1786484202934:
+  verdict: complement
+  action: rattachée à topo-n-0026
+  recto: 'Prop : frontières et ouvert/fermé'
+1786484399694:
+  verdict: complement
+  action: rattachée à topo-n-0024
+  recto: Prop calculatoire de l'addhérence
+1786484431523:
+  verdict: complement
+  action: rattachée à topo-n-0024
+  recto: Prop calculatoire ensembliste de l'adhérence
+1786484452246:
+  verdict: complement
+  action: rattachée à topo-n-0023
+  recto: 'Prop calculatoire : adhérence et passage au complémentaire'
+1786485182087:
+  verdict: complement
+  action: rattachée à topo-n-0024
+  recto: 'Prop : Ensemble vide et adhérence'
+1786488160527:
+  verdict: complement
+  action: rattachée à topo-n-0049
+  recto: 'Th : image réciproque ouvert et fermé'
+1786488193399:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : intérieur d''un SEV propre'
+1786488214838:
+  verdict: complement
+  action: rattachée à topo-n-0092
+  recto: 'Th : th de Weierstrass ( des bornes atteintes )'
+1786488325817:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : stabilité des inégalités larges par passage à la limite'
+1786488577325:
+  verdict: doute
+  action: inchangée (doute)
+  recto: 'Def : application d''évaluation'
+1786488606592:
+  verdict: doute
+  action: inchangée (doute)
+  recto: 2 propriétés fondamentales applications d'évaluation
+1786488698389:
+  verdict: complement
+  action: rattachée à topo-n-0018
+  recto: '[image] UVSQ TD1 Ex15 q1-q2 : adhérence/intérieur dans (C([0,1]),||.||'
+1786525261017:
+  verdict: complement
+  action: rattachée à topo-n-0030
+  recto: 'Prop : Caractérisation des fermés induits'
+1786525277287:
+  verdict: complement
+  action: rattachée à topo-n-0030
+  recto: 'Prop : Transitivité des fermés et des ouverts'
+1786525296595:
+  verdict: complement
+  action: rattachée à topo-n-0013
+  recto: 'Prop : Séparation de Hausdorf'
+1786525315382:
+  verdict: complement
+  action: rattachée à topo-n-0037
+  recto: 'Prop : Distance bornée équivalente'
+1786525328168:
+  verdict: complement
+  action: rattachée à topo-n-0035
+  recto: 'Def : équivalence topologique'
+1786525351001:
+  verdict: complement
+  action: rattachée à topo-n-0033
+  recto: 'Prop : Distance sur un espace produit'
+1786525378426:
+  verdict: complement
+  action: rattachée à topo-n-0033
+  recto: 'Prop : caractérisation des ouverts du produit'
+1786525411486:
+  verdict: complement
+  action: rattachée à topo-n-0033
+  recto: 'Remarque : autres distance topologique équivalent à distance sur un es'
+1786526255846:
+  verdict: complement
+  action: rattachée à topo-n-0023
+  recto: 'Prop: complémentaire intérieur et adhérence'
+1786526285701:
+  verdict: complement
+  action: rattachée à topo-n-0048
+  recto: 'Def : continuité d''application sur un espaCE M2TRIQQUE'
+1786526306402:
+  verdict: complement
+  action: rattachée à topo-n-0049
+  recto: 'Prop : caractérisation topologique dde la continuité'
+1786526323201:
+  verdict: complement
+  action: rattachée à topo-n-0047
+  recto: 'Prop : continuité topologique et composition'
+1786526335449:
+  verdict: complement
+  action: rattachée à topo-n-0048
+  recto: 'Prop : caractérisation séquentielle de la continuité'
+1786526368323:
+  verdict: complement
+  action: rattachée à topo-n-0049
+  recto: 'Prop : image direct par application continue ouvert et fermé'
+1786531243500:
+  verdict: complement
+  action: rattachée à topo-n-0012
+  recto: '[image] UVSQ TD2 Ex1 q1 : X+Y ouvert si X ouvert'
+1786531895169:
+  verdict: complement
+  action: rattachée à topo-n-0082
+  recto: 'ef : compacité séquentielle'
+1786531922854:
+  verdict: complement
+  action: 'suspendre (énoncé faux : compact ssi fermé borné dans un evn quelconque)'
+  recto: 'Def : Compacité en dimension fini'
+1786531953268:
+  verdict: complement
+  action: rattachée à topo-n-0089
+  recto: 'Théorème : produit d''espace compacts'
+1786531967279:
+  verdict: complement
+  action: rattachée à topo-n-0091
+  recto: 'Prop : image d''un compact par une application continue'
+1786531988271:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : Continuité de l''addition dans un EVN'
+1786532058479:
+  verdict: complement
+  action: rattachée à topo-n-0075
+  recto: 'DDef : compacit'
+1786532074719:
+  verdict: complement
+  action: rattachée à topo-n-0077
+  recto: 'Def : Partie compact d''un espace topologique'
+1786532090921:
+  verdict: complement
+  action: rattachée à topo-n-0082
+  recto: Caractérisation d'un compact
+1786532502435:
+  verdict: complement
+  action: rattachée à topo-n-0089
+  recto: '[image] UVSQ TD2 Ex1 q1-q2 : X+Y ouvert, compact'
+1786533194751:
+  verdict: complement
+  action: rattachée à topo-n-0089
+  recto: '[image] UVSQ TD2 Ex1 q1-q3 : + fermé si X compact, Y fermé'
+1786533214981:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : Continuité des opérations algébrique dans un EVN et limite'
+1786533420890:
+  verdict: complement
+  action: rattachée à topo-n-0090
+  recto: 'Prop : caractérisation d''un compact en ddimension fini'
+1786533438908:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Def :de la limite à l'infini ( aussi di coercivité )
+1786533874793:
+  verdict: complement
+  action: rattachée à topo-n-0092
+  recto: '[image] UVSQ TD2 Ex2 : f coercive sur R^n, minimum global'
+1786534207685:
+  verdict: doute
+  action: inchangée (doute)
+  recto: 'Prop: contintuié des application multilinéaire'
+1786534668349:
+  verdict: complement
+  action: rattachée à topo-n-0090
+  recto: '[image] UVSQ TD2 Ex3 : O(n) est compact'
+1786539563424:
+  verdict: complement
+  action: rattachée à topo-n-0006
+  recto: 'Prop : limite et topologie séparée'
+1786540287802:
+  verdict: complement
+  action: rattachée à topo-n-0003
+  recto: 'DDef : espace topologique'
+1786540307329:
+  verdict: complement
+  action: rattachée à topo-n-0030
+  recto: 'ef : topologie indudite'
+1786540547855:
+  verdict: complement
+  action: rattachée à topo-n-0082
+  recto: 'Def : espace séquentiellement compact'
+1786540678493:
+  verdict: complement
+  action: rattachée à topo-n-0052
+  recto: 'Prop : Contiuité et applications topologiquement équivalentes'
+1786541565024:
+  verdict: complement
+  action: rattachée à topo-n-0082
+  recto: '[image] UVSQ TD2 Ex5 q1 : norme L2 de cos(2 pi n x)'
+1786542197534:
+  verdict: complement
+  action: rattachée à topo-n-0082
+  recto: '[image] UVSQ TD2 Ex5 q1-q2 : ||f_n - f_p||_2'
+1786542615757:
+  verdict: complement
+  action: rattachée à topo-n-0053
+  recto: 'Def : Suite de Cauchy'
+1786542645882:
+  verdict: complement
+  action: rattachée à topo-n-0054
+  recto: 'Prop : Lien entre convergence et suite de Cauchy et corrolaire'
+1786542701362:
+  verdict: complement
+  action: rattachée à topo-n-0082
+  recto: 'Prop : critère séquentiel de non compacité'
+1786542827962:
+  verdict: complement
+  action: rattachée à topo-n-0088
+  recto: '[image] UVSQ TD2 Ex5 q1-q3 : B(0,1) de (C([0,1]),L2) non compacte'
+1786543953147:
+  verdict: complement
+  action: rattachée à topo-n-0079
+  recto: '[image] UVSQ TD2 Ex4 : compacts décroissants, intersection non vide'
+1786544302569:
+  verdict: complement
+  action: rattachée à topo-n-0093
+  recto: Théorème de Heine
+1786545158719:
+  verdict: complement
+  action: rattachée à topo-n-0093
+  recto: '[image] UVSQ TD2 Ex7 : limites finies en +-inf, uniformément continue'
+1786559135422:
+  verdict: complement
+  action: rattachée à topo-n-0033
+  recto: Condition nécessaire et suffisante de convergence dans l'espace produi
+1786559487973:
+  verdict: complement
+  action: rattachée à topo-n-0082
+  recto: '[image] UVSQ TD2 Ex9 : p(F) fermé si Y compact'
+1786560456614:
+  verdict: complement
+  action: rattachée à topo-n-0049
+  recto: '[image] UVSQ TD2 Ex10 q1 : f(adh A) inclus dans adh f(A)'
+1786561153357:
+  verdict: complement
+  action: rattachée à topo-n-0091
+  recto: '[image] UVSQ TD2 Ex10 q1-q2 : cas adh A compact'
+1786562230905:
+  verdict: doute
+  action: inchangée (doute)
+  recto: '[image] UVSQ TD2 Ex11 : connexe C, C inter frontière vide'
+1786562376695:
+  verdict: complement
+  action: rattachée à topo-n-0030
+  recto: 'Def: ouvert et ferme relatif ( autre nom pour un truc que t''as déja in'
+1786629418328:
+  verdict: complement
+  action: rattachée à topo-n-0053
+  recto: '[image] UVSQ TD3 Ex1 q1 : (f_n) de Cauchy pour la norme L1'
+1786629438012:
+  verdict: complement
+  action: rattachée à topo-n-0053
+  recto: 'Def : Suite de Cauchy'
+1786629459668:
+  verdict: complement
+  action: rattachée à topo-n-0057
+  recto: 'Prop : norme L1 et EVN associé'
+1786629612408:
+  verdict: complement
+  action: rattachée à topo-n-0056
+  recto: 'Def : espace normé complet'
+1786629634299:
+  verdict: complement
+  action: rattachée à topo-n-0056
+  recto: 'Prop : caractérisation de la non complétude'
+1786629687388:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : séparation norme L1 sur les fonctions continues'
+1786630422554:
+  verdict: complement
+  action: rattachée à topo-n-0057
+  recto: '[image] UVSQ TD3 Ex1 q1-q2 : C([-1,1]) L1 non complet'
+1786630618335:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Def : norme d''algèbre'
+1786630642807:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : Majoration des puissance par la norme d''algèbre'
+1786630668334:
+  verdict: prerequis
+  action: rattachée à topo-n-0090
+  recto: 'TH : équivalence des normes en dimension fini'
+1786630703898:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Def : convergence absolue d''une série vectoriel'
+1786630722430:
+  verdict: complement
+  action: rattachée à topo-n-0061
+  recto: 'Prop : Complétude de la dimension finie'
+1786630750523:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : lien entre convergence vectoriel absolue et convergence'
+1786630815179:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: '[image] UVSQ TD3 Ex2 : série de A^k/k! converge'
+1786891449425:
+  verdict: prerequis
+  action: rattachée à topo-p-0002
+  recto: 'Prop : propriétés calculatoire produit scalaire et norme euclydienne'
+1786892010051:
+  verdict: doute
+  action: inchangée (doute)
+  recto: 'Th : continuité des applications linéaire en dimension finie'
+1786892045701:
+  verdict: doute
+  action: inchangée (doute)
+  recto: Norme d'opérateur
+1786892904157:
+  verdict: complement
+  action: rattachée à topo-n-0063
+  recto: 'Def: espace des fonctions continues et norme de la convergence uniform'
+1786893894696:
+  verdict: doute
+  action: inchangée (doute)
+  recto: 'Prop : critère de continuité d''une forme linéaire en dimension quelquo'
+1786894010661:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Propriétés algébriques pour une fonction continue sur un compact
+1786959959699:
+  verdict: complement
+  action: rattachée à topo-n-0084
+  recto: 'Prop : pré compacité'
+1786959988742:
+  verdict: complement
+  action: rattachée à topo-n-0050
+  recto: 'Def: continuité uniforme'
+1786960247773:
+  verdict: complement
+  action: rattachée à topo-n-0041
+  recto: 'Def: extractrice d''une suite extraite + Prop calcul immédiate'
+1786960267606:
+  verdict: complement
+  action: rattachée à topo-n-0042
+  recto: 'Prop : convergence d''une suite et suite extraite'
+1786960283839:
+  verdict: complement
+  action: rattachée à topo-n-0042
+  recto: 'Prop : critère de divergence par suite extraite'
+1786960309989:
+  verdict: complement
+  action: rattachée à topo-n-0042
+  recto: 'Prop : Convergence et suite extraites complémentaires'
+1786960326722:
+  verdict: complement
+  action: rattachée à topo-n-0044
+  recto: 'Def : valeur d''adhérence'
+1786960349488:
+  verdict: prerequis
+  action: rattachée à topo-n-0087
+  recto: 'Prop : Lemme de Bolzano-Weierstrass'
+1786960375538:
+  verdict: doublon
+  action: suspendre (doublon de topo-a-041-3)
+  recto: 'Def : convergence simple'
+1786960389772:
+  verdict: prerequis
+  action: rattachée à topo-p-0005
+  recto: 'Def : convergence uniforme'
+1786960417161:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Def : convergence uniforme sur tout compact'
+1786960429402:
+  verdict: prerequis
+  action: rattachée à topo-p-0005
+  recto: 'Prop : hiérarchie des convergences'
+1786960459470:
+  verdict: complement
+  action: rattachée à topo-n-0063
+  recto: 'Prop : continuité et convergence uniforme/sur tout compact'
+1786977605042:
+  verdict: doute
+  action: inchangée (doute)
+  recto: 'Def : norme matricielle subordonnée à la norme euclidienne'
+1787136943964:
+  verdict: complement
+  action: rattachée à topo-n-0065
+  recto: 'Def: Point fixe d''application'
+1787136964616:
+  verdict: doute
+  action: inchangée (doute)
+  recto: Théorème du point fixe de Banach Picard
+1787138464247:
+  verdict: complement
+  action: rattachée à topo-n-0063
+  recto: 'Prop : Espace de Banach et fonctions continue ( conditions )'
+1787138481081:
+  verdict: doute
+  action: inchangée (doute)
+  recto: 'Prop : Continuité d''une applications linéaire'
+1787147492560:
+  verdict: prerequis
+  action: rattachée à topo-n-0090
+  recto: 'Prop : Equivalence des normes et sous norme multiplicative en dimensio'
+1765287088117:
+  verdict: complement
+  action: rattachée à mesure-n-0004
+  recto: 'Prop : inégalité sur limite sup et inf'
+1765287123520:
+  verdict: complement
+  action: rattachée à mesure-n-0004
+  recto: 'Prop : Existence de limite, lim sup et lim inf'
+1765287151923:
+  verdict: complement
+  action: rattachée à mesure-n-0004
+  recto: 'Corolaire : lim sup, lim inf et non existence de limit'
+1765287233556:
+  verdict: complement
+  action: rattachée à mesure-n-0004
+  recto: 'Exemple : Corolaire sur inégalité lim sup et inf exemples qui illustre'
+1768230156261:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Def : algèbre de Boule sur E'
+1768230224813:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Proposition : calcul sur algèbre ( 3 )'
+1768230269315:
+  verdict: complement
+  action: rattachée à mesure-n-0012
+  recto: 'Def : tribus borélienne'
+1768230281515:
+  verdict: complement
+  action: rattachée à mesure-n-0042
+  recto: 'Def : ensemble de mesure nulle'
+1768230291346:
+  verdict: complement
+  action: rattachée à mesure-n-0039
+  recto: 'Def : mesure de Lesbegue'
+1768230315204:
+  verdict: complement
+  action: rattachée à mesure-n-0042
+  recto: 'De f: négligeable'
+1768230336717:
+  verdict: complement
+  action: rattachée à mesure-n-0044
+  recto: 'Def : presque partout'
+1768230430367:
+  verdict: complement
+  action: rattachée à mesure-n-0049
+  recto: 'Def : fonction f+ et F- et propriété de calcul'
+1768230447472:
+  verdict: complement
+  action: rattachée à mesure-n-0051
+  recto: 'Def : fonction intégrable au sens de Lesbegue'
+1768230466363:
+  verdict: complement
+  action: rattachée à mesure-n-0054
+  recto: 'Rq : lien entre Rieman intégrable et Lesbegues intégrable'
+1768230541263:
+  verdict: complement
+  action: rattachée à mesure-n-0065
+  recto: 'Def : espace Lp'
+1768230564879:
+  verdict: complement
+  action: rattachée à mesure-n-0066
+  recto: 'Th : inégalité de Holder'
+1768233183001:
+  verdict: complement
+  action: rattachée à mesure-n-0008
+  recto: 'Def : ensemble mesurable'
+1768239052778:
+  verdict: complement
+  action: rattachée à mesure-n-0065
+  recto: Def espace Lp avec explication sur les classes d'équivalences de fonct
+1768295086904:
+  verdict: complement
+  action: rattachée à mesure-n-0027
+  recto: 'Def : espace mesuré'
+1769024419648:
+  verdict: complement
+  action: rattachée à mesure-n-0039
+  recto: 'Prop : lien entre ensemble dénombrable et ensemble de mesure nulle'
+1769024494580:
+  verdict: complement
+  action: rattachée à mesure-n-0047
+  recto: 'Prop : Sous ensemble d''un ensemble dénombrable pro'
+1769038893935:
+  verdict: complement
+  action: rattachée à mesure-n-0065
+  recto: 'Question pour comprendre moi sur les espaces Lp : - C''est quoi les élé'
+1769622770832:
+  verdict: complement
+  action: rattachée à mesure-n-0051
+  recto: 'Prop : propriétés calculatoires sur Lesbegues'
+1771259000636:
+  verdict: prerequis
+  action: inchangée (prerequis sans notion)
+  recto: Propriété de la borne supérieur
+1771931389038:
+  verdict: complement
+  action: rattachée à mesure-n-0051
+  recto: 'prop : caractérisation pratique convergence de Lesbegues'
+1771932178310:
+  verdict: complement
+  action: rattachée à mesure-n-0065
+  recto: 'def : p intégrable'
+1771932298536:
+  verdict: complement
+  action: rattachée à mesure-n-0065
+  recto: Pourquoi est-ce que on a besoin du caractère presque partout dans espa
+1771932760675:
+  verdict: complement
+  action: rattachée à mesure-n-0068
+  recto: 'Prop : Espace Lp et complétude'
+1771932860001:
+  verdict: complement
+  action: rattachée à mesure-n-0067
+  recto: 'Prop : inégalité de Minkouski'
+1772215321627:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : fonction étagée et densité'
+1772215344228:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: 'Prop : fonction continues et densité'
+1772698310603:
+  verdict: complement
+  action: rattachée à mesure-n-0057
+  recto: 'Prop : passage à la limite sous le signe d''intégration'
+1772698355868:
+  verdict: complement
+  action: rattachée à mesure-n-0058
+  recto: 'Théorème de Leibniz : dérivation sous le signe d''intégration'
+1772999072504:
+  verdict: complement
+  action: rattachée à mesure-n-0058
+  recto: 'Prop : théorème de Leibniz dans le cas d''ensemble fermées bornées'
+1773068477825:
+  verdict: complement
+  action: rattachée à mesure-n-0061
+  recto: Cas double intégrale Fubini Tonneli
+1773068496875:
+  verdict: complement
+  action: rattachée à mesure-n-0061
+  recto: Cas double série Fubini Tonneli / explicatoin fubini tonneli en généra
+1773068569248:
+  verdict: complement
+  action: rattachée à mesure-n-0061
+  recto: Cas Fubini Toneli pour inversion série et intégral
+1785918770785:
+  verdict: doute
+  action: inchangée (doute)
+  recto: Ex1 dénombrabilité (injection, Z, N², Q, points isolés)
+1785918784142:
+  verdict: doublon
+  action: inchangée (doublon)
+  recto: Ex3 indicatrices de A∩B, A∪B, AΔB
+1785918792481:
+  verdict: doute
+  action: inchangée (doute)
+  recto: Ex4 images réciproques de B∪C, B∩C, B\C
+1785918801163:
+  verdict: doublon
+  action: inchangée (doublon)
+  recto: Ex5 f⁻¹(T) est une tribu
+1785918814924:
+  verdict: doublon
+  action: inchangée (doublon)
+  recto: Ex7 tribu dénombrable/codénombrable, mesure 0-1
+1785918836412:
+  verdict: doublon
+  action: inchangée (doublon)
+  recto: Ex2 une fonction croissante est mesurable
+1785920851205:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Ex3 f continue par morceaux est mesurable
+1785941224398:
+  verdict: doublon
+  action: inchangée (doublon)
+  recto: Ex8 ∫_A f ≤ μ(A) pour tout A, donc f ≤ 1 pp
+1785941237100:
+  verdict: doublon
+  action: inchangée (doublon)
+  recto: Ex5 limsup/liminf, valeur d'adhérence, mesurabilité
+1785942583434:
+  verdict: doublon
+  action: inchangée (doublon)
+  recto: Ex9 Markov généralisée avec φ croissante
+1786010615337:
+  verdict: doublon
+  action: inchangée (doublon)
+  recto: Ex1 contre-exemples à Beppo-Levi et à Fatou
+1786010625465:
+  verdict: doublon
+  action: inchangée (doublon)
+  recto: 'Ex3 Beppo-Levi pour séries : Σ a^n E(nx), x^m/(e^x-1)'
+1786010635170:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Ex6 mesure de comptage et interversion de séries
+1786010643501:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Ex8 f_n→f, |f_n|≤g_n, lemme de Fatou, ∫|f_n-f|→0
+1786010651879:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Ex11 F(t)=∫e^{-tx}f(x)dx, limite en 0+
+1786010665774:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Ex12 f(t)=∫e^{-x²-t/x²}dx, domaine et équation
+1786021587722:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Ex1 ∫(x^a-x^b)/ln x par Fubini avec x^y
+1786021593931:
+  verdict: doute
+  action: inchangée (doute)
+  recto: Ex2 contre-exemple à Fubini (x²-y²)/(x²+y²)²
+1786023834449:
+  verdict: doute
+  action: inchangée (doute)
+  recto: Ex3 intégrabilité en α de (1+x+y)^-α, (x+y)^-α, (x²+y²)^-α
+1786025555543:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Ex4 intégrabilité de xy/(x²+y²)^α sur le disque
+1786372853926:
+  verdict: complement
+  action: rattachée à mesure-n-0008
+  recto: 'Def : tribus et espace mesurable'
+1786372872827:
+  verdict: doublon
+  action: suspendre (doublon de mesure-a-019-1)
+  recto: 'Def : famille dénombrable'
+1786372892036:
+  verdict: complement
+  action: rattachée à mesure-n-0047
+  recto: 'Prop : famille dénombrable et union'
+1786372904697:
+  verdict: complement
+  action: rattachée à mesure-n-0010
+  recto: 'prop : tribus et intersection'
+1786372937098:
+  verdict: complement
+  action: rattachée à mesure-n-0010
+  recto: 'Prop: famille tribus et intersection'
+1786372952836:
+  verdict: complement
+  action: rattachée à mesure-n-0011
+  recto: 'Def : tribus engendrée'
+1786372964127:
+  verdict: complement
+  action: rattachée à mesure-n-0011
+  recto: X [image]
+1786372985313:
+  verdict: complement
+  action: rattachée à mesure-n-0011
+  recto: Remarques et propriété calculatoires sur tribus ( 3 )
+1786373005055:
+  verdict: complement
+  action: rattachée à mesure-n-0012
+  recto: 'def : tribus borélienne'
+1786373056060:
+  verdict: complement
+  action: rattachée à mesure-n-0013
+  recto: 'Prop : fermé et borélien Prop : par quoi est engenddrée tribus borélie'
+1786373080196:
+  verdict: complement
+  action: rattachée à mesure-n-0013
+  recto: 'Prop : famille engendrant tribus borélienne'
+1786373094188:
+  verdict: complement
+  action: rattachée à mesure-n-0026
+  recto: 'def : mesure'
+1786373109552:
+  verdict: complement
+  action: rattachée à mesure-n-0026
+  recto: 'Notation : mesure et droite réelle achevé'
+1786373133349:
+  verdict: complement
+  action: rattachée à mesure-n-0028
+  recto: 'Exemple : mesure de comptage masse de dirac'
+1786373146435:
+  verdict: complement
+  action: rattachée à mesure-n-0027
+  recto: 'Def : mesure bornée et mesure de probabilité'
+1786373161722:
+  verdict: doute
+  action: inchangée (doute)
+  recto: 'Prop : prop calcultatoire mesure'
+1786373194640:
+  verdict: complement
+  action: rattachée à mesure-n-0034
+  recto: 'Prop : mesure et calcul sur limite/intersection et union ( aussi dit t'
+1786373204998:
+  verdict: complement
+  action: rattachée à mesure-n-0031
+  recto: 'def : mesure borélienne'
+1786373221593:
+  verdict: complement
+  action: rattachée à mesure-n-0039
+  recto: 'Prop : Mesure de Lesbegues'
+1786373238661:
+  verdict: complement
+  action: rattachée à mesure-n-0014
+  recto: 'def : application mesurable'
+1786373250163:
+  verdict: complement
+  action: rattachée à mesure-n-0014
+  recto: 'Ddef : application mesurable borélienne'
+1786373271482:
+  verdict: complement
+  action: rattachée à mesure-n-0016
+  recto: 'Prop : condition nécessaire et suffisante mesurabilité d''une fonction'
+1786373284847:
+  verdict: complement
+  action: rattachée à mesure-n-0016
+  recto: 'Prop : continuité et mesurabilité'
+1786373299267:
+  verdict: complement
+  action: rattachée à mesure-n-0020
+  recto: 'Prop : composition et mesurabilité d''une fonction'
+1786373324389:
+  verdict: complement
+  action: rattachée à mesure-n-0019
+  recto: 'Def : droite ddes réels achevé'
+1786373364369:
+  verdict: complement
+  action: rattachée à mesure-n-0016
+  recto: 'Prop : condition calculatoire à vérifier pour mesurabilité fonction ré'
+1786373378270:
+  verdict: complement
+  action: rattachée à mesure-n-0020
+  recto: 'Prop : double fonction et mesurabilité'
+1786373403194:
+  verdict: complement
+  action: rattachée à mesure-n-0020
+  recto: 'Prop: mesurabilité dd''une fonction complexe'
+1786373423320:
+  verdict: complement
+  action: rattachée à mesure-n-0022
+  recto: 'Prop : mesurabilité et combinaison linéaire'
+1786373447636:
+  verdict: complement
+  action: rattachée à mesure-n-0022
+  recto: 'Prop : mesurabilité et suite de fonction'
+1786373464939:
+  verdict: complement
+  action: rattachée à mesure-n-0044
+  recto: 'Def : presque partout'
+1786373500296:
+  verdict: complement
+  action: rattachée à mesure-n-0022
+  recto: 'Prop : suite de fonction, mesurabilité et presque partout'
+1786960762189:
+  verdict: complement
+  action: rattachée à mesure-n-0023
+  recto: 'Def : Fonction étagée'
+1786960786067:
+  verdict: complement
+  action: rattachée à mesure-n-0024
+  recto: 'Prop : stabilité par opération de fonction étagée'
+1786960821315:
+  verdict: complement
+  action: rattachée à mesure-n-0049
+  recto: 'Def : intégral de Lesbegues d''une fonction étagée'
+1786960844849:
+  verdict: complement
+  action: rattachée à mesure-n-0049
+  recto: 'Prop : Propositions opérations intégrales foncitons étagées'
+1786960873465:
+  verdict: complement
+  action: rattachée à mesure-n-0025
+  recto: 'Prop : Lemme fondamental d''approximation'
+1786960902514:
+  verdict: complement
+  action: rattachée à mesure-n-0049
+  recto: 'Def : intégrale fonctions mesurables positives'
+1786960939531:
+  verdict: complement
+  action: rattachée à mesure-n-0049
+  recto: 'Prop : croissance et intégrale fonction mesurables positives'
+1786960968731:
+  verdict: complement
+  action: rattachée à mesure-n-0050
+  recto: 'Prop : théorème de Beppo-Levi et convergence monotone'
+1786961000329:
+  verdict: complement
+  action: rattachée à mesure-n-0049
+  recto: 'Prop : Propriété calculatoires intégrales Lesbegues fonctions mesurabl'
+1786961021913:
+  verdict: complement
+  action: rattachée à mesure-n-0052
+  recto: 'Prop : inégalité Markov foction mesurables positives'
+1786961040347:
+  verdict: complement
+  action: rattachée à mesure-n-0052
+  recto: 'Prop : fonctions mesurables positives et nullité pp'
+1786961073579:
+  verdict: complement
+  action: rattachée à mesure-n-0021
+  recto: 'Notation : f- f+ et valeur absolu f ( f une fonction réelle )'
+1786961110046:
+  verdict: complement
+  action: rattachée à mesure-n-0051
+  recto: 'Def : intégrabilité au sens de Lesbgues + inégalité triangulaire'
+1786961130295:
+  verdict: complement
+  action: rattachée à mesure-n-0051
+  recto: 'Def : espace L1'
+1786961149467:
+  verdict: complement
+  action: rattachée à mesure-n-0051
+  recto: 'Prop : application linéaire associé espace L1'
+1786961178460:
+  verdict: complement
+  action: rattachée à mesure-n-0051
+  recto: 'Prop : Def intégrabilité fonction complexe mesurable'
+1786961248745:
+  verdict: complement
+  action: rattachée à mesure-n-0050
+  recto: 'Prop : Beppo-Levi et interversion intégrale/Série'
+1786961284143:
+  verdict: complement
+  action: rattachée à mesure-n-0050
+  recto: 'Prop : application de beppo-Levi suite croissante de fonction dans L1'
+1786961302793:
+  verdict: complement
+  action: rattachée à mesure-n-0004
+  recto: 'Def : lim sup et lim inf'
+1786961377992:
+  verdict: doublon
+  action: inchangée (doublon)
+  recto: 'Prop : Prop calculatoire Lim sup et inf'
+1786961407258:
+  verdict: complement
+  action: rattachée à mesure-n-0055
+  recto: 'Prop : Lemme de Fatou'
+1786961452975:
+  verdict: complement
+  action: rattachée à mesure-n-0056
+  recto: Prop :théorème de convergence dominée de Lebesgue
+1786961507622:
+  verdict: complement
+  action: rattachée à mesure-n-0057
+  recto: 'Th : Continuité d''une intégrale dépendant d''un paramètre'
+1786961527157:
+  verdict: complement
+  action: rattachée à mesure-n-0058
+  recto: 'Prop : dérivation d''une intégrale dépendant d''un paramètre'
+1786961549940:
+  verdict: prerequis
+  action: rattachée à mesure-n-0054
+  recto: 'Rappel : def d''une intégrale de Rieman'
+1786961573523:
+  verdict: complement
+  action: rattachée à mesure-n-0054
+  recto: 'Prop : Lien entre Rieman intégrable et Lesbegue intégrable sur un ferm'
+1786961605156:
+  verdict: prerequis
+  action: rattachée à mesure-n-0054
+  recto: 'Rappel : TFA sur A'
+1786961621607:
+  verdict: complement
+  action: rattachée à mesure-n-0059
+  recto: 'Def : tribus produit'
+1786961653389:
+  verdict: complement
+  action: rattachée à mesure-n-0059
+  recto: 'Def et prop : tribus borélienne et tribus produit'
+1786961680688:
+  verdict: complement
+  action: rattachée à mesure-n-0059
+  recto: '[image] Prop : calcul tribus produit lié'
+1786961699672:
+  verdict: complement
+  action: rattachée à mesure-n-0059
+  recto: 'Def et th : mesure produit'
+1786961719905:
+  verdict: complement
+  action: rattachée à mesure-n-0041
+  recto: 'Def : Mesure de Lebesgue dans Rd'
+1786961754171:
+  verdict: complement
+  action: rattachée à mesure-n-0060
+  recto: 'Th : Théorème de Fubini-Tonelli'
+1786961767155:
+  verdict: complement
+  action: rattachée à mesure-n-0061
+  recto: Théorème de Fubini
+1786961798813:
+  verdict: complement
+  action: rattachée à mesure-n-0061
+  recto: 'Remarque : vérification en pratique des hypothèses du théorème de Fubi'
+1786961820836:
+  verdict: doute
+  action: inchangée (doute)
+  recto: '[image] Def : Mesure image'
+1786961852403:
+  verdict: doute
+  action: inchangée (doute)
+  recto: 'Théorème : mesure image et intégrale de Lebesgue'
+1786961886402:
+  verdict: prerequis
+  action: rattachée à mesure-n-0062
+  recto: '[image] def : Matrice jacobienne et jacobien'
+1786961909203:
+  verdict: prerequis
+  action: rattachée à mesure-n-0062
+  recto: 'Prop : def Difféomorphisme de U dans V'
+1786961925269:
+  verdict: prerequis
+  action: rattachée à mesure-n-0062
+  recto: 'Prop : caractérisation difféomorphisme'
+1786961950469:
+  verdict: complement
+  action: rattachée à mesure-n-0062
+  recto: 'Prop : changement de variable intégrabe de Lebesgue'
+1787237726480:
+  verdict: complement
+  action: rattachée à mesure-n-0014
+  recto: 'Prop : Théorème de recollement'
+1787238018048:
+  verdict: complement
+  action: rattachée à mesure-n-0008
+  recto: 'Def: ensemble mesurable'
+1787239458792:
+  verdict: prerequis
+  action: rattachée à mesure-n-0004
+  recto: 'Prop : caractérisation de la borne sup'
+1728330066665:
+  verdict: doublon
+  action: suspendre (doublon de proba-a-006-1)
+  recto: 'Opération sur les variables fonctions de répartitions et les probas à '
+1728482592105:
+  verdict: prerequis
+  action: rattachée à proba-n-0104
+  recto: 'A quelle condition peut-on dire qu''une variable est centrée ? Exemple '
+1728482805611:
+  verdict: prerequis
+  action: rattachée à proba-n-0104
+  recto: definition variable centrée réduite. quelle condition sur X pour qu'el
+1728571758321:
+  verdict: prerequis
+  action: rattachée à proba-n-0069
+  recto: ensemble image de la loi gamma une densité de la loi gamma
+1728571791152:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: représentation graphique de la loi gamma en fonction de la v
+1728571812808:
+  verdict: prerequis
+  action: rattachée à proba-n-0069
+  recto: Espérance et var d'une var gamma ( + idée démo )
+1728572570282:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: méthode d'inversion
+1728572613830:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Cas classique de la méthode d'inversion avec la loi expo demo
+1732635694903:
+  verdict: doute
+  action: inchangée (doute)
+  recto: Formule de la somme de 2 VAR discrète + "demo"
+1732636719141:
+  verdict: prerequis
+  action: rattachée à proba-n-0069
+  recto: Stabilité de la loi Gamma + demo ( cas avec 2 et cas général )
+1732717276071:
+  verdict: prerequis
+  action: rattachée à proba-n-0069
+  recto: Methode pour retrouver la loi d'Erlang
+1736268364178:
+  verdict: complement
+  action: rattachée à proba-n-0135
+  recto: Théorème HP utile sur lien convergence loi et probab
+1736269117274:
+  verdict: hors_poly
+  action: suspendre et ranger dans Hors poly
+  recto: Approximation de la loi de Poisson
+1765019029275:
+  verdict: prerequis
+  action: rattachée à proba-p-0006
+  recto: 'Definition : complexe, partie réel, imaginaire, conjugué et module'
+1765019065127:
+  verdict: prerequis
+  action: rattachée à proba-p-0006
+  recto: 'Prop : Proposition calculatoire des complexe et démo'
+1773324173805:
+  verdict: prerequis
+  action: rattachée à proba-p-0006
+  recto: 'def : expo complexe'
+1765287739820:
+  verdict: prerequis
+  action: rattachée à mod-p-0003
+  recto: 'Def : série entière'

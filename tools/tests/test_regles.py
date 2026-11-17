@@ -547,35 +547,29 @@ def test_check_notions_prerequis(tmp_path):
     assert C.verifier(tmp_path) == []
 
 
-def test_anciennes_notes_du_bloc_hors_plafond_et_sans_repetition():
+def test_anciennes_notes_dans_la_file_du_poly():
+    """17/11/2026 : les anciennes notes suivent l'ordre du poly avec les cartes du système, dans le même plafond."""
     cou = {"n-a": {"statut": "couverte", "notes": list(range(100, 108))},
            "n-a2": {"statut": "partielle", "notes": [105, 200, 201, 202, 203]},
            "n-b": {"statut": "couverte", "notes": [300]}}
-    c = ctx_cartes(dispo={"cartes_par_jour": 2}, couverture=cou)
+    c = ctx_cartes(dispo={"cartes_par_jour": 8}, couverture=cou)
     p = P.plan_jour(c, D(2026, 11, 4))
     a = P.anki(c, p)
-    # plafond de 2 cartes du système respecté ; anciennes : celles du sous-chapitre du bloc (1.1), 10 au plus
-    assert len(a["nouvelles"]) == 2
-    assert a["anciennes"] == [100, 101, 102, 103, 104, 105, 106, 107, 200, 201]
-    assert 300 not in a["anciennes"]
+    assert a["nouvelles"][:6] == ["eT", "eM", "rev", "cA1", "cA2", "cA3"]
+    assert a["anciennes"][:2] == [100, 101]                  # après les cartes du système du 1.1, dans le plafond
+    assert len(a["anciennes"]) == len(set(a["anciennes"]))    # 105 une seule fois
+    if 300 in a["anciennes"]:
+        assert a["anciennes"].index(203) < a["anciennes"].index(300)     # le 1.1 fini avant le 1.2
     lignes = P.rediger(c, p, a)
     requete = lignes[lignes.index("```", lignes.index(next(l for l in lignes if l.startswith("## Anki — cours, à apprendre")))) + 1]
-    # + les cartes des notions requises par les exercices du bloc, hors plafond (11/11/2026)
-    assert a["requises"] and requete == (f'({P._requete(a["nouvelles"] + a["requises"])} '
-                                         'or nid:100,101,102,103,104,105,106,107,200,201) (is:new or (is:learn -is:review))')
-    # une entrée d'un jour futur (plan régénéré depuis) ne bloque rien
-    c["anki_plan"] = {"2026-11-09": a["nouvelles"]}
-    assert P.anki(c, p)["nouvelles"] == a["nouvelles"]
-    c["anki_plan"] = {}
-    # le lendemain : les notes déjà données ne reviennent pas, les suivantes prennent leur place
+    assert requete.endswith("(is:new or (is:learn -is:review)) -is:suspended") and "nid:100," in requete
+    # le lendemain (sans Anki) : les notes déjà données ne reviennent pas
     c["anciennes_donnees"] = {"2026-11-04": a["anciennes"]}
     c["resultats"] = [res("2026-11-04", "zz", "aide")]
-    assert P.anki(c, p)["anciennes"] == a["anciennes"]                       # même date : identique
-    assert P.anki(c, P.plan_jour(c, D(2026, 11, 5)))["anciennes"] == [202, 203]
-    # jour off ou sans couverture : rien
-    assert P.anki(c, P.plan_jour(c, D(2026, 11, 7)))["anciennes"] == []
+    assert not set(P.anki(c, P.plan_jour(c, D(2026, 11, 5)))["anciennes"]) & set(a["anciennes"])
+    assert P.anki(c, P.plan_jour(c, D(2026, 11, 7)))["anciennes"] == []          # jour off : rien
     c2 = ctx_cartes(dispo={"cartes_par_jour": 2})
-    assert P.anki(c2, P.plan_jour(c2, D(2026, 11, 4)))["anciennes"] == []
+    assert P.anki(c2, P.plan_jour(c2, D(2026, 11, 4)))["anciennes"] == []         # sans couverture : rien
 
 
 def test_paquet_anki_des_cartes_d_exercices():

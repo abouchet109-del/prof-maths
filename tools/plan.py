@@ -643,14 +643,31 @@ def est_carte_exercice(c) -> bool:
 
 
 def premieres_nouvelles(client, ids, n) -> list[str]:
-    """Les `n` premiers de `ids` (dans l'ordre) que le client Anki dit encore nouveaux ; lecture par lots."""
+    """Les `n` premiers de `ids` (dans l'ordre) que le client Anki dit encore nouveaux ; lecture par lots.
+    Un id `nid:<n>` est une ancienne note (couverture.yaml), lue par `nids_nouveaux`."""
     res: list[str] = []
     for k in range(0, len(ids), LOT_ANKI):
         if len(res) >= n:
             break
-        nouveaux = client.ids_nouveaux(ids[k:k + LOT_ANKI])
-        res += [i for i in ids[k:k + LOT_ANKI] if i in nouveaux]
+        lot = ids[k:k + LOT_ANKI]
+        cartes = [i for i in lot if not i.startswith("nid:")]
+        nids = [int(i[4:]) for i in lot if i.startswith("nid:")]
+        nouveaux = (client.ids_nouveaux(cartes) if cartes else set()) |                    ({f"nid:{x}" for x in client.nids_nouveaux(nids)} if nids else set())
+        res += [i for i in lot if i in nouveaux]
     return res[:n]
+
+
+def cartes_anciennes(ctx, exclues=frozenset()) -> list[dict]:
+    """Anciennes notes de couverture.yaml en pseudo-cartes `nid:<n>` rattachées à leur notion (17/11/2026) :
+    elles suivent l'ordre du poly avec les cartes du système et comptent dans le même plafond, si bien qu'un
+    chapitre est fini, anciennes notes comprises, avant le suivant."""
+    res, vus = [], set(exclues)
+    for n, e in (ctx.get("couverture") or {}).items():
+        for nid in (e or {}).get("notes") or []:
+            if int(nid) not in vus:
+                vus.add(int(nid))
+                res.append({"id": f"nid:{int(nid)}", "notion": n, "tags": []})
+    return res
 
 
 def anki(ctx, plan, client=None) -> dict:
@@ -671,9 +688,11 @@ def anki(ctx, plan, client=None) -> dict:
     exportees = ctx.get("exportees")
     if client:
         # une carte jamais exportée ne peut pas être apprise : on la signale au lieu de la proposer
-        libres = [c for c in ctx["cartes"] if exportees is None or c["id"] in exportees]
+        libres = [c for c in ctx["cartes"] if exportees is None or c["id"] in exportees] + cartes_anciennes(ctx)
     else:
-        libres = [c for c in ctx["cartes"] if c["id"] not in avant]
+        deja = {int(n) for k, ns in (ctx.get("anciennes_donnees") or {}).items()
+                if str(k) < d and str(k) in faits for n in ns}
+        libres = [c for c in ctx["cartes"] if c["id"] not in avant] + cartes_anciennes(ctx, deja)
     ordre = ordre_cartes(ctx, plan, libres)
     off = plan["info"]["off"]
     limite = 0 if off else ctx["dispo"].get("cartes_par_jour", CARTES_DEFAUT)
@@ -695,11 +714,15 @@ def anki(ctx, plan, client=None) -> dict:
         requises = [i for i in ids[limite:] if notion_de.get(i) in requis][:REQUISES_MAX]
         exercices = ids_exos[:limite_exos]
         revoir = [c["id"] for c in ctx["cartes"] if c["id"] in avant and c.get("notion") in notions_jour]
+    choisis = nouvelles + requises
+    anciennes = [int(i[4:]) for i in choisis if i.startswith("nid:")]
+    nouvelles = [i for i in nouvelles if not i.startswith("nid:")]
+    requises = [i for i in requises if not i.startswith("nid:")]
     return {
         "nouvelles": nouvelles,
         "requises": requises,          # hors plafond : les exercices du jour en ont besoin (11/11/2026)
         "exercices": exercices,
-        "anciennes": [] if plan["info"]["off"] else anciennes_notes(ctx, plan, client),
+        "anciennes": anciennes,       # anciennes notes choisies dans la même file, dans le plafond
         "revoir": revoir,
         "source": "anki" if client else "estimee",
         "non_exportees": 0 if exportees is None else sum(c["id"] not in exportees for c in ctx["cartes"]),
@@ -977,11 +1000,11 @@ def rediger(ctx, plan, cartes) -> list[str]:
               + (f" + {len(anciennes)} anciennes" if anciennes else "") + ")"]
     requete = " or ".join(([_requete(apprendre)] if apprendre else [])
                           + ([f"nid:{','.join(map(str, anciennes))}"] if anciennes else []))
-    requete = f"({requete}) (is:new or (is:learn -is:review))" if requete else ""     # jamais une carte déjà apprise (en apprentissage : pas encore apprise)
+    requete = f"({requete}) (is:new or (is:learn -is:review)) -is:suspended" if requete else ""     # jamais une carte déjà apprise (en apprentissage : pas encore apprise)
     L += ["```", requete, "```"] if requete else ["- (aucune)"]
     exos = cartes.get("exercices") or []
     L += ["", f"## Anki — exercices à revoir ({len(exos)} nouvelles)"]
-    L += ["```", f"({_requete(exos)}) (is:new or (is:learn -is:review))", "```",
+    L += ["```", f"({_requete(exos)}) (is:new or (is:learn -is:review)) -is:suspended", "```",
           "Paquet filtré à part : cherche l'attaque avant de retourner la carte."] if exos else ["- (aucune)"]
     if plan.get("en_plus"):
         ar = {e["id"] for e, g in plan["items"] if g == "reprise"} | {e["id"] for e in plan["en_plus"]}

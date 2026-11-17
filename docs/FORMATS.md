@@ -121,6 +121,8 @@ Règles : une entrée par résultat ou définition nommable. Pas de texte recopi
 
 ## `matieres/<matiere>/couverture.yaml`
 
+**Depuis le 17/11/2026** : les anciennes notes rattachées ici entrent dans la même file que les cartes du système (`plan.cartes_anciennes`, pseudo-cartes `nid:<n>`), dans l'ordre du poly et dans le même plafond `cartes_par_jour` : un chapitre est fini, anciennes notes comprises, avant le suivant. Une carte suspendue n'est jamais proposée (`-is:suspended`). Le tri du 17/11/2026 (doublons et hors poly suspendus, hors poly rangés dans `<matière>::Hors poly`, compléments et prérequis rattachés ici) est journalisé dans `state/tri_anciennes.yaml`, pour pouvoir revenir en arrière.
+
 Une entrée par notion : ce que le paquet Anki couvre déjà.
 
 ```yaml

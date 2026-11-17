@@ -68,7 +68,7 @@ mod-n-0063: {statut: absente, notes: []}
 mod-n-0064: {statut: absente, notes: []}
 mod-n-0065: {statut: absente, notes: []}
 # Rectos : methode pour retrouver la loi d'Erlang (ch.05) et densite de la loi gamma (ch.03.2). Manque : enonce T_n somme de n exponentielles de parametre lambda suit gamma(n, lambda), et l'usage P(N_t=n)=P(T_n<=t)-P(T_{n+1}<=t).
-mod-n-0066: {statut: partielle, notes: [1732717276071, 1728571758321]}
+mod-n-0066: {statut: partielle, notes: []}
 mod-n-0067: {statut: absente, notes: []}
 mod-n-0068: {statut: absente, notes: []}
 mod-n-0069: {statut: absente, notes: []}

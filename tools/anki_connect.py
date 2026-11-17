@@ -65,7 +65,7 @@ RATTACHEMENT = Path("inventaire") / "anki" / "rattachement_ancien.yaml"
 
 # ------------------------------------------------------------------ AnkiConnect
 # 12/11/2026 : une carte vue une fois puis « À revoir » reste en apprentissage (is:learn) : pas encore apprise.
-PAS_APPRISE = "(is:new or (is:learn -is:review))"
+PAS_APPRISE = "(is:new or (is:learn -is:review)) -is:suspended"   # suspendue : écartée (tri du 17/11/2026)
 
 
 class ErreurAnki(Exception):

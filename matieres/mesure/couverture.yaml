@@ -1,68 +1,68 @@
 mesure-n-0001: {statut: couverte, notes: [1664566301159]}
-mesure-n-0002: {statut: partielle, notes: [1786442418924]}   # définition seule ; propriétés (réunion, intersection, complémentaire) absentes
+mesure-n-0002: {statut: partielle, notes: []}   # définition seule ; propriétés (réunion, intersection, complémentaire) absentes
 mesure-n-0003: {statut: couverte, notes: [1664985202364]}
-mesure-n-0004: {statut: couverte, notes: [1786961302793, 1765287123520]}
-mesure-n-0005: {statut: partielle, notes: [1786961302793]}   # recto "lim sup et lim inf" ne précise pas suites d'ensembles
+mesure-n-0004: {statut: couverte, notes: [1765287088117, 1765287123520, 1765287151923, 1765287233556, 1786961302793, 1787239458792]}
+mesure-n-0005: {statut: partielle, notes: []}   # recto "lim sup et lim inf" ne précise pas suites d'ensembles
 mesure-n-0006: {statut: absente, notes: []}   # 1786960326722 (valeur d'adhérence, topologie) ne fait pas le lien avec limsup
 mesure-n-0007: {statut: couverte, notes: [1664291878792, 1664292557826]}
-mesure-n-0008: {statut: couverte, notes: [1786372853926]}
+mesure-n-0008: {statut: couverte, notes: [1768233183001, 1786372853926, 1787238018048]}
 mesure-n-0009: {statut: absente, notes: []}
-mesure-n-0010: {statut: couverte, notes: [1786372904697, 1786372937098, 1786372985313]}
-mesure-n-0011: {statut: couverte, notes: [1786372952836]}
+mesure-n-0010: {statut: couverte, notes: [1786372904697, 1786372937098]}
+mesure-n-0011: {statut: couverte, notes: [1786372952836, 1786372964127, 1786372985313]}
 mesure-n-0012: {statut: couverte, notes: [1768230269315, 1786373005055]}
-mesure-n-0013: {statut: couverte, notes: [1786373080196, 1786373056060]}
-mesure-n-0014: {statut: couverte, notes: [1786373238661, 1786373250163]}
+mesure-n-0013: {statut: couverte, notes: [1786373056060, 1786373080196]}
+mesure-n-0014: {statut: couverte, notes: [1786373238661, 1786373250163, 1787237726480]}
 mesure-n-0015: {statut: absente, notes: []}
-mesure-n-0016: {statut: couverte, notes: [1786373271482, 1786373364369, 1786373284847]}
+mesure-n-0016: {statut: couverte, notes: [1786373271482, 1786373284847, 1786373364369]}
 mesure-n-0017: {statut: absente, notes: []}
 mesure-n-0018: {statut: absente, notes: []}
-mesure-n-0019: {statut: absente, notes: []}
-mesure-n-0020: {statut: couverte, notes: [1786373299267, 1786373378270]}
-mesure-n-0021: {statut: couverte, notes: [1768230430367, 1786961073579]}
-mesure-n-0022: {statut: couverte, notes: [1786373447636, 1786373423320]}
+mesure-n-0019: {statut: partielle, notes: [1786373324389]}
+mesure-n-0020: {statut: couverte, notes: [1786373299267, 1786373378270, 1786373403194]}
+mesure-n-0021: {statut: couverte, notes: [1786961073579]}
+mesure-n-0022: {statut: couverte, notes: [1786373423320, 1786373447636, 1786373500296]}
 mesure-n-0023: {statut: couverte, notes: [1786960762189]}
 mesure-n-0024: {statut: couverte, notes: [1786960786067]}
 mesure-n-0025: {statut: couverte, notes: [1786960873465]}
-mesure-n-0026: {statut: couverte, notes: [1786373094188]}
+mesure-n-0026: {statut: couverte, notes: [1786373094188, 1786373109552]}
 mesure-n-0027: {statut: couverte, notes: [1768295086904, 1786373146435]}
 mesure-n-0028: {statut: couverte, notes: [1786373133349]}
 mesure-n-0029: {statut: absente, notes: []}
 mesure-n-0030: {statut: absente, notes: []}
-mesure-n-0031: {statut: couverte, notes: [1786961719905, 1786373221593]}
+mesure-n-0031: {statut: couverte, notes: [1786373204998]}
 mesure-n-0032: {statut: partielle, notes: [1786373161722]}   # recto vague "prop calculatoire mesure", réponse en image
 mesure-n-0033: {statut: partielle, notes: [1786373161722]}   # idem
 mesure-n-0034: {statut: couverte, notes: [1786373194640]}
 mesure-n-0035: {statut: absente, notes: []}
-mesure-n-0036: {statut: couverte, notes: [1786373194640]}
+mesure-n-0036: {statut: couverte, notes: []}
 mesure-n-0037: {statut: absente, notes: []}
 mesure-n-0038: {statut: partielle, notes: [1786373161722]}   # idem
-mesure-n-0039: {statut: couverte, notes: [1786373221593, 1786961719905]}
+mesure-n-0039: {statut: couverte, notes: [1768230291346, 1769024419648, 1786373221593]}
 mesure-n-0040: {statut: absente, notes: []}
 mesure-n-0041: {statut: couverte, notes: [1786961719905]}
-mesure-n-0042: {statut: couverte, notes: [1768230315204]}
+mesure-n-0042: {statut: couverte, notes: [1768230281515, 1768230315204]}
 mesure-n-0043: {statut: absente, notes: []}   # 1770141449086 est la complétude topologique, pas celle d'une mesure
 mesure-n-0044: {statut: couverte, notes: [1768230336717, 1786373464939]}
 mesure-n-0045: {statut: couverte, notes: [1728328641247]}   # propriétés de F pour une variable aléatoire (cours ECG2), même contenu pour une probabilité ; cas mesure finie quelconque non distingué
 mesure-n-0046: {statut: absente, notes: []}
-mesure-n-0047: {statut: partielle, notes: [1786372892036, 1664566301159]}   # réunion dénombrable couverte ; "Ensembles dénombrables classiques" (1769024516946) est dans le deck "Doublons à supprimer", non compté ; R et P(N) non dénombrables absents
+mesure-n-0047: {statut: partielle, notes: [1664566301159, 1769024494580, 1786372892036]}   # réunion dénombrable couverte ; "Ensembles dénombrables classiques" (1769024516946) est dans le deck "Doublons à supprimer", non compté ; R et P(N) non dénombrables absents
 mesure-n-0048: {statut: absente, notes: []}
-mesure-n-0049: {statut: couverte, notes: [1786960821315, 1786960902514]}
-mesure-n-0050: {statut: couverte, notes: [1786960968731, 1786961248745]}
-mesure-n-0051: {statut: couverte, notes: [1786961110046, 1786961130295, 1768230447472]}
-mesure-n-0052: {statut: couverte, notes: [1786961040347]}
-mesure-n-0053: {statut: partielle, notes: [1786373133349, 1786961248745]}   # manque mesure à densité
-mesure-n-0054: {statut: couverte, notes: [1786961573523, 1768230466363]}
+mesure-n-0049: {statut: couverte, notes: [1768230430367, 1786960821315, 1786960844849, 1786960902514, 1786960939531, 1786961000329]}
+mesure-n-0050: {statut: couverte, notes: [1786960968731, 1786961248745, 1786961284143]}
+mesure-n-0051: {statut: couverte, notes: [1768230447472, 1769622770832, 1771931389038, 1786961110046, 1786961130295, 1786961149467, 1786961178460]}
+mesure-n-0052: {statut: couverte, notes: [1786961021913, 1786961040347]}
+mesure-n-0053: {statut: partielle, notes: []}   # manque mesure à densité
+mesure-n-0054: {statut: couverte, notes: [1768230466363, 1786961549940, 1786961573523, 1786961605156]}
 mesure-n-0055: {statut: couverte, notes: [1786961407258]}
 mesure-n-0056: {statut: couverte, notes: [1786961452975]}
-mesure-n-0057: {statut: couverte, notes: [1786961507622]}
-mesure-n-0058: {statut: couverte, notes: [1786961527157, 1772698355868]}
-mesure-n-0059: {statut: couverte, notes: [1786961621607, 1786961699672]}
+mesure-n-0057: {statut: couverte, notes: [1772698310603, 1786961507622]}
+mesure-n-0058: {statut: couverte, notes: [1772698355868, 1772999072504, 1786961527157]}
+mesure-n-0059: {statut: couverte, notes: [1786961621607, 1786961653389, 1786961680688, 1786961699672]}
 mesure-n-0060: {statut: couverte, notes: [1786961754171]}
-mesure-n-0061: {statut: couverte, notes: [1786961767155, 1786961798813]}
-mesure-n-0062: {statut: couverte, notes: [1786961950469]}
+mesure-n-0061: {statut: couverte, notes: [1773068477825, 1773068496875, 1773068569248, 1786961767155, 1786961798813]}
+mesure-n-0062: {statut: couverte, notes: [1786961886402, 1786961909203, 1786961925269, 1786961950469]}
 mesure-n-0063: {statut: absente, notes: []}   # 1786961886402 = jacobienne seule
 mesure-n-0064: {statut: absente, notes: []}
-mesure-n-0065: {statut: couverte, notes: [1768230541263, 1768239052778]}
+mesure-n-0065: {statut: couverte, notes: [1768230541263, 1768239052778, 1769038893935, 1771932178310, 1771932298536]}
 mesure-n-0066: {statut: couverte, notes: [1768230564879]}
 mesure-n-0067: {statut: couverte, notes: [1771932860001]}
 mesure-n-0068: {statut: couverte, notes: [1771932760675]}
