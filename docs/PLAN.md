@@ -7,7 +7,7 @@ Dépôt indépendant de `archi-ml-ai-researcher`. On copie ce qui sert ; l'archi
 - **Budget :** chaque jour travaillé, 2 h d'exercices et d'annales, plus 30 min de cours. Du 03/11 au 10/01, hors week-ends sautés (07-08/11 et 21-22/11, communs avec le ML) : environ **158 h d'exercices et 32 h de cours**, en comptant 4 h d'exercices par jour dans les 2 semaines à 28 h (21/12 au 03/01).
 - **Cartes Anki :** le système les crée toutes et les importe : cours de L3 et prérequis de L1-L2 manquants. L'utilisateur ne fait que les réviser, hors du temps planifié, et peut apprendre le cours directement par Anki : les cartes sont disponibles sans attendre qu'une séance soit faite.
 - **Sessions de cours (30 min) :** approfondissement et compréhension, pas première lecture. Elles visent ce que les debriefs et les exercices ratés révèlent.
-- **Harmonisation L1-L2 :** pour chaque exercice et annale, on repère les prérequis ; ceux qui ne sont ni au programme d'ECG, ni dans le paquet, ni dans le cours de L3 deviennent des notions à cartes. Source : documents envoyés par l'utilisateur, sinon un cours de référence vérifié, jamais de mémoire.
+- **Harmonisation L1-L2 :** pour chaque exercice et annale, on repère les prérequis ; ceux qui ne sont ni au programme d'ECG ni dans le cours de L3 deviennent des notions à cartes (18/11/2026 : seul ECG compte comme su ; une carte AoutLicenceMath ou Centrale existante est rattachée, pas recopiée). Source : documents envoyés par l'utilisateur, sinon un cours de référence vérifié, jamais de mémoire.
 - **Matières :** topologie, mesure, modélisation, probabilités.
 - **Principes repris :** le code calcule, Claude juge ; un niveau ne monte que sur preuve ; debrief après chaque session ; révisions Anki et debriefs hors du temps planifié.
 

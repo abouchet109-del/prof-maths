@@ -31,7 +31,7 @@ Rattachement d'une note (fonction pure `cible`) :
 notion `type: prerequis`, quel que soit leur paquet source (Mathématiques DD centrale, AoutLicenceMath d'une
 autre matière…) : elles vont dans le paquet du chapitre du prérequis, sauf si la couverture les rattache déjà
 à un chapitre de la matière de leur ancien paquet AoutLicenceMath. Une note des paquets ECG
-(`tg::Maths::1ere année`, `tg::Maths::Cours deuxième année`) ne bouge jamais.
+(`tg::Maths::1ere année`, `tg::Maths::2ere année ECG`) ne bouge jamais.
 """
 from __future__ import annotations
 
@@ -58,7 +58,9 @@ PREFIXE = "tg::Maths::AoutLicenceMath"
 ETIQUETTE = "AoutLicenceMath"
 AUTRES = "Autres (AoutLicenceMath)"
 MATIERE_ANCIEN = {"TH mesure": "mesure", "Topologie": "topologie"}   # 2e segment après le préfixe
-ECG = ("tg::Maths::1ere année", "tg::Maths::Cours deuxième année")   # référentiel de l'utilisateur : jamais déplacé
+# Référentiel de l'utilisateur : jamais déplacé. Le paquet de 2e année s'appelle « 2ere année ECG » dans Anki
+# (vérifié le 18/11/2026) ; l'ancien nom documenté est gardé par prudence.
+ECG = ("tg::Maths::1ere année", "tg::Maths::2ere année ECG", "tg::Maths::Cours deuxième année")
 EN_TETE = ["carte", "ancien", "nouveau"]
 RATTACHEMENT = Path("inventaire") / "anki" / "rattachement_ancien.yaml"
 
@@ -87,7 +89,8 @@ def appel(action: str, *, delai: float = 60, **params):
 class ClientAnki:
     """Lecture seule dans Anki, pour le plan : quelles cartes sont encore « nouvelles » (`is:new`).
 
-    Même interface que le faux client des tests : disponible(), ids_nouveaux(ids), nids_nouveaux(nids).
+    Même interface que le faux client des tests : disponible(), ids_nouveaux(ids), nids_nouveaux(nids),
+    nids_a_apprendre(nids, donnees).
     Ne modifie jamais Anki."""
     LOT = 40
 
@@ -116,6 +119,43 @@ class ClientAnki:
         for k in range(0, len(nids), 200):
             res |= set(appel("findNotes", query=f"nid:{','.join(map(str, nids[k:k + 200]))} {PAS_APPRISE}", delai=20))
         return res
+
+    def nids_a_apprendre(self, nids, donnees=None) -> set[int]:
+        """Anciennes notes encore à apprendre (règle du 18/11/2026 : seul ECG dit ce que l'utilisateur sait).
+
+        Une note ECG suit Anki (`nids_nouveaux`). Une note hors ECG (AoutLicenceMath, Centrale, …) déjà apprise
+        dans Anki compte comme jamais faite tant qu'elle n'a pas été revue (journal de révision d'Anki) le jour
+        où le plan l'a donnée ou après : `donnees` = {nid: premier jour donné, AAAA-MM-JJ}. Suspendue : écartée."""
+        nids = [int(n) for n in nids]
+        res = self.nids_nouveaux(nids)
+        reste = [n for n in nids if n not in res]
+        if not reste:
+            return res
+        sauf_ecg = " ".join(f'-"deck:{p}"' for p in ECG)          # deck: inclut les sous-paquets
+        hors: set[int] = set()
+        for k in range(0, len(reste), 200):
+            hors |= set(appel("findNotes", query=f"nid:{','.join(map(str, reste[k:k + 200]))} -is:suspended {sauf_ecg}",
+                              delai=20))
+        return res | (hors - self.nids_revus_depuis(hors, donnees or {}))
+
+    def nids_revus_depuis(self, nids, donnees) -> set[int]:
+        """Notes dont une carte a une révision dans Anki le jour `donnees[nid]` ou après (lecture seule)."""
+        nids = [n for n in nids if n in donnees]
+        if not nids:
+            return set()
+        cartes = []
+        for k in range(0, len(nids), 200):
+            cartes += appel("findCards", query=f"nid:{','.join(map(str, nids[k:k + 200]))}", delai=20)
+        note = {c["cardId"]: c["note"] for c in appel("cardsInfo", cards=cartes, delai=60)}
+        revus: set[int] = set()
+        for k in range(0, len(cartes), 200):
+            journal = appel("getReviewsOfCards", cards=[str(c) for c in cartes[k:k + 200]], delai=60)
+            for cid, revs in journal.items():
+                n = note.get(int(cid))
+                debut = dt.datetime.combine(dt.date.fromisoformat(str(donnees[n])), dt.time()).timestamp() * 1000
+                if any(r["id"] >= debut for r in revs):
+                    revus.add(n)
+        return revus
 
 
 # ------------------------------------------------------------------ rattachement (pur)

@@ -388,3 +388,712 @@
   priorite: 1
   source: {fichier: references/analyse4-lorraine-L2.pdf, page: 24}
   confiance: sure
+# 18/11/2026 : notions du poly couvertes seulement par d'anciennes cartes hors ECG (ou par rien) ; le poly est la source du cours.
+- id: topo-a-043
+  origine: cours_l3
+  notion: topo-n-0003
+  titre: Topologie, espace topologique, ouverts
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td1-ex02
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 2
+  confiance: a_confirmer
+- id: topo-a-044
+  origine: cours_l3
+  notion: topo-n-0008
+  titre: Distance, espace métrique
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td1-ex08
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 3
+  confiance: a_confirmer
+- id: topo-a-045
+  origine: cours_l3
+  notion: topo-n-0011
+  titre: Boule ouverte, boule fermée, sphère
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td1-ex03
+  - topo-td1-ex08
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 4
+  confiance: a_confirmer
+- id: topo-a-046
+  origine: cours_l3
+  notion: topo-n-0012
+  titre: Topologie associée à une distance
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td1-ex04
+  - topo-td2-ex11
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 4
+  confiance: a_confirmer
+- id: topo-a-047
+  origine: cours_l3
+  notion: topo-n-0013
+  titre: Démonstration que la topologie d'une distance est séparée
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 4
+  confiance: a_confirmer
+- id: topo-a-048
+  origine: cours_l3
+  notion: topo-n-0016
+  titre: Voisinage
+  raison: 'seulement d''anciennes cartes hors ECG (Centrale, autre) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 5
+  confiance: a_confirmer
+- id: topo-a-049
+  origine: cours_l3
+  notion: topo-n-0017
+  titre: Propriétés des voisinages
+  raison: 'seulement d''anciennes cartes hors ECG (Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 5
+  confiance: a_confirmer
+- id: topo-a-050
+  origine: cours_l3
+  notion: topo-n-0020
+  titre: Propriétés de l'intérieur
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td1-ex14
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 6
+  confiance: a_confirmer
+- id: topo-a-051
+  origine: cours_l3
+  notion: topo-n-0021
+  titre: 'Contre-exemple : intérieur d''une union'
+  raison: aucune carte
+  programme_ecg: false
+  exercices:
+  - topo-td1-ex11
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 7
+  confiance: a_confirmer
+- id: topo-a-052
+  origine: cours_l3
+  notion: topo-n-0022
+  titre: Point adhérent, adhérence
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-partiel2021-22-ex01
+  - topo-td1-ex07
+  - topo-td2-ex07
+  - topo-dm2020-21-ex01
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 7
+  confiance: a_confirmer
+- id: topo-a-053
+  origine: cours_l3
+  notion: topo-n-0023
+  titre: Dualité intérieur / adhérence
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-partiel2022-23-ex04
+  - topo-td1-ex13
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 7
+  confiance: a_confirmer
+- id: topo-a-054
+  origine: cours_l3
+  notion: topo-n-0024
+  titre: Propriétés de l'adhérence
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td1-ex12
+  - topo-td1-ex10
+  - topo-td1-ex11
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 7
+  confiance: a_confirmer
+- id: topo-a-055
+  origine: cours_l3
+  notion: topo-n-0025
+  titre: Frontière
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 7
+  confiance: a_confirmer
+- id: topo-a-056
+  origine: cours_l3
+  notion: topo-n-0026
+  titre: Frontière de $A$ et de son complémentaire ; partition de $X$
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 8
+  confiance: a_confirmer
+- id: topo-a-057
+  origine: cours_l3
+  notion: topo-n-0027
+  titre: Point d'accumulation, point isolé
+  raison: aucune carte
+  programme_ecg: false
+  exercices:
+  - topo-td3-ex09
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 8
+  confiance: a_confirmer
+- id: topo-a-058
+  origine: cours_l3
+  notion: topo-n-0028
+  titre: Partie dense
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td2-ex09
+  - topo-exam2022-23-ex05
+  - topo-partiel2021-22-ex02
+  - topo-td1-ex13
+  - topo-td1-ex14
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 8
+  confiance: a_confirmer
+- id: topo-a-059
+  origine: cours_l3
+  notion: topo-n-0029
+  titre: Espace séparable
+  raison: aucune carte
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 8
+  confiance: a_confirmer
+- id: topo-a-060
+  origine: cours_l3
+  notion: topo-n-0030
+  titre: Topologie induite, sous-espace topologique
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-partiel2020-21-ex01
+  - topo-td2-ex10
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 8
+  confiance: a_confirmer
+- id: topo-a-061
+  origine: cours_l3
+  notion: topo-n-0032
+  titre: La topologie de la distance induite est la topologie induite
+  raison: aucune carte
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 9
+  confiance: a_confirmer
+- id: topo-a-062
+  origine: cours_l3
+  notion: topo-n-0033
+  titre: Espace métrique produit (produit fini)
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td2-ex01
+  - topo-td3-ex08
+  - topo-partiel2021-22-ex05
+  - topo-td2-ex06
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 10
+  confiance: a_confirmer
+- id: topo-a-063
+  origine: cours_l3
+  notion: topo-n-0035
+  titre: Équivalence topologique et même topologie
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 11
+  confiance: a_confirmer
+- id: topo-a-064
+  origine: cours_l3
+  notion: topo-n-0037
+  titre: 'Distance bornée associée : $\delta=d/(1+d)$'
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 12
+  confiance: a_confirmer
+- id: topo-a-065
+  origine: cours_l3
+  notion: topo-n-0039
+  titre: Suite convergente
+  raison: 'seulement d''anciennes cartes hors ECG (Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 13
+  confiance: a_confirmer
+- id: topo-a-066
+  origine: cours_l3
+  notion: topo-n-0040
+  titre: Convergence en espace métrique
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td2-ex03
+  - topo-td2-ex05
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 13
+  confiance: a_confirmer
+- id: topo-a-067
+  origine: cours_l3
+  notion: topo-n-0041
+  titre: Suite extraite
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 14
+  confiance: a_confirmer
+- id: topo-a-068
+  origine: cours_l3
+  notion: topo-n-0042
+  titre: Convergence d'une suite et de ses suites extraites
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 14
+  confiance: a_confirmer
+- id: topo-a-069
+  origine: cours_l3
+  notion: topo-n-0043
+  titre: Caractérisation séquentielle de l'adhérence et des fermés
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td1-ex12
+  - topo-td2-ex01
+  - topo-partiel2021-22-ex01
+  - topo-partiel2021-22-ex05
+  - topo-td1-ex04
+  - topo-td1-ex07
+  - topo-td2-ex05
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 14
+  confiance: a_confirmer
+- id: topo-a-070
+  origine: cours_l3
+  notion: topo-n-0044
+  titre: Valeur d'adhérence d'une suite
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td2-ex02
+  - topo-td2-ex04
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 14
+  confiance: a_confirmer
+- id: topo-a-071
+  origine: cours_l3
+  notion: topo-n-0047
+  titre: Continuité en un point (espaces topologiques)
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 16
+  confiance: a_confirmer
+- id: topo-a-072
+  origine: cours_l3
+  notion: topo-n-0048
+  titre: 'Continuité en un point : $\epsilon$-$\alpha$ et séquentielle'
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td3-ex08
+  - topo-partiel2021-22-ex02
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 16
+  confiance: a_confirmer
+- id: topo-a-073
+  origine: cours_l3
+  notion: topo-n-0049
+  titre: Caractérisations de la continuité globale
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td2-ex09
+  - topo-td2-ex06
+  - topo-td2-ex08
+  - topo-td2-ex10
+  - topo-td2-ex11
+  - topo-td3-ex04
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 16
+  confiance: a_confirmer
+- id: topo-a-074
+  origine: cours_l3
+  notion: topo-n-0053
+  titre: Suite de Cauchy
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-partiel2022-23-ex02
+  - topo-td3-ex02
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap2-espaces-complets.pdf
+    page: 1
+  confiance: a_confirmer
+- id: topo-a-075
+  origine: cours_l3
+  notion: topo-n-0054
+  titre: Toute suite convergente est de Cauchy
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap2-espaces-complets.pdf
+    page: 1
+  confiance: a_confirmer
+- id: topo-a-076
+  origine: cours_l3
+  notion: topo-n-0055
+  titre: Suite de Cauchy avec valeur d'adhérence
+  raison: 'seulement d''anciennes cartes hors ECG (Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td4-ex03
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap2-espaces-complets.pdf
+    page: 1
+  confiance: a_confirmer
+- id: topo-a-077
+  origine: cours_l3
+  notion: topo-n-0056
+  titre: Espace métrique complet
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-partiel2020-21-ex01
+  - topo-td3-ex01
+  - topo-td3-ex02
+  - topo-td3-ex03
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap2-espaces-complets.pdf
+    page: 2
+  confiance: a_confirmer
+- id: topo-a-078
+  origine: cours_l3
+  notion: topo-n-0057
+  titre: Exemples d'espaces complets ou non
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap2-espaces-complets.pdf
+    page: 2
+  confiance: a_confirmer
+- id: topo-a-079
+  origine: cours_l3
+  notion: topo-n-0059
+  titre: Suite décroissante de fermés de diamètre tendant vers 0 (caractérisation de la complétude)
+  raison: aucune carte
+  programme_ecg: false
+  exercices:
+  - topo-td3-ex04
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap2-espaces-complets.pdf
+    page: 2
+  confiance: a_confirmer
+- id: topo-a-080
+  origine: cours_l3
+  notion: topo-n-0060
+  titre: Sous-espace complet et fermé
+  raison: 'seulement d''anciennes cartes hors ECG (Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-exam2021-22-ex03
+  - topo-partiel2023-24-ex05
+  - topo-td3-ex01
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap2-espaces-complets.pdf
+    page: 3
+  confiance: a_confirmer
+- id: topo-a-081
+  origine: cours_l3
+  notion: topo-n-0063
+  titre: Complétude de $\mathcal B(X,Y)$ et $C_b(X,Y)$
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-exam2023-24-ex01
+  - topo-partiel2021-22-ex04
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap2-espaces-complets.pdf
+    page: 4
+  confiance: a_confirmer
+- id: topo-a-082
+  origine: cours_l3
+  notion: topo-n-0065
+  titre: Point fixe, application contractante
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td3-ex06
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap2-espaces-complets.pdf
+    page: 6
+  confiance: a_confirmer
+- id: topo-a-083
+  origine: cours_l3
+  notion: topo-n-0067
+  titre: Théorème de point fixe de Picard
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td3-ex08
+  - topo-exam2020-21-ex01
+  - topo-exam2023-24-ex01
+  - topo-partiel2021-22-ex04
+  - topo-partiel2023-24-ex03
+  - topo-partiel2023-24-ex05
+  - topo-td3-ex05
+  - topo-td3-ex06
+  - topo-td3-ex07
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap2-espaces-complets.pdf
+    page: 7
+  confiance: a_confirmer
+- id: topo-a-084
+  origine: cours_l3
+  notion: topo-n-0075
+  titre: Espace compact (propriété de Borel-Lebesgue)
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-partiel2020-21-ex02
+  - topo-partiel2023-24-ex04
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap3-espaces-compacts.pdf
+    page: 1
+  confiance: a_confirmer
+- id: topo-a-085
+  origine: cours_l3
+  notion: topo-n-0077
+  titre: Partie compacte
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-partiel2020-21-ex01
+  - topo-td4-ex01
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap3-espaces-compacts.pdf
+    page: 1
+  confiance: a_confirmer
+- id: topo-a-086
+  origine: cours_l3
+  notion: topo-n-0082
+  titre: Théorème de Bolzano-Weierstrass
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td4-ex05
+  - topo-partiel2021-22-ex05
+  - topo-partiel2023-24-ex04
+  - topo-td4-ex02
+  - topo-td4-ex06
+  - topo-td4-ex08
+  - topo-td4-ex10
+  - topo-dm2020-21-ex02
+  - topo-dm2022-23-ex02
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap3-espaces-compacts.pdf
+    page: 4
+  confiance: a_confirmer
+- id: topo-a-087
+  origine: cours_l3
+  notion: topo-n-0084
+  titre: Précompacité
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap3-espaces-compacts.pdf
+    page: 4
+  confiance: a_confirmer
+- id: topo-a-088
+  origine: cours_l3
+  notion: topo-n-0087
+  titre: Compacts de $\mathbb R$
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap3-espaces-compacts.pdf
+    page: 7
+  confiance: a_confirmer
+- id: topo-a-089
+  origine: cours_l3
+  notion: topo-n-0089
+  titre: Produit fini de compacts
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td4-ex02
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap3-espaces-compacts.pdf
+    page: 8
+  confiance: a_confirmer
+- id: topo-a-090
+  origine: cours_l3
+  notion: topo-n-0090
+  titre: Compacts de $\mathbb R^d$ et $\mathbb C^d$
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-dm2020-21-ex01
+  - topo-dm2021-22-ex01
+  - topo-dm2022-23-ex02
+  priorite: 3
+  source:
+    fichier: topologie/cours/chap3-espaces-compacts.pdf
+    page: 9
+  confiance: a_confirmer
+- id: topo-a-091
+  origine: cours_l3
+  notion: topo-n-0091
+  titre: Image d'un compact par une application continue
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-exam2022-23-ex02
+  - topo-td4-ex02
+  - topo-td4-ex04
+  priorite: 1
+  source:
+    fichier: topologie/cours/chap3-espaces-compacts.pdf
+    page: 9
+  confiance: a_confirmer
+- id: topo-a-092
+  origine: cours_l3
+  notion: topo-n-0092
+  titre: 'Fonction continue sur un compact : bornée et atteint ses bornes'
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td4-ex07
+  - topo-td4-ex09
+  - topo-dm2021-22-ex01
+  - topo-dm2023-24-ex02
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap3-espaces-compacts.pdf
+    page: 10
+  confiance: a_confirmer
+- id: topo-a-093
+  origine: cours_l3
+  notion: topo-n-0093
+  titre: Théorème de Heine
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - topo-td4-ex10
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap3-espaces-compacts.pdf
+    page: 10
+  confiance: a_confirmer

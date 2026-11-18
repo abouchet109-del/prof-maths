@@ -800,20 +800,20 @@
   action: rattachée à topo-p-0002
   recto: 'Prop : propriétés calculatoire produit scalaire et norme euclydienne'
 1786892010051:
-  verdict: doute
-  action: inchangée (doute)
+  verdict: doublon
+  action: suspendue le 18/11/2026 (doublon des cartes topo-a-042 de topo-p-0006, tirées d'un poly)
   recto: 'Th : continuité des applications linéaire en dimension finie'
 1786892045701:
-  verdict: doute
-  action: inchangée (doute)
+  verdict: doublon
+  action: suspendue le 18/11/2026 (doublon des cartes topo-a-042 de topo-p-0006, tirées d'un poly)
   recto: Norme d'opérateur
 1786892904157:
   verdict: complement
   action: rattachée à topo-n-0063
   recto: 'Def: espace des fonctions continues et norme de la convergence uniform'
 1786893894696:
-  verdict: doute
-  action: inchangée (doute)
+  verdict: doublon
+  action: suspendue le 18/11/2026 (doublon des cartes topo-a-042 de topo-p-0006, tirées d'un poly)
   recto: 'Prop : critère de continuité d''une forme linéaire en dimension quelquo'
 1786894010661:
   verdict: hors_poly
@@ -872,8 +872,8 @@
   action: rattachée à topo-n-0063
   recto: 'Prop : continuité et convergence uniforme/sur tout compact'
 1786977605042:
-  verdict: doute
-  action: inchangée (doute)
+  verdict: doublon
+  action: suspendue le 18/11/2026 (doublon des cartes topo-a-042 de topo-p-0006, tirées d'un poly)
   recto: 'Def : norme matricielle subordonnée à la norme euclidienne'
 1787136943964:
   verdict: complement
@@ -888,8 +888,8 @@
   action: rattachée à topo-n-0063
   recto: 'Prop : Espace de Banach et fonctions continue ( conditions )'
 1787138481081:
-  verdict: doute
-  action: inchangée (doute)
+  verdict: doublon
+  action: suspendue le 18/11/2026 (doublon des cartes topo-a-042 de topo-p-0006, tirées d'un poly)
   recto: 'Prop : Continuité d''une applications linéaire'
 1787147492560:
   verdict: prerequis

@@ -272,3 +272,326 @@
   priorite: 2
   source: null
   confiance: a_confirmer
+# 18/11/2026 : notions du poly couvertes seulement par d'anciennes cartes hors ECG (ou par rien) ; le poly est la source du cours.
+- id: mesure-a-026
+  origine: cours_l3
+  notion: mesure-n-0004
+  titre: Limites supérieure et inférieure d'une suite réelle
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - mes-td1-ex05
+  priorite: 2
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 4
+  confiance: a_confirmer
+- id: mesure-a-027
+  origine: cours_l3
+  notion: mesure-n-0010
+  titre: Propriétés de stabilité d'une tribu
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - mes-cc1-2526-ex01
+  - mes-td2-ex08
+  - mes-td3-ex04
+  priorite: 1
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 5
+  confiance: a_confirmer
+- id: mesure-a-028
+  origine: cours_l3
+  notion: mesure-n-0011
+  titre: Tribu engendrée
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026) ; même notion que proba-n-0012 : une seule série de
+    cartes pour le groupe'
+  programme_ecg: false
+  exercices:
+  - mes-td2-ex01
+  - mes-td2-ex02
+  - mes-td2-ex03
+  - mes-td2-ex04
+  - mes-td2-ex05
+  - mes-td2-ex09
+  - mes-dm-s1
+  - mes-dm-s2
+  priorite: 2
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 5
+  confiance: a_confirmer
+- id: mesure-a-029
+  origine: cours_l3
+  notion: mesure-n-0012
+  titre: Tribu borélienne
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026) ; même notion que proba-n-0012 : une seule
+    série de cartes pour le groupe'
+  programme_ecg: false
+  exercices:
+  - mes-td2-ex06
+  - mes-td2-ex07
+  - mes-td2-ex08
+  priorite: 2
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 5
+  confiance: a_confirmer
+- id: mesure-a-030
+  origine: cours_l3
+  notion: mesure-n-0013
+  titre: Familles génératrices de $\mathcal B(\mathbb R)$
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - mes-td2-ex06
+  - mes-td2-ex07
+  - mes-td2-ex09
+  priorite: 2
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 5
+  confiance: a_confirmer
+- id: mesure-a-031
+  origine: cours_l3
+  notion: mesure-n-0016
+  titre: Critère de mesurabilité sur une famille génératrice
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - mes-td3-ex02
+  priorite: 2
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 6
+  confiance: a_confirmer
+- id: mesure-a-032
+  origine: cours_l3
+  notion: mesure-n-0020
+  titre: Composée et couple de fonctions mesurables
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - mes-td3-ex06
+  priorite: 2
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 7
+  confiance: a_confirmer
+- id: mesure-a-033
+  origine: cours_l3
+  notion: mesure-n-0021
+  titre: Max, min, parties positive et négative
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - mes-ex-2526-ex01
+  priorite: 1
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 7
+  confiance: a_confirmer
+- id: mesure-a-034
+  origine: cours_l3
+  notion: mesure-n-0022
+  titre: Opérations usuelles sur les fonctions mesurables
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - mes-cc1-2324-ex02
+  - mes-ex-2526-ex01
+  - mes-ex-2425-ex01
+  - mes-td3-ex04
+  - mes-td3-ex05
+  - mes-td3-ex06
+  priorite: 1
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 7
+  confiance: a_confirmer
+- id: mesure-a-035
+  origine: cours_l3
+  notion: mesure-n-0024
+  titre: Stabilité des fonctions étagées
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 7
+  confiance: a_confirmer
+- id: mesure-a-036
+  origine: cours_l3
+  notion: mesure-n-0025
+  titre: Lemme fondamental d'approximation
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026) ; même notion que proba-n-0033 : une seule série de
+    cartes pour le groupe'
+  programme_ecg: false
+  exercices:
+  - mes-ex-2526-ex02
+  priorite: 1
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 7
+  confiance: a_confirmer
+- id: mesure-a-037
+  origine: cours_l3
+  notion: mesure-n-0026
+  titre: Mesure positive
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - mes-cc1-2324-ex01
+  - mes-ex-2526-ex02
+  - mes-ex-2425-ex04
+  - mes-td4-ex01
+  - mes-td4-ex02
+  - mes-td4-ex05
+  - mes-dm-s3
+  priorite: 1
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 7
+  confiance: a_confirmer
+- id: mesure-a-038
+  origine: cours_l3
+  notion: mesure-n-0027
+  titre: Mesure finie, mesure de probabilité, espace mesuré
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 7
+  confiance: a_confirmer
+- id: mesure-a-039
+  origine: cours_l3
+  notion: mesure-n-0028
+  titre: 'Mesures usuelles : nulle, grossière, Dirac, comptage'
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - mes-cc1-2526-ex03
+  - mes-cc2-2324-ex03
+  - mes-cc2-2425-ex01q1
+  - mes-cc2l3-2425-ex05
+  - mes-td4-ex03
+  priorite: 1
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 8
+  confiance: a_confirmer
+- id: mesure-a-040
+  origine: cours_l3
+  notion: mesure-n-0031
+  titre: 'Théorème de Borel-Lebesgue (admis) : mesure de Lebesgue'
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - mes-td4-ex06
+  - mes-td4-ex08
+  - mes-dm-s4
+  priorite: 2
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 8
+  confiance: a_confirmer
+- id: mesure-a-041
+  origine: cours_l3
+  notion: mesure-n-0034
+  titre: Continuité séquentielle croissante
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026) ; même notion que proba-n-0002 : une seule série de
+    cartes pour le groupe'
+  programme_ecg: false
+  exercices:
+  - mes-cc1-2324-ex05
+  - mes-cc2l3-2425-ex04
+  - mes-ex-2425-ex04
+  - mes-td4-ex07
+  priorite: 1
+  source:
+    fichier: mesure/notes/cm-2026-10-13.pdf
+    page: 1
+  confiance: a_confirmer
+- id: mesure-a-042
+  origine: cours_l3
+  notion: mesure-n-0036
+  titre: Continuité séquentielle décroissante
+  raison: 'aucune carte ; même notion que proba-n-0002 : une seule série de cartes pour le groupe'
+  programme_ecg: false
+  exercices:
+  - mes-cc1-2324-ex03
+  - mes-td4-ex04
+  - mes-td4-ex07
+  priorite: 1
+  source:
+    fichier: mesure/notes/cm-2026-10-13.pdf
+    page: 1
+  confiance: a_confirmer
+- id: mesure-a-043
+  origine: cours_l3
+  notion: mesure-n-0039
+  titre: Mesure de Lebesgue d'un intervalle
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices:
+  - mes-cc1-2425-ex04
+  - mes-td4-ex06
+  - mes-td4-ex08
+  - mes-dm-s4
+  priorite: 1
+  source:
+    fichier: mesure/notes/cm-2026-10-13.pdf
+    page: 2
+  confiance: a_confirmer
+- id: mesure-a-044
+  origine: cours_l3
+  notion: mesure-n-0041
+  titre: Mesure de Lebesgue d'un pavé
+  raison: 'seulement d''anciennes cartes hors ECG (Aout) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)'
+  programme_ecg: false
+  exercices: []
+  priorite: 3
+  source:
+    fichier: mesure/notes/cm-2026-10-20.pdf
+    page: 2
+  confiance: a_confirmer
+- id: mesure-a-045
+  origine: cours_l3
+  notion: mesure-n-0042
+  titre: Partie $\mu$-négligeable
+  raison: 'seulement d''anciennes cartes hors ECG (Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026) ; même notion que proba-n-0006 : une seule série
+    de cartes pour le groupe'
+  programme_ecg: false
+  exercices:
+  - mes-cc1-2324-ex01
+  - mes-cc1-2324-ex04
+  - mes-ex-2425-ex01
+  - mes-td4-ex06
+  priorite: 1
+  source:
+    fichier: mesure/notes/cm-2026-10-20.pdf
+    page: 2
+  confiance: a_confirmer
+- id: mesure-a-046
+  origine: cours_l3
+  notion: mesure-n-0044
+  titre: Propriété vraie $\mu$-presque partout
+  raison: 'seulement d''anciennes cartes hors ECG (Aout, Centrale) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026) ; même notion que proba-n-0006 : une seule
+    série de cartes pour le groupe'
+  programme_ecg: false
+  exercices:
+  - mes-cc1-2324-ex05
+  - mes-cc2-2324-ex01q2
+  - mes-cc2-2425-ex01q2
+  - mes-cc2-2425-ex04
+  - mes-ex-2425-ex02q1
+  - mes-td5-ex09
+  priorite: 1
+  source:
+    fichier: mesure/notes/cm-2026-10-20.pdf
+    page: 3
+  confiance: a_confirmer

@@ -642,9 +642,25 @@ def est_carte_exercice(c) -> bool:
     return "exercice" in (c.get("tags") or [])
 
 
-def premieres_nouvelles(client, ids, n) -> list[str]:
-    """Les `n` premiers de `ids` (dans l'ordre) que le client Anki dit encore nouveaux ; lecture par lots.
-    Un id `nid:<n>` est une ancienne note (couverture.yaml), lue par `nids_nouveaux`."""
+def premier_don(ctx, d) -> dict[int, str]:
+    """Premier jour (AAAA-MM-JJ, au plus `d`) où le plan a donné chaque ancienne note dans « à apprendre » :
+    state/anki_anciennes.yaml et le journal des séances (state/seance.yaml, qui réunit les séances d'un jour)."""
+    res: dict[int, str] = {}
+    sources = list((ctx.get("anciennes_donnees") or {}).items())
+    sources += [(k, (v or {}).get("anciennes")) for k, v in (ctx.get("seances") or {}).items()]
+    for k, ns in sources:
+        if str(k) <= str(d):
+            for n in ns or []:
+                if int(n) not in res or str(k) < res[int(n)]:
+                    res[int(n)] = str(k)
+    return res
+
+
+def premieres_nouvelles(client, ids, n, donnees=None) -> list[str]:
+    """Les `n` premiers de `ids` (dans l'ordre) que le client Anki dit encore à apprendre ; lecture par lots.
+    Un id `nid:<n>` est une ancienne note (couverture.yaml), lue par `nids_a_apprendre` : hors ECG, déjà
+    apprise dans Anki mais pas revue depuis que le plan l'a donnée, elle est encore à apprendre (18/11/2026).
+    `donnees` : premier jour donné de chaque ancienne note (`premier_don`)."""
     res: list[str] = []
     for k in range(0, len(ids), LOT_ANKI):
         if len(res) >= n:
@@ -652,7 +668,7 @@ def premieres_nouvelles(client, ids, n) -> list[str]:
         lot = ids[k:k + LOT_ANKI]
         cartes = [i for i in lot if not i.startswith("nid:")]
         nids = [int(i[4:]) for i in lot if i.startswith("nid:")]
-        nouveaux = (client.ids_nouveaux(cartes) if cartes else set()) |                    ({f"nid:{x}" for x in client.nids_nouveaux(nids)} if nids else set())
+        nouveaux = (client.ids_nouveaux(cartes) if cartes else set()) |                    ({f"nid:{x}" for x in client.nids_a_apprendre(nids, donnees)} if nids else set())
         res += [i for i in lot if i in nouveaux]
     return res[:n]
 
@@ -702,9 +718,10 @@ def anki(ctx, plan, client=None) -> dict:
     requis = set() if off else notions_requises(ctx, plan)
     notion_de = {c["id"]: c.get("notion") for c in ordre}
     if client:
-        nouvelles = premieres_nouvelles(client, ids, limite)
+        dons = premier_don(ctx, d)
+        nouvelles = premieres_nouvelles(client, ids, limite, dons)
         reste = [i for i in ids if i not in set(nouvelles) and notion_de.get(i) in requis]
-        requises = premieres_nouvelles(client, reste, REQUISES_MAX) if reste else []
+        requises = premieres_nouvelles(client, reste, REQUISES_MAX, dons) if reste else []
         exercices = premieres_nouvelles(client, ids_exos, limite_exos)
         liees = [c["id"] for c in libres if c.get("notion") in notions_jour]
         encore = client.ids_nouveaux(liees) if liees else set()
@@ -998,10 +1015,15 @@ def rediger(ctx, plan, cartes) -> list[str]:
     L += ["", f"## Anki — cours, à apprendre ({len(apprendre)} nouvelles"
               + (f", dont {len(req)} en plus du plafond : les exercices du jour en ont besoin" if req else "")
               + (f" + {len(anciennes)} anciennes" if anciennes else "") + ")"]
-    requete = " or ".join(([_requete(apprendre)] if apprendre else [])
+    # Cartes du système : jamais une carte déjà apprise (en apprentissage : pas encore apprise). Anciennes notes :
+    # sans filtre d'état, car une note hors ECG déjà apprise dans Anki se réapprend (règle du 18/11/2026).
+    requete = " or ".join(([f"(({_requete(apprendre)}) (is:new or (is:learn -is:review)))"] if apprendre else [])
                           + ([f"nid:{','.join(map(str, anciennes))}"] if anciennes else []))
-    requete = f"({requete}) (is:new or (is:learn -is:review)) -is:suspended" if requete else ""     # jamais une carte déjà apprise (en apprentissage : pas encore apprise)
+    requete = f"({requete}) -is:suspended" if requete else ""
     L += ["```", requete, "```"] if requete else ["- (aucune)"]
+    if anciennes:
+        L.append("Paquet filtré “replanifier” **coché** : une ancienne carte déjà apprise ne compte réapprise "
+                 "qu'une fois revue (journal d'Anki).")
     exos = cartes.get("exercices") or []
     L += ["", f"## Anki — exercices à revoir ({len(exos)} nouvelles)"]
     L += ["```", f"({_requete(exos)}) (is:new or (is:learn -is:review)) -is:suspended", "```",
@@ -1127,7 +1149,7 @@ def bilan_seance(ctx, d: dt.date, client=None) -> list[str]:
     elif client:
         try:
             encore = client.ids_nouveaux(cartes) if cartes else set()
-            encore_a = client.nids_nouveaux(anciennes) if anciennes else set()
+            encore_a = client.nids_a_apprendre(anciennes, premier_don(ctx, d)) if anciennes else set()
             ap = [i for i in cartes if i not in encore]
             aa = [n for n in anciennes if n not in encore_a]
             L.append(f"- Cartes apprises dans la séance (lu dans Anki) : {len(ap)} sur {len(cartes)} proposées"

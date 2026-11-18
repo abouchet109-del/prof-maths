@@ -562,7 +562,8 @@ def test_anciennes_notes_dans_la_file_du_poly():
         assert a["anciennes"].index(203) < a["anciennes"].index(300)     # le 1.1 fini avant le 1.2
     lignes = P.rediger(c, p, a)
     requete = lignes[lignes.index("```", lignes.index(next(l for l in lignes if l.startswith("## Anki — cours, à apprendre")))) + 1]
-    assert requete.endswith("(is:new or (is:learn -is:review)) -is:suspended") and "nid:100," in requete
+    # cartes du système filtrées sur leur état, anciennes notes non (une note hors ECG se réapprend, 18/11/2026)
+    assert requete.endswith(") -is:suspended") and "(is:new or (is:learn -is:review))) or nid:100," in requete
     # le lendemain (sans Anki) : les notes déjà données ne reviennent pas
     c["anciennes_donnees"] = {"2026-11-04": a["anciennes"]}
     c["resultats"] = [res("2026-11-04", "zz", "aide")]
@@ -736,9 +737,11 @@ def test_replanifier_la_meme_date_redonne_le_meme_bloc(tmp_path):
 
 # ======================================================= séance (état réel, Anki lu)
 class FauxAnki:
-    """Faux client Anki : `nouvelles` = ids de cartes encore is:new, `nids` = anciennes notes encore is:new."""
-    def __init__(self, nouvelles=(), nids=()):
+    """Faux client Anki : `nouvelles` = ids de cartes encore is:new, `nids` = anciennes notes encore is:new,
+    `hors_ecg` = anciennes notes hors ECG déjà apprises, `revues` = {nid: dernier jour de révision}."""
+    def __init__(self, nouvelles=(), nids=(), hors_ecg=(), revues=None):
         self.nouvelles, self.nids, self.appels = set(nouvelles), set(nids), 0
+        self.hors_ecg, self.revues = set(hors_ecg), dict(revues or {})
 
     def disponible(self):
         return True
@@ -749,6 +752,11 @@ class FauxAnki:
 
     def nids_nouveaux(self, nids):
         return {n for n in nids if n in self.nids}
+
+    def nids_a_apprendre(self, nids, donnees=None):
+        donnees = donnees or {}
+        revue = lambda n: n in donnees and n in self.revues and self.revues[n] >= donnees[n]  # noqa: E731
+        return {n for n in nids if n in self.nids or (n in self.hors_ecg and not revue(n))}
 
 
 TOUTES = {"eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2", "cC1", "cD"}
@@ -795,6 +803,31 @@ def test_anciennes_notes_lues_dans_anki():
     c["anciennes_donnees"] = {"2026-11-03": [100, 101]}
     c["resultats"] = [res("2026-11-03", "zz", "aide")]
     assert P.anki(c, p)["anciennes"] == [102, 103]
+
+
+def test_ancienne_note_hors_ecg_deja_apprise_se_reapprend():
+    """18/11/2026 : seul ECG dit ce que l'utilisateur sait. Une note AoutLicenceMath ou Centrale déjà apprise
+    dans Anki revient dans « à apprendre » jusqu'à une révision le jour où le plan l'a donnée ou après."""
+    cou = {"n-a": {"statut": "couverte", "notes": [100, 101, 102]}, "n-a2": {"statut": "couverte", "notes": [103]}}
+    c = ctx_cartes(couverture=cou)
+    p = P.plan_jour(c, D(2026, 11, 4), seance=True)
+    # 100 hors ECG apprise, jamais donnée ; 102 ECG apprise ; 101 et 103 encore nouvelles
+    anki_ = FauxAnki(TOUTES, nids={101, 103}, hors_ecg={100}, revues={100: "2026-09-01"})
+    assert P.anki(c, p, anki_)["anciennes"] == [100, 101, 103]
+    # donnée le 03 puis revue le 03 : réapprise ; une révision d'avant le don ne compte pas
+    c["anciennes_donnees"] = {"2026-11-03": [100]}
+    assert P.anki(c, p, anki_)["anciennes"] == [100, 101, 103]
+    anki_.revues[100] = "2026-11-03"
+    assert P.anki(c, p, anki_)["anciennes"] == [101, 103]
+    # le journal des séances compte aussi (plan relancé le même jour : anki_anciennes réécrit)
+    c["anciennes_donnees"] = {}
+    c["seances"] = {"2026-11-03": {"anciennes": [100]}}
+    assert P.premier_don(c, D(2026, 11, 4)) == {100: "2026-11-03"}
+    assert P.anki(c, p, anki_)["anciennes"] == [101, 103]
+    # la recherche « à apprendre » ne filtre pas l'état des anciennes notes
+    c["seances"] = {}
+    texte = "\n".join(P.rediger(c, p, P.anki(c, p, anki_)))
+    assert "nid:100,101,103) -is:suspended" in texte and "replanifier" in texte
 
 
 def test_cartes_non_exportees_ne_sont_pas_proposees_et_sont_signalees():
