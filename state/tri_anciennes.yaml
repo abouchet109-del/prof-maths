@@ -1,4 +1,4 @@
-# Tri des anciennes cartes du paquet L3 (17/11/2026) : verdict et action, pour pouvoir revenir en arrière.
+# Tri des anciennes cartes du paquet L3 (17/11/2026, retri de topologie le 18/11/2026) : verdict et action, pour pouvoir revenir en arrière.
 1737815026888:
   verdict: complement
   action: rattachée à topo-n-0049
@@ -21,7 +21,7 @@
   recto: 'Prop : particularité des limites dans les espaces métriques + démo'
 1765021312818:
   verdict: prerequis
-  action: rattachée à topo-n-0040
+  action: 'rattachée à topo-n-0174 (retri du 18/11/2026, avant : topo-n-0040)'
   recto: 'Def : Convergence en norme Remarque : Différences entre dimension fini'
 1765021326999:
   verdict: complement
@@ -192,8 +192,8 @@
   action: rattachée à topo-n-0041
   recto: 'Def : suite extraites'
 1772485252552:
-  verdict: hors_poly
-  action: suspendre et ranger dans Hors poly
+  verdict: doublon
+  action: suspendre (doublon de topo-a-169-1, retri du 18/11/2026)
   recto: 'Prop : SEV, espace de hilbert, dimension et fermé'
 1772647483015:
   verdict: complement
@@ -201,15 +201,15 @@
   recto: 'def : topologie métrique'
 1786441421315:
   verdict: prerequis
-  action: rattachée à topo-n-0008
+  action: 'rattachée à topo-n-0150 (retri du 18/11/2026, avant : topo-n-0008)'
   recto: 'Méthode : Comment montrer qu''une application est une norme'
 1786441440087:
-  verdict: prerequis
-  action: rattachée à topo-n-0010
+  verdict: doublon
+  action: suspendre (doublon de topo-a-141-2, retri du 18/11/2026)
   recto: 'Def : norme infini'
 1786441456819:
   verdict: prerequis
-  action: rattachée à topo-n-0010
+  action: 'rattachée à topo-n-0151 (retri du 18/11/2026, avant : topo-n-0010)'
   recto: 'Prop : maximum des fonctions positives ( à savoir redémontrer )'
 1786441479984:
   verdict: prerequis
@@ -217,31 +217,31 @@
   recto: 'Prop : inégalité triangulaire'
 1786441536174:
   verdict: prerequis
-  action: rattachée à topo-n-0034
+  action: 'rattachée à topo-n-0169 (retri du 18/11/2026, avant : topo-n-0034)'
   recto: 'Prop : inclusion des boules unités'
 1786441560763:
   verdict: prerequis
-  action: rattachée à topo-n-0034
+  action: 'rattachée à topo-n-0169 (retri du 18/11/2026, avant : topo-n-0034)'
   recto: Formulation géométrique de l'équivalence des normes
 1786441602579:
   verdict: prerequis
   action: rattachée à topo-n-0035
   recto: 'Prop : normes équivalentes et topologie'
 1786441612419:
-  verdict: prerequis
-  action: rattachée à topo-n-0010
+  verdict: doublon
+  action: suspendre (doublon de topo-a-141-1, retri du 18/11/2026)
   recto: 'Def : normes Lp sur Rn'
 1786441623382:
   verdict: prerequis
-  action: rattachée à topo-n-0010
+  action: 'rattachée à topo-n-0286 (retri du 18/11/2026, avant : topo-n-0010)'
   recto: 'Prop : inégalité de Young'
 1786441638452:
   verdict: prerequis
-  action: rattachée à topo-n-0010
+  action: 'rattachée à topo-n-0284 (retri du 18/11/2026, avant : topo-n-0010)'
   recto: 'Prop : inégalité de Holer'
 1786441654395:
   verdict: prerequis
-  action: rattachée à topo-n-0010
+  action: 'rattachée à topo-n-0237 (retri du 18/11/2026, avant : topo-n-0010)'
   recto: 'Prop : inégalité de Cauchy Schwarz'
 1786441914114:
   verdict: complement
@@ -288,12 +288,12 @@
   action: rattachée à topo-n-0008
   recto: 'Def : distance'
 1786448361516:
-  verdict: prerequis
-  action: rattachée à topo-n-0008
+  verdict: doublon
+  action: suspendre (doublon de topo-a-140-1, retri du 18/11/2026)
   recto: 'Def : norme'
 1786448382100:
-  verdict: prerequis
-  action: rattachée à topo-n-0008
+  verdict: doublon
+  action: suspendre (doublon de topo-a-145-1, retri du 18/11/2026)
   recto: 'Def : lien entre norme et distance'
 1786448393166:
   verdict: complement
@@ -344,60 +344,60 @@
   action: rattachée à topo-n-0008
   recto: 'Def : espace métrique'
 1786448747719:
-  verdict: prerequis
-  action: rattachée à topo-n-0008
+  verdict: doublon
+  action: suspendre (doublon de topo-a-140-1, retri du 18/11/2026)
   recto: 'Def : espace normé'
 1786448903783:
   verdict: complement
   action: rattachée à topo-n-0011
   recto: 'Ddef : boule ouverte et boule fermée'
 1786448927718:
-  verdict: prerequis
-  action: rattachée à topo-n-0011
+  verdict: doublon
+  action: suspendre (doublon de topo-a-147-1, retri du 18/11/2026)
   recto: 'def : boule ouverte et fermé dans un espace normé'
 1786450317326:
   verdict: prerequis
-  action: rattachée à topo-n-0011
+  action: 'rattachée à topo-n-0157 (retri du 18/11/2026, avant : topo-n-0011)'
   recto: 'Def : boule unité'
 1786455289160:
   verdict: hors_poly
   action: suspendre et ranger dans Hors poly
   recto: inégalité concavité ln
 1786455425863:
-  verdict: prerequis
-  action: rattachée à topo-n-0010
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD1 Ex2 q1 : inégalité de Young'
 1786455481763:
   verdict: hors_poly
   action: suspendre et ranger dans Hors poly
   recto: inégalité de Jensen
 1786455937930:
-  verdict: prerequis
-  action: rattachée à topo-n-0010
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD1 Ex2 q1-q2 : Young, Hölder'
 1786457053663:
-  verdict: prerequis
-  action: rattachée à topo-n-0010
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD1 Ex2 q1-q3 : Young, Hölder, Minkowski'
 1786457182889:
-  verdict: prerequis
-  action: rattachée à topo-n-0010
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD1 Ex2 q1-q4 : + ||.||_p norme sur R^n'
 1786457336313:
-  verdict: complement
-  action: rattachée à topo-n-0063
+  verdict: doublon
+  action: suspendre (doublon de topo-a-143-1, retri du 18/11/2026)
   recto: 'Def : norme infini'
 1786458087545:
   verdict: complement
   action: rattachée à topo-n-0028
   recto: 'Def : densité'
 1786459490834:
-  verdict: complement
-  action: rattachée à topo-n-0034
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD1 Ex4 : deux normes équivalentes sur {f in C^1, f(0)=0}'
 1786464844402:
-  verdict: hors_poly
-  action: suspendre et ranger dans Hors poly
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD1 Ex6 : ouvert de R^2 réunion dénombrable de boules'
 1786466066522:
   verdict: doublon
@@ -436,8 +436,8 @@
   action: rattachée à topo-n-0065
   recto: 'Def : application dite contractante et isométrie'
 1786466820178:
-  verdict: hors_poly
-  action: suspendre et ranger dans Hors poly
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD1 Ex8 : fermé = intersection dénombrable d''ouverts'
 1786467336208:
   verdict: complement
@@ -456,12 +456,12 @@
   action: rattachée à topo-n-0024
   recto: 'Prop: adhérence d''une réunion'
 1786468179968:
-  verdict: complement
-  action: rattachée à topo-n-0022
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD1 Ex9 : F_n={1/n}x[0,1], F fermé, adhérence (q2)'
 1786468772705:
-  verdict: complement
-  action: rattachée à topo-n-0022
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD1 Ex9 q1-q3 : F_n fermé, F fermé, adhérence'
 1786484059886:
   verdict: complement
@@ -532,8 +532,8 @@
   action: inchangée (doute)
   recto: 2 propriétés fondamentales applications d'évaluation
 1786488698389:
-  verdict: complement
-  action: rattachée à topo-n-0018
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD1 Ex15 q1-q2 : adhérence/intérieur dans (C([0,1]),||.||'
 1786525261017:
   verdict: complement
@@ -592,8 +592,8 @@
   action: rattachée à topo-n-0049
   recto: 'Prop : image direct par application continue ouvert et fermé'
 1786531243500:
-  verdict: complement
-  action: rattachée à topo-n-0012
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex1 q1 : X+Y ouvert si X ouvert'
 1786531895169:
   verdict: complement
@@ -628,36 +628,36 @@
   action: rattachée à topo-n-0082
   recto: Caractérisation d'un compact
 1786532502435:
-  verdict: complement
-  action: rattachée à topo-n-0089
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex1 q1-q2 : X+Y ouvert, compact'
 1786533194751:
-  verdict: complement
-  action: rattachée à topo-n-0089
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex1 q1-q3 : + fermé si X compact, Y fermé'
 1786533214981:
   verdict: hors_poly
   action: suspendre et ranger dans Hors poly
   recto: 'Prop : Continuité des opérations algébrique dans un EVN et limite'
 1786533420890:
-  verdict: complement
-  action: rattachée à topo-n-0090
+  verdict: doublon
+  action: suspendre (doublon de topo-a-165-1, retri du 18/11/2026)
   recto: 'Prop : caractérisation d''un compact en ddimension fini'
 1786533438908:
   verdict: hors_poly
   action: suspendre et ranger dans Hors poly
   recto: Def :de la limite à l'infini ( aussi di coercivité )
 1786533874793:
-  verdict: complement
-  action: rattachée à topo-n-0092
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex2 : f coercive sur R^n, minimum global'
 1786534207685:
   verdict: doute
-  action: inchangée (doute)
+  action: 'rattachée à topo-n-0181 (retri du 18/11/2026, avant : Hors poly)'
   recto: 'Prop: contintuié des application multilinéaire'
 1786534668349:
-  verdict: complement
-  action: rattachée à topo-n-0090
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex3 : O(n) est compact'
 1786539563424:
   verdict: complement
@@ -680,12 +680,12 @@
   action: rattachée à topo-n-0052
   recto: 'Prop : Contiuité et applications topologiquement équivalentes'
 1786541565024:
-  verdict: complement
-  action: rattachée à topo-n-0082
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex5 q1 : norme L2 de cos(2 pi n x)'
 1786542197534:
-  verdict: complement
-  action: rattachée à topo-n-0082
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex5 q1-q2 : ||f_n - f_p||_2'
 1786542615757:
   verdict: complement
@@ -700,48 +700,48 @@
   action: rattachée à topo-n-0082
   recto: 'Prop : critère séquentiel de non compacité'
 1786542827962:
-  verdict: complement
-  action: rattachée à topo-n-0088
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex5 q1-q3 : B(0,1) de (C([0,1]),L2) non compacte'
 1786543953147:
-  verdict: complement
-  action: rattachée à topo-n-0079
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex4 : compacts décroissants, intersection non vide'
 1786544302569:
   verdict: complement
   action: rattachée à topo-n-0093
   recto: Théorème de Heine
 1786545158719:
-  verdict: complement
-  action: rattachée à topo-n-0093
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex7 : limites finies en +-inf, uniformément continue'
 1786559135422:
   verdict: complement
   action: rattachée à topo-n-0033
   recto: Condition nécessaire et suffisante de convergence dans l'espace produi
 1786559487973:
-  verdict: complement
-  action: rattachée à topo-n-0082
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex9 : p(F) fermé si Y compact'
 1786560456614:
-  verdict: complement
-  action: rattachée à topo-n-0049
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex10 q1 : f(adh A) inclus dans adh f(A)'
 1786561153357:
-  verdict: complement
-  action: rattachée à topo-n-0091
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex10 q1-q2 : cas adh A compact'
 1786562230905:
-  verdict: doute
-  action: inchangée (doute)
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD2 Ex11 : connexe C, C inter frontière vide'
 1786562376695:
   verdict: complement
   action: rattachée à topo-n-0030
   recto: 'Def: ouvert et ferme relatif ( autre nom pour un truc que t''as déja in'
 1786629418328:
-  verdict: complement
-  action: rattachée à topo-n-0053
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD3 Ex1 q1 : (f_n) de Cauchy pour la norme L1'
 1786629438012:
   verdict: complement
@@ -749,11 +749,11 @@
   recto: 'Def : Suite de Cauchy'
 1786629459668:
   verdict: complement
-  action: rattachée à topo-n-0057
+  action: 'rattachée à topo-n-0300 (retri du 18/11/2026, avant : topo-n-0057)'
   recto: 'Prop : norme L1 et EVN associé'
 1786629612408:
-  verdict: complement
-  action: rattachée à topo-n-0056
+  verdict: doublon
+  action: suspendre (doublon de topo-a-175-1, retri du 18/11/2026)
   recto: 'Def : espace normé complet'
 1786629634299:
   verdict: complement
@@ -764,40 +764,40 @@
   action: suspendre et ranger dans Hors poly
   recto: 'Prop : séparation norme L1 sur les fonctions continues'
 1786630422554:
-  verdict: complement
-  action: rattachée à topo-n-0057
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD3 Ex1 q1-q2 : C([-1,1]) L1 non complet'
 1786630618335:
   verdict: hors_poly
-  action: suspendre et ranger dans Hors poly
+  action: 'rattachée à topo-n-0197 (retri du 18/11/2026, avant : Hors poly)'
   recto: 'Def : norme d''algèbre'
 1786630642807:
   verdict: hors_poly
-  action: suspendre et ranger dans Hors poly
+  action: 'rattachée à topo-n-0198 (retri du 18/11/2026, avant : Hors poly)'
   recto: 'Prop : Majoration des puissance par la norme d''algèbre'
 1786630668334:
-  verdict: prerequis
-  action: rattachée à topo-n-0090
+  verdict: doublon
+  action: suspendre (doublon de topo-a-164-1, retri du 18/11/2026)
   recto: 'TH : équivalence des normes en dimension fini'
 1786630703898:
-  verdict: hors_poly
-  action: suspendre et ranger dans Hors poly
+  verdict: doublon
+  action: suspendre (doublon de topo-a-182-1, retri du 18/11/2026)
   recto: 'Def : convergence absolue d''une série vectoriel'
 1786630722430:
-  verdict: complement
-  action: rattachée à topo-n-0061
+  verdict: doublon
+  action: suspendre (doublon de topo-a-168-1, retri du 18/11/2026)
   recto: 'Prop : Complétude de la dimension finie'
 1786630750523:
-  verdict: hors_poly
-  action: suspendre et ranger dans Hors poly
+  verdict: doublon
+  action: suspendre (doublon de topo-a-183-1, retri du 18/11/2026)
   recto: 'Prop : lien entre convergence vectoriel absolue et convergence'
 1786630815179:
-  verdict: hors_poly
-  action: suspendre et ranger dans Hors poly
+  verdict: exercice
+  action: 'ancienne carte d''exercice (UVSQ, été 2026) : hors plan, laissée telle quelle dans Anki (18/11/2026)'
   recto: '[image] UVSQ TD3 Ex2 : série de A^k/k! converge'
 1786891449425:
   verdict: prerequis
-  action: rattachée à topo-p-0002
+  action: 'rattachée à topo-n-0236 (retri du 18/11/2026, avant : topo-p-0002)'
   recto: 'Prop : propriétés calculatoire produit scalaire et norme euclydienne'
 1786892010051:
   verdict: doublon
@@ -808,8 +808,8 @@
   action: suspendue le 18/11/2026 (doublon des cartes topo-a-042 de topo-p-0006, tirées d'un poly)
   recto: Norme d'opérateur
 1786892904157:
-  verdict: complement
-  action: rattachée à topo-n-0063
+  verdict: doublon
+  action: suspendre (doublon de topo-a-143-1, retri du 18/11/2026)
   recto: 'Def: espace des fonctions continues et norme de la convergence uniform'
 1786893894696:
   verdict: doublon
@@ -884,8 +884,8 @@
   action: inchangée (doute)
   recto: Théorème du point fixe de Banach Picard
 1787138464247:
-  verdict: complement
-  action: rattachée à topo-n-0063
+  verdict: doublon
+  action: suspendre (doublon de topo-a-178-1, retri du 18/11/2026)
   recto: 'Prop : Espace de Banach et fonctions continue ( conditions )'
 1787138481081:
   verdict: doublon
@@ -893,7 +893,7 @@
   recto: 'Prop : Continuité d''une applications linéaire'
 1787147492560:
   verdict: prerequis
-  action: rattachée à topo-n-0090
+  action: 'rattachée à topo-n-0197 (retri du 18/11/2026, avant : topo-n-0090)'
   recto: 'Prop : Equivalence des normes et sous norme multiplicative en dimensio'
 1765287088117:
   verdict: complement
