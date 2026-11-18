@@ -1,4 +1,4 @@
-# NOW — séance mer. 2026-11-18 19:19 (normal)
+# NOW — séance mer. 2026-11-18 19:23 (normal)
 
 Bloc du jour : Topologie — Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière (vitaux acquis 0/8)
 Dernier jour travaillé : 2026-11-11 (mer.)
@@ -65,13 +65,13 @@ Paquet filtré « Exercices seul » (18 cartes d'exercices réussis ou presque ;
 
 ## Anki — tout le sujet du jour
 ```
-(nid:1770140867658,1770141239338,1770141348553,1772215405816,1772647483015,1786441932447,1786448415251,1786448482473,1786448507951,1786458087545,1786467336208,1786467355412,1786468179968,1786468772705,1786484059886,1786484077090,1786484126572,1786484150966,1786484163414,1786484452246,1786488698389,1786526255846,1786531243500,1786533420890,1786534668349,1786630668334,1787147492560 or "Id:topo-a-005-1" or "Id:topo-e002" or "Id:topo-e004" or "Id:topo-a-039-1" or "Id:topo-a-039-2" or "Id:topo-a-040-1" or "Id:topo-a-040-2")
+(nid:1770140867658,1770141239338,1770141348553,1772215405816,1772647483015,1786441932447,1786448415251,1786448482473,1786448507951,1786458087545,1786467336208,1786467355412,1786468179968,1786468772705,1786484059886,1786484077090,1786484126572,1786484150966,1786484163414,1786484452246,1786488698389,1786526255846,1786531243500,1786533420890,1786534668349,1786630668334,1787147492560 or "Id:topo-a-005-1" or "Id:topo-e002" or "Id:topo-e004" or "Id:topo-a-039-1" or "Id:topo-a-039-2" or "Id:topo-a-040-1" or "Id:topo-a-040-2" or "Id:topo-a-046-1" or "Id:topo-a-046-2" or "Id:topo-a-050-1" or "Id:topo-a-050-2" or "Id:topo-a-050-3" or "Id:topo-a-050-4" or "Id:topo-a-050-5" or "Id:topo-a-052-1" or "Id:topo-a-052-2" or "Id:topo-a-052-3" or "Id:topo-a-053-1" or "Id:topo-a-053-2" or "Id:topo-a-053-3" or "Id:topo-a-055-1" or "Id:topo-a-055-2" or "Id:topo-a-058-1" or "Id:topo-a-058-2" or "Id:topo-a-069-1" or "Id:topo-a-069-2" or "Id:topo-a-069-3" or "Id:topo-a-069-4" or "Id:topo-a-090-1" or "Id:topo-a-090-2")
 ```
 Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes selon mes réponses” pour réviser sans perturber le planning Anki.
 
-## Anki — cours, à apprendre (15 nouvelles + 30 anciennes)
+## Anki — cours, à apprendre (25 nouvelles, dont 9 en plus du plafond : les exercices du jour en ont besoin + 20 anciennes)
 ```
-((("Id:topo-a-042-1" or "Id:topo-a-042-2" or "Id:topo-a-042-3" or "Id:topo-a-042-4" or "Id:topo-a-042-5" or "Id:topo-a-042-6" or "Id:topo-a-042-7" or "Id:topo-a-042-8" or "Id:topo-a-042-9" or "Id:topo-a-042-10" or "Id:topo-a-042-11" or "Id:topo-a-042-12" or "Id:topo-a-042-13" or "Id:topo-a-042-14" or "Id:topo-a-042-15") (is:new or (is:learn -is:review))) or nid:1770140824703,1786441914114,1786448496760,1786540287802,1786448433279,1786441932447,1786448507951,1786539563424,1786441421315,1786448354098,1786448361516,1786448382100,1786448736462,1786448747719,1772830956806,1786441440087,1786441456819,1786441623382,1786441638452,1786441654395,1786455425863,1786455937930,1786457053663,1786457182889,1786448903783,1786448927718,1786450317326,1770140867658,1772647483015,1786448415251) -is:suspended
+((("Id:topo-a-042-1" or "Id:topo-a-042-2" or "Id:topo-a-042-3" or "Id:topo-a-042-4" or "Id:topo-a-042-5" or "Id:topo-a-042-6" or "Id:topo-a-042-7" or "Id:topo-a-042-8" or "Id:topo-a-042-9" or "Id:topo-a-042-10" or "Id:topo-a-042-11" or "Id:topo-a-042-12" or "Id:topo-a-042-13" or "Id:topo-a-042-14" or "Id:topo-a-042-15" or "Id:topo-a-043-1" or "Id:topo-a-044-1" or "Id:topo-a-045-1" or "Id:topo-a-045-2" or "Id:topo-a-045-3" or "Id:topo-a-045-4" or "Id:topo-a-045-5" or "Id:topo-a-046-1" or "Id:topo-a-046-2" or "Id:topo-a-047-1") (is:new or (is:learn -is:review))) or nid:1770140824703,1786441914114,1786448496760,1786540287802,1786448433279,1786441932447,1786448507951,1786539563424,1786441421315,1786448354098,1786448361516,1786448382100,1786448736462,1772830956806,1786441440087,1786441456819,1786441623382,1786441638452,1786441654395,1786455425863) -is:suspended
 ```
 Paquet filtré “replanifier” **coché** : une ancienne carte déjà apprise ne compte réapprise qu'une fois revue (journal d'Anki).
 
