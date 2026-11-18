@@ -86,6 +86,23 @@ def appel(action: str, *, delai: float = 60, **params):
     return reponse["result"]
 
 
+def journal_revisions(cartes) -> dict:
+    """`getReviewsOfCards` par lot ; si Anki renvoie une erreur pour le lot (18/11/2026 : « Internal API error »
+    sur une seule carte), on reprend carte par carte et une carte illisible compte comme jamais revue (elle
+    reste à apprendre : le cas le plus prudent), avec un avertissement."""
+    try:
+        return appel("getReviewsOfCards", cards=[str(c) for c in cartes], delai=60)
+    except ErreurAnki:
+        res = {}
+        for c in cartes:
+            try:
+                res.update(appel("getReviewsOfCards", cards=[str(c)], delai=20))
+            except ErreurAnki as ex:
+                print(f"Avertissement : journal de révision illisible pour la carte {c} ({ex}) ; "
+                      "comptée comme jamais revue.", file=sys.stderr)
+        return res
+
+
 class ClientAnki:
     """Lecture seule dans Anki, pour le plan : quelles cartes sont encore « nouvelles » (`is:new`).
 
@@ -149,7 +166,7 @@ class ClientAnki:
         note = {c["cardId"]: c["note"] for c in appel("cardsInfo", cards=cartes, delai=60)}
         revus: set[int] = set()
         for k in range(0, len(cartes), 200):
-            journal = appel("getReviewsOfCards", cards=[str(c) for c in cartes[k:k + 200]], delai=60)
+            journal = journal_revisions(cartes[k:k + 200])
             for cid, revs in journal.items():
                 n = note.get(int(cid))
                 debut = dt.datetime.combine(dt.date.fromisoformat(str(donnees[n])), dt.time()).timestamp() * 1000
