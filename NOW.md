@@ -1,4 +1,4 @@
-# NOW — séance jeu. 2026-11-12 21:05 (normal)
+# NOW — séance mer. 2026-11-18 19:19 (normal)
 
 Bloc du jour : Topologie — Chapitre 1 - Espace métrique > 1.4 Intérieur, adhérence et frontière (vitaux acquis 0/8)
 Dernier jour travaillé : 2026-11-11 (mer.)
@@ -40,8 +40,13 @@ Dernier jour travaillé : 2026-11-11 (mer.)
 - [ ] `topo-td1-ex05` Complémentaire d'un point ouvert ; tout ensemble est inters… · topologie/td/td1.pdf p.1 (Ex 5) · seulement Q3
 - [ ] `pro-td1-ex07` Le trousseau de clefs (loi géométrique) · proba/td/td1.pdf p.2 (Ex 7) · seulement Q1, Q2
 - [ ] `pro-uvsq-chap-1-exam-24-25-ex1` Définitions (VA, loi, espérance…) · uvsq : Chap 1 - Espaces de probabilité / Exam 24-25 Ex1 · seulement b, c, e
+- [ ] `pro-td1-ex08` Gagnants du loto (approximation de Poisson) · proba/td/td1.pdf p.2 (Ex 8)
+- [ ] `mod-td1-ex01` Fonctions génératrices des lois usuelles · modelisation/td/td1-galton-watson.pdf p.1 (Ex 1)
+- [ ] `mod-td1-ex02` Espérance et variance par les fonctions génératrices · modelisation/td/td1-galton-watson.pdf p.1 (Ex 2)
+- [ ] `pro-td2-ex07` Densité affine sur [-1,2] et loi de |X| · proba/td/td2.pdf p.2 (Ex 7)
+Paquet filtré « Exercices seul » (18 cartes d'exercices réussis ou presque ; “replanifier” **coché** : Anki décide quand les revoir) :
 ```
-"Id:ex-topo-td1-ex04" or "Id:ex-topo-td1-ex06" or "Id:ex-topo-td1-ex05" or "Id:ex-topo-td1-ex08" or "Id:ex-topo-td1-ex09" or "Id:ex-topo-uvsq-td1-ex03q1" or "Id:ex-topo-td1-ex07" or "Id:ex-mes-td2-ex01" or "Id:ex-mes-td3-ex04" or "Id:ex-mes-cc1-2425-ex03" or "Id:ex-mes-td1-ex06" or "Id:ex-mes-cc1-2324-ex01" or "Id:ex-pro-par2425-ex01" or "Id:ex-pro-td1-ex05" or "Id:ex-pro-td1-ex07" or "Id:ex-pro-uvsq-chap-1-exam-24-25-ex1"
+("Id:ex-topo-td1-ex04" or "Id:ex-topo-td1-ex06" or "Id:ex-topo-td1-ex05" or "Id:ex-topo-td1-ex08" or "Id:ex-topo-td1-ex09" or "Id:ex-topo-uvsq-td1-ex03q1" or "Id:ex-topo-td1-ex07" or "Id:ex-mes-td2-ex01" or "Id:ex-mes-td3-ex04" or "Id:ex-mes-cc1-2425-ex03" or "Id:ex-mes-td1-ex06" or "Id:ex-mes-cc1-2324-ex01" or "Id:ex-mod-td1-ex01" or "Id:ex-mod-td1-ex02" or "Id:ex-pro-par2425-ex01" or "Id:ex-pro-td1-ex05" or "Id:ex-pro-td1-ex07" or "Id:ex-pro-uvsq-chap-1-exam-24-25-ex1") (is:due or is:new)
 ```
 
 ## À consolider
@@ -56,21 +61,23 @@ Dernier jour travaillé : 2026-11-11 (mer.)
 - `topo-p-0003` Ensemble au plus dénombrable ; $\mathbb Q$ dénomb… · prérequis L1-L2
 - `topo-n-0028` Partie dense · déjà vu : fragile · topologie/cours/chap1-espaces-metriques.pdf p.8
 - `topo-n-0020` Propriétés de l'intérieur · topologie/cours/chap1-espaces-metriques.pdf p.6
+- `topo-n-0018` Point intérieur, intérieur · topologie/cours/chap1-espaces-metriques.pdf p.6
 
 ## Anki — tout le sujet du jour
 ```
-(nid:1769024494580,1770140867658,1770141239338,1772647483015,1786372872827,1786441932447,1786448482473,1786448507951,1786458087545,1786466066522,1786467336208,1786467355412,1786484059886,1786484077090,1786484126572,1786484150966,1786484163414,1786526255846,1786531922854,1786531953268,1787239458792 or "Id:topo-a-005-1" or "Id:topo-e002" or "Id:topo-e004" or "Id:topo-a-039-1" or "Id:topo-a-039-2" or "Id:topo-a-040-1" or "Id:topo-a-040-2")
+(nid:1770140867658,1770141239338,1770141348553,1772215405816,1772647483015,1786441932447,1786448415251,1786448482473,1786448507951,1786458087545,1786467336208,1786467355412,1786468179968,1786468772705,1786484059886,1786484077090,1786484126572,1786484150966,1786484163414,1786484452246,1786488698389,1786526255846,1786531243500,1786533420890,1786534668349,1786630668334,1787147492560 or "Id:topo-a-005-1" or "Id:topo-e002" or "Id:topo-e004" or "Id:topo-a-039-1" or "Id:topo-a-039-2" or "Id:topo-a-040-1" or "Id:topo-a-040-2")
 ```
 Outils → Créer un paquet filtré, coller, décocher “replanifier les cartes selon mes réponses” pour réviser sans perturber le planning Anki.
 
-## Anki — cours, à apprendre (20 nouvelles + 4 anciennes)
+## Anki — cours, à apprendre (15 nouvelles + 30 anciennes)
 ```
-("Id:topo-a-039-1" or "Id:topo-a-039-2" or "Id:topo-a-014-2" or "Id:topo-a-015-1" or "Id:topo-a-015-2" or "Id:topo-a-015-3" or "Id:topo-a-016-1" or "Id:topo-a-016-2" or "Id:topo-a-016-3" or "Id:topo-a-016-4" or "Id:topo-a-017-1" or "Id:topo-a-041-1" or "Id:topo-a-041-2" or "Id:topo-a-041-3" or "Id:topo-a-041-4" or "Id:topo-a-041-5" or "Id:topo-a-041-6" or "Id:topo-a-018-1" or "Id:topo-a-018-2" or "Id:topo-a-019-1" or nid:1786442325818,1770140956173,1737130268084,1770140975407) is:new
+((("Id:topo-a-042-1" or "Id:topo-a-042-2" or "Id:topo-a-042-3" or "Id:topo-a-042-4" or "Id:topo-a-042-5" or "Id:topo-a-042-6" or "Id:topo-a-042-7" or "Id:topo-a-042-8" or "Id:topo-a-042-9" or "Id:topo-a-042-10" or "Id:topo-a-042-11" or "Id:topo-a-042-12" or "Id:topo-a-042-13" or "Id:topo-a-042-14" or "Id:topo-a-042-15") (is:new or (is:learn -is:review))) or nid:1770140824703,1786441914114,1786448496760,1786540287802,1786448433279,1786441932447,1786448507951,1786539563424,1786441421315,1786448354098,1786448361516,1786448382100,1786448736462,1786448747719,1772830956806,1786441440087,1786441456819,1786441623382,1786441638452,1786441654395,1786455425863,1786455937930,1786457053663,1786457182889,1786448903783,1786448927718,1786450317326,1770140867658,1772647483015,1786448415251) -is:suspended
 ```
+Paquet filtré “replanifier” **coché** : une ancienne carte déjà apprise ne compte réapprise qu'une fois revue (journal d'Anki).
 
-## Anki — exercices à revoir (5 nouvelles)
+## Anki — exercices à revoir (10 nouvelles)
 ```
-("Id:ex-mes-cc1-2324-ex01" or "Id:ex-pro-td1-ex05" or "Id:ex-pro-td1-ex07" or "Id:ex-pro-uvsq-chap-1-exam-24-25-ex1" or "Id:ex-pro-uvsq-chap-3-ex-14") is:new
+("Id:ex-topo-td1-ex04" or "Id:ex-topo-td1-ex06" or "Id:ex-topo-td1-ex05" or "Id:ex-topo-td1-ex08" or "Id:ex-topo-td1-ex09" or "Id:ex-topo-td1-ex07" or "Id:ex-mes-cc1-2324-ex02" or "Id:ex-mes-td2-ex01" or "Id:ex-mes-td3-ex04" or "Id:ex-mes-td1-ex06") (is:new or (is:learn -is:review)) -is:suspended
 ```
 Paquet filtré à part : cherche l'attaque avant de retourner la carte.
 
@@ -82,17 +89,17 @@ Paquet filtré à part : cherche l'attaque avant de retourner la carte.
 
 ## Anki — à réviser
 - Toutes les cartes dues : `is:due`
-- Déjà données, liées aux exercices du jour (9) : `"Id:topo-a-005-1" or "Id:topo-e002" or "Id:topo-e004" or "Id:ex-topo-td1-ex06" or "Id:topo-a-040-1" or "Id:topo-a-040-2" or "Id:ex-topo-td1-ex09" or "Id:ex-topo-td1-ex07" or "Id:ex-topo-td1-ex13"`
+- Déjà données, liées aux exercices du jour (33) : `"Id:topo-a-005-1" or "Id:topo-e002" or "Id:topo-e004" or "Id:topo-a-040-1" or "Id:topo-a-040-2" or "Id:ex-topo-td1-ex13" or "Id:nid:1786441932447" or "Id:nid:1786448507951" or "Id:nid:1770140867658" or "Id:nid:1772647483015" or "Id:nid:1786448415251" or "Id:nid:1786531243500" or "Id:nid:1786484059886" or "Id:nid:1786488698389" or "Id:nid:1770141348553" or "Id:nid:1786484077090" or "Id:nid:1786484126572" or "Id:nid:1786484150966" or "Id:nid:1770141239338" or "Id:nid:1786467336208" or "Id:nid:1786468179968" or "Id:nid:1786468772705" or "Id:nid:1786484452246" or "Id:nid:1786526255846" or "Id:nid:1786484163414" or "Id:nid:1772215405816" or "Id:nid:1786458087545" or "Id:nid:1786448482473" or "Id:nid:1786467355412" or "Id:nid:1786533420890" or "Id:nid:1786534668349" or "Id:nid:1786630668334" or "Id:nid:1787147492560"`
 - Cartes existantes à revoir, signalées au debrief (paquet filtré, “replanifier” **coché**) :
 ```
 (nid:1765287739820 or "Id:mod-a-078-1" or "Id:mod-a-078-2" or "Id:mod-a-078-3" or "Id:mod-a-078-4" or "Id:mod-a-080-1" or "Id:mod-a-080-2" or "Id:mod-a-080-3" or "Id:mod-a-080-4" or "Id:mod-a-080-5" or "Id:mod-a-080-6" or "Id:mod-a-080-7" or "Id:mod-a-080-8" or "Id:mod-a-080-9" or "Id:mod-a-080-10" or "Id:mod-a-080-11" or "Id:mod-a-001-1" or "Id:mod-a-001-2" or "Id:mod-a-003-1" or "Id:mod-a-004-1" or "Id:mod-a-004-2" or "Id:ex-mod-td1-ex03" or "Id:mod-a-005-1" or "Id:mod-a-005-2" or "Id:ex-mod-td1-ex02" or "Id:mod-a-008-1" or "Id:mod-a-008-2" or "Id:mod-a-008-3" or "Id:mod-a-010-1" or "Id:mod-a-010-2" or "Id:mod-a-010-3" or "Id:mod-a-011-1" or "Id:mod-a-011-2" or "Id:ex-mod-td1-ex05")
 ```
 
 ## Échéance
-- Objectif (annales, vital, important réussis seul une fois) : 4/252 exercices ; au moins 6795 min pour 8910 min de capacité.
-- Rythme : il faut 35 exercices réussis seul par semaine (51 jours de travail restants) ; 7 derniers jours : 4, pour 31 tentatives dont 4 réussies seul.
-- Projection : **fin le 2028-01-20, après le 2027-01-03**.
-- Jusqu'à la maîtrise (2 réussites espacées, chaque exercice compté une fois) : 6975 min ; capacité jusqu'au 2027-01-03 : 8910 min ; marge : 1935 min.
+- Objectif (annales, vital, important réussis seul une fois) : 4/252 exercices ; au moins 6795 min pour 8010 min de capacité.
+- Rythme : il faut 39 exercices réussis seul par semaine (45 jours de travail restants) ; 7 derniers jours : 2, pour 5 tentatives dont 2 réussies seul.
+- Projection : **fin le 2029-04-04, après le 2027-01-03**.
+- Jusqu'à la maîtrise (2 réussites espacées, chaque exercice compté une fois) : 6975 min ; capacité jusqu'au 2027-01-03 : 8010 min ; marge : 1035 min.
 - topologie : 2410 min (annales 965, vital 830, important 615)
 - mesure : 1625 min (annales 0, vital 910, important 715)
 - modelisation : 1020 min (annales 490, vital 355, important 175)

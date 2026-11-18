@@ -229,3 +229,75 @@
   anki: true
   marge_debut: 1935
   restant_debut: 6975
+'2026-11-18':
+  heure: '19:19'
+  exercices:
+  - topo-uvsq-td2-ex01q1
+  - topo-td1-ex13
+  - topo-td1-ex14
+  - topo-dm2020-21-ex01
+  - topo-uvsq-td1-ex15q1
+  - topo-uvsq-td1-ex08
+  - topo-uvsq-td1-ex09q2
+  - topo-uvsq-td1-ex15q2
+  - topo-uvsq-cc1-2024-ex03q3
+  cartes:
+  - topo-a-042-1
+  - topo-a-042-2
+  - topo-a-042-3
+  - topo-a-042-4
+  - topo-a-042-5
+  - topo-a-042-6
+  - topo-a-042-7
+  - topo-a-042-8
+  - topo-a-042-9
+  - topo-a-042-10
+  - topo-a-042-11
+  - topo-a-042-12
+  - topo-a-042-13
+  - topo-a-042-14
+  - topo-a-042-15
+  - ex-topo-td1-ex04
+  - ex-topo-td1-ex06
+  - ex-topo-td1-ex05
+  - ex-topo-td1-ex08
+  - ex-topo-td1-ex09
+  - ex-topo-td1-ex07
+  - ex-mes-cc1-2324-ex02
+  - ex-mes-td2-ex01
+  - ex-mes-td3-ex04
+  - ex-mes-td1-ex06
+  anciennes:
+  - 1770140824703
+  - 1786441914114
+  - 1786448496760
+  - 1786540287802
+  - 1786448433279
+  - 1786441932447
+  - 1786448507951
+  - 1786539563424
+  - 1786441421315
+  - 1786448354098
+  - 1786448361516
+  - 1786448382100
+  - 1786448736462
+  - 1786448747719
+  - 1772830956806
+  - 1786441440087
+  - 1786441456819
+  - 1786441623382
+  - 1786441638452
+  - 1786441654395
+  - 1786455425863
+  - 1786455937930
+  - 1786457053663
+  - 1786457182889
+  - 1786448903783
+  - 1786448927718
+  - 1786450317326
+  - 1770140867658
+  - 1772647483015
+  - 1786448415251
+  anki: true
+  marge_debut: 1035
+  restant_debut: 6975
