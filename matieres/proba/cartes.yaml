@@ -2172,3 +2172,138 @@
   chapitre: 'Chapitre 2 - Variables aléatoires réelles'
   priorite: 1
   tags: [exercice]
+- id: proba-a-100-1
+  notion: proba-n-0034
+  recto: 'Déf 2.27 : variable aléatoire intégrable, espérance générale'
+  verso: 'Soit \(X\) une variable aléatoire, \(X=X_+-X_-\) avec \(X_+=\max(X;0)\) et \(X_-=\max(-X;0)\).<br>\(X\) est dite intégrable si \(E[X_+] < +\infty\) et \(E[X_-] < +\infty\). Dans ce cas, on pose \(E[X]=E[X_+]-E[X_-]\in\mathbb R\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 20 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [definition]
+- id: proba-a-100-2
+  notion: proba-n-0034
+  recto: 'Déf 2.27 (suite) : intégrable et \(E[|X|]\), « d''espérance finie »'
+  verso: 'Soit \(X\) une variable aléatoire, \(X_+=\max(X;0)\) et \(X_-=\max(-X;0)\).<br>Comme \(|X|=X_++X_-\), la variable \(X\) est intégrable si et seulement si \(E[|X|] < +\infty\). Dans la suite du polycopié on utilisera aussi l''expression « \(X\) est d''espérance finie » pour dire que \(X\) est intégrable au sens précédent.'
+  source: 'Poly Probabilités 5, ch. 2, p. 20 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [definition]
+
+- id: proba-a-101-1
+  notion: proba-n-0036
+  recto: 'Thm 2.29 : théorème de convergence monotone'
+  verso: 'Soit \((X_n,n\ge0)\) une suite de variables aléatoires définies sur un même espace de probabilité \((\Omega,P)\). Avec les notations précédentes, supposons qu''il existe une variable aléatoire \(X\) définie sur \((\Omega,P)\) telle que la suite \((X_n,n > 0)\) converge vers \(X\) \(P\)-presque sûrement.<br>(Convergence monotone) Si les variables aléatoires \((X_n,n > 0)\) sont positives et leur suite croissante : \(\forall n > 0,\ 0\le X_n\le X_{n+1}\ P\)-p.s., alors \(E\left[\lim_{n\to+\infty}X_n\right]=\lim_{n\to+\infty}E[X_n]\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 21 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [theoreme]
+- id: proba-a-101-2
+  notion: proba-n-0036
+  recto: 'Thm 2.29 : théorème de convergence dominée'
+  verso: 'Soit \((X_n,n\ge0)\) une suite de variables aléatoires définies sur un même espace de probabilité \((\Omega,P)\). Avec les notations précédentes, supposons qu''il existe une variable aléatoire \(X\) définie sur \((\Omega,P)\) telle que la suite \((X_n,n > 0)\) converge vers \(X\) \(P\)-presque sûrement.<br>(Convergence dominée) S''il existe \(Y\) variable aléatoire positive telle que : \(\forall n\ge0,\ |X_n|\le Y\) p.s., et \(E[Y] < +\infty\), alors \(E\left[\lim_{n\to+\infty}X_n\right]=\lim_{n\to+\infty}E[X_n]\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 21 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [theoreme]
+- id: proba-a-101-3
+  notion: proba-n-0036
+  recto: 'Rem. 2.30 : convergence monotone pour des indicatrices'
+  verso: 'Si les variables aléatoires sont des fonctions indicatrices, autrement dit si pour tout \(n\ge0\) il existe un événement \(A_n\) tel que \(X_n=\mathbf 1_{A_n}\), alors la suite de variables aléatoires \((X_n,n > 0)\) est positive et croissante si la suite d''événements \((A_n,n\ge0)\) est croissante, et dans ce cas :<br>\(E\left[\lim_{n\to+\infty}X_n\right]=E\left[\mathbf 1_{\bigcup_{n\ge0}A_n}\right]=P\left(\bigcup_{n\ge0}A_n\right)=\lim_{n\to+\infty}P(A_n)\) d''après la propriété de continuité de la probabilité \(=\lim_{n\to+\infty}E[\mathbf 1_{A_n}]=\lim_{n\to+\infty}E[X_n]\).<br>Autrement dit, dans le cas particulier des variables aléatoires à valeurs dans \(\{0,1\}\), le théorème de convergence monotone se réduit à la propriété de continuité de la probabilité.'
+  source: 'Poly Probabilités 5, ch. 2, p. 21 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [theoreme]
+
+- id: proba-a-102-1
+  notion: proba-n-0037
+  recto: 'Thm 2.31 : interversion série et espérance'
+  verso: 'Soit \((X_n,n\ge0)\) une suite de variables aléatoires définies sur un même espace de probabilité \((\Omega,P)\). Avec les notations précédentes :<br>\(E\left[\sum_{p=0}^{+\infty}X_p\right]=\sum_{p=0}^{+\infty}E[X_p]\)<br>si les variables aléatoires \((X_n,n\ge0)\) sont positives ou si \(\sum_{p=0}^{+\infty}E[|X_p|] < +\infty\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 22 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [theoreme]
+- id: proba-a-102-2
+  notion: proba-n-0037
+  recto: 'Preuve : Thm 2.31, lien avec convergence monotone et dominée'
+  verso: 'Il n''y a pas de démonstration générale. Le théorème de convergence monotone est équivalent au Thm 2.31 dans le cas où les variables aléatoires sont positives : on pose \(X''_n=X_0+\dots+X_n\) pour tout \(n\ge0\). Alors \((X_n,n\ge0)\) est positive si et seulement si \((X''_n,n\ge0)\) est positive et croissante, et \(E\left[\sum_{p=0}^{+\infty}X_p\right]=E\left[\lim_{n\to+\infty}\sum_{p=0}^nX_p\right]=E\left[\lim_{n\to+\infty}X''_n\right]\) tandis que \(\sum_{p=0}^{+\infty}E[X_p]=\lim_{n\to+\infty}\sum_{p=0}^nE[X_p]=\lim_{n\to+\infty}E[X''_n]\).<br>Avec la même astuce, le théorème de convergence dominée entraîne la conclusion du Thm 2.31 sous l''hypothèse \(\sum_{p=0}^{+\infty}E[|X_p|] < +\infty\).'
+  source: 'Poly Probabilités 5, ch. 2, p. 22 (PDF)'
+  chapitre: 'Chapitre 2 - Variables aléatoires réelles'
+  priorite: 2
+  tags: [theoreme]
+
+- id: proba-a-103-1
+  notion: proba-n-0078
+  recto: 'Thm 4.4 : théorèmes de Fubini et de Fubini-Tonelli'
+  verso: 'Soit une fonction réelle \(\varphi\) définie sur \(\mathbb R^n\) et suffisamment régulière pour être localement intégrable. Si \(\varphi\) est positive (théorème de Fubini-Tonelli) ou si \(\int_{\mathbb R^n}|\varphi(x)|dx < +\infty\) (théorème de Fubini), alors pour tout \(p\in[\![1,n]\!]\) :<br>\(\int_{\mathbb R^n}\varphi(x_1,\dots,x_n)\,dx_1\cdots dx_n=\int_{\mathbb R^{n-p}}\left(\int_{\mathbb R^p}\varphi(x_1,\dots,x_n)\,dx_1\cdots dx_p\right)dx_{p+1}\cdots dx_n=\int_{\mathbb R}\left(\int_{\mathbb R}\cdots\left(\int_{\mathbb R}\varphi(x_1,\dots,x_n)\,dx_1\right)\cdots dx_{n-1}\right)dx_n\)'
+  source: 'Poly Probabilités 5, ch. 4, p. 42 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 2
+  tags: [theoreme]
+
+- id: proba-a-104-1
+  notion: proba-n-0089
+  recto: 'Prop. 4.17 : inégalité de Cauchy-Schwarz'
+  verso: 'Soit \((X,Y)\) un vecteur aléatoire à valeurs dans \(\mathbb R^2\) tel que \(E[X^2] < +\infty\) et \(E[Y^2] < +\infty\). Alors \(XY\) admet une espérance finie et :<br>\(|E[XY]|\le E[|XY|]\le\sqrt{E[X^2]\,E[Y^2]}\)'
+  source: 'Poly Probabilités 5, ch. 4, p. 50 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+- id: proba-a-104-2
+  notion: proba-n-0089
+  recto: 'Preuve : Prop. 4.17, inégalité de Cauchy-Schwarz'
+  verso: 'Comme \(|XY|\le\frac{X^2+Y^2}2\), \(E[|XY|]\le\frac12(E[X^2]+E[Y^2]) < +\infty\) : \(XY\) admet une espérance finie. Si \(E[Y^2]=0\), alors \(Y\), et partant \(XY\), est nulle presque sûrement : l''inégalité est triviale. Sinon, \(E[Y^2] > 0\) et on pose \(P(t)=E[(X+tY)^2]=E[X^2]+2tE[XY]+t^2E[Y^2]\ge0\) (développement licite car chaque terme est fini). Polynôme du second degré toujours positif, donc discriminant \(\Delta=4E[XY]^2-4E[X^2]E[Y^2]\le0\), d''où \(|E[XY]|\le\sqrt{E[X^2]E[Y^2]}\). On l''applique à \(|X|\) et \(|Y|\) pour retrouver l''inégalité annoncée.'
+  source: 'Poly Probabilités 5, ch. 4, p. 50-51 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 1
+  tags: [theoreme]
+
+- id: proba-a-105-1
+  notion: proba-n-0091
+  recto: 'Thm 4.19 : inégalité de Hölder'
+  verso: 'Soit \((X,Y)\) un vecteur aléatoire à valeurs dans \(\mathbb R^2\) et \(p,q\in]1,+\infty[\) tels que \(\frac1p+\frac1q=1\).<br>Alors \(E[|XY|]\le E[|X|^p]^{\frac1p}\,E[|Y|^q]^{\frac1q}\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 51 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [theoreme]
+- id: proba-a-105-2
+  notion: proba-n-0091
+  recto: 'Thm 4.19 (conséquence) : espérance de \(XY\) et inégalité de Hölder'
+  verso: 'Soit \((X,Y)\) un vecteur aléatoire à valeurs dans \(\mathbb R^2\) et \(p,q\in]1,+\infty[\) tels que \(\frac1p+\frac1q=1\).<br>En conséquence, si \(E[|X|^p] < +\infty\) et \(E[|Y|^q] < +\infty\), alors \(E[|XY|] < +\infty\), l''espérance de \(XY\) est bien définie et l''on a \(|E[XY]|\le E[|X|^p]^{\frac1p}\,E[|Y|^q]^{\frac1q}\).'
+  source: 'Poly Probabilités 5, ch. 4, p. 51 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [theoreme]
+
+- id: proba-a-106-1
+  notion: proba-n-0092
+  recto: 'Thm 4.22 : inégalité de Minkowski'
+  verso: 'Soit \((X,Y)\) un vecteur aléatoire à valeurs dans \(\mathbb R^2\) et \(p\in[1,+\infty[\). Alors \(E\left[|X+Y|^p\right]^{\frac1p}\le E\left[|X|^p\right]^{\frac1p}+E\left[|Y|^p\right]^{\frac1p}\).<br>L''inégalité de Minkowski a comme conséquence que l''ensemble des variables aléatoires ayant un moment d''ordre \(p\) est un espace vectoriel.'
+  source: 'Poly Probabilités 5, ch. 4, p. 51 (PDF)'
+  chapitre: 'Chapitre 4 - Vecteurs aléatoires'
+  priorite: 3
+  tags: [theoreme]
+
+- id: proba-a-107-1
+  notion: proba-n-0135
+  recto: 'Prop. 5.27 : convergence en probabilité et convergence en loi'
+  verso: 'Si \(X_n\xrightarrow{\mathbb P}X\), alors \(X_n\xrightarrow{\mathcal L}X\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 77 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-107-2
+  notion: proba-n-0135
+  recto: 'Rem. 5.28 : la convergence en loi est la plus faible'
+  verso: 'La convergence presque sûre et la convergence en moyenne d''ordre \(p\) impliquant la convergence en probabilité, elles impliquent aussi la convergence en loi. La convergence en loi est donc la plus faible de toutes les convergences étudiées jusqu''à présent.'
+  source: 'Poly Probabilités 5, ch. 5, p. 78 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]
+- id: proba-a-107-3
+  notion: proba-n-0135
+  recto: 'Preuve : Prop. 5.27, probabilité implique loi'
+  verso: 'Supposons que \(X_n\) converge en probabilité vers \(X\). Soit \(f:\mathbb R^d\to\mathbb R\) une fonction continue bornée. Alors \(f(X_n)\) converge en probabilité vers \(f(X)\) d''après la Prop. 5.7. De plus, \(f\) étant bornée, il existe \(A\ge0\) tel que \(\forall n\in\mathbb N,|f(X_n)|\le A\) partout. D''après la Prop. 5.19, \(f(X_n)\) converge vers \(f(X)\) en moyenne. Par conséquent \(\lim_{n\to+\infty}E[f(X_n)]=E[f(X)]\). Étant donné que \(f\) est une fonction continue bornée arbitraire, \(X_n\xrightarrow{\mathcal L}X\).'
+  source: 'Poly Probabilités 5, ch. 5, p. 78 (PDF)'
+  chapitre: 'Chapitre 5 - Convergences'
+  priorite: 1
+  tags: [propriete]

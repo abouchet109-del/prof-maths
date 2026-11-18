@@ -558,3 +558,378 @@
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [exercice]
+- id: mesure-a-020-1
+  notion: mesure-n-0048
+  recto: 'Mesure de Lebesgue : comment est-elle construite (mesure extérieure, théorème de Carathéodory) ?'
+  verso: 'La mesure de Lebesgue \(\lambda\) (invariance par translation, \(\lambda([a,b])=b-a\)) est construite via une mesure extérieure et le théorème de Carathéodory.<br>(le cours complet UVSQ cite ce théorème sans en donner l''énoncé ; il le signale comme « question dure de fin de sujet »)'
+  source: 'UVSQ, Théorie de la mesure, cours complet MA523, p. 1'
+  chapitre: 'Chapitre 1 - Espace mesurable et mesure (UVSQ)'
+  priorite: 1
+  tags: [methode]
+
+- id: mesure-a-021-1
+  notion: mesure-n-0053
+  recto: 'Mesure de comptage sur \(\mathbb N\) : que vaut \(\int f\,d\mu\) ?'
+  verso: '\(\int f\,d\mu=\sum f(n)\) : une intégrale devient une série.'
+  source: 'UVSQ, Théorie de la mesure, cours complet MA523, p. 1'
+  chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)'
+  priorite: 1
+  tags: [methode]
+- id: mesure-a-021-2
+  notion: mesure-n-0053
+  recto: 'Mesure de Dirac \(\delta_a\) : que vaut \(\int f\,d\delta_a\) ?'
+  verso: '\(\int f\,d\delta_a=f(a)\).'
+  source: 'UVSQ, Théorie de la mesure, cours complet MA523, p. 1'
+  chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)'
+  priorite: 1
+  tags: [methode]
+- id: mesure-a-021-3
+  notion: mesure-n-0053
+  recto: 'Mesure à densité \(\rho\) : comment calculer \(\int f\,d\mu\) ?'
+  verso: '\(\int f\,d\mu=\int f\cdot\rho\,d\lambda\).'
+  source: 'UVSQ, Théorie de la mesure, cours complet MA523, p. 1'
+  chapitre: 'Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)'
+  priorite: 1
+  tags: [methode]
+
+- id: mesure-a-023-1
+  notion: mesure-n-0064
+  recto: 'Exemple : intégrale de Gauss'
+  verso: 'Application phare : intégrale de Gauss \(\int_{\mathbb R}e^{-x^2}\,dx=\sqrt\pi\) (par Fubini et coordonnées polaires).'
+  source: 'UVSQ, Théorie de la mesure, cours complet MA523, p. 1'
+  chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)'
+  priorite: 1
+  tags: [exemple]
+- id: mesure-a-023-2
+  notion: mesure-n-0064
+  recto: 'Intégrale de Gauss : quelle méthode de calcul, et quelle précaution avant Fubini ?'
+  verso: 'Fubini puis passage en polaires : \(dx\,dy=r\,dr\,d\theta\) (jacobien \(r\)).<br>Précaution : toujours Tonelli sur \(|f|\) avant Fubini (Fubini : \(f\) intégrable, vérifié via \(\iint|f| < \infty\), alors interversion licite).<br>(le cours complet UVSQ ne détaille pas les étapes du calcul)'
+  source: 'UVSQ, Théorie de la mesure, cours complet MA523, p. 1'
+  chapitre: 'Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)'
+  priorite: 1
+  tags: [exemple]
+
+- id: mesure-a-026-1
+  notion: mesure-n-0004
+  recto: 'Déf : limite supérieure d''une suite réelle'
+  verso: 'Soit \((u_n)_{n\ge0}\) une suite à valeurs réelles. Soit \(M_n=\sup\{u_n,u_{n+1},u_{n+2},\dots\}=\sup\{u_{n+p}:p\ge0\}\).<br>Alors on définit la limite supérieure de \(u\) par \(\limsup_{n\to+\infty}u_n=\lim_{n\to+\infty}M_n\).'
+  source: 'Poly de mesure Paris Cité, ch. 0, p. 4'
+  chapitre: 'Chapitre 0 - Préliminaires'
+  priorite: 2
+  tags: [definition]
+- id: mesure-a-026-2
+  notion: mesure-n-0004
+  recto: 'Déf : limite inférieure d''une suite réelle'
+  verso: 'Soit \((u_n)_{n\ge0}\) une suite à valeurs réelles. Soit \(m_n=\inf\{u_n,u_{n+1},u_{n+2},\dots\}=\inf\{u_{n+p}:p\ge0\}\).<br>Alors on définit la limite inférieure de \(u\) par \(\liminf_{n\to+\infty}u_n=\lim_{n\to+\infty}m_n\).'
+  source: 'Poly de mesure Paris Cité, ch. 0, p. 4'
+  chapitre: 'Chapitre 0 - Préliminaires'
+  priorite: 2
+  tags: [definition]
+
+- id: mesure-a-027-1
+  notion: mesure-n-0010
+  recto: 'Prop. 1.3 (point 1) : \(X\) appartient à une tribu'
+  verso: 'Soit \(\mathcal T\) une tribu sur \(X\). Alors \(X\in\mathcal T\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.3, p. 5'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+- id: mesure-a-027-2
+  notion: mesure-n-0010
+  recto: 'Prop. 1.3 (point 2) : intersection dénombrable dans une tribu'
+  verso: 'Soit \(\mathcal T\) une tribu sur \(X\). Si \(A_n\in\mathcal T,\forall n\in\mathbb N\), alors \(\cap_{n\in\mathbb N}A_n\in\mathcal T\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.3, p. 5'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+- id: mesure-a-027-3
+  notion: mesure-n-0010
+  recto: 'Prop. 1.3 (point 3) : différence et différence symétrique dans une tribu'
+  verso: 'Soit \(\mathcal T\) une tribu sur \(X\). Si \(A,B\in\mathcal T\), alors \(A\setminus B\in\mathcal T\) et \(A\Delta B\in\mathcal T\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.3, p. 5'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+- id: mesure-a-027-4
+  notion: mesure-n-0010
+  recto: 'Prop. 1.3 (point 4) : limsup et liminf dans une tribu'
+  verso: 'Soit \(\mathcal T\) une tribu sur \(X\). Si \(A_n\in\mathcal T,\forall n\in\mathbb N\), alors \(\liminf_{n\to+\infty}A_n\in\mathcal T\) et \(\limsup_{n\to+\infty}A_n\in\mathcal T\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.3, p. 5'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+- id: mesure-a-027-5
+  notion: mesure-n-0010
+  recto: 'Prop. 1.3 (point 5) : intersection de tribus'
+  verso: 'Si les \(\mathcal T_i\), \(i\in I\), sont une famille de tribus sur \(X\), \(I\neq\emptyset\), alors \(\cap_{i\in I}\mathcal T_I\) est une tribu.<br>(le poly écrit \(\mathcal T_I\) au lieu de \(\mathcal T_i\) dans l''intersection)'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.3, p. 5'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+
+- id: mesure-a-028-1
+  notion: mesure-n-0011
+  recto: 'Prop. 1.4 : tribu engendrée'
+  verso: 'Soit \(\mathcal E\subset\mathcal P(X)\). Il existe une plus petite tribu (au sens de l''inclusion) contenant \(\mathcal E\). On la note \(\sigma(\mathcal E)\) : c''est la tribu engendrée par \(\mathcal E\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.4, p. 5'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 2
+  tags: [propriete]
+
+- id: mesure-a-029-1
+  notion: mesure-n-0012
+  recto: 'Déf 1.5 : tribu borélienne'
+  verso: 'Soit \(X\) un espace métrique (topologique). On définit la tribu borélienne de \(X\), appelée également tribu des boréliens de \(X\), par \(\mathcal B(X):=\sigma(\mathcal O(X))\) où \(\mathcal O(X)=\{O\subset X : O\text{ ouvert}\}\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Déf. 1.5, p. 5'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 2
+  tags: [definition]
+
+- id: mesure-a-030-1
+  notion: mesure-n-0013
+  recto: 'Déf 1.5 (application) : familles génératrices de \(\mathcal B(\mathbb R)\)'
+  verso: 'Si \(X=\mathbb R\),<br>\(\mathcal B(\mathbb R)=\sigma(\{[a,+\infty[,a\in\mathbb R\})=\sigma(\{[a,+\infty[,a\in\mathbb Q\})=\sigma(\{]a,+\infty[,a\in\mathbb R\})=\sigma(\{]a,+\infty[,a\in\mathbb Q\})\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Déf. 1.5, application, p. 5'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 2
+  tags: [propriete]
+
+- id: mesure-a-031-1
+  notion: mesure-n-0016
+  recto: 'Prop. 1.8 : critère de mesurabilité sur une famille génératrice'
+  verso: 'Soit \(f:(X,\mathcal A)\to(Y,\mathcal B)\) avec \(\mathcal B=\sigma(\mathcal E)\) où \(\mathcal E\subset\mathcal P(Y)\). Alors \(f\) est mesurable ssi \(f^{-1}(\mathcal E)\subset\mathcal A\), i.e., ssi \(\forall B\in\mathcal E,f^{-1}(B)\in\mathcal A\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.8, p. 6'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 2
+  tags: [propriete]
+- id: mesure-a-031-2
+  notion: mesure-n-0016
+  recto: 'Prop. 1.8 (conséquence) : fonction borélienne et \(\{f\ge a\}\), fonction continue'
+  verso: 'Conséquence : Si \(f:(X,\mathcal A)\to\mathbb R\) ou \(\overline{\mathbb R}\) est borélienne ssi \(\forall a\in\mathbb R,\{f\ge a\}=\{x\in X / f(x)\ge a\}\in\mathcal A\). En particulier, une fonction de \(\mathbb R\) dans \(\mathbb R\) continue est mesurable.<br>(le poly écrit « Si \(f\ldots\) est borélienne ssi » : le « Si » est une coquille, lire « \(f\) est borélienne ssi »)'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.8, conséquence, p. 6'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 2
+  tags: [propriete]
+
+- id: mesure-a-032-1
+  notion: mesure-n-0020
+  recto: 'Prop. 1.12 (point 1) : composée de fonctions mesurables'
+  verso: 'La composée de deux fonctions mesurables est mesurable.'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.12, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 2
+  tags: [propriete]
+- id: mesure-a-032-2
+  notion: mesure-n-0020
+  recto: 'Prop. 1.12 (point 2) : couple de fonctions mesurables'
+  verso: '\(f=(f_1,f_2)\) à valeurs dans \(\mathbb R^2\) est mesurable ssi \(f_1\) et \(f_2\) le sont.'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.12, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 2
+  tags: [propriete]
+
+- id: mesure-a-033-1
+  notion: mesure-n-0021
+  recto: 'Exemple 1.13 : max, min, parties positive et négative'
+  verso: 'Soit \(f\) mesurable de \((X,\mathcal A)\) dans \((\mathbb R,\mathcal B(\mathbb R))\), et \(a\in\mathbb R\). Alors \(\max(f,a)\), \(\min(f,a)\), \(f_+=\max(f,0)\), \(f_-=-\min(f,0)\) sont mesurables.'
+  source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.13, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+- id: mesure-a-033-2
+  notion: mesure-n-0021
+  recto: 'Exemple 1.13 (à retenir) : \(f=f_+-f_-\) et \(|f|=f_++f_-\)'
+  verso: 'Soit \(f\) mesurable de \((X,\mathcal A)\) dans \((\mathbb R,\mathcal B(\mathbb R))\), \(f_+=\max(f,0)\) et \(f_-=-\min(f,0)\).<br>À retenir : \(f=f_+-f_-\) et \(|f|=f_++f_-\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.13, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+
+- id: mesure-a-034-1
+  notion: mesure-n-0022
+  recto: 'Prop. 1.14 (point 1) : somme et produit de fonctions mesurables'
+  verso: 'Soit \(f\) et \(g\) de \((X,\mathcal A)\to\mathbb R\), mesurables. Alors \(f+g\) et \(fg\) sont mesurables. Le résultat s''étend aux fonctions à valeurs complexes.'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.14, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+- id: mesure-a-034-2
+  notion: mesure-n-0022
+  recto: 'Prop. 1.14 (point 2) : sup, inf, limsup, liminf et limite simple de fonctions mesurables'
+  verso: 'Soit \(f_n:(X,\mathcal A)\to\overline{\mathbb R}\), \(n\ge1\), une suite de fonctions mesurables. Alors \(\sup_nf_n\), \(\inf_nf_n\), \(\limsup f_n\), \(\liminf f_n\) sont mesurables. Si \(f_n\) converge simplement vers \(f\), alors \(f\) est mesurable.'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.14, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+
+- id: mesure-a-035-1
+  notion: mesure-n-0024
+  recto: 'Prop. 1.16 : stabilité des fonctions étagées'
+  verso: 'L''ensemble des fonctions étagées est stable par combinaison linéaire, par produit et par passage au maximum fini ou au minimum fini.'
+  source: 'Poly de mesure Paris Cité, ch. 1, Prop. 1.16, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 3
+  tags: [propriete]
+
+- id: mesure-a-036-1
+  notion: mesure-n-0025
+  recto: 'Thm 1.17 (point 1) : lemme fondamental d''approximation, convergence simple'
+  verso: 'Soit \(f:(X,\mathcal A)\to\mathbb R\) ou \(\overline{\mathbb R}\) ou \(\mathbb C\) mesurable.<br>Alors il existe une suite \(f_n\), \(n\in\mathbb N\) de fonctions étagées telles que \(f_n\) converge simplement vers \(f\) quand \(n\to+\infty\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Thm 1.17, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [theoreme]
+- id: mesure-a-036-2
+  notion: mesure-n-0025
+  recto: 'Thm 1.17 (point 2) : lemme fondamental d''approximation, cas \(f\ge0\)'
+  verso: 'Soit \(f:(X,\mathcal A)\to\mathbb R\) ou \(\overline{\mathbb R}\) ou \(\mathbb C\) mesurable.<br>Si de plus \(f\ge0\), alors on peut choisir la suite \(f_n\), \(n\in\mathbb N\), croissante (i.e. \(f_n\ge f_{n+1}\)) et positive.<br>(le poly écrit « i.e. \(f_n\ge f_{n+1}\) » : coquille, croissante signifie \(f_n\le f_{n+1}\))'
+  source: 'Poly de mesure Paris Cité, ch. 1, Thm 1.17, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [theoreme]
+- id: mesure-a-036-3
+  notion: mesure-n-0025
+  recto: 'Thm 1.17 (point 3) : lemme fondamental d''approximation, cas \(f\) bornée'
+  verso: 'Soit \(f:(X,\mathcal A)\to\mathbb R\) ou \(\overline{\mathbb R}\) ou \(\mathbb C\) mesurable.<br>Enfin, si \(f\) est bornée, alors on peut choisir une suite \(f_n\) convergeant uniformément vers \(f\) (i.e. telle que \(\sup_{x\in X}|f_n(x)-f(x)|\to0\) quand \(n\to+\infty\)).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Thm 1.17, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [theoreme]
+
+- id: mesure-a-037-1
+  notion: mesure-n-0026
+  recto: 'Déf 1.18 : mesure (positive)'
+  verso: 'Soit \((X,\mathcal A)\) un espace mesurable. On appelle mesure (positive) sur \((X,\mathcal A)\) toute application \(\mu:\mathcal A\to\overline{\mathbb R}_+\), \(A\mapsto\mu(A)\), vérifiant :<br>1. \(\mu(\emptyset)=0\),<br>2. Si \((A_n)_{n\ge1}\) est une suite d''éléments de \(\mathcal A\) deux à deux disjoints (éventuellement vides), \(\mu(\cup_nA_n)=\sum_n\mu(A_n)\). (\(\sigma\)-additivité).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Déf. 1.18, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [definition]
+
+- id: mesure-a-038-1
+  notion: mesure-n-0027
+  recto: 'Déf 1.19 (point 1) : mesure finie ou bornée'
+  verso: 'Soit \(\mu\) une mesure sur \((X,\mathcal A)\).<br>Si \(\mu(X) < +\infty\), \(\mu\) est dite finie ou bornée.'
+  source: 'Poly de mesure Paris Cité, ch. 1, Déf. 1.19, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 3
+  tags: [definition]
+- id: mesure-a-038-2
+  notion: mesure-n-0027
+  recto: 'Déf 1.19 (point 2) : mesure de probabilité'
+  verso: 'Soit \(\mu\) une mesure sur \((X,\mathcal A)\).<br>Si \(\mu(X)=1\), \(\mu\) est une mesure de probabilité.'
+  source: 'Poly de mesure Paris Cité, ch. 1, Déf. 1.19, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 3
+  tags: [definition]
+- id: mesure-a-038-3
+  notion: mesure-n-0027
+  recto: 'Déf 1.20 : espace mesuré'
+  verso: 'Soit \(\mu\) une mesure sur l''espace mesurable \((X,\mathcal A)\). On appelle le triplet \((X,\mathcal A,\mu)\) un espace mesuré.'
+  source: 'Poly de mesure Paris Cité, ch. 1, Déf. 1.20, p. 7'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 3
+  tags: [definition]
+
+- id: mesure-a-039-1
+  notion: mesure-n-0028
+  recto: 'Exemple 1.21 : mesure nulle'
+  verso: 'La mesure nulle sur \((X,\mathcal P(X))\) : \(\forall A\in\mathcal P(X),\mu(A)=0\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.21, p. 8'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exemple]
+- id: mesure-a-039-2
+  notion: mesure-n-0028
+  recto: 'Exemple 1.21 : mesure grossière'
+  verso: 'La mesure grossière : \(\mu(\emptyset)=0\) et \(\forall A\in\mathcal P(X),A\neq\emptyset,\mu(A)=+\infty\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.21, p. 8'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exemple]
+- id: mesure-a-039-3
+  notion: mesure-n-0028
+  recto: 'Exemple 1.21 : mesure de Dirac'
+  verso: 'La mesure de Dirac au point \(a\in X\) : \(\forall A\in\mathcal P(X)\), \(\mu(A)=1\) si \(a\in A\) et \(\mu(A)=0\) sinon. La mesure de Dirac en \(a\) est notée \(\delta_a\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.21, p. 8'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exemple]
+- id: mesure-a-039-4
+  notion: mesure-n-0028
+  recto: 'Exemple 1.21 : mesure de comptage'
+  verso: 'La mesure de comptage sur \((X,\mathcal P(X))\) : \(\forall A\in\mathcal P(X)\), \(\mu(A)=\operatorname{Card}(A)\) si \(A\) est fini et \(\mu(A)=+\infty\) sinon.'
+  source: 'Poly de mesure Paris Cité, ch. 1, Ex. 1.21, p. 8'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exemple]
+
+- id: mesure-a-040-1
+  notion: mesure-n-0031
+  recto: 'Thm 1.22 : théorème de Borel-Lebesgue (admis), mesure de Lebesgue'
+  verso: 'Pour tout \(a\in\mathbb R^d\) et \(A\in\mathcal B(\mathbb R^d)\), on note \(a+A\) l''ensemble \(\{a+x : x\in A\}\).<br>Il existe une unique mesure sur \((\mathbb R^d,\mathcal B(\mathbb R^d))\) appelée mesure de Lebesgue sur \(\mathbb R^d\) et notée \(\lambda_d\) vérifiant :<br>1. \(\lambda_d([0,1]^d)=1\),<br>2. \(\forall a\in\mathbb R^d,\forall A\in\mathcal B(\mathbb R^d)\), \(\lambda_d(a+A)=\lambda_d(A)\).'
+  source: 'Poly de mesure Paris Cité, ch. 1, Thm 1.22, p. 8'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 2
+  tags: [theoreme]
+
+- id: mesure-a-041-1
+  notion: mesure-n-0034
+  recto: 'Prop. (iii) : continuité séquentielle croissante'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré.<br>Soit \((A_n)\) une suite de \(\mathcal A\) telle que \(\forall n\), \(A_n\subset A_{n+1}\). Alors \(\mu\left(\bigcup_{n\in\mathbb N}A_n\right)=\lim_{n\to+\infty}\mu(A_n)\).<br>(« \(\mu(\lim A_n)=\lim\mu(A_n)\) »)'
+  source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 1'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+
+- id: mesure-a-043-1
+  notion: mesure-n-0039
+  recto: 'Prop. : mesure de Lebesgue d''un intervalle'
+  verso: 'Soit \(\lambda\) la mesure de Lebesgue sur \(\mathbb R\).<br>Pour tout intervalle \(I\) de \(\mathbb R\), \(\lambda(I)=\operatorname{long}(I)\).'
+  source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 2'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+
+- id: mesure-a-044-1
+  notion: mesure-n-0041
+  recto: 'Prop. : mesure de Lebesgue d''un pavé'
+  verso: 'Pour tout pavé \(P=I_1\times\dots\times I_d\subset\mathbb R^d\) où les \(I_j\) sont des intervalles de \(\mathbb R\), \(\lambda_d(P)=\operatorname{Vol}(P)=\prod_{j=1}^d\lambda(I_j)=\prod_{j=1}^d\operatorname{long}(I_j)\).'
+  source: 'Cours Paris Cité, notes du CM du 20/10/2026, p. 2'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 3
+  tags: [propriete]
+
+- id: mesure-a-045-1
+  notion: mesure-n-0042
+  recto: 'Déf : partie \(\mu\)-négligeable'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré. On dit que \(A\subset X\) est \(\mu\)-négligeable s''il existe \(B\in\mathcal A\) tel que \(A\subset B\) et \(\mu(B)=0\).'
+  source: 'Cours Paris Cité, notes du CM du 20/10/2026, p. 2'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [definition]
+
+- id: mesure-a-046-1
+  notion: mesure-n-0044
+  recto: 'Déf : propriété vraie \(\mu\)-presque partout'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré. Soit, pour tout \(x\in X\), \(P(x)\) une proposition qui dépend de \(x\).<br>On dit que \(P\) est vraie pour \(\mu\)-presque tout \(x\), si \(\{x\in X : P(x)\text{ est fausse}\}\) est \(\mu\)-négligeable. On note \(P\) vraie \(\mu\)pp (« \(\mu\) presque partout »).'
+  source: 'Cours Paris Cité, notes du CM du 20/10/2026, p. 3'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [definition]
+
+- id: mesure-a-042-1
+  notion: mesure-n-0036
+  recto: 'Prop. (iv) : continuité séquentielle décroissante'
+  verso: 'Soit \((X,\mathcal A,\mu)\) un espace mesuré.<br>Soit \((A_n)\) une suite de \(\mathcal A\), décroissante pour l''inclusion : \(\forall n\), \(A_{n+1}\subset A_n\). On suppose qu''il existe \(n_0\in\mathbb N\), \(\mu(A_{n_0}) < +\infty\) (P). Alors \(\mu\left(\bigcap_{n\in\mathbb N}A_n\right)=\lim_{n\to+\infty}\mu(A_n)\).'
+  source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 1'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
+- id: mesure-a-042-2
+  notion: mesure-n-0036
+  recto: 'Preuve : continuité séquentielle décroissante (Prop. (iv))'
+  verso: 'Soit \((A_n)\) décroissante avec \(\mu(A_{n_0}) < +\infty\) et \(A_\infty=\bigcap_{n\in\mathbb N}A_n\). On a \(A_{n_0}=A_\infty\cup(A_{n_0}\setminus A_\infty)\) (disjoints), donc \(\mu(A_{n_0})=\mu(A_\infty)+\mu(A_{n_0}\setminus A_\infty)\). Or \(A_{n_0}\setminus A_\infty=\bigcup_{n\ge n_0}(A_{n_0}\cap A_n^c)\) avec \((A_{n_0}\cap A_n^c)_n\) croissante : par (iii), \(\mu(A_{n_0}\setminus A_\infty)=\lim_n\mu(A_{n_0}\setminus A_n)=\mu(A_{n_0})-\lim_n\mu(A_n)\) car \(\mu(A_n)\le\mu(A_{n_0}) < +\infty\) pour \(n\ge n_0\). Ainsi \(\mu(A_{n_0})=\mu(A_\infty)+\mu(A_{n_0})-\lim_n\mu(A_n)\), d''où \(\mu(A_\infty)=\lim_n\mu(A_n)\) (\(\mu(A_{n_0})\) est finie).'
+  source: 'Cours Paris Cité, notes du CM du 13/10/2026, p. 1-2'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [propriete]
