@@ -944,7 +944,7 @@
   recto: 'Thm : application linéaire continue, continue en \(0\), majoration \(\|\varphi(x)\|\le M\|x\|\)'
   verso: 'Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux evn et \(\varphi\in\mathcal L(E,F)\). Sont équivalents : \(\varphi\) est continue ; \(\varphi\) est continue en \(0\) ; \(\exists M>0,\ \forall x\in E,\ \|\varphi(x)\|_F\le M\|x\|_E\).'
   source: 'Poly L2 Analyse 4 (Univ. Lorraine), Thm 4, p. 24 ; cours EVN de G. Skandalis (Paris Cité), §4.1, p. 1 du PDF'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, theoreme]
 - id: topo-a-042-2
@@ -952,7 +952,7 @@
   recto: 'Thm : application linéaire continue, bornée sur la boule unité, lipschitzienne'
   verso: 'Soient \(E,F\) deux evn et \(\varphi\in\mathcal L(E,F)\). La continuité de \(\varphi\) équivaut aussi à chacune des propriétés : \(\varphi\) est bornée sur \(B_E(0,1)\) ; \(\varphi\) est bornée sur la sphère \(\{x\in E:\|x\|_E=1\}\) ; \(\varphi\) est lipschitzienne ; \(\varphi\) est uniformément continue sur \(E\).'
   source: 'Poly L2 Analyse 4 (Univ. Lorraine), Thm 4, p. 24'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, theoreme]
 - id: topo-a-042-3
@@ -960,7 +960,7 @@
   recto: 'Preuve : \(\varphi\) linéaire continue en \(0\) implique \(\|\varphi(x)\|\le M\|x\|\), puis lipschitzienne'
   verso: 'Continuité en \(0\) avec \(\varepsilon=1\) : il existe \(\alpha>0\) tel que \(\|x\|_E\le\alpha\Rightarrow\|\varphi(x)\|_F\le1\). Pour \(x\ne0\), on applique cela à \(\alpha x/\|x\|_E\) ; par linéarité, \(\|\varphi(x)\|_F\le\frac1\alpha\|x\|_E\) (vrai aussi pour \(x=0\)). Puis \(\|\varphi(x)-\varphi(y)\|_F=\|\varphi(x-y)\|_F\le\frac1\alpha\|x-y\|_E\).'
   source: 'Poly L2 Analyse 4 (Univ. Lorraine), preuve du Thm 4, p. 24'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, demonstration]
 - id: topo-a-042-4
@@ -968,7 +968,7 @@
   recto: 'Déf : norme subordonnée (norme d''opérateur) \(|||\varphi|||\)'
   verso: 'Soient \(E,F\) deux evn et \(\varphi:E\to F\) linéaire continue. Les trois bornes supérieures suivantes sont égales : \[|||\varphi|||=\sup_{x\ne0}\frac{\|\varphi(x)\|_F}{\|x\|_E}=\sup_{\|x\|_E=1}\|\varphi(x)\|_F=\sup_{\|x\|_E\le1}\|\varphi(x)\|_F.\] L''application \(\varphi\mapsto|||\varphi|||\) est une norme sur \(\mathcal L_c(E,F)\), appelée norme subordonnée.'
   source: 'Poly L2 Analyse 4 (Univ. Lorraine), Thm 5, p. 24 ; cours EVN de G. Skandalis (Paris Cité), §4.1, p. 1 du PDF'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, definition]
 - id: topo-a-042-5
@@ -976,7 +976,7 @@
   recto: 'Prop. : \(|||\varphi|||\) est la meilleure constante dans \(\|\varphi(x)\|\le k\|x\|\)'
   verso: 'Soient \(E,F\) deux evn et \(\varphi:E\to F\) linéaire continue. Pour \(k\in\mathbb R_+\) : \[\big(\forall x\in E,\ \|\varphi(x)\|_F\le k\|x\|_E\big)\iff k\ge|||\varphi|||.\] En particulier \(\|\varphi(x)\|_F\le|||\varphi|||\,\|x\|_E\) pour tout \(x\in E\).'
   source: 'Cours EVN de G. Skandalis (Paris Cité), §4.1, p. 1 du PDF'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, propriete]
 - id: topo-a-042-6
@@ -984,7 +984,7 @@
   recto: 'Prop. : norme subordonnée d''une composée'
   verso: 'Si \(f:E\to F\) et \(g:F\to G\) sont des applications linéaires continues entre evn, alors \(g\circ f\) est linéaire continue et \[|||g\circ f|||\le|||g|||\cdot|||f|||.\]'
   source: 'Cours EVN de G. Skandalis (Paris Cité), §4.1, p. 1 du PDF'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, propriete]
 - id: topo-a-042-7
@@ -992,7 +992,7 @@
   recto: 'Prop. : l''espace \(\mathcal L(E,F)\) des applications linéaires continues, normé par \(|||\cdot|||\)'
   verso: 'Soient \(E,F\) deux evn. L''ensemble \(\mathcal L(E,F)\) des applications linéaires continues de \(E\) dans \(F\) est un sous-espace vectoriel de l''espace de toutes les applications linéaires de \(E\) dans \(F\) ; \(|||\cdot|||\) est une norme sur \(\mathcal L(E,F)\). <b>Si \(F\) est complet</b>, \((\mathcal L(E,F),|||\cdot|||)\) est complet.'
   source: 'Cours EVN de G. Skandalis (Paris Cité), §4.1, p. 1 du PDF'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, propriete]
 - id: topo-a-042-8
@@ -1000,7 +1000,7 @@
   recto: 'Méthode : calculer \(|||\varphi|||\)'
   verso: '1) Majorer : trouver \(M\) avec \(\|\varphi(x)\|_F\le M\|x\|_E\) pour tout \(x\) (ou \(\le M\) pour \(\|x\|_E\le1\)) ; donc \(|||\varphi|||\le M\). 2) Atteindre : chercher \(x\ne0\) avec \(\|\varphi(x)\|_F=M\|x\|_E\) ; sinon une suite \((x_n)\) avec \(\|x_n\|_E=1\) et \(\|\varphi(x_n)\|_F\to M\) (définition de la borne supérieure). Alors \(|||\varphi|||=M\).'
   source: 'Poly L2 Analyse 4 (Univ. Lorraine), Remarque 7, p. 26 ; suite qui approche la borne : définition du sup (Thm 5, p. 24)'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, methode]
 - id: topo-a-042-9
@@ -1008,7 +1008,7 @@
   recto: 'Exemple : \(|||\varphi|||\) pour \(\varphi(x,y)=x+y\) sur \(\mathbb R^2\), selon la norme'
   verso: 'Avec \(\|\cdot\|_\infty\) : \(|x+y|\le|x|+|y|\le2\|(x,y)\|_\infty\), et \(|\varphi(1,1)|=2=2\|(1,1)\|_\infty\), donc \(|||\varphi|||=2\). Avec \(\|\cdot\|_1\) : \(|x+y|\le\|(x,y)\|_1\), et \(|\varphi(1,1)|=2=\|(1,1)\|_1\), donc \(|||\varphi|||=1\). La continuité ne dépend pas des normes (dimension finie) ; la norme subordonnée, si.'
   source: 'Poly L2 Analyse 4 (Univ. Lorraine), Exemple 26.1, p. 26 (coquille du poly : il écrit la norme infinie au lieu de la norme 1 dans le second cas)'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, exemple]
 - id: topo-a-042-10
@@ -1016,7 +1016,7 @@
   recto: 'Exemple : la dérivation \(f\mapsto f''\) de \((\mathcal C^1([0,1]),\|\cdot\|_\infty)\) dans \((\mathcal C^0([0,1]),\|\cdot\|_\infty)\) est-elle continue ?'
   verso: 'Non. Elle est linéaire, mais pour \(f_n(x)=x^n\) : \(\|f_n\|_\infty=1\) et \(\|f_n''\|_\infty=\sup_{[0,1]}nx^{n-1}=n\). Elle n''est donc pas bornée sur la boule unité fermée (\(|||\varphi|||\ge n\) pour tout \(n\)) : elle n''est pas continue. En dimension infinie, une application linéaire n''est pas forcément continue.'
   source: 'Poly L2 Analyse 4 (Univ. Lorraine), Exemple 26.3, p. 26'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, exemple]
 - id: topo-a-042-11
@@ -1024,7 +1024,7 @@
   recto: 'Déf : normes équivalentes'
   verso: 'Deux normes \(N_1\) et \(N_2\) sur un même espace vectoriel \(E\) sont équivalentes s''il existe des constantes \(\alpha,\beta>0\) telles que \[\forall x\in E,\quad\alpha N_1(x)\le N_2(x)\le\beta N_1(x).\] Elles ont alors les mêmes parties bornées, les mêmes ouverts et les mêmes suites convergentes (avec la même limite).'
   source: 'Poly L2 Analyse 4 (Univ. Lorraine), Déf 4 et Prop. 4, p. 14 ; Prop. 6, p. 15 ; Prop. 12, p. 17'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, definition]
 - id: topo-a-042-12
@@ -1032,7 +1032,7 @@
   recto: 'Prop. : continuité de \(\mathrm{id}_E:(E,N_1)\to(E,N_2)\)'
   verso: 'Soient \(N_1,N_2\) deux normes sur \(E\). L''identité \(\mathrm{id}_E:(E,N_1)\to(E,N_2)\) est continue si et seulement s''il existe \(c>0\) tel que \(\forall x\in E,\ N_2(x)\le cN_1(x)\). Elle est donc bicontinue si et seulement si \(N_1\) et \(N_2\) sont équivalentes.'
   source: 'Poly L2 Analyse 4 (Univ. Lorraine), Exemple 22.4, p. 22'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, propriete]
 - id: topo-a-042-13
@@ -1040,7 +1040,7 @@
   recto: 'Thm : en dimension finie, normes et applications linéaires'
   verso: 'Soit \(E\) un espace vectoriel normé de dimension finie. Toutes les normes sur \(E\) sont équivalentes, et toute application linéaire de \(E\) dans un espace vectoriel normé est continue. C''est faux en dimension infinie.'
   source: 'Cours EVN de G. Skandalis (Paris Cité), §4.2, Théorème, p. 2 du PDF ; poly L2 Analyse 4 (Univ. Lorraine), Thm 12, p. 31 et Remarque 4, p. 15'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, theoreme]
 - id: topo-a-042-14
@@ -1048,7 +1048,7 @@
   recto: 'Méthode : montrer que deux normes ne sont pas équivalentes'
   verso: 'Trouver une suite \((f_n)\) bornée pour \(N_1\) mais pas pour \(N_2\) : impossible si \(N_2\le\beta N_1\). Exemple sur \(\mathcal C([0,1])\) : \(f_n(x)=n^2\big(\frac1n-x\big)\mathbf 1_{[0,1/n]}(x)\) vérifie \(N_1(f_n)=\int_0^1|f_n|=\frac12\) et \(N_\infty(f_n)=n\) ; donc \(N_1\) et \(N_\infty\) ne sont pas équivalentes.'
   source: 'Poly L2 Analyse 4 (Univ. Lorraine), Prop. 4, p. 14 et Remarque 4, p. 15'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, methode]
 - id: topo-a-042-15
@@ -1056,7 +1056,7 @@
   recto: 'Prop. : comparaison des normes \(1\), \(2\) et \(\infty\) sur \(\mathbb R^n\)'
   verso: 'Pour tout \(x\in\mathbb R^n\) : \[\|x\|_\infty\le\|x\|_2\le\|x\|_1\le n\|x\|_\infty.\] Les trois normes sont donc équivalentes.'
   source: 'Poly L2 Analyse 4 (Univ. Lorraine), Exemple 7, p. 14 ; cours EVN de G. Skandalis (Paris Cité), §4.2, p. 2 du PDF'
-  chapitre: 'Hors cours actuel'
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
   priorite: 1
   tags: [prerequis-l1l2, propriete]
 # Cartes nouvelles de topologie, chapitre 1 (demandes topo-a-043 à topo-a-073). Pages = pages du PDF (repères "--- page N ---").
@@ -2181,3 +2181,2436 @@
 #   chapitre: 'Chapitre 2 - Espace complet'
 #   priorite: 1
 #   tags: [theoreme]
+# ---------- Chapitres 4 à 7 (18/11/2026) ----------
+- id: topo-a-100-1
+  notion: topo-n-0100
+  recto: 'Déf : espace connexe'
+  verso: Un espace topologique \((X,\tau)\) est dit connexe si et seulement si les seules parties de \(X\) à la fois ouvertes et fermées sont \(\emptyset\) et \(X\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 1
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [definition]
+- id: topo-a-101-1
+  notion: topo-n-0101
+  recto: 'Prop. 41 (i)⇔(ii) : connexité et fermés disjoints'
+  verso: Les propriétés suivantes sont équivalentes.<br>(i) \((X,\tau)\) est connexe.<br>(ii) Si \(X=F_1\cup F_2\) où \(F_1\) et \(F_2\) sont deux fermés disjoints, alors \(F_1=\emptyset\) ou \(F_2=\emptyset\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 1
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-101-2
+  notion: topo-n-0101
+  recto: 'Prop. 41 (i)⇔(iii) : connexité et ouverts disjoints'
+  verso: Les propriétés suivantes sont équivalentes.<br>(i) \((X,\tau)\) est connexe.<br>(iii) Si \(X=O_1\cup O_2\) où \(O_1\) et \(O_2\) sont deux ouverts disjoints, alors \(O_1=\emptyset\) ou \(O_2=\emptyset\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 1
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-101-3
+  notion: topo-n-0101
+  recto: 'Prop. 41 (i)⇔(iv) : connexité et fonctions continues vers {0,1}'
+  verso: Les propriétés suivantes sont équivalentes.<br>(i) \((X,\tau)\) est connexe.<br>(iv) Si \(f\in\mathcal C(X,\{0,1\})\), alors \(f\) est constante.
+  source: Poly de topologie Paris Cité, ch. 4, p. 1
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-101-4
+  notion: topo-n-0101
+  recto: 'Rem. : métrique sur {0,1} (Prop. 41)'
+  verso: L'espace \(\{0,1\}\) est ici muni d'une métrique quelconque comme, par exemple, la distance induite par la distance usuelle sur \(\mathbb R\) ou la distance discrète. En fait, on vérifie facilement que toutes les distances sur \(\{0,1\}\) sont équivalentes.
+  source: Poly de topologie Paris Cité, ch. 4, p. 1
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-101-5
+  notion: topo-n-0101
+  recto: 'Preuve : Prop. 41 (définitions équivalentes)'
+  verso: '(i)⇒(ii) : \(F_1=F_2^c\) est ouvert et fermé, donc \(F_1=X\) ou \(\emptyset\), d''où \(F_2=\emptyset\) ou \(F_1=\emptyset\).<br>(ii)⇒(iii) : \(X=O_1\cup O_2=O_2^c\cup O_1^c\) avec \(O_1^c,O_2^c\) fermés ; (ii) donne \(O_2^c=\emptyset\) ou \(O_1^c=\emptyset\), donc \(O_1=\emptyset\) ou \(O_2=\emptyset\).<br>(iii)⇒(iv) : \(\{0\}\) et \(\{1\}\) sont ouverts dans \(\{0,1\}\), donc \(f^{-1}(\{0\})\) et \(f^{-1}(\{1\})\) sont deux ouverts disjoints de réunion \(X\) ; l''un est vide, donc \(f\) est constante.<br>(iv)⇒(i) : si \(A\) est ouvert et fermé, \(\mathbb 1_A\in\mathcal C(X,\{0,1\})\) (les images réciproques \(\emptyset,A^c,A,X\) sont ouvertes), donc \(\mathbb 1_A\) est constante et \(A=\emptyset\) ou \(A=X\).'
+  source: Poly de topologie Paris Cité, ch. 4, p. 1
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-102-1
+  notion: topo-n-0102
+  recto: 'Déf : partie connexe'
+  verso: Soit \((X,\tau)\) un espace topologique et \(A\in\mathcal P(X)\). On dit que \(A\) est connexe si et seulement si \(A\) est connexe pour la topologie induite.
+  source: Poly de topologie Paris Cité, ch. 4, p. 1
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [definition]
+- id: topo-a-103-1
+  notion: topo-n-0103
+  recto: 'Prop. 42 : adhérence d''une partie connexe'
+  verso: Soient \((X,d)\) un espace métrique et \(A\in\mathcal P(X)\). Si \(A\) est connexe, alors son adhérence \(\overline A\) est connexe.
+  source: Poly de topologie Paris Cité, ch. 4, p. 2
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-103-2
+  notion: topo-n-0103
+  recto: 'Preuve : Prop. 42 (adhérence d''un connexe)'
+  verso: Soit \(f\in\mathcal C(\overline A,\{0,1\})\). Comme \(A\) est connexe, la restriction de \(f\) à \(A\) est constante, égale à \(c\) (Prop. 41).<br>Pour \(x\in\overline A\), il existe une suite \((u_n)\) de \(A\) telle que \(u_n\to x\) (caractérisation séquentielle de l'adhérence). Par continuité, \(f(x)=\lim f(u_n)=c\).<br>Donc \(f\) est constante et \(\overline A\) est connexe (Prop. 41).
+  source: Poly de topologie Paris Cité, ch. 4, p. 2
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-104-1
+  notion: topo-n-0104
+  recto: 'Prop. 43 : union de deux connexes'
+  verso: Soient \((X,d)\) un espace métrique et \(A,B\) deux parties connexes de \(X\) telles que \(\overline A\cap B\neq\emptyset\). L'ensemble \(A\cup B\) est alors connexe.
+  source: Poly de topologie Paris Cité, ch. 4, p. 2
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-104-2
+  notion: topo-n-0104
+  recto: 'Preuve : Prop. 43 (union de deux connexes)'
+  verso: Soit \(f\in\mathcal C(A\cup B,\{0,1\})\). \(A\) et \(B\) étant connexes, \(f\equiv a\) sur \(A\) et \(f\equiv b\) sur \(B\).<br>Soit \(x\in\overline A\cap B\). Comme \(x\in B\), \(f(x)=b\). Comme \(x\in\overline A\), il existe \((u_n)\) dans \(A\) avec \(u_n\to x\), d'où \(f(x)=\lim f(u_n)=a\).<br>Donc \(a=b\), \(f\) est constante et \(A\cup B\) est connexe.
+  source: Poly de topologie Paris Cité, ch. 4, p. 2
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-105-1
+  notion: topo-n-0105
+  recto: 'Prop. 44 : union d''une famille de connexes'
+  verso: Soient \((X,d)\) un espace métrique et \((A_i)_{i\in I}\) une famille de parties connexes de \(X\) pour laquelle il existe un \(i_0\in I\) tel que \[A_i\cap A_{i_0}\neq\emptyset,\quad\forall i\in I.\] L'ensemble \(\bigcup_{i\in I}A_i\) est alors connexe.
+  source: Poly de topologie Paris Cité, ch. 4, p. 2
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-105-2
+  notion: topo-n-0105
+  recto: 'Rem. : cas d''une intersection non vide (Prop. 44)'
+  verso: On remarquera, en particulier, que si les \(A_i\) sont connexes et \(\bigcap_{i\in I}A_i\neq\emptyset\), alors \(\bigcup_{i\in I}A_i\) est connexe.
+  source: Poly de topologie Paris Cité, ch. 4, p. 2
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-105-3
+  notion: topo-n-0105
+  recto: 'Preuve : Prop. 44 (union d''une famille de connexes)'
+  verso: 'Soit \(f\in\mathcal C(\bigcup_iA_i,\{0,1\})\). Pour tout \(i\), \(A_i\) est connexe : il existe \(c_i\in\{0,1\}\) avec \(f\equiv c_i\) sur \(A_i\).<br>Si \(x\in A_i\cap A_{i_0}\), alors \(c_i=f(x)=c_{i_0}\).<br>Donc tous les \(c_i\) sont égaux, \(f\) est constante et \(\bigcup_iA_i\) est connexe.'
+  source: Poly de topologie Paris Cité, ch. 4, p. 2
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-106-1
+  notion: topo-n-0106
+  recto: 'Prop. 45 : image d''un connexe par une application continue'
+  verso: Soient \((X,d),(Y,\delta)\) deux espaces métriques et \(f\in\mathcal C(X,Y)\). Si \(X\) est connexe, alors \(f(X)\) est connexe.
+  source: Poly de topologie Paris Cité, ch. 4, p. 2
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-106-2
+  notion: topo-n-0106
+  recto: 'Preuve : Prop. 45 (image continue d''un connexe)'
+  verso: Soit \(g\in\mathcal C(f(X),\{0,1\})\). \(g\circ f\in\mathcal C(X,\{0,1\})\) et \(X\) est connexe, donc \(g\circ f\equiv c\).<br>Pour \(y=f(x)\in f(X)\), \(g(y)=g\circ f(x)=c\). Donc \(g\) est constante et \(f(X)\) est connexe.
+  source: Poly de topologie Paris Cité, ch. 4, p. 2
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-107-1
+  notion: topo-n-0107
+  recto: 'Prop. 46 : produit fini d''espaces connexes'
+  verso: Soit \(((X_k,d_k))_{k\in\{1,\cdots,n\}}\) une famille finie d'espaces métriques. On pose \(X=\prod_{k=1}^nX_k\) l'ensemble produit que l'on munit de l'une des distance \(D_p\) vues dans la proposition 39. L'espace métrique produit \((X,D_p)\) est alors connexe si et seulement si tous les espaces \((X_k,d_k)\) le sont.
+  source: Poly de topologie Paris Cité, ch. 4, p. 3
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-107-2
+  notion: topo-n-0107
+  recto: 'Preuve : Prop. 46 (⇒, produit connexe)'
+  verso: Pour tout \(k\), la projection \(x\mapsto x_k\) est continue de \(X\) dans \(X_k\) (elle est 1-lipschitzienne) ; on conclut par la Prop. 45.
+  source: Poly de topologie Paris Cité, ch. 4, p. 3
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-107-3
+  notion: topo-n-0107
+  recto: 'Preuve : Prop. 46 (⇐, facteurs connexes)'
+  verso: 'Récurrence sur \(n\) (rang 1 : hypothèse). Au rang \(n\), on fixe \(y\in\prod_{k=1}^{n-1}X_k\), \(Y=\{y\}\times X_n\) et \(Z_x=\left(\prod_{k=1}^{n-1}X_k\right)\times\{x\}\) pour \(x\in X_n\).<br>\(X=Y\cup\bigcup_{x\in X_n}Z_x\) et \(Y\cap Z_x\ni(y,x)\) est non vide : par la Prop. 44, il suffit que \(Y\) et les \(Z_x\) soient connexes.<br>\(Y\) est l''image de \(X_n\) (connexe) par l''application continue (isométrie) \(x\mapsto(y,x)\) : connexe par la Prop. 45 ; les \(Z_x\) se traitent par symétrie.'
+  source: Poly de topologie Paris Cité, ch. 4, p. 3
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-108-1
+  notion: topo-n-0108
+  recto: 'Déf : composante connexe d''un point'
+  verso: Soient \((X,d)\) un espace métrique et \(x\in X\). On appelle composante connexe de \(x\) l'ensemble \(C_x\) formé de la réunion de toute les parties connexes de \(X\) contenant \(x\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 3
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [definition]
+- id: topo-a-108-2
+  notion: topo-n-0108
+  recto: 'Déf : composante connexe (d''un espace)'
+  verso: Une partie \(A\) de \(X\) est appelée composante connexe s'il existe un \(x\in X\) tel que \(A=C_x\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 3
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [definition]
+- id: topo-a-109-1
+  notion: topo-n-0109
+  recto: 'Déf : partition'
+  verso: On appelle partition d'un ensemble \(X\) un recouvrement de \(X\) par des ensembles disjoints, c'est-à-dire une famille \((A_i)_{i\in I}\) telle que \(X=\bigcup_{i\in I}A_i\) et \(A_i\cap A_j=\emptyset\), pour tous \(i,j\in I\) tels que \(i\neq j\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 3
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [definition]
+- id: topo-a-110-1
+  notion: topo-n-0110
+  recto: 'Prop. 47 (i) : plus grande partie connexe contenant x'
+  verso: '(Cadre : \(C_x\) composante connexe de \(x\) dans l''espace métrique \((X,d)\), Déf. 33.)<br>Pour tout \(x\in X\), \(C_x\) est la plus grande partie connexe de \(X\) contenant \(x\).'
+  source: Poly de topologie Paris Cité, ch. 4, p. 3
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-110-2
+  notion: topo-n-0110
+  recto: 'Prop. 47 (ii) : composantes connexes égales ou disjointes'
+  verso: '(Cadre : composantes connexes de l''espace métrique \((X,d)\), Déf. 33.)<br>Deux composantes connexes sont soit égales, soit disjointes.'
+  source: Poly de topologie Paris Cité, ch. 4, p. 3
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-110-3
+  notion: topo-n-0110
+  recto: 'Prop. 47 (iii) : partition en composantes connexes'
+  verso: '(Cadre : espace métrique \((X,d)\), Déf. 33.)<br>Les composantes connexes de \(X\) forment une partition de \(X\).'
+  source: Poly de topologie Paris Cité, ch. 4, p. 3
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-110-4
+  notion: topo-n-0110
+  recto: 'Prop. 47 (iv) : composantes connexes fermées'
+  verso: '(Cadre : espace métrique \((X,d)\), Déf. 33.)<br>Chaque composante connexe de \(X\) est fermée dans \(X\).'
+  source: Poly de topologie Paris Cité, ch. 4, p. 3
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-110-5
+  notion: topo-n-0110
+  recto: 'Prop. 47 (v) : composantes connexes en nombre fini'
+  verso: '(Cadre : espace métrique \((X,d)\), Déf. 33.)<br>Si les composantes connexes de \(X\) sont en nombre fini, alors chaque composante connexe est ouverte dans \(X\).'
+  source: Poly de topologie Paris Cité, ch. 4, p. 4
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-110-6
+  notion: topo-n-0110
+  recto: 'Preuve : Prop. 47 (i)'
+  verso: 'Par définition \(x\in C_x\), et si \(A\) est connexe et contient \(x\), alors \(A\subset C_x\).<br>Enfin \(C_x\) est connexe : c''est une union de parties connexes dont l''intersection est non vide (elle contient \(x\)) (Prop. 44).'
+  source: Poly de topologie Paris Cité, ch. 4, p. 4
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-110-7
+  notion: topo-n-0110
+  recto: 'Preuve : Prop. 47 (ii)'
+  verso: Soient \(C_x\) et \(C_y\) non disjointes. Par la Prop. 43, \(C_x\cup C_y\) est connexe ; il contient \(x\), donc \(C_x\cup C_y\subset C_x\) par définition de \(C_x\).<br>Ainsi \(C_y\subset C_x\) et, par symétrie, \(C_y=C_x\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 4
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-110-8
+  notion: topo-n-0110
+  recto: 'Preuve : Prop. 47 (iii)'
+  verso: '\(X=\bigcup_{x\in X}\{x\}\subset\bigcup_{x\in X}C_x\subset X\), donc \(X=\bigcup_{x\in X}C_x\). D''après (ii), les \(C_x\) sont soit disjoints, soit égaux : \(X\) est union de composantes connexes disjointes.'
+  source: Poly de topologie Paris Cité, ch. 4, p. 4
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-110-9
+  notion: topo-n-0110
+  recto: 'Preuve : Prop. 47 (iv)'
+  verso: \(\overline{C_x}\) est connexe car \(C_x\) est connexe (Prop. 42). Comme \(x\in\overline{C_x}\), on a \(\overline{C_x}\subset C_x\). Ainsi \(\overline{C_x}=C_x\) et \(C_x\) est fermé.
+  source: Poly de topologie Paris Cité, ch. 4, p. 4
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-110-10
+  notion: topo-n-0110
+  recto: 'Preuve : Prop. 47 (v)'
+  verso: \((C_x)^c\) est l'union des autres composantes connexes (disjointes de \(C_x\)), fermées par (iv). Si elles sont en nombre fini, c'est une union finie de fermés, donc un fermé. Son complémentaire \(C_x\) est donc ouvert.
+  source: Poly de topologie Paris Cité, ch. 4, p. 4
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-111-1
+  notion: topo-n-0111
+  recto: 'Déf : points connectés'
+  verso: On dit que deux points \(x\) et \(y\) sont connectés si et seulement si \(C_x=C_y\) (i.e. ils appartiennent à la même composante connexe).
+  source: Poly de topologie Paris Cité, ch. 4, p. 4
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [definition]
+- id: topo-a-111-2
+  notion: topo-n-0111
+  recto: 'Rem. : « connecté » est une relation d''équivalence'
+  verso: La relation « \(x\) est connecté à \(y\) » est une relation d'équivalence. Les composantes connexe de \(X\) en sont les classes d'équivalence.
+  source: Poly de topologie Paris Cité, ch. 4, p. 4
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [definition]
+- id: topo-a-112-1
+  notion: topo-n-0112
+  recto: 'Exemple : boules de \(\mathbb R^d\)'
+  verso: Les boules de \(\mathbb R^d\) sont connexes.
+  source: Poly de topologie Paris Cité, ch. 4, p. 4
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-112-2
+  notion: topo-n-0112
+  recto: 'Preuve : les boules de \(\mathbb R^d\) sont connexes'
+  verso: 'Si \(B(x,r)\) n''est pas connexe, il existe \(f:B(x,r)\to\{0,1\}\) continue non constante, donc \(y,z\) avec \(f(y)=0\), \(f(z)=1\).<br>On pose \(g(t)=f(ty+(1-t)z)\) sur \([0,1]\), bien définie car \(|ty+(1-t)z-x|\le t|y-x|+(1-t)|z-x|<tr+(1-t)r=r\).<br>Par le théorème des valeurs intermédiaires, il existe \(t\) avec \(g(t)=\frac12\), ce qui est absurde.<br>(Coquille du poly : il écrit \(f(ty+(1-t)x)=\frac12\) au lieu de \(f(ty+(1-t)z)=\frac12\).)'
+  source: Poly de topologie Paris Cité, ch. 4, p. 4
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-113-1
+  notion: topo-n-0113
+  recto: 'Prop. 48 : composantes connexes d''un ouvert de \(\mathbb R^d\)'
+  verso: Si \(U\) est un ouvert de \(\mathbb R^d\), alors les composantes connexes de \(U\) sont ouvertes dans \(\mathbb R^d\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 4
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-113-2
+  notion: topo-n-0113
+  recto: 'Preuve : Prop. 48 (composantes d''un ouvert)'
+  verso: 'Soit \(C_x\) une composante connexe de \(U\) et \(y\in C_x\). Comme \(U\) est ouvert, il existe \(r>0\) tel que \(B(y,r)\subset U\).<br>\(C_x\) et \(B(y,r)\) sont connexes et se rencontrent (en \(y\)) : \(C_x\cup B(y,r)\) est connexe, contient \(x\), donc est inclus dans \(C_x\) (plus grande partie connexe contenant \(x\)).<br>Ainsi \(B(y,r)\subset C_x\) et \(C_x\) est ouvert.'
+  source: Poly de topologie Paris Cité, ch. 4, p. 5
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-114-1
+  notion: topo-n-0114
+  recto: 'Thm 7 (i) : parties connexes de \(\mathbb R\)'
+  verso: Les parties connexes de \(\mathbb R\) sont les intervalles.
+  source: Poly de topologie Paris Cité, ch. 4, p. 5
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-114-2
+  notion: topo-n-0114
+  recto: 'Preuve : Thm 7 (i) (connexes de \(\mathbb R\))'
+  verso: 'Que les intervalles soient connexes, le poly dit « on montre facilement » (sans le détailler).<br>Réciproque par contraposée : si \(A\) n''est pas un intervalle, il existe \(x<y<z\) avec \(x,z\in A\) et \(y\notin A\).<br>Alors \(A=(A\cap]-\infty,y[)\cup(A\cap]y,+\infty[)\), deux ouverts disjoints et non vides : \(A\) n''est pas connexe.'
+  source: Poly de topologie Paris Cité, ch. 4, p. 5
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-115-1
+  notion: topo-n-0115
+  recto: 'Thm 7 (ii) : structure des ouverts de \(\mathbb R\)'
+  verso: Tout ouvert de \(\mathbb R\) est une union au plus dénombrable d'intervalles ouverts disjoints.
+  source: Poly de topologie Paris Cité, ch. 4, p. 5
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-115-2
+  notion: topo-n-0115
+  recto: 'Preuve : Thm 7 (ii) (ouverts de \(\mathbb R\))'
+  verso: 'Soit \(U\) ouvert de \(\mathbb R\). Par la Prop. 48, ses composantes connexes sont ouvertes, donc (Thm 7 (i)) des intervalles ouverts : \(U=\bigcup_{i\in I}J_i\), les \(J_i\) étant disjoints.<br>Pour tout \(i\), on choisit \(q_i\in J_i\cap\mathbb Q\). L''application \(i\mapsto q_i\) est une injection de \(I\) dans \(\mathbb Q\) (les \(J_i\) sont disjoints), donc \(I\) est au plus dénombrable.<br>(Coquilles du poly : « composantes connexes de \(\mathbb R\) » pour « de \(U\) », et \(J_j\cap\mathbb Q\) pour \(J_i\cap\mathbb Q\).)'
+  source: Poly de topologie Paris Cité, ch. 4, p. 5
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-116-1
+  notion: topo-n-0116
+  recto: 'Rem. : composantes connexes de \(\mathbb Q\)'
+  verso: Les composantes connexes de \(\mathbb Q\) muni de la distance usuelle sont réduites à des points car \(\mathbb Q\) ne contient pas d'intervalle non trivial.
+  source: Poly de topologie Paris Cité, ch. 4, p. 5
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-117-1
+  notion: topo-n-0117
+  recto: 'Thm 8 : théorème des valeurs intermédiaires généralisé'
+  verso: Soient \((X,d)\) un espace métrique connexe et \(f:X\to\mathbb R\) une fonction continue. Soient \(x,y\in X\) tels que \(f(x)<f(y)\). Pour tout \(t\in[f(x),f(y)]\), il existe \(z\in X\) tel que \(f(z)=t\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 5
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-117-2
+  notion: topo-n-0117
+  recto: 'Preuve : Thm 8 (valeurs intermédiaires généralisé)'
+  verso: \(X\) est connexe et \(f\) continue, donc \(f(X)\) est connexe (Prop. 45). D'après le Thm 7 (i), c'est un intervalle. Comme \(f(x),f(y)\in f(X)\), tout \(t\in[f(x),f(y)]\) appartient à \(f(X)\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 5
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-118-1
+  notion: topo-n-0118
+  recto: 'Déf : arc (chemin)'
+  verso: Soit \((X,d)\) un espace métrique. Un arc (ou un chemin) de \(X\) est une application continue \(f\) d'un intervalle \([a,b]\) de \(\mathbb R\) dans \(X\).<br>Si \(x=f(a)\) et \(y=f(b)\), on dit que \(f\) est un arc de \(x\) à \(y\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 6
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [definition]
+- id: topo-a-118-2
+  notion: topo-n-0118
+  recto: 'Rem. : on peut prendre l''intervalle [0,1] pour un arc'
+  verso: Remarquons que l'on peut changer, dans la définition, l'intervalle \([a,b]\) par \([0,1]\). Il suffit de considérer l'application \[g:[0,1]\to X,\quad t\mapsto f(ta+(1-t)b).\]
+  source: Poly de topologie Paris Cité, ch. 4, p. 6
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [definition]
+- id: topo-a-119-1
+  notion: topo-n-0119
+  recto: 'Déf : espace connexe par arcs'
+  verso: Un espace métrique \((X,d)\) est dit connexe par arcs si et seulement si, pour tous \(x,y\in X\), il existe un arc de \(x\) à \(y\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 6
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [definition]
+- id: topo-a-120-1
+  notion: topo-n-0120
+  recto: 'Prop. 49 : connexe par arcs implique connexe'
+  verso: Un espace connexe par arcs est connexe.
+  source: Poly de topologie Paris Cité, ch. 4, p. 6
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-120-2
+  notion: topo-n-0120
+  recto: 'Preuve : Prop. 49 (connexe par arcs ⇒ connexe)'
+  verso: On fixe \(x_0\in X\). Pour tout \(x\), il existe \(f_x\in\mathcal C([0,1],X)\) avec \(f_x(0)=x_0\), \(f_x(1)=x\).<br>\([0,1]\) est connexe, donc \(A_x=f_x([0,1])\) l'est (Prop. 45). Les \(A_x\) contiennent tous \(x_0\), donc \(\bigcup_xA_x\) est connexe (Prop. 44).<br>Or \(X=\bigcup_{x\in X}\{x\}=\bigcup_{x\in X}A_x\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 6
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-121-1
+  notion: topo-n-0121
+  recto: 'Déf : composante connexe par arcs'
+  verso: 'Soient \((X,d)\) un espace métrique et \(x\in X\). On définit la composante connexe par arcs de \(x\) par \[D_x=\{y\in X\ /\ \text{il existe un arc de }x\text{ à }y\}.\] (Coquille du poly : « un arcs » pour « un arc ».)'
+  source: Poly de topologie Paris Cité, ch. 4, p. 6
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [definition]
+- id: topo-a-122-1
+  notion: topo-n-0122
+  recto: 'Prop. 50 (i) : plus grande partie connexe par arcs contenant x'
+  verso: '(Cadre : \(D_x\) composante connexe par arcs de \(x\) dans l''espace métrique \((X,d)\), Déf. 38.)<br>\(D_x\) est la plus grande partie de \(X\) contenant \(x\) et connexe par arcs.'
+  source: Poly de topologie Paris Cité, ch. 4, p. 6
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-122-2
+  notion: topo-n-0122
+  recto: 'Prop. 50 (ii) : composantes connexes par arcs égales ou disjointes'
+  verso: '(Cadre : espace métrique \((X,d)\), Déf. 38.)<br>Deux composantes connexes par arcs sont soit égales, soit disjointes.'
+  source: Poly de topologie Paris Cité, ch. 4, p. 6
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-122-3
+  notion: topo-n-0122
+  recto: 'Prop. 50 (iii) : \(D_x\subset C_x\)'
+  verso: '(Cadre : espace métrique \((X,d)\), Déf. 33 et 38.)<br>On a l''inclusion \(D_x\subset C_x\).'
+  source: Poly de topologie Paris Cité, ch. 4, p. 6
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-122-4
+  notion: topo-n-0122
+  recto: 'Preuve : Prop. 50 (i)'
+  verso: 'Soient \(y,z\in D_x\) : arcs \(f\) de \(y\) à \(x\) et \(g\) de \(x\) à \(z\) sur \([0,1]\). On pose \(h(t)=f(t)\) si \(t\in[0,1]\), \(h(t)=g(t-1)\) si \(t\in]1,2]\) ; \(h\) est un arc de \(y\) à \(z\) sur \([0,2]\) : \(D_x\) est connexe par arcs.<br>Si \(A\) est connexe par arcs et contient \(x\), alors pour tout \(y\in A\) il existe un arc de \(x\) à \(y\) : \(A\subset D_x\).'
+  source: Poly de topologie Paris Cité, ch. 4, p. 6
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-122-5
+  notion: topo-n-0122
+  recto: 'Preuve : Prop. 50 (ii)'
+  verso: Si \(D_x\cap D_y\neq\emptyset\), pour \(z\in D_x\cap D_y\) on construit un arc de \(x\) à \(z\) puis de \(z\) à \(y\), donc un arc de \(x\) à \(y\).<br>Ainsi \(D_x\cup D_y\) est connexe par arcs, donc \(D_x\cup D_y\subset D_x\) (par (i)), puis \(D_x=D_y\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 7
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-122-6
+  notion: topo-n-0122
+  recto: 'Preuve : Prop. 50 (iii)'
+  verso: \(D_x\) est connexe par arcs, donc connexe (Prop. 49). Comme elle contient \(x\), \(D_x\subset C_x\).
+  source: Poly de topologie Paris Cité, ch. 4, p. 7
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-123-1
+  notion: topo-n-0123
+  recto: 'Prop. 51 : composantes connexes d''une partie de \(\mathbb R\)'
+  verso: 'Si \(A\) est une partie de \(\mathbb R\), alors les composantes connexes de \(A\) sont ses composantes connexes par arcs : \[D_x=C_x,\quad\forall x\in A.\]'
+  source: Poly de topologie Paris Cité, ch. 4, p. 7
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-123-2
+  notion: topo-n-0123
+  recto: 'Preuve : Prop. 51 (\(D_x=C_x\) dans \(\mathbb R\))'
+  verso: \(C_x\) est une partie connexe de \(\mathbb R\), donc un intervalle (Thm 7 (i)), donc connexe par arcs. On en déduit \(C_x\subset D_x\) ; l'inclusion réciproque vient de la Prop. 50.
+  source: Poly de topologie Paris Cité, ch. 4, p. 7
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-124-1
+  notion: topo-n-0124
+  recto: 'Prop. 52 : composantes connexes d''un ouvert de \(\mathbb R^d\)'
+  verso: Si \(U\) est un ouvert de \(\mathbb R^d\), alors les composantes connexes de \(U\) sont ses composantes connexes par arcs.
+  source: Poly de topologie Paris Cité, ch. 4, p. 7
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-124-2
+  notion: topo-n-0124
+  recto: 'Rem. : Prop. 52 faux pour un non-ouvert de \(\mathbb R^d\), \(d>1\)'
+  verso: Attention, dans \(\mathbb R^d\) (avec \(d>1\)), si \(U\) n'est pas ouvert, ses composantes connexes et connexes par arcs ne sont pas nécessairement les mêmes.
+  source: Poly de topologie Paris Cité, ch. 4, p. 7
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-124-3
+  notion: topo-n-0124
+  recto: 'Preuve : Prop. 52 (ouvert de \(\mathbb R^d\))'
+  verso: 'Soit \(C_x\) une composante connexe de \(U\) (le poly écrit \(X\)) et \(y\in C_x\). \(D_y\) est ouvert : pour \(z\in D_y\), \(B(z,r)\subset U\) est connexe par arcs (\(t\mapsto tz_1+(1-t)z_2\)), donc \(B(z,r)\subset D_z=D_y\).<br>\(C_x=\bigcup_{y\in C_x}D_y=\bigcup_{i\in I}D_{y_i}\) (car \(D_y\subset C_y=C_x\)), union d''ouverts disjoints.<br>Si \(I\) avait deux éléments, \(C_x=D_{y_{i_0}}\cup\bigcup_{i\neq i_0}D_{y_i}\) serait union de deux ouverts disjoints non vides, contredisant la connexité de \(C_x\).'
+  source: Poly de topologie Paris Cité, ch. 4, p. 7
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-125-1
+  notion: topo-n-0125
+  recto: 'Cor. 9 : ouvert connexe de \(\mathbb R^d\)'
+  verso: Tout ouvert connexe de \(\mathbb R^d\) est connexe par arcs.
+  source: Poly de topologie Paris Cité, ch. 4, p. 7
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-126-1
+  notion: topo-n-0126
+  recto: 'Rem. : généralisation de la Prop. 52'
+  verso: La démonstration de la proposition repose sur le fait que les boules de \(\mathbb R^d\) sont connexes par arcs. La proposition est donc vraie dans tout espace métrique dans lequel les boules sont connexes par arcs. C'est le cas, par exemple, des espaces vectoriels normés (cf. chapitre suivant).
+  source: Poly de topologie Paris Cité, ch. 4, p. 7
+  chapitre: Chapitre 4 - Espace connexe
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-140-1
+  notion: topo-n-0150
+  recto: 'Déf : norme, espace vectoriel normé'
+  verso: Dans tout le chapitre, \(\mathbb K\) désigne \(\mathbb R\) ou \(\mathbb C\). Soit \(E\) un espace vectoriel sur \(\mathbb K\). Une norme sur \(E\) est une application \(\|\cdot\|\) de \(E\) dans \(\mathbb R\) telle que<br>(i) \(\|x\|\ge0,\ \forall x\in E\) (positivité)<br>(ii) \(\|x\|=0\ \Rightarrow\ x=0_E\) (séparation)<br>(iii) \(\|\lambda x\|=|\lambda|\,\|x\|,\ \forall x\in E,\forall\lambda\in\mathbb K\) (homogénéité positive)<br>(iv) \(\|x+y\|\le\|x\|+\|y\|,\ \forall x,y\in E\) (inégalité triangulaire)<br>Le couple \((E,\|\cdot\|)\) est appelé espace vectoriel normé (ou espace normé).
+  source: Poly de topologie Paris Cité, ch. 5, p. 1
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-140-2
+  notion: topo-n-0150
+  recto: 'Déf : semi-norme'
+  verso: 'Soit \(E\) un espace vectoriel sur \(\mathbb K\). Si une application \(\|\cdot\|\) de \(E\) dans \(\mathbb R\) ne satisfait que (i) (positivité : \(\|x\|\ge0\)), (iii) (homogénéité positive : \(\|\lambda x\|=|\lambda|\,\|x\|\)) et (iv) (inégalité triangulaire : \(\|x+y\|\le\|x\|+\|y\|\)), l''application \(\|\cdot\|\) est appelée semi-norme.'
+  source: Poly de topologie Paris Cité, ch. 5, p. 1
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-141-1
+  notion: topo-n-0151
+  recto: 'Exemple : normes \(\|\cdot\|_p\) sur \(\mathbb K^d\)'
+  verso: Sur \(\mathbb K^d\), pour tout \(p\in[1,+\infty[\), \(x\mapsto\|x\|_p=\Big(\sum_{k=1}^d|x_k|^p\Big)^{\frac1p}\) est une norme. En particulier, \(\|\cdot\|_2\) est la norme euclidienne (si \(\mathbb K=\mathbb R\)) ou hermitienne (si \(\mathbb K=\mathbb C\)).
+  source: Poly de topologie Paris Cité, ch. 5, p. 1
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-141-2
+  notion: topo-n-0151
+  recto: 'Exemple : norme uniforme sur \(\mathbb K^d\)'
+  verso: Sur \(\mathbb K^d\), l'application \(x\mapsto\max_{k\in\{1,\dots,d\}}|x_k|\) est une norme appelée norme uniforme.
+  source: Poly de topologie Paris Cité, ch. 5, p. 1
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-142-1
+  notion: topo-n-0152
+  recto: 'Exemple : norme sur l''espace \(\mathcal B(E,F)\) des applications bornées'
+  verso: Si \(E\) est un ensemble non vide et \((F,\|\cdot\|_F)\) est un espace vectoriel normé, on définit sur \[\mathcal B(E,F)=\{f:E\to F\ /\ \exists C>0\text{ tel que }\|f(x)\|_F\le C,\ \forall x\in E\},\] l'espace des applications bornées de \(E\) dans \(F\) (« dan » corrigé en « dans »), la norme \[f\mapsto\sup_{x\in E}\|f(x)\|_F.\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 1
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-143-1
+  notion: topo-n-0153
+  recto: 'Exemple : norme \(\|\cdot\|_\infty\) sur \(\mathcal C(X,\mathbb K)\)'
+  verso: Si \(X\) est un espace métrique compact, alors \(f\mapsto\|f\|_\infty=\sup_{x\in X}|f(x)|\) est une norme sur \(\mathcal C(X,\mathbb K)\), l'espace des fonctions continues sur \(X\). On remarque, en particulier, que \(\|\cdot\|_\infty\) est bien définie car les fonctions continues sur un compact sont bornées.
+  source: Poly de topologie Paris Cité, ch. 5, p. 2
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-144-1
+  notion: topo-n-0154
+  recto: 'Prop. 53 (i) : \(\big|\|x\|-\|y\|\big|\le\|x+y\|\)'
+  verso: Soit \((E,\|\cdot\|)\) un espace vectoriel normé. On a \(\big|\|x\|-\|y\|\big|\le\|x+y\|,\ \forall x,y\in E\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 2
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-144-2
+  notion: topo-n-0154
+  recto: 'Prop. 53 (ii) : la norme est non bornée'
+  verso: Soit \((E,\|\cdot\|)\) un espace vectoriel normé. Si \(E\ne\{0_E\}\), l'application \(x\mapsto\|x\|\) est non bornée sur \(E\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 2
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-144-3
+  notion: topo-n-0154
+  recto: 'Preuve : Prop. 53 (i)'
+  verso: 'C''est une conséquence immédiate de l''inégalité triangulaire : \(\|x\|=\|x+y-y\|\le\|x+y\|+\|y\|\Rightarrow\|x\|-\|y\|\le\|x+y\|\), et on conclut par un argument de symétrie.'
+  source: Poly de topologie Paris Cité, ch. 5, p. 2
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-144-4
+  notion: topo-n-0154
+  recto: 'Preuve : Prop. 53 (ii)'
+  verso: Pour \(x\ne0_E\), on a \(\lim_{\lambda\to+\infty}\|\lambda x\|=\lim_{\lambda\to+\infty}|\lambda|\,\|x\|=+\infty\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 2
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-145-1
+  notion: topo-n-0155
+  recto: 'Prop. 54 : distance associée à une norme'
+  verso: Soit \((E,\|\cdot\|)\) un espace vectoriel normé. L'application \[d:E\times E\to\mathbb R_+,\quad(x,y)\mapsto\|x-y\|\] est une distance sur \(E\) appelée distance associée à la norme \(\|\cdot\|\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 2
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-146-1
+  notion: topo-n-0156
+  recto: 'Rem. : invariance par translation de la distance associée'
+  verso: Cette distance est, de plus, invariante par translation \[d(x+z,y+z)=d(x,y),\quad\forall x,y,z\in E.\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 2
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-147-1
+  notion: topo-n-0157
+  recto: 'Rem. : boules et sphères dans un espace vectoriel normé'
+  verso: Sauf indication, on considère toujours l'espace \(E\) muni de la structure métrique ainsi définie. On a donc \[B(x,r)=\{y\in E\ /\ \|x-y\|<r\},\] \[\bar B(x,r)=\{y\in E\ /\ \|x-y\|\le r\},\] \[S(x,r)=\{y\in E\ /\ \|x-y\|=r\}.\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 2
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-148-1
+  notion: topo-n-0158
+  recto: 'Prop. 55 (i) : intérieur de la boule fermée'
+  verso: Dans un espace vectoriel normé \(E\), on a, pour tous \(x\in E\) et \(r>0\), \[\big(\bar B(x,r)\big)^\circ=B(x,r).\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 2
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-148-2
+  notion: topo-n-0158
+  recto: 'Prop. 55 (ii) : adhérence de la boule ouverte'
+  verso: Dans un espace vectoriel normé \(E\), on a, pour tous \(x\in E\) et \(r>0\), \[\overline{B(x,r)}=\bar B(x,r).\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 2
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-148-3
+  notion: topo-n-0158
+  recto: 'Prop. 55 (iii) : frontière des boules'
+  verso: Dans un espace vectoriel normé \(E\), on a, pour tous \(x\in E\) et \(r>0\), \[\partial B(x,r)=\partial\bar B(x,r)=S(x,r).\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 2
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-148-4
+  notion: topo-n-0158
+  recto: 'Preuve : Prop. 55 (i)'
+  verso: \(B(x,r)\subset\bar B(x,r)\) implique \(B(x,r)=(B(x,r))^\circ\subset(\bar B(x,r))^\circ\) car \(B(x,r)\) est ouvert.<br>Réciproquement, si \(y\in(\bar B(x,r))^\circ\), il existe \(\epsilon>0\) tel que \(B(y,\epsilon)\subset\bar B(x,r)\). Ainsi \(y+\frac{\epsilon}{2\|y-x\|}(y-x)\in\bar B(x,r)\), i.e. \(\big\|y+\frac{\epsilon}{2\|y-x\|}(y-x)-x\big\|\le r\), ce qui donne après simplification \(\big(1+\frac\epsilon{2\|y-x\|}\big)\|y-x\|\le r\). On en déduit que \(\|y-x\|<r\), ou encore \(y\in B(x,r)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 3
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-148-5
+  notion: topo-n-0158
+  recto: 'Preuve : Prop. 55 (ii)'
+  verso: \(B(x,r)\subset\bar B(x,r)\) implique \(\overline{B(x,r)}\subset\overline{\bar B(x,r)}=\bar B(x,r)\) car \(\bar B(x,r)\) est fermé.<br>Réciproquement, si \(y\in\bar B(x,r)\), alors \(\|x-y\|\le r\). Donc, pour tout \(\epsilon\in]0,2\|y-x\|[\), \(\big\|x-\big(y-\frac\epsilon{2\|y-x\|}(y-x)\big)\big\|=\big(1-\frac\epsilon{2\|y-x\|}\big)\|x-y\|<r\), d'où \(y-\frac\epsilon{2\|y-x\|}(y-x)\in B(x,r)\). Ainsi, pour tout \(\epsilon>0\), \(B(y,\epsilon)\cap B(x,r)\ne\emptyset\), ce qui signifie que \(y\in\overline{B(x,r)}\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 3
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-148-6
+  notion: topo-n-0158
+  recto: 'Preuve : Prop. 55 (iii)'
+  verso: On a \(\partial B(x,r)=\overline{B(x,r)}\setminus B(x,r)=\bar B(x,r)\setminus(\bar B(x,r))^\circ=\partial\bar B(x,r)\) (par (ii) puis (i)), et \(\partial B(x,r)=\bar B(x,r)\setminus B(x,r)=S(x,r)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 3
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-149-1
+  notion: topo-n-0159
+  recto: 'Rappel : boules dans un espace métrique discret'
+  verso: Dans un espace métrique discret \((X,d)\), on a, \(\forall x\in X\), \(B(x,1)=\{x\}\) et \(\bar B(x,1)=X\) ce qui implique \(\overline{B(x,1)}=\{x\}\ne\bar B(x,1)\) et \((\bar B(x,1))^\circ=X\ne B(x,1)\). De plus, \(\partial B(x,1)=\partial\bar B(x,1)=\emptyset\) tandis que \(S(x,1)=X\setminus\{x\}\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 3
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-150-1
+  notion: topo-n-0160
+  recto: 'Prop. 56 : sous-espace vectoriel normé'
+  verso: Soient \((E,\|\cdot\|)\) un espace vectoriel normé et \(F\) un sous-espace vectoriel de \(E\). La restriction de \(\|\cdot\|\) à \(F\) est une norme sur \(F\). L'espace vectoriel normé \((F,\|\cdot\|)\) est appelé sous-espace vectoriel normé de \((E,\|\cdot\|)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 3
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-151-1
+  notion: topo-n-0161
+  recto: 'Thm 9 : \(f\) linéaire continue et continue en \(0_E\)'
+  verso: Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux espaces vectoriels normés et \(f\) une application linéaire de \(E\) dans \(F\). Les propriétés suivantes sont équivalentes (extrait de la liste (i) à (ix) du théorème) :<br>(i) \(f\) est continue.<br>(ii) \(f\) est continue en \(0_E\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 3
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-151-2
+  notion: topo-n-0161
+  recto: 'Thm 9 : \(f\) linéaire continue et bornée sur un ouvert non vide'
+  verso: Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux espaces vectoriels normés et \(f\) une application linéaire de \(E\) dans \(F\). Les propriétés suivantes sont équivalentes (extrait de la liste (i) à (ix) du théorème) :<br>(i) \(f\) est continue.<br>(iii) Il existe un ouvert, non vide, \(U\) de \(E\) sur lequel \(f\) est bornée.
+  source: Poly de topologie Paris Cité, ch. 5, p. 3
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-151-3
+  notion: topo-n-0161
+  recto: 'Thm 9 : \(f\) linéaire continue et bornée sur \(B(0_E,1)\)'
+  verso: Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux espaces vectoriels normés et \(f\) une application linéaire de \(E\) dans \(F\). Les propriétés suivantes sont équivalentes (extrait de la liste (i) à (ix) du théorème) :<br>(i) \(f\) est continue.<br>(iv) \(f\) est bornée sur \(B(0_E,1)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 3
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-151-4
+  notion: topo-n-0161
+  recto: 'Thm 9 : \(f\) linéaire continue et bornée sur \(\bar B(0_E,1)\)'
+  verso: Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux espaces vectoriels normés et \(f\) une application linéaire de \(E\) dans \(F\). Les propriétés suivantes sont équivalentes (extrait de la liste (i) à (ix) du théorème) :<br>(i) \(f\) est continue.<br>(v) \(f\) est bornée sur \(\bar B(0_E,1)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 4
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-151-5
+  notion: topo-n-0161
+  recto: 'Thm 9 : \(f\) linéaire continue et bornée sur \(S(0_E,1)\)'
+  verso: Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux espaces vectoriels normés et \(f\) une application linéaire de \(E\) dans \(F\). Les propriétés suivantes sont équivalentes (extrait de la liste (i) à (ix) du théorème) :<br>(i) \(f\) est continue.<br>(vi) \(f\) est bornée sur \(S(0_E,1)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 4
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-151-6
+  notion: topo-n-0161
+  recto: 'Thm 9 : \(f\) linéaire continue et \(\|f(x)\|_F\le C\|x\|_E\)'
+  verso: Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux espaces vectoriels normés et \(f\) une application linéaire de \(E\) dans \(F\). Les propriétés suivantes sont équivalentes (extrait de la liste (i) à (ix) du théorème) :<br>(i) \(f\) est continue.<br>(vii) Il existe \(C>0\) tel que \(\|f(x)\|_F\le C\,\|x\|_E,\ \forall x\in E\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 4
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-151-7
+  notion: topo-n-0161
+  recto: 'Thm 9 : \(f\) linéaire continue et lipschitzienne'
+  verso: Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux espaces vectoriels normés et \(f\) une application linéaire de \(E\) dans \(F\). Les propriétés suivantes sont équivalentes (extrait de la liste (i) à (ix) du théorème) :<br>(i) \(f\) est continue.<br>(viii) \(f\) est lipschitzienne.
+  source: Poly de topologie Paris Cité, ch. 5, p. 4
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-151-8
+  notion: topo-n-0161
+  recto: 'Thm 9 : \(f\) linéaire continue et uniformément continue'
+  verso: Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux espaces vectoriels normés et \(f\) une application linéaire de \(E\) dans \(F\). Les propriétés suivantes sont équivalentes (extrait de la liste (i) à (ix) du théorème) :<br>(i) \(f\) est continue.<br>(ix) \(f\) est uniformément continue.
+  source: Poly de topologie Paris Cité, ch. 5, p. 4
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-151-9
+  notion: topo-n-0161
+  recto: 'Preuve : Thm 9, (ii) \(\Rightarrow\) (iii)'
+  verso: Par la définition de la continuité en \(0\), il existe \(\alpha>0\) tel que, pour tout \(x\in E\), \(\|x\|_E=\|x-0\|_E<\alpha\Rightarrow\|f(x)\|_F=\|f(x)-f(0)\|_F<1\). Donc \(f\) est bornée sur \(B_E(0,\alpha)\) (« que » corrigé en « sur » ; c'est un ouvert non vide).
+  source: Poly de topologie Paris Cité, ch. 5, p. 4
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-151-10
+  notion: topo-n-0161
+  recto: 'Preuve : Thm 9, (iii) \(\Rightarrow\) (iv)'
+  verso: Soit \(U\) un ouvert de \(E\) tel que \(\|f(x)\|_F\le C,\ \forall x\in U\). Soit \(x\in U\). Comme \(U\) est ouvert, il existe \(r>0\) tel que \(B(x,r)\subset U\). Pour tout \(y\in B(0,1)\), on a \(x+ry\in B(x,r)\) et donc, par la linéarité de \(f\) et les propriétés de la norme, \[\|f(y)\|_F=\frac1r\|f(x+ry-x)\|_F\le\frac1r\big(\|f(x+ry)\|_F+\|f(x)\|_F\big)\le\frac{2C}r.\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 4
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-151-11
+  notion: topo-n-0161
+  recto: 'Preuve : Thm 9, (iv) \(\Rightarrow\) (v) \(\Rightarrow\) (vi)'
+  verso: '(iv)\(\Rightarrow\)(v) : pour tout \(x\in\bar B(0,1)\), on a \(\|f(x)\|_F=2\big\|f\big(\tfrac x2\big)\big\|_F\le2\sup_{y\in B(0,1)}\|f(y)\|_F\).<br>(v)\(\Rightarrow\)(vi) : c''est une conséquence de l''inclusion \(S(0,1)\subset\bar B(0,1)\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 4
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-151-12
+  notion: topo-n-0161
+  recto: 'Preuve : Thm 9, (vi) \(\Rightarrow\) (vii) \(\Rightarrow\) (viii)'
+  verso: '(vi)\(\Rightarrow\)(vii) : pour tout \(x\in E\setminus\{0_E\}\), \(\|f(x)\|_F=\|x\|_E\big\|f\big(\tfrac x{\|x\|_E}\big)\big\|_F\le\|x\|_E\sup_{y\in S(0,1)}\|f(y)\|_F=C\|x\|_E\). De plus, \(\|f(0_E)\|_F=0=C\times\|0_E\|_E\).<br>(vii)\(\Rightarrow\)(viii) : pour tous \(x\) et \(y\in E\), \(\|f(x)-f(y)\|_F=\|f(x-y)\|_F\le C\|x-y\|_E\).<br>((viii)\(\Rightarrow\)(ix) et (ix)\(\Rightarrow\)(i) : déjà vu.)'
+  source: Poly de topologie Paris Cité, ch. 5, p. 4
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-152-1
+  notion: topo-n-0162
+  recto: 'Rappel : isomorphisme d''espace vectoriel, homéomorphisme'
+  verso: Si \(E\) et \(F\) sont deux espaces vectoriels et \(f:E\to F\) est une application linéaire et bijective, alors \(f\) est appelée isomorphisme (d'espace vectoriel). Si \(E\) et \(F\) sont deux espaces topologiques et \(f:E\to F\) est une application bijective et bi-continue, alors \(f\) est appelée homéomorphisme ou isomorphisme (d'espace topologique). Dans les deux cas, l'application \(f\) est appelée isomorphisme si elle est compatible avec la structure considérée. (espace vectoriel ou espace topologique).
+  source: Poly de topologie Paris Cité, ch. 5, p. 4
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-153-1
+  notion: topo-n-0163
+  recto: 'Déf : isomorphisme d''espaces vectoriels normés'
+  verso: Si \(E\) et \(F\) sont deux espaces vectoriels normés et \(f:E\to F\) est une application linéaire bijective et bi-continue, alors \(f\) est appelée isomorphisme (d'espace vectoriel normé ou d'espace vectoriel topologique). On dit alors que \(E\) et \(F\) sont isomorphes.
+  source: Poly de topologie Paris Cité, ch. 5, p. 4
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-154-1
+  notion: topo-n-0164
+  recto: 'Prop. 57 : isomorphisme et encadrement de \(\|f(x)\|_F\)'
+  verso: Soient \(E,F\) deux espaces vectoriels normés et \(f:E\to F\) une application linéaire et surjective. L'application \(f\) est un isomorphisme si et seulement s'il existe \(\alpha>0\) et \(\beta>0\) tels que \[\alpha\|x\|_E\le\|f(x)\|_F\le\beta\|x\|_E,\quad\forall x\in E.\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 5
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-154-2
+  notion: topo-n-0164
+  recto: 'Preuve : Prop. 57'
+  verso: Comme \(f\) est linéaire et surjective, c'est un isomorphisme si et seulement si \(f\) est injective et bi-continue. La continuité est équivalente à la condition \(\|f(x)\|_F\le\beta\|x\|_E,\ \forall x\in E\). L'injectivité (donc la bijectivité) et la continuité de l'application réciproque \(f^{-1}\) sont quant à elles équivalentes à la condition \(\alpha\|x\|_E\le\|f(x)\|_F,\ \forall x\in E\) (qui s'écrit aussi \(\|f^{-1}(y)\|_E\le\frac1\alpha\|y\|_F\), une fois la bijectivité montrée).
+  source: Poly de topologie Paris Cité, ch. 5, p. 5
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-155-1
+  notion: topo-n-0165
+  recto: 'Déf : \(\mathcal L(E,F)\), applications linéaires continues'
+  verso: Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux espaces vectoriels normés. On désigne par \(\mathcal L(E,F)\) l'ensemble des applications linéaires continues de \(E\) dans \(F\). On note \(\mathcal L(E)\) pour \(\mathcal L(E,E)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 5
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-156-1
+  notion: topo-n-0166
+  recto: 'Prop. 58 : norme triple sur \(\mathcal L(E,F)\)'
+  verso: L'ensemble \(\mathcal L(E,F)\) est un sous espace vectoriel de l'espace \(L(E,F)\) des applications linéaires (« linàires » corrigé) de \(E\) dans \(F\). L'application \[f\mapsto|||f|||=\sup_{x\in E\setminus\{0\}}\frac{\|f(x)\|_F}{\|x\|_E}=\sup_{x\in S(0,1)}\|f(x)\|_F\] est une norme sur \(\mathcal L(E,F)\) appelée norme triple.
+  source: Poly de topologie Paris Cité, ch. 5, p. 5
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-156-2
+  notion: topo-n-0166
+  recto: 'Preuve : Prop. 58'
+  verso: D'après le théorème 9, une application linéaire \(f\) est continue si et seulement si \(|||f|||<+\infty\). Pour montrer que \(\mathcal L(E,F)\) est un sous-espace vectoriel de l'espace \(L(E,F)\), il suffit donc de montrer que \(|||\cdot|||\) est une norme. Cette propriété se montre facilement en utilisant le fait que \(\|\cdot\|_F\) est une norme.
+  source: Poly de topologie Paris Cité, ch. 5, p. 5
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-157-1
+  notion: topo-n-0167
+  recto: 'Prop. 59 : \(|||g\circ f|||\le|||g|||\,|||f|||\)'
+  verso: Soient \(E,F,G\) trois espaces vectoriels normés, \(f\in\mathcal L(E,F)\) et \(g\in\mathcal L(F,G)\). La composée \(g\circ f\) appartient à \(\mathcal L(E,G)\) et satisfait l'inégalité \[|||g\circ f|||_{\mathcal L(E,G)}\le|||g|||_{\mathcal L(F,G)}\,|||f|||_{\mathcal L(E,F)}.\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 5
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-157-2
+  notion: topo-n-0167
+  recto: 'Preuve : Prop. 59'
+  verso: La linéarité est évidente. Pour le reste, on écrit, \(\forall x\in E\), \(\|g\circ f(x)\|_G=\|g(f(x))\|_G\le|||g|||_{\mathcal L(F,G)}\|f(x)\|_F\le|||g|||_{\mathcal L(F,G)}|||f|||_{\mathcal L(E,F)}\|x\|_E\). Donc \(\sup_{x\in E\setminus\{0\}}\frac{\|g\circ f(x)\|_G}{\|x\|_E}\le|||g|||_{\mathcal L(F,G)}|||f|||_{\mathcal L(E,F)}\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 5
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-158-1
+  notion: topo-n-0168
+  recto: 'Déf : normes équivalentes'
+  verso: Deux normes, sur un même espace vectoriel, sont dites équivalentes si et seulement si elles sont associées à la même topologie.
+  source: Poly de topologie Paris Cité, ch. 5, p. 6
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-159-1
+  notion: topo-n-0169
+  recto: 'Prop. 60 : normes équivalentes et encadrement'
+  verso: Deux normes \(\|\cdot\|_1\) et \(\|\cdot\|_2\) sur un même espace vectoriel \(E\) sont équivalentes si et seulement s'il existe \(\alpha>0\) et \(\beta>0\) tels que \[\alpha\|x\|_1\le\|x\|_2\le\beta\|x\|_1,\quad\forall x\in E.\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 6
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-159-2
+  notion: topo-n-0169
+  recto: 'Preuve : Prop. 60'
+  verso: \(\|\cdot\|_1\) et \(\|\cdot\|_2\) sont équivalentes si et seulement si \((E,\|\cdot\|_1)\) et \((E,\|\cdot\|_2)\) ont la même topologie, c'est-à-dire si et seulement si l'application identité de \((E,\|\cdot\|_1)\) dans \((E,\|\cdot\|_2)\) est un isomorphisme. On conclut alors la démonstration en appliquant la proposition 57.
+  source: Poly de topologie Paris Cité, ch. 5, p. 6
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-160-1
+  notion: topo-n-0170
+  recto: 'Rem. 1 : symétrie de l''équivalence des normes'
+  verso: On a alors \(\frac1\beta\|x\|_2\le\|x\|_1\le\frac1\alpha\|x\|_2\). La relation est symétrique.
+  source: Poly de topologie Paris Cité, ch. 5, p. 6
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-160-2
+  notion: topo-n-0170
+  recto: 'Rem. 2 : distances lipschitz-équivalentes'
+  verso: Les distances associées à \(\|\cdot\|_1\) et \(\|\cdot\|_2\) sont donc Lipschitz équivalentes alors qu'elles n'ont été définies que comme topologiquement équivalentes.
+  source: Poly de topologie Paris Cité, ch. 5, p. 6
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-161-1
+  notion: topo-n-0171
+  recto: 'Prop. 61 : normes équivalentes sur un produit fini d''evn'
+  verso: 'Soient \((E_k,\|\cdot\|_{E_k})_{k\in\{1,\dots,n\}}\) une famille finie d''espaces vectoriels normés et \(E=\prod_{k=1}^nE_k\) l''espace vectoriel produit. Les applications \[N_p:x\mapsto\Big(\sum_{k=1}^n\|x_k\|_{E_k}^p\Big)^{\frac1p},\] où \(p\in[1,+\infty[\), et \[N_\infty:x\mapsto\max_{k\in\{1,\dots,n\}}\|x_k\|_{E_k}\] définissent des normes équivalentes sur \(E\). (Le poly écrit \(\|x\|_{E_k}\) dans \(N_\infty\) : coquille corrigée en \(\|x_k\|_{E_k}\).)'
+  source: Poly de topologie Paris Cité, ch. 5, p. 6
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-161-2
+  notion: topo-n-0171
+  recto: 'Preuve : Prop. 61'
+  verso: Compte tenu de la proposition précédente (Prop. 60), il suffit de montrer que, pour tous \(p\in[1,+\infty]\) et \(x\in E\), \[N_\infty(x)\le N_p(x)\le n^{\frac1p}N_\infty(x).\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 6
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-162-1
+  notion: topo-n-0172
+  recto: 'Déf : \(L(E_1,\dots,E_n;F)\), applications \(n\)-linéaires'
+  verso: On note \(L(E_1,\dots,E_n;F)\) l'espace des applications \(n\)-linéaires (i.e. linéaires par rapport à chaque variable) de \(E\) dans un espace vectoriel \(F\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 6
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-163-1
+  notion: topo-n-0173
+  recto: 'Prop. 62 : \(f\) \(n\)-linéaire continue et continue en \(0_E\)'
+  verso: 'Soient \(\big((E_k,\|\cdot\|_{E_k})\big)_{k\in\{1,\dots,n\}}\) une famille finie d''espaces vectoriels normés, \((F,\|\cdot\|_F)\) un espace vectoriel normé et \(f\in L(E_1,\dots,E_n;F)\). On munit l''espace produit \(E=\prod_{k=1}^nE_k\) de l''une des normes \(N_p\) (\(p\in[1,+\infty]\) ; le poly écrit \([0,+\infty]\) : coquille corrigée). Les propriétés suivantes sont équivalentes (extrait de la liste (i) à (iv)) :<br>(i) \(f\) est continue.<br>(ii) \(f\) est continue en \(0_E\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 7
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-163-2
+  notion: topo-n-0173
+  recto: 'Prop. 62 : \(f\) \(n\)-linéaire continue et bornée sur la boule unité fermée'
+  verso: 'Soient \(\big((E_k,\|\cdot\|_{E_k})\big)_{k\in\{1,\dots,n\}}\) une famille finie d''espaces vectoriels normés, \((F,\|\cdot\|_F)\) un espace vectoriel normé et \(f\in L(E_1,\dots,E_n;F)\). On munit l''espace produit \(E=\prod_{k=1}^nE_k\) de l''une des normes \(N_p\) (\(p\in[1,+\infty]\) ; le poly écrit \([0,+\infty]\) : coquille corrigée). Les propriétés suivantes sont équivalentes (extrait de la liste (i) à (iv)) :<br>(i) \(f\) est continue.<br>(iii) \(f\) est bornée (« borné » corrigé) sur \(\bar B_E(0,1)=\{x\in E\ /\ N_p(x)\le1\}\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 7
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-163-3
+  notion: topo-n-0173
+  recto: 'Prop. 62 : \(f\) \(n\)-linéaire continue et majoration par le produit des normes'
+  verso: 'Soient \(\big((E_k,\|\cdot\|_{E_k})\big)_{k\in\{1,\dots,n\}}\) une famille finie d''espaces vectoriels normés, \((F,\|\cdot\|_F)\) un espace vectoriel normé et \(f\in L(E_1,\dots,E_n;F)\). On munit l''espace produit \(E=\prod_{k=1}^nE_k\) de l''une des normes \(N_p\) (\(p\in[1,+\infty]\) ; le poly écrit \([0,+\infty]\) : coquille corrigée). Les propriétés suivantes sont équivalentes (extrait de la liste (i) à (iv)) :<br>(i) \(f\) est continue.<br>(iv) Il existe \(C>0\) tel que, pour tout \(x\in E\), on a \(\|f(x)\|_F\le C\|x_1\|_{E_1}\cdots\|x_n\|_{E_n}\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 7
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-163-4
+  notion: topo-n-0173
+  recto: 'Prop. 62 : norme sur \(\mathcal L(E_1,\dots,E_n;F)\)'
+  verso: Dans le cadre de la Prop. 62 (\(f\in L(E_1,\dots,E_n;F)\) vérifiant les propriétés équivalentes (i) à (iv)), l'application \[f\mapsto|||f|||=\sup_{\substack{x_1\in E_1\setminus\{0\}\\\vdots\\x_n\in E_n\setminus\{0\}}}\frac{\|f(x)\|_F}{\|x_1\|_{E_1}\cdots\|x_n\|_{E_n}}\] est alors une norme sur l'espace \(\mathcal L(E_1,\dots,E_n;F)\) des applications \(n\)-linéaires continues de \(E\) dans \(F\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 7
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-163-5
+  notion: topo-n-0173
+  recto: 'Preuve : Prop. 62, (ii) \(\Rightarrow\) (iii)'
+  verso: Comme \(f\) est continue en \(0\), il existe \(\alpha>0\) tel que, pour tout \(x\in E\), \(N_p(x)\le\alpha\Rightarrow\|f(x)\|_F\le1\). Soit \(x\in\bar B_E(0,1)\). On a \(N_p(\alpha x)=\alpha N_p(x)\le\alpha\), donc \(\|f(\alpha x)\|_F\le1\), où \(f(\alpha x)=\alpha^nf(x)\) par \(n\)-linéarité de \(f\). Ainsi \(\|f(x)\|_F\le\frac1{\alpha^n}\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 7
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-163-6
+  notion: topo-n-0173
+  recto: 'Preuve : Prop. 62, (iii) \(\Rightarrow\) (iv)'
+  verso: 'Comme \(N_p(x)\le n^{\frac1p}N_\infty(x)\), on a \(\{N_\infty(x)\le n^{-\frac1p}\}\subset\{N_p(x)\le1\}\). Donc \(f\) est bornée sur \(\{N_\infty(x)\le n^{-\frac1p}\}\) et, par \(n\)-linéarité, sur \(\{N_\infty(x)\le1\}\) : soit \(C>0\) tel que \(\|f(x)\|_F\le C\) si \(N_\infty(x)\le1\). Pour tout \(x\) tel que \(x_k\ne0,\ \forall k\), on a \(N_\infty\big(\frac{x_1}{\|x_1\|_{E_1}},\dots,\frac{x_n}{\|x_n\|_{E_n}}\big)=1\). Donc \(\frac1{\|x_1\|_{E_1}\cdots\|x_n\|_{E_n}}f(x)=f\big(\frac{x_1}{\|x_1\|_{E_1}},\dots,\frac{x_n}{\|x_n\|_{E_n}}\big)\) est de norme \(\le C\), et \(\|f(x)\|_F\le C\|x_1\|_{E_1}\cdots\|x_n\|_{E_n}\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 7
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-163-7
+  notion: topo-n-0173
+  recto: 'Preuve : Prop. 62, (iv) \(\Rightarrow\) (i)'
+  verso: Continuité au point \(x=(x_1,\dots,x_n)\). Par \(n\)-linéarité de \(f\), \(f(y)-f(x)=\sum_{k=1}^n\big(f(x_1,\dots,x_{k-1},y_k,\dots,y_n)-f(x_1,\dots,x_k,y_{k+1},\dots,y_n)\big)=\sum_{k=1}^nf(x_1,\dots,x_{k-1},y_k-x_k,y_{k+1},\dots,y_n)\). Donc \(\|f(y)-f(x)\|_F\le C\sum_{k=1}^n\|x_1\|\cdots\|x_{k-1}\|\,\|y_k-x_k\|\,\|y_{k+1}\|\cdots\|y_n\|\), où, pour chaque \(k\), \(\|y_k-x_k\|_{E_k}\to0\) et \(\|y_k\|_{E_k}\to\|x_k\|_{E_k}\) quand \(y\to x\), ce qui entraîne \(\|f(y)-f(x)\|_F\to0\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 8
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-164-1
+  notion: topo-n-0174
+  recto: 'Thm 10 : normes en dimension finie'
+  verso: Sur un espace vectoriel de dimension finie, toutes les normes sont équivalentes.
+  source: Poly de topologie Paris Cité, ch. 5, p. 8
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-164-2
+  notion: topo-n-0174
+  recto: 'Preuve : Thm 10, étape 1 (la norme \(N\) des coordonnées, fermés bornés compacts)'
+  verso: Soit \(E\) un \(\mathbb K\)-espace vectoriel de dimension \(n\) et \((e_1,\dots,e_n)\) une base. Pour tout \(x\in E\), il existe un unique \(\lambda=(\lambda_1,\dots,\lambda_n)\in\mathbb K^n\) tel que \(x=\sum_{k=1}^n\lambda_ke_k\) (5.1). On note \(\|\cdot\|_2\) la norme euclidienne sur \(\mathbb K^n\) ; \(N:x\mapsto\|\lambda\|_2\) est une norme sur \(E\) et \(f:(E,N)\to(\mathbb K^n,\|\cdot\|_2)\), \(x\mapsto\lambda\) est un isomorphisme (isométrique).<br>Les compacts de \((\mathbb K^n,\|\cdot\|_2)\) sont ses parties fermées et bornées. Si \(A\) est une partie fermée et bornée de \((E,N)\), \(f(A)\) est bornée ; de plus, \(f^{-1}\) étant continue, \(f(A)=(f^{-1})^{-1}(A)\) est fermé donc compact dans \((\mathbb K^n,\|\cdot\|_2)\) ; par continuité de \(f^{-1}\), \(A=f^{-1}(f(A))\) est compacte dans \((E,N)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 8
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-164-3
+  notion: topo-n-0174
+  recto: 'Preuve : Thm 10, étape 2 (toute norme est équivalente à \(N\))'
+  verso: 'Soit \(\|\cdot\|_E\) une autre norme sur \(E\). Pour \(x=\sum\lambda_ke_k\) et \(y=\sum\mu_ke_k\), \(\big|\|x\|_E-\|y\|_E\big|\le\|x-y\|_E\le\sum_{k=1}^n|\lambda_k-\mu_k|\|e_k\|_E\le\big(\sum|\lambda_k-\mu_k|^2\big)^{\frac12}\big(\sum\|e_k\|_E^2\big)^{\frac12}=N(x-y)\times C\) (Cauchy-Schwarz). Donc \(\|\cdot\|_E\) est continue sur \((E,N)\). La sphère unité \(S_N(0,1)\) est fermée et bornée dans \((E,N)\), donc compacte : \(\|\cdot\|_E\) atteint ses bornes sur \(S_N(0,1)\) ; il existe \(y,z\) avec \(\|y\|_E\le\|x\|_E\le\|z\|_E\) pour tout \(x\in S_N(0,1)\). Avec \(\alpha=\|y\|_E\), \(\beta=\|z\|_E\), pour tout \(x\ne0\), \(\frac x{N(x)}\in S_N(0,1)\), donc \(\alpha N(x)\le\|x\|_E\le\beta N(x)\) (vrai aussi pour \(x=0\)). Les normes \(N\) et \(\|\cdot\|_E\) sont équivalentes et, par transitivité, toutes les normes sur \(E\) sont équivalentes.'
+  source: Poly de topologie Paris Cité, ch. 5, p. 8-9
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-165-1
+  notion: topo-n-0175
+  recto: 'Prop. 63 : compacts en dimension finie'
+  verso: Les compacts d'un espace vectoriel normé de dimension finie sont les parties fermées et bornées.
+  source: Poly de topologie Paris Cité, ch. 5, p. 9
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-165-2
+  notion: topo-n-0175
+  recto: 'Preuve : Prop. 63'
+  verso: On reprend les notations de la démonstration précédente. L'application identité est ainsi un isomorphisme de \((E,N)\) dans \((E,\|\cdot\|_E)\) et, en reprenant les mêmes arguments qu'avec l'application \(f\), on montre que les parties fermées et bornées de \((E,\|\cdot\|_E)\) sont ses parties compactes car cette propriété est vraie sur \((E,N)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 9
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-166-1
+  notion: topo-n-0176
+  recto: 'Exemple : normes non équivalentes sur \(\mathbb K[X]\)'
+  verso: 'Ces propriétés sont évidemment fausses en dimension infinie. On peut, par exemple, définir sur l''ensemble des polynômes \(\mathbb K[X]\) les normes \(\|\cdot\|_1\) et \(\|\cdot\|_\infty\) en posant \[\Big\|\sum_{k=0}^na_kX^k\Big\|_1=\sum_{k=0}^n|a_k|\quad\text{et}\quad\Big\|\sum_{k=0}^na_kX^k\Big\|_\infty=\sup_{k\in\{0,\dots,n\}}|a_k|.\] (Le poly écrit les indices \(k=1\) et \(k\in\{1,\dots,n\}\) : coquille corrigée en \(k=0\), cohérente avec \(P_n\) ci-dessous.)'
+  source: Poly de topologie Paris Cité, ch. 5, p. 9
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-166-2
+  notion: topo-n-0176
+  recto: 'Exemple : \(P_n=\frac1n\sum_{k=0}^nX^k\) prouve la non-équivalence sur \(\mathbb K[X]\)'
+  verso: 'Soit \(P_n=\frac1n\sum_{k=0}^nX^k\). On a \(\|P_n\|_1=\sum_{k=0}^n\frac1n=\frac{n+1}n\ge1\) (le poly écrit \(\frac nn=1\) : coquille, la somme a \(n+1\) termes), mais \(\|P_n\|_\infty=\frac1n\to0\) quand \(n\to+\infty\), ce qui prouve que les normes ne sont pas équivalentes sur \(\mathbb K[X]\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 10
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-167-1
+  notion: topo-n-0177
+  recto: 'Prop. 64 : normes équivalentes sur un produit d''evn définies par \(N\) et \(\tilde N\)'
+  verso: Soient \(\big((E_k,\|\cdot\|_{E_k})\big)_{k\in\{1,\dots,d\}}\) une famille finie d'espaces vectoriels normés et \(N,\tilde N\) deux normes sur \(\mathbb R^d\). Les applications \[x\mapsto N\big(\|x_1\|_{E_1},\dots,\|x_d\|_{E_d}\big)\quad\text{et}\quad x\mapsto\tilde N\big(\|x_1\|_{E_1},\dots,\|x_d\|_{E_d}\big)\] sont des normes équivalentes sur l'espace produit \(E=\prod_{k=1}^dE_k\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 10
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-168-1
+  notion: topo-n-0178
+  recto: 'Prop. 65 : dimension finie et complétude'
+  verso: Un espace vectoriel de dimension finie est complet.
+  source: Poly de topologie Paris Cité, ch. 5, p. 10
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-168-2
+  notion: topo-n-0178
+  recto: 'Preuve : Prop. 65'
+  verso: Soit \((u_n)_{n\in\mathbb N}\) une suite de Cauchy d'un espace \(E\) de dimension finie. La suite étant de Cauchy, elle est bornée. La partie \(A=\overline{\{u_n\ /\ n\in\mathbb N\}}\) est donc fermée et bornée. Comme \(E\) est de dimension finie, \(A\) est compacte et on en déduit que la suite \((u_n)_{n\in\mathbb N}\) possède une valeur d'adhérence. On conclut en rappelant qu'une suite de Cauchy qui possède une valeur d'adhérence est convergente.
+  source: Poly de topologie Paris Cité, ch. 5, p. 10
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-169-1
+  notion: topo-n-0179
+  recto: 'Cor. 10 : sous-espace de dimension finie fermé'
+  verso: Tout sous-espace de dimension finie d'un espace vectoriel normé \(E\) est fermé dans \(E\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 10
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-169-2
+  notion: topo-n-0179
+  recto: 'Preuve : Cor. 10'
+  verso: Ce sous-espace est complet, donc fermé dans \(E\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 10
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-170-1
+  notion: topo-n-0180
+  recto: 'Prop. 66 : continuité des applications linéaires en dimension finie'
+  verso: Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux espaces vectoriels normés. Si \(E\) est de dimension finie, alors toute application linéaire de \(E\) dans \(F\) est continue.
+  source: Poly de topologie Paris Cité, ch. 5, p. 10
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-170-2
+  notion: topo-n-0180
+  recto: 'Preuve : Prop. 66'
+  verso: Soit \((e_1,\dots,e_n)\) une base de \(E\). Elle permet de définir une norme \(N\) comme dans la démonstration du théorème 10 (\(N(x)=\|\lambda\|_2\) où \(\lambda\) est défini par (5.1)). Comme toutes les normes sur \(E\) sont équivalentes, il existe \(C>0\) tel que \(N(x)\le C\|x\|_E,\ \forall x\in E\).<br>Soient \(f\in L(E,F)\) et \(x\in E\), de coordonnées \(\lambda\in\mathbb K^n\). Par linéarité de \(f\), \(\|f(x)\|_F=\big\|\sum_{k=1}^n\lambda_kf(e_k)\big\|_F\le\sum|\lambda_k|\|f(e_k)\|_F\le\big(\sum|\lambda_k|^2\big)^{\frac12}\big(\sum\|f(e_k)\|_F^2\big)^{\frac12}=N(x)\times\tilde C\le C\tilde C\|x\|_E\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 10-11
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-171-1
+  notion: topo-n-0181
+  recto: 'Rem. : généralisation de la Prop. 66 aux applications \(n\)-linéaires'
+  verso: On peut vérifier facilement que cette propriété (« de » corrigé en « que ») se généralise aux applications \(n\)-linéaires (en exercice).
+  source: Poly de topologie Paris Cité, ch. 5, p. 11
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-172-1
+  notion: topo-n-0182
+  recto: 'Thm 11 (Riesz) : dimension finie et boule unité fermée compacte'
+  verso: Soit \(E\) un espace vectoriel normé. Les propriétés suivantes sont équivalentes.<br>(i) \(E\) est de dimension finie.<br>(ii) \(\bar B(0,1)\), la boule unité fermée de \(E\), est compacte.
+  source: Poly de topologie Paris Cité, ch. 5, p. 11
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-172-2
+  notion: topo-n-0182
+  recto: 'Preuve : Thm 11, (i) \(\Rightarrow\) (ii) et début de (ii) \(\Rightarrow\) (i)'
+  verso: '(i)\(\Rightarrow\)(ii) : \(\bar B(0,1)\) est fermé et borné dans un espace de dimension finie, donc compact par la proposition 63.<br>(ii)\(\Rightarrow\)(i) : soit \(\alpha\in]0,1[\). Comme \(\bar B(0,1)\) est compact et inclus dans l''union \(\bigcup_{x\in\bar B(0,1)}B(x,\alpha)\), il existe \(x_1,\dots,x_n\in\bar B(0,1)\) tels que \(\bar B(0,1)\subset\bigcup_{k=1}^nB(x_k,\alpha)\). Posons \(F=\mathrm{vect}(x_1,\dots,x_n)\) : c''est un sous-espace de dimension finie de \(E\) ; montrons que \(E=F\). Soit \(x\in E\setminus\{0\}\). Comme \(\frac x{\|x\|}\in\bar B(0,1)\), il existe \(z_1\in\{x_1,\dots,x_n\}\) tel que \(\frac x{\|x\|}\in B(z_1,\alpha)\). Il existe donc \(y_1\in B(0,1)\) tel que \(\frac x{\|x\|}=z_1+\alpha y_1\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 11
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-172-3
+  notion: topo-n-0182
+  recto: 'Preuve : Thm 11, fin de (ii) \(\Rightarrow\) (i) (récurrence)'
+  verso: Supposons que, pour un \(k\in\mathbb N^*\), il existe \(z_k\in F\) et \(y_k\in B(0,1)\) tels que \(\frac x{\|x\|}=z_k+\alpha^ky_k\). Comme \(y_k\in B(0,1)\subset\bigcup_{l=1}^nB(x_l,\alpha)\), il existe \(l\) tel que \(y_k\in B(x_l,\alpha)\) et donc \(y_{k+1}\in B(0,1)\) tel que \(y_k=x_l+\alpha y_{k+1}\). On en déduit \(\frac x{\|x\|}=z_k+\alpha^kx_l+\alpha^{k+1}y_{k+1}=z_{k+1}+\alpha^{k+1}y_{k+1}\), où \(z_{k+1}=z_k+\alpha^kx_l\in F\). On construit ainsi une suite \((z_k)_{k\in\mathbb N^*}\) de \(F\) telle que \(\big\|\frac x{\|x\|}-z_k\big\|=\alpha^k\|y_k\|\le\alpha^k\to0\). Ainsi \(\frac x{\|x\|}\in\overline F\), qui est fermé car de dimension finie. En utilisant l'homogénéité de \(F\), on conclut que \(x\in F\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 12
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-173-1
+  notion: topo-n-0183
+  recto: 'Déf : espace topologique séparé localement compact'
+  verso: On dit qu'un espace topologique séparé est localement compact si et seulement si tout point de cet espace admet un voisinage compact.
+  source: Poly de topologie Paris Cité, ch. 5, p. 12
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-173-2
+  notion: topo-n-0183
+  recto: 'Rem. : evn localement compact si et seulement s''il est de dimension finie'
+  verso: Le théorème de Riesz montre qu'un espace vectoriel normé est localement compact si et seulement s'il est de dimension finie. En effet, \(\bar B(x,1)\) est alors un voisinage compact de tout point \(x\). Inversement, si \(E\) est localement compact, alors \(0_E\) possède un voisinage compact \(V\). Il existe \(r>0\) tel que \(\bar B(0,r)\subset V\). La boule \(\bar B(0,r)\) étant fermée dans un compact, elle est compacte. Il est alors facile de montrer que la boule unité \(\bar B(0,1)\) l'est également.
+  source: Poly de topologie Paris Cité, ch. 5, p. 12
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-174-1
+  notion: topo-n-0184
+  recto: 'Cor. 11 : compacts d''un evn de dimension infinie'
+  verso: Dans un espace vectoriel normé de dimension infinie, tous les compacts sont d'intérieur vide.
+  source: Poly de topologie Paris Cité, ch. 5, p. 12
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-174-2
+  notion: topo-n-0184
+  recto: 'Preuve : Cor. 11'
+  verso: Soit \(E\) un espace vectoriel normé, \(K\in\mathcal P(E)\) un compact d'intérieur non vide et \(x\in\mathring K\). Il existe \(r>0\) tel que \(\bar B(x,r)\subset K\). \(\bar B(x,r)\) étant fermé dans le compact \(K\), c'est également un compact. Par translation et homothétie, on montre ensuite que \(\bar B(0,1)\) est compact et on conclut, par le théorème de Riesz, que \(E\) est de dimension finie.
+  source: Poly de topologie Paris Cité, ch. 5, p. 12
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-175-1
+  notion: topo-n-0185
+  recto: 'Déf : espace de Banach'
+  verso: On dit qu'un espace vectoriel normé est un espace de Banach si et seulement s'il est complet pour la distance associée à sa norme.
+  source: Poly de topologie Paris Cité, ch. 5, p. 12
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-176-1
+  notion: topo-n-0186
+  recto: 'Exemple : un evn de dimension finie est un espace de Banach'
+  verso: Un espace vectoriel normé de dimension finie est un espace de Banach bien que cette dénomination soit souvent réservée aux espaces complets de dimension infinie.
+  source: Poly de topologie Paris Cité, ch. 5, p. 12
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-176-2
+  notion: topo-n-0186
+  recto: 'Exemple : les espaces \(L^p\) sont de Banach'
+  verso: Soit \((X,\mu)\) un espace mesuré. Pour tout \(p\in[1,+\infty]\), \((L^p(X,d\mu),\|\cdot\|_p)\) est un espace de Banach (cf. cours de théorie de la mesure).
+  source: Poly de topologie Paris Cité, ch. 5, p. 12
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-177-1
+  notion: topo-n-0187
+  recto: 'Prop. 67 : \(\mathcal L(E,F)\) est de Banach si \(F\) l''est'
+  verso: Soient \(E\) et \(F\) deux espaces vectoriels normés. Si \(F\) est un espace de Banach, alors \((\mathcal L(E,F),|||\cdot|||)\) en est un également.
+  source: Poly de topologie Paris Cité, ch. 5, p. 12
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-177-2
+  notion: topo-n-0187
+  recto: 'Preuve : Prop. 67'
+  verso: 'Soit \((f_n)_{n\in\mathbb N}\) une suite de Cauchy de \(\mathcal L(E,F)\) : pour tout \(\epsilon>0\), il existe \(n\) tel que, pour tous \(p,q\ge n\), \(|||f_p-f_q|||<\epsilon\), i.e. \(\|f_p(x)-f_q(x)\|_F<\epsilon\|x\|_E,\ \forall x\in E\) (5.2). Pour tout \(x\) fixé, \((f_n(x))\) est de Cauchy dans \(F\) complet : il existe \(y\in F\) tel que \(f_n(x)\to y\). On pose \(f(x)=y\). Par passage à la limite dans \(f_n(\lambda x+y)=\lambda f_n(x)+f_n(y)\), \(f\) est linéaire. En faisant tendre \(q\) vers \(+\infty\) dans (5.2), pour \(p\ge n\), \(\|f_p(x)-f(x)\|_F\le\epsilon\|x\|_E,\ \forall x\in E\), i.e. \(|||f_p-f|||\le\epsilon\) : \(|||f|||<+\infty\) et \(|||f_n-f|||\to0\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 12-13
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-178-1
+  notion: topo-n-0188
+  recto: 'Prop. 68 : \(\mathcal C(X,\mathbb K)\) muni de \(\|\cdot\|_\infty\) est de Banach'
+  verso: Soit \(X\) un espace métrique compact. On munit l'espace \(\mathcal C(X,\mathbb K)\) des fonctions continues sur \(\mathbb K\) de la norme \(\|\cdot\|_\infty\) définie par \[\|f\|_\infty=\sup_{x\in X}|f(x)|,\quad\forall f\in\mathcal C(X,\mathbb K).\] L'espace \((\mathcal C(X,\mathbb K),\|\cdot\|_\infty)\) est alors un espace de Banach.
+  source: Poly de topologie Paris Cité, ch. 5, p. 13
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-178-2
+  notion: topo-n-0188
+  recto: 'Preuve : Prop. 68'
+  verso: 'La norme est bien définie car les fonctions continues sur un compact sont bornées. Complétude (comme pour la Prop. 67) : soit \((f_n)\) de Cauchy ; pour tout \(\epsilon>0\), il existe \(n\) tel que pour tous \(p,q\ge n\), \(|f_p(x)-f_q(x)|<\epsilon,\ \forall x\in X\) (5.3). Pour tout \(x\), \((f_n(x))\) est de Cauchy dans \(\mathbb K\) complet : elle tend vers \(f(x)\). En faisant tendre \(q\) vers \(+\infty\) : \(|f_p(x)-f(x)|\le\epsilon,\ \forall x\in X\), i.e. \(\|f_p-f\|_\infty\le\epsilon\). Continuité : avec \(\|f_n-f\|_\infty<\epsilon\) et \(f_n\) uniformément continue sur le compact \(X\), il existe \(\alpha>0\) tel que \(d(x,y)<\alpha\Rightarrow|f_n(x)-f_n(y)|<\epsilon\). Donc, si \(d(x,y)<\alpha\), \(|f(x)-f(y)|\le|f(x)-f_n(x)|+|f_n(x)-f_n(y)|+|f_n(y)-f(y)|<3\epsilon\), ce qui prouve la continuité de \(f\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 13
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-179-1
+  notion: topo-n-0189
+  recto: 'Déf : série d''un espace vectoriel normé, somme partielle, convergence, somme'
+  verso: Soit \((u_n)_{n\in\mathbb N}\) une suite d'un espace vectoriel normé \(E\). On note \(S_n=\sum_{k=0}^nu_k\) la somme partielle de rang \(n\). On rappelle que la suite \((S_n)_{n\in\mathbb N}\) est appelée la série de terme général \(u_n\). On la note \(\sum u_n\). On dit que la série de terme général \(u_n\) converge si et seulement si la suite \((S_n)_{n\in\mathbb N}\) converge. La limite est notée \(\sum_{n=0}^{+\infty}u_n\) et est appelée somme de la série.
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-180-1
+  notion: topo-n-0190
+  recto: 'Prop. 69 (i) : le terme général d''une série convergente tend vers 0'
+  verso: On a les propriétés suivantes<br>(i) Si \(\sum u_n\) converge, alors \(u_n\to0\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-180-2
+  notion: topo-n-0190
+  recto: 'Prop. 69 (ii) : espace vectoriel des séries convergentes'
+  verso: On a les propriétés suivantes<br>(ii) L'ensemble des séries convergentes de \(E\) a une structure d'espace vectoriel.
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-180-3
+  notion: topo-n-0190
+  recto: 'Prop. 69 (iii) : image d''une série convergente par une application linéaire continue'
+  verso: On a les propriétés suivantes<br>(iii) Si \(f\in\mathcal L(E,F)\) et si \(\sum u_n\) converge dans \(E\), alors \(\sum f(u_n)\) converge dans \(F\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-180-4
+  notion: topo-n-0190
+  recto: 'Preuve : Prop. 69 (i)'
+  verso: Si la série \(\sum u_n\) converge, alors la suite \(\big(\sum_{k=0}^nu_k\big)_{n\in\mathbb N}\) satisfait le critère de Cauchy, c'est-à-dire, pour tout \(\epsilon\), il existe \(n\in\mathbb N\) tel que, pour tous \(p,q\ge n\), \(\big\|\sum_{k=0}^pu_k-\sum_{k=0}^qu_k\big\|<\epsilon\). En particulier, pour \(q=p-1\), on a, pour tout \(p>n\), \(\|u_p\|<\epsilon\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-180-5
+  notion: topo-n-0190
+  recto: 'Preuve : Prop. 69 (ii)'
+  verso: On montre facilement que si \(\sum u_n\) et \(\sum v_n\) convergent, alors pour tout \(\lambda\in\mathbb K\), \(\sum(u_n+\lambda v_n)\) converge.
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-180-6
+  notion: topo-n-0190
+  recto: 'Preuve : Prop. 69 (iii)'
+  verso: La suite \(\big(\sum_{k=0}^nf(u_k)\big)_{n\in\mathbb N}=\big(f\big(\sum_{k=0}^nu_k\big)\big)_{n\in\mathbb N}\) converge, car \(\big(\sum_{k=0}^nu_k\big)_{n\in\mathbb N}\) converge et \(f\) est continue.
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-181-1
+  notion: topo-n-0191
+  recto: 'Prop. 70 (critère de Cauchy) : convergence d''une série dans un espace de Banach'
+  verso: Dans un espace de Banach, la série \(\sum u_n\) converge si et seulement si \[\lim_{n\to+\infty}\Big(\sup_{m\in\mathbb N}\Big\|\sum_{k=n}^{n+m}u_k\Big\|\Big)=0.\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-182-1
+  notion: topo-n-0192
+  recto: 'Déf : série absolument (ou normalement) convergente'
+  verso: Une série \(\sum u_n\) dans un espace vectoriel normé \((E,\|\cdot\|)\) est dite absolument (ou normalement) convergente si et seulement si la série \(\sum\|u_n\|\) converge.
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-182-2
+  notion: topo-n-0192
+  recto: 'Rem. 1 : « normalement convergente »'
+  verso: Le terme normalement convergente est souvent réservé aux séries de fonctions et à la norme uniforme.
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-182-3
+  notion: topo-n-0192
+  recto: 'Rem. 2 : généralisation de la convergence absolue réelle'
+  verso: Il s'agit d'une généralisation de la notion de convergence absolue déjà vue dans le cadre des séries réelles.
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-183-1
+  notion: topo-n-0193
+  recto: 'Thm 12 : espace de Banach et séries absolument convergentes'
+  verso: Un espace vectoriel normé \(E\) est un espace de Banach si et seulement si toute série absolument convergente de \(E\) est convergente.
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-183-2
+  notion: topo-n-0193
+  recto: 'Thm 12 : majoration de la norme de la somme d''une série absolument convergente'
+  verso: '(Dans le théorème 12 : \(E\) espace de Banach si et seulement si toute série absolument convergente de \(E\) est convergente.) On a alors \[\Big\|\sum_{n=0}^{+\infty}u_n\Big\|\le\sum_{n=0}^{+\infty}\|u_n\|,\] pour toute série \(\sum u_n\) absolument convergente.'
+  source: Poly de topologie Paris Cité, ch. 5, p. 14
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-183-3
+  notion: topo-n-0193
+  recto: 'Preuve : Thm 12, sens « Banach \(\Rightarrow\) série absolument convergente convergente »'
+  verso: Par l'inégalité triangulaire, \(\big\|\sum_{k=n}^{n+p}u_k\big\|\le\sum_{k=n}^{n+p}\|u_k\|,\ \forall n,p\in\mathbb N\). Si la série \(\sum\|u_n\|\) satisfait le critère de Cauchy, il en est de même pour \(\sum u_n\). L'espace \(E\) étant complet, on peut en déduire que \(\sum u_n\) converge. De plus, en posant \(n=0\) et en faisant tendre \(p\) vers \(+\infty\) dans l'inégalité, on obtient \(\big\|\sum_{k=0}^{+\infty}u_k\big\|\le\sum_{k=0}^{+\infty}\|u_k\|\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 15
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-183-4
+  notion: topo-n-0193
+  recto: 'Preuve : Thm 12, réciproque (toute série absolument convergente converge \(\Rightarrow\) \(E\) complet)'
+  verso: 'Soit \((u_n)\) une suite de Cauchy dans \(E\). On définit \(\phi:\mathbb N\to\mathbb N\) par \(\phi(0)=0\) et \(\phi(n+1)=\min\big\{m\in\mathbb N\ /\ m\ge\phi(n)+1\text{ et }\sup_{p\in\mathbb N}\|u_m-u_{m+p}\|\le\frac1{(n+2)^2}\big\}\) (bien définie car \((u_n)\) satisfait le critère de Cauchy). Posons \(v_n=u_{\phi(n+1)}-u_{\phi(n)}\). On a \(\sum_{n=0}^{+\infty}\|v_n\|\le\sum_{n=0}^{+\infty}\frac1{(n+1)^2}<+\infty\). La série \(\sum v_n\) est absolument convergente donc, par hypothèse, convergente. Comme \(\sum_{k=0}^nv_k=u_{\phi(n)}-u_0\), la suite \((u_{\phi(n)})\) converge. La suite \((u_n)\) est de Cauchy et possède une valeur d''adhérence : elle converge.'
+  source: Poly de topologie Paris Cité, ch. 5, p. 15
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-184-1
+  notion: topo-n-0194
+  recto: 'Thm 13 (Banach) : une bijection linéaire continue entre espaces de Banach est un isomorphisme'
+  verso: Soient \(E,F\) deux espaces de Banach et \(f\in\mathcal L(E,F)\). Si \(f\) est bijective, alors \(f\) est un isomorphisme (\(f^{-1}\in\mathcal L(E,F)\)).
+  source: Poly de topologie Paris Cité, ch. 5, p. 15
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-184-2
+  notion: topo-n-0194
+  recto: 'Preuve : Thm 13, étape 1 (réduction et théorème de Baire)'
+  verso: '\(f^{-1}\) est clairement linéaire. Il s''agit donc de montrer que \(f^{-1}\) est continue, c''est-à-dire bornée sur \(B_F(0,1)\), ou encore qu''il existe \(R>0\) tel que \(f^{-1}(B_F(0,1))\subset B_E(0,R)\). Par bijectivité de \(f\), c''est équivalent à \[B_F(0,1)\subset f\big(B_E(0,R)\big)\quad(5.4)\] On définit, pour tout \(n\in\mathbb N^*\), \(F_n=\overline{f(B_E(0,n))}\). Comme \(f\) est surjective, \(F=f(E)=f\big(\bigcup_nB_E(0,n)\big)=\bigcup_nf(B_E(0,n))\subset\bigcup_nF_n\). Donc \(F=\bigcup_{n\in\mathbb N^*}F_n\) et, comme \(F\) est complet, par le théorème de Baire, il existe \(n_0\in\mathbb N^*\) tel que \(\mathring{F_{n_0}}\ne\emptyset\) : il existe \(y\in F\) et \(\eta>0\) tels que \(B(y,\eta)\subset\overline{f(B_E(0,n_0))}\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 16
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-184-3
+  notion: topo-n-0194
+  recto: 'Preuve : Thm 13, étape 2 (boule centrée en 0 dans l''adhérence)'
+  verso: 'Par linéarité de \(f\), \(-y\in\overline{f(-B_E(0,n_0))}=\overline{f(B_E(0,n_0))}\). Soit \(y''\in B(0,\eta)\) : \(y''=(y''+y)-y\), où \(y''+y\in B(y,\eta)\subset\overline{f(B_E(0,n_0))}\) et \(-y\in\overline{f(B_E(0,n_0))}\). Ainsi il existe \((x_n)\) et \((x_n'')\) deux suites de \(B_E(0,n_0)\) telles que \(y''=\lim(f(x_n)+f(x_n''))=\lim f(x_n+x_n'')\), où \(x_n+x_n''\in B_E(0,2n_0)\). Donc \(B_F(0,\eta)\subset\overline{f(B_E(0,2n_0))}\). Comme \(B_F(0,\eta)=\eta B_F(0,1)\), on peut aussi écrire \(B_F(0,1)\subset\frac1\eta\overline{f(B_E(0,2n_0))}=\overline{f(B_E(0,M))}\), où \(M=\frac{2n_0}\eta\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 16
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-184-4
+  notion: topo-n-0194
+  recto: 'Preuve : Thm 13, étape 3 (se débarrasser de l''adhérence)'
+  verso: 'Soit \(y\in B_F(0,1)\subset\overline{f(B_E(0,M))}\). Il existe \(x_0\in B_E(0,M)\) tel que \(\|y-f(x_0)\|_F<\frac12\). Supposons construits \(x_0,\dots,x_{n-1}\) avec \(x_k\in B_E\big(0,\frac M{2^k}\big)\) et \(\big\|y-f\big(\sum_{k=0}^{n-1}x_k\big)\big\|_F<\frac1{2^n}\) (5.5). Alors \(y_n=y-f\big(\sum_{k=0}^{n-1}x_k\big)\in B_F\big(0,\frac1{2^n}\big)\subset\overline{f\big(B_E\big(0,\frac M{2^n}\big)\big)}\) par linéarité, d''où \(x_n\in B_E\big(0,\frac M{2^n}\big)\) tel que \(\|y_n-f(x_n)\|_F<\frac1{2^{n+1}}\), c''est-à-dire \(\big\|y-f\big(\sum_{k=0}^nx_k\big)\big\|_F<\frac1{2^{n+1}}\).<br>La série \(\sum\|x_n\|_E\) converge (\(\|x_n\|_E<\frac M{2^n}\)) ; \(E\) étant de Banach, \(\sum x_n\) converge, de somme \(x\), et \(\|x\|_E\le\sum\|x_n\|_E<\sum\frac M{2^n}=2M\). Par (5.5) et la continuité de \(f\), \(y=\lim f\big(\sum_{k=0}^nx_k\big)=f(x)\) : \(y\in f(B_E(0,2M))\), soit (5.4) avec \(R=2M\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 17-18
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-185-1
+  notion: topo-n-0195
+  recto: 'Rem. : théorème de l''application ouverte'
+  verso: 'On a en fait montré un résultat plus général, connu sous le nom de théorème de l''application ouverte : Soient \(E\) et \(F\) deux espaces de Banach et \(f\in\mathcal L(E,F)\). Si \(f\) est surjective, alors \(f\) est ouverte dans le sens où l''image par \(f\) d''un ouvert de \(E\) est un ouvert de \(F\).'
+  source: Poly de topologie Paris Cité, ch. 5, p. 18
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-186-1
+  notion: topo-n-0196
+  recto: 'Déf : \(GL(E)\)'
+  verso: Soit \(E\) un espace de Banach. On note \[GL(E)=\{f\in\mathcal L(E)\ /\ f\text{ est un isomorphisme}\}.\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 18
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [definition]
+- id: topo-a-187-1
+  notion: topo-n-0197
+  recto: 'Prop. 71 : groupe linéaire de \(E\)'
+  verso: Le couple \((GL(E),\circ)\) est un groupe appelé groupe linéaire de \(E\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 18
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-187-2
+  notion: topo-n-0197
+  recto: 'Rem. : \(\mathcal L(E)\) est une algèbre normée'
+  verso: Ceci généralise la notion de groupe linéaire sur les espaces vectoriels, vue en algèbre linéaire. On peut aussi montrer que \((\mathcal L(E),+,\cdot,\circ)\) a une structure d'algèbre et que \(|||\cdot|||\) est une norme algébrique.
+  source: Poly de topologie Paris Cité, ch. 5, p. 18
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-188-1
+  notion: topo-n-0198
+  recto: 'Prop. 72 : \(\sum f^n=(\mathrm{Id}-f)^{-1}\) si \(|||f|||<1\)'
+  verso: Soient \(E\) un espace de Banach et \(f\in\mathcal L(E)\). On pose \(f^0=\mathrm{Id}\) (application identité) et \(f^n=f^{n-1}\circ f,\ \forall n\in\mathbb N^*\). Si \(|||f|||<1\), alors \((\mathrm{Id}-f)\in GL(E)\), la série \(\sum f^n\) est absolument convergente et \[\sum_{n=0}^{+\infty}f^n=(\mathrm{Id}-f)^{-1}.\]
+  source: Poly de topologie Paris Cité, ch. 5, p. 18
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-188-2
+  notion: topo-n-0198
+  recto: 'Preuve : Prop. 72'
+  verso: Comme \(|||f^n|||\le|||f|||^n,\ \forall n\in\mathbb N\), avec \(|||f|||<1\), il est clair que la série \(\sum|||f^n|||\) converge. L'espace \(\mathcal L(E)\) étant complet (Prop. 67 ; le poly écrit « \(E\) »), on en déduit que \(\sum f^n\) converge. De plus, pour \(N\in\mathbb N\), \((\mathrm{Id}-f)\circ\big(\sum_{n=0}^Nf^n\big)=\sum_{n=0}^Nf^n-\sum_{n=0}^Nf^{n+1}=\mathrm{Id}-f^{N+1}\). En faisant tendre \(N\) vers \(+\infty\), sachant que \(f^{N+1}\to0\), on obtient \((\mathrm{Id}-f)\circ\big(\sum_{n=0}^{+\infty}f^n\big)=\mathrm{Id}\). On montre, de même, que \(\big(\sum_{n=0}^{+\infty}f^n\big)\circ(\mathrm{Id}-f)=\mathrm{Id}\), ce qui prouve que \(\mathrm{Id}-f\) est bijective. Comme \(\mathrm{Id}-f\in\mathcal L(E)\), le théorème de Banach permet de conclure que \(\mathrm{Id}-f\in GL(E)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 18
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-189-1
+  notion: topo-n-0199
+  recto: 'Rem. : \(\sum(-1)^nf^n=(\mathrm{Id}+f)^{-1}\)'
+  verso: 'En changeant \(f\) et \(-f\) (« et » corrigé en « en » : \(f\) en \(-f\)), on observe que \((\mathrm{Id}+f)\in GL(E)\) et \[\sum_{n=0}^{+\infty}(-1)^nf^n=(\mathrm{Id}+f)^{-1}.\]'
+  source: Poly de topologie Paris Cité, ch. 5, p. 18
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-190-1
+  notion: topo-n-0200
+  recto: 'Cor. 12 : \(|||\mathrm{Id}-f|||<1\Rightarrow f\in GL(E)\)'
+  verso: Si \(f\in\mathcal L(E)\) et \(|||\mathrm{Id}-f|||<1\), alors \(f\in GL(E)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 19
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-190-2
+  notion: topo-n-0200
+  recto: 'Preuve : Cor. 12'
+  verso: Appliquer la proposition 72 à \(\mathrm{Id}-f\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 19
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-191-1
+  notion: topo-n-0201
+  recto: 'Prop. 73 : \(GL(E)\) ouvert de \(\mathcal L(E)\)'
+  verso: \(GL(E)\) est un ouvert de \(\mathcal L(E)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 19
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-191-2
+  notion: topo-n-0201
+  recto: 'Preuve : Prop. 73'
+  verso: Soit \(f\in GL(E)\). On montre que \(B\big(f,\frac1{|||f^{-1}|||}\big)\subset GL(E)\). Tout élément de la boule s'écrit \(f+g\) où \(g\in\mathcal L(E)\) est tel que \(|||g|||<\frac1{|||f^{-1}|||}\). Comme \(|||f^{-1}\circ g|||\le|||f^{-1}|||\,|||g|||<1\), on déduit de la proposition 72 que \(\mathrm{Id}+f^{-1}\circ g\in GL(E)\). Et comme \(f+g=f\circ(\mathrm{Id}+f^{-1}\circ g)\), \(f+g\) est la composée de deux éléments de \(GL(E)\) et appartient bien elle aussi à \(GL(E)\).
+  source: Poly de topologie Paris Cité, ch. 5, p. 19
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-210-1
+  notion: topo-n-0230
+  recto: 'Déf : produit scalaire sur un espace vectoriel réel'
+  verso: Soit \(E\) un espace vectoriel sur \(\mathbb R\). On appelle produit scalaire sur \(E\) une forme bilinéaire \(\langle\cdot,\cdot\rangle\) symétrique, définie positive sur \(E^2\).<br>(i) \(\langle x,y\rangle=\langle y,x\rangle,\ \forall x,y\in E\) (symétrique)<br>(ii) \(\langle x,x\rangle=0\ \Rightarrow\ x=0_E\) (définie)<br>(iii) \(\langle x,x\rangle\ge0,\ \forall x\in E\) (positive)
+  source: Poly de topologie Paris Cité, ch. 6, p. 1
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-211-1
+  notion: topo-n-0231
+  recto: 'Déf : forme sesquilinéaire'
+  verso: Soit \(E\) un espace vectoriel sur \(\mathbb C\). On appelle forme sesquilinéaire sur \(E^2\) une application \(S:E\times E\to\mathbb C\) qui est linéaire par rapport à la première variable et antilinéaire par rapport à la seconde.<br>\(S(\lambda x+y,z)=\lambda S(x,z)+S(y,z),\quad\forall x,y,z\in E,\forall\lambda\in\mathbb C\),<br>\(S(z,\lambda x+y)=\overline{\lambda}\,S(z,x)+S(z,y),\quad\forall x,y,z\in E,\forall\lambda\in\mathbb C\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 1
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-212-1
+  notion: topo-n-0232
+  recto: 'Déf : produit scalaire sur un espace vectoriel complexe'
+  verso: 'Soit \(E\) un espace vectoriel sur \(\mathbb C\). On appelle produit scalaire sur \(E\) une forme sesquilinéaire \(\langle\cdot,\cdot\rangle\) hermitienne, définie positive sur \(E^2\).<br>(i) \(\langle x,y\rangle=\overline{\langle y,x\rangle},\ \forall x,y\in E\) (hermitienne)<br>(ii) \(\langle x,x\rangle=0\ \Rightarrow\ x=0_E\) (définie)<br>(iii) \(\langle x,x\rangle\ge0,\ \forall x\in E\) (positive)<br>(le poly écrit « sesquilininéaire » : coquille)'
+  source: Poly de topologie Paris Cité, ch. 6, p. 1
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-213-1
+  notion: topo-n-0233
+  recto: 'Déf : espace préhilbertien'
+  verso: Dans la suite, on considère un espace vectoriel sur \(\mathbb K\), \(\mathbb K\) désignant \(\mathbb R\) ou \(\mathbb C\).<br>On appelle espace préhilbertien un espace vectoriel muni d'un produit scalaire.
+  source: Poly de topologie Paris Cité, ch. 6, p. 1
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-214-1
+  notion: topo-n-0234
+  recto: 'Exemple : produit scalaire sur \(\mathcal C([0,1],\mathbb K)\)'
+  verso: 'La fonction \((f,g)\mapsto\langle f,g\rangle=\displaystyle\int_0^1f(t)\,\overline{g(t)}\,dt\) est un produit scalaire sur l''espace \(\mathcal C([0,1],\mathbb K)\) des fonctions continues sur \(\mathbb R\) (le poly écrit « continues sur \(\mathbb R\) » : coquille pour \([0,1]\)).'
+  source: Poly de topologie Paris Cité, ch. 6, p. 1
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-215-1
+  notion: topo-n-0235
+  recto: 'Rem. : espace euclidien, espace hermitien (rappel)'
+  verso: Rappel. Un espace préhilbertien de dimension finie est appelé espace euclidien s'il est sur \(\mathbb R\) et espace hermitien s'il est sur \(\mathbb C\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 1
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-216-1
+  notion: topo-n-0236
+  recto: 'Prop. 74 (1) : norme associée à un produit scalaire'
+  verso: Soit \((E,\langle\cdot,\cdot\rangle)\) un espace préhilbertien. Pour tout \(x\in E\), on pose \(\|x\|=\sqrt{\langle x,x\rangle}\). L'application \(\|\cdot\|\) est alors une norme sur \(E\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 2
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-216-2
+  notion: topo-n-0236
+  recto: 'Preuve : \(\|\cdot\|\) est une norme (Prop. 74)'
+  verso: 'Soit \((E,\langle\cdot,\cdot\rangle)\) préhilbertien et \(\|x\|=\sqrt{\langle x,x\rangle}\). Grâce à l''inégalité de Cauchy-Schwarz : \(\|x+y\|^2=\|x\|^2+2\,\mathrm{Re}(\langle x,y\rangle)+\|y\|^2\le\|x\|^2+2\|x\|\|y\|+\|y\|^2=(\|x\|+\|y\|)^2\), et en prenant la racine carrée, \(\|x+y\|\le\|x\|+\|y\|\).<br>On montre aussi que, \(\forall x\in E,\forall\lambda\in\mathbb K\), \(\|\lambda x\|=\langle\lambda x,\lambda x\rangle^{1/2}=(\lambda\bar\lambda\langle x,x\rangle)^{1/2}=|\lambda|\,\|x\|\) et \(\|x\|=0\Rightarrow\langle x,x\rangle=0\Rightarrow x=0\), ce qui permet de conclure que \(\|\cdot\|\) est une norme.'
+  source: Poly de topologie Paris Cité, ch. 6, p. 2
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-217-1
+  notion: topo-n-0237
+  recto: 'Prop. 74 (2) : inégalité de Cauchy-Schwarz'
+  verso: Soit \((E,\langle\cdot,\cdot\rangle)\) un espace préhilbertien. Pour tout \(x\in E\), on pose \(\|x\|=\sqrt{\langle x,x\rangle}\). La norme \(\|\cdot\|\) satisfait l'inégalité de Cauchy-Schwarz<br>\[|\langle x,y\rangle|\le\|x\|\,\|y\|,\quad\forall x,y\in E.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 2
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-217-2
+  notion: topo-n-0237
+  recto: 'Preuve : inégalité de Cauchy-Schwarz (Prop. 74)'
+  verso: Si \(x=0\), la propriété est évidente. Si \(x\neq0\), on développe l'expression \(\|\lambda x+y\|^2\ge0\), pour \(\lambda\in\mathbb K\) :<br>\[|\lambda|^2\|x\|^2+2\,\mathrm{Re}(\lambda\langle x,y\rangle)+\|y\|^2\ge0.\]En prenant \(\lambda=-\dfrac{\overline{\langle x,y\rangle}}{\|x\|^2}\), on obtient<br>\[\frac{|\langle x,y\rangle|^2}{\|x\|^2}-2\,\frac{|\langle x,y\rangle|^2}{\|x\|^2}+\|y\|^2\ge0,\]d'où \(|\langle x,y\rangle|^2\le\|x\|^2\|y\|^2\) et l'inégalité recherchée.
+  source: Poly de topologie Paris Cité, ch. 6, p. 2
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-218-1
+  notion: topo-n-0238
+  recto: 'Prop. 74 (3) : formule du parallélogramme'
+  verso: Soit \((E,\langle\cdot,\cdot\rangle)\) un espace préhilbertien. Pour tout \(x\in E\), on pose \(\|x\|=\sqrt{\langle x,x\rangle}\). La norme \(\|\cdot\|\) satisfait la formule du parallélogramme<br>\[\frac12\left(\|x\|^2+\|y\|^2\right)=\left\|\frac{x+y}{2}\right\|^2+\left\|\frac{x-y}{2}\right\|^2.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 2
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-218-2
+  notion: topo-n-0238
+  recto: 'Preuve : formule du parallélogramme (Prop. 74)'
+  verso: Pour montrer l'identité du parallélogramme, on développe et on simplifie :<br>\[\begin{aligned}2\left\|\frac{x+y}{2}\right\|^2+2\left\|\frac{x-y}{2}\right\|^2&=\frac12\|x+y\|^2+\frac12\|x-y\|^2\\&=\frac12\left(\|x\|^2+2\,\mathrm{Re}(\langle x,y\rangle)+\|y\|^2\right)+\frac12\left(\|x\|^2-2\,\mathrm{Re}(\langle x,y\rangle)+\|y\|^2\right)\\&=\|x\|^2+\|y\|^2.\end{aligned}\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 2
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-219-1
+  notion: topo-n-0239
+  recto: 'Rem. 1 : continuité du produit scalaire'
+  verso: L'inégalité de Cauchy-Schwarz montre que le produit scalaire est une forme bilinéaire (ou sesquilinéaire) continue sur \(E^2\) lorsque l'espace \(E\) est muni de la norme associée au produit scalaire.
+  source: Poly de topologie Paris Cité, ch. 6, p. 2
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-220-1
+  notion: topo-n-0240
+  recto: 'Rem. 2 (1) : formule de polarisation, cas réel'
+  verso: Si \(\|\cdot\|\) est une norme hilbertienne (i.e. associée à un produit scalaire), on peut retrouver le produit scalaire à partir de la norme en utilisant les formules de polarisation<br>\[\langle x,y\rangle=\frac14\left(\|x+y\|^2-\|x-y\|^2\right),\quad\text{si }\mathbb K=\mathbb R.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 3
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-220-2
+  notion: topo-n-0240
+  recto: 'Rem. 2 (2) : formule de polarisation, cas complexe'
+  verso: Si \(\|\cdot\|\) est une norme hilbertienne (i.e. associée à un produit scalaire), on peut retrouver le produit scalaire à partir de la norme en utilisant les formules de polarisation<br>\[\langle x,y\rangle=\frac14\left(\|x+y\|^2-\|x-y\|^2+i\|x+iy\|^2-i\|x-iy\|^2\right),\quad\text{si }\mathbb K=\mathbb C.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 3
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-221-1
+  notion: topo-n-0241
+  recto: 'Déf : vecteurs orthogonaux'
+  verso: Soit \((E,\langle\cdot,\cdot\rangle)\) un espace préhilbertien. On dit que deux vecteurs \(x\) et \(y\in E\) sont orthogonaux si et seulement si \(\langle x,y\rangle=0\). On écrit alors \(x\perp y\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 3
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-222-1
+  notion: topo-n-0242
+  recto: 'Thm 14 : théorème de Pythagore'
+  verso: Soit \((E,\langle\cdot,\cdot\rangle)\) un espace préhilbertien. Si \(x\perp y\), alors \(\|x+y\|^2=\|x\|^2+\|y\|^2\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 3
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-222-2
+  notion: topo-n-0242
+  recto: 'Preuve : théorème de Pythagore (Thm 14)'
+  verso: Il suffit de développer<br>\[\|x+y\|^2=\langle x+y,x+y\rangle=\langle x,x\rangle+2\,\mathrm{Re}(\langle x,y\rangle)+\langle y,y\rangle=\|x\|^2+\|y\|^2.\](car \(x\perp y\), donc \(\langle x,y\rangle=0\))
+  source: Poly de topologie Paris Cité, ch. 6, p. 3
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-223-1
+  notion: topo-n-0243
+  recto: 'Déf : orthogonal d''une partie \(A^\perp\)'
+  verso: Soient \((E,\langle\cdot,\cdot\rangle)\) un espace préhilbertien et \(A\in\mathcal P(E)\). On appelle orthogonal de \(A\) l'ensemble<br>\[A^\perp=\{x\in E\ /\ x\perp a,\ \forall a\in A\}.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 3
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-224-1
+  notion: topo-n-0244
+  recto: 'Prop. 75 : \(A^\perp\) est un sous-espace vectoriel fermé'
+  verso: Soient \((E,\langle\cdot,\cdot\rangle)\) un espace préhilbertien et \(A\in\mathcal P(E)\). La partie \(A^\perp\) est un sous-espace vectoriel fermé de \(E\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 3
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-224-2
+  notion: topo-n-0244
+  recto: 'Preuve : \(A^\perp\) est un sous-espace vectoriel fermé (Prop. 75)'
+  verso: Pour tout \(a\in A\), la forme linéaire \(f_a:x\mapsto\langle x,a\rangle\) est continue sur \(E\). Son noyau \(\mathrm{Ker}(f_a)=f_a^{-1}(\{0\})\) est donc fermé et l'ensemble \(A^\perp=\bigcap_{a\in A}\mathrm{Ker}(f_a)\) est une intersection de fermés.
+  source: Poly de topologie Paris Cité, ch. 6, p. 3
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-225-1
+  notion: topo-n-0245
+  recto: 'Prop. 76 : \(A^\perp=\left(\overline{\mathrm{vect}(A)}\right)^\perp\)'
+  verso: Soient \((E,\langle\cdot,\cdot\rangle)\) un espace préhilbertien et \(A\in\mathcal P(E)\). Alors \(A^\perp=\left(\overline{\mathrm{vect}(A)}\right)^\perp\) où \(\mathrm{vect}(A)\) désigne l'espace vectoriel engendré par \(A\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 3
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-225-2
+  notion: topo-n-0245
+  recto: 'Preuve : \(A^\perp=(\overline{\mathrm{vect}(A)})^\perp\), inclusion triviale et passage à \(\mathrm{vect}(A)\) (Prop. 76)'
+  verso: Comme \(A\subset\overline{\mathrm{vect}(A)}\), on a clairement \(\left(\overline{\mathrm{vect}(A)}\right)^\perp\subset A^\perp\). Pour montrer l'inclusion réciproque, considérons \(x\in A^\perp\). Pour tout \(a\in A\), on a \(\langle x,a\rangle=0\). Or, pour tout \(y\in\mathrm{vect}(A)\), il existe \(a_1,\dots,a_n\in A\) et \(\lambda_1,\dots,\lambda_n\in\mathbb K\) tels que \(y=\sum_{k=1}^n\lambda_ka_k\) et on en déduit que<br>\[\langle x,y\rangle=\left\langle x,\sum_{k=1}^n\lambda_ka_k\right\rangle=\sum_{k=1}^n\overline{\lambda_k}\langle x,a_k\rangle=0.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 3
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-225-3
+  notion: topo-n-0245
+  recto: 'Preuve : \(A^\perp=(\overline{\mathrm{vect}(A)})^\perp\), passage à l''adhérence (Prop. 76)'
+  verso: 'Soit \(x\in A^\perp\). On sait que \(\langle x,y\rangle=0\) pour tout \(y\in\mathrm{vect}(A)\). Si maintenant \(y\in\overline{\mathrm{vect}(A)}\), alors, par la caractérisation de l''adhérence par les suites, il existe une suite \((y_n)_{n\in\mathbb N}\) de \(\mathrm{vect}(A)\) telle que \(y_n\to y\). On en conclut que \(\langle x,y\rangle=\lim_{n\to+\infty}\langle x,y_n\rangle=0\) et \(x\in\left(\overline{\mathrm{vect}(A)}\right)^\perp\).<br>(le poly écrit \(\lim_{n\to0}\) : coquille)'
+  source: Poly de topologie Paris Cité, ch. 6, p. 3
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-226-1
+  notion: topo-n-0246
+  recto: 'Déf : espace de Hilbert'
+  verso: On appelle espace de Hilbert un espace préhilbertien qui est complet pour la norme associée au produit scalaire.
+  source: Poly de topologie Paris Cité, ch. 6, p. 4
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-227-1
+  notion: topo-n-0247
+  recto: 'Rem. : espace de Hilbert et espace de Banach'
+  verso: Un espace de Hilbert est donc un espace de Banach.
+  source: Poly de topologie Paris Cité, ch. 6, p. 4
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-228-1
+  notion: topo-n-0248
+  recto: 'Exemple : \(L^2(X,\mu)\) et \(\ell^2(\mathbb N)\) sont des espaces de Hilbert'
+  verso: Si \((X,\mu)\) est un espace mesuré, alors \(L^2(X,\mu)\) est un espace de Hilbert. En particulier \(\ell^2(\mathbb N)\) est un espace de Hilbert (cf. cours de théorie de la mesure ou chapitre suivant).
+  source: Poly de topologie Paris Cité, ch. 6, p. 4
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-229-1
+  notion: topo-n-0249
+  recto: 'Déf : partie convexe'
+  verso: On dit qu'une partie \(C\) d'un espace vectoriel est convexe si et seulement si<br>\[\alpha x+(1-\alpha)y\in C,\quad\forall x,y\in C,\ \forall\alpha\in[0,1].\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 4
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-230-1
+  notion: topo-n-0250
+  recto: 'Thm 15 : théorème de projection sur un convexe fermé'
+  verso: Soit \(C\) une partie convexe, fermée et non vide d'un espace de Hilbert \(\mathcal H\). Pour tout \(x\in\mathcal H\), il existe un unique point de \(C\), noté \(P_C(x)\) et appelé projection de \(x\) sur \(C\), tel que<br>\[\|x-P_C(x)\|=\inf_{y\in C}\|x-y\|.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 4
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-230-2
+  notion: topo-n-0250
+  recto: 'Preuve : projection sur un convexe fermé, existence (1) : suite minimisante de Cauchy (Thm 15)'
+  verso: Existence. On considère une suite minimisante, c'est-à-dire une suite \((y_n)_{n\in\mathbb N}\) de \(C\) telle que \(\inf_{y\in C}\|x-y\|=\lim_{n\to+\infty}\|x-y_n\|\), et on applique l'identité du parallélogramme aux vecteurs \(x-y_p\) et \(x-y_q\) :<br>\[\frac12\|x-y_p\|^2+\frac12\|x-y_q\|^2=\left\|x-\frac{y_p+y_q}{2}\right\|^2+\left\|\frac{y_p-y_q}{2}\right\|^2.\]En permutant les termes et en multipliant par 4, on obtient<br>\[\|y_p-y_q\|^2=2\|x-y_p\|^2+2\|x-y_q\|^2-4\left\|x-\frac{y_p+y_q}{2}\right\|^2,\]où \(\frac{y_p+y_q}{2}\in C\) car \(C\) est convexe. On en déduit que<br>\[\|y_p-y_q\|^2\le2\|x-y_p\|^2+2\|x-y_q\|^2-4\inf_{y\in C}\|x-y\|^2,\]où la somme des deux premiers termes du membre de droite tend vers \(4\inf_{y\in C}\|x-y\|^2\) quand \(p\) et \(q\) tendent vers l'infini. Pour tout \(\epsilon>0\), il existe \(n\in\mathbb N\) tel que, pour tous entiers \(p,q\ge n\), on ait \(\|y_p-y_q\|<\epsilon\), c'est-à-dire que \((y_n)_{n\in\mathbb N}\) est une suite de Cauchy.
+  source: Poly de topologie Paris Cité, ch. 6, p. 4
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-230-3
+  notion: topo-n-0250
+  recto: 'Preuve : projection sur un convexe fermé, existence (2) : limite dans \(C\) (Thm 15)'
+  verso: Soit \((y_n)_{n\in\mathbb N}\) une suite minimisante de \(C\) qui est de Cauchy. L'espace \(\mathcal H\) étant complet, elle converge vers un point noté \(P_C(x)\). Comme \(C\) est fermé, il est clair que \(P_C(x)\in C\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 4
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-230-4
+  notion: topo-n-0250
+  recto: 'Preuve : projection sur un convexe fermé, unicité (Thm 15)'
+  verso: 'Unicité. Supposons que l''on ait deux minimiseurs \(y_1\) et \(y_2\in C\). En appliquant, cette fois-ci, l''identité du parallélogramme à \(x-y_1\) et \(x-y_2\), on obtient<br>\[\begin{aligned}\|y_1-y_2\|^2&=2\|x-y_1\|^2+2\|x-y_2\|^2-4\left\|x-\frac{y_1+y_2}{2}\right\|^2\\&=4\inf_{y\in C}\|x-y\|^2-4\left\|x-\frac{y_1+y_2}{2}\right\|^2\\&\le0\end{aligned}\]car \(\frac{y_1+y_2}{2}\in C\), et on en conclut que \(y_1=y_2\).<br>(le poly écrit \(4\inf_{y\in C}\|x-y\|\) sans le carré : coquille)'
+  source: Poly de topologie Paris Cité, ch. 6, p. 4
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-231-1
+  notion: topo-n-0251
+  recto: 'Prop. 77 : caractérisation de la projection sur un convexe fermé'
+  verso: Soient \(\mathcal H\) un espace de Hilbert et \(C\) une partie convexe, fermée et non vide de \(\mathcal H\). Pour tout \(x\in\mathcal H\), sa projection sur \(C\) est caractérisée par la condition<br>\[\mathrm{Re}\left(\langle x-P_C(x),y-P_C(x)\rangle\right)\le0,\quad\forall y\in C.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 5
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-231-2
+  notion: topo-n-0251
+  recto: 'Preuve : caractérisation de la projection (1) : réduction et développement (Prop. 77)'
+  verso: Commençons par noter que, par la définition de la convexité, le vecteur \(\alpha y+(1-\alpha)P_C(x)\) appartient à \(C\), pour tous \(y\in C\) et \(\alpha\in[0,1]\), et que la propriété \(\|x-P_C(x)\|\le\|x-y\|,\ \forall y\in C\), est équivalente à \(\|x-P_C(x)\|\le\|x-\alpha y-(1-\alpha)P_C(x)\|,\ \forall y\in C,\forall\alpha\in[0,1]\).<br>On développe<br>\[\begin{aligned}\|x-\alpha y-(1-\alpha)P_C(x)\|^2&=\|(x-P_C(x))-\alpha(y-P_C(x))\|^2\\&=\|x-P_C(x)\|^2-2\alpha\,\mathrm{Re}(\langle x-P_C(x),y-P_C(x)\rangle)+\alpha^2\|y-P_C(x)\|^2.\end{aligned}\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 5
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-231-3
+  notion: topo-n-0251
+  recto: 'Preuve : caractérisation de la projection (2) : conclusion (Prop. 77)'
+  verso: Après simplification, la condition devient \(2\alpha\,\mathrm{Re}(\langle x-P_C(x),y-P_C(x)\rangle)\le\alpha^2\|y-P_C(x)\|^2,\ \forall y\in C,\forall\alpha\in[0,1]\), soit, après division par \(\alpha\) lorsque celui-ci est différent de \(0\),<br>\[2\,\mathrm{Re}(\langle x-P_C(x),y-P_C(x)\rangle)\le\alpha\|y-P_C(x)\|^2,\quad\forall y\in C,\forall\alpha\in]0,1],\]ou encore<br>\[2\,\mathrm{Re}(\langle x-P_C(x),y-P_C(x)\rangle)\le\inf_{\alpha\in]0,1]}\alpha\|y-P_C(x)\|^2=0,\quad\forall y\in C.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 5
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-232-1
+  notion: topo-n-0252
+  recto: 'Prop. 78 : projection sur un sous-espace fermé et décomposition \(\mathcal H=F\oplus F^\perp\)'
+  verso: Soit \(\mathcal H\) un espace de Hilbert. Si \(F\) est un sous-espace fermé de \(\mathcal H\), non réduit à \(\{0\}\), alors<br>\[\mathcal H=F\oplus F^\perp,\quad P_F\in\mathcal L(\mathcal H,F),\quad|||P_F|||=1\quad\text{et}\quad P_F(x)+P_{F^\perp}(x)=x,\ \forall x\in\mathcal H.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 6
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-232-2
+  notion: topo-n-0252
+  recto: 'Preuve : \(x-P_F(x)\in F^\perp\) (Prop. 78)'
+  verso: Soit \(x\in\mathcal H\). Comme, pour tous \(y\in F\) et \(\lambda\in\mathbb R\), \(P_F(x)-\lambda y\) appartient à \(F\), on a, par le théorème de projection, \(\|x-P_F(x)\|\le\|x-P_F(x)+\lambda y\|\), où \(\|x-P_F(x)+\lambda y\|^2=\|x-P_F(x)\|^2+2\lambda\,\mathrm{Re}(\langle x-P_F(x),y\rangle)+\lambda^2\|y\|^2\). Donc \(2\lambda\,\mathrm{Re}(\langle x-P_F(x),y\rangle)+\lambda^2\|y\|^2\ge0\).<br>Ceci n'est possible pour tout \(\lambda\in\mathbb R\) que si \(\mathrm{Re}(\langle x-P_F(x),y\rangle)=0\). Si \(\mathbb K=\mathbb R\), on a alors \(\langle x-P_F(x),y\rangle=0\). Si \(\mathbb K=\mathbb C\), on refait le même calcul en changeant \(y\) en \(iy\) pour obtenir \(\mathrm{Im}(\langle x-P_F(x),y\rangle)=0\) et ainsi \(\langle x-P_F(x),y\rangle=0\). Ceci étant vrai pour tout \(y\in F\), on a montré que \(x-P_F(x)\in F^\perp\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 6
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-232-3
+  notion: topo-n-0252
+  recto: 'Preuve : \(\mathcal H=F\oplus F^\perp\) (Prop. 78)'
+  verso: On sait que, pour tout \(x\in\mathcal H\), \(x-P_F(x)\in F^\perp\). Comme \(x=P_F(x)+(x-P_F(x))\), on en déduit que \(\mathcal H=F+F^\perp\). De plus, si \(x\in F\cap F^\perp\), alors \(\langle x,x\rangle=0\) et \(x=0\). On a donc bien \(\mathcal H=F\oplus F^\perp\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 6
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-232-4
+  notion: topo-n-0252
+  recto: 'Preuve : linéarité de \(P_F\) (Prop. 78)'
+  verso: Pour tous \(x,y\in\mathcal H\) et \(\lambda\in\mathbb K\), \(x-P_F(x)\) et \(y-P_F(y)\) appartiennent à \(F^\perp\) qui a une structure d'espace vectoriel. Donc \(x+\lambda y-(P_F(x)+\lambda P_F(y))\) appartient également à \(F^\perp\). Par ailleurs, \(x+\lambda y-P_F(x+\lambda y)\) appartient à \(F^\perp\). La différence \(P_F(x+\lambda y)-(P_F(x)+\lambda P_F(y))\) appartient donc elle aussi à \(F^\perp\). Comme \(P_F\) est à valeur dans \(F\), ceci n'est possible que si \(P_F(x+\lambda y)=P_F(x)+\lambda P_F(y)\), ce qui prouve la linéarité de \(P_F\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 6
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-232-5
+  notion: topo-n-0252
+  recto: 'Preuve : \(P_F\) est continue de norme 1 (Prop. 78)'
+  verso: En utilisant le fait que \(x-P_F(x)\in F^\perp\), on montre que<br>\[\begin{aligned}\|x\|^2&=\|x-P_F(x)+P_F(x)\|^2\\&=\|x-P_F(x)\|^2+\|P_F(x)\|^2\quad\text{(par le théorème de Pythagore)}\\&\ge\|P_F(x)\|^2.\end{aligned}\]L'application \(P_F\) est donc continue et de norme \(|||P_F|||=1\) car \(\|P_F(x)\|=\|x\|,\ \forall x\in F\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 6
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-232-6
+  notion: topo-n-0252
+  recto: 'Preuve : \(x-P_F(x)=P_{F^\perp}(x)\) (Prop. 78)'
+  verso: Pour tous \(x\in\mathcal H\) et \(y\in F^\perp\), on a<br>\[\begin{aligned}\|x-y\|^2&=\|P_F(x)+(x-P_F(x)-y)\|^2\\&=\|P_F(x)\|^2+\|x-P_F(x)-y\|^2\quad\text{(car }x-P_F(x)-y\in F^\perp)\\&\ge\|P_F(x)\|^2\\&=\|x-(x-P_F(x))\|^2,\end{aligned}\]où \(x-P_F(x)\in F^\perp\). Donc \(x-P_F(x)=P_{F^\perp}(x)\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 6
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-233-1
+  notion: topo-n-0253
+  recto: 'Déf : partie totale'
+  verso: Soient \(\mathcal H\) un espace vectoriel normé et \(A\in\mathcal P(\mathcal H)\). On dit que \(A\) est totale si et seulement si \(\overline{\mathrm{vect}(A)}=\mathcal H\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 7
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-234-1
+  notion: topo-n-0254
+  recto: 'Prop. 79 : partie totale et orthogonal'
+  verso: Soient \(\mathcal H\) un espace de Hilbert et \(A\in\mathcal P(\mathcal H)\). La partie \(A\) est totale si et seulement si \(A^\perp=\{0\}\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 7
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-234-2
+  notion: topo-n-0254
+  recto: 'Preuve : partie totale et orthogonal (Prop. 79)'
+  verso: Elle repose sur la proposition 76.<br>\[A\text{ totale}\iff\overline{\mathrm{vect}(A)}=\mathcal H\iff\left(\overline{\mathrm{vect}(A)}\right)^\perp=\mathcal H^\perp=\{0\}\iff A^\perp=\{0\}.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 7
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-235-1
+  notion: topo-n-0255
+  recto: 'Déf : système orthogonal'
+  verso: Soit \((e_n)_{n\in\mathbb N}\) une famille d'éléments non nuls d'un espace préhilbertien \(\mathcal H\). On dit que \((e_n)_{n\in\mathbb N}\) est un système orthogonal si et seulement si \(e_n\perp e_m,\ \forall n,m\in\mathbb N\) tels que \(n\neq m\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 7
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-235-2
+  notion: topo-n-0255
+  recto: 'Déf : système orthonormé'
+  verso: Soit \((e_n)_{n\in\mathbb N}\) une famille d'éléments non nuls d'un espace préhilbertien \(\mathcal H\). On dit que \((e_n)_{n\in\mathbb N}\) est un système orthonormé si et seulement si \(\langle e_n,e_m\rangle=\delta_{n,m},\ \forall n,m\in\mathbb N\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 7
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-236-1
+  notion: topo-n-0256
+  recto: 'Prop. 80 : inégalité de Bessel'
+  verso: Soit \((e_n)_{n\in\mathbb N}\) un système orthonormé d'un espace préhilbertien \(\mathcal H\). Pour tout \(x\in\mathcal H\), la série \(\sum|\langle x,e_n\rangle|^2\) converge et sa somme satisfait l'inégalité de Bessel<br>\[\sum_{n=0}^{+\infty}|\langle x,e_n\rangle|^2\le\|x\|^2.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 7
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-236-2
+  notion: topo-n-0256
+  recto: 'Preuve : inégalité de Bessel (Prop. 80)'
+  verso: Pour tout \(n\in\mathbb N\), on a<br>\[\begin{aligned}0\le\left\|x-\sum_{k=0}^n\langle x,e_k\rangle e_k\right\|^2&=\|x\|^2-2\,\mathrm{Re}\left\langle x,\sum_{k=0}^n\langle x,e_k\rangle e_k\right\rangle+\left\|\sum_{k=0}^n\langle x,e_k\rangle e_k\right\|^2\\&=\|x\|^2-2\,\mathrm{Re}\left(\sum_{k=0}^n\overline{\langle x,e_k\rangle}\langle x,e_k\rangle\right)+\sum_{k=0}^n|\langle x,e_k\rangle|^2\\&=\|x\|^2-\sum_{k=0}^n|\langle x,e_k\rangle|^2,\end{aligned}\]ce qui prouve que la série converge. On fait ensuite tendre \(n\) vers \(+\infty\), pour obtenir l'inégalité de Bessel.
+  source: Poly de topologie Paris Cité, ch. 6, p. 7
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-237-1
+  notion: topo-n-0257
+  recto: 'Thm 16 : théorème de Riesz-Fisher'
+  verso: 'Soient \(\mathcal H\) un espace de Hilbert, \((e_n)_{n\in\mathbb N}\) un système orthonormé et \((\alpha_n)_{n\in\mathbb N}\) une suite de \(\mathbb K\) (le poly écrit « un suite » : coquille). La série \(\sum\alpha_ne_n\) converge dans \(\mathcal H\) si et seulement si la série \(\sum|\alpha_n|^2\) converge, et on a alors<br>\[\left\|\sum_{n=0}^{+\infty}\alpha_ne_n\right\|^2=\sum_{n=0}^{+\infty}|\alpha_n|^2.\]'
+  source: Poly de topologie Paris Cité, ch. 6, p. 8
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-237-2
+  notion: topo-n-0257
+  recto: 'Preuve : Riesz-Fisher, sens direct et égalité (Thm 16)'
+  verso: Pour tout \(n\in\mathbb N\), on note \(S_n=\sum_{k=0}^n\alpha_ke_k\) la somme partielle. On a<br>\[\|S_n\|^2=\sum_{k=0}^n\|\alpha_ke_k\|^2=\sum_{k=0}^n|\alpha_k|^2.\qquad(6.1)\]Il est donc clair que si la suite \((S_n)_{n\in\mathbb N}\) converge, alors la suite \((\|S_n\|^2)_{n\in\mathbb N}\) et ainsi la série \(\sum|\alpha_n|^2\) convergent. De plus, en faisant tendre \(n\) vers \(+\infty\) dans (6.1), on obtient \(\left\|\sum_{k=0}^{+\infty}\alpha_ke_k\right\|^2=\sum_{k=0}^{+\infty}|\alpha_k|^2\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 8
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-237-3
+  notion: topo-n-0257
+  recto: 'Preuve : Riesz-Fisher, réciproque (Thm 16)'
+  verso: Réciproquement, supposons que la série \(\sum|\alpha_n|^2\) converge. Elle satisfait donc le critère de Cauchy. Or, pour tous \(p,q\in\mathbb N\) avec \(p<q\), on a<br>\[\|S_p-S_q\|^2=\left\|\sum_{k=p+1}^q\alpha_ke_k\right\|^2=\sum_{k=p+1}^q|\alpha_k|^2.\]On en déduit que la suite des sommes partielles \((S_n)_{n\in\mathbb N}\) satisfait également le critère de Cauchy, et comme l'espace \(\mathcal H\) est complet, elle converge.
+  source: Poly de topologie Paris Cité, ch. 6, p. 8
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-238-1
+  notion: topo-n-0258
+  recto: 'Déf : base hilbertienne'
+  verso: Soit \((e_n)_{n\in\mathbb N}\) une famille d'éléments d'un espace de Hilbert \(\mathcal H\). On dit que \((e_n)_{n\in\mathbb N}\) est une base hilbertienne (ou une base orthonormée) de \(\mathcal H\) si et seulement si \((e_n)_{n\in\mathbb N}\) est un système orthonormé total.
+  source: Poly de topologie Paris Cité, ch. 6, p. 8
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [definition]
+- id: topo-a-239-1
+  notion: topo-n-0259
+  recto: 'Prop. 81 : caractérisations d''une base hilbertienne'
+  verso: Soient \(\mathcal H\) un espace de Hilbert et \((e_n)_{n\in\mathbb N}\) un système orthonormé. Les propriétés suivantes sont équivalentes.<br>(i) \((e_n)_{n\in\mathbb N}\) est une base hilbertienne de \(\mathcal H\).<br>(ii) \(\langle x,e_n\rangle=0,\ \forall n\in\mathbb N\ \Rightarrow\ x=0_{\mathcal H}\).<br>(iii) Pour tout \(x\in\mathcal H\), \(x=\sum_{n\in\mathbb N}\langle x,e_n\rangle e_n\) (Identité de Bessel).<br>(iv) Pour tout \(x\in\mathcal H\), \(\|x\|^2=\sum_{n\in\mathbb N}|\langle x,e_n\rangle|^2\) (Identité de Parseval).
+  source: Poly de topologie Paris Cité, ch. 6, p. 8
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-239-2
+  notion: topo-n-0259
+  recto: 'Prop. 81 (iii) : identité de Bessel'
+  verso: Soient \(\mathcal H\) un espace de Hilbert et \((e_n)_{n\in\mathbb N}\) un système orthonormé. Dans la Prop. 81, la propriété (iii) « pour tout \(x\in\mathcal H\), \(x=\sum_{n\in\mathbb N}\langle x,e_n\rangle e_n\) » est appelée Identité de Bessel.
+  source: Poly de topologie Paris Cité, ch. 6, p. 8
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-239-3
+  notion: topo-n-0259
+  recto: 'Prop. 81 (iv) : identité de Parseval'
+  verso: Soient \(\mathcal H\) un espace de Hilbert et \((e_n)_{n\in\mathbb N}\) un système orthonormé. Dans la Prop. 81, la propriété (iv) « pour tout \(x\in\mathcal H\), \(\|x\|^2=\sum_{n\in\mathbb N}|\langle x,e_n\rangle|^2\) » est appelée Identité de Parseval.
+  source: Poly de topologie Paris Cité, ch. 6, p. 8
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-239-4
+  notion: topo-n-0259
+  recto: 'Preuve : Prop. 81, (i) \(\iff\) (ii)'
+  verso: Soient \(\mathcal H\) un espace de Hilbert et \((e_n)_{n\in\mathbb N}\) un système orthonormé.<br>(i) \(\iff\) \(\{e_n\ /\ n\in\mathbb N\}\) est total \(\iff\) \(\{e_n\ /\ n\in\mathbb N\}^\perp=\{0\}\) \(\iff\) (ii) (Prop. 79).
+  source: Poly de topologie Paris Cité, ch. 6, p. 8
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-239-5
+  notion: topo-n-0259
+  recto: 'Preuve : Prop. 81, (ii) \(\Rightarrow\) (iii)'
+  verso: Soit \(x\in\mathcal H\). Par l'inégalité de Bessel, la série \(\sum|\langle x,e_n\rangle|^2\) converge. Donc, par le théorème de Riesz-Fisher, la série \(\sum\langle x,e_n\rangle e_n\) converge également. Notons \(\tilde x\) sa somme. Pour tout \(n\in\mathbb N\), on a<br>\[\langle\tilde x,e_n\rangle=\left\langle\sum_{k=0}^{+\infty}\langle x,e_k\rangle e_k,e_n\right\rangle=\sum_{k=0}^{+\infty}\langle x,e_k\rangle\langle e_k,e_n\rangle=\langle x,e_n\rangle\]par la continuité et la bilinéarité du produit scalaire, puis car \(\langle e_k,e_n\rangle=\delta_{n,k}\). Ainsi \(\langle\tilde x-x,e_n\rangle=0,\ \forall n\in\mathbb N\), et \(\tilde x-x=0\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 8
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-239-6
+  notion: topo-n-0259
+  recto: 'Preuve : Prop. 81, (iii) \(\Rightarrow\) (iv)'
+  verso: On a déjà montré (preuve de l'inégalité de Bessel) que, pour tout \(x\in\mathcal H\),<br>\[\left\|x-\sum_{k=0}^n\langle x,e_k\rangle e_k\right\|^2=\|x\|^2-\sum_{k=0}^n|\langle x,e_k\rangle|^2,\]où le membre de gauche tend vers \(0\) quand \(n\to+\infty\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 8
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-239-7
+  notion: topo-n-0259
+  recto: 'Preuve : Prop. 81, (iv) \(\Rightarrow\) (ii)'
+  verso: 'Soit \(x\in\mathcal H\) tel que \(\langle x,e_n\rangle=0,\ \forall n\in\mathbb N\). On a<br>\[\|x\|^2=\lim_{n\to+\infty}\sum_{k=0}^n|\langle x,e_k\rangle|^2=0,\]d''où \(x=0\).<br>(le poly écrit \(|\langle x,e_n\rangle|^2\) dans la somme sur \(k\) : coquille)'
+  source: Poly de topologie Paris Cité, ch. 6, p. 8
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-240-1
+  notion: topo-n-0260
+  recto: 'Cor. 13 : isomorphisme isométrique \(\mathcal H\to\ell^2(\mathbb N)\)'
+  verso: Soient \(\mathcal H\) un espace de Hilbert et \((e_n)_{n\in\mathbb N}\) une base hilbertienne. L'application<br>\[I:\mathcal H\to\ell^2(\mathbb N),\quad x\mapsto(\langle x,e_n\rangle)_{n\in\mathbb N}\]est un isomorphisme isométrique.
+  source: Poly de topologie Paris Cité, ch. 6, p. 9
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-240-2
+  notion: topo-n-0260
+  recto: 'Preuve : isomorphisme isométrique \(\mathcal H\to\ell^2(\mathbb N)\) (Cor. 13)'
+  verso: Par le théorème de Riesz-Fisher, pour tout \((\alpha_n)_{n\in\mathbb N}\in\ell^2(\mathbb N)\), on peut définir \(x=\sum_{n=0}^{+\infty}\alpha_ne_n\in\mathcal H\). En utilisant l'orthonormalité des \(e_n\), on vérifie alors que, pour tout \(n\in\mathbb N\),<br>\[\langle x,e_n\rangle=\left\langle\sum_{k=0}^{+\infty}\alpha_ke_k,e_n\right\rangle=\alpha_n,\]d'où la surjectivité. L'isométrie vient de l'identité de Parseval et implique l'injectivité et la bi-continuité.
+  source: Poly de topologie Paris Cité, ch. 6, p. 9
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-241-1
+  notion: topo-n-0261
+  recto: 'Exemple : base hilbertienne \((\delta_n)\) de \(\ell^2(\mathbb N)\)'
+  verso: Pour tout \(n\in\mathbb N\), on définit la suite \(\delta_n\) en posant \((\delta_n)_k=\delta_{n,k}=\begin{cases}0,&\text{si }k\neq n,\\1,&\text{si }k=n.\end{cases}\)<br>Le système \((\delta_n)_{n\in\mathbb N}\) est alors une base hilbertienne de l'espace<br>\[\ell^2(\mathbb N)=\left\{u\in\mathbb K^{\mathbb N}\ /\ \|u\|_2=\left(\sum_{n=0}^{+\infty}|u_n|^2\right)^{1/2}<+\infty\right\}\]muni du produit scalaire \(\langle u,v\rangle=\sum_{n\in\mathbb N}u_n\overline{v_n}\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 10
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-241-2
+  notion: topo-n-0261
+  recto: 'Preuve : \((\delta_n)\) est une base hilbertienne de \(\ell^2(\mathbb N)\)'
+  verso: En effet, \(\langle\delta_n,\delta_m\rangle=\sum_{k\in\mathbb N}\delta_{k,n}\delta_{k,m}=\delta_{n,m},\ \forall n,m\in\mathbb N\), et<br>\[\langle u,\delta_n\rangle=0,\ \forall n\in\mathbb N\ \Rightarrow\ u_n=0,\ \forall n\in\mathbb N\ \Rightarrow\ u=0.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 10
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-242-1
+  notion: topo-n-0262
+  recto: 'Prop. 82 : base hilbertienne d''un Hilbert séparable'
+  verso: Tout espace de Hilbert séparable possède une base hilbertienne.
+  source: Poly de topologie Paris Cité, ch. 6, p. 10
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-242-2
+  notion: topo-n-0262
+  recto: 'Preuve : Hilbert séparable, construction par Gram-Schmidt (Prop. 82)'
+  verso: Soit \(\{f_n\ /\ n\in\mathbb N\}\) une famille dénombrable et dense dans \(\mathcal H\). On pose, pour tout \(n\in\mathbb N\), \(F_n=\mathrm{vect}\left(\{f_k\ /\ k\in\{1,\cdots,n\}\}\right)\), et on construit par récurrence une base orthonormée de \(F_n\) en utilisant le procédé de Gram-Schmidt. Plus précisément, si \(F_n=F_{n-1}\), on garde pour \(F_n\) la base de \(F_{n-1}\). Sinon, partant de la base \((e_k)_{k\in\{0,\cdots,p-1\}}\) de \(F_{n-1}\), on pose<br>\[e_p=\frac{f_n-\sum_{k=0}^{p-1}\langle f_n,e_k\rangle e_k}{\left\|f_n-\sum_{k=0}^{p-1}\langle f_n,e_k\rangle e_k\right\|}.\]
+  source: Poly de topologie Paris Cité, ch. 6, p. 10
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-242-3
+  notion: topo-n-0262
+  recto: 'Preuve : Hilbert séparable, le système est orthonormé total (Prop. 82)'
+  verso: Le système ainsi construit (par le procédé de Gram-Schmidt à partir d'une famille dénombrable dense \(\{f_n\ /\ n\in\mathbb N\}\)) est orthonormé et total puisque l'union des \(F_n\) est dense dans \(\mathcal H\).
+  source: Poly de topologie Paris Cité, ch. 6, p. 10
+  chapitre: Chapitre 6 - Espace de Hilbert
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-250-1
+  notion: topo-n-0280
+  recto: 'Déf : fonction mesurable (borélienne)'
+  verso: Soit \((X,\mu)\) un espace mesuré. La fonction \(f:X\to\mathbb K\) est dite mesurable (ou borélienne) si et seulement si, pour tout ouvert \(U\) de \(\mathbb K\), \(f^{-1}(U)\) est mesurable.
+  source: Poly de topologie Paris Cité, ch. 7, p. 1
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [definition]
+- id: topo-a-251-1
+  notion: topo-n-0281
+  recto: 'Déf : \(\mathcal L^p(X,\mu)\) et \(\|f\|_p\) pour \(p<+\infty\)'
+  verso: Soit \((X,\mu)\) un espace mesuré et \(p\in[1,+\infty]\). On note \[\mathcal L^p(X,\mu)=\{f:X\to\mathbb K\text{ mesurable}\ /\ \|f\|_p<+\infty\},\] où \[\|f\|_p=\left(\int_X|f(x)|^p\,d\mu\right)^{\frac1p},\ \text{ si }p\in[1,+\infty[.\]
+  source: Poly de topologie Paris Cité, ch. 7, p. 1
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [definition]
+- id: topo-a-252-1
+  notion: topo-n-0282
+  recto: 'Déf : \(\|f\|_\infty\) (supremum essentielle)'
+  verso: 'Avec \(f:X\to\mathbb K\) mesurable sur l''espace mesuré \((X,\mu)\) (cas \(p=+\infty\) de la définition de \(\mathcal L^p(X,\mu)\)) : \[\|f\|_\infty=\operatorname{suppess}|f|\ \text{(supremum essentielle)}=\inf\{C\in\mathbb R_+\ /\ |f|\le C\ \mu\text{-p.p.}\}=\inf\{C\in\mathbb R_+\ /\ \mu(f^{-1}([C,+\infty[))=0\}.\]'
+  source: Poly de topologie Paris Cité, ch. 7, p. 1
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [definition]
+- id: topo-a-253-1
+  notion: topo-n-0283
+  recto: 'Prop. 82 : \(\|\cdot\|_p\) semi-norme, homogénéité'
+  verso: Pour tout \(p\in[1,+\infty]\), \(\|\cdot\|_p\) est une semi-norme sur \(\mathcal L^p(X,\mu)\) dans le sens où \[\|\lambda f\|_p=|\lambda|\|f\|_p,\quad\forall f\in\mathcal L^p(X,\mu),\forall\lambda\in\mathbb K,\] (et l'inégalité triangulaire, carte suivante).
+  source: Poly de topologie Paris Cité, ch. 7, p. 1
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-253-2
+  notion: topo-n-0283
+  recto: 'Prop. 82 : \(\|\cdot\|_p\) semi-norme, inégalité triangulaire (Minkowski)'
+  verso: Pour tout \(p\in[1,+\infty]\), \(\|\cdot\|_p\) est une semi-norme sur \(\mathcal L^p(X,\mu)\) dans le sens où (homogénéité, carte précédente) et \[\|f+g\|_p\le\|f\|_p+\|g\|_p,\quad\forall f,g\in\mathcal L^p(X,\mu).\] Le poly appelle cette inégalité « inégalité de Minkowski » dans la démonstration.
+  source: Poly de topologie Paris Cité, ch. 7, p. 1
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-254-1
+  notion: topo-n-0284
+  recto: 'Prop. 82 : inégalité de Hölder'
+  verso: 'Soit \((X,\mu)\) un espace mesuré et \(p\in[1,+\infty]\). Si \(q\in[1,+\infty]\) est tel que \(\frac1p+\frac1q=1\) (avec \(\frac1{+\infty}=0\) ; coquille du poly : il écrit \(\frac1{+\infty}=1\)), alors, pour tous \(f\in\mathcal L^p(X,\mu)\) et \(g\in\mathcal L^q(X,\mu)\), la fonction \(fg\) appartient à \(\mathcal L^1(X,\mu)\) et satisfait l''inégalité de Hölder \[\|fg\|_1\le\|f\|_p\|g\|_q.\]'
+  source: Poly de topologie Paris Cité, ch. 7, p. 1
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-255-1
+  notion: topo-n-0285
+  recto: 'Rem. : \(\|\cdot\|_p\) n''est pas une norme sur \(\mathcal L^p\)'
+  verso: 'Pour \(p\in[1,+\infty]\) (Prop. 82) : \(\|\cdot\|_p\) n''est pas une norme car \(\|f\|_p=0\) n''entraîne pas \(f=0\), mais seulement une égalité \(\mu\)-presque partout.'
+  source: Poly de topologie Paris Cité, ch. 7, p. 2
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-256-1
+  notion: topo-n-0286
+  recto: 'Preuve : inégalité de Hölder (Prop. 82), réductions'
+  verso: 'Cas \(p=1\) ou \(p=\infty\) (le poly écrit « \(p=0\) », coquille) : résultat immédiat car, pour \(\mu\)-presque tout \(x\), \(|f(x)g(x)|\le|f(x)|\|g\|_\infty\). On se place donc dans le cas \(p\in]1,+\infty[\). On peut aussi supposer \(f\ne0\) et \(g\ne0\) car, dans le cas contraire, le résultat est encore évident. On peut alors changer \(f\) en \(\frac f{\|f\|_p}\) et \(g\) en \(\frac g{\|g\|_q}\), pour se ramener au cas où \(\|f\|_p=1\) et \(\|g\|_q=1\). Il s''agit alors de montrer que \(\|fg\|_1\le1\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 2
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-256-2
+  notion: topo-n-0286
+  recto: 'Preuve : inégalité de Hölder (Prop. 82), cas \(\|f\|_p=\|g\|_q=1\)'
+  verso: 'La fonction exponentielle étant convexe : \(e^{\frac tp+\frac sq}\le\frac1pe^t+\frac1qe^s\), \(\forall t,s\in\mathbb R\). Pour tout \(x\in X\) tel que \(f(x)\ne0\) et \(g(x)\ne0\), avec \(t=p\log|f(x)|\) et \(s=q\log|g(x)|\), cela s''écrit \(|f(x)\,g(x)|\le\frac1p|f(x)|^p+\frac1q|g(x)|^q\). Cette inégalité s''étend à tout \(x\in X\). En intégrant : \[\|fg\|_1\le\frac1p\|f\|_p^p+\frac1q\|g\|_q^q=\frac1p+\frac1q=1.\]'
+  source: Poly de topologie Paris Cité, ch. 7, p. 2
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-257-1
+  notion: topo-n-0287
+  recto: 'Preuve : inégalité de Minkowski (Prop. 82)'
+  verso: L'homogénéité se vérifie facilement ; on montre l'inégalité triangulaire. On a \[\int_X|f+g|^pd\mu\le\int_X\big(|f|\,|f+g|^{p-1}+|g|\,|f+g|^{p-1}\big)d\mu.\] Par Hölder, \(\int_X|f|\,|f+g|^{p-1}d\mu\le\big(\int_X|f|^pd\mu\big)^{\frac1p}\big(\int_X|f+g|^{q(p-1)}\big)^{\frac1q}\), où \(q(p-1)=p\). Ainsi \(\|f+g\|_p^p\le\|f\|_p\|f+g\|_p^{p-1}+\|g\|_p\|f+g\|_p^{p-1}\), et en simplifiant par \(\|f+g\|_p^{p-1}\), on obtient \(\|f+g\|_p\le\|f\|_p+\|g\|_p\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 2
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-258-1
+  notion: topo-n-0288
+  recto: 'Déf. 57 : relation binaire'
+  verso: Une relation binaire \(\mathcal R\) d'un ensemble \(E\) est une partie \(G\) de \(E\times E\). Si \((x,y)\in G\), on dit que \(x\) est en relation avec \(y\) et on écrit \(x\mathcal Ry\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [definition]
+- id: topo-a-259-1
+  notion: topo-n-0289
+  recto: 'Déf. 58 : relation d''équivalence'
+  verso: 'Une relation binaire est une relation d''équivalence sur \(E\) si et seulement si elle est<br>- réflexive : \(x\mathcal Rx\), \(\forall x\in E\),<br>- symétrique : \(x\mathcal Ry\Rightarrow y\mathcal Rx\), \(\forall x,y\in E\),<br>- transitive : \(x\mathcal Ry\ \&\ y\mathcal Rz\Rightarrow x\mathcal Rz\), \(\forall x,y,z\in E\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [definition]
+- id: topo-a-260-1
+  notion: topo-n-0290
+  recto: 'Exemple : « même composante connexe » (relation d''équivalence)'
+  verso: Sur un espace métrique, « \(x\) et \(y\) appartiennent à la même composante connexe » est une relation d'équivalence.
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-260-2
+  notion: topo-n-0290
+  recto: 'Exemple : \(x\mathcal Ry\Leftrightarrow x-y\in F\) (sous-groupe)'
+  verso: Si \((E,+)\) est un groupe et \(F\) un sous-groupe de \(E\), alors la relation \[x\mathcal Ry\ \Leftrightarrow\ x-y\in F\] est une relation d'équivalence.
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-260-3
+  notion: topo-n-0290
+  recto: 'Exemple : parité sur \(\mathbb Z\) (sous-groupe \(2\mathbb Z\))'
+  verso: Dans l'exemple précédent (\((E,+)\) groupe, \(F\) sous-groupe, \(x\mathcal Ry\Leftrightarrow x-y\in F\)), (i) si \(E=\mathbb Z\) et \(F=2\mathbb Z\), \[x\mathcal Ry\ \Leftrightarrow\ x\text{ et }y\text{ sont de même parité.}\]
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-260-4
+  notion: topo-n-0290
+  recto: 'Exemple : congruence modulo \(2\pi\) (sous-groupe \(2\pi\mathbb Z\))'
+  verso: Dans l'exemple précédent (\((E,+)\) groupe, \(F\) sous-groupe, \(x\mathcal Ry\Leftrightarrow x-y\in F\)), (ii) si \(E=\mathbb R\) et \(F=2\pi\mathbb Z\), \[x\mathcal Ry\ \Leftrightarrow\ x\equiv y\ [2\pi].\]
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-261-1
+  notion: topo-n-0291
+  recto: 'Exemple : « \(f=g\ \mu\)-p.p. » (relation d''équivalence)'
+  verso: Dans l'exemple précédent (\((E,+)\) groupe, \(F\) sous-groupe, \(x\mathcal Ry\Leftrightarrow x-y\in F\)), (iii) si \((X,\mu)\) est un espace mesuré, \(E=\{f:X\to\mathbb K\text{ mesurable}\}\) et \(F=\{f\in E\ /\ f=0\ \mu\text{-p.p.}\}\), \[f\mathcal Rg\ \Leftrightarrow\ f=g\ \mu\text{-p.p.}\]
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-262-1
+  notion: topo-n-0292
+  recto: 'Déf. 59 : classe d''équivalence, ensemble quotient'
+  verso: Soient \(E\) un ensemble et \(\mathcal R\) une relation d'équivalence sur \(E\). Pour tout \(x\in E\), l'ensemble \(\{y\in E\ /\ x\mathcal Ry\}\) est appelé classe d'équivalence pour la relation \(\mathcal R\). L'ensemble des classes d'équivalence s'appelle ensemble quotient de \(E\) pour \(\mathcal R\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [definition]
+- id: topo-a-263-1
+  notion: topo-n-0293
+  recto: 'Rem. : classes d''équivalence et partition'
+  verso: 'Pour une relation d''équivalence \(\mathcal R\) sur \(E\) : les classes d''équivalence forment une partition de \(E\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-263-2
+  notion: topo-n-0293
+  recto: 'Notation : classe d''équivalence \([x]\)'
+  verso: 'On note \([x]\) la classe d''équivalence contenant l''élément \(x\) : \[y\in[x]\ \Leftrightarrow\ x\mathcal Ry\ \Leftrightarrow\ [x]=[y].\]'
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-264-1
+  notion: topo-n-0294
+  recto: 'Exemple : classes de « même composante connexe »'
+  verso: 'Pour la relation « \(x\) et \(y\) appartiennent à la même composante connexe » sur un espace métrique : \([x]=C_x\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-264-2
+  notion: topo-n-0294
+  recto: 'Exemple : classes de \(x\mathcal Ry\Leftrightarrow x-y\in F\), groupe quotient'
+  verso: 'Pour \((E,+)\) groupe, \(F\) sous-groupe et \(x\mathcal Ry\Leftrightarrow x-y\in F\) : \[[x]=\{y\in E\ /\ x-y\in F\}=\{x\}+F.\] On note \(\frac EF\) l''ensemble quotient. Il s''agit d''un groupe appelé groupe quotient.'
+  source: Poly de topologie Paris Cité, ch. 7, p. 3
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-264-3
+  notion: topo-n-0294
+  recto: 'Exemple : classes de la parité (\(E=\mathbb Z\), \(F=2\mathbb Z\))'
+  verso: 'Pour \(E=\mathbb Z\) et \(F=2\mathbb Z\) : \([x]=\{y\in\mathbb Z\ /\ x\text{ et }y\text{ sont de même parité}\}\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 4
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-264-4
+  notion: topo-n-0294
+  recto: 'Exemple : classes modulo \(2\pi\), le tore \(\mathbb T^d\)'
+  verso: 'Pour \(E=\mathbb R\) et \(F=2\pi\mathbb Z\) : \([x]=\{y\in\mathbb R\ /\ y\equiv x\ [2\pi]\}\). Pour tout \(d\in\mathbb N^*\), on appelle le groupe quotient \(\mathbb T^d=\frac{\mathbb R^d}{2\pi\mathbb Z^d}\) le tore.'
+  source: Poly de topologie Paris Cité, ch. 7, p. 4
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-264-5
+  notion: topo-n-0294
+  recto: 'Exemple : classe \([f]\) pour l''égalité \(\mu\)-p.p.'
+  verso: 'Pour \((X,\mu)\) espace mesuré, \(E=\{f:X\to\mathbb K\text{ mesurable}\}\) et \(f\mathcal Rg\Leftrightarrow f=g\ \mu\text{-p.p.}\) : \[[f]=\{g\in E\ /\ g=f\ \mu\text{-p.p.}\}.\]'
+  source: Poly de topologie Paris Cité, ch. 7, p. 4
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [exemple]
+- id: topo-a-265-1
+  notion: topo-n-0295
+  recto: 'Rem. : \(\frac EF\) est un espace vectoriel'
+  verso: Si \(E\) et \(F\) sont des espaces vectoriels, alors l'ensemble quotient \(\frac EF\) a lui aussi une structure d'espace vectoriel. C'est le cas, en particulier, pour l'exemple (iii) (\(E=\{f:X\to\mathbb K\text{ mesurable}\}\), \(F=\{f\in E\ /\ f=0\ \mu\text{-p.p.}\}\)).
+  source: Poly de topologie Paris Cité, ch. 7, p. 4
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-266-1
+  notion: topo-n-0296
+  recto: 'Rem. : \(\|[f]\|_p=\|f\|_p\) bien défini'
+  verso: On considère la relation d'équivalence \(f=g\ \mu\)-p.p. Soient \(p\in[1,+\infty]\) et \(f,g\in\mathcal L^p(X,\mu)\). On remarque que, si \(f=g\ \mu\)-p.p., alors \(\|f\|_p=\|g\|_p\). On peut donc définir \(\|[f]\|_p=\|f\|_p\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 4
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-267-1
+  notion: topo-n-0297
+  recto: 'Déf. 60 : \(L^p(X,\mu)\)'
+  verso: Pour tout \(p\in[1,+\infty]\), on appelle \(L^p(X,\mu)\) l'ensemble des classes \([f]\) de fonctions mesurables sur \(X\) telles que \(\|[f]\|_p<+\infty\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 4
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [definition]
+- id: topo-a-268-1
+  notion: topo-n-0298
+  recto: 'Prop. 83 : \(\|\cdot\|_p\) norme sur \(L^p(X,\mu)\)'
+  verso: 'Pour \(p\in[1,+\infty]\) (cadre de la Déf. 60) : \(\|\cdot\|_p\) est une norme sur \(L^p(X,\mu)\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 4
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-269-1
+  notion: topo-n-0299
+  recto: 'Preuve : \(\|\cdot\|_p\) est une norme sur \(L^p(X,\mu)\) (Prop. 83)'
+  verso: D'après la proposition 82, c'est clairement une semi-norme. Et \(\|[f]\|_p=0\) implique \(f=0\) presque partout. Donc \([f]\) est bien la classe de la fonction nulle.
+  source: Poly de topologie Paris Cité, ch. 7, p. 4
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-270-1
+  notion: topo-n-0300
+  recto: 'Rem. : abus de notation \(f\in\mathcal C(X,\mathbb K)\cap L^p(X,\mu)\)'
+  verso: En pratique, on ne met pas les crochets créant ainsi une confusion entre un élément de la classe d'équivalence et la classe toute entière. En particulier, si \(X\) est muni d'une topologie (\(\Rightarrow\) on peut définir \(\mathcal C(X,\mathbb K)\)), \(f\in\mathcal C(X,\mathbb K)\) et \([f]\in L^p(X,\mu)\), on dit que \(f\in\mathcal C(X,\mathbb K)\cap L^p(X,\mu)\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 4
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-271-1
+  notion: topo-n-0301
+  recto: 'Thm 17 : \(L^p(X,\mu)\) est un espace de Banach'
+  verso: Pour tout \(p\in[1,+\infty]\), \(L^p(X,\mu)\) est un espace de Banach.
+  source: Poly de topologie Paris Cité, ch. 7, p. 4
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-272-1
+  notion: topo-n-0302
+  recto: 'Preuve : Thm 17, \(p<+\infty\), sous-suite extraite'
+  verso: 'On se donne \((f_n)_{n\in\mathbb N}\) une suite de Cauchy de \(L^p(X,\mu)\) et on montre qu''elle est convergente. On construit une sous-suite \((f_{\phi(n)})\) par récurrence : \(\phi(0)=0\) ; \(\phi(n-1)\) construit, par le critère de Cauchy il existe un entier \(m\ge\phi(n-1)+1\) tel que \(\|f_m-f_n\|_p\le\frac1{2^m}\), \(\forall n\ge m\) ; on pose \(\phi(n)=m\). Ainsi \(\|f_{\phi(n)}-f_{\phi(n+1)}\|_p\le\frac1{2^{\phi(n)}}\le\frac1{2^n}\), \(\forall n\in\mathbb N\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 4
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-272-2
+  notion: topo-n-0302
+  recto: 'Preuve : Thm 17, \(p<+\infty\), la fonction \(g\)'
+  verso: 'On pose \(g_n:x\mapsto\sum_{k=0}^n|f_{\phi(k+1)}(x)-f_{\phi(k)}(x)|\). Alors \(\|g_n\|_p\le\sum_{k=0}^n\|f_{\phi(k+1)}-f_{\phi(k)}\|_p\le2<+\infty\). Pour presque tout \(x\), \(((g_n(x))^p)_n\) est croissante : par le théorème de Beppo-Levi (convergence monotone), la fonction \(g:x\mapsto\sum_{k=0}^{+\infty}|f_{\phi(k+1)}(x)-f_{\phi(k)}(x)|\) satisfait \(\int_X|g|^pd\mu=\lim_{n\to+\infty}\int_X|g_n|^pd\mu\le2^p<+\infty\), donc \(g\in L^p(X,\mu)\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 5
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-272-3
+  notion: topo-n-0302
+  recto: 'Preuve : Thm 17, \(p<+\infty\), conclusion'
+  verso: 'Pour presque tout \(x\), la série \(\sum\big(f_{\phi(n+1)}(x)-f_{\phi(n)}(x)\big)\) est absolument convergente, donc convergente, c''est-à-dire que \((f_{\phi(n)}(x))\) converge ; on note \(f(x)\) sa limite. Comme \(|f_{\phi(n)}(x)|\le|g_n(x)|+|f_0(x)|\le|g(x)|+|f_0(x)|\), le théorème de convergence dominée donne que \((f_{\phi(n)})\) converge vers \(f\) dans \(L^p(X,\mu)\). La suite de Cauchy \((f_n)\) possède une valeur d''adhérence : elle converge dans \(L^p(X,\mu)\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 5
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-273-1
+  notion: topo-n-0303
+  recto: 'Preuve : Thm 17, \(p=+\infty\)'
+  verso: 'Pour tous \(n,m\in\mathbb N\), \(A_{n,m}=\{x\in X\ /\ |f_n(x)-f_m(x)|>\|f_n-f_m\|_\infty\}\) (le poly écrit \(\ge\), coquille : avec \(\ge\), \(\mu(A_{n,m})=0\) serait faux) et \(Y=\bigcup_{(n,m)\in\mathbb N^2}A_{n,m}\) ; \(\mu(A_{n,m})=0\) et ainsi \(\mu(Y)=0\). Soit \(\epsilon>0\) ; \((f_n)\) étant de Cauchy, il existe \(n\) tel que \(\|f_p-f_q\|_\infty<\epsilon\) pour \(p,q\ge n\), donc \(|f_p(x)-f_q(x)|<\epsilon\), \(\forall x\in Y^c\), \(\forall p,q\ge n\) (7.1). Pour \(x\in Y^c\), \((f_n(x))\) est de Cauchy, donc converge vers un scalaire noté \(f(x)\). En faisant tendre \(q\) vers \(+\infty\) dans (7.1) : \(|f_p(x)-f(x)|<\epsilon\), \(\forall x\in Y^c\), \(\forall p\ge n\). Comme \(\mu(Y)=0\), \(\|f_p-f\|_\infty<\epsilon\), \(\forall p\ge n\) : \(f\in L^\infty(X,\mu)\) et \((f_n)\) converge vers \(f\) dans \(L^\infty(X,\mu)\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 5
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-274-1
+  notion: topo-n-0304
+  recto: 'Cor. 15 : \(\ell^p(\mathbb N)\) est un espace de Banach'
+  verso: Pour tout \(p\in[1,+\infty]\), \(\ell^p(\mathbb N)=\{u\in\mathbb K^{\mathbb N}\ /\ \|u\|_p<+\infty\}\) est un espace de Banach.
+  source: Poly de topologie Paris Cité, ch. 7, p. 6
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-274-2
+  notion: topo-n-0304
+  recto: 'Preuve : Cor. 15 (\(\ell^p(\mathbb N)\))'
+  verso: On applique le Thm 17 avec \(X=\mathbb N\) et \(\mu\) la mesure de comptage.
+  source: Poly de topologie Paris Cité, ch. 7, p. 6
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-275-1
+  notion: topo-n-0305
+  recto: 'Cor. 16 : \(L^2(X,\mu)\) espace de Hilbert'
+  verso: \(L^2(X,\mu)\), muni du produit scalaire \((f,g)\mapsto\int_Xf(x)\,\overline{g(x)}\,d\mu\), est un espace de Hilbert.
+  source: Poly de topologie Paris Cité, ch. 7, p. 6
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-276-1
+  notion: topo-n-0306
+  recto: 'Rem. : intérêt de \(L^2\) (énergie)'
+  verso: Cette propriété est très utile pour les applications en physique et en ingénierie (en particulier, en traitement du signal) car, \(\|\cdot\|_2^2\) représentant l'énergie, on se place souvent dans le cadre d'un espace \(L^2\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 6
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-277-1
+  notion: topo-n-0307
+  recto: 'Prop. 84 : \(L^\infty\cap L^p\) dense dans \(L^p\)'
+  verso: Soit \(p\in[1,+\infty[\). L'espace \(L^\infty(X,\mu)\cap L^p(X,\mu)\) est dense dans \(L^p(X,\mu)\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 6
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-278-1
+  notion: topo-n-0308
+  recto: 'Preuve : densité de \(L^\infty\cap L^p\) (Prop. 84)'
+  verso: Soit \(f\in L^p(X,\mu)\). Pour tout \(n\in\mathbb N\), posons \(f_n=\mathbb 1_{\{x\in X\ /\ |f(x)|\le n\}}\times f\). Ces (classes de) fonctions appartiennent clairement à \(L^\infty(X,\mu)\cap L^p(X,\mu)\) car \(\|f_n\|_\infty\le n\). De plus, pour presque tout \(x\in X\), \(f_n(x)\to f(x)\) quand \(n\to+\infty\), et \(|f_n(x)-f(x)|^p\le|2f(x)|^p\). Par le théorème de convergence dominée, \(\|f_n-f\|_p\to0\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 6
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-279-1
+  notion: topo-n-0309
+  recto: 'Déf. 61 : support d''une fonction continue'
+  verso: Soit \(\Omega\) un espace topologique. Pour tout \(f\in\mathcal C(\Omega,\mathbb K)\), on définit le support de \(f\) en posant \[\operatorname{supp}f=\overline{\{x\in\Omega\ /\ f(x)\ne0\}}.\]
+  source: Poly de topologie Paris Cité, ch. 7, p. 6
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [definition]
+- id: topo-a-279-2
+  notion: topo-n-0309
+  recto: 'Déf. 61 : \(\mathcal C_c(\Omega)\)'
+  verso: Soit \(\Omega\) un espace topologique. On note \(\mathcal C_c(\Omega)\) l'ensemble des fonctions continues, à support compact, sur \(\Omega\) (le support de \(f\in\mathcal C(\Omega,\mathbb K)\) étant \(\operatorname{supp}f=\overline{\{x\in\Omega\ /\ f(x)\ne0\}}\)).
+  source: Poly de topologie Paris Cité, ch. 7, p. 6
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [definition]
+- id: topo-a-280-1
+  notion: topo-n-0310
+  recto: 'Thm 18 : \(\mathcal C_c(\Omega)\) dense dans \(L^p(\Omega,\mu)\)'
+  verso: Soit \(\Omega\) un ouvert de \(\mathbb R^d\) (muni de la distance euclidienne) et \(\mu\) une mesure borélienne finie sur les compacts (par exemple, la mesure de Lebesgue). Pour tout \(p\in[1,+\infty[\), l'espace \(\mathcal C_c(\Omega)\) est dense dans \(L^p(\Omega,\mu)\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 6
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [theoreme]
+- id: topo-a-281-1
+  notion: topo-n-0311
+  recto: 'Rem. 1 (Thm 18) : \(\mathcal C_c(\mathbb R)\) non dense dans \(L^\infty(\mathbb R,\lambda)\)'
+  verso: \(\mathcal C_c(\mathbb R)\) n'est clairement pas dense dans \(L^\infty(\mathbb R,\lambda)\) car, pour tout \(f\in\mathcal C_c(\mathbb R)\), on a \(\|1-f\|_\infty\ge1\). En fait, l'adhérence de cet espace dans \(L^\infty(\mathbb R,\lambda)\) est \[\overline{\mathcal C_c(\mathbb R)}=\Big\{f\in\mathcal C(\mathbb R)\ /\ \lim_{|x|\to+\infty}f(x)=0\Big\}.\]
+  source: Poly de topologie Paris Cité, ch. 7, p. 6
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-282-1
+  notion: topo-n-0312
+  recto: 'Rem. 2 (Thm 18) : séparabilité de \(L^p(X,\mu)\)'
+  verso: Ce théorème (Thm 18) permet de montrer que \(L^p(X,\mu)\) est séparable, pour tout \(p\in[1,+\infty[\) (\(L^\infty(X,\mu)\) ne l'est pas).
+  source: Poly de topologie Paris Cité, ch. 7, p. 6
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-283-1
+  notion: topo-n-0313
+  recto: 'Preuve : Thm 18, \(\mathcal C_c\subset L^p\)'
+  verso: 'Pour tout \(f\in\mathcal C_c(\mathbb R)\) (notation du poly pour \(\mathcal C_c(\Omega)\)) : \[\|f\|_p=\Big(\int|f|^pd\mu\Big)^{\frac1p}\le\|f\|_\infty\,\mu(\operatorname{supp}(f))^{\frac1p}\] (le poly omet le signe \(\int\), coquille), donc \(\mathcal C_c(\mathbb R)\subset L^p(\Omega,\mu)\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 7
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-283-2
+  notion: topo-n-0313
+  recto: 'Preuve : Thm 18, plan'
+  verso: 'On se donne \(f\in L^p(\Omega,\mu)\), \(\epsilon>0\) et on cherche \(g\in\mathcal C_c(\mathbb R)\) telle que \(\|f-g\|_p\) soit majoré par \(\epsilon\) ou un terme qui tend vers 0 avec \(\epsilon\). On admet le lemme 3, puis on avance progressivement : (i) \(f=\mathbb 1_A\), \(A\) borélienne incluse dans un compact ; (ii) \(f=\mathbb 1_A\), \(A\) borélienne de mesure finie ; (iii) \(f\) étagée ; (iv) \(f\) positive ; (v) \(f\) réelle ; (vi) \(f\) complexe.'
+  source: Poly de topologie Paris Cité, ch. 7, p. 7
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-284-1
+  notion: topo-n-0314
+  recto: 'Lemme 3 (admis) : ouvert et compact encadrant un borélien'
+  verso: Pour toute partie borélienne \(A\in\mathcal P(\Omega)\), de mesure finie, et pour tout \(\epsilon>0\), il existe un ouvert \(U\) et un compact \(K\) de \(\Omega\) tels que \(K\subset A\subset U\) et \(\mu(U\setminus K)<\epsilon\).<br>(Lemme admis dans le poly.)
+  source: Poly de topologie Paris Cité, ch. 7, p. 7
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-284-2
+  notion: topo-n-0314
+  recto: 'Rem. : \(d(K,\Omega\setminus U)>0\) (Lemme 3)'
+  verso: 'Dans le cadre du lemme 3 : on rappelle au passage que \(d(K,\Omega\setminus U)>0\) car \(\Omega\setminus U\) est fermé, \(K\) est compact et ces ensembles sont disjoints.'
+  source: Poly de topologie Paris Cité, ch. 7, p. 7
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [propriete]
+- id: topo-a-285-1
+  notion: topo-n-0315
+  recto: 'Preuve : Thm 18, cas (i) \(f=\mathbb 1_A\), \(A\) incluse dans un compact'
+  verso: '\(A\in\mathcal P(\Omega)\) borélienne et incluse dans un compact. La partie \(A\) est bornée : il existe \(M>0\) tel que \(A\subset B(0,M)\). On change l''ouvert \(U\) du lemme 3 en \(U\cap B(0,M)\) et on pose \[g:x\mapsto\frac{d(x,\Omega\setminus U)}{d(x,\Omega\setminus U)+d(x,K)}.\] La fonction \(g\) est continue (cf. TD) et à support compact inclus dans \(B(0,M)\). Elle prend ses valeurs entre 0 et 1 ; elle est nulle sur \(\Omega\setminus U\) et vaut 1 sur \(K\). Donc \(|\mathbb 1_A(x)-g(x)|\le\mathbb 1_{U\setminus K}(x)\), \(\forall x\in\Omega\), et \(\|\mathbb 1_A-g\|_p\le(\mu(U\setminus K))^{\frac1p}<\epsilon^{\frac1p}\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 7
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-286-1
+  notion: topo-n-0316
+  recto: 'Preuve : Thm 18, cas (ii) \(f=\mathbb 1_A\), \(A\) de mesure finie'
+  verso: \(A\in\mathcal P(\Omega)\) borélienne de mesure finie. On se donne une suite exhaustive de compacts \((K_n)_{n\in\mathbb N}\), c'est-à-dire une suite croissante telle que \(\bigcup_{n\in\mathbb N}K_n=\Omega\). On peut prendre, par exemple, \[K_n=\bar B(0,n)\cap\Big\{x\in\Omega\ /\ d(x,\Omega^c)\ge\frac1n\Big\}.\] Pour tout \(x\in\Omega\), on a \(\mathbb 1_{K_n\cap A}(x)\le\mathbb 1_A(x)\), donc \(|\mathbb 1_{K_n\cap A}(x)-\mathbb 1_A(x)|^p\le|2\,\mathbb 1_A(x)|^p\). De plus, \(|\mathbb 1_{K_n\cap A}(x)-\mathbb 1_A(x)|^p\to0\), quand \(n\to+\infty\). Donc, par convergence dominée, \(\|\mathbb 1_{K_n\cap A}-\mathbb 1_A\|_p\to0\) et il existe \(n\in\mathbb N\) tel que \(\|\mathbb 1_{K_n\cap A}-\mathbb 1_A\|_p<\frac\epsilon2\). Comme \(K_n\cap A\) est inclus dans un compact, on a vu en (i) qu'il existait \(g\in\mathcal C_c(\mathbb R)\) telle que \(\|\mathbb 1_{K_n\cap A}-g\|_p<\frac\epsilon2\), et on a donc \(\|\mathbb 1_A-g\|_p<\epsilon\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 7
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-287-1
+  notion: topo-n-0317
+  recto: 'Preuve : Thm 18, cas (iii) \(f\) étagée'
+  verso: \(f\) est une fonction étagée de \(L^p(X,\mu)\). En d'autres termes, il existe \(\lambda_1,\cdots,\lambda_n\in\mathbb R\) et \(A_1,\cdots,A_n\) boréliens tels que \(\mu(A_k)<+\infty\), \(\forall k\in\{1,\cdots,n\}\), et \[f=\sum_{k=1}^n\lambda_k\mathbb 1_{A_k}.\] D'après (ii), pour tout \(k\), il existe \(g_k\in\mathcal C_c(\mathbb R)\) tel que \(\|\mathbb 1_{A_k}-g_k\|_p<\frac\epsilon{n\lambda_k}\). On en déduit que \[\Big\|f-\sum_{k=1}^n\lambda_kg_k\Big\|_p=\Big\|\sum_{k=1}^n\lambda_k(\mathbb 1_{A_k}-g_k)\Big\|_p<\sum_{k=1}^n|\lambda_k|\frac\epsilon{n\lambda_k}=\epsilon,\] où \(g=\sum_{k=1}^n\lambda_kg_k\in\mathcal C_c(\mathbb R)\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 8
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-288-1
+  notion: topo-n-0318
+  recto: 'Preuve : Thm 18, cas (iv) \(f\) positive, les fonctions \(f_n\)'
+  verso: \(f\) est une fonction positive de \(L^p(X,\mu)\). Posons, pour tout \(n\in\mathbb N\), \[f_n=2^n\,\mathbb 1_{f^{-1}([2^n,+\infty[)}+\sum_{k=0}^{2^{2n}-1}\frac k{2^n}\,\mathbb 1_{f^{-1}\left(\left[\frac k{2^n},\frac{k+1}{2^n}\right]\right)}.\] Pour tout \(n\in\mathbb N\) et presque tout \(x\in f^{-1}([-\infty,2^n[)\), on a \(0\le f(x)-f_n(x)\le\frac1{2^n}\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 8
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-288-2
+  notion: topo-n-0318
+  recto: 'Preuve : Thm 18, cas (iv) \(f\) positive, conclusion'
+  verso: 'Avec les \(f_n\) du cas (iv) : \(\mu(f^{-1}([2^n,+\infty[))\to0\), quand \(n\to+\infty\). Donc \(|f_n(x)-f(x)|^p\to0\), p.p.t \(x\in X\). La suite \((f_n(x))_{n\in\mathbb N}\) étant par ailleurs croissante, \((|f_n(x)-f(x)|^p)_{n\in\mathbb N}\) est décroissante et on déduit du théorème de Beppo-Levi (i.e. de convergence monotone) que \(\|f_n-f\|_p\to0\). Il existe donc \(n\in\mathbb N\) tel que \(\|f_n-f\|_p<\frac\epsilon2\). La fonction \(f_n\) étant par ailleurs étagée, on sait d''après (iii) qu''il existe \(g\in\mathcal C_c(\mathbb R)\) telle que \(\|f_n-g\|_p<\frac\epsilon2\) et on en déduit que \(\|f-g\|_p<\epsilon\).'
+  source: Poly de topologie Paris Cité, ch. 7, p. 8
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-289-1
+  notion: topo-n-0319
+  recto: 'Preuve : Thm 18, cas (v) \(f\) réelle'
+  verso: \(f\) est une fonction réelle de \(L^p(X,\mu)\). On pose \(f=f_+-f_-\) où \(f_+(x)=\max(0,f(x))\) et \(f_-(x)=\max(0,-f(x))\), p.p.t \(x\in X\). Comme \(f_+\) et \(f_-\) sont positives, il existe \(g_+\) et \(g_-\in\mathcal C_c(\mathbb R)\) tels que \(\|f_+-g_+\|_p<\frac\epsilon2\) et \(\|f_--g_-\|_p<\frac\epsilon2\) et on obtient \(\|f-g\|_p<\epsilon\), où \(g=g_+-g_-\in\mathcal C_c(\mathbb R)\).
+  source: Poly de topologie Paris Cité, ch. 7, p. 8
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]
+- id: topo-a-289-2
+  notion: topo-n-0319
+  recto: 'Preuve : Thm 18, cas (vi) \(f\) complexe'
+  verso: \(f\) est une fonction complexe de \(L^p(X,\mu)\). On pose \(f=f_r+if_i\) où \(f_r\) et \(f_i\) sont des fonctions réelles et on raisonne comme en (v).
+  source: Poly de topologie Paris Cité, ch. 7, p. 8
+  chapitre: Chapitre 7 - Espace Lp
+  priorite: 1
+  tags: [demonstration]

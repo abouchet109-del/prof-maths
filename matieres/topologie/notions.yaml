@@ -751,6 +751,1224 @@
   enonce: 'Une bijection continue $f:X\to Y$ entre espaces métriques avec $X$ compact est un homéomorphisme (l''image d''un fermé est un compact donc un fermé).'
   source: {etab: paris-cite, fichier: topologie/cours/chap3-espaces-compacts.pdf, page: 11}
   essentiel: true
+# ---------- Chapitres 4 à 7 (polys reçus le 18/11/2026) ----------
+- id: topo-n-0100
+  titre: Espace connexe
+  type: definition
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.1 Définitions et propriétés
+  enonce: Un espace topologique $(X,\tau)$ est connexe si et seulement si les seules parties à la fois ouvertes et fermées sont $\emptyset$ et $X$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0101
+  titre: Définitions équivalentes de la connexité
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.1 Définitions et propriétés
+  enonce: $(X,\tau)$ connexe $\iff$ ($X=F_1\cup F_2$ fermés disjoints $\Rightarrow F_1=\emptyset$ ou $F_2=\emptyset$) $\iff$ (idem avec des ouverts) $\iff$ toute $f\in\mathcal C(X,\{0,1\})$ est constante.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0102
+  titre: Partie connexe
+  type: definition
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.1 Définitions et propriétés
+  enonce: $A\subset X$ est connexe si et seulement si $A$ est connexe pour la topologie induite.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0103
+  titre: Adhérence d'un connexe
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.1 Définitions et propriétés
+  enonce: Dans un espace métrique, si $A$ est connexe alors $\overline A$ est connexe.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0104
+  titre: Union de deux connexes d'adhérence rencontrant l'autre
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.1 Définitions et propriétés
+  enonce: Si $A,B$ connexes avec $\overline A\cap B\neq\emptyset$, alors $A\cup B$ est connexe.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0105
+  titre: Union d'une famille de connexes
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.1 Définitions et propriétés
+  enonce: 'Famille $(A_i)$ de connexes avec $A_i\cap A_{i_0}\neq\emptyset$ pour tout $i$ : $\bigcup A_i$ est connexe ; en particulier si $\bigcap A_i\neq\emptyset$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0106
+  titre: Image continue d'un connexe
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.1 Définitions et propriétés
+  enonce: $X$ connexe et $f\in\mathcal C(X,Y)$ $\Rightarrow$ $f(X)$ connexe.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0107
+  titre: Produit fini d'espaces connexes
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.1 Définitions et propriétés
+  enonce: Un produit fini d'espaces métriques (muni d'une distance $D_p$) est connexe si et seulement si chaque facteur est connexe.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0108
+  titre: Composante connexe d'un point
+  type: definition
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.2 Composante connexe
+  enonce: $C_x$ = réunion de toutes les parties connexes de $X$ contenant $x$ ; une composante connexe est une partie de la forme $C_x$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0109
+  titre: Partition
+  type: definition
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.2 Composante connexe
+  enonce: 'Une partition de $X$ est un recouvrement $(A_i)_{i\in I}$ de $X$ par des ensembles disjoints : $A_i\cap A_j=\emptyset$ pour $i\neq j$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 3}
+  essentiel: false
+- id: topo-n-0110
+  titre: Propriétés des composantes connexes
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.2 Composante connexe
+  enonce: $C_x$ est la plus grande partie connexe contenant $x$ ; les composantes forment une partition de $X$ ; chacune est fermée, et ouverte si elles sont en nombre fini.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0111
+  titre: Points connectés
+  type: definition
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.2 Composante connexe
+  enonce: $x$ et $y$ sont connectés si $C_x=C_y$ ; c'est une relation d'équivalence dont les classes sont les composantes connexes.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0112
+  titre: Les boules de $\mathbb R^d$ sont connexes
+  type: exemple
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.2 Composante connexe
+  enonce: Les boules de $\mathbb R^d$ sont connexes (preuve par le théorème des valeurs intermédiaires sur le segment $[y,z]$).
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0113
+  titre: Composantes connexes d'un ouvert de $\mathbb R^d$
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.2 Composante connexe
+  enonce: Si $U$ est un ouvert de $\mathbb R^d$, ses composantes connexes sont ouvertes dans $\mathbb R^d$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0114
+  titre: 'Parties connexes de $\mathbb R$ : les intervalles'
+  type: theoreme
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.2 Composante connexe
+  enonce: Les parties connexes de $\mathbb R$ sont les intervalles.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 5}
+  essentiel: true
+- id: topo-n-0115
+  titre: 'Ouvert de $\mathbb R$ : union dénombrable d''intervalles ouverts disjoints'
+  type: theoreme
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.2 Composante connexe
+  enonce: Tout ouvert de $\mathbb R$ est une union au plus dénombrable d'intervalles ouverts disjoints.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 5}
+  essentiel: true
+- id: topo-n-0116
+  titre: Composantes connexes de $\mathbb Q$
+  type: exemple
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.2 Composante connexe
+  enonce: Les composantes connexes de $\mathbb Q$ (distance usuelle) sont réduites à des points.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 5}
+  essentiel: false
+- id: topo-n-0117
+  titre: Théorème des valeurs intermédiaires généralisé
+  type: theoreme
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.2 Composante connexe
+  enonce: '$X$ métrique connexe, $f:X\to\mathbb R$ continue, $f(x)<f(y)$ : tout $t\in[f(x),f(y)]$ est atteint par $f$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 5}
+  essentiel: true
+- id: topo-n-0118
+  titre: Arc (chemin)
+  type: definition
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.3 Espace connexe par arcs
+  enonce: Un arc de $X$ est une application continue $f:[a,b]\to X$ ; arc de $x=f(a)$ à $y=f(b)$ ; on peut prendre $[0,1]$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0119
+  titre: Espace connexe par arcs
+  type: definition
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.3 Espace connexe par arcs
+  enonce: $(X,d)$ est connexe par arcs si pour tous $x,y\in X$ il existe un arc de $x$ à $y$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0120
+  titre: Connexe par arcs implique connexe
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.3 Espace connexe par arcs
+  enonce: Un espace connexe par arcs est connexe.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0121
+  titre: Composante connexe par arcs
+  type: definition
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.3 Espace connexe par arcs
+  enonce: $D_x=\{y\in X\,/\,\text{il existe un arc de }x\text{ à }y\}$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0122
+  titre: Propriétés des composantes connexes par arcs
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.3 Espace connexe par arcs
+  enonce: $D_x$ est la plus grande partie connexe par arcs contenant $x$ ; les $D_x$ sont égales ou disjointes ; $D_x\subset C_x$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0123
+  titre: 'Dimension 1 : composantes connexes et connexes par arcs dans $\mathbb R$'
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.3 Espace connexe par arcs
+  enonce: Si $A\subset\mathbb R$, alors $D_x=C_x$ pour tout $x\in A$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0124
+  titre: 'Ouvert de $\mathbb R^d$ : composantes connexes et connexes par arcs'
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.3 Espace connexe par arcs
+  enonce: Si $U$ est un ouvert de $\mathbb R^d$, ses composantes connexes sont ses composantes connexes par arcs ; faux en général si $U$ n'est pas ouvert ($d>1$).
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0125
+  titre: Ouvert connexe de $\mathbb R^d$ est connexe par arcs
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.3 Espace connexe par arcs
+  enonce: Tout ouvert connexe de $\mathbb R^d$ est connexe par arcs.
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0126
+  titre: Extension aux espaces où les boules sont connexes par arcs
+  type: propriete
+  chapitre: Chapitre 4 - Espace connexe
+  sous_chapitre: 4.3 Espace connexe par arcs
+  enonce: La Prop. 52 reste vraie dans tout espace métrique dont les boules sont connexes par arcs (par exemple les espaces vectoriels normés).
+  source: {etab: paris-cite, fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 7}
+  essentiel: false
+- id: topo-n-0150
+  titre: Norme, espace vectoriel normé, semi-norme
+  type: definition
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.1 Définition et topologie d'un espace vectoriel normé
+  enonce: $\|\cdot\|:E\to\mathbb R$ est une norme si elle est positive, séparée ($\|x\|=0\Rightarrow x=0_E$), positivement homogène et vérifie l'inégalité triangulaire ; semi-norme si elle vérifie tout sauf la séparation. $\mathbb K=\mathbb R$ ou $\mathbb C$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0151
+  titre: Normes usuelles sur $\mathbb K^d$
+  type: exemple
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.1 Définition et topologie d'un espace vectoriel normé
+  enonce: Pour $p\in[1,+\infty[$, $\|x\|_p=\big(\sum_{k=1}^d|x_k|^p\big)^{1/p}$ est une norme sur $\mathbb K^d$ ($\|\cdot\|_2$ euclidienne ou hermitienne) ; $x\mapsto\max_k|x_k|$ est la norme uniforme.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0152
+  titre: Norme de la convergence uniforme sur $\mathcal B(E,F)$
+  type: exemple
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.1 Définition et topologie d'un espace vectoriel normé
+  enonce: Pour $E$ ensemble non vide et $(F,\|\cdot\|_F)$ evn, $f\mapsto\sup_{x\in E}\|f(x)\|_F$ est une norme sur l'espace $\mathcal B(E,F)$ des applications bornées de $E$ dans $F$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0153
+  titre: Norme $\|\cdot\|_\infty$ sur $\mathcal C(X,\mathbb K)$
+  type: exemple
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.1 Définition et topologie d'un espace vectoriel normé
+  enonce: Si $X$ est un espace métrique compact, $f\mapsto\|f\|_\infty=\sup_{x\in X}|f(x)|$ est une norme sur $\mathcal C(X,\mathbb K)$ (bien définie car une fonction continue sur un compact est bornée).
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0154
+  titre: 'Prop. 53 : inégalité triangulaire renversée, norme non bornée'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.1 Définition et topologie d'un espace vectoriel normé
+  enonce: 'Dans un evn : $\big|\|x\|-\|y\|\big|\le\|x+y\|$ ; si $E\ne\{0_E\}$, $x\mapsto\|x\|$ est non bornée sur $E$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0155
+  titre: 'Prop. 54 : distance associée à une norme'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.1 Définition et topologie d'un espace vectoriel normé
+  enonce: Dans un evn, $d(x,y)=\|x-y\|$ est une distance sur $E$, appelée distance associée à la norme.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0156
+  titre: Invariance par translation de la distance associée
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.1 Définition et topologie d'un espace vectoriel normé
+  enonce: 'La distance associée à une norme est invariante par translation : $d(x+z,y+z)=d(x,y)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  essentiel: false
+- id: topo-n-0157
+  titre: Boules et sphères d'un espace vectoriel normé (convention)
+  type: definition
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.1 Définition et topologie d'un espace vectoriel normé
+  enonce: 'Sauf indication, $E$ est muni de la distance associée à la norme : $B(x,r)=\{\|y-x\|<r\}$, $\bar B(x,r)=\{\|y-x\|\le r\}$, $S(x,r)=\{\|y-x\|=r\}$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0158
+  titre: 'Prop. 55 : intérieur, adhérence et frontière des boules'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.1 Définition et topologie d'un espace vectoriel normé
+  enonce: 'Dans un evn, pour $x\in E$, $r>0$ : $(\bar B(x,r))^\circ=B(x,r)$, $\overline{B(x,r)}=\bar B(x,r)$, $\partial B(x,r)=\partial\bar B(x,r)=S(x,r)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0159
+  titre: 'Rappel : boules dans un espace métrique discret'
+  type: exemple
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.1 Définition et topologie d'un espace vectoriel normé
+  enonce: 'Dans un espace métrique discret, $\overline{B(x,1)}=\{x\}\ne\bar B(x,1)=X$ : la Prop. 55 est fausse en général.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 3}
+  essentiel: false
+- id: topo-n-0160
+  titre: 'Prop. 56 : sous-espace vectoriel normé'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.1 Définition et topologie d'un espace vectoriel normé
+  enonce: La restriction d'une norme à un sous-espace vectoriel $F$ est une norme sur $F$ ; $(F,\|\cdot\|)$ est un sous-espace vectoriel normé de $E$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0161
+  titre: 'Thm 9 : caractérisations de la continuité d''une application linéaire'
+  type: theoreme
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.2 Application linéaire continue
+  enonce: 'Pour $f$ linéaire entre evn, sont équivalents : $f$ continue ; continue en $0_E$ ; bornée sur un ouvert non vide ; bornée sur $B(0_E,1)$, sur $\bar B(0_E,1)$, sur $S(0_E,1)$ ; $\exists C,\ \|f(x)\|_F\le C\|x\|_E$ ; lipschitzienne ; uniformément continue.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0162
+  titre: 'Rappels : isomorphisme d''espace vectoriel, homéomorphisme'
+  type: definition
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.2 Application linéaire continue
+  enonce: Une application linéaire bijective est un isomorphisme d'espace vectoriel ; une application bijective bicontinue est un homéomorphisme (isomorphisme d'espace topologique).
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 4}
+  essentiel: false
+- id: topo-n-0163
+  titre: 'Déf. 40 : isomorphisme d''espaces vectoriels normés'
+  type: definition
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.2 Application linéaire continue
+  enonce: '$f$ linéaire, bijective et bicontinue entre evn : isomorphisme (d''evn ou d''espace vectoriel topologique) ; $E$ et $F$ sont dits isomorphes.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0164
+  titre: 'Prop. 57 : caractérisation des isomorphismes d''evn'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.2 Application linéaire continue
+  enonce: $f$ linéaire surjective entre evn est un isomorphisme si et seulement si $\exists\alpha,\beta>0$, $\alpha\|x\|_E\le\|f(x)\|_F\le\beta\|x\|_E$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 5}
+  essentiel: true
+- id: topo-n-0165
+  titre: 'Déf. 41 : espace $\mathcal L(E,F)$ des applications linéaires continues'
+  type: definition
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.2 Application linéaire continue
+  enonce: $\mathcal L(E,F)$ est l'ensemble des applications linéaires continues de $E$ dans $F$ ; $\mathcal L(E)=\mathcal L(E,E)$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 5}
+  essentiel: true
+- id: topo-n-0166
+  titre: 'Prop. 58 : norme triple sur $\mathcal L(E,F)$'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.2 Application linéaire continue
+  enonce: $\mathcal L(E,F)$ est un sous-espace vectoriel de $L(E,F)$ et $|||f|||=\sup_{x\ne0}\frac{\|f(x)\|_F}{\|x\|_E}=\sup_{x\in S(0,1)}\|f(x)\|_F$ est une norme sur $\mathcal L(E,F)$ (norme triple).
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 5}
+  essentiel: true
+- id: topo-n-0167
+  titre: 'Prop. 59 : norme triple d''une composée'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.2 Application linéaire continue
+  enonce: Si $f\in\mathcal L(E,F)$ et $g\in\mathcal L(F,G)$, alors $g\circ f\in\mathcal L(E,G)$ et $|||g\circ f|||\le|||g|||\,|||f|||$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 5}
+  essentiel: true
+- id: topo-n-0168
+  titre: 'Déf. 42 : normes équivalentes'
+  type: definition
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.3 Normes équivalentes, application n-linéaire continue
+  enonce: Deux normes sur un même espace vectoriel sont équivalentes si et seulement si elles sont associées à la même topologie.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0169
+  titre: 'Prop. 60 : caractérisation des normes équivalentes'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.3 Normes équivalentes, application n-linéaire continue
+  enonce: $\|\cdot\|_1$ et $\|\cdot\|_2$ sont équivalentes si et seulement si $\exists\alpha,\beta>0$, $\alpha\|x\|_1\le\|x\|_2\le\beta\|x\|_1$ pour tout $x\in E$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0170
+  titre: Remarques sur les normes équivalentes (symétrie, distances lipschitz-équivalentes)
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.3 Normes équivalentes, application n-linéaire continue
+  enonce: 'L''encadrement s''écrit aussi $\frac1\beta\|x\|_2\le\|x\|_1\le\frac1\alpha\|x\|_2$ : relation symétrique ; les distances associées sont lipschitz-équivalentes.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 6}
+  essentiel: false
+- id: topo-n-0171
+  titre: 'Prop. 61 : normes $N_p$ et $N_\infty$ sur un produit fini d''evn'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.3 Normes équivalentes, application n-linéaire continue
+  enonce: Sur $E=\prod_{k=1}^nE_k$, les $N_p(x)=\big(\sum_k\|x_k\|_{E_k}^p\big)^{1/p}$ ($p\in[1,+\infty[$) et $N_\infty(x)=\max_k\|x_k\|_{E_k}$ sont des normes équivalentes.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0172
+  titre: Applications $n$-linéaires, notation $L(E_1,\dots,E_n;F)$
+  type: definition
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.3 Normes équivalentes, application n-linéaire continue
+  enonce: $L(E_1,\dots,E_n;F)$ désigne l'espace des applications $n$-linéaires (linéaires par rapport à chaque variable) de $E=\prod E_k$ dans $F$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 6}
+  essentiel: false
+- id: topo-n-0173
+  titre: 'Prop. 62 : continuité d''une application $n$-linéaire'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.3 Normes équivalentes, application n-linéaire continue
+  enonce: 'Pour $f$ $n$-linéaire sur $\prod E_k$ (norme $N_p$) : $f$ continue $\iff$ continue en $0_E$ $\iff$ bornée sur $\bar B_E(0,1)$ $\iff$ $\exists C,\ \|f(x)\|_F\le C\|x_1\|\cdots\|x_n\|$ ; $f\mapsto|||f|||$ est une norme sur $\mathcal L(E_1,\dots,E_n;F)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0174
+  titre: 'Thm 10 : équivalence des normes en dimension finie'
+  type: theoreme
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.4 Espace vectoriel normé de dimension finie
+  enonce: Sur un espace vectoriel de dimension finie, toutes les normes sont équivalentes.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 8}
+  essentiel: true
+- id: topo-n-0175
+  titre: 'Prop. 63 : compacts d''un evn de dimension finie'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.4 Espace vectoriel normé de dimension finie
+  enonce: Les compacts d'un espace vectoriel normé de dimension finie sont les parties fermées et bornées.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 9}
+  essentiel: true
+- id: topo-n-0176
+  titre: 'Exemple : normes non équivalentes sur $\mathbb K[X]$ (dimension infinie)'
+  type: exemple
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.4 Espace vectoriel normé de dimension finie
+  enonce: 'Sur $\mathbb K[X]$, $\|\cdot\|_1$ et $\|\cdot\|_\infty$ ne sont pas équivalentes : $P_n=\frac1n\sum_{k=0}^nX^k$ vérifie $\|P_n\|_1\ge1$ mais $\|P_n\|_\infty=\frac1n\to0$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 9}
+  essentiel: true
+- id: topo-n-0177
+  titre: 'Prop. 64 : normes de la forme $N(\|x_1\|,\dots,\|x_d\|)$ sur un produit'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.4 Espace vectoriel normé de dimension finie
+  enonce: Si $N,\tilde N$ sont deux normes sur $\mathbb R^d$, $x\mapsto N(\|x_1\|_{E_1},\dots,\|x_d\|_{E_d})$ et $x\mapsto\tilde N(\dots)$ sont des normes équivalentes sur $\prod E_k$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 10}
+  essentiel: false
+- id: topo-n-0178
+  titre: 'Prop. 65 : un evn de dimension finie est complet'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.4 Espace vectoriel normé de dimension finie
+  enonce: Un espace vectoriel normé de dimension finie est complet.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 10}
+  essentiel: true
+- id: topo-n-0179
+  titre: 'Cor. 10 : un sous-espace de dimension finie est fermé'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.4 Espace vectoriel normé de dimension finie
+  enonce: Tout sous-espace de dimension finie d'un espace vectoriel normé $E$ est fermé dans $E$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 10}
+  essentiel: true
+- id: topo-n-0180
+  titre: 'Prop. 66 : application linéaire définie sur un evn de dimension finie'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.4 Espace vectoriel normé de dimension finie
+  enonce: Si $E$ est de dimension finie, toute application linéaire de $E$ dans un evn $F$ est continue.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 10}
+  essentiel: true
+- id: topo-n-0181
+  titre: 'Remarque : la Prop. 66 se généralise aux applications $n$-linéaires'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.4 Espace vectoriel normé de dimension finie
+  enonce: La continuité automatique en dimension finie se généralise aux applications $n$-linéaires (en exercice).
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 11}
+  essentiel: false
+- id: topo-n-0182
+  titre: 'Thm 11 (Riesz) : dimension finie et compacité de la boule unité fermée'
+  type: theoreme
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.4 Espace vectoriel normé de dimension finie
+  enonce: Un evn $E$ est de dimension finie si et seulement si sa boule unité fermée $\bar B(0,1)$ est compacte.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 11}
+  essentiel: true
+- id: topo-n-0183
+  titre: 'Remarque : espace localement compact et théorème de Riesz'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.4 Espace vectoriel normé de dimension finie
+  enonce: Un evn est localement compact si et seulement s'il est de dimension finie (théorème de Riesz).
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 12}
+  essentiel: false
+- id: topo-n-0184
+  titre: 'Cor. 11 : en dimension infinie, les compacts sont d''intérieur vide'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.4 Espace vectoriel normé de dimension finie
+  enonce: Dans un evn de dimension infinie, tous les compacts sont d'intérieur vide.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 12}
+  essentiel: true
+- id: topo-n-0185
+  titre: 'Déf. 43 : espace de Banach'
+  type: definition
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.5 Espace de Banach
+  enonce: Un espace vectoriel normé est un espace de Banach si et seulement s'il est complet pour la distance associée à sa norme.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 12}
+  essentiel: true
+- id: topo-n-0186
+  titre: Exemples d'espaces de Banach (dimension finie, $L^p$)
+  type: exemple
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.5 Espace de Banach
+  enonce: Un evn de dimension finie est de Banach ; pour $p\in[1,+\infty]$, $(L^p(X,d\mu),\|\cdot\|_p)$ est de Banach.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 12}
+  essentiel: true
+- id: topo-n-0187
+  titre: 'Prop. 67 : complétude de $\mathcal L(E,F)$ quand $F$ est de Banach'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.5 Espace de Banach
+  enonce: Si $F$ est un espace de Banach, alors $(\mathcal L(E,F),|||\cdot|||)$ est un espace de Banach.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 12}
+  essentiel: true
+- id: topo-n-0188
+  titre: 'Prop. 68 : $(\mathcal C(X,\mathbb K),\|\cdot\|_\infty)$ est un espace de Banach'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.5 Espace de Banach
+  enonce: Pour $X$ espace métrique compact, $(\mathcal C(X,\mathbb K),\|\cdot\|_\infty)$ est un espace de Banach.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 13}
+  essentiel: true
+- id: topo-n-0189
+  titre: 'Série dans un espace vectoriel normé : somme partielle, convergence, somme'
+  type: definition
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.6 Série dans un espace vectoriel normé
+  enonce: Pour $(u_n)$ suite d'un evn, $S_n=\sum_{k=0}^nu_k$ ; la série $\sum u_n$ converge si $(S_n)$ converge ; la limite $\sum_{n=0}^{+\infty}u_n$ est la somme de la série.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 14}
+  essentiel: true
+- id: topo-n-0190
+  titre: 'Prop. 69 : propriétés des séries convergentes d''un evn'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.6 Série dans un espace vectoriel normé
+  enonce: (i) $\sum u_n$ converge $\Rightarrow u_n\to0$ ; (ii) les séries convergentes de $E$ forment un espace vectoriel ; (iii) $f\in\mathcal L(E,F)$ et $\sum u_n$ converge $\Rightarrow\sum f(u_n)$ converge.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 14}
+  essentiel: true
+- id: topo-n-0191
+  titre: 'Prop. 70 : critère de Cauchy pour les séries d''un espace de Banach'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.6 Série dans un espace vectoriel normé
+  enonce: Dans un espace de Banach, $\sum u_n$ converge si et seulement si $\lim_n\sup_m\big\|\sum_{k=n}^{n+m}u_k\big\|=0$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 14}
+  essentiel: true
+- id: topo-n-0192
+  titre: 'Déf. 44 : série absolument (normalement) convergente'
+  type: definition
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.6 Série dans un espace vectoriel normé
+  enonce: Une série $\sum u_n$ d'un evn est absolument (ou normalement) convergente si et seulement si $\sum\|u_n\|$ converge.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 14}
+  essentiel: true
+- id: topo-n-0193
+  titre: 'Thm 12 : Banach et séries absolument convergentes'
+  type: theoreme
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.6 Série dans un espace vectoriel normé
+  enonce: Un evn $E$ est de Banach si et seulement si toute série absolument convergente de $E$ converge ; alors $\big\|\sum_{n=0}^{+\infty}u_n\big\|\le\sum_{n=0}^{+\infty}\|u_n\|$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 14}
+  essentiel: true
+- id: topo-n-0194
+  titre: 'Thm 13 (Banach) : théorème d''isomorphisme de Banach'
+  type: theoreme
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.7 Application linéaire continue entre deux espaces de Banach
+  enonce: 'Soient $E,F$ de Banach et $f\in\mathcal L(E,F)$ bijective : alors $f$ est un isomorphisme ($f^{-1}\in\mathcal L(E,F)$).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 15}
+  essentiel: true
+- id: topo-n-0195
+  titre: Théorème de l'application ouverte
+  type: theoreme
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.7 Application linéaire continue entre deux espaces de Banach
+  enonce: Si $E,F$ sont de Banach et $f\in\mathcal L(E,F)$ est surjective, alors $f$ est ouverte (l'image d'un ouvert est un ouvert).
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 18}
+  essentiel: true
+- id: topo-n-0196
+  titre: 'Déf. 45 : groupe linéaire $GL(E)$ d''un espace de Banach'
+  type: definition
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.7 Application linéaire continue entre deux espaces de Banach
+  enonce: Pour $E$ de Banach, $GL(E)=\{f\in\mathcal L(E)\ /\ f\text{ est un isomorphisme}\}$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 18}
+  essentiel: true
+- id: topo-n-0197
+  titre: 'Prop. 71 : $(GL(E),\circ)$ est un groupe'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.7 Application linéaire continue entre deux espaces de Banach
+  enonce: Le couple $(GL(E),\circ)$ est un groupe, appelé groupe linéaire de $E$ ; $(\mathcal L(E),+,\cdot,\circ)$ est une algèbre et $|||\cdot|||$ une norme algébrique.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 18}
+  essentiel: true
+- id: topo-n-0198
+  titre: 'Prop. 72 : série de Neumann, inversibilité de $\mathrm{Id}-f$ si $|||f|||<1$'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.7 Application linéaire continue entre deux espaces de Banach
+  enonce: 'Pour $E$ de Banach, $f\in\mathcal L(E)$ avec $|||f|||<1$ : $\mathrm{Id}-f\in GL(E)$, $\sum f^n$ converge absolument et $\sum_{n\ge0}f^n=(\mathrm{Id}-f)^{-1}$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 18}
+  essentiel: true
+- id: topo-n-0199
+  titre: 'Remarque : inverse de $\mathrm{Id}+f$'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.7 Application linéaire continue entre deux espaces de Banach
+  enonce: 'En changeant $f$ en $-f$ : $\mathrm{Id}+f\in GL(E)$ et $\sum_{n\ge0}(-1)^nf^n=(\mathrm{Id}+f)^{-1}$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 18}
+  essentiel: false
+- id: topo-n-0200
+  titre: 'Cor. 12 : $|||\mathrm{Id}-f|||<1\Rightarrow f\in GL(E)$'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.7 Application linéaire continue entre deux espaces de Banach
+  enonce: Si $f\in\mathcal L(E)$ et $|||\mathrm{Id}-f|||<1$, alors $f\in GL(E)$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 19}
+  essentiel: true
+- id: topo-n-0201
+  titre: 'Prop. 73 : $GL(E)$ est un ouvert de $\mathcal L(E)$'
+  type: propriete
+  chapitre: Chapitre 5 - Espace vectoriel normé
+  sous_chapitre: 5.7 Application linéaire continue entre deux espaces de Banach
+  enonce: '$GL(E)$ est un ouvert de $\mathcal L(E)$ : $B\big(f,\frac1{|||f^{-1}|||}\big)\subset GL(E)$ pour $f\in GL(E)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 19}
+  essentiel: true
+- id: topo-n-0230
+  titre: Produit scalaire sur un espace vectoriel réel
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: Forme bilinéaire $\langle\cdot,\cdot\rangle$ sur $E^2$ symétrique ($\langle x,y\rangle=\langle y,x\rangle$), définie ($\langle x,x\rangle=0\Rightarrow x=0$) et positive ($\langle x,x\rangle\ge0$).
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0231
+  titre: Forme sesquilinéaire
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: Application $S:E\times E\to\mathbb C$ linéaire par rapport à la première variable et antilinéaire par rapport à la seconde ($E$ espace vectoriel sur $\mathbb C$).
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0232
+  titre: Produit scalaire sur un espace vectoriel complexe
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: Forme sesquilinéaire $\langle\cdot,\cdot\rangle$ hermitienne ($\langle x,y\rangle=\overline{\langle y,x\rangle}$), définie et positive sur $E^2$ ($E$ espace vectoriel sur $\mathbb C$).
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0233
+  titre: Espace préhilbertien
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: Espace vectoriel (sur $\mathbb K=\mathbb R$ ou $\mathbb C$) muni d'un produit scalaire.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0234
+  titre: Exemple de produit scalaire sur $\mathcal C([0,1],\mathbb K)$
+  type: exemple
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: $(f,g)\mapsto\langle f,g\rangle=\int_0^1f(t)\overline{g(t)}\,dt$ est un produit scalaire sur l'espace $\mathcal C([0,1],\mathbb K)$ des fonctions continues.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0235
+  titre: Espaces euclidien et hermitien
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: Un espace préhilbertien de dimension finie est dit euclidien s'il est sur $\mathbb R$, hermitien s'il est sur $\mathbb C$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  essentiel: false
+- id: topo-n-0236
+  titre: Norme associée à un produit scalaire
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: Dans un préhilbertien, $\|x\|=\sqrt{\langle x,x\rangle}$ définit une norme sur $E$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0237
+  titre: Inégalité de Cauchy-Schwarz
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: 'Dans un préhilbertien : $|\langle x,y\rangle|\le\|x\|\,\|y\|$, $\forall x,y\in E$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0238
+  titre: Formule du parallélogramme
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: 'Dans un préhilbertien : $\frac12(\|x\|^2+\|y\|^2)=\left\|\frac{x+y}2\right\|^2+\left\|\frac{x-y}2\right\|^2$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0239
+  titre: Continuité du produit scalaire
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: Par Cauchy-Schwarz, le produit scalaire est une forme bilinéaire (ou sesquilinéaire) continue sur $E^2$ pour la norme associée.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0240
+  titre: Formules de polarisation
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: 'Si $\|\cdot\|$ est hilbertienne : $\langle x,y\rangle=\frac14(\|x+y\|^2-\|x-y\|^2)$ si $\mathbb K=\mathbb R$ ; avec en plus $+i\|x+iy\|^2-i\|x-iy\|^2$ si $\mathbb K=\mathbb C$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0241
+  titre: Vecteurs orthogonaux
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: $x\perp y$ si et seulement si $\langle x,y\rangle=0$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0242
+  titre: Théorème de Pythagore
+  type: theoreme
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: Dans un préhilbertien, si $x\perp y$, alors $\|x+y\|^2=\|x\|^2+\|y\|^2$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0243
+  titre: Orthogonal d'une partie
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: $A^\perp=\{x\in E\ /\ x\perp a,\ \forall a\in A\}$ pour $A\in\mathcal P(E)$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0244
+  titre: L'orthogonal d'une partie est un sous-espace fermé
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: $A^\perp$ est un sous-espace vectoriel fermé de $E$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0245
+  titre: Orthogonal de A et de l'adhérence de vect(A)
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.1 Espace préhilbertien
+  enonce: $A^\perp=\left(\overline{\mathrm{vect}(A)}\right)^\perp$, où $\mathrm{vect}(A)$ est l'espace vectoriel engendré par $A$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0246
+  titre: Espace de Hilbert
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.2 Définition et propriétés des espaces de Hilbert
+  enonce: Espace préhilbertien complet pour la norme associée au produit scalaire.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0247
+  titre: Un espace de Hilbert est un espace de Banach
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.2 Définition et propriétés des espaces de Hilbert
+  enonce: Un espace de Hilbert est un espace de Banach.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 4}
+  essentiel: false
+- id: topo-n-0248
+  titre: 'Exemples d''espaces de Hilbert : $L^2(X,\mu)$ et $\ell^2(\mathbb N)$'
+  type: exemple
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.2 Définition et propriétés des espaces de Hilbert
+  enonce: Si $(X,\mu)$ est un espace mesuré, $L^2(X,\mu)$ est un espace de Hilbert ; en particulier $\ell^2(\mathbb N)$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0249
+  titre: Partie convexe
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.2 Définition et propriétés des espaces de Hilbert
+  enonce: $C$ est convexe si $\alpha x+(1-\alpha)y\in C$ pour tous $x,y\in C$ et $\alpha\in[0,1]$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0250
+  titre: Théorème de projection sur un convexe fermé
+  type: theoreme
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.2 Définition et propriétés des espaces de Hilbert
+  enonce: '$C$ convexe fermé non vide d''un Hilbert $\mathcal H$ : pour tout $x$, il existe un unique $P_C(x)\in C$ tel que $\|x-P_C(x)\|=\inf_{y\in C}\|x-y\|$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0251
+  titre: Caractérisation de la projection sur un convexe fermé
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.2 Définition et propriétés des espaces de Hilbert
+  enonce: $P_C(x)$ est caractérisée par $\mathrm{Re}\,\langle x-P_C(x),y-P_C(x)\rangle\le0$, $\forall y\in C$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 5}
+  essentiel: true
+- id: topo-n-0252
+  titre: Projection orthogonale sur un sous-espace fermé
+  type: theoreme
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.2 Définition et propriétés des espaces de Hilbert
+  enonce: '$F$ sous-espace fermé non réduit à $\{0\}$ d''un Hilbert : $\mathcal H=F\oplus F^\perp$, $P_F\in\mathcal L(\mathcal H,F)$, $|||P_F|||=1$ et $P_F(x)+P_{F^\perp}(x)=x$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0253
+  titre: Partie totale
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.3 Base hilbertienne
+  enonce: $A$ est totale dans un espace normé $\mathcal H$ si et seulement si $\overline{\mathrm{vect}(A)}=\mathcal H$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0254
+  titre: Caractérisation des parties totales par l'orthogonal
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.3 Base hilbertienne
+  enonce: Dans un Hilbert, $A$ est totale si et seulement si $A^\perp=\{0\}$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0255
+  titre: Système orthogonal, système orthonormé
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.3 Base hilbertienne
+  enonce: 'Famille $(e_n)$ d''éléments non nuls : orthogonale si $e_n\perp e_m$ ($n\ne m$), orthonormée si $\langle e_n,e_m\rangle=\delta_{n,m}$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0256
+  titre: Inégalité de Bessel
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.3 Base hilbertienne
+  enonce: 'Système orthonormé $(e_n)$ d''un préhilbertien : $\sum|\langle x,e_n\rangle|^2$ converge et $\sum_{n=0}^{+\infty}|\langle x,e_n\rangle|^2\le\|x\|^2$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0257
+  titre: Théorème de Riesz-Fisher
+  type: theoreme
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.3 Base hilbertienne
+  enonce: '$(e_n)$ orthonormé d''un Hilbert : $\sum\alpha_ne_n$ converge si et seulement si $\sum|\alpha_n|^2$ converge, et alors $\|\sum\alpha_ne_n\|^2=\sum|\alpha_n|^2$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 8}
+  essentiel: true
+- id: topo-n-0258
+  titre: Base hilbertienne
+  type: definition
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.3 Base hilbertienne
+  enonce: Système orthonormé total d'un espace de Hilbert $\mathcal H$ (ou base orthonormée).
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 8}
+  essentiel: true
+- id: topo-n-0259
+  titre: Caractérisations des bases hilbertiennes (Bessel, Parseval)
+  type: theoreme
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.3 Base hilbertienne
+  enonce: 'Pour un système orthonormé $(e_n)$ d''un Hilbert : base hilbertienne $\iff$ ($\langle x,e_n\rangle=0\ \forall n\Rightarrow x=0$) $\iff$ $x=\sum\langle x,e_n\rangle e_n$ $\iff$ $\|x\|^2=\sum|\langle x,e_n\rangle|^2$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 8}
+  essentiel: true
+- id: topo-n-0260
+  titre: Isomorphisme isométrique entre $\mathcal H$ et $\ell^2(\mathbb N)$
+  type: propriete
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.3 Base hilbertienne
+  enonce: '$(e_n)$ base hilbertienne de $\mathcal H$ : $I:x\mapsto(\langle x,e_n\rangle)_n$ est un isomorphisme isométrique $\mathcal H\to\ell^2(\mathbb N)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 9}
+  essentiel: true
+- id: topo-n-0261
+  titre: 'Exemple : la base hilbertienne canonique $(\delta_n)$ de $\ell^2(\mathbb N)$'
+  type: exemple
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.3 Base hilbertienne
+  enonce: $(\delta_n)_{n\in\mathbb N}$, avec $(\delta_n)_k=\delta_{n,k}$, est une base hilbertienne de $\ell^2(\mathbb N)$ muni de $\langle u,v\rangle=\sum u_n\overline{v_n}$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 10}
+  essentiel: true
+- id: topo-n-0262
+  titre: Existence d'une base hilbertienne dans un Hilbert séparable
+  type: theoreme
+  chapitre: Chapitre 6 - Espace de Hilbert
+  sous_chapitre: 6.3 Base hilbertienne
+  enonce: Tout espace de Hilbert séparable possède une base hilbertienne (Gram-Schmidt sur une famille dénombrable dense).
+  source: {etab: paris-cite, fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 10}
+  essentiel: true
+- id: topo-n-0280
+  titre: Fonction mesurable (borélienne)
+  type: definition
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: $f:X\to\mathbb K$ est mesurable (borélienne) si $f^{-1}(U)$ est mesurable pour tout ouvert $U$ de $\mathbb K$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0281
+  titre: Espace $\mathcal L^p(X,\mu)$ et norme $\|f\|_p$ ($p<+\infty$)
+  type: definition
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: $\mathcal L^p(X,\mu)=\{f:X\to\mathbb K$ mesurable $/\ \|f\|_p<+\infty\}$, avec $\|f\|_p=(\int_X|f|^pd\mu)^{1/p}$ si $p\in[1,+\infty[$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0282
+  titre: Norme $\|f\|_\infty$ (supremum essentielle)
+  type: definition
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: $\|f\|_\infty=\mathrm{suppess}|f|=\inf\{C\in\mathbb R_+/|f|\le C\ \mu\text{-p.p.}\}$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0283
+  titre: 'Proposition 82 : $\|\cdot\|_p$ est une semi-norme sur $\mathcal L^p$'
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: 'Pour $p\in[1,+\infty]$ : $\|\lambda f\|_p=|\lambda|\|f\|_p$ et $\|f+g\|_p\le\|f\|_p+\|g\|_p$ sur $\mathcal L^p(X,\mu)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0284
+  titre: Inégalité de Hölder (Proposition 82)
+  type: theoreme
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: 'Si $\frac1p+\frac1q=1$, $f\in\mathcal L^p$, $g\in\mathcal L^q$ : $fg\in\mathcal L^1(X,\mu)$ et $\|fg\|_1\le\|f\|_p\|g\|_q$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 1}
+  essentiel: true
+- id: topo-n-0285
+  titre: 'Remarque : $\|\cdot\|_p$ n''est pas une norme sur $\mathcal L^p$'
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: $\|f\|_p=0$ n'entraîne pas $f=0$, seulement $f=0$ $\mu$-presque partout.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0286
+  titre: Démonstration de l'inégalité de Hölder
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: 'Cas $p=1,\infty$ immédiat ; sinon normalisation $\|f\|_p=\|g\|_q=1$ puis convexité de l''exponentielle : $|fg|\le\frac1p|f|^p+\frac1q|g|^q$, on intègre.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0287
+  titre: Démonstration de l'inégalité de Minkowski
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: $\int|f+g|^p\le\int(|f|+|g|)|f+g|^{p-1}$, Hölder avec $q(p-1)=p$, puis simplification par $\|f+g\|_p^{p-1}$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 2}
+  essentiel: true
+- id: topo-n-0288
+  titre: Relation binaire (Déf. 57)
+  type: definition
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: Une relation binaire $\mathcal R$ d'un ensemble $E$ est une partie $G$ de $E\times E$ ; $x\mathcal Ry$ si $(x,y)\in G$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0289
+  titre: Relation d'équivalence (Déf. 58)
+  type: definition
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: Relation binaire réflexive, symétrique et transitive sur $E$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0290
+  titre: 'Exemples de relations d''équivalence : composante connexe, sous-groupe'
+  type: exemple
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: « Même composante connexe » ; $x\mathcal Ry\Leftrightarrow x-y\in F$ pour $F$ sous-groupe de $(E,+)$ (parité sur $\mathbb Z$, $x\equiv y\ [2\pi]$ sur $\mathbb R$).
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  essentiel: false
+- id: topo-n-0291
+  titre: 'Exemple : égalité $\mu$-presque partout comme relation d''équivalence'
+  type: exemple
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: '$E=\{f:X\to\mathbb K$ mesurable$\}$, $F=\{f\in E/f=0\ \mu\text{-p.p.}\}$ : $f\mathcal Rg\Leftrightarrow f=g\ \mu$-p.p.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0292
+  titre: Classe d'équivalence, ensemble quotient (Déf. 59)
+  type: definition
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: 'Classe de $x$ : $\{y\in E/x\mathcal Ry\}$ ; l''ensemble des classes est l''ensemble quotient de $E$ pour $\mathcal R$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0293
+  titre: Classes et partition ; notation $[x]$
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: 'Les classes d''équivalence forment une partition de $E$ ; $[x]$ désigne la classe de $x$ : $y\in[x]\Leftrightarrow x\mathcal Ry\Leftrightarrow[x]=[y]$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0294
+  titre: 'Exemples de classes d''équivalence : composante connexe, groupe quotient, tore, $[f]$'
+  type: exemple
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: $[x]=C_x$ ; $[x]=\{x\}+F$ et groupe quotient $E/F$ ; $\mathbb T^d=\mathbb R^d/2\pi\mathbb Z^d$ ; $[f]=\{g\in E/g=f\ \mu\text{-p.p.}\}$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  essentiel: true
+- id: topo-n-0295
+  titre: Quotient d'espaces vectoriels
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: Si $E$ et $F$ sont des espaces vectoriels, l'ensemble quotient $E/F$ est un espace vectoriel (en particulier pour les classes $[f]$ de l'exemple (iii)).
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0296
+  titre: $\|[f]\|_p=\|f\|_p$ bien défini
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: 'Si $f=g$ $\mu$-p.p. alors $\|f\|_p=\|g\|_p$ : on définit $\|[f]\|_p=\|f\|_p$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0297
+  titre: Espace $L^p(X,\mu)$ (Déf. 60)
+  type: definition
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: $L^p(X,\mu)$ = ensemble des classes $[f]$ de fonctions mesurables telles que $\|[f]\|_p<+\infty$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0298
+  titre: 'Proposition 83 : $\|\cdot\|_p$ est une norme sur $L^p(X,\mu)$'
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: $\|\cdot\|_p$ est une norme sur $L^p(X,\mu)$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0299
+  titre: Démonstration de la proposition 83
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: Semi-norme par la Prop. 82 ; $\|[f]\|_p=0$ entraîne $f=0$ p.p., donc $[f]$ est la classe de la fonction nulle.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  essentiel: false
+- id: topo-n-0300
+  titre: 'Remarque : abus de notation sur les classes, $\mathcal C(X,\mathbb K)\cap L^p(X,\mu)$'
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.1 Définition des espaces $L^p$
+  enonce: 'On omet les crochets : $f\in\mathcal C(X,\mathbb K)\cap L^p(X,\mu)$ signifie $f$ continue et $[f]\in L^p(X,\mu)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0301
+  titre: 'Théorème 17 : $L^p(X,\mu)$ est un espace de Banach (Riesz-Fischer)'
+  type: theoreme
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: Pour tout $p\in[1,+\infty]$, $L^p(X,\mu)$ est un espace de Banach.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0302
+  titre: Démonstration du théorème 17 pour $p<+\infty$
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: Suite de Cauchy $\to$ sous-suite $\|f_{\phi(n)}-f_{\phi(n+1)}\|_p\le2^{-n}$ ; $g_n$, Beppo-Levi, convergence dominée ; Cauchy avec valeur d'adhérence converge.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  essentiel: true
+- id: topo-n-0303
+  titre: Démonstration du théorème 17 pour $p=+\infty$
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: Ensemble négligeable $Y=\bigcup A_{n,m}$ ; convergence simple hors de $Y$, uniforme grâce au critère de Cauchy ; passage à la limite.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 5}
+  essentiel: true
+- id: topo-n-0304
+  titre: 'Corollaire 15 : $\ell^p(\mathbb N)$ est un espace de Banach'
+  type: theoreme
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: Pour $p\in[1,+\infty]$, $\ell^p(\mathbb N)=\{u\in\mathbb K^{\mathbb N}/\|u\|_p<+\infty\}$ est de Banach (cas $X=\mathbb N$, mesure de comptage).
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0305
+  titre: 'Corollaire 16 : $L^2(X,\mu)$ est un espace de Hilbert'
+  type: theoreme
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: $L^2(X,\mu)$, muni de $(f,g)\mapsto\int_Xf\bar g\,d\mu$, est un espace de Hilbert.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0306
+  titre: 'Remarque : $\|\cdot\|_2^2$ représente l''énergie'
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: $L^2$ très utile en physique et ingénierie (traitement du signal) car $\|\cdot\|_2^2$ représente l'énergie.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  essentiel: false
+- id: topo-n-0307
+  titre: 'Proposition 84 : densité de $L^\infty\cap L^p$ dans $L^p$'
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: Pour $p\in[1,+\infty[$, $L^\infty(X,\mu)\cap L^p(X,\mu)$ est dense dans $L^p(X,\mu)$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0308
+  titre: Démonstration de la proposition 84
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: Troncature $f_n=\mathbb 1_{\{|f|\le n\}}f$, convergence dominée ($|f_n-f|^p\le|2f|^p$).
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0309
+  titre: Support d'une fonction continue, $\mathcal C_c(\Omega)$ (Déf. 61)
+  type: definition
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: $\mathrm{supp}\,f=\overline{\{x\in\Omega/f(x)\ne0\}}$ ; $\mathcal C_c(\Omega)$ = fonctions continues à support compact sur $\Omega$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0310
+  titre: 'Théorème 18 : densité de $\mathcal C_c(\Omega)$ dans $L^p(\Omega,\mu)$'
+  type: theoreme
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: '$\Omega$ ouvert de $\mathbb R^d$, $\mu$ borélienne finie sur les compacts, $p\in[1,+\infty[$ : $\mathcal C_c(\Omega)$ est dense dans $L^p(\Omega,\mu)$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0311
+  titre: 'Remarque 1 (Thm 18) : $\mathcal C_c(\mathbb R)$ non dense dans $L^\infty$, adhérence'
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: $\mathcal C_c(\mathbb R)$ n'est pas dense dans $L^\infty(\mathbb R,\lambda)$ ($\|1-f\|_\infty\ge1$) ; son adhérence est $\{f\in\mathcal C(\mathbb R)/\lim_{|x|\to+\infty}f(x)=0\}$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0312
+  titre: 'Remarque 2 (Thm 18) : séparabilité de $L^p$'
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: $L^p(X,\mu)$ est séparable pour tout $p\in[1,+\infty[$ ; $L^\infty(X,\mu)$ ne l'est pas.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  essentiel: true
+- id: topo-n-0313
+  titre: 'Démonstration du théorème 18 : $\mathcal C_c\subset L^p$ et plan'
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: $\|f\|_p\le\|f\|_\infty\mu(\mathrm{supp} f)^{1/p}$ ; on approche $f\in L^p$ successivement pour $\mathbb 1_A$ (compact, mesure finie), étagée, positive, réelle, complexe.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0314
+  titre: 'Lemme 3 (admis) : approximation d''un borélien par un ouvert et un compact'
+  type: propriete
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: '$A$ borélien de mesure finie, $\epsilon>0$ : il existe $U$ ouvert et $K$ compact avec $K\subset A\subset U$ et $\mu(U\setminus K)<\epsilon$.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 7}
+  essentiel: true
+- id: topo-n-0315
+  titre: 'Démonstration du théorème 18, cas (i) : $f=\mathbb 1_A$, $A$ dans un compact'
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: $g(x)=\frac{d(x,\Omega\setminus U)}{d(x,\Omega\setminus U)+d(x,K)}$ continue à support compact, $|\mathbb 1_A-g|\le\mathbb 1_{U\setminus K}$.
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 7}
+  essentiel: false
+- id: topo-n-0316
+  titre: 'Démonstration du théorème 18, cas (ii) : $f=\mathbb 1_A$, $A$ de mesure finie'
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: Suite exhaustive de compacts $(K_n)$, $\mathbb 1_{K_n\cap A}\to\mathbb 1_A$ dans $L^p$ par convergence dominée, puis cas (i).
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 7}
+  essentiel: false
+- id: topo-n-0317
+  titre: 'Démonstration du théorème 18, cas (iii) : $f$ étagée'
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: '$f=\sum\lambda_k\mathbb 1_{A_k}$ : on approche chaque $\mathbb 1_{A_k}$ par $g_k$ d''après (ii) et on somme.'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 8}
+  essentiel: false
+- id: topo-n-0318
+  titre: 'Démonstration du théorème 18, cas (iv) : $f$ positive'
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: 'Fonctions étagées $f_n$ croissant vers $f$, convergence monotone : $\|f_n-f\|_p\to0$, puis cas (iii).'
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 8}
+  essentiel: false
+- id: topo-n-0319
+  titre: 'Démonstration du théorème 18, cas (v) et (vi) : $f$ réelle, complexe'
+  type: demonstration
+  chapitre: Chapitre 7 - Espace Lp
+  sous_chapitre: 7.2 Propriétés des espaces $L^p$
+  enonce: $f=f_+-f_-$ (cas (iv) pour chaque partie) ; $f=f_r+if_i$ (cas (v) pour chaque partie).
+  source: {etab: paris-cite, fichier: topologie/cours/chap7-espaces-lp.pdf, page: 8}
+  essentiel: false
+
 # Prérequis L1-L2 : notions `type: prerequis` servies avant les notions du poly de leur sous-chapitre
 - id: topo-p-0001
   titre: Extraction diagonale (procédé diagonal de Cantor)
@@ -801,8 +2019,8 @@
 - id: topo-p-0006
   titre: 'Applications linéaires continues, norme d''opérateur, équivalence des normes en dimension finie'
   type: prerequis
-  chapitre: Hors cours actuel
-  sous_chapitre: Espaces vectoriels normés et applications linéaires
+  chapitre: 'Chapitre 5 - Espace vectoriel normé'
+  sous_chapitre: '5.2 Application linéaire continue'   # avant le 18/11/2026 : Hors cours actuel
   enonce: 'Pour $\varphi$ linéaire entre evn : continue $\iff$ continue en $0$ $\iff$ $\exists M,\ \|\varphi(x)\|\le M\|x\|$ $\iff$ bornée sur la boule unité $\iff$ lipschitzienne. $|||\varphi|||=\sup_{\|x\|\le1}\|\varphi(x)\|$, norme sur $\mathcal L_c(E,F)$, $|||g\circ f|||\le|||g|||\,|||f|||$. Normes équivalentes : $\alpha N_1\le N_2\le\beta N_1$ ; en dimension finie toutes les normes sont équivalentes et toute application linéaire est continue.'
   source: {etab: l1-l2}
   essentiel: true

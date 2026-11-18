@@ -61,20 +61,20 @@
   notions: [topo-n-0033, topo-n-0089]
   annales: 3
 - id: topo-m-16
-  titre: 'Norme d''une application linéaire continue : majoration, puis suite de fonctions qui atteint ou approche la borne (hors cours actuel)'
-  notions: [topo-n-0050]
+  titre: 'Norme d''une application linéaire continue : majoration, puis suite de fonctions qui atteint ou approche la borne'
+  notions: [topo-n-0166, topo-n-0161, topo-n-0153, topo-n-0050]
   annales: 4
 - id: topo-m-17
-  titre: 'Projection sur un convexe fermé ou un sous-espace fermé d''un espace de Hilbert : caractérisation, Pythagore (hors cours actuel)'
-  notions: []
+  titre: 'Projection sur un convexe fermé ou un sous-espace fermé d''un espace de Hilbert : caractérisation, Pythagore'
+  notions: [topo-n-0252, topo-n-0250, topo-n-0251, topo-n-0242, topo-n-0243]
   annales: 4
 - id: topo-m-18
-  titre: 'Produit scalaire, norme hilbertienne, familles orthonormées, Bessel et Parseval (hors cours actuel)'
-  notions: []
+  titre: 'Produit scalaire, norme hilbertienne, familles orthonormées, Bessel et Parseval'
+  notions: [topo-n-0236, topo-n-0237, topo-n-0255, topo-n-0256, topo-n-0258, topo-n-0259]
   annales: 3
 - id: topo-m-19
-  titre: 'Connexité : union de connexes d''intersection non vide, image continue d''un connexe, partie ouverte et fermée, valeurs intermédiaires (hors cours actuel)'
-  notions: []
+  titre: 'Connexité : union de connexes d''intersection non vide, image continue d''un connexe, partie ouverte et fermée, valeurs intermédiaires'
+  notions: [topo-n-0100, topo-n-0101, topo-n-0105, topo-n-0106, topo-n-0114, topo-n-0117]
   annales: 3
 - id: topo-m-20
   titre: 'Construire un contre-exemple (dans R, R^2 ou par une suite de fonctions) pour montrer qu''une réciproque ou une hypothèse affaiblie échoue'

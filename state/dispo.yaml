@@ -6,7 +6,9 @@ examens_a_confirmer: true        # dates exactes à confirmer
 minutes_exercices_jour: 150            # 2 h d'exercices nouveaux + 30 min de reprises (choix du 10/11/2026)
 minutes_cours_jour: 30
 notions_cours_jour: 4            # notions au « Cours » par séance (choix du 12/11/2026 : 4 au lieu de 3 ; elles vont vite, les cartes couvrent les énoncés)
-cartes_par_jour: 20              # plafond de cartes Anki nouvelles par jour
+cartes_par_jour: 20              # minimum de cartes Anki nouvelles par jour ; plan.py monte au-dessus s'il le faut
+                                 # pour que toutes les cartes de cours soient apprises avant fin_cartes (18/11/2026)
+# fin_cartes: 2026-12-27         # par défaut : une semaine avant `fin` (la dernière semaine sert à réviser)
 minutes_reprises_max: 30         # plafond de minutes de reprises par jour (toutes matières)
 annales_libres_des: 2026-12-07   # à partir de cette date, toutes les annales prioritaires sont éligibles
 exceptions:

@@ -1485,12 +1485,13 @@
     nature: exam
     annee: 2020-21
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   - topo-m-09
   notions:
-  - topo-n-0050
+  - topo-n-0166
+  - topo-n-0161
   - topo-n-0067
   importance: vital
   justification: annale prioritaire ; norme d'opérateur (4 examens) et point fixe
@@ -1522,10 +1523,14 @@
     nature: exam
     annee: 2020-21
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  sous_chapitre: Chapitre 6 - Espace de Hilbert > 6.2 Définition et propriétés des espaces de Hilbert
   methodes:
   - topo-m-17
-  notions: []
+  notions:
+  - topo-n-0252
+  - topo-n-0242
+  - topo-n-0243
+  - topo-n-0167
   importance: vital
   justification: annale prioritaire ; projections hilbertiennes présentes dans 4 examens
   difficulte: 3
@@ -1550,10 +1555,13 @@
     nature: exam
     annee: 2020-21
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  sous_chapitre: Chapitre 6 - Espace de Hilbert > 6.3 Base hilbertienne
   methodes:
   - topo-m-18
-  notions: []
+  notions:
+  - topo-n-0259
+  - topo-n-0258
+  - topo-n-0256
   importance: important
   justification: annale prioritaire ; base hilbertienne, calcul court
   difficulte: 1
@@ -1582,11 +1590,13 @@
     nature: exam
     annee: 2021-22
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0166
+  - topo-n-0161
+  - topo-n-0153
   importance: vital
   justification: annale prioritaire ; norme de formes linéaires (m16, 4 examens)
   difficulte: 2
@@ -1611,10 +1621,13 @@
     nature: exam
     annee: 2021-22
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
-  notions: []
+  notions:
+  - topo-n-0105
+  - topo-n-0102
+  - topo-n-0100
   importance: important
   justification: annale prioritaire ; connexité, 3 annales
   difficulte: 1
@@ -1644,7 +1657,7 @@
     nature: exam
     annee: 2021-22
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 2 - Espace complet > 2.5 Théorème de Baire
   methodes:
   - topo-m-10
   - topo-m-04
@@ -1652,7 +1665,8 @@
   - topo-m-08
   notions:
   - topo-n-0072
-  - topo-n-0060
+  - topo-n-0179
+  - topo-n-0185
   importance: important
   justification: annale prioritaire ; Baire (2 annales) en dimension infinie
   difficulte: 3
@@ -1686,12 +1700,15 @@
     nature: exam
     annee: 2021-22
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  sous_chapitre: Chapitre 6 - Espace de Hilbert > 6.3 Base hilbertienne
   methodes:
   - topo-m-17
   - topo-m-18
   - topo-m-14
   notions:
+  - topo-n-0256
+  - topo-n-0252
+  - topo-n-0255
   - topo-n-0015
   importance: vital
   justification: annale prioritaire ; projection sur un sous-espace, Bessel
@@ -1723,12 +1740,14 @@
     nature: exam
     annee: 2022-23
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
   - topo-m-02
   notions:
-  - topo-n-0091
+  - topo-n-0106
+  - topo-n-0103
+  - topo-n-0114
   importance: important
   justification: annale prioritaire ; connexité et adhérence (Darboux)
   difficulte: 2
@@ -1755,11 +1774,13 @@
     nature: exam
     annee: 2022-23
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0166
+  - topo-n-0161
+  - topo-n-0153
   importance: vital
   justification: annale prioritaire ; norme triple, m16 dans 4 examens
   difficulte: 2
@@ -1791,14 +1812,17 @@
     nature: exam
     annee: 2022-23
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.3 Normes équivalentes, application n-linéaire continue
   methodes:
   - topo-m-06
   - topo-m-07
   - topo-m-18
   - topo-m-20
   notions:
-  - topo-n-0034
+  - topo-n-0168
+  - topo-n-0169
+  - topo-n-0236
+  - topo-n-0230
   importance: vital
   justification: annale prioritaire ; norme hilbertienne et non-équivalence de normes
   difficulte: 2
@@ -1827,11 +1851,13 @@
     nature: exam
     annee: 2022-23
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  sous_chapitre: Chapitre 6 - Espace de Hilbert > 6.2 Définition et propriétés des espaces de Hilbert
   methodes:
   - topo-m-17
   - topo-m-04
   notions:
+  - topo-n-0250
+  - topo-n-0251
   - topo-n-0028
   importance: vital
   justification: annale prioritaire ; projection sur des convexes et densité
@@ -1873,7 +1899,7 @@
     nature: exam
     annee: 2023-24
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.5 Espace de Banach
   methodes:
   - topo-m-09
   - topo-m-16
@@ -1881,8 +1907,12 @@
   - topo-m-06
   - topo-m-07
   notions:
-  - topo-n-0067
+  - topo-n-0185
+  - topo-n-0188
   - topo-n-0063
+  - topo-n-0067
+  - topo-n-0166
+  - topo-n-0163
   importance: vital
   justification: annale prioritaire ; problème complet Banach + Picard
   difficulte: 3
@@ -1910,11 +1940,16 @@
     nature: exam
     annee: 2023-24
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces de Hilbert
+  sous_chapitre: Chapitre 6 - Espace de Hilbert > 6.2 Définition et propriétés des espaces de Hilbert
   methodes:
   - topo-m-17
   - topo-m-20
-  notions: []
+  notions:
+  - topo-n-0252
+  - topo-n-0250
+  - topo-n-0251
+  - topo-n-0242
+  - topo-n-0249
   importance: vital
   justification: annale prioritaire ; projections et contre-exemple dans R^2
   difficulte: 2
@@ -1975,7 +2010,7 @@
     nature: partiel
     annee: 2020-21
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
   - topo-m-01
@@ -1983,6 +2018,8 @@
   - topo-m-11
   - topo-m-20
   notions:
+  - topo-n-0101
+  - topo-n-0100
   - topo-n-0075
   importance: important
   justification: annale prioritaire ; epsilon-chaînes et connexité, notion isolée
@@ -2490,11 +2527,14 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
   - topo-m-13
-  notions: []
+  notions:
+  - topo-n-0106
+  - topo-n-0117
+  - topo-n-0114
   importance: secondaire
   justification: connexité du cercle, Borsuk-Ulam en dimension 1, plus long que les annales
   difficulte: 2
@@ -2525,11 +2565,14 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
   - topo-m-02
-  notions: []
+  notions:
+  - topo-n-0106
+  - topo-n-0114
+  - topo-n-0101
   importance: important
   justification: même ensemble Delta et même fonction g qu'à l'examen 2022-23 ex02
   difficulte: 2
@@ -2599,10 +2642,14 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
-  notions: []
+  notions:
+  - topo-n-0106
+  - topo-n-0105
+  - topo-n-0114
+  - topo-n-0112
   importance: secondaire
   justification: points de coupure, connexité, jamais en annale
   difficulte: 2
@@ -2634,14 +2681,16 @@
   type_source: dm
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   - topo-m-09
   - topo-m-13
   notions:
+  - topo-n-0166
+  - topo-n-0161
   - topo-n-0092
-  - topo-n-0050
+  - topo-n-0067
   importance: vital
   justification: 'norme d''un opérateur intégral : seul entraînement Paris Cité hors annales à m16 (4 examens)'
   difficulte: 2
@@ -2666,12 +2715,13 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.1 Définition et topologie d'un espace vectoriel normé
   methodes:
   - topo-m-06
   notions:
+  - topo-n-0150
+  - topo-n-0157
   - topo-n-0008
-  - topo-n-0011
   importance: secondaire
   justification: vérifier une norme et dessiner sa boule, échauffement
   difficulte: 1
@@ -2698,10 +2748,12 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.3 Normes équivalentes, application n-linéaire continue
   methodes:
   - topo-m-07
   notions:
+  - topo-n-0168
+  - topo-n-0169
   - topo-n-0034
   - topo-n-0011
   importance: important
@@ -2763,10 +2815,11 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  sous_chapitre: Chapitre 7 - Espace Lp > 7.1 Définition des espaces $L^p$
   methodes:
   - topo-m-22
   notions:
+  - topo-n-0284
   - topo-n-0010
   importance: secondaire
   justification: Hölder, jamais dans les annales de Paris Cité
@@ -2826,13 +2879,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.1 Définition et topologie d'un espace vectoriel normé
   methodes:
   - topo-m-22
   - topo-m-06
   notions:
+  - topo-n-0150
+  - topo-n-0151
   - topo-n-0010
-  - topo-n-0008
   importance: secondaire
   justification: conséquence directe de Minkowski
   difficulte: 1
@@ -2956,10 +3010,12 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.1 Définition et topologie d'un espace vectoriel normé
   methodes:
   - topo-m-06
   notions:
+  - topo-n-0150
+  - topo-n-0153
   - topo-n-0008
   importance: important
   justification: condition pour obtenir une norme, m06 dans 3 annales
@@ -2987,10 +3043,12 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.3 Normes équivalentes, application n-linéaire continue
   methodes:
   - topo-m-07
   notions:
+  - topo-n-0168
+  - topo-n-0169
   - topo-n-0034
   importance: important
   justification: équivalence de normes par encadrement, m07
@@ -3050,11 +3108,13 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.3 Normes équivalentes, application n-linéaire continue
   methodes:
   - topo-m-07
   - topo-m-06
   notions:
+  - topo-n-0168
+  - topo-n-0150
   - topo-n-0034
   - topo-n-0036
   importance: vital
@@ -3083,11 +3143,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.3 Normes équivalentes, application n-linéaire continue
   methodes:
   - topo-m-07
   - topo-m-20
   notions:
+  - topo-n-0168
+  - topo-n-0150
+  - topo-n-0176
   - topo-n-0034
   - topo-n-0036
   importance: secondaire
@@ -4049,13 +4112,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.4 Espace vectoriel normé de dimension finie
   methodes:
   - topo-m-12
   notions:
+  - topo-n-0182
   - topo-n-0075
   importance: secondaire
-  justification: théorème de Riesz, hors cours et jamais en annale
+  justification: théorème de Riesz, jamais en annale
   difficulte: 2
   temps_min: 15
   indice_tableur:
@@ -4080,13 +4144,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.4 Espace vectoriel normé de dimension finie
   methodes:
   - topo-m-12
   notions:
-  - topo-n-0080
+  - topo-n-0179
+  - topo-n-0182
   importance: secondaire
-  justification: théorème de Riesz, hors cours et jamais en annale
+  justification: théorème de Riesz, jamais en annale
   difficulte: 2
   temps_min: 15
   indice_tableur:
@@ -4111,13 +4176,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.4 Espace vectoriel normé de dimension finie
   methodes:
   - topo-m-12
   notions:
+  - topo-n-0182
   - topo-n-0075
   importance: secondaire
-  justification: théorème de Riesz, hors cours et jamais en annale
+  justification: théorème de Riesz, jamais en annale
   difficulte: 3
   temps_min: 15
   indice_tableur:
@@ -4142,13 +4208,13 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.4 Espace vectoriel normé de dimension finie
   methodes:
   - topo-m-12
   notions:
-  - topo-n-0075
+  - topo-n-0182
   importance: secondaire
-  justification: théorème de Riesz, hors cours et jamais en annale
+  justification: théorème de Riesz, jamais en annale
   difficulte: 3
   temps_min: 15
   indice_tableur:
@@ -4173,13 +4239,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.4 Espace vectoriel normé de dimension finie
   methodes:
   - topo-m-12
   notions:
-  - topo-n-0075
+  - topo-n-0182
+  - topo-n-0179
   importance: secondaire
-  justification: théorème de Riesz, hors cours et jamais en annale
+  justification: théorème de Riesz, jamais en annale
   difficulte: 3
   temps_min: 15
   indice_tableur:
@@ -4458,10 +4525,12 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
   notions:
+  - topo-n-0102
+  - topo-n-0101
   - topo-n-0025
   importance: important
   justification: connexe et frontière, connexité dans 3 annales
@@ -4488,10 +4557,13 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
   notions:
+  - topo-n-0106
+  - topo-n-0112
+  - topo-n-0114
   - topo-n-0018
   importance: secondaire
   justification: injection continue dans R, argument de connexité astucieux
@@ -4520,11 +4592,14 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
   - topo-m-12
-  notions: []
+  notions:
+  - topo-n-0103
+  - topo-n-0106
+  - topo-n-0114
   importance: exotique
   justification: très difficile, jamais en examen
   difficulte: 3
@@ -4549,10 +4624,13 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
-  notions: []
+  notions:
+  - topo-n-0102
+  - topo-n-0104
+  - topo-n-0101
   importance: important
   justification: connexe inclus dans une union non connexe, outil des annales de connexité
   difficulte: 2
@@ -4641,13 +4719,15 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.6 Série dans un espace vectoriel normé
   methodes:
   - topo-m-08
   notions:
-  - topo-n-0056
+  - topo-n-0193
+  - topo-n-0192
+  - topo-n-0178
   importance: secondaire
-  justification: convergence normale dans un Banach, hors cours
+  justification: convergence normale dans un Banach
   difficulte: 2
   temps_min: 20
   indice_tableur:
@@ -4757,12 +4837,13 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   - topo-m-20
   notions:
-  - topo-n-0050
+  - topo-n-0161
+  - topo-n-0153
   importance: vital
   justification: continuité d'une forme linéaire selon la norme, m16 (4 examens)
   difficulte: 1
@@ -4788,11 +4869,12 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0166
+  - topo-n-0161
   importance: vital
   justification: majoration d'une norme d'opérateur, m16 (4 examens)
   difficulte: 1
@@ -4818,11 +4900,12 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0166
+  - topo-n-0161
   importance: vital
   justification: norme approchée par une suite, schéma des examens
   difficulte: 2
@@ -4848,11 +4931,11 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0166
   importance: secondaire
   justification: norme non atteinte, complément
   difficulte: 2
@@ -4880,11 +4963,12 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0166
+  - topo-n-0151
   importance: secondaire
   justification: normes matricielles, les examens portent sur des espaces de fonctions
   difficulte: 2
@@ -4910,12 +4994,12 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   - topo-m-20
   notions:
-  - topo-n-0050
+  - topo-n-0161
   importance: important
   justification: application linéaire non continue, m16
   difficulte: 2
@@ -4941,11 +5025,11 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0161
   importance: secondaire
   justification: variante courte de q1
   difficulte: 1
@@ -4971,11 +5055,11 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0161
   importance: secondaire
   justification: variante courte de q1
   difficulte: 1
@@ -5001,12 +5085,12 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   - topo-m-20
   notions:
-  - topo-n-0050
+  - topo-n-0161
   importance: exotique
   justification: cas technique sans intérêt pour l'examen
   difficulte: 3
@@ -5039,11 +5123,13 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0166
+  - topo-n-0161
+  - topo-n-0153
   importance: vital
   justification: quasi identique à l'examen 2020-21 ex01 q1 (même opérateur intégral)
   difficulte: 2
@@ -5071,11 +5157,12 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   - topo-m-09
   notions:
+  - topo-n-0166
   - topo-n-0067
   importance: vital
   justification: quasi identique à l'examen 2020-21 ex01 q2 (équation Af=f)
@@ -5104,11 +5191,11 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0161
   importance: secondaire
   justification: forme linéaire continue, immédiat
   difficulte: 1
@@ -5169,11 +5256,13 @@
   type_source: td
   annale: null
   disponible: true
-  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.3 Normes équivalentes, application n-linéaire continue
   methodes:
   - topo-m-07
   - topo-m-06
   notions:
+  - topo-n-0168
+  - topo-n-0169
   - topo-n-0034
   importance: important
   justification: norme équivalente sur C^1 par Cauchy-Schwarz, proche de l'examen 2022-23 ex04
@@ -6072,10 +6161,11 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: Chapitre 1 - Espace métrique > 1.3 Espace métrique
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.1 Définition et topologie d'un espace vectoriel normé
   methodes:
   - topo-m-06
   notions:
+  - topo-n-0150
   - topo-n-0008
   importance: secondaire
   justification: vérifications de normes répétitives
@@ -6105,11 +6195,13 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: Chapitre 1 - Espace métrique > 1.6 Espace métrique produit, distances équivalentes
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.3 Normes équivalentes, application n-linéaire continue
   methodes:
   - topo-m-07
   - topo-m-20
   notions:
+  - topo-n-0168
+  - topo-n-0176
   - topo-n-0034
   - topo-n-0036
   importance: important
@@ -6422,12 +6514,14 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
   - topo-m-12
   notions:
-  - topo-n-0090
+  - topo-n-0105
+  - topo-n-0106
+  - topo-n-0114
   - topo-n-0091
   importance: important
   justification: compact et connexe dans R^2, connexité dans 3 annales
@@ -6529,11 +6623,13 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
   - topo-m-04
   notions:
+  - topo-n-0100
+  - topo-n-0101
   - topo-n-0025
   importance: secondaire
   justification: connexité et frontière, abstrait
@@ -6563,10 +6659,13 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
-  notions: []
+  notions:
+  - topo-n-0105
+  - topo-n-0119
+  - topo-n-0120
   importance: secondaire
   justification: connexité par arcs immédiate
   difficulte: 1
@@ -6595,10 +6694,12 @@
     nature: partiel
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
-  notions: []
+  notions:
+  - topo-n-0101
+  - topo-n-0100
   importance: secondaire
   justification: non-connexité immédiate
   difficulte: 1
@@ -6836,10 +6937,12 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
-  notions: []
+  notions:
+  - topo-n-0105
+  - topo-n-0114
   importance: secondaire
   justification: points de coupure, comme dm2023-24-ex01
   difficulte: 1
@@ -6869,10 +6972,12 @@
     nature: partiel
     annee: 2025-26
   disponible: true
-  sous_chapitre: Hors cours actuel > Connexité
+  sous_chapitre: Chapitre 4 - Espace connexe > 4.1 Définitions et propriétés
   methodes:
   - topo-m-19
   notions:
+  - topo-n-0106
+  - topo-n-0114
   - topo-n-0050
   importance: secondaire
   justification: non-homéomorphie par points de coupure, comme dm2023-24-ex01
@@ -7193,15 +7298,16 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.4 Espace vectoriel normé de dimension finie
   methodes:
   - topo-m-07
   - topo-m-12
   notions:
-  - topo-n-0034
+  - topo-n-0174
+  - topo-n-0168
   - topo-n-0090
   importance: secondaire
-  justification: équivalence des normes en dimension finie, preuve de cours hors cours actuel
+  justification: équivalence des normes en dimension finie, preuve de cours
   difficulte: 3
   temps_min: 25
   indice_tableur:
@@ -7502,10 +7608,11 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
-  notions: []
+  notions:
+  - topo-n-0165
   importance: secondaire
   justification: vérification immédiate
   difficulte: 1
@@ -7535,11 +7642,11 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0161
   importance: vital
   justification: continuité d'un opérateur intégral pour la norme 1, m16 (4 examens)
   difficulte: 2
@@ -7569,11 +7676,12 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0166
+  - topo-n-0161
   importance: vital
   justification: suite test pour approcher la norme, schéma des examens
   difficulte: 2
@@ -7603,11 +7711,11 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions:
-  - topo-n-0050
+  - topo-n-0166
   importance: vital
   justification: calcul exact d'une norme d'opérateur, m16 (4 examens)
   difficulte: 2
@@ -7637,7 +7745,7 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions: []
@@ -7670,7 +7778,7 @@
     nature: exam
     annee: 2024-25
   disponible: true
-  sous_chapitre: Hors cours actuel > Espaces vectoriels normés et applications linéaires
+  sous_chapitre: Chapitre 5 - Espace vectoriel normé > 5.2 Application linéaire continue
   methodes:
   - topo-m-16
   notions: []

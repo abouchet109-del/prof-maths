@@ -1097,3 +1097,1524 @@
     fichier: topologie/cours/chap3-espaces-compacts.pdf
     page: 10
   confiance: a_confirmer
+# ---------- Chapitres 4 à 7 (18/11/2026) ----------
+- id: topo-a-100
+  origine: cours_l3
+  notion: topo-n-0100
+  titre: Espace connexe
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 1}
+  confiance: sure
+- id: topo-a-101
+  origine: cours_l3
+  notion: topo-n-0101
+  titre: Définitions équivalentes de la connexité
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 1}
+  confiance: sure
+- id: topo-a-102
+  origine: cours_l3
+  notion: topo-n-0102
+  titre: Partie connexe
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 1}
+  confiance: sure
+- id: topo-a-103
+  origine: cours_l3
+  notion: topo-n-0103
+  titre: Adhérence d'un connexe
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 2}
+  confiance: sure
+- id: topo-a-104
+  origine: cours_l3
+  notion: topo-n-0104
+  titre: Union de deux connexes d'adhérence rencontrant l'autre
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 2}
+  confiance: sure
+- id: topo-a-105
+  origine: cours_l3
+  notion: topo-n-0105
+  titre: Union d'une famille de connexes
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 2}
+  confiance: sure
+- id: topo-a-106
+  origine: cours_l3
+  notion: topo-n-0106
+  titre: Image continue d'un connexe
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 2}
+  confiance: sure
+- id: topo-a-107
+  origine: cours_l3
+  notion: topo-n-0107
+  titre: Produit fini d'espaces connexes
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 3}
+  confiance: sure
+- id: topo-a-108
+  origine: cours_l3
+  notion: topo-n-0108
+  titre: Composante connexe d'un point
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 3}
+  confiance: sure
+- id: topo-a-109
+  origine: cours_l3
+  notion: topo-n-0109
+  titre: Partition
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 3}
+  confiance: sure
+- id: topo-a-110
+  origine: cours_l3
+  notion: topo-n-0110
+  titre: Propriétés des composantes connexes
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 3}
+  confiance: sure
+- id: topo-a-111
+  origine: cours_l3
+  notion: topo-n-0111
+  titre: Points connectés
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 4}
+  confiance: sure
+- id: topo-a-112
+  origine: cours_l3
+  notion: topo-n-0112
+  titre: Les boules de $\mathbb R^d$ sont connexes
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 4}
+  confiance: sure
+- id: topo-a-113
+  origine: cours_l3
+  notion: topo-n-0113
+  titre: Composantes connexes d'un ouvert de $\mathbb R^d$
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 4}
+  confiance: sure
+- id: topo-a-114
+  origine: cours_l3
+  notion: topo-n-0114
+  titre: 'Parties connexes de $\mathbb R$ : les intervalles'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 5}
+  confiance: sure
+- id: topo-a-115
+  origine: cours_l3
+  notion: topo-n-0115
+  titre: 'Ouvert de $\mathbb R$ : union dénombrable d''intervalles ouverts disjoints'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 5}
+  confiance: sure
+- id: topo-a-116
+  origine: cours_l3
+  notion: topo-n-0116
+  titre: Composantes connexes de $\mathbb Q$
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 5}
+  confiance: sure
+- id: topo-a-117
+  origine: cours_l3
+  notion: topo-n-0117
+  titre: Théorème des valeurs intermédiaires généralisé
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 5}
+  confiance: sure
+- id: topo-a-118
+  origine: cours_l3
+  notion: topo-n-0118
+  titre: Arc (chemin)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 6}
+  confiance: sure
+- id: topo-a-119
+  origine: cours_l3
+  notion: topo-n-0119
+  titre: Espace connexe par arcs
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 6}
+  confiance: sure
+- id: topo-a-120
+  origine: cours_l3
+  notion: topo-n-0120
+  titre: Connexe par arcs implique connexe
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 6}
+  confiance: sure
+- id: topo-a-121
+  origine: cours_l3
+  notion: topo-n-0121
+  titre: Composante connexe par arcs
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 6}
+  confiance: sure
+- id: topo-a-122
+  origine: cours_l3
+  notion: topo-n-0122
+  titre: Propriétés des composantes connexes par arcs
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 6}
+  confiance: sure
+- id: topo-a-123
+  origine: cours_l3
+  notion: topo-n-0123
+  titre: 'Dimension 1 : composantes connexes et connexes par arcs dans $\mathbb R$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 7}
+  confiance: sure
+- id: topo-a-124
+  origine: cours_l3
+  notion: topo-n-0124
+  titre: 'Ouvert de $\mathbb R^d$ : composantes connexes et connexes par arcs'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 7}
+  confiance: sure
+- id: topo-a-125
+  origine: cours_l3
+  notion: topo-n-0125
+  titre: Ouvert connexe de $\mathbb R^d$ est connexe par arcs
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 7}
+  confiance: sure
+- id: topo-a-126
+  origine: cours_l3
+  notion: topo-n-0126
+  titre: Extension aux espaces où les boules sont connexes par arcs
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap4-espaces-connexes.pdf, page: 7}
+  confiance: sure
+- id: topo-a-140
+  origine: cours_l3
+  notion: topo-n-0150
+  titre: Norme, espace vectoriel normé, semi-norme
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 1}
+  confiance: sure
+- id: topo-a-141
+  origine: cours_l3
+  notion: topo-n-0151
+  titre: Normes usuelles sur $\mathbb K^d$
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 1}
+  confiance: sure
+- id: topo-a-142
+  origine: cours_l3
+  notion: topo-n-0152
+  titre: Norme de la convergence uniforme sur $\mathcal B(E,F)$
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 1}
+  confiance: sure
+- id: topo-a-143
+  origine: cours_l3
+  notion: topo-n-0153
+  titre: Norme $\|\cdot\|_\infty$ sur $\mathcal C(X,\mathbb K)$
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  confiance: sure
+- id: topo-a-144
+  origine: cours_l3
+  notion: topo-n-0154
+  titre: 'Prop. 53 : inégalité triangulaire renversée, norme non bornée'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  confiance: sure
+- id: topo-a-145
+  origine: cours_l3
+  notion: topo-n-0155
+  titre: 'Prop. 54 : distance associée à une norme'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  confiance: sure
+- id: topo-a-146
+  origine: cours_l3
+  notion: topo-n-0156
+  titre: Invariance par translation de la distance associée
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  confiance: sure
+- id: topo-a-147
+  origine: cours_l3
+  notion: topo-n-0157
+  titre: Boules et sphères d'un espace vectoriel normé (convention)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  confiance: sure
+- id: topo-a-148
+  origine: cours_l3
+  notion: topo-n-0158
+  titre: 'Prop. 55 : intérieur, adhérence et frontière des boules'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 2}
+  confiance: sure
+- id: topo-a-149
+  origine: cours_l3
+  notion: topo-n-0159
+  titre: 'Rappel : boules dans un espace métrique discret'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 3}
+  confiance: sure
+- id: topo-a-150
+  origine: cours_l3
+  notion: topo-n-0160
+  titre: 'Prop. 56 : sous-espace vectoriel normé'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 3}
+  confiance: sure
+- id: topo-a-151
+  origine: cours_l3
+  notion: topo-n-0161
+  titre: 'Thm 9 : caractérisations de la continuité d''une application linéaire'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 3}
+  confiance: sure
+- id: topo-a-152
+  origine: cours_l3
+  notion: topo-n-0162
+  titre: 'Rappels : isomorphisme d''espace vectoriel, homéomorphisme'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 4}
+  confiance: sure
+- id: topo-a-153
+  origine: cours_l3
+  notion: topo-n-0163
+  titre: 'Déf. 40 : isomorphisme d''espaces vectoriels normés'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 4}
+  confiance: sure
+- id: topo-a-154
+  origine: cours_l3
+  notion: topo-n-0164
+  titre: 'Prop. 57 : caractérisation des isomorphismes d''evn'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 5}
+  confiance: sure
+- id: topo-a-155
+  origine: cours_l3
+  notion: topo-n-0165
+  titre: 'Déf. 41 : espace $\mathcal L(E,F)$ des applications linéaires continues'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 5}
+  confiance: sure
+- id: topo-a-156
+  origine: cours_l3
+  notion: topo-n-0166
+  titre: 'Prop. 58 : norme triple sur $\mathcal L(E,F)$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 5}
+  confiance: sure
+- id: topo-a-157
+  origine: cours_l3
+  notion: topo-n-0167
+  titre: 'Prop. 59 : norme triple d''une composée'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 5}
+  confiance: sure
+- id: topo-a-158
+  origine: cours_l3
+  notion: topo-n-0168
+  titre: 'Déf. 42 : normes équivalentes'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 6}
+  confiance: sure
+- id: topo-a-159
+  origine: cours_l3
+  notion: topo-n-0169
+  titre: 'Prop. 60 : caractérisation des normes équivalentes'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 6}
+  confiance: sure
+- id: topo-a-160
+  origine: cours_l3
+  notion: topo-n-0170
+  titre: Remarques sur les normes équivalentes (symétrie, distances lipschitz-équivalentes)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 6}
+  confiance: sure
+- id: topo-a-161
+  origine: cours_l3
+  notion: topo-n-0171
+  titre: 'Prop. 61 : normes $N_p$ et $N_\infty$ sur un produit fini d''evn'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 6}
+  confiance: sure
+- id: topo-a-162
+  origine: cours_l3
+  notion: topo-n-0172
+  titre: Applications $n$-linéaires, notation $L(E_1,\dots,E_n;F)$
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 6}
+  confiance: sure
+- id: topo-a-163
+  origine: cours_l3
+  notion: topo-n-0173
+  titre: 'Prop. 62 : continuité d''une application $n$-linéaire'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 7}
+  confiance: sure
+- id: topo-a-164
+  origine: cours_l3
+  notion: topo-n-0174
+  titre: 'Thm 10 : équivalence des normes en dimension finie'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 8}
+  confiance: sure
+- id: topo-a-165
+  origine: cours_l3
+  notion: topo-n-0175
+  titre: 'Prop. 63 : compacts d''un evn de dimension finie'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 9}
+  confiance: sure
+- id: topo-a-166
+  origine: cours_l3
+  notion: topo-n-0176
+  titre: 'Exemple : normes non équivalentes sur $\mathbb K[X]$ (dimension infinie)'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 9}
+  confiance: sure
+- id: topo-a-167
+  origine: cours_l3
+  notion: topo-n-0177
+  titre: 'Prop. 64 : normes de la forme $N(\|x_1\|,\dots,\|x_d\|)$ sur un produit'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 10}
+  confiance: sure
+- id: topo-a-168
+  origine: cours_l3
+  notion: topo-n-0178
+  titre: 'Prop. 65 : un evn de dimension finie est complet'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 10}
+  confiance: sure
+- id: topo-a-169
+  origine: cours_l3
+  notion: topo-n-0179
+  titre: 'Cor. 10 : un sous-espace de dimension finie est fermé'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 10}
+  confiance: sure
+- id: topo-a-170
+  origine: cours_l3
+  notion: topo-n-0180
+  titre: 'Prop. 66 : application linéaire définie sur un evn de dimension finie'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 10}
+  confiance: sure
+- id: topo-a-171
+  origine: cours_l3
+  notion: topo-n-0181
+  titre: 'Remarque : la Prop. 66 se généralise aux applications $n$-linéaires'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 11}
+  confiance: sure
+- id: topo-a-172
+  origine: cours_l3
+  notion: topo-n-0182
+  titre: 'Thm 11 (Riesz) : dimension finie et compacité de la boule unité fermée'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 11}
+  confiance: sure
+- id: topo-a-173
+  origine: cours_l3
+  notion: topo-n-0183
+  titre: 'Remarque : espace localement compact et théorème de Riesz'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 12}
+  confiance: sure
+- id: topo-a-174
+  origine: cours_l3
+  notion: topo-n-0184
+  titre: 'Cor. 11 : en dimension infinie, les compacts sont d''intérieur vide'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 12}
+  confiance: sure
+- id: topo-a-175
+  origine: cours_l3
+  notion: topo-n-0185
+  titre: 'Déf. 43 : espace de Banach'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 12}
+  confiance: sure
+- id: topo-a-176
+  origine: cours_l3
+  notion: topo-n-0186
+  titre: Exemples d'espaces de Banach (dimension finie, $L^p$)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 12}
+  confiance: sure
+- id: topo-a-177
+  origine: cours_l3
+  notion: topo-n-0187
+  titre: 'Prop. 67 : complétude de $\mathcal L(E,F)$ quand $F$ est de Banach'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 12}
+  confiance: sure
+- id: topo-a-178
+  origine: cours_l3
+  notion: topo-n-0188
+  titre: 'Prop. 68 : $(\mathcal C(X,\mathbb K),\|\cdot\|_\infty)$ est un espace de Banach'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 13}
+  confiance: sure
+- id: topo-a-179
+  origine: cours_l3
+  notion: topo-n-0189
+  titre: 'Série dans un espace vectoriel normé : somme partielle, convergence, somme'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 14}
+  confiance: sure
+- id: topo-a-180
+  origine: cours_l3
+  notion: topo-n-0190
+  titre: 'Prop. 69 : propriétés des séries convergentes d''un evn'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 14}
+  confiance: sure
+- id: topo-a-181
+  origine: cours_l3
+  notion: topo-n-0191
+  titre: 'Prop. 70 : critère de Cauchy pour les séries d''un espace de Banach'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 14}
+  confiance: sure
+- id: topo-a-182
+  origine: cours_l3
+  notion: topo-n-0192
+  titre: 'Déf. 44 : série absolument (normalement) convergente'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 14}
+  confiance: sure
+- id: topo-a-183
+  origine: cours_l3
+  notion: topo-n-0193
+  titre: 'Thm 12 : Banach et séries absolument convergentes'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 14}
+  confiance: sure
+- id: topo-a-184
+  origine: cours_l3
+  notion: topo-n-0194
+  titre: 'Thm 13 (Banach) : théorème d''isomorphisme de Banach'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 15}
+  confiance: sure
+- id: topo-a-185
+  origine: cours_l3
+  notion: topo-n-0195
+  titre: Théorème de l'application ouverte
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 18}
+  confiance: sure
+- id: topo-a-186
+  origine: cours_l3
+  notion: topo-n-0196
+  titre: 'Déf. 45 : groupe linéaire $GL(E)$ d''un espace de Banach'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 18}
+  confiance: sure
+- id: topo-a-187
+  origine: cours_l3
+  notion: topo-n-0197
+  titre: 'Prop. 71 : $(GL(E),\circ)$ est un groupe'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 18}
+  confiance: sure
+- id: topo-a-188
+  origine: cours_l3
+  notion: topo-n-0198
+  titre: 'Prop. 72 : série de Neumann, inversibilité de $\mathrm{Id}-f$ si $|||f|||<1$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 18}
+  confiance: sure
+- id: topo-a-189
+  origine: cours_l3
+  notion: topo-n-0199
+  titre: 'Remarque : inverse de $\mathrm{Id}+f$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 18}
+  confiance: sure
+- id: topo-a-190
+  origine: cours_l3
+  notion: topo-n-0200
+  titre: 'Cor. 12 : $|||\mathrm{Id}-f|||<1\Rightarrow f\in GL(E)$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 19}
+  confiance: sure
+- id: topo-a-191
+  origine: cours_l3
+  notion: topo-n-0201
+  titre: 'Prop. 73 : $GL(E)$ est un ouvert de $\mathcal L(E)$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap5-espaces-vectoriels-normes.pdf, page: 19}
+  confiance: sure
+- id: topo-a-210
+  origine: cours_l3
+  notion: topo-n-0230
+  titre: Produit scalaire sur un espace vectoriel réel
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  confiance: sure
+- id: topo-a-211
+  origine: cours_l3
+  notion: topo-n-0231
+  titre: Forme sesquilinéaire
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  confiance: sure
+- id: topo-a-212
+  origine: cours_l3
+  notion: topo-n-0232
+  titre: Produit scalaire sur un espace vectoriel complexe
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  confiance: sure
+- id: topo-a-213
+  origine: cours_l3
+  notion: topo-n-0233
+  titre: Espace préhilbertien
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  confiance: sure
+- id: topo-a-214
+  origine: cours_l3
+  notion: topo-n-0234
+  titre: Exemple de produit scalaire sur $\mathcal C([0,1],\mathbb K)$
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  confiance: sure
+- id: topo-a-215
+  origine: cours_l3
+  notion: topo-n-0235
+  titre: Espaces euclidien et hermitien
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 1}
+  confiance: sure
+- id: topo-a-216
+  origine: cours_l3
+  notion: topo-n-0236
+  titre: Norme associée à un produit scalaire
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 2}
+  confiance: sure
+- id: topo-a-217
+  origine: cours_l3
+  notion: topo-n-0237
+  titre: Inégalité de Cauchy-Schwarz
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 2}
+  confiance: sure
+- id: topo-a-218
+  origine: cours_l3
+  notion: topo-n-0238
+  titre: Formule du parallélogramme
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 2}
+  confiance: sure
+- id: topo-a-219
+  origine: cours_l3
+  notion: topo-n-0239
+  titre: Continuité du produit scalaire
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 2}
+  confiance: sure
+- id: topo-a-220
+  origine: cours_l3
+  notion: topo-n-0240
+  titre: Formules de polarisation
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  confiance: sure
+- id: topo-a-221
+  origine: cours_l3
+  notion: topo-n-0241
+  titre: Vecteurs orthogonaux
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  confiance: sure
+- id: topo-a-222
+  origine: cours_l3
+  notion: topo-n-0242
+  titre: Théorème de Pythagore
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  confiance: sure
+- id: topo-a-223
+  origine: cours_l3
+  notion: topo-n-0243
+  titre: Orthogonal d'une partie
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  confiance: sure
+- id: topo-a-224
+  origine: cours_l3
+  notion: topo-n-0244
+  titre: L'orthogonal d'une partie est un sous-espace fermé
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  confiance: sure
+- id: topo-a-225
+  origine: cours_l3
+  notion: topo-n-0245
+  titre: Orthogonal de A et de l'adhérence de vect(A)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 3}
+  confiance: sure
+- id: topo-a-226
+  origine: cours_l3
+  notion: topo-n-0246
+  titre: Espace de Hilbert
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 4}
+  confiance: sure
+- id: topo-a-227
+  origine: cours_l3
+  notion: topo-n-0247
+  titre: Un espace de Hilbert est un espace de Banach
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 4}
+  confiance: sure
+- id: topo-a-228
+  origine: cours_l3
+  notion: topo-n-0248
+  titre: 'Exemples d''espaces de Hilbert : $L^2(X,\mu)$ et $\ell^2(\mathbb N)$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 4}
+  confiance: sure
+- id: topo-a-229
+  origine: cours_l3
+  notion: topo-n-0249
+  titre: Partie convexe
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 4}
+  confiance: sure
+- id: topo-a-230
+  origine: cours_l3
+  notion: topo-n-0250
+  titre: Théorème de projection sur un convexe fermé
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 4}
+  confiance: sure
+- id: topo-a-231
+  origine: cours_l3
+  notion: topo-n-0251
+  titre: Caractérisation de la projection sur un convexe fermé
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 5}
+  confiance: sure
+- id: topo-a-232
+  origine: cours_l3
+  notion: topo-n-0252
+  titre: Projection orthogonale sur un sous-espace fermé
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 6}
+  confiance: sure
+- id: topo-a-233
+  origine: cours_l3
+  notion: topo-n-0253
+  titre: Partie totale
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 7}
+  confiance: sure
+- id: topo-a-234
+  origine: cours_l3
+  notion: topo-n-0254
+  titre: Caractérisation des parties totales par l'orthogonal
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 7}
+  confiance: sure
+- id: topo-a-235
+  origine: cours_l3
+  notion: topo-n-0255
+  titre: Système orthogonal, système orthonormé
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 7}
+  confiance: sure
+- id: topo-a-236
+  origine: cours_l3
+  notion: topo-n-0256
+  titre: Inégalité de Bessel
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 7}
+  confiance: sure
+- id: topo-a-237
+  origine: cours_l3
+  notion: topo-n-0257
+  titre: Théorème de Riesz-Fisher
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 8}
+  confiance: sure
+- id: topo-a-238
+  origine: cours_l3
+  notion: topo-n-0258
+  titre: Base hilbertienne
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 8}
+  confiance: sure
+- id: topo-a-239
+  origine: cours_l3
+  notion: topo-n-0259
+  titre: Caractérisations des bases hilbertiennes (Bessel, Parseval)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 8}
+  confiance: sure
+- id: topo-a-240
+  origine: cours_l3
+  notion: topo-n-0260
+  titre: Isomorphisme isométrique entre $\mathcal H$ et $\ell^2(\mathbb N)$
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 9}
+  confiance: sure
+- id: topo-a-241
+  origine: cours_l3
+  notion: topo-n-0261
+  titre: 'Exemple : la base hilbertienne canonique $(\delta_n)$ de $\ell^2(\mathbb N)$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 10}
+  confiance: sure
+- id: topo-a-242
+  origine: cours_l3
+  notion: topo-n-0262
+  titre: Existence d'une base hilbertienne dans un Hilbert séparable
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap6-espaces-de-hilbert.pdf, page: 10}
+  confiance: sure
+- id: topo-a-250
+  origine: cours_l3
+  notion: topo-n-0280
+  titre: Fonction mesurable (borélienne)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 1}
+  confiance: sure
+- id: topo-a-251
+  origine: cours_l3
+  notion: topo-n-0281
+  titre: Espace $\mathcal L^p(X,\mu)$ et norme $\|f\|_p$ ($p<+\infty$)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 1}
+  confiance: sure
+- id: topo-a-252
+  origine: cours_l3
+  notion: topo-n-0282
+  titre: Norme $\|f\|_\infty$ (supremum essentielle)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 1}
+  confiance: sure
+- id: topo-a-253
+  origine: cours_l3
+  notion: topo-n-0283
+  titre: 'Proposition 82 : $\|\cdot\|_p$ est une semi-norme sur $\mathcal L^p$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 1}
+  confiance: sure
+- id: topo-a-254
+  origine: cours_l3
+  notion: topo-n-0284
+  titre: Inégalité de Hölder (Proposition 82)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 1}
+  confiance: sure
+- id: topo-a-255
+  origine: cours_l3
+  notion: topo-n-0285
+  titre: 'Remarque : $\|\cdot\|_p$ n''est pas une norme sur $\mathcal L^p$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 2}
+  confiance: sure
+- id: topo-a-256
+  origine: cours_l3
+  notion: topo-n-0286
+  titre: Démonstration de l'inégalité de Hölder
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 2}
+  confiance: sure
+- id: topo-a-257
+  origine: cours_l3
+  notion: topo-n-0287
+  titre: Démonstration de l'inégalité de Minkowski
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 2}
+  confiance: sure
+- id: topo-a-258
+  origine: cours_l3
+  notion: topo-n-0288
+  titre: Relation binaire (Déf. 57)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  confiance: sure
+- id: topo-a-259
+  origine: cours_l3
+  notion: topo-n-0289
+  titre: Relation d'équivalence (Déf. 58)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  confiance: sure
+- id: topo-a-260
+  origine: cours_l3
+  notion: topo-n-0290
+  titre: 'Exemples de relations d''équivalence : composante connexe, sous-groupe'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  confiance: sure
+- id: topo-a-261
+  origine: cours_l3
+  notion: topo-n-0291
+  titre: 'Exemple : égalité $\mu$-presque partout comme relation d''équivalence'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  confiance: sure
+- id: topo-a-262
+  origine: cours_l3
+  notion: topo-n-0292
+  titre: Classe d'équivalence, ensemble quotient (Déf. 59)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  confiance: sure
+- id: topo-a-263
+  origine: cours_l3
+  notion: topo-n-0293
+  titre: Classes et partition ; notation $[x]$
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  confiance: sure
+- id: topo-a-264
+  origine: cours_l3
+  notion: topo-n-0294
+  titre: 'Exemples de classes d''équivalence : composante connexe, groupe quotient, tore, $[f]$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 3}
+  confiance: sure
+- id: topo-a-265
+  origine: cours_l3
+  notion: topo-n-0295
+  titre: Quotient d'espaces vectoriels
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  confiance: sure
+- id: topo-a-266
+  origine: cours_l3
+  notion: topo-n-0296
+  titre: $\|[f]\|_p=\|f\|_p$ bien défini
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  confiance: sure
+- id: topo-a-267
+  origine: cours_l3
+  notion: topo-n-0297
+  titre: Espace $L^p(X,\mu)$ (Déf. 60)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  confiance: sure
+- id: topo-a-268
+  origine: cours_l3
+  notion: topo-n-0298
+  titre: 'Proposition 83 : $\|\cdot\|_p$ est une norme sur $L^p(X,\mu)$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  confiance: sure
+- id: topo-a-269
+  origine: cours_l3
+  notion: topo-n-0299
+  titre: Démonstration de la proposition 83
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  confiance: sure
+- id: topo-a-270
+  origine: cours_l3
+  notion: topo-n-0300
+  titre: 'Remarque : abus de notation sur les classes, $\mathcal C(X,\mathbb K)\cap L^p(X,\mu)$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  confiance: sure
+- id: topo-a-271
+  origine: cours_l3
+  notion: topo-n-0301
+  titre: 'Théorème 17 : $L^p(X,\mu)$ est un espace de Banach (Riesz-Fischer)'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  confiance: sure
+- id: topo-a-272
+  origine: cours_l3
+  notion: topo-n-0302
+  titre: Démonstration du théorème 17 pour $p<+\infty$
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 4}
+  confiance: sure
+- id: topo-a-273
+  origine: cours_l3
+  notion: topo-n-0303
+  titre: Démonstration du théorème 17 pour $p=+\infty$
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 5}
+  confiance: sure
+- id: topo-a-274
+  origine: cours_l3
+  notion: topo-n-0304
+  titre: 'Corollaire 15 : $\ell^p(\mathbb N)$ est un espace de Banach'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  confiance: sure
+- id: topo-a-275
+  origine: cours_l3
+  notion: topo-n-0305
+  titre: 'Corollaire 16 : $L^2(X,\mu)$ est un espace de Hilbert'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  confiance: sure
+- id: topo-a-276
+  origine: cours_l3
+  notion: topo-n-0306
+  titre: 'Remarque : $\|\cdot\|_2^2$ représente l''énergie'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  confiance: sure
+- id: topo-a-277
+  origine: cours_l3
+  notion: topo-n-0307
+  titre: 'Proposition 84 : densité de $L^\infty\cap L^p$ dans $L^p$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  confiance: sure
+- id: topo-a-278
+  origine: cours_l3
+  notion: topo-n-0308
+  titre: Démonstration de la proposition 84
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  confiance: sure
+- id: topo-a-279
+  origine: cours_l3
+  notion: topo-n-0309
+  titre: Support d'une fonction continue, $\mathcal C_c(\Omega)$ (Déf. 61)
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  confiance: sure
+- id: topo-a-280
+  origine: cours_l3
+  notion: topo-n-0310
+  titre: 'Théorème 18 : densité de $\mathcal C_c(\Omega)$ dans $L^p(\Omega,\mu)$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  confiance: sure
+- id: topo-a-281
+  origine: cours_l3
+  notion: topo-n-0311
+  titre: 'Remarque 1 (Thm 18) : $\mathcal C_c(\mathbb R)$ non dense dans $L^\infty$, adhérence'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  confiance: sure
+- id: topo-a-282
+  origine: cours_l3
+  notion: topo-n-0312
+  titre: 'Remarque 2 (Thm 18) : séparabilité de $L^p$'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 6}
+  confiance: sure
+- id: topo-a-283
+  origine: cours_l3
+  notion: topo-n-0313
+  titre: 'Démonstration du théorème 18 : $\mathcal C_c\subset L^p$ et plan'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 7}
+  confiance: sure
+- id: topo-a-284
+  origine: cours_l3
+  notion: topo-n-0314
+  titre: 'Lemme 3 (admis) : approximation d''un borélien par un ouvert et un compact'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 7}
+  confiance: sure
+- id: topo-a-285
+  origine: cours_l3
+  notion: topo-n-0315
+  titre: 'Démonstration du théorème 18, cas (i) : $f=\mathbb 1_A$, $A$ dans un compact'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 7}
+  confiance: sure
+- id: topo-a-286
+  origine: cours_l3
+  notion: topo-n-0316
+  titre: 'Démonstration du théorème 18, cas (ii) : $f=\mathbb 1_A$, $A$ de mesure finie'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 7}
+  confiance: sure
+- id: topo-a-287
+  origine: cours_l3
+  notion: topo-n-0317
+  titre: 'Démonstration du théorème 18, cas (iii) : $f$ étagée'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 8}
+  confiance: sure
+- id: topo-a-288
+  origine: cours_l3
+  notion: topo-n-0318
+  titre: 'Démonstration du théorème 18, cas (iv) : $f$ positive'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 8}
+  confiance: sure
+- id: topo-a-289
+  origine: cours_l3
+  notion: topo-n-0319
+  titre: 'Démonstration du théorème 18, cas (v) et (vi) : $f$ réelle, complexe'
+  raison: nouveau chapitre du poly (reçu le 18/11/2026)
+  programme_ecg: false
+  exercices: []
+  priorite: 1
+  source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 8}
+  confiance: sure

@@ -1457,3 +1457,17 @@ def test_reussi_ou_presque_reprise_seul_dans_anki_aide_avec_claude():
     assert {e["id"] for e in p["anki_seul"]} == {"r1", "p1"}                     # hors séance, hors budget
     L = P.rediger(c, p, P.anki(c, p))
     assert any(x.startswith("### Reprises seul dans Anki") for x in L) and any('"Id:ex-p1"' in x for x in L)
+
+
+def test_plafond_de_cartes_suffit_pour_tout_apprendre_avant_fin_cartes():
+    # demande du 18/11/2026 : le nombre de cartes par jour doit permettre de tout apprendre avant les examens
+    dispo = {"debut": "2026-11-03", "fin": "2027-01-03", "minutes_exercices_jour": 150, "minutes_cours_jour": 30,
+             "cartes_par_jour": 20, "exceptions": [{"type": "off", "du": "2026-11-21", "au": "2026-11-22"}]}
+    ctx = {"dispo": dispo}
+    assert P.fin_cartes(ctx) == dt.date(2026, 12, 27)          # une semaine avant la fin, pour réviser
+    p = P.plafond_cartes(ctx, dt.date(2026, 11, 19), 1000)
+    assert p["jours"] == 37                                    # 19/11 → 27/12 sans le week-end off
+    assert p["plafond"] == 28                                  # ceil(1000 / 37)
+    assert P.plafond_cartes(ctx, dt.date(2026, 11, 19), 100)["plafond"] == 20   # jamais sous cartes_par_jour
+    dispo["fin_cartes"] = "2026-12-20"
+    assert P.plafond_cartes(ctx, dt.date(2026, 12, 20), 30)["plafond"] == 30    # dernier jour : tout le reste
