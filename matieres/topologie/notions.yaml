@@ -798,3 +798,12 @@
   source: {etab: l1-l2}
   essentiel: true
   requis_par: [topo-n-0063, mesure-n-0022, mesure-n-0025, mes-td5-ex03, mes-cc1-2324-ex05]
+- id: topo-p-0006
+  titre: 'Applications linéaires continues, norme d''opérateur, équivalence des normes en dimension finie'
+  type: prerequis
+  chapitre: Hors cours actuel
+  sous_chapitre: Espaces vectoriels normés et applications linéaires
+  enonce: 'Pour $\varphi$ linéaire entre evn : continue $\iff$ continue en $0$ $\iff$ $\exists M,\ \|\varphi(x)\|\le M\|x\|$ $\iff$ bornée sur la boule unité $\iff$ lipschitzienne. $|||\varphi|||=\sup_{\|x\|\le1}\|\varphi(x)\|$, norme sur $\mathcal L_c(E,F)$, $|||g\circ f|||\le|||g|||\,|||f|||$. Normes équivalentes : $\alpha N_1\le N_2\le\beta N_1$ ; en dimension finie toutes les normes sont équivalentes et toute application linéaire est continue.'
+  source: {etab: l1-l2}
+  essentiel: true
+  requis_par: [topo-exam2020-21-ex01, topo-exam2021-22-ex01, topo-exam2022-23-ex03, topo-exam2023-24-ex01, topo-dm2023-24-ex02, topo-exam2022-23-ex04, topo-uvsq-td3-ex04, topo-uvsq-td3-ex05q1, topo-uvsq-td3-ex05q2, topo-uvsq-td3-ex07q1, topo-uvsq-td3-ex08q1, topo-uvsq-td3-ex08q2, topo-uvsq-exam-2025-ex04q2, topo-uvsq-exam-2025-ex04q3, topo-uvsq-exam-2025-ex04q4]

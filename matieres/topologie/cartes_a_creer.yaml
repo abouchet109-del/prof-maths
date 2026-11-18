@@ -378,3 +378,13 @@
   priorite: 2
   source: null
   confiance: a_confirmer
+- id: topo-a-042
+  origine: prerequis_l1l2
+  notion: topo-p-0006
+  titre: "Applications linéaires continues, norme d'opérateur, équivalence des normes en dimension finie"
+  raison: "prérequis : ni au programme d'ECG, ni dans le paquet (ECG, Centrale, AoutLicenceMath) ; l'utilisateur ne l'a jamais vu (17/11/2026). Chapitre de L3 pas encore distribué"
+  programme_ecg: false
+  exercices: [topo-exam2020-21-ex01, topo-exam2021-22-ex01, topo-exam2022-23-ex03, topo-exam2023-24-ex01, topo-dm2023-24-ex02, topo-exam2022-23-ex04]
+  priorite: 1
+  source: {fichier: references/analyse4-lorraine-L2.pdf, page: 24}
+  confiance: sure

@@ -939,3 +939,123 @@
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
   tags: [exercice]
+- id: topo-a-042-1
+  notion: topo-p-0006
+  recto: 'Thm : application linéaire continue, continue en \(0\), majoration \(\|\varphi(x)\|\le M\|x\|\)'
+  verso: 'Soient \((E,\|\cdot\|_E)\) et \((F,\|\cdot\|_F)\) deux evn et \(\varphi\in\mathcal L(E,F)\). Sont équivalents : \(\varphi\) est continue ; \(\varphi\) est continue en \(0\) ; \(\exists M>0,\ \forall x\in E,\ \|\varphi(x)\|_F\le M\|x\|_E\).'
+  source: 'Poly L2 Analyse 4 (Univ. Lorraine), Thm 4, p. 24 ; cours EVN de G. Skandalis (Paris Cité), §4.1, p. 1 du PDF'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, theoreme]
+- id: topo-a-042-2
+  notion: topo-p-0006
+  recto: 'Thm : application linéaire continue, bornée sur la boule unité, lipschitzienne'
+  verso: 'Soient \(E,F\) deux evn et \(\varphi\in\mathcal L(E,F)\). La continuité de \(\varphi\) équivaut aussi à chacune des propriétés : \(\varphi\) est bornée sur \(B_E(0,1)\) ; \(\varphi\) est bornée sur la sphère \(\{x\in E:\|x\|_E=1\}\) ; \(\varphi\) est lipschitzienne ; \(\varphi\) est uniformément continue sur \(E\).'
+  source: 'Poly L2 Analyse 4 (Univ. Lorraine), Thm 4, p. 24'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, theoreme]
+- id: topo-a-042-3
+  notion: topo-p-0006
+  recto: 'Preuve : \(\varphi\) linéaire continue en \(0\) implique \(\|\varphi(x)\|\le M\|x\|\), puis lipschitzienne'
+  verso: 'Continuité en \(0\) avec \(\varepsilon=1\) : il existe \(\alpha>0\) tel que \(\|x\|_E\le\alpha\Rightarrow\|\varphi(x)\|_F\le1\). Pour \(x\ne0\), on applique cela à \(\alpha x/\|x\|_E\) ; par linéarité, \(\|\varphi(x)\|_F\le\frac1\alpha\|x\|_E\) (vrai aussi pour \(x=0\)). Puis \(\|\varphi(x)-\varphi(y)\|_F=\|\varphi(x-y)\|_F\le\frac1\alpha\|x-y\|_E\).'
+  source: 'Poly L2 Analyse 4 (Univ. Lorraine), preuve du Thm 4, p. 24'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, demonstration]
+- id: topo-a-042-4
+  notion: topo-p-0006
+  recto: 'Déf : norme subordonnée (norme d''opérateur) \(|||\varphi|||\)'
+  verso: 'Soient \(E,F\) deux evn et \(\varphi:E\to F\) linéaire continue. Les trois bornes supérieures suivantes sont égales : \[|||\varphi|||=\sup_{x\ne0}\frac{\|\varphi(x)\|_F}{\|x\|_E}=\sup_{\|x\|_E=1}\|\varphi(x)\|_F=\sup_{\|x\|_E\le1}\|\varphi(x)\|_F.\] L''application \(\varphi\mapsto|||\varphi|||\) est une norme sur \(\mathcal L_c(E,F)\), appelée norme subordonnée.'
+  source: 'Poly L2 Analyse 4 (Univ. Lorraine), Thm 5, p. 24 ; cours EVN de G. Skandalis (Paris Cité), §4.1, p. 1 du PDF'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, definition]
+- id: topo-a-042-5
+  notion: topo-p-0006
+  recto: 'Prop. : \(|||\varphi|||\) est la meilleure constante dans \(\|\varphi(x)\|\le k\|x\|\)'
+  verso: 'Soient \(E,F\) deux evn et \(\varphi:E\to F\) linéaire continue. Pour \(k\in\mathbb R_+\) : \[\big(\forall x\in E,\ \|\varphi(x)\|_F\le k\|x\|_E\big)\iff k\ge|||\varphi|||.\] En particulier \(\|\varphi(x)\|_F\le|||\varphi|||\,\|x\|_E\) pour tout \(x\in E\).'
+  source: 'Cours EVN de G. Skandalis (Paris Cité), §4.1, p. 1 du PDF'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: topo-a-042-6
+  notion: topo-p-0006
+  recto: 'Prop. : norme subordonnée d''une composée'
+  verso: 'Si \(f:E\to F\) et \(g:F\to G\) sont des applications linéaires continues entre evn, alors \(g\circ f\) est linéaire continue et \[|||g\circ f|||\le|||g|||\cdot|||f|||.\]'
+  source: 'Cours EVN de G. Skandalis (Paris Cité), §4.1, p. 1 du PDF'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: topo-a-042-7
+  notion: topo-p-0006
+  recto: 'Prop. : l''espace \(\mathcal L(E,F)\) des applications linéaires continues, normé par \(|||\cdot|||\)'
+  verso: 'Soient \(E,F\) deux evn. L''ensemble \(\mathcal L(E,F)\) des applications linéaires continues de \(E\) dans \(F\) est un sous-espace vectoriel de l''espace de toutes les applications linéaires de \(E\) dans \(F\) ; \(|||\cdot|||\) est une norme sur \(\mathcal L(E,F)\). <b>Si \(F\) est complet</b>, \((\mathcal L(E,F),|||\cdot|||)\) est complet.'
+  source: 'Cours EVN de G. Skandalis (Paris Cité), §4.1, p. 1 du PDF'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: topo-a-042-8
+  notion: topo-p-0006
+  recto: 'Méthode : calculer \(|||\varphi|||\)'
+  verso: '1) Majorer : trouver \(M\) avec \(\|\varphi(x)\|_F\le M\|x\|_E\) pour tout \(x\) (ou \(\le M\) pour \(\|x\|_E\le1\)) ; donc \(|||\varphi|||\le M\). 2) Atteindre : chercher \(x\ne0\) avec \(\|\varphi(x)\|_F=M\|x\|_E\) ; sinon une suite \((x_n)\) avec \(\|x_n\|_E=1\) et \(\|\varphi(x_n)\|_F\to M\) (définition de la borne supérieure). Alors \(|||\varphi|||=M\).'
+  source: 'Poly L2 Analyse 4 (Univ. Lorraine), Remarque 7, p. 26 ; suite qui approche la borne : définition du sup (Thm 5, p. 24)'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, methode]
+- id: topo-a-042-9
+  notion: topo-p-0006
+  recto: 'Exemple : \(|||\varphi|||\) pour \(\varphi(x,y)=x+y\) sur \(\mathbb R^2\), selon la norme'
+  verso: 'Avec \(\|\cdot\|_\infty\) : \(|x+y|\le|x|+|y|\le2\|(x,y)\|_\infty\), et \(|\varphi(1,1)|=2=2\|(1,1)\|_\infty\), donc \(|||\varphi|||=2\). Avec \(\|\cdot\|_1\) : \(|x+y|\le\|(x,y)\|_1\), et \(|\varphi(1,1)|=2=\|(1,1)\|_1\), donc \(|||\varphi|||=1\). La continuité ne dépend pas des normes (dimension finie) ; la norme subordonnée, si.'
+  source: 'Poly L2 Analyse 4 (Univ. Lorraine), Exemple 26.1, p. 26 (coquille du poly : il écrit la norme infinie au lieu de la norme 1 dans le second cas)'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, exemple]
+- id: topo-a-042-10
+  notion: topo-p-0006
+  recto: 'Exemple : la dérivation \(f\mapsto f''\) de \((\mathcal C^1([0,1]),\|\cdot\|_\infty)\) dans \((\mathcal C^0([0,1]),\|\cdot\|_\infty)\) est-elle continue ?'
+  verso: 'Non. Elle est linéaire, mais pour \(f_n(x)=x^n\) : \(\|f_n\|_\infty=1\) et \(\|f_n''\|_\infty=\sup_{[0,1]}nx^{n-1}=n\). Elle n''est donc pas bornée sur la boule unité fermée (\(|||\varphi|||\ge n\) pour tout \(n\)) : elle n''est pas continue. En dimension infinie, une application linéaire n''est pas forcément continue.'
+  source: 'Poly L2 Analyse 4 (Univ. Lorraine), Exemple 26.3, p. 26'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, exemple]
+- id: topo-a-042-11
+  notion: topo-p-0006
+  recto: 'Déf : normes équivalentes'
+  verso: 'Deux normes \(N_1\) et \(N_2\) sur un même espace vectoriel \(E\) sont équivalentes s''il existe des constantes \(\alpha,\beta>0\) telles que \[\forall x\in E,\quad\alpha N_1(x)\le N_2(x)\le\beta N_1(x).\] Elles ont alors les mêmes parties bornées, les mêmes ouverts et les mêmes suites convergentes (avec la même limite).'
+  source: 'Poly L2 Analyse 4 (Univ. Lorraine), Déf 4 et Prop. 4, p. 14 ; Prop. 6, p. 15 ; Prop. 12, p. 17'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, definition]
+- id: topo-a-042-12
+  notion: topo-p-0006
+  recto: 'Prop. : continuité de \(\mathrm{id}_E:(E,N_1)\to(E,N_2)\)'
+  verso: 'Soient \(N_1,N_2\) deux normes sur \(E\). L''identité \(\mathrm{id}_E:(E,N_1)\to(E,N_2)\) est continue si et seulement s''il existe \(c>0\) tel que \(\forall x\in E,\ N_2(x)\le cN_1(x)\). Elle est donc bicontinue si et seulement si \(N_1\) et \(N_2\) sont équivalentes.'
+  source: 'Poly L2 Analyse 4 (Univ. Lorraine), Exemple 22.4, p. 22'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]
+- id: topo-a-042-13
+  notion: topo-p-0006
+  recto: 'Thm : en dimension finie, normes et applications linéaires'
+  verso: 'Soit \(E\) un espace vectoriel normé de dimension finie. Toutes les normes sur \(E\) sont équivalentes, et toute application linéaire de \(E\) dans un espace vectoriel normé est continue. C''est faux en dimension infinie.'
+  source: 'Cours EVN de G. Skandalis (Paris Cité), §4.2, Théorème, p. 2 du PDF ; poly L2 Analyse 4 (Univ. Lorraine), Thm 12, p. 31 et Remarque 4, p. 15'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, theoreme]
+- id: topo-a-042-14
+  notion: topo-p-0006
+  recto: 'Méthode : montrer que deux normes ne sont pas équivalentes'
+  verso: 'Trouver une suite \((f_n)\) bornée pour \(N_1\) mais pas pour \(N_2\) : impossible si \(N_2\le\beta N_1\). Exemple sur \(\mathcal C([0,1])\) : \(f_n(x)=n^2\big(\frac1n-x\big)\mathbf 1_{[0,1/n]}(x)\) vérifie \(N_1(f_n)=\int_0^1|f_n|=\frac12\) et \(N_\infty(f_n)=n\) ; donc \(N_1\) et \(N_\infty\) ne sont pas équivalentes.'
+  source: 'Poly L2 Analyse 4 (Univ. Lorraine), Prop. 4, p. 14 et Remarque 4, p. 15'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, methode]
+- id: topo-a-042-15
+  notion: topo-p-0006
+  recto: 'Prop. : comparaison des normes \(1\), \(2\) et \(\infty\) sur \(\mathbb R^n\)'
+  verso: 'Pour tout \(x\in\mathbb R^n\) : \[\|x\|_\infty\le\|x\|_2\le\|x\|_1\le n\|x\|_\infty.\] Les trois normes sont donc équivalentes.'
+  source: 'Poly L2 Analyse 4 (Univ. Lorraine), Exemple 7, p. 14 ; cours EVN de G. Skandalis (Paris Cité), §4.2, p. 2 du PDF'
+  chapitre: 'Hors cours actuel'
+  priorite: 1
+  tags: [prerequis-l1l2, propriete]

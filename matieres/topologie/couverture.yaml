@@ -96,3 +96,4 @@ topo-p-0003: {statut: partielle, notes: []}   # injection dans N, exemples, R no
 topo-p-0004: {statut: partielle, notes: []}   # caractérisation epsilon du sup ; manque : inf, version séquentielle
 topo-p-0005: {statut: partielle, notes: [1765287268013, 1765287298573, 1770198218785, 1770198304877, 1786960389772, 1786960429402]}   # définitions CS (forme lim) et CU (sup et quantificateurs) ; cartes : CU implique CS, x^n, CS avec quantificateurs, Cauchy uniforme, interversion limite-intégrale, majoration uniforme
 topo-p-0002: {statut: partielle, notes: [1786891449425]}   # ajout du tri du 17/11/2026
+topo-p-0006: {statut: absente, notes: []}   # rien dans le paquet (ECG, Centrale, AoutLicenceMath) ; jamais vu (dit le 17/11/2026)

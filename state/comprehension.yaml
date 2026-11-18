@@ -606,6 +606,15 @@ notions:
     preuves:
     - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex05, extrait: "hérédité absente ; hérédité rédigée par Claude (palier 4)", verdict: faux}
     maj: 2026-11-11
+  topo-p-0006:
+    niveau: inconnue
+    vision: "dit n'avoir jamais vu les applications linéaires continues ni la norme d'opérateur (ni en ECG ni dans ses paquets)"
+    liens: []
+    liens_manquants: []
+    confusions: []
+    preuves:
+    - {date: 2026-11-17, source: question, extrait: "« Pour applications linéaire continue non j'ai pas vu »", verdict: faux}
+    maj: 2026-11-17
 style:
 - 'pense à voix haute, mélange exemple et cas général (lui redonner le fil) ; comprend par un chiffre concret puis généralise'
 - 'confond stricte/large, sens des implications et inter/union (dit coquille orale, mais revient à l''écrit) : lui faire tester sur un chiffre'
