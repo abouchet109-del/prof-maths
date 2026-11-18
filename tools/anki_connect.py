@@ -421,7 +421,8 @@ def plan_rangement(cartes) -> tuple[list[tuple[int, str, str]], int]:
             filtrees += 1                       # `deck:` trouve aussi une carte prêtée à un paquet filtré
             continue
         morceaux = deck.split("::")
-        if len(morceaux) == len(L3.split("::")) + 2 and morceaux[-1] not in SOUS_PAQUETS:
+        # « Hors poly » (tri du 17/11/2026) n'est pas un chapitre : ses cartes suspendues y restent.
+        if len(morceaux) == len(L3.split("::")) + 2 and morceaux[-1] not in SOUS_PAQUETS + ("Hors poly",):
             deplacements.append((carte, deck, deck + "::Cours"))
     return deplacements, filtrees
 

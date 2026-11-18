@@ -1471,3 +1471,16 @@ def test_plafond_de_cartes_suffit_pour_tout_apprendre_avant_fin_cartes():
     assert P.plafond_cartes(ctx, dt.date(2026, 11, 19), 100)["plafond"] == 20   # jamais sous cartes_par_jour
     dispo["fin_cartes"] = "2026-12-20"
     assert P.plafond_cartes(ctx, dt.date(2026, 12, 20), 30)["plafond"] == 30    # dernier jour : tout le reste
+
+
+def test_b_prerequis_inconnu_d_un_chapitre_pas_encore_atteint_attend_son_chapitre():
+    # 18/11/2026 : topo-p-0006 (evn), rattaché au chapitre 5, passait avant tout le chapitre 1
+    c = ctx_cartes(dispo={"cartes_par_jour": 100})
+    c["notions"]["m-p"] = {**notion("m-p", "Chapitre 9 - Y", "9.1", "mesure"), "type": "prerequis", "requis_par": ["n-d"]}
+    c["cartes"] += [carte("pM", "m-p")]
+    c["comprehension"] = comp(**{"m-p": "inconnue"})
+    p = P.plan_jour(c, D(2026, 11, 4))
+    p["courants"] = {**p["courants"], "mesure": "Chapitre 9 - Y > 9.1"}
+    assert anki_ids(c, p)[:3] == ["eT", "eM", "pM"]              # chapitre atteint : en tête
+    p["courants"]["mesure"] = "Chapitre 1 - X > 1.1"
+    assert "pM" not in anki_ids(c, p)[:3]                        # pas encore atteint : il attend son chapitre

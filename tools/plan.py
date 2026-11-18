@@ -420,6 +420,13 @@ def est_prerequis(n) -> bool:
     return (n or {}).get("type") == "prerequis"
 
 
+def prerequis_atteint(plan, n) -> bool:
+    """Le sous-chapitre du prérequis `n` est atteint dans sa matière (sous-chapitre courant du plan) ; sans
+    sous-chapitre courant connu pour la matière, on le considère atteint."""
+    courant = (plan.get("courants") or {}).get(n.get("matiere"))
+    return courant is None or E.cle_sc(_sc_notion(n)) <= E.cle_sc(courant)
+
+
 def _dans_sc(n, sc) -> bool:
     return sc in (n.get("sous_chapitre"), f"{n.get('chapitre')} > {n.get('sous_chapitre')}")
 
@@ -615,8 +622,11 @@ def ordre_cartes(ctx, plan, libres) -> list[dict]:
     matière du bloc (passés, bloc, suivants), chacun selon la notion de la carte, prérequis L1-L2 d'abord."""
     d = str(plan["date"])
     ordre = [c for c in libres if TAGS_PRIORITAIRES & set(c.get("tags") or [])]
-    # règle (b) : cartes nouvelles d'un prérequis L1-L2 `inconnue`, toutes matières, juste après les prioritaires
-    inconnus = {i for i, c in _comp(ctx).items() if c.get("niveau") == "inconnue" and est_prerequis(ctx["notions"].get(i))}
+    # règle (b) : cartes nouvelles d'un prérequis L1-L2 `inconnue`, toutes matières, juste après les prioritaires,
+    # s'il sert déjà : son sous-chapitre est atteint dans sa matière (18/11/2026 : un prérequis rattaché au
+    # chapitre 5 attend le chapitre 5, il ne passe pas avant le chapitre 1 ; la règle (d) le sert à son tour).
+    inconnus = {i for i, c in _comp(ctx).items() if c.get("niveau") == "inconnue"
+                and est_prerequis(ctx["notions"].get(i)) and prerequis_atteint(plan, ctx["notions"][i])}
     ordre += [c for c in libres if c.get("notion") in inconnus]
     dues = {e["id"] for e in a_revoir_dus(ctx.get("a_revoir"), d, jours_travailles(ctx)) if e.get("id")}
     ordre += [c for c in libres if c["id"] in dues]
