@@ -354,3 +354,40 @@
   resultat: non_fait
   palier_aide: 0
   note: bloqué sur E(Z_{n+1}) avec Z_n aléatoire ; palier 1 donné ; espérance totale avec P compté deux fois ; non terminé
+- date: 2026-11-21
+  exercice: topo-td1-ex14
+  resultat: reussi
+  palier_aide: 0
+  note: 'tranche par l''utilisateur (exception du 23/11/2026) : indice recu (palier 1), refait seul ensuite ; redaction perdue, non revue ; oral : Q1 sans dire que A dense rend U inter A non vide ; Q2 contre-exemple
+    Q / Q^c juste'
+- date: 2026-11-21
+  exercice: topo-dm2020-21-ex01
+  resultat: reussi
+  palier_aide: 0
+  note: redaction perdue, non revue ; arguments oraux conformes au corrige officiel (non ouvert par boule, ferme, non borne donc non compact, complet, int vide, adherence = A) ; question de cours sur borne,
+    pas une aide ; verdict de l'utilisateur
+- date: 2026-11-21
+  exercice: topo-uvsq-td1-ex15q1
+  resultat: aide
+  palier_aide: 3
+  note: 'paliers 1 a 3 (phi: f->f(0) continue, F=preimage de {0}, ligne cle alpha=epsilon) ; continuite en espace metrique non connue (poly p.16) ; int=vide trouve seul apres indice'
+- date: 2026-11-21
+  exercice: topo-uvsq-td1-ex08
+  resultat: aide
+  palier_aide: 3
+  note: 'palier 3 : U_n={x : d(x,F)<1/n}, 3 points a verifier, ligne cle d(x,F)=0 => x dans adh(F)=F ; avait F=inter des X\{y} (non denombrable) ; rappel : ferme = complementaire d''ouvert'
+- date: 2026-11-21
+  exercice: topo-uvsq-td1-ex09q2
+  resultat: presque
+  palier_aide: 2
+  note: 'tranche par l''utilisateur (exception du 23/11/2026) : indice recu (palier 2), refait seul ensuite ; produit de fermes fermes utilise sans preuve (hors poly), a redemontrer'
+- date: 2026-11-21
+  exercice: topo-uvsq-td1-ex15q2
+  resultat: aide
+  palier_aide: 2
+  note: 'paliers 1-2 ; adherence : {f>=0} ferme par suites contient P, correct ; manquait l''inclusion f+1/n et P ouvert'
+- date: 2026-11-21
+  exercice: topo-uvsq-cc1-2024-ex03q3
+  resultat: non_fait
+  palier_aide: 0
+  note: dit non reussi, passe rapidement, redaction perdue ; corrige officiel p.4 a lire ; reprise avec Claude

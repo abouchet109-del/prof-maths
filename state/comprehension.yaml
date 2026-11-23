@@ -155,6 +155,9 @@ notions:
     - date: 2026-11-08
       texte: 'fermés disjoints à distance nulle : {1/n} (non fermé) puis (x,1/x) fermé affirmé sans preuve'
       statut: reparee
+    - date: &id002 2026-11-21
+      texte: 'ex08 : U_n décrit comme une boule centrée en x de rayon 1/n ; c''est {x : d(x,F)<1/n}, réunion des boules B(y,1/n), y dans F'
+      statut: ouverte
     preuves:
     - date: 2026-11-08
       source: exercice
@@ -166,7 +169,16 @@ notions:
       extrait: exhibe (n,0),(n,1/n) a distance 1/n -> 0 ; B={xy>=1} ferme par image reciproque ; Q2 (dans R) non faite
       verdict: partiel
       exercice: topo-td1-ex09
-    maj: *id001
+    - date: *id002
+      source: exercice
+      exercice: topo-uvsq-td1-ex08
+      extrait: 'ex08 : écrit F = inter des X\{y} (non dénombrable) ; méthode U_n et ligne clé d(x,F)=0 => x dans F données (palier 3)'
+      verdict: partiel
+    - date: &id003 2026-11-23
+      source: question
+      extrait: 'pourquoi F = inter U_n et U_n ouvert : dit « réunion de boules » puis « intersection », double inclusion non terminée'
+      verdict: partiel
+    maj: *id003
   topo-n-0022:
     niveau: fragile
     vision: adhérence = plus petit fermé ; il connaît 5 caractérisations mais ne sait pas laquelle utiliser
@@ -181,6 +193,9 @@ notions:
     - date: 2026-11-08
       texte: croit que 1/n -> 0 montre 1/n dans l'adhérence de A = R\{1/n} (cela montre 0 adhérent à {1/n}) ; écrit « adhérence incluse dans A » (A est inclus dans son adhérence)
       statut: ouverte
+    - date: &id004 2026-11-19
+      texte: 'dit que les irrationnels sont des points isolés de Q : un point isolé appartient à l''ensemble ; Q n''a aucun point isolé, les irrationnels sont des points d''accumulation de Q'
+      statut: ouverte
     preuves:
     - date: 2026-11-08
       source: exercice
@@ -191,7 +206,12 @@ notions:
       source: question
       extrait: 'A=]0,1[ u {2} : Ā et int justes d''abord, puis retire 2 de Ā avec des suites de ]0,1[ au lieu de suites de A'
       verdict: partiel
-    maj: 2026-11-08
+    - date: *id002
+      source: exercice
+      exercice: topo-uvsq-td1-ex15q2
+      extrait: 'ex15q2 : {f>=0} fermé par suites et contient P (juste) ; manque f+1/n et P ouvert (paliers 1-2)'
+      verdict: partiel
+    maj: *id003
   topo-n-0043:
     niveau: fragile
     vision: x est dans l'adhérence de U s'il est limite d'éléments de U ; avec f continue nulle sur U, f est nulle sur l'adhérence
@@ -210,13 +230,21 @@ notions:
       extrait: f nulle sur {g!=0} dense + f continue + caracterisation sequentielle => f=0 sur son adherence
       verdict: juste
       exercice: topo-uvsq-td1-ex03q1
-    maj: *id001
+    - date: *id002
+      source: exercice
+      exercice: topo-uvsq-td1-ex09q2
+      extrait: 'ex09q2 : 1/n -> 0 et 0 dans K donc K fermé (oral) ; produit de fermés fermé utilisé sans preuve (hors poly)'
+      verdict: partiel
+    maj: *id003
   topo-n-0028:
     niveau: fragile
-    vision: dense = adhérence égale à tout l'espace ; il a l'intuition du « mince filet » du bord qui se rattrape par l'adhérence
+    vision: 'dense = adhérence égale à tout l''espace ; il a l''intuition du « mince filet » du bord qui se rattrape par l''adhérence ; a retrouvé seul : dense dans X <=> int(complémentaire) vide, à condition
+      de préciser l''espace ambiant X ; dense <=> rencontre tout ouvert non vide'
     liens:
     - vers: topo-n-0023
       texte: a trouvé seul int(A^c) = X \ adhérence(A)
+    - vers: topo-n-0023
+      texte: A dense dans X <=> int(A^c)=vide (via int(A^c)=X \ adh(A)), généralisé seul
     liens_manquants: []
     confusions:
     - date: 2026-11-08
@@ -236,7 +264,16 @@ notions:
       extrait: 'A U int(A^c) dense : structure finale juste mais fin faite avec la correction'
       verdict: partiel
       exercice: topo-td1-ex13
-    maj: *id001
+    - date: *id004
+      source: cours
+      extrait: 'Q dense dans R : idée « se déplacer à côté de x » ; propose x+r/2 (pas rationnel) ; floor(nx)/n après indice ; Archimède pas connu comme tel'
+      verdict: partiel
+    - date: *id002
+      source: exercice
+      exercice: topo-td1-ex14
+      extrait: 'ex14 oral : U ouvert non vide, U inter A ouvert, B dense ; oublie que A dense rend U inter A non vide ; contre-exemple Q / Q^c juste'
+      verdict: partiel
+    maj: *id003
   topo-n-0023:
     niveau: fragile
     vision: 'int(A^c) = X \ adhérence(A) : complémentaire de l''adhérence = intérieur du complémentaire'
@@ -251,7 +288,11 @@ notions:
       exercice: topo-td1-ex13
       extrait: écrit lui-même int(A^c) = X\A-bar sur sa copie
       verdict: juste
-    maj: 2026-11-08
+    - date: *id004
+      source: cours
+      extrait: 'retrouve int(A^c)=X \ adh(A) et en déduit int(Q^c)=vide ; généralise : A dense dans X <=> int(A^c)=vide'
+      verdict: juste
+    maj: *id003
   topo-n-0003:
     niveau: fragile
     vision: ouverts stables par reunion quelconque ; croit que l'intersection infinie d'ouverts est ouverte
@@ -393,7 +434,7 @@ notions:
     maj: *id001
   proba-p-0001:
     niveau: fragile
-    vision: 'limsup = infiniment souvent = inter des unions ; liminf = a partir d''un rang = union des inter ; le complementaire de limsup est le liminf des complementaires'
+    vision: limsup = infiniment souvent = inter des unions ; liminf = a partir d'un rang = union des inter ; le complementaire de limsup est le liminf des complementaires
     liens:
     - vers: proba-n-0117
       texte: 'Borel-Cantelli : P(limsup A_n)=0 si la serie converge ; la definition ∩∪ sert a majorer P(∪ k>=n)'
@@ -401,11 +442,11 @@ notions:
     confusions:
     - date: 2026-11-10
       statut: ouverte
-      texte: 'inverse encore inter et union (ex05 Q1 ecrit union-inter pour limsup) ; dit une coquille orale, mais revient ; associe d''abord limsup a a partir d''un rang'
+      texte: inverse encore inter et union (ex05 Q1 ecrit union-inter pour limsup) ; dit une coquille orale, mais revient ; associe d'abord limsup a a partir d'un rang
     preuves:
     - date: 2026-11-10
       source: cours
-      extrait: 'confond infinite de n et a partir d''un rang ; exemple pile/face compris, formules ∪∩/∩∪ retrouvees apres relance'
+      extrait: confond infinite de n et a partir d'un rang ; exemple pile/face compris, formules ∪∩/∩∪ retrouvees apres relance
       verdict: partiel
     - date: 2026-11-10
       source: cours
@@ -419,17 +460,17 @@ notions:
     maj: 2026-11-10
   proba-n-0002:
     niveau: fragile
-    vision: 'la continuite en croissant (reunion) et en decroissant (intersection) equivaut a la sigma-additivite ; passe de l''une a l''autre par complementaire'
+    vision: la continuite en croissant (reunion) et en decroissant (intersection) equivaut a la sigma-additivite ; passe de l'une a l'autre par complementaire
     liens: []
     liens_manquants: []
     confusions:
     - date: 2026-11-10
       statut: ouverte
-      texte: 'melange les noms continuite croissante/decroissante ; definition ou theoreme selon le point de depart (sa prepa part de la sigma-additivite)'
+      texte: melange les noms continuite croissante/decroissante ; definition ou theoreme selon le point de depart (sa prepa part de la sigma-additivite)
     preuves:
     - date: 2026-11-10
       source: cours
-      extrait: 'comprend (iii) apres explication ; retrouve la decroissante a partir de la croissante par complementaire'
+      extrait: comprend (iii) apres explication ; retrouve la decroissante a partir de la croissante par complementaire
       verdict: partiel
     maj: 2026-11-10
   proba-n-0117:
@@ -437,18 +478,18 @@ notions:
     vision: 'si la serie des P(A_n) converge, P(limsup A_n)=0 : limsup inclus dans ∪ k>=n A_k, dont la proba est majoree par la queue de serie'
     liens:
     - vers: proba-p-0001
-      texte: 'utilise limsup = ∩_n ∪_{k>=n}'
+      texte: utilise limsup = ∩_n ∪_{k>=n}
     liens_manquants: []
     confusions: []
     preuves:
     - date: 2026-11-10
       source: cours
-      extrait: 'preuve de la 1re partie redonnee apres enseignement ; petit accroc sur la sous-additivite'
+      extrait: preuve de la 1re partie redonnee apres enseignement ; petit accroc sur la sous-additivite
       verdict: partiel
     maj: 2026-11-10
   proba-n-0121:
     niveau: recitee
-    vision: 'convergence p.s. = P(X_n tend vers Y)=1 ; l''avait pas vue avant la correction'
+    vision: convergence p.s. = P(X_n tend vers Y)=1 ; l'avait pas vue avant la correction
     liens: []
     liens_manquants: []
     confusions:
@@ -458,7 +499,7 @@ notions:
     preuves:
     - date: 2026-11-10
       source: exercice
-      extrait: 'e) convergence en probabilite ecrite ; p.s. non connue avant la correction'
+      extrait: e) convergence en probabilite ecrite ; p.s. non connue avant la correction
       verdict: faux
       exercice: pro-uvsq-chap-1-exam-24-25-ex1
     maj: 2026-11-10
@@ -468,157 +509,346 @@ notions:
     liens: []
     liens_manquants:
     - vers: proba-n-0018
-      texte: 'ne voit pas seul que X conditionnellement a X+Y est binomiale ; a besoin qu on lui donne la methode'
+      texte: ne voit pas seul que X conditionnellement a X+Y est binomiale ; a besoin qu on lui donne la methode
     confusions: []
     preuves:
     - date: 2026-11-10
       source: exercice
-      extrait: 'ex14 Q1 juste ; Q2 convolution/binomiale completee apres correction ; Q3 methode et resultat donnes'
+      extrait: ex14 Q1 juste ; Q2 convolution/binomiale completee apres correction ; Q3 methode et resultat donnes
       verdict: partiel
       exercice: pro-uvsq-chap-3-ex-14
     maj: 2026-11-10
   mod-p-0003:
     niveau: fragile
-    vision: "R = sup des r tels que (a_n r^n) bornée ; convergence normale sur tout segment fermé de ]-R,R[ mais pas sur l'ouvert entier (contre-exemple sum x^n) ; preuve : choisir rho entre r et R, borner |a_n| rho^n par M, comparer à une géométrique"
+    vision: 'R = sup des r tels que (a_n r^n) bornée ; convergence normale sur tout segment fermé de ]-R,R[ mais pas sur l''ouvert entier (contre-exemple sum x^n) ; preuve : choisir rho entre r et R, borner
+      |a_n| rho^n par M, comparer à une géométrique'
     liens:
     - vers: mod-n-0001
       texte: voit que R >= 1 pour une fonction génératrice parce que les coefficients sont des probabilités (avec relance)
     liens_manquants: []
     confusions:
     - date: 2026-11-11
-      texte: "inverse la règle : « si R > 1 ça ne converge pas » (corrigé aussitôt en séance)"
+      texte: 'inverse la règle : « si R > 1 ça ne converge pas » (corrigé aussitôt en séance)'
       statut: ouverte
     preuves:
-    - {date: 2026-11-11, source: cours, extrait: "a distingué seul normale sur segment fermé / pas sur l'ouvert avec sum x^n", verdict: juste}
-    - {date: 2026-11-11, source: cours, extrait: "preuve de la convergence normale : a eu besoin du palier 2 (multiplier-diviser par rho^n)", verdict: partiel}
+    - date: 2026-11-11
+      source: cours
+      extrait: a distingué seul normale sur segment fermé / pas sur l'ouvert avec sum x^n
+      verdict: juste
+    - date: 2026-11-11
+      source: cours
+      extrait: 'preuve de la convergence normale : a eu besoin du palier 2 (multiplier-diviser par rho^n)'
+      verdict: partiel
     maj: 2026-11-11
   mod-p-0005:
     niveau: fragile
-    vision: "normale = la série des sup |f_n| converge ; ça entraîne uniforme et simple ; n'avait jamais appris ces définitions ni les cartes mod-a-080-*"
+    vision: normale = la série des sup |f_n| converge ; ça entraîne uniforme et simple ; n'avait jamais appris ces définitions ni les cartes mod-a-080-*
     liens:
     - vers: mod-p-0003
       texte: relie la convergence normale d'une série entière au rayon de convergence (sup de |a_n| r^n)
     liens_manquants: []
     confusions:
     - date: 2026-11-11
-      texte: "écrit « simple ⇒ absolue » dans l'enchaînement (la normale entraîne l'absolue et l'uniforme, pas la simple)"
+      texte: écrit « simple ⇒ absolue » dans l'enchaînement (la normale entraîne l'absolue et l'uniforme, pas la simple)
       statut: ouverte
     preuves:
-    - {date: 2026-11-11, source: cours, extrait: "sup |x^n/n^2| sur [-1,1] = 1/n^2, série de Riemann : normale, trouvé seul", verdict: juste}
+    - date: 2026-11-11
+      source: cours
+      extrait: 'sup |x^n/n^2| sur [-1,1] = 1/n^2, série de Riemann : normale, trouvé seul'
+      verdict: juste
     maj: 2026-11-11
   mod-n-0001:
     niveau: fragile
-    vision: "phi_X(z)=somme P(X=k) z^k ; R >= 1 parce que (a_k * 1^k) est bornée par 1 (a_k est une probabilité)"
+    vision: phi_X(z)=somme P(X=k) z^k ; R >= 1 parce que (a_k * 1^k) est bornée par 1 (a_k est une probabilité)
     liens:
     - vers: mod-p-0003
       texte: applique la définition de R par sup des r avec (a_n r^n) bornée
     liens_manquants: []
     confusions: []
     preuves:
-    - {date: 2026-11-11, source: cours, extrait: "a conclu R = 1 au lieu de R >= 1 ; r=1 donné en relance", verdict: partiel}
+    - date: 2026-11-11
+      source: cours
+      extrait: a conclu R = 1 au lieu de R >= 1 ; r=1 donné en relance
+      verdict: partiel
     maj: 2026-11-11
   mod-n-0002:
     niveau: tenue
-    vision: "binomiale (binôme), Poisson (série de l'exponentielle), géométrique (série géométrique, R = 1/(1-p)) calculées seul"
+    vision: binomiale (binôme), Poisson (série de l'exponentielle), géométrique (série géométrique, R = 1/(1-p)) calculées seul
     liens: []
     liens_manquants: []
     confusions: []
     preuves:
-    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex01, extrait: "4 fonctions génératrices calculées seul, domaines trouvés", verdict: juste}
-    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex02, extrait: "géométrique : domaine écrit ∀z∈R à tort", verdict: partiel}
+    - date: 2026-11-11
+      source: exercice
+      exercice: mod-td1-ex01
+      extrait: 4 fonctions génératrices calculées seul, domaines trouvés
+      verdict: juste
+    - date: 2026-11-11
+      source: exercice
+      exercice: mod-td1-ex02
+      extrait: 'géométrique : domaine écrit ∀z∈R à tort'
+      verdict: partiel
     maj: 2026-11-11
   mod-n-0003:
     niveau: fragile
-    vision: "mêmes fonctions génératrices sur [-1,1] donnent la même loi (unicité des coefficients)"
+    vision: mêmes fonctions génératrices sur [-1,1] donnent la même loi (unicité des coefficients)
     liens: []
     liens_manquants: []
     confusions: []
     preuves:
-    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex03, extrait: "a conclu S ~ B(2n,1/2) par caractérisation des lois ; interprétation non ressortie", verdict: partiel}
+    - date: 2026-11-11
+      source: exercice
+      exercice: mod-td1-ex03
+      extrait: a conclu S ~ B(2n,1/2) par caractérisation des lois ; interprétation non ressortie
+      verdict: partiel
     maj: 2026-11-11
   mod-n-0004:
     niveau: fragile
-    vision: "phi de la somme de variables indépendantes = produit des phi (lemme des coalitions)"
+    vision: phi de la somme de variables indépendantes = produit des phi (lemme des coalitions)
     liens: []
     liens_manquants:
     - vers: mod-n-0003
-      texte: "ex03 : n'a pas reconnu seul que (1+z)^2/4 est la fonction génératrice d'une somme de deux Bernoulli(1/2) (indice donné)"
+      texte: 'ex03 : n''a pas reconnu seul que (1+z)^2/4 est la fonction génératrice d''une somme de deux Bernoulli(1/2) (indice donné)'
     confusions:
     - date: 2026-11-11
-      texte: "écrit E(somme de z^X_i) au lieu de E(produit) = E(z^(somme X_i)) ; oublie « indépendantes » dans l'hypothèse (corrigé après remarque)"
+      texte: écrit E(somme de z^X_i) au lieu de E(produit) = E(z^(somme X_i)) ; oublie « indépendantes » dans l'hypothèse (corrigé après remarque)
       statut: ouverte
     preuves:
-    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex01, extrait: "Q2 : somme au lieu du produit, indépendance oubliée au départ", verdict: partiel}
-    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex03, extrait: "produit des phi juste ; factorisation donnée en indice", verdict: partiel}
+    - date: 2026-11-11
+      source: exercice
+      exercice: mod-td1-ex01
+      extrait: 'Q2 : somme au lieu du produit, indépendance oubliée au départ'
+      verdict: partiel
+    - date: 2026-11-11
+      source: exercice
+      exercice: mod-td1-ex03
+      extrait: produit des phi juste ; factorisation donnée en indice
+      verdict: partiel
     maj: 2026-11-11
   mod-n-0005:
     niveau: fragile
-    vision: "E[X]=phi'(1) et Var = phi''(1)+phi'(1)-phi'(1)^2 ; moment d'ordre k fini <=> phi de classe C^k sur [0,1]"
+    vision: E[X]=phi'(1) et Var = phi''(1)+phi'(1)-phi'(1)^2 ; moment d'ordre k fini <=> phi de classe C^k sur [0,1]
     liens:
     - vers: mod-p-0003
       texte: sait que la dérivation terme à terme est la raison de la dérivabilité en 1
     liens_manquants: []
     confusions:
     - date: 2026-11-11
-      texte: "pour évaluer phi'(1) vérifie que la formule est définie en 1, pas que 1 est dans ]-R,R[ (ou R=1 : dérivée à gauche seulement)"
+      texte: 'pour évaluer phi''(1) vérifie que la formule est définie en 1, pas que 1 est dans ]-R,R[ (ou R=1 : dérivée à gauche seulement)'
       statut: ouverte
     preuves:
-    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex02, extrait: "E et Var des trois lois calculés seul, formules justes", verdict: juste}
-    - {date: 2026-11-11, source: question, extrait: "pourquoi évaluer phi'(1) : a répondu « définie en 1 », puis l'argument des moments", verdict: partiel}
+    - date: 2026-11-11
+      source: exercice
+      exercice: mod-td1-ex02
+      extrait: E et Var des trois lois calculés seul, formules justes
+      verdict: juste
+    - date: 2026-11-11
+      source: question
+      extrait: 'pourquoi évaluer phi''(1) : a répondu « définie en 1 », puis l''argument des moments'
+      verdict: partiel
     maj: 2026-11-11
   mod-n-0008:
     niveau: fragile
-    vision: "Z_n = taille de la génération n, X_{n,j} = nombre d'enfants de l'individu j ; Z_{n+1} = somme jusqu'à Z_n (borne aléatoire) ; si Z_n=0 la suite reste nulle (extinction)"
+    vision: Z_n = taille de la génération n, X_{n,j} = nombre d'enfants de l'individu j ; Z_{n+1} = somme jusqu'à Z_n (borne aléatoire) ; si Z_n=0 la suite reste nulle (extinction)
     liens: []
     liens_manquants: []
     confusions:
     - date: 2026-11-11
-      texte: "compte d'abord la population totale au lieu de la taille de la génération (corrigé seul)"
+      texte: compte d'abord la population totale au lieu de la taille de la génération (corrigé seul)
       statut: reparee
     preuves:
-    - {date: 2026-11-11, source: cours, extrait: "calcule Z_0, Z_1, Z_2 sur un exemple et écrit Z_2 = somme des X_{1,j}", verdict: juste}
+    - date: 2026-11-11
+      source: cours
+      extrait: calcule Z_0, Z_1, Z_2 sur un exemple et écrit Z_2 = somme des X_{1,j}
+      verdict: juste
     maj: 2026-11-11
   mod-n-0010:
     niveau: recitee
-    vision: "conditionner sur {Z_n=k} : E(Z_{n+1} | Z_n=k) = k m puis espérance totale"
+    vision: 'conditionner sur {Z_n=k} : E(Z_{n+1} | Z_n=k) = k m puis espérance totale'
     liens: []
     liens_manquants:
     - vers: mod-n-0008
-      texte: "ex05/ex06 : traite Z_n comme un nombre fixé (produit de dérivées jusqu'à Z_n) au lieu de conditionner sur {Z_n=k}"
+      texte: 'ex05/ex06 : traite Z_n comme un nombre fixé (produit de dérivées jusqu''à Z_n) au lieu de conditionner sur {Z_n=k}'
     confusions:
     - date: 2026-11-11
-      texte: "ex06 : ne sait pas comment gérer la borne aléatoire Z_n sans conditionner (bloque dès le début)"
+      texte: 'ex06 : ne sait pas comment gérer la borne aléatoire Z_n sans conditionner (bloque dès le début)'
       statut: ouverte
     preuves:
-    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex06, extrait: "après palier 1 : écrit E(Z_{n+1} | Z_n=k) et la formule de l'espérance totale (juste), non terminé", verdict: partiel}
+    - date: 2026-11-11
+      source: exercice
+      exercice: mod-td1-ex06
+      extrait: 'après palier 1 : écrit E(Z_{n+1} | Z_n=k) et la formule de l''espérance totale (juste), non terminé'
+      verdict: partiel
     maj: 2026-11-11
   mod-n-0011:
     niveau: recitee
-    vision: "sait que G_n = composée de phi, mais ne l'a pas mobilisée seul pour E[Z_n]"
+    vision: sait que G_n = composée de phi, mais ne l'a pas mobilisée seul pour E[Z_n]
     liens: []
     liens_manquants:
     - vers: mod-n-0005
-      texte: "ex05 : ne relie pas E[Z_n]=G_n'(1) à la dérivée de la composée G_{n-1}∘phi avec phi(1)=1"
+      texte: 'ex05 : ne relie pas E[Z_n]=G_n''(1) à la dérivée de la composée G_{n-1}∘phi avec phi(1)=1'
     confusions:
     - date: 2026-11-11
-      texte: "écrit phi'(somme) = produit des phi' (dérivée d'un produit prise comme produit des dérivées)"
+      texte: écrit phi'(somme) = produit des phi' (dérivée d'un produit prise comme produit des dérivées)
       statut: ouverte
     preuves:
-    - {date: 2026-11-11, source: exercice, exercice: mod-td1-ex05, extrait: "hérédité absente ; hérédité rédigée par Claude (palier 4)", verdict: faux}
+    - date: 2026-11-11
+      source: exercice
+      exercice: mod-td1-ex05
+      extrait: hérédité absente ; hérédité rédigée par Claude (palier 4)
+      verdict: faux
     maj: 2026-11-11
   topo-p-0006:
     niveau: inconnue
-    vision: "dit n'avoir jamais vu les applications linéaires continues ni la norme d'opérateur (ni en ECG ni dans ses paquets)"
+    vision: dit n'avoir jamais vu les applications linéaires continues ni la norme d'opérateur (ni en ECG ni dans ses paquets)
     liens: []
     liens_manquants: []
     confusions: []
     preuves:
-    - {date: 2026-11-17, source: question, extrait: "« Pour applications linéaire continue non j'ai pas vu »", verdict: faux}
+    - date: 2026-11-17
+      source: question
+      extrait: « Pour applications linéaire continue non j'ai pas vu »
+      verdict: faux
     maj: 2026-11-17
+  topo-p-0003:
+    niveau: fragile
+    vision: dénombrable = pouvoir compter = bijection avec N ; au plus dénombrable = fini ou dénombrable ; sait construire une injection dans N par cas (Z avec la parité, N x N avec 2^m 3^n donné) et que
+      Q est dénombrable par composition d'injections
+    liens:
+    - vers: topo-n-0028
+      texte: Q est dense dans R ET dénombrable (partie dense dénombrable)
+    liens_manquants: []
+    confusions:
+    - date: *id004
+      texte: 'forme irréductible de p/r : dit que c''est pour éviter 4=2x2 ; le vrai rôle est que l''application soit bien définie sur Q (1/2 et 2/4 sont le même rationnel)'
+      statut: ouverte
+    - date: *id004
+      texte: 'R non dénombrable : « il y a plus de points que N » n''est pas une preuve ; ne connaît pas la preuve par segments emboîtés (carte topo-a-039-2)'
+      statut: ouverte
+    preuves:
+    - date: *id004
+      source: cours
+      extrait: '2N->N : donne m->m/2 et sa réciproque n->2n, compositions = identité'
+      verdict: juste
+    - date: *id004
+      source: cours
+      extrait: 'Z->N : trouve seul la parité pour garder le signe (après « garde le signe ») mais f(n)=-2n+1 pas surjective ; justifie l''injectivité par cas'
+      verdict: partiel
+    - date: *id004
+      source: cours
+      extrait: 'N x N : ne trouve pas 2^m 3^n seul ; décodage de 72 : répond (5,2) au lieu de (3,2) (compte tous les facteurs)'
+      verdict: partiel
+    maj: *id003
+  topo-n-0018:
+    niveau: fragile
+    vision: intérieur = plus grand ouvert contenu dans A = réunion des boules ouvertes contenues dans A ; x intérieur si une boule ENTIERE autour de x est dans A
+    liens: []
+    liens_manquants: []
+    confusions:
+    - date: *id004
+      texte: 'conclut que les singletons sont ouverts dans R : vérifie « x est dans la boule » au lieu de « la boule est dans l''ensemble » (inclusion inversée) ; dit que c''est l''oral'
+      statut: reparee
+    preuves:
+    - date: *id004
+      source: cours
+      extrait: 'singleton {0} ouvert dans R ? dit oui (x dans la boule), puis corrige : fermé, R\{0} ouvert (boule de rayon |x|/2)'
+      verdict: partiel
+    - date: *id002
+      source: exercice
+      exercice: topo-dm2020-21-ex01
+      extrait: 'dm ex1 oral : diagonale non ouverte, une boule contient un point hors de A ; int vide'
+      verdict: juste
+    - date: *id003
+      source: question
+      extrait: int([0,1[ U {2}) = ]0,1[ ; boule autour de 2 déborde ; 0 et 1 non intérieurs (boule à gauche de 0)
+      verdict: juste
+    maj: *id003
+  topo-n-0020:
+    niveau: recitee
+    vision: stabilités connues (intersection finie d'ouverts, réunion quelconque ; l'inverse pour les fermés) ; int(A inter B)=int A inter int B ; int A U int B inclus dans int(A U B), contre-exemple pas
+      trouvé seul
+    liens: []
+    liens_manquants: []
+    confusions:
+    - date: *id004
+      texte: contre-exemple de l'inclusion stricte cherché avec deux OUVERTS (donne l'égalité) ; voit ensuite qu'il faut des fermés qui se touchent mais ne calcule pas
+      statut: ouverte
+    preuves:
+    - date: *id004
+      source: cours
+      extrait: 'inclusion stricte int A U int B / int(A U B) : essaie ]0,1[ et ]1,2[ (égalité) ; puis [0,1] et [1,2] sans calculer'
+      verdict: partiel
+    maj: *id003
+  topo-n-0025:
+    niveau: recitee
+    vision: frontière = adhérence privée de l'intérieur ; adh(A) = int A U frontière (union disjointe)
+    liens: []
+    liens_manquants: []
+    confusions:
+    - date: *id004
+      texte: 'écrit que la frontière de Q est l''ensemble des irrationnels : suppose int(Q)=Q, ce qu''il cherche (raisonnement circulaire)'
+      statut: ouverte
+    preuves:
+    - date: *id002
+      source: exercice
+      exercice: topo-uvsq-cc1-2024-ex03q3
+      extrait: 'cc1 ex03q3 : dit avoir passé vite et ne pas l''avoir réussi (rédaction perdue)'
+      verdict: faux
+    maj: *id003
+  topo-n-0047:
+    niveau: recitee
+    vision: 'continuité en un point x0 : pour tout eps il existe alpha tel que d(x,x0)<alpha => d''(f(x),f(x0))<eps ; a d''abord écrit la continuité uniforme (deux points quelconques) ; sait que phi(f)=f(0)
+      est 1-lipschitzienne pour la norme sup'
+    liens: []
+    liens_manquants: []
+    confusions:
+    - date: *id003
+      texte: écrit la définition de la continuité UNIFORME (pour tous a,b) quand on lui demande la continuité en un point
+      statut: ouverte
+    preuves:
+    - date: *id002
+      source: exercice
+      exercice: topo-uvsq-td1-ex15q1
+      extrait: 'ex15q1 : continuité entre espaces métriques non connue (hors ECG) ; alpha=eps donné au palier 3'
+      verdict: faux
+    - date: *id003
+      source: question
+      extrait: 'définition de la continuité en un point : écrit la version uniforme, corrigée ; application à f(0) non faite'
+      verdict: partiel
+    maj: *id003
+  topo-n-0049:
+    niveau: recitee
+    vision: continue <=> image réciproque d'un fermé est fermée ; F = phi^{-1}({0}) fermé si phi continue
+    liens: []
+    liens_manquants:
+    - vers: topo-n-0047
+      texte: prouver la continuité (eps-alpha) avant d'utiliser l'image réciproque d'un fermé
+    confusions: []
+    preuves:
+    - date: *id002
+      source: exercice
+      exercice: topo-uvsq-td1-ex15q1
+      extrait: 'ex15q1 : image réciproque de {0} par f->f(0) donnée au palier 2 ; l''adhérence se déduit ensuite'
+      verdict: partiel
+    maj: *id003
+  topo-n-0090:
+    niveau: recitee
+    vision: dans R^2, compact = fermé borné ; la diagonale n'est pas bornée donc pas compacte
+    liens: []
+    liens_manquants: []
+    confusions: []
+    preuves:
+    - date: *id002
+      source: exercice
+      exercice: topo-dm2020-21-ex01
+      extrait: 'dm ex1 oral : diagonale non bornée donc non compacte ; définition de « borné » rappelée en cours'
+      verdict: juste
+    maj: *id003
 style:
-- 'pense à voix haute, mélange exemple et cas général (lui redonner le fil) ; comprend par un chiffre concret puis généralise'
+- pense à voix haute, mélange exemple et cas général (lui redonner le fil) ; comprend par un chiffre concret puis généralise
 - 'confond stricte/large, sens des implications et inter/union (dit coquille orale, mais revient à l''écrit) : lui faire tester sur un chiffre'
 - 'abandonne la méthode quand le résultat paraît absurde au lieu de revérifier la dernière étape ; demande la réponse pour finir un calcul : ne créditer que ce qui est écrit'
 - 'bloque plus sur la redaction ecrite que sur l''idee ; saute les justifications qu''il juge ''immediates'' (vide dans T_n, denombrabilite, bien defini) : lui faire ecrire la sous-partie manquante'
-- 'dit « inattention » pour des confusions de fond (ouvert/boule ouverte) : trancher cas par cas'
+- 'dit « inattention » ou « c''est l''oral » pour des confusions de fond (ouvert/boule ouverte, point dans la boule / boule dans l''ensemble, ponctuel/uniforme) : trancher cas par cas, lui faire écrire
+  la définition avant d''appliquer'
 - 'bon réflexe : retrouve seul des identités et fait des liens (sup dans l''adhérence)'

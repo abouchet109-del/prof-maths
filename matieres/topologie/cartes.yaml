@@ -939,6 +939,143 @@
   chapitre: 'Chapitre 1 - Espace métrique'
   priorite: 1
   tags: [exercice]
+- id: ex-topo-td1-ex14
+  exercice: topo-td1-ex14
+  notion: topo-n-0028
+  recto: |-
+    <b>Exo topo-td1-ex14 : Intersection de denses</b><br>
+    Soient \(A\) et \(B\) deux parties d'un espace métrique \(X\).<br>
+    1. Montrer que si \(A\) et \(B\) sont denses dans \(X\) et \(A\) est ouvert dans \(X\), alors \(A\cap B\) est dense dans \(X\).<br>
+    2. Cette propriété est-elle encore vérifiée si l'on suppose seulement \(A\) et \(B\) denses ?<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> une partie \(D\) est dense si et seulement si elle rencontre tout ouvert non vide ; on enchaîne les deux densités, et l'ouverture de \(A\) permet de réutiliser la densité de \(B\) sur l'ouvert \(A\cap U\).<br>
+    <b>Correction :</b><br>
+    0. Lemme : \(D\) dense dans \(X\) \(\Leftrightarrow\) \(D\) rencontre tout ouvert non vide. (\(\Rightarrow\)) Soit \(U\) ouvert non vide, \(x\in U\), \(B(x,r)\subset U\) ; \(x\in\bar D\) donne \(B(x,r)\cap D\neq\emptyset\), donc \(U\cap D\neq\emptyset\). (\(\Leftarrow\)) Soit \(x\in X\), \(r>0\) : \(B(x,r)\) est un ouvert non vide, il rencontre \(D\), donc \(x\in\bar D\).<br>
+    1. Soit \(U\) un ouvert non vide. \(A\) est dense, donc \(A\cap U\neq\emptyset\) ; c'est un ouvert (intersection de deux ouverts) non vide. \(B\) est dense, donc \(B\cap(A\cap U)\neq\emptyset\), c'est-à-dire \((A\cap B)\cap U\neq\emptyset\). Donc \(A\cap B\) rencontre tout ouvert non vide : il est dense.<br>
+    2. Non. Dans \(X=\mathbb R\), \(A=\mathbb Q\) et \(B=\mathbb R\setminus\mathbb Q\) sont denses, mais \(A\cap B=\emptyset\) n'est pas dense (\(\overline\emptyset=\emptyset\neq\mathbb R\)).<br>
+    <b>Piège :</b> « \(B\) dense » ne s'applique qu'à un <b>ouvert</b> non vide ; si \(A\) n'est pas ouvert (\(\mathbb Q\) ne l'est pas), \(A\cap U\) n'en est plus un et l'argument tombe. Dire que la densité de \(A\) rend \(A\cap U\) non vide avant d'invoquer celle de \(B\).<br>
+    <b>Coquilles / points d'attention :</b> rédaction perdue, non revue. À l'oral : pour la question 1, il n'a pas dit que la densité de \(A\) rend \(A\cap U\) non vide ; ne pas confondre « \(D\) dense » (rencontre tout ouvert non vide) et « \(D\) rencontre un ouvert ». Il a dit avoir refait l'exercice le lendemain de tête (indice de palier 1 la première fois).
+  source: 'Énoncé : topologie/td/td1.pdf p.2 (Ex 14). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer (aucune étape douteuse). Séance du 2026-11-21.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
+- id: ex-topo-dm2020-21-ex01
+  exercice: topo-dm2020-21-ex01
+  notion: topo-n-0018
+  recto: |-
+    <b>Exo topo-dm2020-21-ex01 : Ensemble diagonale de \(\mathbb R^2\)</b><br>
+    Dans \(\mathbb R^2\) muni de la distance euclidienne, on considère \(A=\{(x,y)\in\mathbb R^2,\ x=y\}\). \(A\) est-il ouvert ? fermé ? compact ? complet ? Donner au passage son intérieur et son adhérence.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(A=\varphi^{-1}(\{0\})\) avec \(\varphi(x,y)=x-y\) continue : fermé ; aucune boule centrée sur \(A\) ne reste dans \(A\) : intérieur vide ; non borné donc non compact ; fermé dans le complet \(\mathbb R^2\), donc complet.<br>
+    <b>Correction :</b><br>
+    1. \(A\) n'est pas ouvert : pour \(u=(x,x)\in A\) et \(\varepsilon>0\), la boule \(B(u,\varepsilon)\) contient \((x,x+\varepsilon/2)\notin A\) (distance \(\varepsilon/2<\varepsilon\)). Aucun point de \(A\) n'est donc intérieur : \(\mathring A=\emptyset\).<br>
+    2. \(A\) est fermé : image réciproque du fermé \(\{0\}\) de \(\mathbb R\) par l'application continue \((x,y)\mapsto x-y\). Donc \(\bar A=A\).<br>
+    3. \(A\) n'est pas borné : \(d((n,n),(0,0))=n\sqrt2\) n'est pas borné quand \(n\to\infty\). Donc \(A\) n'est pas compact (dans \(\mathbb R^2\), compact \(\Leftrightarrow\) fermé borné).<br>
+    4. \(A\) est un fermé du complet \(\mathbb R^2\), donc \(A\) est complet.<br>
+    <b>Piège :</b> « \(x\) est dans la boule » n'est pas « la boule est dans \(A\) » : pour montrer qu'un point n'est pas intérieur, on exhibe un point de la boule qui sort de \(A\). Ne pas dire que \((x,x)\) « se comporte comme \(x\) » pour la complétude sans le prouver : passer par « fermé dans un complet ».<br>
+    <b>Coquilles / points d'attention :</b> rédaction perdue, non revue. À l'oral, tous les résultats étaient justes (non ouvert par une boule, fermé, non borné donc non compact, complet, intérieur vide, adhérence \(A\)). Il a démontré la complétude directement par une suite de Cauchy \((x_n,x_n)\) et la complétude de \(\mathbb R\) (valable aussi). Un coup de pouce de cours sur la définition de « borné » (pas une aide).
+  source: 'Énoncé et corrigé officiel : topologie/dm/dm-2020-21.pdf p.1 (Ex 1). Le corrigé écrit d((n,n),(0,0))=n : c''est n\sqrt2 pour la distance euclidienne (sans conséquence sur la conclusion). Séance du 2026-11-21.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
+- id: ex-topo-uvsq-td1-ex15q1
+  exercice: topo-uvsq-td1-ex15q1
+  notion: topo-n-0022
+  recto: |-
+    <b>Exo topo-uvsq-td1-ex15q1 : Fonctions nulles en 0 et en 1</b><br>
+    Calculer l'adhérence et l'intérieur dans \((\mathcal C([0,1]),\|\cdot\|_\infty)\) de \(F=\{f\in\mathcal C([0,1]):\ f(0)=f(1)=0\}\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(F\) est fermé car image réciproque de \(\{0\}\) par les évaluations \(f\mapsto f(0)\) et \(f\mapsto f(1)\), qui sont continues (1-lipschitziennes pour la norme sup) ; son intérieur est vide car on sort de \(F\) en ajoutant une petite constante.<br>
+    <b>Correction :</b><br>
+    1. Posons \(\varphi_0(f)=f(0)\) et \(\varphi_1(f)=f(1)\). Pour \(f,g\in\mathcal C([0,1])\), \(|\varphi_0(f)-\varphi_0(g)|=|f(0)-g(0)|\le\|f-g\|_\infty\), donc \(\varphi_0\) est continue (on prend \(\alpha=\varepsilon\)) ; de même \(\varphi_1\).<br>
+    2. \(F=\varphi_0^{-1}(\{0\})\cap\varphi_1^{-1}(\{0\})\) est une intersection de deux fermés, donc fermé. Ainsi \(\bar F=F\).<br>
+    3. Intérieur : soit \(f\in F\) et \(\varepsilon>0\). La fonction \(g=f+\varepsilon/2\) (constante ajoutée) vérifie \(\|g-f\|_\infty=\varepsilon/2<\varepsilon\), donc \(g\in B(f,\varepsilon)\), mais \(g(0)=\varepsilon/2\neq0\), donc \(g\notin F\). Aucune boule centrée en un point de \(F\) n'est dans \(F\) : \(\mathring F=\emptyset\).<br>
+    <b>Piège :</b> la boule de la norme sup autour de \(f\) est un « tube » de largeur \(\varepsilon\) : une fonction très proche de \(f\) peut ne pas s'annuler en \(0\). Même si \(F\) est un sous-espace, il n'est pas ouvert. La continuité entre espaces métriques se prouve par la définition \(\varepsilon\)-\(\alpha\) (poly p.16) : ici \(\alpha=\varepsilon\).<br>
+    <b>Coquilles / points d'attention :</b> rédaction perdue, non revue. La continuité d'une application entre espaces métriques n'était pas connue avant le 21/11 (hors programme ECG) ; il a eu des indices de palier 1 à 3. Il a trouvé seul \(\mathring F=\emptyset\) après un indice et rappelé que \(\mathring A=\emptyset\Leftrightarrow A^c\) dense.
+  source: 'Énoncé : uvsq/topologie/Topologie/TD1_Topologie.pdf p.3 (Ex 15.1). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer (aucune étape douteuse). Séance du 2026-11-21.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
+- id: ex-topo-uvsq-td1-ex08
+  exercice: topo-uvsq-td1-ex08
+  notion: topo-n-0015
+  recto: |-
+    <b>Exo topo-uvsq-td1-ex08 : Fermé = intersection dénombrable d'ouverts</b><br>
+    Montrer que dans un espace normé tout fermé est l'intersection dénombrable d'une famille d'ouverts, et que tout ouvert est la réunion dénombrable d'une famille de fermés.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> pour \(F\) fermé non vide, \(U_n=\{x:\ d(x,F)<1/n\}\) est un ouvert (réunion de boules de rayon \(1/n\) centrées sur \(F\)) et \(\bigcap_nU_n=\{d(x,F)=0\}=\bar F=F\) ; le deuxième énoncé s'en déduit par passage au complémentaire.<br>
+    <b>Correction :</b><br>
+    1. Soit \(F\) un fermé non vide. Pour \(n\ge1\), \(U_n=\{x\in E:\ d(x,F)<1/n\}\). Comme \(d(x,F)=\inf_{y\in F}d(x,y)<1/n\Leftrightarrow\exists y\in F,\ d(x,y)<1/n\), on a \(U_n=\bigcup_{y\in F}B(y,1/n)\) : réunion d'ouverts, donc ouvert.<br>
+    2. \(F\subset U_n\) pour tout \(n\). Réciproquement, si \(x\in\bigcap_nU_n\), alors \(d(x,F)<1/n\) pour tout \(n\), donc \(d(x,F)=0\) : il existe \(y_n\in F\) avec \(d(x,y_n)<1/n\), donc \(y_n\to x\) et \(x\in\bar F=F\). Donc \(F=\bigcap_{n\ge1}U_n\). (Si \(F=\emptyset\), c'est un ouvert, intersection de la famille constante \(\emptyset\).)<br>
+    3. Soit \(O\) ouvert, \(F=O^c\) fermé : \(F=\bigcap_nU_n\), donc \(O=F^c=\bigcup_nU_n^c\), réunion dénombrable de fermés (complémentaires d'ouverts).<br>
+    <b>Piège :</b> écrire \(F=\bigcap_{y\notin F}(E\setminus\{y\})\) est vrai mais l'intersection n'est pas dénombrable ; \(U_n\) n'est pas une boule centrée en \(x\) : c'est le « \(1/n\)-voisinage » de \(F\). Le résultat vaut dans tout espace métrique (pas seulement normé).<br>
+    <b>Coquilles / points d'attention :</b> rédaction perdue, non revue. Il a écrit \(F=\bigcap_{y\in F^c}(X\setminus\{y\})\) (juste mais non dénombrable) puis a eu la méthode (palier 3). À l'oral, il a décrit \(U_n\) comme « une boule centrée en \(x\) de rayon \(1/n\) », ce qui est faux : sans \(F\) dans la définition de \(U_n\), l'intersection n'a plus de sens. Rappel : « fermé » se définit comme complémentaire d'un ouvert dans le poly.
+  source: 'Énoncé : uvsq/topologie/Topologie/TD1_Topologie.pdf p.2 (Ex 8). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer (aucune étape douteuse). Séance du 2026-11-21.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
+- id: ex-topo-uvsq-td1-ex09q2
+  exercice: topo-uvsq-td1-ex09q2
+  notion: topo-n-0043
+  recto: |-
+    <b>Exo topo-uvsq-td1-ex09q2 : \(F\) = réunion des \(F_n\) et \(A\) est fermé</b><br>
+    On pose, pour \(n\in\mathbb N^*\), \(F_n=\{\tfrac1n\}\times[0,1]\subset\mathbb R^2\) et \(A=\{0\}\times[0,1]\). Soit \(F=\bigcup_{n\in\mathbb N^*}F_n\cup A\). Montrer que \(F\) est fermé.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(F=K\times[0,1]\) avec \(K=\{0\}\cup\{1/n:n\ge1\}\) ; \(K\) est fermé dans \(\mathbb R\) (\(1/n\to0\) et \(0\in K\)), et un produit de fermés est fermé (par suites).<br>
+    <b>Correction :</b><br>
+    1. \(F=K\times[0,1]\) : chaque \(F_n=\{1/n\}\times[0,1]\) et \(A=\{0\}\times[0,1]\).<br>
+    2. \(K\) est fermé dans \(\mathbb R\) : son complémentaire \(]-\infty,0[\,\cup\,]1,+\infty[\,\cup\bigcup_{n\ge1}]\tfrac1{n+1},\tfrac1n[\) est une réunion d'ouverts. (Par suites : une suite de \(K\) qui converge a pour limite l'une de ses valeurs \(1/n\) si elle prend une valeur une infinité de fois, ou \(0\) sinon.)<br>
+    3. Soit \((x_j,y_j)\in F\) qui converge vers \((x,y)\) dans \(\mathbb R^2\). Alors \(|x_j-x|\le d((x_j,y_j),(x,y))\to0\), donc \(x_j\to x\) et \(x\in K\) (fermé) ; de même \(y_j\to y\) et \(y\in[0,1]\) (fermé). Donc \((x,y)\in K\times[0,1]=F\) : \(F\) est fermé (caractérisation séquentielle).<br>
+    <b>Piège :</b> une réunion <b>infinie</b> de fermés n'est pas fermée en général : les \(F_n\) s'accumulent en \(\{0\}\times[0,1]\) et il faut ajouter \(A\). Le fait « un produit de fermés est fermé » n'est pas dans le poly de Paris Cité : il faut le redémontrer (preuve par suites ci-dessus). \(1/n\to0\) ne suffit pas : encore faut-il que \(0\in K\).<br>
+    <b>Coquilles / points d'attention :</b> rédaction perdue, non revue. Il a utilisé « un produit de fermés est fermé » sans preuve en se demandant si c'était au cours (il n'y est pas) : à rédiger. Palier 2 donné (\(F=K\times[0,1]\)).
+  source: 'Énoncé : uvsq/topologie/Topologie/TD1_Topologie.pdf p.2 (Ex 9.2). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer (aucune étape douteuse). Séance du 2026-11-21.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
+- id: ex-topo-uvsq-td1-ex15q2
+  exercice: topo-uvsq-td1-ex15q2
+  notion: topo-n-0022
+  recto: |-
+    <b>Exo topo-uvsq-td1-ex15q2 : Fonctions strictement positives</b><br>
+    Calculer l'adhérence et l'intérieur dans \((\mathcal C([0,1]),\|\cdot\|_\infty)\) de \(P=\{f\in\mathcal C([0,1]):\ f(x)>0\ \forall x\in[0,1]\}\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(P\) est ouvert (une fonction continue strictement positive sur le compact \([0,1]\) a un minimum \(m>0\), et la boule \(B(f,m)\) reste dans \(P\)) ; son adhérence est \(\{f\ge0\}\) (on remonte \(f\ge0\) en \(f+\tfrac1n\)).<br>
+    <b>Correction :</b><br>
+    1. Intérieur. Soit \(f\in P\). \(f\) est continue sur le compact \([0,1]\), donc atteint son minimum \(m=\min f>0\). Si \(\|g-f\|_\infty<m\), alors pour tout \(x\), \(g(x)\ge f(x)-\|g-f\|_\infty>f(x)-m\ge0\), donc \(g\in P\). Ainsi \(B(f,m)\subset P\), \(P\) est ouvert et \(\mathring P=P\).<br>
+    2. Adhérence, \(\subset\). \(\{f\ge0\}\) est fermé : si \(f_n\to f\) uniformément avec \(f_n\ge0\), alors \(f_n(x)\to f(x)\) pour tout \(x\), donc \(f(x)\ge0\). Il contient \(P\), donc \(\bar P\subset\{f\ge0\}\).<br>
+    3. Adhérence, \(\supset\). Si \(f\ge0\), alors \(f+\tfrac1n\in P\) et \(\|f+\tfrac1n-f\|_\infty=\tfrac1n\to0\), donc \(f\in\bar P\). Donc \(\bar P=\{f\in\mathcal C([0,1]):\ f\ge0\}\).<br>
+    <b>Piège :</b> « strictement positive en chaque point » ne donne pas \(\inf f>0\) sans la compacité (sur \(]0,1]\), \(x\mapsto x\) est strictement positive d'infimum \(0\)) : c'est la continuité sur un <b>compact</b> qui fournit le minimum atteint. Ne pas confondre \(g(x)\ge f(x)-\|g-f\|\) (inégalité de bande) avec une égalité.<br>
+    <b>Coquilles / points d'attention :</b> rédaction perdue, non revue. Paliers 1 et 2 donnés (pistes \(B(f,\min f)\) et \(f+1/n\), puis l'inégalité de bande). À l'oral, il avait prouvé que \(\{f\ge0\}\) est fermé par caractérisation séquentielle et qu'il contient \(P\) (juste) ; il lui restait l'inclusion \(\supset\) (\(f+1/n\)) et la preuve que \(P\) est ouvert.
+  source: 'Énoncé : uvsq/topologie/Topologie/TD1_Topologie.pdf p.3 (Ex 15.2). Pas de corrigé officiel : solution vérifiée par Claude, à confirmer (aucune étape douteuse). Séance du 2026-11-21.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
+- id: ex-topo-uvsq-cc1-2024-ex03q3
+  exercice: topo-uvsq-cc1-2024-ex03q3
+  notion: topo-n-0025
+  recto: |-
+    <b>Exo topo-uvsq-cc1-2024-ex03q3 : Frontière de l'intérieur incluse dans la frontière</b><br>
+    Soit \(E\) un espace métrique et \(A\subset E\). Montrer que \(\partial(A^\circ)\subset\partial A\) (avec \(\partial A=\bar A\setminus A^\circ\)).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(\partial A=\bar A\setminus A^\circ\) et \(A^\circ\) est ouvert, donc \(\partial(A^\circ)=\overline{A^\circ}\setminus A^\circ\) ; comme \(A^\circ\subset A\), on a \(\overline{A^\circ}\subset\bar A\), d'où l'inclusion.<br>
+    <b>Correction (corrigé officiel) :</b><br>
+    1. \(\partial A=\bar A\setminus A^\circ\) par définition, donc \(A^\circ\cup\partial A=\bar A\).<br>
+    2. Soit \(x\in\partial(A^\circ)=\overline{A^\circ}\setminus(A^\circ)^\circ=\overline{A^\circ}\setminus A^\circ\) (l'intérieur est ouvert : \((A^\circ)^\circ=A^\circ\)). Donc \(x\notin A^\circ\).<br>
+    3. Supposons \(x\notin\partial A\). Comme \(A^\circ\cup\partial A=\bar A\), on aurait \(x\notin\bar A\). Or \(A^\circ\subset A\subset\bar A\) et \(\bar A\) est fermé, donc \(\overline{A^\circ}\subset\bar A\), donc \(x\in\bar A\) : contradiction. Donc \(x\in\partial A\).<br>
+    Version directe : \(x\in\overline{A^\circ}\subset\bar A\) et \(x\notin A^\circ\), donc \(x\in\bar A\setminus A^\circ=\partial A\).<br>
+    <b>Piège :</b> ne pas confondre \(\overline{A^\circ}\) (adhérence de l'intérieur) et \(\overline A\) ; l'inclusion \(\overline{A^\circ}\subset\bar A\) vient de \(A^\circ\subset A\) et de la croissance de l'adhérence. L'inclusion inverse est fausse en général (\(A=[0,1]\cap\mathbb Q\) : \(\partial(A^\circ)=\emptyset\), \(\partial A=[0,1]\)).<br>
+    <b>Coquilles / points d'attention :</b> rédaction perdue, non revue. Il a dit avoir passé vite sur cet exercice et ne pas l'avoir réussi ; à reprendre avec le corrigé officiel (aucun indice reçu).
+  source: 'Énoncé et corrigé officiel : uvsq/topologie/Topologie/CC1_2024_2025_corrige.pdf p.4 (Ex 3.3). Séance du 2026-11-21.'
+  chapitre: 'Chapitre 1 - Espace métrique'
+  priorite: 1
+  tags: [exercice]
 - id: topo-a-042-1
   notion: topo-p-0006
   recto: 'Thm : application linéaire continue, continue en \(0\), majoration \(\|\varphi(x)\|\le M\|x\|\)'
