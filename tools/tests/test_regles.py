@@ -1,4 +1,4 @@
-"""Tests des règles d'état et de planification, sur de petites données fictives."""
+﻿"""Tests des règles d'état et de planification, sur de petites données fictives."""
 import datetime as dt
 import sys
 from pathlib import Path
@@ -30,7 +30,7 @@ def ctx(exos, resultats=(), dispo=None, **extra):
     for i, e in enumerate(exos):
         e["ordre"] = i
     base = {"debut": "2026-11-03", "fin": "2027-01-10", "examens": "2027-01-11",
-            "minutes_exercices_jour": 120, "minutes_cours_jour": 30, "cartes_par_jour": 12,
+            "minutes_exercices_jour": 120, "minutes_cours_jour": 30, "notions_par_jour": 12,
             "exceptions": [{"type": "off", "du": "2026-11-07", "au": "2026-11-08"},
                            {"type": "quota", "du": "2026-12-21", "au": "2027-01-03", "minutes_exercices_jour": 240}]}
     base.update(dispo or {})
@@ -396,46 +396,46 @@ def anki_ids(c, p):
 
 
 def test_cartes_ordre_erreurs_arevoir_bloc_puis_suivant():
-    c = ctx_cartes(dispo={"cartes_par_jour": 100})
+    c = ctx_cartes(dispo={"notions_par_jour": 100})
     p = P.plan_jour(c, D(2026, 11, 4))
     # sous-chapitre du bloc : 1.1 (n-a, et n-a2 rattachée par notions.yaml), puis 1.2, 1.3, 1.4
     assert anki_ids(c, p) == ["eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2", "cC1", "cD"]
-    c["dispo"]["cartes_par_jour"] = 5
-    assert anki_ids(c, p) == ["eT", "eM", "rev", "cA1", "cA2"]
+    c["dispo"]["notions_par_jour"] = 5
+    assert anki_ids(c, p) == ["eT", "eM", "rev", "cA1", "cA2", "cA3"]   # 5 unités : 3 cartes seules, n-a entière, n-a2
     assert anki_ids(c, P.plan_jour(c, D(2026, 11, 7))) == []     # jour off
     # progression linéaire : bloc en 1.3, les cartes restantes de 1.1 et 1.2 passent d'abord, dans l'ordre
-    c["dispo"]["cartes_par_jour"] = 100
+    c["dispo"]["notions_par_jour"] = 100
     p3 = {**p, "sous_chapitre": sc("1.3")}
     assert anki_ids(c, p3) == ["eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2", "cC1", "cD"]
 
 
 def test_cartes_jamais_donnees_deux_fois_et_replanification_stable():
-    c = ctx_cartes(dispo={"cartes_par_jour": 4})
+    c = ctx_cartes(dispo={"notions_par_jour": 4})
     p = P.plan_jour(c, D(2026, 11, 4))
     jour1 = anki_ids(c, p)
-    assert jour1 == ["eT", "eM", "rev", "cA1"]
+    assert jour1 == ["eT", "eM", "rev", "cA1", "cA3"]               # la notion n-a vient entière
     c["anki_plan"] = {"2026-11-04": jour1}
     assert anki_ids(c, p) == jour1                                  # même date : identique
     # jour non travaillé (aucun résultat le 04) : ses cartes reviennent le lendemain
     assert anki_ids(c, P.plan_jour(c, D(2026, 11, 5))) == jour1
     c["resultats"] = [res("2026-11-04", "zz", "aide")]
     jour2 = anki_ids(c, P.plan_jour(c, D(2026, 11, 5)))
-    assert not set(jour1) & set(jour2) and jour2 == ["cA2", "cA3", "cB1", "cB2"]
+    assert not set(jour1) & set(jour2) and jour2 == ["cA2", "cB1", "cB2", "cC1", "cD"]
 
 
 def test_cartes_limitees_a_l_avancement_du_cours():
-    c = ctx_cartes(dispo={"cartes_par_jour": 100}, avancement={"topologie": sc("1.2")})
+    c = ctx_cartes(dispo={"notions_par_jour": 100}, avancement={"topologie": sc("1.2")})
     assert anki_ids(c, P.plan_jour(c, D(2026, 11, 4))) == ["eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2"]
 
 
 def test_cartes_exercice_passent_avec_les_erreurs_avant_le_bloc():
-    c = ctx_cartes(dispo={"cartes_par_jour": 100})
+    c = ctx_cartes(dispo={"notions_par_jour": 100})
     c["cartes"].append({**carte("xT", "n-d", ["exercice"]), "exercice": "a1"})
     p = P.plan_jour(c, D(2026, 11, 4))
     # depuis le 09/11/2026 : les cartes d'exercices sont à part (liste « exercices »), le cours garde son ordre
     assert anki_ids(c, p) == ["eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2", "cC1", "cD"]
     assert P.anki(c, p)["exercices"] == ["xT"]
-    c["dispo"]["cartes_par_jour"] = 3
+    c["dispo"]["notions_par_jour"] = 3
     assert anki_ids(c, p) == ["eT", "eM", "rev"] and P.anki(c, p)["exercices"] == ["xT"]   # plafonds séparés
     c["anki_plan"] = {"2026-11-04": ["eT", "eM", "rev", "xT"]}
     c["resultats"] = [res("2026-11-04", "zz", "aide")]
@@ -487,15 +487,15 @@ def ctx_prerequis(**kw):
 
 
 def test_carte_prerequis_du_chapitre_3_ne_sort_pas_pendant_le_1_3():
-    c = ctx_prerequis(dispo={"cartes_par_jour": 2})
+    c = ctx_prerequis(dispo={"notions_par_jour": 1})
     p = {**P.plan_jour(c, D(2026, 11, 4)), "sous_chapitre": sc("1.3")}
     assert anki_ids(c, p) == ["cC1", "cC2"]                          # ni pD ni cD1 en tête de matière
-    c["dispo"]["cartes_par_jour"] = 100
+    c["dispo"]["notions_par_jour"] = 100
     assert anki_ids(c, p) == ["cC1", "cC2", "pD", "cD1"]            # elle vient avec le 3.2, prérequis d'abord
 
 
 def test_au_3_2_la_carte_prerequis_passe_avant_les_cartes_du_poly():
-    c = ctx_prerequis(dispo={"cartes_par_jour": 100})
+    c = ctx_prerequis(dispo={"notions_par_jour": 100})
     c["cartes"] = [x for x in c["cartes"] if x["notion"] != "n-c"]   # cD1 est listée avant pD dans les données
     p = {**P.plan_jour(c, D(2026, 11, 4)), "sous_chapitre": sc("3.2", 3)}
     assert anki_ids(c, p) == ["pD", "cD1"]
@@ -552,7 +552,7 @@ def test_anciennes_notes_dans_la_file_du_poly():
     cou = {"n-a": {"statut": "couverte", "notes": list(range(100, 108))},
            "n-a2": {"statut": "partielle", "notes": [105, 200, 201, 202, 203]},
            "n-b": {"statut": "couverte", "notes": [300]}}
-    c = ctx_cartes(dispo={"cartes_par_jour": 8}, couverture=cou)
+    c = ctx_cartes(dispo={"notions_par_jour": 8}, couverture=cou)
     p = P.plan_jour(c, D(2026, 11, 4))
     a = P.anki(c, p)
     assert a["nouvelles"][:6] == ["eT", "eM", "rev", "cA1", "cA2", "cA3"]
@@ -569,7 +569,7 @@ def test_anciennes_notes_dans_la_file_du_poly():
     c["resultats"] = [res("2026-11-04", "zz", "aide")]
     assert not set(P.anki(c, P.plan_jour(c, D(2026, 11, 5)))["anciennes"]) & set(a["anciennes"])
     assert P.anki(c, P.plan_jour(c, D(2026, 11, 7)))["anciennes"] == []          # jour off : rien
-    c2 = ctx_cartes(dispo={"cartes_par_jour": 2})
+    c2 = ctx_cartes(dispo={"notions_par_jour": 2})
     assert P.anki(c2, P.plan_jour(c2, D(2026, 11, 4)))["anciennes"] == []         # sans couverture : rien
 
 
@@ -763,7 +763,7 @@ TOUTES = {"eT", "eM", "rev", "cA1", "cA2", "cA3", "cB1", "cB2", "cC1", "cD"}
 
 
 def test_seance_un_jour_off_donne_un_plan_complet_alors_que_jour_ne_donne_rien():
-    c = ctx_cartes(dispo={"cartes_par_jour": 100})
+    c = ctx_cartes(dispo={"notions_par_jour": 100})
     off = D(2026, 11, 7)                                       # off dans la dispo de test
     assert ids(P.plan_jour(c, off)) == []
     p = P.plan_jour(c, off, seance=True)
@@ -774,10 +774,10 @@ def test_seance_un_jour_off_donne_un_plan_complet_alors_que_jour_ne_donne_rien()
 
 
 def test_cartes_vues_si_et_seulement_si_plus_nouvelles_dans_anki():
-    c = ctx_cartes(dispo={"cartes_par_jour": 4})
+    c = ctx_cartes(dispo={"notions_par_jour": 4})
     p = P.plan_jour(c, D(2026, 11, 4), seance=True)
     tout_nouveau = FauxAnki(TOUTES)
-    assert P.anki(c, p, tout_nouveau)["nouvelles"] == ["eT", "eM", "rev", "cA1"]
+    assert P.anki(c, p, tout_nouveau)["nouvelles"] == ["eT", "eM", "rev", "cA1", "cA3"]
     # eT et cA1 apprises dans Anki : les 4 premières non vues sont décalées, sans aucune réservation à l'avance
     vu = FauxAnki(TOUTES - {"eT", "cA1"})
     assert P.anki(c, p, vu)["nouvelles"] == ["eM", "rev", "cA2", "cA3"]
@@ -831,15 +831,15 @@ def test_ancienne_note_hors_ecg_deja_apprise_se_reapprend():
 
 
 def test_cartes_non_exportees_ne_sont_pas_proposees_et_sont_signalees():
-    c = ctx_cartes(dispo={"cartes_par_jour": 4}, exportees=TOUTES - {"eM"})
+    c = ctx_cartes(dispo={"notions_par_jour": 4}, exportees=TOUTES - {"eM"})
     p = P.plan_jour(c, D(2026, 11, 4), seance=True)
     a = P.anki(c, p, FauxAnki(TOUTES))
-    assert a["nouvelles"] == ["eT", "rev", "cA1", "cA2"] and a["non_exportees"] == 1
+    assert a["nouvelles"] == ["eT", "rev", "cA1", "cA2", "cA3"] and a["non_exportees"] == 1
     assert "1 cartes pas encore exportées" in "\n".join(P.rediger(c, p, a))
 
 
 def test_anki_ferme_repli_sur_l_estimation_et_le_dit():
-    c = ctx_cartes(dispo={"cartes_par_jour": 3})
+    c = ctx_cartes(dispo={"notions_par_jour": 3})
     p = P.plan_jour(c, D(2026, 11, 4), seance=True)
     a = P.anki(c, p)
     assert a["source"] == "estimee" and a["nouvelles"] == ["eT", "eM", "rev"]
@@ -1038,7 +1038,7 @@ def test_b_cartes_des_notions_faibles_reviennent_une_fois():
 
 
 def test_b_cartes_nouvelles_d_un_prerequis_inconnu_apres_les_prioritaires_avant_les_dues():
-    c = ctx_cartes(dispo={"cartes_par_jour": 100})
+    c = ctx_cartes(dispo={"notions_par_jour": 100})
     for k in ("m-p", "m-q"):
         c["notions"][k] = {**notion(k, "Chapitre 9 - Y", "9.1", "mesure"), "type": "prerequis", "requis_par": ["n-d"]}
     c["cartes"] += [carte("pM", "m-p"), carte("pQ", "m-q")]
@@ -1047,7 +1047,7 @@ def test_b_cartes_nouvelles_d_un_prerequis_inconnu_apres_les_prioritaires_avant_
     sortie = anki_ids(c, p)
     assert sortie[:4] == ["eT", "eM", "pM", "rev"]               # erreurs, prérequis inconnue, puis a_revoir
     assert "pQ" not in sortie[:5]                                # fragile : pas de priorité
-    c["dispo"]["cartes_par_jour"] = 3
+    c["dispo"]["notions_par_jour"] = 3
     assert anki_ids(c, p) == ["eT", "eM", "pM"]                  # plafond inchangé
 
 
@@ -1100,7 +1100,7 @@ def ctx_multi(**kw):
                "m-n2": notion("m-n2", "Chapitre 1 - X", "1.3", "mesure"),
                "m-n3": notion("m-n3", "Chapitre 1 - X", "1.4", "mesure")}
     cartes = [carte("cm1", "m-n1"), carte("cm2", "m-n2"), carte("cm3", "m-n3"), carte("ct", "t-n"), carte("cp", "topo-p")]
-    return ctx(exos, notions=notions, cartes=cartes, dispo={"cartes_par_jour": 100}, **kw)
+    return ctx(exos, notions=notions, cartes=cartes, dispo={"notions_par_jour": 100}, **kw)
 
 
 def test_d_prerequis_servi_aussi_au_premier_sous_chapitre_de_chaque_matiere_qui_l_exige():
@@ -1215,7 +1215,7 @@ def test_e_check_comprehension(tmp_path):
 
 
 def test_cartes_d_exercices_a_part_avec_leur_plafond():
-    c = ctx_cartes(dispo={"cartes_par_jour": 3, "exercices_par_jour": 2})
+    c = ctx_cartes(dispo={"notions_par_jour": 3, "exercices_par_jour": 2})
     c["cartes"] += [carte("x1", "n-a", ["exercice"]), carte("x2", "n-c", ["exercice"]), carte("x3", "n-b", ["exercice"])]
     p = P.plan_jour(c, D(2026, 11, 4), seance=True)
     a = P.anki(c, p)
@@ -1432,7 +1432,7 @@ def ctx_requis(**kw):
 
 
 def test_notions_requises_et_sous_chapitre_sans_exercice():
-    c = ctx_requis(dispo={"cartes_par_jour": 1})
+    c = ctx_requis(dispo={"notions_par_jour": 1})
     p = P.plan_jour(c, D(2026, 11, 4))
     assert ids(p) == ["a1", "b1"] and p["sous_chapitre"].endswith("1.1 A")
     assert P.notions_requises(c, p) == {"n-a", "n-b", "n-c"}                 # pas n-d (1.4, après le 1.3)
@@ -1441,7 +1441,7 @@ def test_notions_requises_et_sous_chapitre_sans_exercice():
     assert k["nouvelles"] == ["cA"] and k["requises"] == ["cB1", "cB2", "cC"]    # plafond 1, + 3 requises (pas cD)
     L = P.rediger(c, p, k)
     assert any("sous-chapitre sans exercice" in x and "`n-b`" in x for x in L)
-    assert any("dont 3 en plus du plafond" in x for x in L)
+    assert any("dont 3 en plus du quota" in x for x in L)
     c["comprehension"] = {"notions": {"n-b": {"niveau": "tenue", "maj": "2026-11-03"}}}
     assert P.notions_sans_exercice(c, p) == []                                # déjà tenue : omise
 
@@ -1459,23 +1459,23 @@ def test_reussi_ou_presque_reprise_seul_dans_anki_aide_avec_claude():
     assert any(x.startswith("### Reprises seul dans Anki") for x in L) and any('"Id:ex-p1"' in x for x in L)
 
 
-def test_plafond_de_cartes_suffit_pour_tout_apprendre_avant_fin_cartes():
-    # demande du 18/11/2026 : le nombre de cartes par jour doit permettre de tout apprendre avant les examens
+def test_quota_de_notions_suffit_pour_tout_apprendre_avant_fin_cartes():
+    # 18/11/2026 : tout apprendre avant les examens ; 23/11/2026 : le quota se compte en notions
     dispo = {"debut": "2026-11-03", "fin": "2027-01-03", "minutes_exercices_jour": 150, "minutes_cours_jour": 30,
-             "cartes_par_jour": 20, "exceptions": [{"type": "off", "du": "2026-11-21", "au": "2026-11-22"}]}
+             "notions_par_jour": 8, "exceptions": [{"type": "off", "du": "2026-11-21", "au": "2026-11-22"}]}
     ctx = {"dispo": dispo}
     assert P.fin_cartes(ctx) == dt.date(2026, 12, 27)          # une semaine avant la fin, pour réviser
-    p = P.plafond_cartes(ctx, dt.date(2026, 11, 19), 1000)
+    p = P.plafond_notions(ctx, dt.date(2026, 11, 19), 400)
     assert p["jours"] == 37                                    # 19/11 → 27/12 sans le week-end off
-    assert p["plafond"] == 28                                  # ceil(1000 / 37)
-    assert P.plafond_cartes(ctx, dt.date(2026, 11, 19), 100)["plafond"] == 20   # jamais sous cartes_par_jour
+    assert p["plafond"] == 11                                  # ceil(400 / 37)
+    assert P.plafond_notions(ctx, dt.date(2026, 11, 19), 100)["plafond"] == 8   # jamais sous notions_par_jour
     dispo["fin_cartes"] = "2026-12-20"
-    assert P.plafond_cartes(ctx, dt.date(2026, 12, 20), 30)["plafond"] == 30    # dernier jour : tout le reste
+    assert P.plafond_notions(ctx, dt.date(2026, 12, 20), 30)["plafond"] == 30   # dernier jour : tout le reste
 
 
 def test_b_prerequis_inconnu_d_un_chapitre_pas_encore_atteint_attend_son_chapitre():
     # 18/11/2026 : topo-p-0006 (evn), rattaché au chapitre 5, passait avant tout le chapitre 1
-    c = ctx_cartes(dispo={"cartes_par_jour": 100})
+    c = ctx_cartes(dispo={"notions_par_jour": 100})
     c["notions"]["m-p"] = {**notion("m-p", "Chapitre 9 - Y", "9.1", "mesure"), "type": "prerequis", "requis_par": ["n-d"]}
     c["cartes"] += [carte("pM", "m-p")]
     c["comprehension"] = comp(**{"m-p": "inconnue"})
@@ -1484,3 +1484,19 @@ def test_b_prerequis_inconnu_d_un_chapitre_pas_encore_atteint_attend_son_chapitr
     assert anki_ids(c, p)[:3] == ["eT", "eM", "pM"]              # chapitre atteint : en tête
     p["courants"]["mesure"] = "Chapitre 1 - X > 1.1"
     assert "pM" not in anki_ids(c, p)[:3]                        # pas encore atteint : il attend son chapitre
+
+
+def test_requises_sans_plafond_et_notion_entiere():
+    # règle du 23/11/2026 : tout ce dont les exercices du jour ont besoin est à apprendre, même beaucoup
+    c = ctx_requis(dispo={"notions_par_jour": 1})
+    c["cartes"] += [carte(f"cC{k}", "n-c") for k in range(2, 40)]
+    p = P.plan_jour(c, D(2026, 11, 4))
+    k = P.anki(c, p)
+    assert k["nouvelles"] == ["cA"]
+    assert len(k["requises"]) == 2 + 39 and "cD" not in k["requises"]       # n-b (2) + n-c (39), aucun plafond
+    assert k["plafond"]["notions_jour"] == 1 and k["plafond"]["notions_requises"] == 2
+    L = "\n".join(P.rediger(c, p, k))
+    assert "Notions du jour : 1 sur un quota de 1, plus 2 dont les exercices du jour ont besoin" in L
+    # une carte d'erreur compte seule : elle n'entraîne pas toute sa notion
+    assert P.premieres_notions(["e", "x1", "y1", "x2"], {"e", "x1", "y1", "x2"},
+                               {"e": "X", "x1": "X", "y1": "Y", "x2": "X"}, 2, {"e"}) == ["e", "x1", "x2"]

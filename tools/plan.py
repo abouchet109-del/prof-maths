@@ -31,10 +31,10 @@ RESTE_LISIBLE = {E.RESTE: "tout sauf les questions déjà justes"}
 SEUL = ("reussi", "presque")  # dernier résultat -> reprise seul dans Anki, hors séance (12/11/2026)
 REPRISE_MIN = 10            # minutes au moins pour une reprise partielle (seulement les questions manquées)
 REPRISES_MAX_DEFAUT = 30    # minutes de reprises par jour au plus (dispo.yaml : minutes_reprises_max)
-CARTES_DEFAUT = 20          # cartes nouvelles par jour au moins (dispo.yaml : cartes_par_jour) ; plus si l'échéance l'exige
+CARTES_DEFAUT = 20          # ancien plafond en cartes (remplacé le 23/11/2026 par NOTIONS_DEFAUT)
+NOTIONS_DEFAUT = 8          # notions nouvelles par jour au moins (dispo.yaml : notions_par_jour) ; plus si l'échéance l'exige
 JOURS_REVISION_CARTES = 7   # toutes les cartes apprises une semaine avant la fin (dispo.yaml : fin_cartes)
 EXERCICES_DEFAUT = 10       # cartes d'exercices nouvelles par jour au plus, à part des cartes de cours (dispo.yaml : exercices_par_jour)
-REQUISES_MAX = 25           # cartes nouvelles ajoutées hors plafond parce que les exercices du jour en ont besoin
 ANCIENNES_MAX = 10          # anciennes notes (couverture.yaml) ajoutées par jour aux « à apprendre », hors plafond
 LOT_ANKI = 40               # cartes interrogées à la fois dans Anki
 TAGS_PRIORITAIRES = {"erreur", "exercice"}   # cartes d'erreurs et d'exercices : toujours en tête de leur liste « à apprendre »
@@ -707,22 +707,39 @@ def fin_cartes(ctx) -> dt.date:
     return fin - dt.timedelta(JOURS_REVISION_CARTES)
 
 
-def plafond_cartes(ctx, d, restantes: int) -> dict:
-    """Plafond de cartes de cours nouvelles du jour (demande du 18/11/2026 : tout apprendre avant les examens) :
-    `cartes_par_jour` au moins, et assez pour finir les `restantes` d'ici `fin_cartes`, sur les jours de travail."""
+def plafond_notions(ctx, d, restantes: int) -> dict:
+    """Nombre de notions nouvelles du jour (règle du 23/11/2026 : on raisonne en notions, définitions et
+    propriétés comprises, plus en cartes ; demande du 18/11/2026 : tout apprendre avant les examens) :
+    `notions_par_jour` au moins, et assez pour finir les `restantes` notions d'ici `fin_cartes`, sur les jours
+    de travail. Chaque notion choisie apporte TOUTES ses cartes encore à apprendre."""
     dispo = ctx["dispo"]
-    base = dispo.get("cartes_par_jour", CARTES_DEFAUT)
+    base = dispo.get("notions_par_jour", NOTIONS_DEFAUT)
     fin = fin_cartes(ctx)
     jours = sum(1 for j in E.jours(E.en_date(d), fin) if E.jour_info(dispo, j)["minutes_exercices"] > 0)
     besoin = (math.ceil(restantes / jours) if jours else restantes) if restantes else 0
     return {"plafond": max(base, besoin), "restantes": restantes, "jours": jours, "fin": fin, "base": base}
 
 
-def compter_a_apprendre(client, ids, donnees=None) -> int:
-    """Nombre de cartes de cours (ids du système et `nid:` d'anciennes notes) encore à apprendre dans Anki."""
+def ids_a_apprendre(client, ids, donnees=None) -> set[str]:
+    """Parmi ces cartes de cours (ids du système et `nid:` d'anciennes notes), celles encore à apprendre."""
     cartes = [i for i in ids if not i.startswith("nid:")]
     nids = [int(i[4:]) for i in ids if i.startswith("nid:")]
-    return (len(client.ids_nouveaux(cartes)) if cartes else 0) + (len(client.nids_a_apprendre(nids, donnees)) if nids else 0)
+    return (client.ids_nouveaux(cartes) if cartes else set()) | \
+        ({f"nid:{n}" for n in client.nids_a_apprendre(nids, donnees)} if nids else set())
+
+
+def premieres_notions(ids, a_apprendre, notion_de, n, seules=frozenset()) -> list[str]:
+    """Les cartes à apprendre des `n` premières unités (ordre de `ids`) : une unité est une notion, qui vient
+    entière (toutes ses cartes, système et anciennes notes), sauf une carte de `seules` (erreur, `a_revoir`
+    due), qui compte seule et n'entraîne pas sa notion."""
+    def unite(i):
+        return ("carte", i) if i in seules else ("notion", notion_de.get(i))
+    choisies: list = []
+    for i in ids:
+        if i in a_apprendre and unite(i) not in choisies and len(choisies) < n:
+            choisies.append(unite(i))
+    garde = set(choisies)
+    return [i for i in ids if i in a_apprendre and unite(i) in garde]
 
 
 def anki(ctx, plan, client=None) -> dict:
@@ -750,41 +767,45 @@ def anki(ctx, plan, client=None) -> dict:
         libres = [c for c in ctx["cartes"] if c["id"] not in avant] + cartes_anciennes(ctx, deja)
     ordre = ordre_cartes(ctx, plan, libres)
     off = plan["info"]["off"]
-    # Plafond : assez pour que TOUTES les cartes de cours (toutes matières) soient apprises avant `fin_cartes`.
+    # Règle du 23/11/2026 : on compte en NOTIONS (toutes leurs cartes), assez pour que toutes les notions de
+    # cours encore à apprendre (toutes matières) le soient avant `fin_cartes`.
     cours = [c["id"] for c in libres if not est_carte_exercice(c)]
-    restantes = compter_a_apprendre(client, cours, premier_don(ctx, d)) if client else len(cours)
-    plafond = plafond_cartes(ctx, plan["date"], restantes)
+    notion_de = {c["id"]: c.get("notion") for c in libres}
+    a_apprendre = ids_a_apprendre(client, cours, premier_don(ctx, d)) if client else set(cours)
+    plafond = plafond_notions(ctx, plan["date"], len({notion_de[i] for i in a_apprendre}))
     limite = 0 if off else plafond["plafond"]
     limite_exos = 0 if off else ctx["dispo"].get("exercices_par_jour", EXERCICES_DEFAUT)
     ids = [c["id"] for c in ordre if not est_carte_exercice(c)]
     ids_exos = [c["id"] for c in ordre if est_carte_exercice(c)]
     requis = set() if off else notions_requises(ctx, plan)
-    notion_de = {c["id"]: c.get("notion") for c in ordre}
+    seules = {c["id"] for c in libres if TAGS_PRIORITAIRES & set(c.get("tags") or [])} | \
+        {e["id"] for e in a_revoir_dus(ctx.get("a_revoir"), d, faits) if e.get("id")}
+    nouvelles = premieres_notions(ids, a_apprendre, notion_de, limite, seules)
+    # Notions dont les exercices du jour ont besoin et pas encore apprises : toutes, sans plafond (23/11/2026).
+    deja = set(nouvelles)
+    requises = [i for i in ids + [i for i in cours if i not in set(ids)]
+                if i in a_apprendre and i not in deja and notion_de.get(i) in requis]
     if client:
-        dons = premier_don(ctx, d)
-        nouvelles = premieres_nouvelles(client, ids, limite, dons)
-        reste = [i for i in ids if i not in set(nouvelles) and notion_de.get(i) in requis]
-        requises = premieres_nouvelles(client, reste, REQUISES_MAX, dons) if reste else []
         exercices = premieres_nouvelles(client, ids_exos, limite_exos)
         liees = [c["id"] for c in libres if c.get("notion") in notions_jour]
         encore = client.ids_nouveaux(liees) if liees else set()
         revoir = [i for i in liees if i not in encore]
     else:
-        nouvelles = ids[:limite]
-        requises = [i for i in ids[limite:] if notion_de.get(i) in requis][:REQUISES_MAX]
         exercices = ids_exos[:limite_exos]
         revoir = [c["id"] for c in ctx["cartes"] if c["id"] in avant and c.get("notion") in notions_jour]
     choisis = nouvelles + requises
+    plafond["notions_jour"] = len({notion_de.get(i) for i in nouvelles if i not in seules})
+    plafond["notions_requises"] = len({notion_de.get(i) for i in requises})
     anciennes = [int(i[4:]) for i in choisis if i.startswith("nid:")]
     nouvelles = [i for i in nouvelles if not i.startswith("nid:")]
     requises = [i for i in requises if not i.startswith("nid:")]
     return {
         "nouvelles": nouvelles,
-        "requises": requises,          # hors plafond : les exercices du jour en ont besoin (11/11/2026)
+        "requises": requises,          # hors quota, sans plafond : les exercices du jour en ont besoin (23/11/2026)
         "exercices": exercices,
         "anciennes": anciennes,       # anciennes notes choisies dans la même file, dans le plafond
         "revoir": revoir,
-        "plafond": plafond,           # {plafond, restantes, jours, fin, base} (18/11/2026)
+        "plafond": plafond,           # en notions : {plafond, restantes, jours, fin, base, notions_jour, notions_requises}
         "source": "anki" if client else "estimee",
         "non_exportees": 0 if exportees is None else sum(c["id"] not in exportees for c in ctx["cartes"]),
     }
@@ -1057,13 +1078,16 @@ def rediger(ctx, plan, cartes) -> list[str]:
     req = cartes.get("requises") or []
     apprendre = cartes["nouvelles"] + req
     L += ["", f"## Anki — cours, à apprendre ({len(apprendre)} nouvelles"
-              + (f", dont {len(req)} en plus du plafond : les exercices du jour en ont besoin" if req else "")
+              + (f", dont {len(req)} en plus du quota : les exercices du jour en ont besoin" if req else "")
               + (f" + {len(anciennes)} anciennes" if anciennes else "") + ")"]
     p = cartes.get("plafond")
     if p:
-        L.append(f"Plafond du jour : {p['plafond']} cartes. Il reste {p['restantes']} cartes de cours à apprendre "
+        L.append(f"Notions du jour : {p.get('notions_jour', 0)} sur un quota de {p['plafond']}"
+                 + (f", plus {p['notions_requises']} dont les exercices du jour ont besoin"
+                    if p.get("notions_requises") else "")
+                 + f" (chaque notion avec toutes ses cartes). Il reste {p['restantes']} notions de cours à apprendre "
                  f"(toutes matières) d'ici le {p['fin']}, sur {p['jours']} jours de travail"
-                 + (f" (minimum `cartes_par_jour` : {p['base']})." if p["plafond"] == p["base"] else "."))
+                 + (f" (minimum `notions_par_jour` : {p['base']})." if p["plafond"] == p["base"] else "."))
     # Cartes du système : jamais une carte déjà apprise (en apprentissage : pas encore apprise). Anciennes notes :
     # sans filtre d'état, car une note hors ECG déjà apprise dans Anki se réapprend (règle du 18/11/2026).
     requete = " or ".join(([f"(({_requete(apprendre)}) (is:new or (is:learn -is:review)))"] if apprendre else [])
