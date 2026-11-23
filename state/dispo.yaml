@@ -10,7 +10,8 @@ notions_par_jour: 8              # minimum de notions nouvelles par jour, chacun
                                  # remplace cartes_par_jour) ; plan.py monte au-dessus s'il le faut pour que toutes les
                                  # notions de cours soient apprises avant fin_cartes ; les notions dont les exercices du
                                  # jour ont besoin s'ajoutent sans plafond
-# fin_cartes: 2026-12-27         # par défaut : une semaine avant `fin` (la dernière semaine sert à réviser)
+fin_cartes: 2027-01-03           # toutes les notions apprises la veille des examens (demande du 23/11/2026 : deadline 04/01) ;
+                                 # sans cette ligne : une semaine avant `fin`
 minutes_reprises_max: 30         # plafond de minutes de reprises par jour (toutes matières)
 annales_libres_des: 2026-12-07   # à partir de cette date, toutes les annales prioritaires sont éligibles
 exceptions:
