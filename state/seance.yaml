@@ -554,3 +554,60 @@
   anki: true
   marge_debut: 585
   restant_debut: 6975
+'2026-11-24':
+  heure: '23:11'
+  exercices:
+  - topo-uvsq-td2-ex01q1
+  - mes-cc1-2324-ex02
+  - pro-td2-ex02
+  - pro-td2-ex06
+  - pro-td2-ex03
+  cartes:
+  - proba-a-003-3
+  - proba-a-004-1
+  - proba-a-004-2
+  - proba-a-006-1
+  - proba-a-006-2
+  - proba-a-006-3
+  - proba-a-007-1
+  - proba-a-007-2
+  - proba-a-007-3
+  - proba-a-007-4
+  - proba-a-007-5
+  - proba-a-008-1
+  - proba-a-008-2
+  - proba-a-009-1
+  - proba-a-009-2
+  - proba-a-009-3
+  - proba-a-010-1
+  - proba-a-010-2
+  - proba-a-011-1
+  - proba-a-100-1
+  - proba-a-100-2
+  - proba-a-101-1
+  - proba-a-101-2
+  - proba-a-101-3
+  - proba-a-102-1
+  - proba-a-102-2
+  - proba-a-034-1
+  - proba-a-034-2
+  - proba-a-034-3
+  - proba-a-034-4
+  - ex-topo-td1-ex04
+  - ex-topo-td1-ex06
+  - ex-topo-td1-ex05
+  - ex-topo-td1-ex08
+  - ex-topo-td1-ex09
+  - ex-topo-td1-ex07
+  - ex-topo-td1-ex14
+  - ex-topo-dm2020-21-ex01
+  - ex-topo-uvsq-td1-ex15q1
+  - ex-topo-uvsq-td1-ex08
+  anciennes:
+  - 1728571758321
+  - 1728571812808
+  - 1732636719141
+  - 1732717276071
+  anki: true
+  marge_debut: 435
+  restant_debut: 6975
