@@ -933,3 +933,107 @@
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [propriete]
+- id: ex-mes-cc1-2526-ex01
+  exercice: mes-cc1-2526-ex01
+  notion: mesure-n-0008
+  recto: |-
+    <b>Exo mes-cc1-2526-ex01 : parties finies ou de complémentaire fini (contre-exemple)</b><br>
+    Sur un ensemble \(X\), on note \(\mathcal A\) l'ensemble des parties \(A\) de \(X\) telles que \(A\) <i>ou</i> \(A^c\) soit fini. Montrer, à l'aide d'un contre-exemple, que \(\mathcal A\) n'est pas une tribu sur \(X\) en général.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(\emptyset\in\mathcal A\) et \(\mathcal A\) est stable par complémentaire, donc ce qui échoue est la stabilité par réunion dénombrable : une réunion infinie de singletons (qui sont finis) peut être infinie <i>et</i> de complémentaire infini.<br>
+    <b>Correction :</b> prenons \(X=\mathbb N\) et, pour \(n\in\mathbb N\), \(A_n=\{2n\}\). Chaque \(A_n\) est fini, donc \(A_n\in\mathcal A\). Mais \(A=\bigcup_{n}A_n\) est l'ensemble des entiers pairs : \(A\) est infini et \(A^c\) (les entiers impairs) est infini, donc \(A\notin\mathcal A\). La stabilité par réunion dénombrable est fausse : \(\mathcal A\) n'est pas une tribu. (Autre contre-exemple : \(X=\mathbb R\), \(A_n=\{n\}\).)<br>
+    <b>Piège :</b> \(X=\mathbb N\), \(A_n=\{n\}\) ne marche pas : la réunion vaut \(\mathbb N\), dont le complémentaire \(\emptyset\) est fini, donc \(\mathbb N\in\mathcal A\). Il faut une réunion dont <i>à la fois</i> elle et son complémentaire sont infinis.<br>
+    <b>Coquilles / points d'attention :</b> un contre-exemple s'écrit en entier : dire quel axiome échoue, vérifier que chaque \(A_n\) est dans \(\mathcal A\), puis que \(A\) <i>et</i> \(A^c\) sont infinis. Séance du 23/11 : premier essai \(A_n=\{n\}\) faux (voir le piège), trouvé après un indice.
+  source: 'Énoncé : uvsq/mesure/Théorie de la mesure/Annales/CC1.pdf p.1 (Ex 1). Corrigé officiel : CC1-corrige.pdf p.1.'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exercice]
+- id: ex-mes-td2-ex03
+  exercice: mes-td2-ex03
+  notion: mesure-n-0011
+  recto: |-
+    <b>Exo mes-td2-ex03 : tribu engendrée par les singletons</b><br>
+    Soit \(X\) un ensemble et \(S\) l'ensemble de ses singletons.<br>
+    1. On suppose \(X\) au plus dénombrable. Déterminer \(\sigma(S)\).<br>
+    2. On suppose \(X\) non dénombrable. Déterminer \(\sigma(S)\). On commencera par montrer que \(\mathcal A:=\{A\subset X : A\text{ (au plus) dénombrable ou }A^c\text{ (au plus) dénombrable}\}\) est une tribu.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(\sigma(S)\) est la plus petite tribu contenant les singletons. Une réunion <i>dénombrable</i> de singletons est dans \(\sigma(S)\) : toute partie au plus dénombrable l'est, et le complémentaire donne le reste. Pour \(X\) au plus dénombrable cela donne tout \(\mathcal P(X)\) ; pour \(X\) non dénombrable, seulement les parties dénombrables ou de complémentaire dénombrable.<br>
+    <b>Correction :</b><br>
+    1. \(X\) est au plus dénombrable : on peut l'indexer par \(\mathbb N\) (avec redondance si \(X\) est fini), \(X=\bigcup_{n}\{a_n\}\), donc \(S=\{\{a_n\}:n\in\mathbb N\}\subset\mathcal P(X)\), et \(\sigma(S)\subset\mathcal P(X)\) car \(\mathcal P(X)\) est une tribu contenant \(S\). Réciproquement, soit \(A\subset X\) : il existe une suite \((n_k)\) telle que \(A=\bigcup_{k}\{a_{n_k}\}\), réunion dénombrable d'éléments de la tribu \(\sigma(S)\), donc \(A\in\sigma(S)\). D'où \(\mathcal P(X)\subset\sigma(S)\) et \(\sigma(S)=\mathcal P(X)\).<br>
+    2. <u>\(\mathcal A\) est une tribu</u> : (i) \(\emptyset\in\mathcal A\). (ii) Soit \(A\in\mathcal A\) : si \(A=(A^c)^c\) est au plus dénombrable, \(A^c\in\mathcal A\) ; sinon \(A^c\) est au plus dénombrable, donc \(A^c\in\mathcal A\). (iii) Soit \((A_n)\) dans \(\mathcal A\) : si tous les \(A_n\) sont au plus dénombrables, \(\bigcup A_n\) l'est (réunion dénombrable d'ensembles au plus dénombrables) ; sinon il existe \(n_0\) avec \(A_{n_0}^c\) au plus dénombrable, et \((\bigcup A_n)^c=\bigcap A_n^c\subset A_{n_0}^c\) est au plus dénombrable. Dans les deux cas \(\bigcup A_n\in\mathcal A\).<br>
+    <u>\(\sigma(S)=\mathcal A\)</u> : tout singleton est fini donc \(S\subset\mathcal A\), et \(\mathcal A\) est une tribu, donc \(\sigma(S)\subset\mathcal A\). Réciproquement, soit \(A\in\mathcal A\) : si \(A\) est au plus dénombrable, \(A\in\sigma(S)\) par la question 1 ; sinon \(A^c\) est au plus dénombrable, donc \(A^c\in\sigma(S)\) et \(A\in\sigma(S)\) par complémentaire. D'où \(\sigma(S)=\mathcal A\).<br>
+    <b>Piège :</b> « dénombrable » est exactement la condition : la stabilité d'une tribu ne s'applique qu'à une famille indexée par \(\mathbb N\) (énumération \(a_0,a_1,\dots\)). Pour \(A\) non dénombrable, rien ne garantit \(A\in\sigma(S)\), et pour \(X\) non dénombrable \(\sigma(S)\ne\mathcal P(X)\) (une partie dont \(A\) et \(A^c\) sont non dénombrables n'est pas dans \(\mathcal A\)).<br>
+    <b>Coquilles / points d'attention :</b> l'inclusion \(\sigma(S)\subset\mathcal A\) (minimalité de \(\sigma(S)\), car \(\mathcal A\) est une tribu contenant \(S\)) a été omise en rédaction ; justifier \(A=\bigcup_{a\in A}\{a\}\) par une énumération de \(A\) (en répétant un élément si \(A\) est fini), pas par « dénombrable donc ça marche » ; \(A\in\mathcal A\) et non \(A\subset\mathcal A\).
+  source: 'Énoncé et corrigé officiel : mesure/td/td2-corrige.pdf p.1-2 (Ex 3).'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exercice]
+- id: ex-mes-td2-ex08
+  exercice: mes-td2-ex08
+  notion: mesure-n-0012
+  recto: |-
+    <b>Exo mes-td2-ex08 : exemples de boréliens</b><br>
+    1. Démontrer que \(A:=\{x\in\mathbb R:\exists n\in\mathbb N^*,\ |x-n|<1/n\}\) est un borélien de \(\mathbb R\).<br>
+    2. Démontrer que \(B:=\{(x,x):x\in\mathbb R\}\) est un borélien de \(\mathbb R^2\).<br>
+    3. Démontrer que \(C:=\{(x,y)\in\mathbb R^2:x^2+y^2=1\text{ et }x\notin\mathbb Q\}\) est un borélien de \(\mathbb R^2\).<br>
+    4. Soient \(d\in\mathbb N^*\) et \((f_n)_{n\in\mathbb N}\) une suite de fonctions continues de \(\mathbb R^d\) dans \(\mathbb R\). Démontrer que \(D:=\{x\in\mathbb R^d:\lim_{n\to+\infty}f_n(x)=0\}\) est un borélien de \(\mathbb R^d\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(\mathcal B(\mathbb R^d)\) est une tribu qui contient les ouverts (donc les fermés). Un borélien s'obtient en écrivant l'ensemble avec des ouverts ou des fermés et des opérations <i>dénombrables</i> (réunion, intersection, complémentaire) ; pour une limite, on remplace « \(\forall\varepsilon\) » par « \(\forall m\in\mathbb N^*,\ \varepsilon=1/m\) » pour rendre l'intersection dénombrable.<br>
+    <b>Correction :</b><br>
+    1. \(A=\bigcup_{n\in\mathbb N^*}\,]n-\tfrac1n,n+\tfrac1n[\), réunion dénombrable d'ouverts, donc un ouvert, donc un borélien.<br>
+    2. \(B=f^{-1}(\{0\})\) avec \(f(x,y)=x-y\) continue et \(\{0\}\) fermé : \(B\) est un fermé de \(\mathbb R^2\), donc le complémentaire d'un ouvert, donc un borélien (stabilité par complémentaire).<br>
+    3. \(C=S^1\cap C_0\) avec \(S^1=\{x^2+y^2=1\}\) (fermé : image réciproque de \(\{1\}\) par \((x,y)\mapsto x^2+y^2\) continue) et \(C_0=\{(x,y):x\notin\mathbb Q\}\). Or \(C_0^c=\mathbb Q\times\mathbb R=\bigcup_{q\in\mathbb Q}\{q\}\times\mathbb R\) est une réunion <i>dénombrable</i> de fermés (droites verticales), donc un borélien ; \(C_0\) aussi par complémentaire, et \(C\) est une intersection de deux boréliens.<br>
+    4. \(\lim f_n(x)=0\iff\forall m\in\mathbb N^*,\exists N,\forall n\ge N,\ |f_n(x)|<1/m\), donc \(D=\bigcap_{m\in\mathbb N^*}\bigcup_{N\in\mathbb N}\bigcap_{n\ge N}f_n^{-1}(]-\tfrac1m,\tfrac1m[)\). Chaque \(f_n^{-1}(]-\tfrac1m,\tfrac1m[)\) est ouvert (\(f_n\) continue), donc borélien, et \(\mathcal B(\mathbb R^d)\) est stable par réunion et intersection dénombrables : \(D\) est un borélien.<br>
+    <b>Piège :</b> \(D\) n'est <i>pas</i> ouvert en général : les ouverts sont stables par réunion quelconque et intersection <i>finie</i>, pas dénombrable (\(\bigcap_n\,]-\tfrac1n,\tfrac1n[\,=\{0\}\)). La conclusion « borélien » vient de la stabilité de la <i>tribu</i>. De même \(\mathbb Q\) n'est ni ouvert ni fermé mais est borélien (réunion dénombrable de singletons fermés) : « ni ouvert ni fermé » ne prouve rien.<br>
+    <b>Coquilles / points d'attention :</b> \(n\in\mathbb N^*\) en 1 (\(1/n\)) ; pour 3, \(\mathbb Q^c\) est une partie de \(\mathbb R\), il faut \(\mathbb Q^c\times\mathbb R\subset\mathbb R^2\) ; \(\mathcal B(\mathbb R^2)\) et non \(\mathcal B(\mathbb R)\) en 2 ; en 4, \(x\in\mathbb R^d\) et non \(\mathbb R\). <b>Erreur du corrigé officiel (3) :</b> il écrit \(C=S^1\cup C_0\) et « union finie » ; c'est une intersection (« et »), la conclusion reste vraie.
+  source: 'Énoncé et corrigé officiel : mesure/td/td2-corrige.pdf p.5-6 (Ex 8) ; l''erreur union/intersection en 3 est celle du corrigé, vérifiée par Claude.'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exercice]
+- id: ex-mes-td3-ex01
+  exercice: mes-td3-ex01
+  notion: mesure-n-0014
+  recto: |-
+    <b>Exo mes-td3-ex01 : fonctions mesurables pour des tribus simples</b><br>
+    Décrire l'ensemble des fonctions mesurables de \((E,\mathcal E)\) dans \((\mathbb R,\mathcal B(\mathbb R))\) dans les cas suivants :<br>
+    1. \(E\) quelconque et \(\mathcal E:=\{\emptyset,E\}\).<br>
+    2. \(E\) quelconque et \(\mathcal E:=\mathcal P(E)\).<br>
+    3. \(E=\{a,b,c,d\}\) et \(\mathcal E:=\sigma(\{\{a\},\{b,c\}\})\).<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> \(f\) est mesurable si et seulement si \(f^{-1}(B)\in\mathcal E\) pour tout borélien \(B\). Plus la tribu de départ est pauvre, plus il y a de contraintes : \(f\) doit être constante sur chaque « atome » de \(\mathcal E\) (partie minimale non vide de la tribu) ; il suffit de tester avec les singletons \(\{y\}\), qui sont des fermés donc des boréliens.<br>
+    <b>Correction :</b><br>
+    1. <u>Les fonctions constantes</u>. Si \(f\equiv y\), alors \(f^{-1}(B)=E\) si \(y\in B\) et \(\emptyset\) sinon, dans \(\mathcal E\). Réciproquement, si \(f\) est mesurable, soit \(x_0\in E\) et \(y=f(x_0)\) : \(\{y\}\) est fermé donc borélien, donc \(f^{-1}(\{y\})\in\{\emptyset,E\}\) ; comme il contient \(x_0\), c'est \(E\), donc \(f\equiv y\).<br>
+    2. <u>Toutes les fonctions de \(E\) dans \(\mathbb R\)</u> : pour tout borélien \(B\), \(f^{-1}(B)\subset E\), donc \(f^{-1}(B)\in\mathcal P(E)=\mathcal E\).<br>
+    3. Les atomes de \(\mathcal E\) sont \(\{a\},\{b,c\},\{d\}\), et \(\mathcal E=\{\emptyset,\{a\},\{b,c\},\{d\},\{a,b,c\},\{a,d\},\{b,c,d\},E\}\) (les réunions d'atomes, 8 éléments). <u>\(f\) est mesurable si et seulement si \(f(b)=f(c)\)</u>, c'est-à-dire \(f=\alpha\mathbf 1_{\{a\}}+\beta\mathbf 1_{\{b,c\}}+\gamma\mathbf 1_{\{d\}}\), \((\alpha,\beta,\gamma)\in\mathbb R^3\). Si \(f(b)\ne f(c)\), le borélien \(B=\{f(b)\}\) a pour image réciproque une partie contenant \(b\) mais pas \(c\), qui n'est pas dans \(\mathcal E\) (tout élément de \(\mathcal E\) contenant \(b\) contient \(c\)). Si \(f(b)=f(c)\), \(f^{-1}(B)\) est la réunion de ceux des atomes dont la valeur est dans \(B\), donc dans \(\mathcal E\).<br>
+    <b>Piège :</b> « fonctions constantes », pas « surjectives » ; et il faut démontrer les <i>deux</i> sens (mesurable \(\Rightarrow\) constante : la ligne \(f^{-1}(\{y\})\in\mathcal E\) car \(\{y\}\) est fermé est la clé ; constante \(\Rightarrow\) mesurable).<br>
+    <b>Coquilles / points d'attention :</b> \(f^{-1}(B)\in\mathcal E\) et non \(\subset\mathcal E\) ; ne pas rayer la ligne « \(\{y\}\) fermé donc borélien » ; en 3, lister les 8 éléments de \(\mathcal E\) (\(\{d\}\) et \(E\) y sont) puis conclure sur les fonctions.
+  source: 'Énoncé : mesure/td/td3.pdf p.1 (Ex 1). Pas de corrigé officiel : vérifiée par Claude, à confirmer.'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exercice]
+- id: ex-mes-ex-2526-ex01
+  exercice: mes-ex-2526-ex01
+  notion: mesure-n-0021
+  recto: |-
+    <b>Exo mes-ex-2526-ex01 : troncature d'une fonction mesurable</b><br>
+    Soit \((X,\mathcal T)\) un espace mesurable et \(f:X\to\mathbb R\) mesurable. On définit \(g:X\to\mathbb R\) par \(g(x)=1\) si \(f(x)>1\), \(g(x)=f(x)\) si \(|f(x)|\le1\), \(g(x)=-1\) si \(f(x)<-1\).<br>
+    1. Montrer que \(-1\le g(x)\le1\) pour tout \(x\in X\).<br>
+    2. Caractériser \(\{g\le\alpha\}\) pour tout \(\alpha\in\mathbb R\).<br>
+    3. En déduire que \(g\) est mesurable.<br>
+    <b>Méthode ? Étape clé ?</b>
+  verso: |-
+    <b>Idée clé :</b> pour montrer la mesurabilité d'une fonction réelle, on montre \(\{g\le\alpha\}\in\mathcal T\) pour tout \(\alpha\) (ou \(\{g\ge a\}\)). On découpe selon \(\alpha\) en 3 cas et on ramène chaque ensemble à \(\emptyset\), \(X\) ou \(\{f\le\alpha\}\), qui sont dans \(\mathcal T\) car \(f\) est mesurable.<br>
+    <b>Correction :</b><br>
+    1. Si \(|f(x)|\le1\), \(g(x)=f(x)\in[-1,1]\) ; sinon \(g(x)=\pm1\). Dans tous les cas \(-1\le g(x)\le1\).<br>
+    2. Si \(\alpha<-1\) : \(\{g\le\alpha\}=\emptyset\). Si \(\alpha\ge1\) : \(\{g\le\alpha\}=X\). Si \(\alpha\in[-1,1[\) : \(\{g\le\alpha\}=\{f\le\alpha\}\) (si \(f(x)<-1\), \(g(x)=-1\le\alpha\) et \(f(x)\le\alpha\) ; si \(|f(x)|\le1\), \(g(x)=f(x)\) ; si \(f(x)>1\), \(g(x)=1>\alpha\) et \(f(x)>\alpha\), donc \(x\) n'est dans aucun des deux).<br>
+    3. \(\emptyset\in\mathcal T\), \(X=\emptyset^c\in\mathcal T\), et \(\{f\le\alpha\}=f^{-1}(]-\infty,\alpha])\in\mathcal T\) car \(f\) est mesurable. Donc \(\{g\le\alpha\}\in\mathcal T\) pour tout \(\alpha\) : \(g\) est mesurable.<br>
+    <b>Piège :</b> ne pas confondre les cas : pour \(\alpha\ge1\), \(\{g\le\alpha\}\) est tout \(X\) (pas \(\{f\le\alpha\}\)), et pour \(\alpha=-1\) c'est \(\{f\le-1\}\) (pas \(\{f>1\}\), où \(g=1\)). Tester chaque cas sur les trois zones de \(f\) (\(f<-1\), \(|f|\le1\), \(f>1\)).<br>
+    <b>Coquilles / points d'attention :</b> le tableau du 2 écrit en séance était faux dans quatre cas sur cinq ; ne garder que 3 cas (\(\alpha<-1\), \(-1\le\alpha<1\), \(\alpha\ge1\)) ; au 3, dire que chaque ensemble est l'image réciproque d'un intervalle (donc borélien) par \(f\) mesurable ; au 1, \(g(x)\in\{-1,1\}\) pour \(|f(x)|>1\), pas \(]-1,1[\).
+  source: 'Énoncé : uvsq/mesure/Théorie de la mesure/Annales/examen.pdf p.1 (Ex 1). Corrigé officiel : examen-corrige.pdf p.1.'
+  chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
+  priorite: 1
+  tags: [exercice]
