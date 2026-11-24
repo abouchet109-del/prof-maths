@@ -391,3 +391,58 @@
   resultat: non_fait
   palier_aide: 0
   note: dit non reussi, passe rapidement, redaction perdue ; corrige officiel p.4 a lire ; reprise avec Claude
+- date: 2026-11-23
+  exercice: mes-cc1-2526-ex01
+  resultat: aide
+  palier_aide: 1
+  note: contre-exemple X=N, A_n={n} faux (N dans A, complementaire vide fini) ; trouve A_n={2n} apres indice
+- date: 2026-11-23
+  exercice: mes-td2-ex03
+  resultat: aide
+  palier_aide: 1
+  note: tribu A bien montree ; indice palier 1 pour sigma(S)
+  questions:
+    Q1: aide
+    Q2: aide
+  points:
+    Q1: 'leger : justifier la reunion denombrable de singletons par enumeration'
+    Q2: 'leger : inclusion sigma(S) dans A oubliee ; A in A pas A inclus A'
+- date: 2026-11-23
+  exercice: mes-td2-ex08
+  resultat: presque
+  palier_aide: 3
+  note: Q3 bloque sur Q ni ouvert ni ferme ; confusion topologie/tribu en Q4
+  questions:
+    Q1: aide
+    Q2: aide
+    Q3: aide
+    Q4: presque
+  points:
+    Q1: 'leger : n dans N* pour 1/n'
+    Q2: 'leger : notations B(R2), x-y=0'
+    Q3: Q x R reunion denombrable de fermes non vue (etape cle donnee)
+    Q4: 'faute : D ouvert par intersection denombrable, au lieu de tribu'
+- date: 2026-11-23
+  exercice: mes-td3-ex01
+  resultat: presque
+  palier_aide: 1
+  note: surjectives pour constantes au debut ; Q3 palier 1 puis non fini
+  questions:
+    Q1: presque
+    Q2: reussi
+    Q3: non_fait
+  points:
+    Q1: sens mesurable implique constante non ecrit ({y} ferme raye)
+    Q3: 'non termine : liste de 6 elements sur 8, fonctions non decrites'
+- date: 2026-11-23
+  exercice: mes-ex-2526-ex01
+  resultat: presque
+  palier_aide: 0
+  note: bonne strategie, ecrit vite en fin de seance
+  questions:
+    Q1: reussi
+    Q2: presque
+    Q3: presque
+  points:
+    Q2: 'tableau faux dans 4 cas sur 5 : alpha>=1 donne X, alpha=-1 donne {f<=-1}'
+    Q3: 'leger : dire que chaque ensemble est f^-1 d''un intervalle'
