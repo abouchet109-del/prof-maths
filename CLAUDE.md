@@ -30,6 +30,7 @@ Système de révision du S5 de L3 à Paris Cité (topologie, mesure, modélisati
 - **Cartes d'erreurs :** plus créées depuis le 08/11/2026 (les existantes restent) : une confusion va dans `state/comprehension.yaml`, et les cartes de la notion repassent.
 - **Cartes d'exercices :** une par exercice **nouveau, réussi ou pas** (règle du 12/11/2026), plus une pour toute reprise ratée qui n'en a pas ; tag `exercice`, champ `exercice`, créée au debrief à partir du corrigé officiel, avec la section « Coquilles / points d'attention ». Détail : `docs/FORMATS.md`.
 - **Corriger une carte déjà importée :** la modifier dans `cartes.yaml`, puis lancer `python -I tools/anki.py --reexporter <ids>`. Même GUID, donc Anki met la note à jour sans toucher à la progression.
+- **Deux PC, un seul import** (règle du 24/11/2026) : un paquet `.apkg` s'importe dans Anki sur **un seul** PC, puis la synchro AnkiWeb l'amène sur l'autre. Ne jamais importer le même paquet sur les deux PC : une synchro normale garde alors les deux exemplaires (le 21/11/2026 : 503 doublons et des paquets suffixés « + », supprimés le 24/11). Une session sur l'autre PC qui crée des cartes les commite et laisse l'import au PC qui fait référence, ou importe elle-même et le dit pour que l'autre PC ne le refasse pas.
 
 ## Données et sécurité
 - `bibliotheque/`, `anki/paquets/`, `anki/export/`, `inventaire/anki/`, `inventaire/trackers/` restent hors du dépôt (données personnelles et PDF).
