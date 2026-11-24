@@ -11,9 +11,11 @@ description: "Début de séance de maths (L3). Calcule le plan de maintenant d'a
 
 ## 1. Calculer le plan
 
+0. `git pull --ff-only` : l'autre PC a peut-être poussé des résultats ou des cartes.
 1. Anki doit être ouvert (AnkiConnect lit les cartes déjà apprises). S'il est fermé, le plan estime les cartes et le dit sur une ligne de `NOW.md` : « Anki fermé : cartes estimées ».
 2. `python tools/plan.py seance` (depuis la racine). Il écrit `NOW.md`, mémore la séance dans `state/seance.yaml`. Il ne modifie jamais Anki.
 3. Lire `NOW.md`. Ne rien recalculer de tête, ne jamais l'éditer à la main.
+4. **Pousser tout de suite sur GitHub** (demande du 24/11/2026), avant de présenter le plan : `git add NOW.md state/` (chemins explicites), `git commit -m "seance: plan du AAAA-MM-JJ"`, puis `git push`. Ça pousse aussi les commits locaux pas encore partis. Un autre fichier modifié qui n'est pas de la séance : ne pas le commiter, le signaler en une ligne. Si le push échoue (l'autre PC a poussé entre-temps) : `git pull --rebase`, puis `git push`. En cas de conflit, s'arrêter et le dire.
 
 ## 2. Présenter en 3 lignes
 
