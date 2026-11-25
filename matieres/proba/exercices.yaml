@@ -552,6 +552,7 @@
   - proba-n-0027
   - proba-n-0031
   - proba-n-0069
+  - proba-n-0148
   importance: vital
   justification: fonction et loi Gamma, utilisées dans exa2425-ex04 et par2425-ex03
   difficulte: 2

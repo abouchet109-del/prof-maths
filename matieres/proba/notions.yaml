@@ -1228,3 +1228,48 @@
   source: {etab: l1-l2}
   essentiel: true
   requis_par: [proba-n-0143]
+# Tableau des lois usuelles (UPC, tableaux_lois.pdf) et loi gamma : ajout du 25/11/2026
+- id: proba-n-0145
+  titre: Loi uniforme sur un segment $[a,b]$
+  type: definition
+  chapitre: Chapitre 2 - Variables aléatoires réelles
+  sous_chapitre: 2.3 Variables aléatoires à densité
+  enonce: Densité $\frac{\mathbf 1_{[a,b]}}{b-a}$ ; $E=\frac{a+b}2$, $V=\frac{(b-a)^2}{12}$, $F_X$ affine sur $[a,b]$, $\varphi_X(t)=\frac{e^{itb}-e^{ita}}{it(b-a)}$.
+  source:
+    etab: paris-cite
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 2
+  essentiel: true
+- id: proba-n-0146
+  titre: Loi exponentielle
+  type: definition
+  chapitre: Chapitre 2 - Variables aléatoires réelles
+  sous_chapitre: 2.3 Variables aléatoires à densité
+  enonce: Densité $\lambda e^{-\lambda x}\mathbf 1_{x\ge0}$ ; $E=\frac1\lambda$, $V=\frac1{\lambda^2}$, $F_X(t)=1-e^{-\lambda t}$ ($t>0$), $\varphi_X(t)=\frac\lambda{\lambda-it}$.
+  source:
+    etab: paris-cite
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 2
+  essentiel: true
+- id: proba-n-0147
+  titre: Loi de Cauchy
+  type: definition
+  chapitre: Chapitre 2 - Variables aléatoires réelles
+  sous_chapitre: 2.3 Variables aléatoires à densité
+  enonce: Densité $\frac1{\pi(1+x^2)}$ ; aucun moment ; $F_X(t)=\frac1\pi\arctan t+\frac12$ ; $\varphi_X(t)=e^{-|t|}$.
+  source:
+    etab: paris-cite
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 2
+  essentiel: true
+- id: proba-n-0148
+  titre: 'Fonction $\Gamma$ et loi gamma de paramètres $\theta$ (taux) et $p$ (forme)'
+  type: definition
+  chapitre: Chapitre 2 - Variables aléatoires réelles
+  sous_chapitre: 2.3 Variables aléatoires à densité
+  enonce: $\Gamma(x)=\int_0^{+\infty}t^{x-1}e^{-t}dt$ ; densité $f_{\theta,p}(x)=\frac{\theta^p}{\Gamma(p)}x^{p-1}e^{-\theta x}\mathbf 1_{x>0}$ ; $E=\frac p\theta$, $V=\frac p{\theta^2}$, $\varphi_X(t)=\left(\frac\theta{\theta-it}\right)^p$.
+  source:
+    etab: paris-cite
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 36
+  essentiel: true

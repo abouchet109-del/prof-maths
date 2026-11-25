@@ -1500,3 +1500,17 @@ def test_requises_sans_plafond_et_notion_entiere():
     # une carte d'erreur compte seule : elle n'entraîne pas toute sa notion
     assert P.premieres_notions(["e", "x1", "y1", "x2"], {"e", "x1", "y1", "x2"},
                                {"e": "X", "x1": "X", "y1": "Y", "x2": "X"}, 2, {"e"}) == ["e", "x1", "x2"]
+
+
+# ----------------------------------------------------------- tag hors_quota (25/11/2026 : tableau des lois)
+def test_hors_quota_toutes_servies_sans_compter_comme_notions():
+    c = ctx_requis(dispo={"notions_par_jour": 1})
+    c["cartes"].append(dict(carte("cL1", "n-d"), tags=["definition", "hors_quota"]))
+    c["cartes"].append(dict(carte("cL2", "n-d"), tags=["preuve", "hors_quota"]))
+    p = P.plan_jour(c, D(2026, 11, 4))
+    k = P.anki(c, p)
+    assert k["nouvelles"] == ["cA"]                                  # le quota (1 notion) n'est pas pris par n-d
+    assert k["requises"][-2:] == ["cL1", "cL2"] and "cD" not in k["requises"]   # toutes, mais pas cD (n-d normale)
+    assert k["plafond"]["cartes_revues"] == 2 and k["plafond"]["notions_requises"] == 2
+    L = P.rediger(c, p, k)
+    assert any("dont 3 en plus du quota" in x and "dont 2 hors quota" in x for x in L)

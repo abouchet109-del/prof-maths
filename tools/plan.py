@@ -772,10 +772,14 @@ def anki(ctx, plan, client=None) -> dict:
     cours = [c["id"] for c in libres if not est_carte_exercice(c)]
     notion_de = {c["id"]: c.get("notion") for c in libres}
     a_apprendre = ids_a_apprendre(client, cours, premier_don(ctx, d)) if client else set(cours)
-    plafond = plafond_notions(ctx, plan["date"], len({notion_de[i] for i in a_apprendre}))
+    # Tag `hors_quota` (25/11/2026 : tableau des lois, revu d'un coup) : ces cartes ne comptent pas comme notions
+    # nouvelles ; tant qu'elles ne sont pas apprises, elles s'ajoutent toutes, hors quota, sans plafond.
+    hors = {c["id"] for c in libres if "hors_quota" in (c.get("tags") or [])}
+    plafond = plafond_notions(ctx, plan["date"], len({notion_de[i] for i in a_apprendre - hors}))
     limite = 0 if off else plafond["plafond"]
     limite_exos = 0 if off else ctx["dispo"].get("exercices_par_jour", EXERCICES_DEFAUT)
-    ids = [c["id"] for c in ordre if not est_carte_exercice(c)]
+    ids_tous = [c["id"] for c in ordre if not est_carte_exercice(c)]
+    ids = [i for i in ids_tous if i not in hors]
     ids_exos = [c["id"] for c in ordre if est_carte_exercice(c)]
     requis = set() if off else notions_requises(ctx, plan)
     seules = {c["id"] for c in libres if TAGS_PRIORITAIRES & set(c.get("tags") or [])} | \
@@ -783,8 +787,10 @@ def anki(ctx, plan, client=None) -> dict:
     nouvelles = premieres_notions(ids, a_apprendre, notion_de, limite, seules)
     # Notions dont les exercices du jour ont besoin et pas encore apprises : toutes, sans plafond (23/11/2026).
     deja = set(nouvelles)
-    requises = [i for i in ids + [i for i in cours if i not in set(ids)]
+    requises = [i for i in ids + [i for i in cours if i not in set(ids) and i not in hors]
                 if i in a_apprendre and i not in deja and notion_de.get(i) in requis]
+    revues = [] if off else [i for i in ids_tous + [i for i in cours if i not in set(ids_tous)]
+                             if i in hors and i in a_apprendre]
     if client:
         exercices = premieres_nouvelles(client, ids_exos, limite_exos)
         liees = [c["id"] for c in libres if c.get("notion") in notions_jour]
@@ -796,6 +802,8 @@ def anki(ctx, plan, client=None) -> dict:
     choisis = nouvelles + requises
     plafond["notions_jour"] = len({notion_de.get(i) for i in nouvelles if i not in seules})
     plafond["notions_requises"] = len({notion_de.get(i) for i in requises})
+    plafond["cartes_revues"] = len(revues)
+    requises = requises + revues             # même traitement en aval (recherche Anki, anki_plan)
     anciennes = [int(i[4:]) for i in choisis if i.startswith("nid:")]
     nouvelles = [i for i in nouvelles if not i.startswith("nid:")]
     requises = [i for i in requises if not i.startswith("nid:")]
@@ -1077,8 +1085,10 @@ def rediger(ctx, plan, cartes) -> list[str]:
     anciennes = cartes.get("anciennes") or []
     req = cartes.get("requises") or []
     apprendre = cartes["nouvelles"] + req
+    nrev = (cartes.get("plafond") or {}).get("cartes_revues", 0)
     L += ["", f"## Anki — cours, à apprendre ({len(apprendre)} nouvelles"
-              + (f", dont {len(req)} en plus du quota : les exercices du jour en ont besoin" if req else "")
+              + (f", dont {len(req) - nrev} en plus du quota : les exercices du jour en ont besoin" if len(req) > nrev else "")
+              + (f", dont {nrev} hors quota à revoir d'un coup (tag `hors_quota`)" if nrev else "")
               + (f" + {len(anciennes)} anciennes" if anciennes else "") + ")"]
     p = cartes.get("plafond")
     if p:

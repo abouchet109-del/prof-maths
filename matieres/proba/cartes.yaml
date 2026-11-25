@@ -2307,3 +2307,383 @@
   chapitre: 'Chapitre 5 - Convergences'
   priorite: 1
   tags: [propriete]
+- id: proba-a-108-1
+  notion: proba-n-0016
+  recto: 'Déf 2.3 : loi de Dirac'
+  verso: Soit \(X\) une variable aléatoire définie sur un espace probabilisé \((\Omega,\mathcal A,P)\). On dit que \(X\) suit la loi de Dirac en \(a\in\mathbb R\), notée \(\delta_a\), si \(P(X=a)=1\). Autrement dit, \(X\) est alors déterministe (non aléatoire). Son support est réduit au singleton \(S_X=\{a\}\).
+  source: Poly Probabilités 5, ch. 2, p. 12 (PDF) ; Tableaux des lois usuelles (UPC), p. 1
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - definition
+  - hors_quota
+- id: proba-a-108-2
+  notion: proba-n-0016
+  recto: 'Prop. : moments et fonction caractéristique de la loi de Dirac'
+  verso: 'Soit \(X\sim\delta_a\), \(a\in\mathbb R\). Alors \(X\) admet des moments de tout ordre, avec \(E[X^n]=a^n\) pour tout \(n\ge1\) ; \(E[X]=a\), \(V[X]=0\) ; \(\varphi_X(t)=e^{ita}\) pour tout \(t\in\mathbb R\).<br>Preuve : \(X\) vaut \(a\) presque sûrement, donc est bornée, donc admet des moments de tout ordre. \(V[X]=E[X^2]-E[X]^2=a^2-a^2=0\) (une variable constante est de variance nulle). Enfin \(\varphi_X(t)=E[e^{itX}]=e^{ita}\).'
+  source: Tableaux des lois usuelles (UPC), p. 1 et 3
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - propriete
+  - hors_quota
+- id: proba-a-109-1
+  notion: proba-n-0017
+  recto: 'Déf 2.4 : loi de Bernoulli'
+  verso: Soit \(X\) une variable aléatoire définie sur un espace probabilisé \((\Omega,\mathcal A,P)\). On dit que \(X\) suit la loi de Bernoulli de paramètre \(p\in[0,1]\), notée \(\mathcal B(p)\), si \(P(X=1)=p\) et \(P(X=0)=1-p\). Son support est la paire \(\{0,1\}\) si \(p\in]0,1[\). Toute loi ayant pour support \(\{0,1\}\) est une loi de Bernoulli.
+  source: Poly Probabilités 5, ch. 2, p. 13 (PDF) ; Tableaux des lois usuelles (UPC), p. 1
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - definition
+  - hors_quota
+- id: proba-a-109-2
+  notion: proba-n-0017
+  recto: 'Prop. : moments et fonction caractéristique de la loi de Bernoulli'
+  verso: Soit \(X\sim\mathcal B(p)\), \(p\in[0,1]\). Alors \(X\) admet des moments de tout ordre ; \(E[X]=p\), \(V[X]=p(1-p)\) ; \(\varphi_X(t)=1-p+pe^{it}\) pour tout \(t\in\mathbb R\).
+  source: Tableaux des lois usuelles (UPC), p. 1
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - propriete
+  - hors_quota
+- id: proba-a-109-3
+  notion: proba-n-0017
+  recto: 'Preuve : moments et fonction caractéristique de la loi de Bernoulli'
+  verso: Soit \(X\sim\mathcal B(p)\). Le support de \(\mathcal B(p)\) est \(\{0,1\}\), donc \(X\) est bornée et admet des moments de tout ordre. On a \(E[X]=0\times P(X=0)+1\times P(X=1)=p\). De même, \(E[X^2]=0^2\times P(X=0)+1^2\times P(X=1)=p\), donc \(V[X]=p-p^2=p(1-p)\). Enfin, \(\varphi_X(t)=e^{0}P(X=0)+e^{it}P(X=1)=1-p+pe^{it}\) pour tout \(t\in\mathbb R\).
+  source: Tableaux des lois usuelles (UPC), p. 3
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-110-1
+  notion: proba-n-0018
+  recto: 'Déf 2.5 : loi binomiale'
+  verso: 'Soit \(X\) une variable aléatoire définie sur un espace probabilisé \((\Omega,\mathcal A,P)\). On dit que \(X\) suit une loi binomiale de paramètres \(n\in\mathbb N^*\) et \(p\in[0,1]\), notée \(\mathcal B(n,p)\), si pour tout \(k=0,\dots,n\) : \(P(X=k)=\binom nk p^k(1-p)^{n-k}\). Son support est l''ensemble \(\{0,\dots,n\}\) si \(p\in]0,1[\).<br>Exemple : si \(X\) est le nombre de Pile dans un lancer de \(n\) pièces indépendantes de probabilité de succès \(p\), alors \(X\sim\mathcal B(n,p)\).'
+  source: Poly Probabilités 5, ch. 2, p. 13 (PDF) ; Tableaux des lois usuelles (UPC), p. 1
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - definition
+  - hors_quota
+- id: proba-a-110-2
+  notion: proba-n-0018
+  recto: 'Prop. : moments et fonction caractéristique de la loi binomiale'
+  verso: Soit \(X\sim\mathcal B(n,p)\), \(n\ge1\), \(p\in[0,1]\). Alors \(X\) admet des moments de tout ordre ; \(E[X]=np\), \(V[X]=np(1-p)\) ; \(\varphi_X(t)=(1-p+pe^{it})^n\) pour tout \(t\in\mathbb R\).
+  source: Tableaux des lois usuelles (UPC), p. 1
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - propriete
+  - hors_quota
+- id: proba-a-110-3
+  notion: proba-n-0018
+  recto: 'Preuve : espérance et variance de la loi binomiale (méthode 1, dérivées)'
+  verso: 'Soit \(X\sim\mathcal B(n,p)\). Son support \(\{0,1,\dots,n\}\) est fini donc borné : \(X\) admet des moments de tout ordre. On a \(E(X)=\sum_{k=0}^nk\binom nkp^k(1-p)^{n-k}=p\sum_{k=1}^nk\binom nkp^{k-1}(1-p)^{n-k}\). On définit \(f:z\mapsto\sum_{k=0}^n\binom nkz^k(1-p)^{n-k}=(z+1-p)^n\). \(f\) est dérivable et \(f''(z)=\sum_{k=1}^n\binom nkkz^{k-1}(1-p)^{n-k}=n(z+1-p)^{n-1}\). Donc \(E(X)=pf''(p)=pn(p+1-p)^{n-1}=np\).<br>Pour \(E(X^2)\), on fait apparaître \(f''''\) en écrivant \(k^2=k(k-1)+k\) (le terme \(k=0\) est nul) : \(E(X^2)=\sum_{k=1}^n\binom nkk(k-1)p^k(1-p)^{n-k}+\sum_{k=1}^n\binom nkkp^k(1-p)^{n-k}=p^2f''''(p)+pf''(p)=p^2n(n-1)+np\). Ainsi \(V(X)=E(X^2)-E(X)^2=p^2n(n-1)+np-n^2p^2=np(1-p)\).'
+  source: Tableaux des lois usuelles (UPC), p. 3
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-110-4
+  notion: proba-n-0018
+  recto: 'Preuve : espérance et variance de la loi binomiale (méthode 2, somme de Bernoulli)'
+  verso: Soit \(X\sim\mathcal B(n,p)\). D'après le cours, \(X\) a la même loi que la somme de \(n\) variables \(X_1,\dots,X_n\) de Bernoulli indépendantes de paramètre \(p\) (la loi binomiale est la loi du nombre de succès lors de \(n\) expériences de Bernoulli indépendantes). Par linéarité de l'espérance, \(E(X)=E(X_1)+\dots+E(X_n)=np\). Les variables étant indépendantes, \(V(X)=V(X_1+\dots+X_n)=V(X_1)+\dots+V(X_n)=np(1-p)\).
+  source: Tableaux des lois usuelles (UPC), p. 3
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-110-5
+  notion: proba-n-0018
+  recto: 'Preuve : fonction caractéristique de la loi binomiale (deux méthodes)'
+  verso: 'Soit \(X\sim\mathcal B(n,p)\).<br>Méthode 1 : \(\varphi_X(t)=\sum_{k=0}^n\binom nke^{itk}p^k(1-p)^{n-k}\) ; on reconnaît la formule du binôme de Newton : \(\varphi_X(t)=(pe^{it}+1-p)^n\).<br>Méthode 2 : \(\varphi_X(t)=E(e^{itX})=E(e^{it(X_1+\dots+X_n)})\), avec \(X_1,\dots,X_n\) indépendantes de loi de Bernoulli de paramètre \(p\). Donc \(\varphi_X(t)=E(e^{itX_1}\cdots e^{itX_n})=E(e^{itX_1})\cdots E(e^{itX_n})\) par indépendance, et comme les \(X_i\) ont même loi de Bernoulli, \(\varphi_X(t)=(pe^{it}+1-p)^n\).'
+  source: Tableaux des lois usuelles (UPC), p. 3
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-111-1
+  notion: proba-n-0020
+  recto: 'Déf 2.7 : loi géométrique'
+  verso: 'Soit \(X\) une variable aléatoire définie sur un espace probabilisé \((\Omega,\mathcal A,P)\). On dit que \(X\) suit une loi géométrique de paramètre \(p\in]0,1[\), notée \(\mathcal G(p)\), si \(P(X=k)=p(1-p)^{k-1}\) pour tout \(k\ge1\). Son support est \(\mathbb N^*\).<br>Remarque 2.8 : elle modélise le nombre de lancers successifs et indépendants d''une pièce de probabilité de Pile égale à \(p\) qu''il est nécessaire d''effectuer pour obtenir le premier Pile.'
+  source: Poly Probabilités 5, ch. 2, p. 14 (PDF) ; Tableaux des lois usuelles (UPC), p. 1
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - definition
+  - hors_quota
+- id: proba-a-111-2
+  notion: proba-n-0020
+  recto: 'Prop. : moments et fonction caractéristique de la loi géométrique'
+  verso: Soit \(X\sim\mathcal G(p)\), \(p\in]0,1[\). Alors \(X\) admet des moments de tout ordre ; \(E[X]=\dfrac1p\), \(V[X]=\dfrac{1-p}{p^2}\) ; \(\varphi_X(t)=\dfrac{pe^{it}}{1-(1-p)e^{it}}\) pour tout \(t\in\mathbb R\).
+  source: Tableaux des lois usuelles (UPC), p. 1
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - propriete
+  - hors_quota
+- id: proba-a-111-3
+  notion: proba-n-0020
+  recto: 'Preuve : la loi géométrique a des moments de tout ordre'
+  verso: 'Soit \(X\sim\mathcal G(p)\) et \(n\ge1\). Il s''agit de montrer que \(E(|X|^n)\lt\infty\). Or \(E(|X|^n)=\sum_{k=1}^{+\infty}k^np(1-p)^{k-1}\) : c''est une série à termes positifs, on peut toujours l''écrire, mais il faut prouver qu''elle converge. Critère de d''Alembert sur \(u_k=k^n(1-p)^{k-1}\) : \(\dfrac{u_{k+1}}{u_k}=\left(\dfrac{k+1}k\right)^n(1-p)\xrightarrow[k\to\infty]{}1-p\lt1\). La série converge, donc \(E(|X|^n)\lt\infty\).'
+  source: Tableaux des lois usuelles (UPC), p. 3
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-111-4
+  notion: proba-n-0020
+  recto: 'Preuve : espérance et variance de la loi géométrique'
+  verso: 'Soit \(X\sim\mathcal G(p)\). On a \(E(X)=p\sum_{k=1}^{+\infty}k(1-p)^{k-1}\). On pose \(g:z\mapsto\sum_{k=0}^{+\infty}z^k\), série entière (géométrique) de rayon de convergence 1 : \(g\) est infiniment dérivable sur \(]-1,1[\), \(g(z)=\frac1{1-z}\) et \(g''(z)=\sum_{k=1}^{+\infty}kz^{k-1}=\frac1{(1-z)^2}\). Donc \(E(X)=pg''(1-p)=\dfrac p{(1-(1-p))^2}=\dfrac1p\).<br>De même, avec \(k^2=k(k-1)+k\) et le terme \(k=1\) de la première somme nul : \(E(X^2)=p(1-p)\sum_{k=2}^{+\infty}k(k-1)(1-p)^{k-2}+p\sum_{k=1}^{+\infty}k(1-p)^{k-1}=p(1-p)g''''(1-p)+pg''(1-p)\). Comme \(g''''(z)=\frac2{(1-z)^3}\), \(E(X^2)=\dfrac{2(1-p)}{p^2}+\dfrac1p\). Finalement \(V(X)=\dfrac{2(1-p)}{p^2}+\dfrac1p-\dfrac1{p^2}=\dfrac1{p^2}-\dfrac1p=\dfrac{1-p}{p^2}\).'
+  source: Tableaux des lois usuelles (UPC), p. 3-4
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-111-5
+  notion: proba-n-0020
+  recto: 'Preuve : fonction caractéristique de la loi géométrique'
+  verso: 'Soit \(X\sim\mathcal G(p)\). On a \(\varphi_X(t)=p\sum_{k=1}^{+\infty}e^{itk}(1-p)^{k-1}=pe^{it}\sum_{k=1}^{+\infty}\left(e^{it}(1-p)\right)^{k-1}\). C''est une série géométrique de raison \(e^{it}(1-p)\), de module \(1-p\lt1\), donc convergente : \(\varphi_X(t)=\dfrac{pe^{it}}{1-(1-p)e^{it}}\).'
+  source: Tableaux des lois usuelles (UPC), p. 4
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-112-1
+  notion: proba-n-0019
+  recto: 'Déf 2.6 : loi de Poisson'
+  verso: 'Soit \(X\) une variable aléatoire définie sur un espace probabilisé \((\Omega,\mathcal A,P)\). On dit que \(X\) suit une loi de Poisson de paramètre \(\lambda\in]0,+\infty[\), notée \(\mathcal P(\lambda)\), si pour tout \(k\ge0\) : \(P(X=k)=e^{-\lambda}\dfrac{\lambda^k}{k!}\). Son support est \(\mathbb N\) tout entier : toutes les masses \(P(X=k)\) sont strictement positives.'
+  source: Poly Probabilités 5, ch. 2, p. 14 (PDF) ; Tableaux des lois usuelles (UPC), p. 1
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - definition
+  - hors_quota
+- id: proba-a-112-2
+  notion: proba-n-0019
+  recto: 'Prop. : moments et fonction caractéristique de la loi de Poisson'
+  verso: Soit \(X\sim\mathcal P(\lambda)\), \(\lambda\gt0\). Alors \(X\) admet des moments de tout ordre ; \(E[X]=\lambda\), \(V[X]=\lambda\) ; \(\varphi_X(t)=e^{\lambda(e^{it}-1)}\) pour tout \(t\in\mathbb R\).
+  source: Tableaux des lois usuelles (UPC), p. 1
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - propriete
+  - hors_quota
+- id: proba-a-112-3
+  notion: proba-n-0019
+  recto: 'Preuve : la loi de Poisson a des moments de tout ordre'
+  verso: 'Soit \(X\sim\mathcal P(\lambda)\) et \(n\ge1\). Il s''agit de montrer que \(E(|X|^n)=\sum_{k=0}^{+\infty}k^ne^{-\lambda}\frac{\lambda^k}{k!}\lt\infty\) (série à termes positifs, toujours définie, dont il faut prouver la convergence). Critère de d''Alembert sur \(u_k=\frac{k^n\lambda^k}{k!}\) : \(\dfrac{u_{k+1}}{u_k}=\left(\dfrac{k+1}k\right)^n\dfrac\lambda{k+1}\xrightarrow[k\to\infty]{}0\lt1\). La série converge, donc \(E(|X|^n)\lt\infty\).'
+  source: Tableaux des lois usuelles (UPC), p. 4
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-112-4
+  notion: proba-n-0019
+  recto: 'Preuve : espérance et variance de la loi de Poisson'
+  verso: Soit \(X\sim\mathcal P(\lambda)\). \(E(X)=e^{-\lambda}\sum_{k=0}^{+\infty}k\frac{\lambda^k}{k!}\) ; le terme \(k=0\) est nul, donc, par le changement d'indice \(k-1\to k\), \(E(X)=e^{-\lambda}\lambda\sum_{k=1}^{+\infty}\frac{\lambda^{k-1}}{(k-1)!}=e^{-\lambda}\lambda\sum_{k=0}^{+\infty}\frac{\lambda^k}{k!}=\lambda e^{-\lambda}e^\lambda=\lambda\).<br>De même, \(E(X^2)=e^{-\lambda}\sum_{k=1}^{+\infty}k\frac{\lambda^k}{(k-1)!}=e^{-\lambda}\sum_{k=1}^{+\infty}(k-1)\frac{\lambda^k}{(k-1)!}+e^{-\lambda}\sum_{k=1}^{+\infty}\frac{\lambda^k}{(k-1)!}=e^{-\lambda}\sum_{k=2}^{+\infty}\frac{\lambda^k}{(k-2)!}+e^{-\lambda}\sum_{k=1}^{+\infty}\frac{\lambda^k}{(k-1)!}=\lambda^2+\lambda\). Donc \(V(X)=E(X^2)-E(X)^2=\lambda\).
+  source: Tableaux des lois usuelles (UPC), p. 4
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-112-5
+  notion: proba-n-0019
+  recto: 'Preuve : fonction caractéristique de la loi de Poisson'
+  verso: 'Soit \(X\sim\mathcal P(\lambda)\). On a \(\varphi_X(t)=\sum_{k=0}^{+\infty}e^{-\lambda}e^{itk}\frac{\lambda^k}{k!}=e^{-\lambda}\sum_{k=0}^{+\infty}\frac{(\lambda e^{it})^k}{k!}\), série de rayon de convergence infini. On reconnaît l''exponentielle : \(\varphi_X(t)=e^{-\lambda}e^{\lambda e^{it}}=e^{\lambda(e^{it}-1)}\).'
+  source: Tableaux des lois usuelles (UPC), p. 4
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-113-1
+  notion: proba-n-0145
+  recto: 'Déf : loi uniforme sur un segment \([a,b]\)'
+  verso: Soit \(X\) une variable aléatoire définie sur un espace probabilisé \((\Omega,\mathcal A,P)\). Soit \(a\lt b\). On dit que \(X\) suit la loi uniforme sur \([a,b]\), notée \(\mathcal U([a,b])\), si elle admet pour densité \(f_X(x)=\dfrac{\mathbf 1_{[a,b]}(x)}{b-a}\). Son support est \(S_X=[a,b]\).
+  source: Tableaux des lois usuelles (UPC), p. 2
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - definition
+  - hors_quota
+- id: proba-a-113-2
+  notion: proba-n-0145
+  recto: 'Prop. : moments, fonction de répartition et fonction caractéristique de la loi uniforme sur \([a,b]\)'
+  verso: Soit \(X\sim\mathcal U([a,b])\), \(a\lt b\). Alors \(X\) admet des moments de tout ordre ; \(E[X]=\dfrac{a+b}2\), \(V[X]=\dfrac{(b-a)^2}{12}\) ;<br>\(F_X(t)=P(X\le t)=0\) si \(t\le a\), \(\dfrac{t-a}{b-a}\) si \(a\lt t\le b\), \(1\) si \(t\ge b\) ;<br>\(\varphi_X(t)=\dfrac{e^{itb}-e^{ita}}{it(b-a)}\) pour \(t\ne0\) (et \(\varphi_X(0)=1\)).
+  source: Tableaux des lois usuelles (UPC), p. 2
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - propriete
+  - hors_quota
+- id: proba-a-113-3
+  notion: proba-n-0145
+  recto: 'Preuve : espérance et variance de la loi uniforme sur \([a,b]\)'
+  verso: Soit \(X\sim\mathcal U([a,b])\). Son support \([a,b]\) est borné, donc \(X\) admet des moments de tout ordre. \(E(X)=\frac1{b-a}\int_a^bx\,dx=\frac1{b-a}\left[\frac{x^2}2\right]_a^b=\frac{b^2-a^2}{2(b-a)}=\frac{a+b}2\). De même, \(E(X^2)=\frac1{b-a}\int_a^bx^2\,dx=\frac1{b-a}\left[\frac{x^3}3\right]_a^b=\frac{b^3-a^3}{3(b-a)}=\frac{b^2+ab+a^2}3\). Ainsi \(V(X)=\frac{b^2+ab+a^2}3-\frac{a^2+2ab+b^2}4=\frac{a^2+b^2-2ab}{12}=\frac{(b-a)^2}{12}\).
+  source: Tableaux des lois usuelles (UPC), p. 4
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-113-4
+  notion: proba-n-0145
+  recto: 'Preuve : fonction de répartition et fonction caractéristique de la loi uniforme sur \([a,b]\)'
+  verso: 'Soit \(X\sim\mathcal U([a,b])\). Comme \(X\in[a,b]\) presque sûrement, \(F_X(t)=P(X\le t)=0\) si \(t\le a\) et vaut \(1\) si \(t\ge b\). Pour \(t\in[a,b]\) : \(F_X(t)=\frac1{b-a}\int_a^tdx=\frac{t-a}{b-a}\).<br>Pour tout \(t\in\mathbb R\), \(\varphi_X(t)=\frac1{b-a}\int_a^be^{ixt}\,dx\). Si \(t\ne0\), \(\varphi_X(t)=\frac1{b-a}\left[\frac{e^{ixt}}{it}\right]_a^b=\frac{e^{itb}-e^{ita}}{it(b-a)}\). La formule reste vraie en \(t=0\) par prolongement par continuité (la fonction vaut alors 1).'
+  source: Tableaux des lois usuelles (UPC), p. 4
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-114-1
+  notion: proba-n-0146
+  recto: 'Déf : loi exponentielle'
+  verso: Soit \(X\) une variable aléatoire définie sur un espace probabilisé \((\Omega,\mathcal A,P)\). Soit \(\lambda\gt0\). On dit que \(X\) suit la loi exponentielle de paramètre \(\lambda\), notée \(\mathcal E(\lambda)\), si elle admet pour densité \(f_X(x)=\lambda e^{-\lambda x}\mathbf 1_{x\ge0}\). Son support est \(S_X=[0,+\infty[\). (Le poly, p. 36, note ce paramètre \(\theta\).)
+  source: Tableaux des lois usuelles (UPC), p. 2
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - definition
+  - hors_quota
+- id: proba-a-114-2
+  notion: proba-n-0146
+  recto: 'Prop. : moments, fonction de répartition et fonction caractéristique de la loi exponentielle'
+  verso: Soit \(X\sim\mathcal E(\lambda)\), \(\lambda\gt0\). Alors \(X\) admet des moments de tout ordre ; \(E[X]=\dfrac1\lambda\), \(V[X]=\dfrac1{\lambda^2}\) ;<br>\(F_X(t)=0\) si \(t\le0\), \(1-e^{-\lambda t}\) si \(t\gt0\) ;<br>\(\varphi_X(t)=\left(1-\dfrac{it}\lambda\right)^{-1}=\dfrac\lambda{\lambda-it}\) pour tout \(t\in\mathbb R\).
+  source: Tableaux des lois usuelles (UPC), p. 2
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - propriete
+  - hors_quota
+- id: proba-a-114-3
+  notion: proba-n-0146
+  recto: 'Preuve : la loi exponentielle a des moments de tout ordre'
+  verso: 'Soit \(X\sim\mathcal E(\lambda)\) et \(n\ge1\). On a \(E(|X|^n)=\lambda\int_0^{+\infty}x^ne^{-\lambda x}\,dx\) (on peut l''écrire car on intègre une fonction positive, mais il faut montrer que l''intégrale est finie). La fonction \(f:x\mapsto x^ne^{-\lambda x}\) est continue sur \([0,+\infty[\), donc intégrable sur tout segment \([0,A]\), et en \(+\infty\), \(f(x)=o(1/x^2)\) par croissance comparée. Par le critère de Riemann, \(f\) est intégrable sur \([0,+\infty[\) : \(X\) admet des moments de tout ordre.'
+  source: Tableaux des lois usuelles (UPC), p. 5
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-114-4
+  notion: proba-n-0146
+  recto: 'Preuve : espérance et variance de la loi exponentielle'
+  verso: 'Soit \(X\sim\mathcal E(\lambda)\). \(E(X)=\lambda\int_0^{+\infty}xe^{-\lambda x}\,dx\). En intégrant par parties, \(E(X)=\left[-xe^{-\lambda x}\right]_0^{+\infty}+\int_0^{+\infty}e^{-\lambda x}\,dx\) ; le terme intégré vaut 0, donc \(E(X)=\left[\frac{e^{-\lambda x}}{-\lambda}\right]_0^{+\infty}=\frac1\lambda\).<br>De même, \(E(X^2)=\lambda\int_0^{+\infty}x^2e^{-\lambda x}\,dx=\left[-x^2e^{-\lambda x}\right]_0^{+\infty}+2\int_0^{+\infty}xe^{-\lambda x}\,dx\) : le premier terme vaut 0, le second \(\frac2\lambda E(X)=\frac2{\lambda^2}\). Donc \(V(X)=\frac2{\lambda^2}-\frac1{\lambda^2}=\frac1{\lambda^2}\).'
+  source: Tableaux des lois usuelles (UPC), p. 5
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-114-5
+  notion: proba-n-0146
+  recto: 'Preuve : fonction de répartition et fonction caractéristique de la loi exponentielle'
+  verso: Soit \(X\sim\mathcal E(\lambda)\). Comme \(X\ge0\) presque sûrement, \(F_X(t)=P(X\le t)=0\) pour tout \(t\le0\). Pour \(t\gt0\), \(F_X(t)=\lambda\int_0^te^{-\lambda x}\,dx=\left[-e^{-\lambda x}\right]_0^t=1-e^{-\lambda t}\).<br>Pour tout \(t\in\mathbb R\), \(\varphi_X(t)=E(e^{itX})=\lambda\int_0^{+\infty}e^{itx}e^{-\lambda x}\,dx=\lambda\left[\frac{e^{(it-\lambda)x}}{it-\lambda}\right]_0^{+\infty}=\frac\lambda{\lambda-it}=\frac1{1-\frac{it}\lambda}\), car \(|e^{(it-\lambda)x}|=e^{-\lambda x}\to0\) en \(+\infty\).
+  source: Tableaux des lois usuelles (UPC), p. 5 ; Poly Probabilités 5, ch. 3, p. 36 (PDF)
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-115-1
+  notion: proba-n-0107
+  recto: 'Prop. : densité, moments, fonction de répartition et fonction caractéristique de \(\mathcal N(m,\sigma^2)\)'
+  verso: 'Soit \(X\sim\mathcal N(m,\sigma^2)\), \(m\in\mathbb R\), \(\sigma^2\gt0\). Son support est \(\mathbb R\) et sa densité est \(f_X(x)=\dfrac1{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-m)^2}{2\sigma^2}}\), \(x\in\mathbb R\). \(X\) admet des moments de tout ordre ; \(E[X]=m\), \(V[X]=\sigma^2\) ; \(F_X\) n''est pas calculable explicitement ; \(\varphi_X(t)=\exp\left(imt-\dfrac{\sigma^2t^2}2\right)\) pour tout \(t\in\mathbb R\) (preuve : poly, p. 60-61).'
+  source: Tableaux des lois usuelles (UPC), p. 2
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - propriete
+  - hors_quota
+- id: proba-a-115-2
+  notion: proba-n-0107
+  recto: 'Preuve : la loi gaussienne a des moments de tout ordre'
+  verso: 'Soit \(X\sim\mathcal N(m,\sigma^2)\) et \(n\ge1\). On a \(E(|X|^n)=\frac1{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{+\infty}|x|^ne^{-\frac{(x-m)^2}{2\sigma^2}}\,dx\) (fonction positive : on peut l''écrire, il faut montrer que c''est fini). La fonction \(f:x\mapsto|x|^ne^{-\frac{(x-m)^2}{2\sigma^2}}\) est continue sur \(\mathbb R\), donc intégrable sur tout segment \([-A,A]\), et en \(+\infty\) (de même en \(-\infty\)), \(f(x)=o(1/x^2)\) par croissance comparée. Par le critère de Riemann, \(f\) est intégrable sur \(\mathbb R\) : \(X\) admet des moments de tout ordre.'
+  source: Tableaux des lois usuelles (UPC), p. 5
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-115-3
+  notion: proba-n-0107
+  recto: 'Preuve : espérance et variance de \(\mathcal N(m,\sigma^2)\)'
+  verso: Par propriété du cours, si \(Y\sim\mathcal N(m,\sigma^2)\), alors \(Y=m+\sigma X\) avec \(X\sim\mathcal N(0,1)\). Comme \(E(Y)=m+\sigma E(X)\) et \(V(Y)=\sigma^2V(X)\), il suffit de prouver \(E(X)=0\) et \(V(X)=1\). \(E(X)=\frac1{\sqrt{2\pi}}\int_{-\infty}^{+\infty}xe^{-x^2/2}\,dx=0\) (intégrale d'une fonction impaire sur \(\mathbb R\)). Ensuite \(E(X^2)=\frac1{\sqrt{2\pi}}\int_{-\infty}^{+\infty}x\times xe^{-x^2/2}\,dx\) ; par intégration par parties, \(E(X^2)=\frac1{\sqrt{2\pi}}\left(\left[-xe^{-x^2/2}\right]_{-\infty}^{+\infty}+\int_{-\infty}^{+\infty}e^{-x^2/2}\,dx\right)\). Le terme intégré vaut 0 (croissance comparée) et l'intégrale vaut \(\sqrt{2\pi}\) (intégrale de Gauss). Donc \(E(X^2)=1\) et, comme \(E(X)=0\), \(V(X)=1\).
+  source: Tableaux des lois usuelles (UPC), p. 5
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-116-1
+  notion: proba-n-0147
+  recto: 'Déf : loi de Cauchy'
+  verso: Soit \(X\) une variable aléatoire définie sur un espace probabilisé \((\Omega,\mathcal A,P)\). On dit que \(X\) suit la loi de Cauchy, notée \(\mathcal C\), si elle admet pour densité \(f_X(x)=\dfrac1{\pi(1+x^2)}\), \(x\in\mathbb R\). Son support est \(S_X=\mathbb R\). (Le poly, p. 37, donne la version générale de densité \(x\mapsto\frac a{\pi(a^2+(x-x_0)^2)}\), de facteur d'échelle \(a\gt0\).)
+  source: Tableaux des lois usuelles (UPC), p. 2
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - definition
+  - hors_quota
+- id: proba-a-116-2
+  notion: proba-n-0147
+  recto: 'Prop. : moments, fonction de répartition et fonction caractéristique de la loi de Cauchy'
+  verso: 'Soit \(X\sim\mathcal C\). Alors \(X\) n''admet aucun moment : \(E[X]\) et \(V[X]\) ne sont pas définies ; \(F_X(t)=\dfrac1\pi\arctan(t)+\dfrac12\) ; \(\varphi_X(t)=e^{-|t|}\) pour tout \(t\in\mathbb R\) (admis).'
+  source: Tableaux des lois usuelles (UPC), p. 2 et 6
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - propriete
+  - hors_quota
+- id: proba-a-116-3
+  notion: proba-n-0147
+  recto: 'Preuve : la loi de Cauchy n''a pas de moment ; sa fonction de répartition'
+  verso: 'Soit \(X\sim\mathcal C\). \(X\) n''admet pas de moment d''ordre 1, donc aucun moment : par parité de la fonction intégrée (positive, donc on peut écrire l''intégrale), \(E(|X|)=\frac1\pi\int_{-\infty}^{+\infty}\frac{|x|}{1+x^2}\,dx=\frac2\pi\int_0^{+\infty}\frac x{1+x^2}\,dx\). Or \(\frac x{1+x^2}\sim\frac1x\) en \(+\infty\), non intégrable : \(E(|X|)=+\infty\).<br>Fonction de répartition : \(F_X(t)=\frac1\pi\int_{-\infty}^t\frac{dx}{1+x^2}=\frac1\pi[\arctan(x)]_{-\infty}^t=\frac1\pi\left(\arctan(t)+\frac\pi2\right)\).'
+  source: Tableaux des lois usuelles (UPC), p. 5-6
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - preuve
+  - hors_quota
+- id: proba-a-117-1
+  notion: proba-n-0148
+  recto: 'Déf : fonction \(\Gamma\)'
+  verso: La fonction Gamma est définie par \(\Gamma:x\mapsto\int_0^{+\infty}t^{x-1}e^{-t}\,dt\) ; elle est bien définie sur \(\mathbb R_+^*\). Elle vérifie \(\Gamma(x+1)=x\Gamma(x)\) pour tout \(x\gt0\), donc \(\Gamma(n+1)=n!\) pour tout \(n\in\mathbb N\) (en particulier \(\Gamma(1)=1\), et \(\Gamma(p)=(p-1)!=(p-1)\Gamma(p-1)\) pour \(p\) entier \(\ge2\)), et \(\Gamma(1/2)=\sqrt\pi\).<br>Les preuves sont les questions 1, 2 et 4 du TD2 Ex 6.
+  source: TD2 Paris Cité, Ex 6 (énoncé) ; Poly Probabilités 5, ch. 3, p. 36 (PDF)
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - definition
+  - hors_quota
+- id: proba-a-117-2
+  notion: proba-n-0148
+  recto: 'Déf : loi gamma de paramètres \(\theta\) et \(p\)'
+  verso: 'Soit \(X\) une variable aléatoire définie sur un espace probabilisé \((\Omega,\mathcal A,P)\). Soit \(\theta\gt0\) (paramètre de taux) et \(p\gt0\) (paramètre de forme). \(X\) suit la loi gamma de paramètres \(\theta\) et \(p\) si elle admet pour densité \(f_{\theta,p}(x)=\dfrac{\theta^p}{\Gamma(p)}x^{p-1}e^{-\theta x}\mathbf 1_{x\gt0}\). Son support est \([0,+\infty[\). Si \(p=1\), on retrouve la loi exponentielle de paramètre \(\theta\).<br>Notations : le TD2 (Ex 6) écrit la même densité \(f_{p,\theta}\) et note la loi \(\gamma(p,\theta)\), la forme d''abord ; la loi \(\gamma(\nu)\) de prépa ECG est le cas \(\theta=1\), \(p=\nu\).<br>Exemple (poly, §2.3) : si \(Z\sim\mathcal N(0,1)\), \(Z^2\) suit la loi gamma de paramètres \(\left(\tfrac12,\tfrac12\right)\).'
+  source: Poly Probabilités 5, ch. 3, p. 36 (PDF) ; TD2 Paris Cité, Ex 6
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - definition
+  - hors_quota
+- id: proba-a-117-3
+  notion: proba-n-0148
+  recto: 'Prop. : moments et fonction caractéristique de la loi gamma'
+  verso: Soit \(X\) de loi gamma de paramètres \(\theta\gt0\) (taux) et \(p\gt0\) (forme). Alors \(X\) admet des moments de tout ordre, \(E[X^k]=\dfrac{\Gamma(p+k)}{\Gamma(p)\theta^k}\) ; en particulier \(E[X]=\dfrac p\theta\) et \(V[X]=\dfrac p{\theta^2}\) ; \(\varphi_X(t)=\left(\dfrac\theta{\theta-it}\right)^p\) pour tout \(t\in\mathbb R\) (poly, p. 36).<br>Le calcul de \(E[X]\) et \(V[X]\) est la question 3 du TD2 Ex 6.
+  source: Poly Probabilités 5, ch. 3, p. 36 (PDF) ; TD2 Paris Cité, Ex 6 Q3 (moments vérifiés par Claude, à confirmer)
+  chapitre: Chapitre 1 - Rappels sur le modèle probabiliste
+  priorite: 1
+  tags:
+  - propriete
+  - hors_quota

@@ -106,3 +106,124 @@
 - {id: proba-a-105, origine: cours_l3, notion: proba-n-0091, titre: Inégalité de Hölder, raison: 'aucune carte ; même notion que mesure-n-0066 : une seule série de cartes pour le groupe', programme_ecg: false, exercices: [], priorite: 3, source: {fichier: proba/cours/poly-probabilites-5.pdf, page: 51}, confiance: a_confirmer}
 - {id: proba-a-106, origine: cours_l3, notion: proba-n-0092, titre: Inégalité de Minkowski, raison: 'aucune carte ; même notion que mesure-n-0067 : une seule série de cartes pour le groupe', programme_ecg: false, exercices: [], priorite: 3, source: {fichier: proba/cours/poly-probabilites-5.pdf, page: 51}, confiance: a_confirmer}
 - {id: proba-a-107, origine: cours_l3, notion: proba-n-0135, titre: Convergence en probabilité implique convergence en loi (hiérarchie des convergences), raison: 'seulement d''anciennes cartes hors ECG (autre) : carte du poly à faire, puis suspendre l''ancienne si elle fait doublon (règle du 18/11/2026)', programme_ecg: false, exercices: [pro-exa2526-ex04], priorite: 1, source: {fichier: proba/cours/poly-probabilites-5.pdf, page: 78}, confiance: a_confirmer}
+- id: proba-a-108
+  origine: cours_l3
+  notion: proba-n-0016
+  titre: 'Loi de Dirac : définition, moments, fonction caractéristique'
+  raison: 'demande du 25/11/2026 : tableau des lois usuelles (UPC) à revoir d''un coup, hors quota ; seules des cartes ECG ou anciennes couvraient ces lois'
+  programme_ecg: true
+  exercices: []
+  priorite: 1
+  source:
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 1
+  confiance: sure
+- id: proba-a-109
+  origine: cours_l3
+  notion: proba-n-0017
+  titre: 'Loi de Bernoulli : définition, moments, fonction caractéristique, preuves'
+  raison: 'demande du 25/11/2026 : tableau des lois usuelles (UPC) à revoir d''un coup, hors quota ; seules des cartes ECG ou anciennes couvraient ces lois'
+  programme_ecg: true
+  exercices: []
+  priorite: 1
+  source:
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 1
+  confiance: sure
+- id: proba-a-110
+  origine: cours_l3
+  notion: proba-n-0018
+  titre: 'Loi binomiale : définition, moments, fonction caractéristique, preuves'
+  raison: 'demande du 25/11/2026 : tableau des lois usuelles (UPC) à revoir d''un coup, hors quota ; seules des cartes ECG ou anciennes couvraient ces lois'
+  programme_ecg: true
+  exercices: []
+  priorite: 1
+  source:
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 1
+  confiance: sure
+- id: proba-a-111
+  origine: cours_l3
+  notion: proba-n-0020
+  titre: 'Loi géométrique : définition, moments, fonction caractéristique, preuves'
+  raison: 'demande du 25/11/2026 : tableau des lois usuelles (UPC) à revoir d''un coup, hors quota ; seules des cartes ECG ou anciennes couvraient ces lois'
+  programme_ecg: true
+  exercices: []
+  priorite: 1
+  source:
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 1
+  confiance: sure
+- id: proba-a-112
+  origine: cours_l3
+  notion: proba-n-0019
+  titre: 'Loi de Poisson : définition, moments, fonction caractéristique, preuves'
+  raison: 'demande du 25/11/2026 : tableau des lois usuelles (UPC) à revoir d''un coup, hors quota ; seules des cartes ECG ou anciennes couvraient ces lois'
+  programme_ecg: true
+  exercices: []
+  priorite: 1
+  source:
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 1
+  confiance: sure
+- id: proba-a-113
+  origine: cours_l3
+  notion: proba-n-0145
+  titre: 'Loi uniforme sur [a,b] : définition, moments, F_X, fonction caractéristique, preuves'
+  raison: 'demande du 25/11/2026 : tableau des lois usuelles (UPC) à revoir d''un coup, hors quota ; seules des cartes ECG ou anciennes couvraient ces lois'
+  programme_ecg: true
+  exercices: []
+  priorite: 1
+  source:
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 1
+  confiance: sure
+- id: proba-a-114
+  origine: cours_l3
+  notion: proba-n-0146
+  titre: 'Loi exponentielle : définition, moments, F_X, fonction caractéristique, preuves'
+  raison: 'demande du 25/11/2026 : tableau des lois usuelles (UPC) à revoir d''un coup, hors quota ; seules des cartes ECG ou anciennes couvraient ces lois'
+  programme_ecg: true
+  exercices: []
+  priorite: 1
+  source:
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 1
+  confiance: sure
+- id: proba-a-115
+  origine: cours_l3
+  notion: proba-n-0107
+  titre: 'Loi gaussienne réelle : densité, moments, preuves (tableau)'
+  raison: 'demande du 25/11/2026 : tableau des lois usuelles (UPC) à revoir d''un coup, hors quota ; seules des cartes ECG ou anciennes couvraient ces lois'
+  programme_ecg: true
+  exercices: []
+  priorite: 1
+  source:
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 1
+  confiance: sure
+- id: proba-a-116
+  origine: cours_l3
+  notion: proba-n-0147
+  titre: 'Loi de Cauchy : définition, absence de moments, F_X, fonction caractéristique'
+  raison: 'demande du 25/11/2026 : tableau des lois usuelles (UPC) à revoir d''un coup, hors quota ; seules des cartes ECG ou anciennes couvraient ces lois'
+  programme_ecg: true
+  exercices: []
+  priorite: 1
+  source:
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 1
+  confiance: sure
+- id: proba-a-117
+  origine: cours_l3
+  notion: proba-n-0148
+  titre: Fonction Gamma et loi gamma à deux paramètres
+  raison: 'demande du 25/11/2026 : tableau des lois usuelles (UPC) à revoir d''un coup, hors quota ; seules des cartes ECG ou anciennes couvraient ces lois'
+  programme_ecg: true
+  exercices:
+  - pro-td2-ex06
+  priorite: 1
+  source:
+    fichier: proba/cours/tableaux_lois.pdf
+    page: 1
+  confiance: sure
