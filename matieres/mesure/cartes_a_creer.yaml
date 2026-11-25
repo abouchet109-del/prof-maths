@@ -595,3 +595,63 @@
     fichier: mesure/notes/cm-2026-10-20.pdf
     page: 3
   confiance: a_confirmer
+- id: mesure-a-047
+  origine: cours_l3
+  notion: mesure-n-0001
+  titre: Ensemble dénombrable
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 3
+  confiance: sure
+- id: mesure-a-048
+  origine: cours_l3
+  notion: mesure-n-0003
+  titre: Indicatrice d'une partie
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 3
+  confiance: sure
+- id: mesure-a-049
+  origine: cours_l3
+  notion: mesure-n-0007
+  titre: Lois de Morgan (Prop. 0.3)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 4
+  confiance: sure
+- id: mesure-a-050
+  origine: cours_l3
+  notion: mesure-n-0023
+  titre: Fonction étagée (Déf 1.15)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: mesure/cours/poly-mesure-integration.pdf
+    page: 7
+  confiance: sure
+- id: mesure-a-051
+  origine: cours_l3
+  notion: mesure-n-0045
+  titre: Fonction de répartition d'une mesure finie sur R (CM du 20/10)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: mesure/notes/cm-2026-10-20.pdf
+    page: 3
+  confiance: sure

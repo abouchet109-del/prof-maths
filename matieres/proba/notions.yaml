@@ -724,6 +724,7 @@
 - id: proba-n-0090
   titre: 'Démonstration de Cauchy-Schwarz par discriminant de $E[(X+tY)^2]$'
   type: demonstration
+  couverte_par: proba-n-0089      # la carte « Preuve : Prop. 4.17 » fait déjà la preuve par le discriminant
   chapitre: 'Chapitre 4 - Vecteurs aléatoires'
   sous_chapitre: '4.2.1 Inégalités'
   enonce: '$P(t)=E[(X+tY)^2]\ge0$ est un polynôme du second degré, donc son discriminant $4E[XY]^2-4E[X^2]E[Y^2]$ est négatif ou nul.'

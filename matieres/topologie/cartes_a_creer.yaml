@@ -2618,3 +2618,39 @@
   priorite: 1
   source: {fichier: topologie/cours/chap7-espaces-lp.pdf, page: 8}
   confiance: sure
+- id: topo-a-290
+  origine: cours_l3
+  notion: topo-n-0001
+  titre: Formules de De Morgan (Prop. 2)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 2
+  confiance: sure
+- id: topo-a-291
+  origine: cours_l3
+  notion: topo-n-0002
+  titre: Distributivité de l'union et de l'intersection (Prop. 1)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap1-espaces-metriques.pdf
+    page: 1
+  confiance: sure
+- id: topo-a-292
+  origine: cours_l3
+  notion: topo-n-0062
+  titre: Application bornée (Déf 25)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: topologie/cours/chap2-espaces-complets.pdf
+    page: 4
+  confiance: sure

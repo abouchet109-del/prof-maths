@@ -284,6 +284,20 @@ def verifier(racine=E.RACINE) -> list[str]:
         for x in n.get("requis_par") or []:
             if x not in exos and x not in notions:
                 erreurs.append(f"notion prérequis {i} : requis_par inconnu ({x})")
+    # 5 quater (règle du 25/11/2026) : toute notion du poly de Paris Cité (hors prérequis, hors notion tirée d'un
+    # cours UVSQ en attendant le poly) a au moins une carte de cours du système, même si une ancienne carte (ECG ou
+    # autre) la couvre ; `couverte_par: <notion>` quand une carte d'une notion voisine dit déjà exactement la même chose.
+    avec_carte = {c.get("notion") for f, data in charges.items() if f.name == "cartes.yaml"
+                  for c in data or [] if not c.get("exercice") and "exercice" not in (c.get("tags") or [])}
+    for i, n in notions.items():
+        fichier = str((n.get("source") or {}).get("fichier") or "")
+        if n.get("type") == "prerequis" or "uvsq" in fichier.lower() or i in avec_carte:
+            continue
+        cp = n.get("couverte_par")
+        if cp and cp in avec_carte:
+            continue
+        erreurs.append(f"notion {i} : aucune carte du poly (règle du 25/11/2026 : une ancienne carte ne suffit pas)"
+                       + (f" ; couverte_par {cp} sans carte" if cp else ""))
     for f, data in charges.items():
         if f.name != "cartes.yaml":
             continue

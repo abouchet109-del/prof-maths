@@ -1146,6 +1146,9 @@ def depot_comp(tmp_path, comprehension):
     ecrire("matieres/topologie/exercices.yaml", [e])
     ecrire("matieres/topologie/notions.yaml", [{"id": f"topo-n-000{i}", "type": "definition", "titre": "t", "enonce": "e",
                                                 "chapitre": "Chapitre 1 - X", "sous_chapitre": "1.1"} for i in (1, 2)])
+    ecrire("matieres/topologie/cartes.yaml", [{"id": f"topo-a-00{i}-1", "notion": f"topo-n-000{i}", "recto": "r",
+                                               "verso": "v", "source": "s", "chapitre": "Chapitre 1 - X",
+                                               "tags": ["definition"]} for i in (1, 2)])   # règle du 25/11/2026
     if comprehension is not None:
         ecrire("state/comprehension.yaml", comprehension)
     elif (tmp_path / "state" / "comprehension.yaml").exists():

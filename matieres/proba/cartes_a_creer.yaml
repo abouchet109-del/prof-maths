@@ -227,3 +227,447 @@
     fichier: proba/cours/tableaux_lois.pdf
     page: 1
   confiance: sure
+- id: proba-a-118
+  origine: cours_l3
+  notion: proba-n-0001
+  titre: Probabilité (Déf 1.1 et 1.11)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 6
+  confiance: sure
+- id: proba-a-119
+  origine: cours_l3
+  notion: proba-n-0002
+  titre: Formulations équivalentes de la continuité
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 6
+  confiance: sure
+- id: proba-a-120
+  origine: cours_l3
+  notion: proba-n-0003
+  titre: Espace de probabilité (Déf 1.2)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 6
+  confiance: sure
+- id: proba-a-121
+  origine: cours_l3
+  notion: proba-n-0005
+  titre: Formule du crible (Poincaré)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 7
+  confiance: sure
+- id: proba-a-122
+  origine: cours_l3
+  notion: proba-n-0006
+  titre: Événement négligeable, presque sûr (Déf 1.4)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 7
+  confiance: sure
+- id: proba-a-123
+  origine: cours_l3
+  notion: proba-n-0008
+  titre: Variable aléatoire (Déf 1.6)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 8
+  confiance: sure
+- id: proba-a-124
+  origine: cours_l3
+  notion: proba-n-0009
+  titre: Loi d'une variable aléatoire (Déf 1.7)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 8
+  confiance: sure
+- id: proba-a-125
+  origine: cours_l3
+  notion: proba-n-0011
+  titre: Tribu (Déf 1.10)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 9
+  confiance: sure
+- id: proba-a-126
+  origine: cours_l3
+  notion: proba-n-0012
+  titre: Tribu engendrée et tribu borélienne (Prop. 1.12)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 10
+  confiance: sure
+- id: proba-a-127
+  origine: cours_l3
+  notion: proba-n-0013
+  titre: Variable aléatoire, définition rigoureuse (Déf 1.14)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 10
+  confiance: sure
+- id: proba-a-128
+  origine: cours_l3
+  notion: proba-n-0015
+  titre: Loi discrète et support (Déf 2.2)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 12
+  confiance: sure
+- id: proba-a-129
+  origine: cours_l3
+  notion: proba-n-0021
+  titre: Variable discrète et espérance d'une variable discrète positive (Déf 2.9, 2.10)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 15
+  confiance: sure
+- id: proba-a-130
+  origine: cours_l3
+  notion: proba-n-0022
+  titre: Espérance d'une variable discrète quelconque (Déf 2.11)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 15
+  confiance: sure
+- id: proba-a-131
+  origine: cours_l3
+  notion: proba-n-0023
+  titre: Formule de transfert, cas discret (Prop. 2.12)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 15
+  confiance: sure
+- id: proba-a-132
+  origine: cours_l3
+  notion: proba-n-0028
+  titre: Linéarité de l'espérance (variables à densité)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 18
+  confiance: sure
+- id: proba-a-133
+  origine: cours_l3
+  notion: proba-n-0029
+  titre: Formule de transfert, cas à densité (Prop. 2.21)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 18
+  confiance: sure
+- id: proba-a-134
+  origine: cours_l3
+  notion: proba-n-0033
+  titre: Espérance d'une variable positive par approximation étagée (Prop. 2.24, Thm 2.25, Déf 2.26)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 20
+  confiance: sure
+- id: proba-a-135
+  origine: cours_l3
+  notion: proba-n-0035
+  titre: Variable intégrable et linéarité générale (Déf 2.27, Thm 2.28)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 20
+  confiance: sure
+- id: proba-a-136
+  origine: cours_l3
+  notion: proba-n-0038
+  titre: Positivité de l'espérance (Prop. 2.32) et conséquences
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 22
+  confiance: sure
+- id: proba-a-137
+  origine: cours_l3
+  notion: proba-n-0039
+  titre: Inégalité de Markov (Prop. 2.33, Cor. 2.34)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 23
+  confiance: sure
+- id: proba-a-138
+  origine: cours_l3
+  notion: proba-n-0044
+  titre: Caractérisation d'une loi discrète par ses masses (Prop. 3.1, 3.2)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 25
+  confiance: sure
+- id: proba-a-139
+  origine: cours_l3
+  notion: proba-n-0048
+  titre: Fonction de répartition (Déf 3.6)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 27
+  confiance: sure
+- id: proba-a-140
+  origine: cours_l3
+  notion: proba-n-0049
+  titre: Propriétés de la fonction de répartition (Prop. 3.7)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 27
+  confiance: sure
+- id: proba-a-141
+  origine: cours_l3
+  notion: proba-n-0055
+  titre: Moment d'ordre n (Déf 3.14, Rem. 3.15)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 31
+  confiance: sure
+- id: proba-a-142
+  origine: cours_l3
+  notion: proba-n-0058
+  titre: Variance et écart-type (Déf 3.18, Prop. 3.19)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 32
+  confiance: sure
+- id: proba-a-143
+  origine: cours_l3
+  notion: proba-n-0059
+  titre: Variance d'une transformation affine ; variance nulle (Cor. 3.20, 3.21)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 32
+  confiance: sure
+- id: proba-a-144
+  origine: cours_l3
+  notion: proba-n-0060
+  titre: Inégalité de Bienaymé-Tchebychev (Prop. 3.22)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 33
+  confiance: sure
+- id: proba-a-145
+  origine: cours_l3
+  notion: proba-n-0085
+  titre: Indépendance de vecteurs aléatoires (Déf 4.9, Prop. 4.10)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 47
+  confiance: sure
+- id: proba-a-146
+  origine: cours_l3
+  notion: proba-n-0086
+  titre: Indépendance et fonctions mesurables (Prop. 4.11)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 47
+  confiance: sure
+- id: proba-a-147
+  origine: cours_l3
+  notion: proba-n-0096
+  titre: Covariance (Déf 4.33, Prop. 4.34)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 54
+  confiance: sure
+- id: proba-a-148
+  origine: cours_l3
+  notion: proba-n-0097
+  titre: Propriétés de la covariance ; indépendance implique décorrélation (Cor. 4.35)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 54
+  confiance: sure
+- id: proba-a-149
+  origine: cours_l3
+  notion: proba-n-0099
+  titre: Bilinéarité de la covariance et variance d'une somme (Prop. 4.36, Cor. 4.37)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 55
+  confiance: sure
+- id: proba-a-150
+  origine: cours_l3
+  notion: proba-n-0103
+  titre: Corrélation (Déf 4.42, Prop. 4.43, 4.44)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 58
+  confiance: sure
+- id: proba-a-151
+  origine: cours_l3
+  notion: proba-n-0119
+  titre: Convergence en probabilité (Déf 5.4)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 68
+  confiance: sure
+- id: proba-a-152
+  origine: cours_l3
+  notion: proba-n-0130
+  titre: Loi faible des grands nombres (Prop. 5.20)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 75
+  confiance: sure
+- id: proba-a-153
+  origine: cours_l3
+  notion: proba-n-0137
+  titre: 'Exemple : binomiale(n, λ/n) converge en loi vers Poisson(λ)'
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 78
+  confiance: sure
+- id: proba-a-154
+  origine: cours_l3
+  notion: proba-n-0142
+  titre: Théorème central limite (Thm 5.34)
+  raison: 'règle du 25/11/2026 : notion du poly couverte seulement par une ancienne carte (ECG ou autre) ; la carte du poly passe en premier, l''ancienne en second'
+  programme_ecg: true
+  exercices: []
+  priorite: 2
+  source:
+    fichier: proba/cours/poly-probabilites-5.pdf
+    page: 81
+  confiance: sure

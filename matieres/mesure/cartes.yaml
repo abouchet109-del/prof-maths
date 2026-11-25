@@ -1037,3 +1037,48 @@
   chapitre: 'Chapitre 1 - Tribus, espaces mesurables et applications mesurables'
   priorite: 1
   tags: [exercice]
+- id: mesure-a-047-1
+  notion: mesure-n-0001
+  recto: 'Déf : ensemble dénombrable'
+  verso: Un ensemble est dit dénombrable s'il est en bijection avec \(\mathbb N\).
+  source: Poly Mesure et intégration, Préliminaires, p. 3 (PDF)
+  chapitre: Chapitre 0 - Préliminaires
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-048-1
+  notion: mesure-n-0003
+  recto: 'Déf : indicatrice d''une partie'
+  verso: L'indicatrice d'une partie \(A\) de \(\Omega\) est l'application, notée \(\mathbf 1_A\), de \(\Omega\) dans \(\mathbb R\) définie, pour tout \(\omega\in\Omega\), par \(\mathbf 1_A(\omega):=0\) si \(\omega\notin A\) et \(\mathbf 1_A(\omega):=1\) si \(\omega\in A\).
+  source: Poly Mesure et intégration, Préliminaires, p. 3 (PDF)
+  chapitre: Chapitre 0 - Préliminaires
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-049-1
+  notion: mesure-n-0007
+  recto: 'Prop. 0.3 : lois de Morgan'
+  verso: 'Pour toute famille \((A_i)_{i\in I}\) de parties d''un ensemble : \(\big(\bigcap_{i\in I}A_i\big)^c=\bigcup_{i\in I}A_i^c\) et \(\big(\bigcup_{i\in I}A_i\big)^c=\bigcap_{i\in I}A_i^c\).<br>En conséquence : \(\big(\limsup_{n\to+\infty}A_n\big)^c=\liminf_{n\to+\infty}A_n^c\).'
+  source: Poly Mesure et intégration, Préliminaires, p. 4 (PDF)
+  chapitre: Chapitre 0 - Préliminaires
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-050-1
+  notion: mesure-n-0023
+  recto: 'Déf 1.15 : fonction étagée'
+  verso: Une fonction \(f:(X,\mathcal A)\to\mathbb R\) (ou \(\mathbb C\)) est étagée si elle est mesurable et ne prend qu'un nombre fini de valeurs finies. Toute fonction étagée peut s'écrire \(f=\sum_{i\in I}\alpha_i\mathbf 1_{A_i}\), avec \(I\) fini et \((A_i)_{i\in I}\) partition \(\mathcal A\)-mesurable de \(X\).
+  source: Poly Mesure et intégration, ch. 1, p. 7 (PDF)
+  chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-051-1
+  notion: mesure-n-0045
+  recto: 'Thm (CM du 20/10) : fonction de répartition d''une mesure finie sur \(\mathbb R\), mesure de Stieltjes'
+  verso: '1) Soit \(\mu\) une mesure finie sur \((\mathbb R,\mathcal B(\mathbb R))\). On définit pour tout \(x\in\mathbb R\), \(F_\mu(x)=\mu(]-\infty,x])\). La fonction \(F_\mu\) est croissante, bornée, continue à droite, et \(\lim_{x\to-\infty}F_\mu(x)=0\).<br>2) Inversement, soit \(F:\mathbb R\to\mathbb R_+\) croissante, bornée, continue à droite et telle que \(\lim_{x\to-\infty}F(x)=0\) ; alors il existe une unique mesure \(\mu\) finie sur \((\mathbb R,\mathcal B(\mathbb R))\) telle que \(F=F_\mu\). On appelle \(\mu\) la mesure de Stieltjes associée à \(F\).<br>Rem. : lorsque \(F=F_\mu\), on note souvent \(\mu(dx)=dF(x)\) ; si \(F\) est \(\mathcal C^1\), \(dF(x)=F''(x)\,dx\).'
+  source: CM Mesure et intégration du 20/10/2026, p. 3
+  chapitre: Chapitre 1 - Tribus, espaces mesurables et applications mesurables
+  priorite: 2
+  tags:
+  - theoreme

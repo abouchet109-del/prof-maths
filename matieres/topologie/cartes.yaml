@@ -4751,3 +4751,30 @@
   chapitre: Chapitre 7 - Espace Lp
   priorite: 1
   tags: [demonstration]
+- id: topo-a-290-1
+  notion: topo-n-0001
+  recto: 'Prop. 2 : formules de De Morgan'
+  verso: 'Soit \((A_i)_{i\in I}\) une famille de \(\mathcal P(X)\). On a les formules suivantes, dites formules de De Morgan : \(\big(\bigcup_{i\in I}A_i\big)^c=\bigcap_{i\in I}(A_i^c)\) et \(\big(\bigcap_{i\in I}A_i\big)^c=\bigcup_{i\in I}(A_i^c)\).'
+  source: Poly Topologie, ch. 1, p. 2 (PDF)
+  chapitre: Chapitre 1 - Espace métrique
+  priorite: 2
+  tags:
+  - propriete
+- id: topo-a-291-1
+  notion: topo-n-0002
+  recto: 'Prop. 1 : distributivité de l''union et de l''intersection'
+  verso: 'Soient \((A_i)_{i\in I}\) et \((B_j)_{j\in J}\) deux familles de \(\mathcal P(X)\). L''union est distributive par rapport à l''intersection : \(\big(\bigcap_{i\in I}A_i\big)\cup\big(\bigcap_{j\in J}B_j\big)=\bigcap_{(i,j)\in I\times J}(A_i\cup B_j)\), et l''intersection est distributive par rapport à l''union : \(\big(\bigcup_{i\in I}A_i\big)\cap\big(\bigcup_{j\in J}B_j\big)=\bigcup_{(i,j)\in I\times J}(A_i\cap B_j)\).'
+  source: Poly Topologie, ch. 1, p. 1 (PDF)
+  chapitre: Chapitre 1 - Espace métrique
+  priorite: 2
+  tags:
+  - propriete
+- id: topo-a-292-1
+  notion: topo-n-0062
+  recto: 'Déf 25 : application bornée'
+  verso: Soit \(f\) une application entre deux espaces métriques \((X,d)\) et \((Y,\delta)\). On dit que \(f\) est bornée si \(f(X)\) est une partie bornée de \(Y\).
+  source: Poly Topologie, ch. 2, p. 4 (PDF)
+  chapitre: Chapitre 2 - Espace complet
+  priorite: 2
+  tags:
+  - definition

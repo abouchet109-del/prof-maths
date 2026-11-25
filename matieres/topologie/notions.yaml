@@ -530,6 +530,7 @@
 - id: topo-n-0067
   titre: 'Théorème de point fixe de Picard'
   type: theoreme
+  couverte_par: topo-n-0068       # topo-a-020-1 dit déjà exactement le Thm 2 de Picard
   chapitre: 'Chapitre 2 - Espace complet'
   sous_chapitre: '2.4 Théorème de point fixe'
   enonce: 'Toute application contractante d''un espace métrique complet dans lui-même possède un unique point fixe.'
