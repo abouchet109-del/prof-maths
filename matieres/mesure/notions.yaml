@@ -398,6 +398,72 @@
   enonce: 'La mesure de Lebesgue est construite via une mesure extérieure et le théorème de Carathéodory (cité sans énoncé détaillé).'
   source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
   essentiel: false
+- id: mesure-n-0070
+  titre: 'Tribu engendrée : propriétés de monotonie'
+  type: propriete
+  chapitre: Chapitre 1 - Espace mesurable et mesure (UVSQ)
+  sous_chapitre: II Tribu engendrée, tribu borélienne
+  enonce: Si $\mathcal E\subset\mathcal T$ tribu, $\mathcal T(\mathcal E)\subset\mathcal T$ ; si $\mathcal E$ est une tribu, $\mathcal T(\mathcal E)=\mathcal E$ ; $\mathcal E_1\subset\mathcal E_2\Rightarrow\mathcal T(\mathcal E_1)\subset\mathcal T(\mathcal E_2)$.
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance1.pdf
+    page: 9
+  essentiel: true
+- id: mesure-n-0071
+  titre: Familles génératrices de $\mathcal B(\mathbb R^d)$ et de $\mathcal B(\mathbb R)$
+  type: propriete
+  chapitre: Chapitre 1 - Espace mesurable et mesure (UVSQ)
+  sous_chapitre: II Tribu engendrée, tribu borélienne
+  enonce: $\mathcal B(\mathbb R^d)$ est engendrée par les pavés ouverts ; $\mathcal B(\mathbb R)$ par les demi-droites $[a,+\infty[$, $]a,+\infty[$, $]-\infty,a[$ ou $]-\infty,a]$ avec $a\in\mathbb Q$ ou $\mathbb R$.
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance1.pdf
+    page: 10
+  essentiel: true
+- id: mesure-n-0072
+  titre: Mesure de Lebesgue des ensembles dénombrables
+  type: propriete
+  chapitre: Chapitre 1 - Espace mesurable et mesure (UVSQ)
+  sous_chapitre: IV Mesure de Lebesgue
+  enonce: $\lambda(\{a\})=0$, $\lambda(]a,b])=\lambda([a,b[)=\lambda([a,b])=b-a$, et $\lambda(E)=0$ pour tout $E$ dénombrable ; $\lambda(\mathbb N)=\lambda(\mathbb Q)=0$.
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance2.pdf
+    page: 10
+  essentiel: true
+- id: mesure-n-0073
+  titre: 'Droite réelle achevée : distance et tribu borélienne'
+  type: definition
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  sous_chapitre: II Application mesurable à valeurs dans R, R barre ou C
+  enonce: $d(x,y)=|h(x)-h(y)|$ avec $h=\arctan$ prolongée par $\mp\pi/2$ en $\mp\infty$ fait de $\overline{\mathbb R}$ un espace métrique ; $\mathcal B(\overline{\mathbb R})$ est engendrée par les $]a,+\infty]$, $a\in\mathbb Q$ ou $\mathbb R$.
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance3.pdf
+    page: 5
+  essentiel: false
+- id: mesure-n-0074
+  titre: Critères de mesurabilité des fonctions réelles et complexes
+  type: propriete
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  sous_chapitre: II Application mesurable à valeurs dans R, R barre ou C
+  enonce: $f$ réelle mesurable $\iff\{f>\alpha\}\in\mathcal T$ pour tout $\alpha\in\mathbb R$ ou $\mathbb Q$ ; $f$ complexe mesurable $\iff\mathrm{Re}f,\mathrm{Im}f$ mesurables ; $|f|^p$ mesurable.
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance3.pdf
+    page: 6
+  essentiel: true
+- id: mesure-n-0075
+  titre: Limite presque partout d'une suite de fonctions mesurables
+  type: propriete
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  sous_chapitre: Convergence presque partout (p.p.)
+  enonce: Si $(f_n)$ mesurables converge sur $X\setminus E$ avec $\mu(E)=0$, la limite prolongée par $0$ sur $E$ est mesurable.
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance3.pdf
+    page: 9
+  essentiel: true
 - id: mesure-n-0049
   titre: 'Intégrale de Lebesgue (construction)'
   type: definition
@@ -414,6 +480,17 @@
   sous_chapitre: 'Notions à maîtriser'
   enonce: 'Si $f_n\ge0$ et $f_n\uparrow f$, alors $\int f_n\uparrow\int f$. Corollaire : interversion $\sum/\int$ pour des termes $\ge0$.'
   source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0077
+  titre: Inégalité de Markov
+  type: theoreme
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  sous_chapitre: III Intégrale de Lebesgue de fonctions positives
+  enonce: 'Pour $f\in\mathcal M^+$ et $a>0$ : $\mu(\{f\ge a\})\le\frac1a\int_Xf\,d\mu$.'
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance5.pdf
+    page: 3
   essentiel: true
 - id: mesure-n-0051
   titre: 'Fonctions intégrables, $L^1$'
@@ -446,6 +523,17 @@
   sous_chapitre: 'Comment calculer une intégrale de Lebesgue'
   enonce: 'Si $f$ est Riemann-intégrable sur $[a,b]$, elle est Lebesgue-intégrable avec la même valeur ; attention aux intégrales impropres.'
   source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0076
+  titre: Interversion série-intégrale pour des fonctions positives
+  type: propriete
+  chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ)
+  sous_chapitre: I Conséquences du théorème de Beppo-Levi
+  enonce: 'Pour $f_n\in\mathcal M^+$ : $\sum_nf_n\in\mathcal M^+$ et $\int_X\sum_nf_n\,d\mu=\sum_n\int_Xf_n\,d\mu$.'
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance6.pdf
+    page: 8
   essentiel: true
 - id: mesure-n-0055
   titre: 'Lemme de Fatou'
@@ -480,6 +568,17 @@
   enonce: 'Si $t\mapsto f(x,t)$ est dérivable et $|\partial_tf(x,t)|\le h(x)$ intégrable, $F$ est dérivable et $F''(t)=\int\partial_tf(x,t)dx$.'
   source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
   essentiel: true
+- id: mesure-n-0078
+  titre: Primitive d'une fonction continue (théorème fondamental de l'analyse)
+  type: theoreme
+  chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ)
+  sous_chapitre: IV Lien entre intégrale de Riemann et intégrale de Lebesgue
+  enonce: Pour $f$ continue, $F(t)=\int_a^tf(x)\,dx$ est dérivable et $F'=f$ ; si $G$ est une primitive, $\int_a^bf=G(b)-G(a)$.
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance8.pdf
+    page: 1
+  essentiel: false
 - id: mesure-n-0059
   titre: 'Tribu produit et mesure produit'
   type: definition
@@ -487,6 +586,17 @@
   sous_chapitre: 'Notions à maîtriser'
   enonce: 'Tribu produit $\mathcal A\otimes\mathcal B$ et mesure produit $\mu\otimes\nu$ (existence et unicité pour des mesures $\sigma$-finies).'
   source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0079
+  titre: Mesure de Lebesgue sur $\mathbb R^d$ comme mesure produit
+  type: definition
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  sous_chapitre: II Mesure produit
+  enonce: $\lambda_2=\lambda_1\otimes\lambda_1$ sur $\mathcal B(\mathbb R^2)$, $\lambda_d=\lambda_{d-1}\otimes\lambda_1$ ; $\lambda_d(\prod]a_i,b_i[)=\prod(b_i-a_i)$.
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance8.pdf
+    page: 9
   essentiel: true
 - id: mesure-n-0060
   meme_que: [proba-n-0078]
@@ -505,6 +615,28 @@
   sous_chapitre: 'Notions à maîtriser'
   enonce: 'Si $\iint|f|<\infty$ (vérifié par Tonelli sur $|f|$), l''interversion est licite et les sections sont intégrables pp.'
   source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 1}
+  essentiel: true
+- id: mesure-n-0080
+  titre: Mesure image et théorème de transfert
+  type: theoreme
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  sous_chapitre: IV Mesure image
+  enonce: $\theta_*\mu(B)=\mu(\theta^{-1}(B))$ ; $\int_Yf\,d(\theta_*\mu)=\int_Xf\circ\theta\,d\mu$ pour $f$ positive ou $\theta_*\mu$-intégrable.
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance9.pdf
+    page: 6
+  essentiel: true
+- id: mesure-n-0081
+  titre: Matrice jacobienne, jacobien et $C^1$-difféomorphisme
+  type: definition
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  sous_chapitre: V Formule de changement de variables
+  enonce: '$J_\varphi(x)=(\partial\varphi_i/\partial x_j(x))$, jacobien $\det J_\varphi(x)$ ; $C^1$-difféomorphisme = bijection $C^1$ de réciproque $C^1$ ; il suffit : bijection, $C^1$, $J_\varphi(x)$ inversible partout.'
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance9.pdf
+    page: 9
   essentiel: true
 - id: mesure-n-0062
   meme_que: [proba-n-0082]
@@ -539,6 +671,17 @@
   enonce: '$\|f\|_p=(\int|f|^p)^{1/p}$ pour $1\le p<\infty$ ; $\|f\|_\infty$ borne sup essentielle ; $L^p$ = classes de fonctions modulo égalité pp.'
   source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 2}
   essentiel: true
+- id: mesure-n-0082
+  titre: Sup essentiel $\|f\|_\infty$
+  type: definition
+  chapitre: Chapitre 5 - Espaces $L^p$ (UVSQ)
+  sous_chapitre: I Définitions et propriétés
+  enonce: $\|f\|_\infty=\inf\{C\ge0,\ \mu\{|f|>C\}=0\}$ si $f\in\mathcal L^\infty$, $+\infty$ sinon ; $|f|\le\|f\|_\infty$ p.p. ; pour $f$ continue sur un intervalle avec $\lambda$, $\|f\|_\infty=\sup|f|$.
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance10.pdf
+    page: 8
+  essentiel: true
 - id: mesure-n-0066
   meme_que: [proba-n-0091]
   titre: 'Inégalité de Hölder'
@@ -557,6 +700,17 @@
   enonce: '$\|f+g\|_p\le\|f\|_p+\|g\|_p$.'
   source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 2}
   essentiel: true
+- id: mesure-n-0083
+  titre: 'Espaces $L^p(X)$ : quotient par l''égalité presque partout'
+  type: definition
+  chapitre: Chapitre 5 - Espaces $L^p$ (UVSQ)
+  sous_chapitre: III Les espaces $L^p(X)$
+  enonce: $f\sim g\iff f=g$ p.p. ; $L^p(X)=\mathcal L^p(X)/\mathcal N$ muni de $\|[f]\|_p=\|\tilde f\|_p$ est un espace vectoriel normé ; égalité dans $L^p$ = égalité p.p. ; $f\mapsto f(x_0)$ n'a pas de sens.
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance11.pdf
+    page: 3
+  essentiel: true
 - id: mesure-n-0068
   titre: 'Complétude de $L^p$ (Riesz-Fischer)'
   type: theoreme
@@ -574,6 +728,17 @@
   source: {etab: uvsq, fichier: 'uvsq/mesure/Théorie de la mesure/Cours_complet_MA523.pdf', page: 2}
   essentiel: true
 # Prérequis L1-L2 : notions `type: prerequis` servies avant les notions du poly de leur sous-chapitre
+- id: mesure-n-0084
+  titre: Espaces $\ell^p(\mathbb N)$
+  type: definition
+  chapitre: Chapitre 5 - Espaces $L^p$ (UVSQ)
+  sous_chapitre: IV Les espaces $\ell^p(\mathbb N)$
+  enonce: '$\ell^p(\mathbb N)=L^p(\mathbb N)$ pour la mesure de comptage : $\sum|u_n|^p<+\infty$, norme $(\sum|u_n|^p)^{1/p}$ ; $\ell^\infty$ = suites bornées, norme sup ; $q\le p\Rightarrow\ell^q\subset\ell^p$.'
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance11.pdf
+    page: 8
+  essentiel: true
 - id: mesure-p-0001
   titre: Relation d'équivalence, classes et partition
   type: prerequis

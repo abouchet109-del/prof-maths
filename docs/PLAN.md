@@ -100,7 +100,7 @@ Annales, vitaux et importants : environ 116 h sur 158 h d'exercices, ce qui lais
 
 **18/11/2026 :** chapitres 4 à 7 du poly de topologie reçus (connexité, evn, Hilbert, \(L^p\)) : 152 notions, 304 cartes ; les exercices « Hors cours actuel » (examens, DM, UVSQ) sont rattachés à ces chapitres, sauf le calcul différentiel (UVSQ, hors poly). Les DM de topologie contiennent leur correction (en bleu dans le même fichier).
 
-**Points ouverts :** poly de mesure Paris Cité au-delà du chapitre 1 (attendu) ; 3 notions de mesure sans carte faute de source (mesure extérieure et Carathéodory, intégrales contre comptage, Dirac et densité, intégrale de Gauss) ; aucun TD sur le processus de Poisson ; annales de probas de l'UVSQ non extraites ; le poly de modélisation contient deux erreurs (PageRank p. 21, apériodicité p. 9), corrigées dans les cartes.
+**Points ouverts :** poly de mesure Paris Cité au-delà du chapitre 1 (attendu ; en attendant, le cours UVSQ de M. Boulakia, séances 1 à 11, est fiché en entier depuis le 25/11/2026 : 55 cartes, 15 notions nouvelles, sans refaire ce que le poly UPC couvre déjà. Quand le poly UPC arrivera, ses cartes passeront en premier) ; 3 notions de mesure sans carte faute de source (mesure extérieure et Carathéodory, intégrales contre comptage, Dirac et densité, intégrale de Gauss) ; aucun TD sur le processus de Poisson ; annales de probas de l'UVSQ non extraites ; le poly de modélisation contient deux erreurs (PageRank p. 21, apériodicité p. 9), corrigées dans les cartes.
 
 **Coût observé :** environ 250 000 tokens par agent pour les tâches lourdes ; une limite de session atteinte une fois, reprise sans perte.
 

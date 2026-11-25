@@ -655,3 +655,433 @@
     fichier: mesure/notes/cm-2026-10-20.pdf
     page: 3
   confiance: sure
+
+- id: mesure-a-052
+  origine: cours_l3
+  notion: mesure-n-0047
+  titre: Union dénombrable d'ensembles dénombrables
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance1.pdf
+    page: 5
+  confiance: sure
+- id: mesure-a-053
+  origine: cours_l3
+  notion: mesure-n-0070
+  titre: 'Tribu engendrée : propriétés de monotonie'
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance1.pdf
+    page: 9
+  confiance: sure
+- id: mesure-a-054
+  origine: cours_l3
+  notion: mesure-n-0071
+  titre: Familles génératrices de B(R^d) et de B(R)
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance1.pdf
+    page: 10
+  confiance: sure
+- id: mesure-a-055
+  origine: cours_l3
+  notion: mesure-n-0072
+  titre: Mesure de Lebesgue des ensembles dénombrables
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance2.pdf
+    page: 10
+  confiance: sure
+- id: mesure-a-056
+  origine: cours_l3
+  notion: mesure-n-0073
+  titre: 'Droite réelle achevée : distance et tribu borélienne'
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance3.pdf
+    page: 5
+  confiance: sure
+- id: mesure-a-057
+  origine: cours_l3
+  notion: mesure-n-0074
+  titre: Critères de mesurabilité des fonctions réelles et complexes
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance3.pdf
+    page: 6
+  confiance: sure
+- id: mesure-a-058
+  origine: cours_l3
+  notion: mesure-n-0075
+  titre: Limite presque partout d'une suite de fonctions mesurables
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance3.pdf
+    page: 9
+  confiance: sure
+- id: mesure-a-059
+  origine: cours_l3
+  notion: mesure-n-0049
+  titre: Construction de l'intégrale de Lebesgue (étagées positives, puis mesurables positives)
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance4.pdf
+    page: 3
+  confiance: sure
+- id: mesure-a-060
+  origine: cours_l3
+  notion: mesure-n-0050
+  titre: Théorème de Beppo-Levi (convergence monotone)
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance5.pdf
+    page: 1
+  confiance: sure
+- id: mesure-a-061
+  origine: cours_l3
+  notion: mesure-n-0076
+  titre: Interversion série-intégrale pour des fonctions positives
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance6.pdf
+    page: 8
+  confiance: sure
+- id: mesure-a-062
+  origine: cours_l3
+  notion: mesure-n-0077
+  titre: Inégalité de Markov
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance5.pdf
+    page: 3
+  confiance: sure
+- id: mesure-a-063
+  origine: cours_l3
+  notion: mesure-n-0052
+  titre: Intégrale nulle et égalité presque partout
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance5.pdf
+    page: 3
+  confiance: sure
+- id: mesure-a-064
+  origine: cours_l3
+  notion: mesure-n-0051
+  titre: Fonctions intégrables, L1 réel et complexe
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance6.pdf
+    page: 1
+  confiance: sure
+- id: mesure-a-065
+  origine: cours_l3
+  notion: mesure-n-0055
+  titre: Lemme de Fatou
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance6.pdf
+    page: 12
+  confiance: sure
+- id: mesure-a-066
+  origine: cours_l3
+  notion: mesure-n-0056
+  titre: Théorème de convergence dominée
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance6.pdf
+    page: 13
+  confiance: sure
+- id: mesure-a-067
+  origine: cours_l3
+  notion: mesure-n-0057
+  titre: Continuité d'une intégrale à paramètre
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance7.pdf
+    page: 4
+  confiance: sure
+- id: mesure-a-068
+  origine: cours_l3
+  notion: mesure-n-0058
+  titre: Dérivation sous le signe intégral
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance7.pdf
+    page: 5
+  confiance: sure
+- id: mesure-a-069
+  origine: cours_l3
+  notion: mesure-n-0054
+  titre: Intégrale de Riemann et intégrale de Lebesgue
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance7.pdf
+    page: 7
+  confiance: sure
+- id: mesure-a-070
+  origine: cours_l3
+  notion: mesure-n-0078
+  titre: Primitive d'une fonction continue
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance8.pdf
+    page: 1
+  confiance: sure
+- id: mesure-a-071
+  origine: cours_l3
+  notion: mesure-n-0059
+  titre: Tribu produit et mesure produit
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance8.pdf
+    page: 4
+  confiance: sure
+- id: mesure-a-072
+  origine: cours_l3
+  notion: mesure-n-0079
+  titre: Mesure de Lebesgue sur R^d comme mesure produit
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance8.pdf
+    page: 9
+  confiance: sure
+- id: mesure-a-073
+  origine: cours_l3
+  notion: mesure-n-0060
+  titre: Théorème de Fubini-Tonelli
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance9.pdf
+    page: 2
+  confiance: sure
+- id: mesure-a-074
+  origine: cours_l3
+  notion: mesure-n-0061
+  titre: Théorème de Fubini
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance9.pdf
+    page: 3
+  confiance: sure
+- id: mesure-a-075
+  origine: cours_l3
+  notion: mesure-n-0080
+  titre: Mesure image et théorème de transfert
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance9.pdf
+    page: 6
+  confiance: sure
+- id: mesure-a-076
+  origine: cours_l3
+  notion: mesure-n-0081
+  titre: Matrice jacobienne, jacobien et C1-difféomorphisme
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance9.pdf
+    page: 9
+  confiance: sure
+- id: mesure-a-077
+  origine: cours_l3
+  notion: mesure-n-0062
+  titre: Formule de changement de variables
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance9.pdf
+    page: 11
+  confiance: sure
+- id: mesure-a-078
+  origine: cours_l3
+  notion: mesure-n-0065
+  titre: 'Espaces Lp : définition, structure, norme'
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance10.pdf
+    page: 5
+  confiance: sure
+- id: mesure-a-079
+  origine: cours_l3
+  notion: mesure-n-0082
+  titre: Sup essentiel
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance10.pdf
+    page: 8
+  confiance: sure
+- id: mesure-a-080
+  origine: cours_l3
+  notion: mesure-n-0066
+  titre: Inégalité de Hölder
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance10.pdf
+    page: 11
+  confiance: sure
+- id: mesure-a-081
+  origine: cours_l3
+  notion: mesure-n-0067
+  titre: Inégalité de Minkowski
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance11.pdf
+    page: 1
+  confiance: sure
+- id: mesure-a-082
+  origine: cours_l3
+  notion: mesure-n-0083
+  titre: 'Espaces L^p(X) : quotient, norme, Hilbert'
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance11.pdf
+    page: 3
+  confiance: sure
+- id: mesure-a-083
+  origine: cours_l3
+  notion: mesure-n-0068
+  titre: Complétude des espaces L^p
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance11.pdf
+    page: 5
+  confiance: sure
+- id: mesure-a-084
+  origine: cours_l3
+  notion: mesure-n-0084
+  titre: Espaces l^p(N)
+  raison: cours UVSQ (diapos de M. Boulakia) fiché en entier le 25/11/2026 en attendant la suite du poly UPC ; seulement ce que le poly UPC ne contient pas déjà
+  programme_ecg: false
+  exercices: []
+  priorite: 2
+  source:
+    etab: uvsq
+    fichier: uvsq/mesure/Théorie de la mesure/Cours/seance11.pdf
+    page: 8
+  confiance: sure

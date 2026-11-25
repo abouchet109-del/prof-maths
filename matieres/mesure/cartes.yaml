@@ -1082,3 +1082,499 @@
   priorite: 2
   tags:
   - theoreme
+
+- id: mesure-a-052-1
+  notion: mesure-n-0047
+  recto: 'Propriété : union dénombrable d''ensembles dénombrables'
+  verso: '(Cours UVSQ : \(E\) est dénombrable s''il existe une injection de \(E\) dans \(\mathbb N\).)<br>Une union dénombrable d''ensembles dénombrables est dénombrable.'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 1, diapo 5
+  chapitre: Chapitre 1 - Espace mesurable et mesure (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-053-1
+  notion: mesure-n-0070
+  recto: 'Remarques : propriétés de la tribu engendrée \(\mathcal T(\mathcal E)\)'
+  verso: 'Soit \(\mathcal E\subset\mathcal P(X)\) et \(\mathcal T(\mathcal E)=\bigcap_{\mathcal E\subset\mathcal T,\ \mathcal T\text{ tribu}}\mathcal T\) la tribu engendrée par \(\mathcal E\).<br>• Si \(\mathcal E\subset\mathcal T\) où \(\mathcal T\) est une tribu, alors \(\mathcal T(\mathcal E)\subset\mathcal T\).<br>• Si \(\mathcal E\) est une tribu, alors \(\mathcal T(\mathcal E)=\mathcal E\).<br>• Si \(\mathcal E_1\subset\mathcal E_2\), alors \(\mathcal T(\mathcal E_1)\subset\mathcal T(\mathcal E_2)\).<br>Exemple : \(X=\{a,b,c\}\), \(\mathcal E=\{\{a\},\{b\}\}\) : déterminer \(\mathcal T(\mathcal E)\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 1, diapo 9
+  chapitre: Chapitre 1 - Espace mesurable et mesure (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-054-1
+  notion: mesure-n-0071
+  recto: 'Prop. : \(\mathcal B(\mathbb R^d)\) engendrée par les pavés ouverts'
+  verso: 'Soit \((X,d)\) un espace métrique : la tribu borélienne \(\mathcal B(X)\) est la tribu engendrée par l''ensemble des ouverts de \(X\) (les fermés de \(X\) sont des éléments de \(\mathcal B(X)\)).<br>La tribu \(\mathcal B(\mathbb R^d)\) est engendrée par l''ensemble des pavés ouverts, c''est-à-dire par les ouverts de la forme \(\prod_{i=1}^d\,]a_i,b_i[\), \(a_i\in\mathbb R\cup\{-\infty\}\), \(b_i\in\mathbb R\cup\{+\infty\}\).<br>En particulier, la tribu \(\mathcal B(\mathbb R)\) est engendrée par l''ensemble des intervalles ouverts.'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 1, diapo 10
+  chapitre: Chapitre 1 - Espace mesurable et mesure (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-054-2
+  notion: mesure-n-0071
+  recto: 'Prop. : familles génératrices de \(\mathcal B(\mathbb R)\) (demi-droites)'
+  verso: Soit \(\mathcal S=\mathbb Q\) ou \(\mathbb R\). La tribu \(\mathcal B(\mathbb R)\) est engendrée par l'une des familles suivantes :<br>• \(\{[a,+\infty[,\ a\in\mathcal S\}\) ;<br>• \(\{]a,+\infty[,\ a\in\mathcal S\}\) ;<br>• \(\{]-\infty,a[,\ a\in\mathcal S\}\) ;<br>• \(\{]-\infty,a],\ a\in\mathcal S\}\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 2, diapo 1
+  chapitre: Chapitre 1 - Espace mesurable et mesure (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-055-1
+  notion: mesure-n-0072
+  recto: 'Propriétés de la mesure de Lebesgue : points, intervalles, ensembles dénombrables'
+  verso: Sur \((\mathbb R,\mathcal B(\mathbb R))\), \(\lambda\) est l'unique mesure telle que \(\lambda(]a,b[)=b-a\) pour tout intervalle ouvert \(]a,b[\). Alors :<br>• \(\lambda(\{a\})=0\), pour tout \(a\in\mathbb R\) ;<br>• \(\lambda(]a,b])=\lambda([a,b[)=\lambda([a,b])=b-a\) ;<br>• \(\lambda(E)=0\), pour tout ensemble dénombrable \(E\). En particulier, \(\lambda(\mathbb N)=\lambda(\mathbb Q)=0\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 2, diapo 9-10
+  chapitre: Chapitre 1 - Espace mesurable et mesure (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-056-1
+  notion: mesure-n-0073
+  recto: 'Déf : distance sur la droite réelle achevée \(\overline{\mathbb R}\), tribu \(\mathcal B(\overline{\mathbb R})\)'
+  verso: Sur \(\overline{\mathbb R}\), on définit la fonction \(d:\overline{\mathbb R}\times\overline{\mathbb R}\to\mathbb R\), \((x,y)\mapsto|h(x)-h(y)|\), où \(h(x)=\arctan(x)\) si \(x\in\mathbb R\), \(h(-\infty)=-\frac\pi2\), \(h(+\infty)=\frac\pi2\).<br>Alors \((\overline{\mathbb R},d)\) est un espace métrique. De plus, \(\mathcal B(\overline{\mathbb R})\) est engendrée par l'ensemble des intervalles de la forme \(]a,+\infty]\), \(a\in\mathbb Q\) ou \(\mathbb R\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 3, diapo 5
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-057-1
+  notion: mesure-n-0074
+  recto: 'Prop. : mesurabilité par les ensembles \(\{f>\alpha\}\)'
+  verso: Soit \(f:(X,\mathcal T)\to\mathbb R\) ou \(\overline{\mathbb R}\).<br>\(f\) est mesurable \(\iff\forall\alpha\in\mathbb R\) ou \(\mathbb Q\), \(\{f>\alpha\}\in\mathcal T\),<br>où \(\{f>\alpha\}=\{x\in X\,/\,f(x)>\alpha\}=f^{-1}(]\alpha,+\infty[)\) ou \(f^{-1}(]\alpha,+\infty])\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 3, diapo 6
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-057-2
+  notion: mesure-n-0074
+  recto: 'Prop. : mesurabilité d''une fonction à valeurs complexes'
+  verso: 'Soit \(f:(X,\mathcal T)\to\mathbb C\).<br>\(f\) est mesurable \(\iff\mathrm{Re}(f)\) et \(\mathrm{Im}(f)\) sont mesurables.<br>(De même : \(f=(f_1,f_2):(X,\mathcal T)\to\mathbb R^2\) est mesurable \(\iff f_1\) et \(f_2\) sont mesurables.)'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 3, diapo 6-7
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-057-3
+  notion: mesure-n-0074
+  recto: 'Prop. : mesurabilité de \(|f|^p\)'
+  verso: Soit \(f:(X,\mathcal T)\to\mathbb R\), \(\overline{\mathbb R}\) ou \(\mathbb C\) mesurable. Alors, pour tout \(p>0\), \(|f|^p\) est mesurable.
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 3, diapo 7
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-058-1
+  notion: mesure-n-0075
+  recto: 'Prop. : limite presque partout d''une suite de fonctions mesurables'
+  verso: Soit \((X,\mathcal T,\mu)\) un espace mesuré. Soit \((f_n)\) une suite de fonctions mesurables de \(X\to\mathbb R\), \(\overline{\mathbb R}\) ou \(\mathbb C\). On suppose que \((f_n)\) converge presque partout, c'est-à-dire qu'il existe \(E\in\mathcal T\), \(\mu(E)=0\) tel que \(\forall x\in X\setminus E\), \((f_n(x))\) converge.<br>On note \(f\) la fonction limite sur \(X\setminus E\) et on pose \(f(x)=0\), pour tout \(x\in E\). Alors \(f\) est mesurable.
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 3, diapo 9
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-059-1
+  notion: mesure-n-0049
+  recto: 'Déf : intégrale d''une fonction étagée positive'
+  verso: 'Soit \((X,\mathcal T,\mu)\) un espace mesuré ; \(\mathcal E^+\) désigne l''ensemble des fonctions étagées positives sur \(X\).<br>Soit \(f\in\mathcal E^+\) donnée par \(f=\sum_{i=1}^n\alpha_i\mathbf 1_{A_i}\) (\(\{A_i\}\) partition finie de \(X\), \(A_i\in\mathcal T\)). On appelle intégrale sur \(X\) de \(f\) par rapport à la mesure \(\mu\) l''élément de \([0,+\infty]\) défini par<br>$$\int_Xf\,d\mu=\sum_{i=1}^n\alpha_i\mu(A_i)$$<br>où on utilise la convention : \(\alpha_i\mu(A_i)=0\) si \(\alpha_i=0\) et \(\mu(A_i)=+\infty\).<br>Remarques : la définition est indépendante du choix de la partition dans l''écriture de \(f\) ; on note indifféremment \(\int_Xf\,d\mu\) ou \(\int_Xf(x)\,d\mu(x)\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 4, diapo 3
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-059-2
+  notion: mesure-n-0049
+  recto: 'Prop. : propriétés de l''intégrale sur \(\mathcal E^+\)'
+  verso: Soit \(f\) et \(g\) dans \(\mathcal E^+\) (fonctions étagées positives).<br>1. \(\int_X(f+g)\,d\mu=\int_Xf\,d\mu+\int_Xg\,d\mu\).<br>2. Si \(f\le g\), alors \(\int_Xf\,d\mu\le\int_Xg\,d\mu\).<br>3. Pour tout \(c\ge0\), \(\int_Xcf\,d\mu=c\int_Xf\,d\mu\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 4, diapo 4
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-059-3
+  notion: mesure-n-0049
+  recto: 'Déf : intégrale d''une fonction mesurable positive'
+  verso: 'Soit \((X,\mathcal T,\mu)\) un espace mesuré. On note \(\mathcal M^+\) l''ensemble des fonctions mesurables sur \(X\) à valeurs dans \([0,+\infty]\).<br>Soit \(f\in\mathcal M^+\). On appelle intégrale sur \(X\) de \(f\) par rapport à la mesure \(\mu\) l''élément de \([0,+\infty]\) défini par<br>$$\int_Xf\,d\mu=\sup\Big\{\int_Xg\,d\mu\ /\ g\in\mathcal E^+,\ g\le f\Big\}$$<br>Remarque : si \(f\in\mathcal E^+\), on retrouve bien la définition de l''intégrale des fonctions étagées.'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 4, diapo 6
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-059-4
+  notion: mesure-n-0049
+  recto: 'Prop. : croissance, additivité et homogénéité de l''intégrale sur \(\mathcal M^+\)'
+  verso: Soient \(f\) et \(g\) dans \(\mathcal M^+\) (fonctions mesurables à valeurs dans \([0,+\infty]\)).<br>• Si \(f\le g\), alors \(\int_Xf\,d\mu\le\int_Xg\,d\mu\).<br>• \(\int_X(f+g)\,d\mu=\int_Xf\,d\mu+\int_Xg\,d\mu\).<br>• Pour tout \(c\ge0\), \(\int_Xcf\,d\mu=c\int_Xf\,d\mu\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 4, diapo 7 et séance 5, diapo 2
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-060-1
+  notion: mesure-n-0050
+  recto: 'Thm : théorème de Beppo-Levi ou de convergence monotone'
+  verso: Soit \((X,\mathcal T,\mu)\) un espace mesuré. Soit \((f_n)\) une suite croissante d'éléments de \(\mathcal M^+\) (fonctions mesurables de \(X\) à valeurs dans \(\overline{\mathbb R}^+\)). On note \(f=\lim f_n\).<br>Alors \(f\in\mathcal M^+\) et<br>$$\int_Xf\,d\mu=\lim_{n\to+\infty}\int_Xf_n\,d\mu$$
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 5, diapo 1
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-060-2
+  notion: mesure-n-0050
+  recto: 'Remarque : Beppo-Levi pour une suite croissante de \(\mathcal L^1(X;\mathbb R)\)'
+  verso: Si \((f_n)\) est une suite croissante de fonctions de \(\mathcal L^1(X;\mathbb R)\) telle que \(f=\lim_{n\to+\infty}f_n\in\mathcal L^1(X;\mathbb R)\), la conclusion du théorème de Beppo-Levi est vraie.<br>On pose \(g_n=f_n-f_0\ge0\). Donc \(\int_X(f-f_0)\,d\mu=\lim_{n\to+\infty}\int_X(f_n-f_0)\,d\mu\), et donc \(\int_Xf\,d\mu=\lim_{n\to+\infty}\int_Xf_n\,d\mu\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 6, diapo 9
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-061-1
+  notion: mesure-n-0076
+  recto: 'Prop. : interversion série-intégrale pour des fonctions positives (conséquence de Beppo-Levi)'
+  verso: 'Soit \((X,\mathcal T,\mu)\) un espace mesuré et \((f_n)\) une suite de fonctions mesurables et positives à valeurs dans \(\overline{\mathbb R}^+\). Alors \(\sum_{n\in\mathbb N}f_n\in\mathcal M^+\) et<br>$$\int_X\Big(\sum_{n\in\mathbb N}f_n\Big)\,d\mu=\sum_{n\in\mathbb N}\int_Xf_n\,d\mu$$<br>(la diapo écrit « pour tout \(n\in\mathbb N\) » devant \(\sum_nf_n\in\mathcal M^+\) : coquille)'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 6, diapo 8
+  chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-062-1
+  notion: mesure-n-0077
+  recto: 'Prop. : inégalité de Markov'
+  verso: Soit \((X,\mathcal T,\mu)\) un espace mesuré. Soit \(f\) dans \(\mathcal M^+\), soit \(a>0\). Alors<br>$$\mu(\{f\ge a\})\le\frac1a\int_Xf\,d\mu$$
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 5, diapo 3
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-063-1
+  notion: mesure-n-0052
+  recto: 'Prop. : \(\int_Xf\,d\mu=0\iff f=0\) p.p. (et corollaire)'
+  verso: 'Soit \(f\) dans \(\mathcal M^+\). Alors<br>$$\int_Xf\,d\mu=0\iff f=0\ \text{p.p.}$$<br>Corollaire : soient \(f\) et \(g\) dans \(\mathcal M^+\). Alors \(f=g\) p.p. \(\Rightarrow\int_Xf\,d\mu=\int_Xg\,d\mu\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 5, diapo 3
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-064-1
+  notion: mesure-n-0051
+  recto: 'Déf-Prop. : fonction intégrable à valeurs dans \(\overline{\mathbb R}\)'
+  verso: Pour \(f:X\to\overline{\mathbb R}\), on pose \(f^+=\max(f,0)\) et \(f^-=\max(-f,0)\) ; alors \(f=f^+-f^-\), \(|f|=f^++f^-\).<br>Soit \(f:(X,\mathcal T)\to\overline{\mathbb R}\) mesurable. Si \(\int_X|f|\,d\mu<+\infty\), on dit que \(f\) est intégrable et on définit<br>$$\int_Xf\,d\mu=\int_Xf^+\,d\mu-\int_Xf^-\,d\mu$$<br>On a l'inégalité \(\Big|\int_Xf\,d\mu\Big|\le\int_X|f|\,d\mu\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 6, diapo 1
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-064-2
+  notion: mesure-n-0051
+  recto: 'Déf et Prop. : l''espace \(\mathcal L^1(X;\overline{\mathbb R})\)'
+  verso: 'Soit \((X,\mathcal T,\mu)\) un espace mesuré. On définit \(\mathcal L^1(X;\overline{\mathbb R})\) (ou \(\mathcal L^1(X)\)) l''ensemble des fonctions mesurables et intégrables pour la mesure \(\mu\).<br>Prop. : \(\mathcal L^1(X;\overline{\mathbb R})\) est un espace vectoriel et l''application \(\mathcal L^1(X;\overline{\mathbb R})\to\mathbb R\), \(f\mapsto\int_Xf\,d\mu\) est une application linéaire.<br>Remarque : soient \(f\) et \(g\) dans \(\mathcal L^1(X;\overline{\mathbb R})\) telles que \(f\le g\). Alors \(\int_Xf\,d\mu\le\int_Xg\,d\mu\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 6, diapo 2
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-064-3
+  notion: mesure-n-0051
+  recto: 'Déf : intégrale d''une fonction à valeurs complexes'
+  verso: Soit \(f:(X,\mathcal T)\to\mathbb C\) mesurable. Si \(\int_X|f|\,d\mu<+\infty\), on dit que \(f\) est intégrable et on définit<br>$$\int_Xf\,d\mu=\int_X\mathrm{Re}(f)\,d\mu+i\int_X\mathrm{Im}(f)\,d\mu$$
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 6, diapo 4
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-064-4
+  notion: mesure-n-0051
+  recto: 'Déf et Prop. : l''espace \(\mathcal L^1(X;\mathbb C)\)'
+  verso: 'Soit \((X,\mathcal T,\mu)\) un espace mesuré. On définit \(\mathcal L^1(X;\mathbb C)\) (ou \(\mathcal L^1(X)\)) l''ensemble des fonctions mesurables et intégrables pour la mesure \(\mu\).<br>Prop. : \(\mathcal L^1(X;\mathbb C)\) est un espace vectoriel et l''application \(\mathcal L^1(X;\mathbb C)\to\mathbb C\), \(f\mapsto\int_Xf\,d\mu\) est une application linéaire. On a de plus l''inégalité : pour tout \(f\in\mathcal L^1(X)\), \(\Big|\int_Xf\,d\mu\Big|\le\int_X|f|\,d\mu\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 6, diapo 5
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-065-1
+  notion: mesure-n-0055
+  recto: Lemme de Fatou
+  verso: 'Soit \((f_n)\) une suite de fonctions mesurables de \((X,\mathcal T)\) à valeurs dans \(\overline{\mathbb R}^+\). Alors<br>$$\int_X\liminf_{n\to+\infty}f_n\,d\mu\le\liminf_{n\to+\infty}\int_Xf_n\,d\mu$$<br>Comme \((f_n)\) est une suite de fonctions mesurables, \(\liminf f_n\) est mesurable (vu en TD).<br>Rappel : \(\liminf u_n=\lim_{n\to+\infty}\inf_{k\ge n}u_k=\sup_{n\in\mathbb N}\inf_{k\ge n}u_k\in\overline{\mathbb R}\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 6, diapo 11-12
+  chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-065-2
+  notion: mesure-n-0055
+  recto: 'Exemple : cas d''inégalité stricte dans le lemme de Fatou'
+  verso: 'Sur \((\mathbb R,\mathcal B(\mathbb R),\lambda)\), on considère la suite définie par : pour tout \(n\in\mathbb N\), \(f_{2n}=\mathbf 1_{[0,1/2]}\) et \(f_{2n+1}=\mathbf 1_{[1/2,1]}\).<br>Complément (calcul vérifié par Claude) : \(\liminf f_n=\mathbf 1_{\{1/2\}}\), donc \(\int\liminf f_n\,d\lambda=0\), alors que \(\int f_n\,d\lambda=\frac12\) pour tout \(n\) : \(0<\frac12\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 6, diapo 12
+  chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ)
+  priorite: 2
+  tags:
+  - exemple
+- id: mesure-a-066-1
+  notion: mesure-n-0056
+  recto: 'Thm : convergence dominée de Lebesgue'
+  verso: 'Soit \((f_n)\) une suite de fonctions mesurables de \((X,\mathcal T)\) à valeurs dans \(\mathbb R\) ou \(\mathbb C\). On suppose que<br>• \((f_n)\) converge p.p. vers une fonction mesurable \(f\) ;<br>• il existe \(g\in\mathcal L^1(X)\) telle que \(\forall n\in\mathbb N\), \(|f_n|\le g\) p.p.<br>Alors \(f\in\mathcal L^1(X)\) et<br>$$\int_Xf\,d\mu=\lim_{n\to+\infty}\int_Xf_n\,d\mu$$<br>Remarque : on en déduit aussi que \(\lim_{n\to+\infty}\int_X|f_n-f|\,d\mu=0\), en appliquant le théorème à \(|f_n-f|\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 6, diapo 13
+  chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-066-2
+  notion: mesure-n-0056
+  recto: 'Exemples : cas où la convergence dominée ne s''applique pas'
+  verso: 'Sur \((\mathbb R,\mathcal B(\mathbb R),\lambda)\) :<br>• \(f_n=\mathbf 1_{[n,n+1]}\) ;<br>• \(f_n=\frac1n\mathbf 1_{[0,n]}\).<br>Complément (vérifié par Claude) : dans les deux cas \(f_n\to0\) simplement mais \(\int f_n\,d\lambda=1\) pour tout \(n\) : aucune fonction intégrable ne domine la suite.'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 7, diapo 1
+  chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ)
+  priorite: 2
+  tags:
+  - exemple
+- id: mesure-a-067-1
+  notion: mesure-n-0057
+  recto: 'Thm : continuité d''une intégrale dépendant d''un paramètre'
+  verso: 'Cadre : \((X,\mathcal T,\mu)\) espace mesuré, \((E,\|\cdot\|)\) espace vectoriel normé, \(f:X\times E\to\mathbb R\) telle que, pour tout \(t\in E\), \(x\mapsto f(x,t)\) est intégrable. On pose \(F(t)=\int_Xf(\cdot,t)\,d\mu=\int_Xf(x,t)\,d\mu(x)\).<br>Soit \(t_0\in E\). On suppose que<br>1. \(t\mapsto f(x,t)\) est continue en \(t_0\), pour presque tout \(x\in X\) ;<br>2. il existe \(g\in\mathcal L^1(X)\) telle que, pour tout \(t\in E\), \(|f(x,t)|\le g(x)\) pour presque tout \(x\in X\).<br>Alors \(F\) est continue en \(t_0\).<br>Remarque : pour l''hypothèse 2., on peut prendre uniquement \(t\) dans \(B(t_0,r)\), pour un certain \(r>0\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 7, diapo 3-4
+  chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-068-1
+  notion: mesure-n-0058
+  recto: 'Thm : dérivation d''une intégrale dépendant d''un paramètre'
+  verso: Même cadre que pour la continuité (\(F(t)=\int_Xf(x,t)\,d\mu(x)\), \(x\mapsto f(x,t)\) intégrable pour tout \(t\)), avec \(E=I\) un intervalle ouvert de \(\mathbb R\). On suppose que<br>1. \(t\in I\mapsto f(x,t)\) est dérivable sur \(I\), pour presque tout \(x\in X\) ; on note \(\frac{\partial f}{\partial t}\) la dérivée ;<br>2. il existe \(g\in\mathcal L^1(X)\) telle que, pour presque tout \(x\in X\), \(\Big|\frac{\partial f}{\partial t}(x,t)\Big|\le g(x)\), pour tout \(t\in I\).<br>Alors l'application \(\frac{\partial f}{\partial t}(\cdot,t)\) est intégrable sur \(X\), pour tout \(t\in I\), et<br>$$F'(t)=\int_X\frac{\partial f}{\partial t}(\cdot,t)\,d\mu$$
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 7, diapo 5
+  chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-069-1
+  notion: mesure-n-0054
+  recto: 'Thm : intégrale de Riemann et intégrale de Lebesgue d''une fonction continue'
+  verso: 'Soit \(f:[a,b]\to\mathbb R\) continue et \(\{a_n\}_{0\le n\le N}\) une subdivision de \([a,b]\). On pose \(I_N=\sum_{n=0}^{N-1}(a_{n+1}-a_n)f(\zeta_n)\) pour \(\zeta_n\in[a_n,a_{n+1}]\). Si \(\max_{0\le n\le N-1}|a_{n+1}-a_n|\to0\) quand \(N\to+\infty\), la suite \((I_N)\) converge et sa limite est l''intégrale de Riemann de \(f\) sur \([a,b]\).<br>Théorème : soit \(f\) une fonction continue sur \([a,b]\). L''intégrale de Riemann de \(f\) sur \([a,b]\) est égale à l''intégrale de Lebesgue de \(f\) sur \([a,b]\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 7, diapo 7-8
+  chapitre: Chapitre 2 - Application mesurable et intégrale de Lebesgue (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-070-1
+  notion: mesure-n-0078
+  recto: 'Thm : primitive d''une fonction continue'
+  verso: 'Soit \(f:\mathbb R\to\mathbb R\) une fonction continue et \(a\in\mathbb R\). On pose \(F(t)=\int_a^tf(x)\,dx\).<br>Alors \(F\) est dérivable sur \(\mathbb R\) et \(F''=f\). \(F\) est donc une primitive de \(f\).<br>Remarque : si \(G\) est une primitive de \(f\), alors \(\int_a^bf(x)\,dx=G(b)-G(a)\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 8, diapo 1
+  chapitre: Chapitre 3 - Théorèmes de convergence (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-071-1
+  notion: mesure-n-0059
+  recto: 'Déf : tribu produit, espace mesurable produit'
+  verso: Soient \((X,\mathcal T_1)\) et \((Y,\mathcal T_2)\) deux espaces mesurables. On considère l'ensemble<br>$$\mathcal T_1\times\mathcal T_2=\{E\subset X\times Y\ /\ \exists E_1\in\mathcal T_1,\ \exists E_2\in\mathcal T_2,\ E=E_1\times E_2\}$$<br>On appelle tribu produit sur \(X\times Y\) et on note \(\mathcal T_1\otimes\mathcal T_2\) la tribu engendrée par \(\mathcal T_1\times\mathcal T_2\), c'est-à-dire \(\mathcal T_1\otimes\mathcal T_2=\mathcal T(\mathcal T_1\times\mathcal T_2)\).<br>Le couple \((X\times Y,\mathcal T_1\otimes\mathcal T_2)\) est appelé espace mesurable produit.
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 8, diapo 4
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-071-2
+  notion: mesure-n-0059
+  recto: 'Prop. : \(\mathcal B(\mathbb R^d)\otimes\mathcal B(\mathbb R^{d''})=\mathcal B(\mathbb R^{d+d''})\)'
+  verso: Pour \(X=\mathbb R^d\) et \(Y=\mathbb R^{d'}\), on peut munir \(X\times Y=\mathbb R^{d+d'}\) soit de la tribu borélienne \(\mathcal B(\mathbb R^{d+d'})\), soit de la tribu produit \(\mathcal B(\mathbb R^d)\otimes\mathcal B(\mathbb R^{d'})\). Ce sont les mêmes :<br>$$\mathcal B(\mathbb R^d)\otimes\mathcal B(\mathbb R^{d'})=\mathcal B(\mathbb R^{d+d'})$$
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 8, diapo 5
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-071-3
+  notion: mesure-n-0059
+  recto: 'Prop. : les sections d''une partie mesurable de \(X\times Y\) sont mesurables'
+  verso: Soit \(E\subset X\times Y\). On note \(E_x=\{y\in Y\,/\,(x,y)\in E\}\) et \(E_y=\{x\in X\,/\,(x,y)\in E\}\).<br>Soient \((X,\mathcal T_1)\) et \((Y,\mathcal T_2)\) deux espaces mesurables. Soit \(E\in\mathcal T_1\otimes\mathcal T_2\). Alors \(E_x\in\mathcal T_2\), pour tout \(x\in X\), et \(E_y\in\mathcal T_1\), pour tout \(y\in Y\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 8, diapo 6
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-071-4
+  notion: mesure-n-0059
+  recto: 'Thm et Déf : mesure produit'
+  verso: 'Soient \((X,\mathcal T_1,\mu)\) et \((Y,\mathcal T_2,\nu)\) deux espaces mesurés. Il existe une unique mesure \(\omega\) définie sur \(\mathcal T_1\otimes\mathcal T_2\) telle que<br>$$\omega(A\times B)=\mu(A)\nu(B),\quad\forall A\in\mathcal T_1,\ \forall B\in\mathcal T_2.$$<br>On la note \(\omega=\mu\otimes\nu\). De plus, si \(E\in\mathcal T_1\otimes\mathcal T_2\), alors \(x\mapsto\nu(E_x)\) est mesurable sur \((X,\mathcal T_1)\), \(y\mapsto\mu(E_y)\) est mesurable sur \((Y,\mathcal T_2)\) et<br>$$\mu\otimes\nu(E)=\int_X\nu(E_x)\,d\mu(x)=\int_Y\mu(E_y)\,d\nu(y)$$<br>Remarque : il faut ajouter dans l''énoncé (et dans les théorèmes de Fubini) une hypothèse sur \(\mu\) et \(\nu\) (mesures \(\sigma\)-finies).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 8, diapo 8
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-072-1
+  notion: mesure-n-0079
+  recto: 'Déf : mesure de Lebesgue sur \(\mathbb R^d\) (mesure produit)'
+  verso: • Sur \((\mathbb R,\mathcal B(\mathbb R))\), on note \(\lambda_1\) la mesure de Lebesgue.<br>• Sur \(\mathbb R^2\) muni de la tribu \(\mathcal B(\mathbb R^2)=\mathcal B(\mathbb R)\otimes\mathcal B(\mathbb R)\), on définit \(\lambda_2=\lambda_1\otimes\lambda_1\).<br>• Plus généralement, pour \(d\in\mathbb N^*\), sur \(\mathbb R^d\) muni de la tribu \(\mathcal B(\mathbb R^d)=\mathcal B(\mathbb R^{d-1})\otimes\mathcal B(\mathbb R)\), on définit \(\lambda_d=\lambda_{d-1}\otimes\lambda_1\), mesure de Lebesgue sur \(\mathbb R^d\).<br>Par définition, on a \(\lambda_d\Big(\prod_{1\le i\le d}\,]a_i,b_i[\Big)=\prod_{1\le i\le d}(b_i-a_i)\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 8, diapo 9
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-073-1
+  notion: mesure-n-0060
+  recto: Thm de Fubini-Tonelli
+  verso: 'Soient \((X,\mathcal T_1,\mu)\) et \((Y,\mathcal T_2,\nu)\) deux espaces mesurés. Soit \(f:(X\times Y,\mathcal T_1\otimes\mathcal T_2)\to[0,+\infty]\) une fonction mesurable. Alors les fonctions<br>\(Y\to[0,+\infty]\), \(y\mapsto\int_Xf(x,y)\,d\mu(x)\) et \(X\to[0,+\infty]\), \(x\mapsto\int_Yf(x,y)\,d\nu(y)\)<br>sont bien définies et mesurables et<br>$$\int_{X\times Y}f\,d(\mu\otimes\nu)=\int_X\Big(\int_Yf(x,y)\,d\nu(y)\Big)d\mu(x)=\int_Y\Big(\int_Xf(x,y)\,d\mu(x)\Big)d\nu(y)$$<br>(hypothèse sous-entendue : \(\mu\) et \(\nu\) \(\sigma\)-finies)'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 9, diapo 2
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-074-1
+  notion: mesure-n-0061
+  recto: Thm de Fubini
+  verso: 'Soient \((X,\mathcal T_1,\mu)\) et \((Y,\mathcal T_2,\nu)\) deux espaces mesurés. Soit \(f:(X\times Y,\mathcal T_1\otimes\mathcal T_2)\to\mathbb R\) ou \(\mathbb C\) une fonction intégrable pour \(\mu\otimes\nu\). Alors les fonctions<br>\(y\mapsto\int_Xf(x,y)\,d\mu(x)\) et \(x\mapsto\int_Yf(x,y)\,d\nu(y)\)<br>sont définies p.p. et intégrables et<br>$$\int_{X\times Y}f\,d(\mu\otimes\nu)=\int_X\Big(\int_Yf(x,y)\,d\nu(y)\Big)d\mu(x)=\int_Y\Big(\int_Xf(x,y)\,d\mu(x)\Big)d\nu(y)$$<br>(hypothèse sous-entendue : \(\mu\) et \(\nu\) \(\sigma\)-finies)'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 9, diapo 3
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-074-2
+  notion: mesure-n-0061
+  recto: 'Remarques : vérifier les hypothèses de Fubini, intégrer sur une partie \(\Omega\subset X\times Y\)'
+  verso: • En pratique, pour vérifier les hypothèses du théorème de Fubini, on montre l'intégrabilité d'une fonction \(f\) en appliquant le théorème de Fubini-Tonelli à \(|f|\).<br>• Si on souhaite calculer \(\int_\Omega f\,d(\mu\otimes\nu)\) pour \(\Omega\subset X\times Y\), on écrit que<br>$$\int_\Omega f\,d(\mu\otimes\nu)=\int_{X\times Y}\mathbf 1_\Omega f\,d(\mu\otimes\nu)$$
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 9, diapo 4
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - methode
+- id: mesure-a-075-1
+  notion: mesure-n-0080
+  recto: 'Déf-Prop. : mesure image'
+  verso: 'Soit \((X,\mathcal T_1,\mu)\) un espace mesuré, \((Y,\mathcal T_2)\) un espace mesurable et \(\theta:(X,\mathcal T_1)\to(Y,\mathcal T_2)\) une fonction mesurable.<br>On appelle mesure image de \(\mu\) par \(\theta\) et on note \(\theta_*\mu\) la mesure définie par<br>$$\theta_*\mu(B)=\mu(\theta^{-1}(B)),\quad\text{pour tout }B\in\mathcal T_2.$$<br>Remarque : si \(\mu\) est une mesure de probabilité sur \(X\), alors \(\theta_*\mu\) est une mesure de probabilité sur \(Y\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 9, diapo 6
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-075-2
+  notion: mesure-n-0080
+  recto: 'Thm : intégrale par rapport à une mesure image (transfert)'
+  verso: Soit \(\theta:(X,\mathcal T_1,\mu)\to(Y,\mathcal T_2)\) mesurable et \(f:(Y,\mathcal T_2)\to\mathbb R\) une fonction mesurable.<br>• Si \(f\) est positive, alors<br>$$\int_Yf\,d(\theta_*\mu)=\int_Xf\circ\theta\,d\mu$$<br>• \(f\) est \(\theta_*\mu\)-intégrable \(\iff f\circ\theta\) est \(\mu\)-intégrable, et dans ce cas, on a l'égalité ci-dessus.
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 9, diapo 7
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-076-1
+  notion: mesure-n-0081
+  recto: 'Déf : matrice jacobienne et jacobien'
+  verso: Soient \(U\) et \(V\) deux ouverts de \(\mathbb R^n\) et \(\varphi:U\to V\) une fonction de classe \(C^1\). Pour tout \(x\in U\), on définit la matrice jacobienne dans \(\mathcal M_n(\mathbb R)\) par<br>$$J_\varphi(x)=\Big(\frac{\partial\varphi_i}{\partial x_j}(x)\Big)_{1\le i,j\le n}$$<br>et le jacobien de \(\varphi\) par \(\det(J_\varphi(x))\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 9, diapo 9
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-076-2
+  notion: mesure-n-0081
+  recto: 'Déf et Prop. : \(C^1\)-difféomorphisme'
+  verso: 'On dit que \(\varphi\) est un \(C^1\)-difféomorphisme de \(U\) dans \(V\) si :<br>• \(\varphi\) est une bijection de \(U\) sur \(V\) ;<br>• \(\varphi\) est de classe \(C^1\) sur \(U\) ;<br>• \(\varphi^{-1}\) est de classe \(C^1\) sur \(V\).<br>Prop. : pour que \(\varphi\) soit un \(C^1\)-difféomorphisme de \(U\) dans \(V\), il suffit d''avoir : \(\varphi\) est une bijection de \(U\) sur \(V\) ; \(\varphi\) est de classe \(C^1\) sur \(U\) ; pour tout \(x\in U\), la matrice jacobienne \(J_\varphi(x)\) est inversible.'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 9, diapo 10
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-077-1
+  notion: mesure-n-0062
+  recto: 'Thm : formule de changement de variables'
+  verso: 'On note \(\lambda\) la mesure de Lebesgue sur \(\mathbb R^n\). Soient \(\varphi\) un \(C^1\)-difféomorphisme de \(U\) dans \(V\) (ouverts de \(\mathbb R^n\)) et \(f\) une fonction mesurable sur \(V\). Si \(f\) est positive ou intégrable, alors<br>$$\int_Vf\,d\lambda=\int_Uf\circ\varphi\,|\det(J_\varphi)|\,d\lambda$$<br>Remarque : cette formule généralise la formule de changement de variables en dimension 1 : soit \(\varphi:\mathbb R\to\mathbb R\) un \(C^1\)-difféomorphisme. Alors \(\int_{\varphi(a)}^{\varphi(b)}f(y)\,dy=\int_a^bf(\varphi(x))\varphi''(x)\,dx\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 9, diapo 11
+  chapitre: Chapitre 4 - Intégrales multiples et changement de variables (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-078-1
+  notion: mesure-n-0065
+  recto: 'Déf : les espaces \(\mathcal L^p(X)\) et \(\mathcal L^\infty(X)\)'
+  verso: 'Soit \((X,\mathcal T,\mu)\) un espace mesuré. Soit \(p\in[1,+\infty[\). On définit<br>$$\mathcal L^p(X)=\Big\{f:(X,\mathcal T)\to\mathbb R\text{ ou }\mathbb C\text{ mesurable telle que }\int_X|f|^p\,d\mu<+\infty\Big\}$$<br>Pour \(p=+\infty\), on définit<br>$$\mathcal L^\infty(X)=\big\{f:(X,\mathcal T)\to\mathbb R\text{ ou }\mathbb C\text{ mesurable telle que }\exists C>0\ /\ \mu(\{|f|>C\})=0\big\}$$<br>Prop. : pour tout \(p\in[1,+\infty]\), \(\mathcal L^p(X)\) est un espace vectoriel.'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 10, diapo 5-6
+  chapitre: Chapitre 5 - Espaces Lp (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-078-2
+  notion: mesure-n-0065
+  recto: 'Notation : \(\|f\|_p\) ; pourquoi ce n''est pas une norme sur \(\mathcal L^p(X)\)'
+  verso: 'Pour une fonction \(f:X\to\mathbb R\) ou \(\mathbb C\) mesurable, pour \(p\in[1,+\infty[\), on pose<br>$$\|f\|_p=\Big(\int_X|f|^p\,d\mu\Big)^{1/p}$$<br>Questions : 1. A-t-on \(\|f+g\|_p\le\|f\|_p+\|g\|_p\) ? (complément : oui, c''est l''inégalité de Minkowski) 2. Problème pour avoir une norme : il faut que \(\|f\|_p=0\Rightarrow f=0\). Or \(\|f\|_p=0\) implique uniquement \(f=0\) p.p.'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 10, diapo 10
+  chapitre: Chapitre 5 - Espaces Lp (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-079-1
+  notion: mesure-n-0082
+  recto: 'Déf et Prop. : le sup essentiel \(\|f\|_\infty\)'
+  verso: 'Pour une fonction \(f\) mesurable,<br>• si \(f\in\mathcal L^\infty(X)\), on pose \(\|f\|_\infty=\inf\{C\ge0,\ \mu\{|f|>C\}=0\}\) ;<br>• sinon, on pose \(\|f\|_\infty=+\infty\).<br>Prop. : 1. Si \(f\) est mesurable, alors \(|f(x)|\le\|f\|_\infty\), pour presque tout \(x\in X\).<br>2. Si \((X,\mathcal T,\mu)=(I,\mathcal B(I),\lambda)\) où \(I\) est un intervalle de \(\mathbb R\) et si \(f\in C^0(I)\), alors \(\|f\|_\infty=\sup_{x\in I}|f(x)|\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 10, diapo 8
+  chapitre: Chapitre 5 - Espaces Lp (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-080-1
+  notion: mesure-n-0066
+  recto: 'Thm : inégalité de Hölder'
+  verso: Soit \(p\in[1,+\infty]\). On définit \(q\in[1,+\infty]\) tel que \(\frac1p+\frac1q=1\). Alors pour toutes fonctions \(f,g:X\to\mathbb R\) ou \(\mathbb C\) mesurables, on a<br>$$\|fg\|_1\le\|f\|_p\|g\|_q$$<br>En particulier si \(f\in\mathcal L^p(X)\), \(g\in\mathcal L^q(X)\), alors \(fg\in\mathcal L^1(X)\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 10, diapo 11
+  chapitre: Chapitre 5 - Espaces Lp (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-081-1
+  notion: mesure-n-0067
+  recto: 'Thm : inégalité de Minkowski (et lemme : semi-norme)'
+  verso: 'Soit \(p\in[1,+\infty]\). Pour tout \(f\in\mathcal L^p(X)\), \(g\in\mathcal L^p(X)\), alors \(f+g\in\mathcal L^p(X)\) et<br>$$\|f+g\|_p\le\|f\|_p+\|g\|_p$$<br>Lemme : sur \(\mathcal L^p(X)\), \(\|\cdot\|_p\) est une semi-norme.'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 11, diapo 1
+  chapitre: Chapitre 5 - Espaces Lp (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-082-1
+  notion: mesure-n-0083
+  recto: 'Déf : relation d''équivalence \(f\sim g\) et espace \(L^p(X)=\mathcal L^p(X)/\mathcal N\)'
+  verso: 'Pour définir une norme, on identifie les fonctions égales presque partout. Pour tout \(p\in[1,+\infty]\), on considère sur \(\mathcal L^p(X)\) la relation<br>$$f\sim g\iff f=g\text{ p.p.}\iff f-g\in\mathcal N$$<br>où \(\mathcal N\) est le sous-espace vectoriel des fonctions nulles p.p. Prop. : \(\sim\) est une relation d''équivalence dans \(\mathcal L^p(X)\).<br>À tout \(f\in\mathcal L^p(X)\), on associe sa classe \([f]=\{g\in\mathcal L^p(X)\,/\,g\sim f\}\) et on note \(L^p(X)=\mathcal L^p(X)/\mathcal N\) l''ensemble des classes. On munit \(L^p(X)\) d''une structure d''espace vectoriel : \([f]+[g]:=[f+g]\), \(a[f]:=[af]\), et on définit \(\|[f]\|_p=\|\tilde f\|_p\) pour un élément \(\tilde f\) de \([f]\).'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 11, diapo 3-4
+  chapitre: Chapitre 5 - Espaces Lp (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-082-2
+  notion: mesure-n-0083
+  recto: 'Prop. : \((L^p(X),\|\cdot\|_p)\) espace vectoriel normé ; \(L^2\) espace de Hilbert'
+  verso: • Pour tout \(p\in[1,+\infty]\), l'espace \((L^p(X),\|\cdot\|_p)\) est un espace vectoriel normé.<br>• \(L^2(X;\mathbb R)\) muni du produit scalaire \((f,g)_2=\int_Xfg\,d\mu\) est un espace de Hilbert.
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 11, diapo 5
+  chapitre: Chapitre 5 - Espaces Lp (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-082-3
+  notion: mesure-n-0083
+  recto: 'Remarques : opérations qui ont un sens, ou non, dans \(L^p\)'
+  verso: • Dire que \(f=g\) dans \(L^p(X)\) signifie que \(f(x)=g(x)\), pour presque tout \(x\in X\).<br>• Attention, certaines opérations n'ont pas de sens dans \(L^p\) ! \(f\mapsto f(x_0)\) n'a pas de sens ; \(f\mapsto\sup_{x\in X}|f(x)|\) n'a pas de sens ; \(f\in L^1(\mathbb R)\mapsto\int_{\mathbb R}|f(x)|e^{-x^2}\,dx\) est bien défini dans \(L^1(\mathbb R)\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 11, diapo 6
+  chapitre: Chapitre 5 - Espaces Lp (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
+- id: mesure-a-083-1
+  notion: mesure-n-0068
+  recto: 'Prop. : \((L^p(X),\|\cdot\|_p)\) est complet'
+  verso: Pour tout \(p\in[1,+\infty]\), l'espace \((L^p(X),\|\cdot\|_p)\) est complet (c'est un espace de Banach).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 11, diapo 5
+  chapitre: Chapitre 5 - Espaces Lp (UVSQ)
+  priorite: 2
+  tags:
+  - theoreme
+- id: mesure-a-084-1
+  notion: mesure-n-0084
+  recto: 'Déf : espaces \(\ell^p(\mathbb N)\) et \(\ell^\infty(\mathbb N)\)'
+  verso: On considère l'espace mesuré \((\mathbb N,\mathcal P(\mathbb N),\mathrm{card})\) et on pose \(\ell^p(\mathbb N)=\mathcal L^p(\mathbb N)\) (ou \(L^p(\mathbb N)\)). Ainsi, pour \(p\in[1,+\infty[\),<br>$$\ell^p(\mathbb N)=\Big\{u=(u_n)_{n\in\mathbb N}\ /\ \sum_{n\in\mathbb N}|u_n|^p<+\infty\Big\},\quad\|u\|_{\ell^p}=\Big(\sum_{n\in\mathbb N}|u_n|^p\Big)^{1/p}$$<br>et \(\ell^\infty(\mathbb N)=\{u=(u_n)_{n\in\mathbb N}\,/\,\exists C>0,\ |u_n|\le C,\ \forall n\in\mathbb N\}\), muni de la norme \(\|u\|_{\ell^\infty}=\sup_{n\in\mathbb N}|u_n|\).
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 11, diapo 8
+  chapitre: Chapitre 5 - Espaces Lp (UVSQ)
+  priorite: 2
+  tags:
+  - definition
+- id: mesure-a-084-2
+  notion: mesure-n-0084
+  recto: 'Prop. : inclusions entre espaces \(\ell^p(\mathbb N)\)'
+  verso: 'Pour tout \(p,q\in[1,+\infty]\) : \(q\le p\Rightarrow\ell^q(\mathbb N)\subset\ell^p(\mathbb N)\).<br>Remarque : pour le retenir, on voit que \(\ell^1(\mathbb N)\subset\ell^\infty(\mathbb N)\).<br>(complément : sens inverse de l''inclusion \(\mathcal L^p\subset\mathcal L^q\), \(p\ge q\), valable quand \(\mu(X)<+\infty\))'
+  source: UVSQ, Théorie de la mesure (M. Boulakia), séance 11, diapo 9
+  chapitre: Chapitre 5 - Espaces Lp (UVSQ)
+  priorite: 2
+  tags:
+  - propriete
